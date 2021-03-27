@@ -1,0 +1,553 @@
+/* Global CSS */
+body {
+color:#333;
+font-family:Arial;
+font-size:11px;
+line-height:150%;
+margin:0;
+padding:0;
+text-align:left;
+background-color:#03213D;
+}
+
+
+#p25_content {
+margin:0 auto;
+padding:80px 0 0;
+position:relative;
+text-align:left;
+width:1024px;
+}
+
+#p25_content object {
+margin:0;
+padding:0;
+position:relative;
+}
+
+#p25_contentWrapper {
+margin-top:10px;
+padding:0;
+position:relative;
+}
+
+#p25_rightContent {
+margin:0;
+padding-left:75px;
+}
+
+#p25_flash_bg {
+position:absolute;
+top: 0;
+left: 0;
+z-index:-100;
+}
+
+.p25_breadcrumbs {
+color:#FFFFFF;
+margin:0;
+padding-left:55px;
+padding-top:40px;
+}
+ul {
+list-style:none;
+margin:0;
+padding:0;
+}
+
+a:link,a:visited {
+text-decoration:none;
+}
+
+img {
+border:0;
+}
+
+.clearfix:after {
+clear:both;
+content:".";
+display:block;
+height:0;
+visibility:hidden;
+}
+
+.clearfix {
+display:inline-block;
+}
+
+a:hover,a:active {
+text-decoration:underline;
+}/* Hides from IE-mac \*/
+* html .clearfix {
+height:1%;
+}
+.clearfix {
+display:block;
+}
+.displayBlock { display:block !important; }
+
+/* End hide from IE-mac */
+
+/* template includes just for testing ssi/sitemesh */
+#p25_rightContent {
+float:left;
+position:relative;
+}
+
+#p25_tell-printer {
+padding-left:55px;
+padding-top:10px;
+}
+/*formated link*/
+.more { background: transparent url(../../public/p25/images/global/sprites/buttonsicons.png) no-repeat scroll 174px -1165px; padding:0 18px 5px 0; }
+.tellafriendlink { background:transparent url(../../public/p25/images/icons/icn-tell_a_friend.gif) no-repeat left top; padding:0 20px 5px 20px; color:#ccc;}
+.printerfriendly { background:transparent url(../../public/p25/images/icons/icn-print.gif) no-repeat left top; padding:0 20px 5px 20px;  color:#ccc;}
+
+#p25_visualArea,/* #p25_contentArea Removed CB- 02/10/10 */ { height:250px; }
+
+
+/* Footer */
+#sp_content { 
+width:960px;
+margin:0 auto 30px auto;
+}
+
+/* Flash area for testing jqModel and scroll */
+#flashBox {
+/* -moz-opacity:.80; */
+background:#000;
+border:2px solid #FF0;
+display:none;
+/* filter:Alpha(opacity=80); */
+height:432px;
+left:75px;
+margin:0;
+/* opacity:.80; */
+padding:0;
+position:absolute;
+text-align:center;
+top:140px;
+width:880px;
+z-index:60;
+}
+
+#flashBox p {
+color:#FF0;
+float:left;
+font-size:20px;
+font-weight:700;
+margin:50px 0 0 150px;
+}
+
+#flashBox #goBackBt {
+cursor:pointer;
+float:right;
+margin:10px;
+}
+
+/* Mask window for jqModel */
+#screen {
+position:absolute; 
+left:0; 
+top:0; 
+background: #000; 
+z-index:70; 
+display:none;
+}
+
+a.trigger{
+cursor: pointer;
+}
+
+/*Sprite Icons images*/
+	
+.si_additional_support { background-image: url(../../public/p25/images/sprites/icons.png); background-position: 0 -100px; } 
+.si_arrow { background-image: url(../../public/p25/images/sprites/icons.png); background-position: 0 -223px; } 
+.si_arrow_left { background-image: url(../../public/p25/images/sprites/icons.png); background-position: 0 -336px; } 
+.si_arrow_right { background-image: url(../../public/p25/images/sprites/icons.png); background-position: 0 -445px; } 
+.si_arrow_down_blue { background-image: url(../../public/p25/images/sprites/icons.png); background-position: 0 -554px; } 
+.si_arrow_right_blue { background-image: url(../../public/p25/images/sprites/icons.png); background-position: 0 -667px; } 
+.si_arrow_up_blue { background-image: url(../../public/p25/images/sprites/icons.png); background-position: 0 -780px; } 
+.si_close { background-image: url(../../public/p25/images/sprites/icons.png); background-position: 0 -893px; } 
+.si_close_2 { background-image: url(../../public/p25/images/sprites/icons.png); background-position: 0 -1013px; } 
+.si_cnet { background-image: url(../../public/p25/images/sprites/icons.png); background-position: 0 -1131px; } 
+.si_djvu { background-image: url(../../public/p25/images/sprites/icons.png); background-position: 0 -1256px; } 
+.si_djvu_lg { background-image: url(../../public/p25/images/sprites/icons.png); background-position: 0 -1372px; } 
+.si_minus { background-image: url(../../public/p25/images/sprites/icons.png); background-position: 0 -1511px; } 
+.si_my_samsung { background-image: url(../../public/p25/images/sprites/icons.png); background-position: 0 -1627px; } 
+.si_pdf { background-image: url(../../public/p25/images/sprites/icons.png); background-position: 0 -1763px; } 
+.si_pdf_large { background-image: url(../../public/p25/images/sprites/icons.png); background-position: 0 -1879px; } 
+.si_plus { background-image: url(../../public/p25/images/sprites/icons.png); background-position: -266px -100px; } 
+.si_print { background-image: url(../../public/p25/images/sprites/icons.png); background-position: -266px -216px; } 
+.si_support_email { background-image: url(../../public/p25/images/sprites/icons.png); background-position: -266px -330px; } 
+.si_support_live_chat { background-image: url(../../public/p25/images/sprites/icons.png); background-position: -266px -452px; } 
+.si_support_phone { background-image: url(../../public/p25/images/sprites/icons.png); background-position: -266px -574px; } 
+.si_tell_a_friend { background-image: url(../../public/p25/images/sprites/icons.png); background-position: -266px -698px; } 
+.si_to_top { background-image: url(../../public/p25/images/sprites/icons.png); background-position: -266px -812px; } 
+.si_view_arrow { background-image: url(../../public/p25/images/sprites/icons.png); background-position: -266px -921px; } 
+.si_plus_green { background-image: url(../../public/p25/images/sprites/icons.png); background-position: -266px -1038px; } 
+
+
+/*Sprite Button images*/
+
+.sb_view_demo, .sb_view_demo { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -30px; } 
+.sb_arrow_down { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -92px; } 
+.sb_arrow_left { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -144px; } 
+.sb_arrow_right { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -379px; } 
+.sb_arrow { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -614px; } 
+.sb_close { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -666px; } 
+.sb_close_2 { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -716px; } 
+.sb_green_go { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -764px; } 
+.sb_learn_more { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -825px; } 
+.sb_play { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -884px; } 
+.sb_plus { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -940px; } 
+.sb_see_all_sliders { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -989px; } 
+.sb_view_product_dimensions { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -1055px; } 
+.sb_windows7_learn_more { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -1121px; } 
+.sb_buy_now { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -1172px; } 
+.sb_see_all_3d { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -1230px; } 
+.sb_see_all_lcd { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -1288px; } 
+.sb_see_all_led { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -1347px; } 
+.sb_see_all_plasma { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -1407px; } 
+.sb_see_all_tvs { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -1466px; } 
+.sb_sort_by { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -1534px; } 
+.sb_view_all_mobile { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -1594px; } 
+.sb_view_finder { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -1653px; } 
+.sb_view_series_3 { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -1719px; } 
+.sb_view_series_4 { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -1780px; } 
+.sb_view_series_5 { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -1841px; } 
+.sb_view_series_6 { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -1902px; } 
+.sb_view_series_7 { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: 0 -1963px; } 
+.sb_where_to_buy { background-image: url(../../public/p25/images/sprites/buttons.png); background-position: -340px -30px; } 
+
+
+/* Left Nav Sprites */
+
+.ln_accessories_on { background-image: url(../../public/p25/images/sprites/leftnav.png); background-position: 0 0; width: 39px; height: 39px; } 
+.ln_accessories_off { background-image: url(../../public/p25/images/sprites/leftnav.png); background-position: -64px 0; width: 39px; height: 39px; } 
+.ln_design_on { background-image: url(../../public/p25/images/sprites/leftnav.png); background-position: -128px 0; width: 39px; height: 39px; } 
+.ln_design_off { background-image: url(../../public/p25/images/sprites/leftnav.png); background-position: -192px 0; width: 39px; height: 39px; } 
+.ln_environment_on { background-image: url(../../public/p25/images/sprites/leftnav.png); background-position: -256px 0; width: 39px; height: 39px; } 
+.ln_environment_off { background-image: url(../../public/p25/images/sprites/leftnav.png); background-position: -320px 0; width: 39px; height: 39px; } 
+.ln_gallery_on { background-image: url(../../public/p25/images/sprites/leftnav.png); background-position: -384px 0; width: 39px; height: 39px; } 
+.ln_gallery_off { background-image: url(../../public/p25/images/sprites/leftnav.png); background-position: -448px 0; width: 39px; height: 39px; } 
+.ln_innovation_on { background-image: url(../../public/p25/images/sprites/leftnav.png); background-position: -512px 0; width: 39px; height: 39px; } 
+.ln_innovation_off { background-image: url(../../public/p25/images/sprites/leftnav.png); background-position: -576px 0; width: 39px; height: 39px; } 
+.ln_opinions_on { background-image: url(../../public/p25/images/sprites/leftnav.png); background-position: -640px 0; width: 39px; height: 39px; } 
+.ln_opinions_off { background-image: url(../../public/p25/images/sprites/leftnav.png); background-position: -704px 0; width: 39px; height: 39px; } 
+.ln_share_on { background-image: url(../../public/p25/images/sprites/leftnav.png); background-position: -768px 0; width: 39px; height: 39px; } 
+.ln_share_off { background-image: url(../../public/p25/images/sprites/leftnav.png); background-position: -832px 0; width: 39px; height: 39px; } 
+.ln_support_on { background-image: url(../../public/p25/images/sprites/leftnav.png); background-position: -896px 0; width: 39px; height: 39px; } 
+.ln_support_off { background-image: url(../../public/p25/images/sprites/leftnav.png); background-position: -960px 0; width: 39px; height: 39px; } 
+.ln_techSpecs_on { background-image: url(../../public/p25/images/sprites/leftnav.png); background-position: -1024px 0; width: 39px; height: 39px; } 
+.ln_techSpecs_off { background-image: url(../../public/p25/images/sprites/leftnav.png); background-position: -1088px 0; width: 39px; height: 39px; } 
+
+
+.error{
+	color:red;
+}
+
+
+/* Style extracted from p25_productInfo.jsp */
+ul.blueBt {color:#fff; font-weight:bold; font-size:12px; cursor:pointer;}
+ul.blueBt li {float:left; height:30px; }
+ul.blueBt li.ltBlue {background:url(../../public/p25/images/btn/btn-blue-lt.png) no-repeat center left; width:9px;}
+ul.blueBt li.midBlue {background:url(../../public/p25/images/btn/btn-blue-mid.png) repeat-x center center; padding:0 8px;}
+ul.blueBt li.midBlue div.text {float:left; padding:6px 0;}
+ul.blueBt li.midBlue div.text a:hover {color:#33d9fc; text-decoration:none;}
+ul.blueBt li.midBlue div.playIcon {float:left; background:url(../../public/p25/images/icn-play.png) no-repeat right center; width:25px; height:30px; margin:0 0 0 10px;}
+ul.blueBt li.rtBlue {background:url(../../public/p25/images/btn/btn-blue-rt.png) no-repeat center right; width:9px;}
+ul.blueBt.hover {color:#33d9fc;}
+ul.blueBt.hover li.ltBlue {background:url(../../public/p25/images/btn/btn-blue-lt-ro.png) no-repeat center left; width:9px;}
+ul.blueBt.hover li.midBlue {background:url(../../public/p25/images/btn/btn-blue-mid-ro.png) repeat-x center center ; padding:0 8px; }
+ul.blueBt.hover li.rtBlue {background:url(../../public/p25/images/btn/btn-blue-rt-ro.png) no-repeat center right; width:9px; }
+
+ul.whiteBt {color:#045ba8; font-weight:bold; font-size:12px; cursor:pointer;}
+ul.whiteBt li {float:left; height:30px; }
+ul.whiteBt li.ltWhite {background:url(../../public/p25/images/btn/btn-white-lt.png) no-repeat center left; width:9px;}
+ul.whiteBt li.midWhite {background:url(../../public/p25/images/btn/btn-white-mid.png) repeat-x center center; padding:0 8px;}
+ul.whiteBt li.midWhite div.text {float:left; padding:6px 0;}
+ul.whiteBt li.midWhite div.text a:hover {color:#012954; text-decoration:none;}
+ul.whiteBt li.midWhite div.downloadIcon {float:left; background:url(../../public/p25/images/icons/icn-btn-download.png) no-repeat right center; width:25px; height:30px; margin:0 0 0 10px;}
+ul.whiteBt li.rtWhite {background:url(../../public/p25/images/btn/btn-white-rt.png) no-repeat center right; width:9px;}
+ul.whiteBt.hover {color:#012954;}
+ul.whiteBt.hover li.ltWhite {background:url(../../public/p25/images/btn/btn-white-lt-ro2.png) no-repeat center left; width:9px; }
+ul.whiteBt.hover li.midWhite {background:url(../../public/p25/images/btn/btn-white-mid-ro2.png) repeat-x center center; padding:0 8px; }
+ul.whiteBt.hover li.rtWhite {background:url(../../public/p25/images/btn/btn-white-rt-ro2.png) no-repeat center right; width:9px; }
+
+
+
+/* white corners for width 920 */
+.white_920_top ul li, .white_920_bottom ul li{float:left; height:8px; font-size:1px;}
+.white_920_top ul li.mid, .white_920_bottom ul li.mid{background:#ffffff; width:904px;}
+.white_920_top ul li.left{background:url(../../public/p25/images/global/corners/corner-white-top-lt.png) no-repeat bottom left; width:8px; behavior: url("../../public/p25/images/iepngfix.htc");}
+.white_920_top ul li.right{background:url(../../public/p25/images/global/corners/corner-white-top-rt.png) no-repeat bottom right; width:8px; behavior: url("../../public/p25/images/iepngfix.htc");}
+.white_920_bottom ul li.left{background:url(../../public/p25/images/global/corners/corner-white-bot-lt.png) no-repeat top left; width:8px; behavior: url("../../public/p25/images/iepngfix.htc");}
+.white_920_bottom ul li.right{background:url(../../public/p25/images/global/corners/corner-white-bot-rt.png) no-repeat top right; width:8px; behavior: url("../../public/p25/images/iepngfix.htc");}
+
+/* white corners for width 896 */
+.white_896_top ul li, .white_896_bottom ul li{float:left; height:8px; font-size:1px;}
+.white_896_top ul li.mid, .white_896_bottom ul li.mid{background:#ffffff; width:880px;}
+.white_896_top ul li.left{background:url(../../public/p25/images/global/corners/corner-white-top-lt.png) no-repeat bottom left; width:8px; behavior: url("../../public/p25/images/iepngfix.htc");}
+.white_896_top ul li.right{background:url(../../public/p25/images/global/corners/corner-white-top-rt.png) no-repeat bottom right; width:8px; behavior: url("../../public/p25/images/iepngfix.htc");}
+.white_896_bottom ul li.left{background:url(../../public/p25/images/global/corners/corner-white-bot-lt.png) no-repeat top left; width:8px; behavior: url("../../public/p25/images/iepngfix.htc");}
+.white_896_bottom ul li.right{background:url(../../public/p25/images/global/corners/corner-white-bot-rt.png) no-repeat top right; width:8px; behavior: url("../../public/p25/images/iepngfix.htc");}
+
+/* white corners for width 650 */
+.white_650_top ul li, .white_650_bottom ul li{float:left; height:8px; font-size:1px;}
+.white_650_top ul li.mid, .white_650_bottom ul li.mid{background:#ffffff; width:650px;}
+.white_650_top ul li.left{background:url(../../public/p25/images/global/corners/corner-white-top-lt.png) no-repeat bottom left; width:8px; behavior: url("../../public/p25/images/iepngfix.htc");}
+.white_650_top ul li.right{background:url(../../public/p25/images/global/corners/corner-white-top-rt.png) no-repeat bottom right; width:8px; behavior: url("../../public/p25/images/iepngfix.htc");}
+.white_650_bottom ul li.left{background:url(../../public/p25/images/global/corners/corner-white-bot-lt.png) no-repeat top left; width:8px; behavior: url("../../public/p25/images/iepngfix.htc");}
+.white_650_bottom ul li.right{background:url(../../public/p25/images/global/corners/corner-white-bot-rt.png) no-repeat top right; width:8px; behavior: url("../../public/p25/images/iepngfix.htc");}
+
+/* white corners for width 662 */
+.white_662_top ul li, .white_662_bottom ul li{float:left; height:8px; font-size:1px;}
+.white_662_top ul li.mid, .white_662_bottom ul li.mid{background:#ffffff; width:662px;}
+.white_662_top ul li.left{background:url(../../public/p25/images/global/corners/corner-white-top-lt.png) no-repeat bottom left; width:8px; behavior: url("../../public/p25/images/iepngfix.htc");}
+.white_662_top ul li.right{background:url(../../public/p25/images/global/corners/corner-white-top-rt.png) no-repeat bottom right; width:8px; behavior: url("../../public/p25/images/iepngfix.htc");}
+.white_662_bottom ul li.left{background:url(../../public/p25/images/global/corners/corner-white-bot-lt.png) no-repeat top left; width:8px; behavior: url("../../public/p25/images/iepngfix.htc");}
+.white_662_bottom ul li.right{background:url(../../public/p25/images/global/corners/corner-white-bot-rt.png) no-repeat top right; width:8px; behavior: url("../../public/p25/images/iepngfix.htc");}
+
+/* white corners for width 215 */
+.white_215_top ul li, .white_215_bottom ul li{float:left; height:8px; font-size:1px;}
+.white_215_top ul li.left, .white_215_bottom ul li.left{background:#ffffff; width:207px;}
+.white_215_top ul li.right{background:url(../../public/p25/images/global/corners/corner-white-top-rt.png) no-repeat bottom right; width:8px; behavior: url("../../public/p25/images/iepngfix.htc");}
+.white_215_bottom ul li.right{background:url(../../public/p25/images/global/corners/corner-white-bot-rt.png) no-repeat top right; width:8px; behavior: url("../../public/p25/images/iepngfix.htc");}
+
+
+
+/*blue btn*/
+table.blueButton{text-decoration:none; font-size:12px; font-weight:bold; font-family:Arial, Helvetica, sans-serif; color:#FFFFFF; cursor:pointer;}
+table.blueButton{height:29px; overflow:hidden;}
+table.blueButton td.left{background:url(../../public/p25/images/blue_btn_bg.png); background-repeat:no-repeat;behavior: url('../../public/p25/images/iepngfix.htc');}
+table.blueButton td.left div{float:left; width:auto;}
+table.blueButton td.left div.blueButtonText{padding-left:12px;padding-top:5px;}
+table.blueButton td.right{width:13px;background:url(../../public/p25/images/blue_btn_bg.png); background-position:0 -29px; background-repeat:no-repeat;behavior: url('../../public/p25/images/iepngfix.htc');}
+
+table.blueButton td.leftRo{background:url(../../public/p25/images/blue_btn_bg.png); background-position:0 -58px; background-repeat:no-repeat;behavior: url('../../public/p25/images/iepngfix.htc');}
+table.blueButton td.leftRo div{float:left; width:auto;}
+table.blueButton td.leftRo div.blueButtonText{padding-left:12px;padding-top:5px; color:#33ccff}
+table.blueButton td.rightRo{width:13px;background:url(../../public/p25/images/blue_btn_bg.png); background-position:-1px -87px; background-repeat:no-repeat;behavior: url('../../public/p25/images/iepngfix.htc');}
+.blueButtonPlayIcon{ height:29px; width:30px !important;background:url(../../public/p25/images/icn-play.png) no-repeat; background-position:5px -1px;behavior: url('../../public/p25/images/iepngfix.htc');}
+
+
+table.blueButton{text-decoration:none; font-size:12px; font-weight:bold; font-family:Arial, Helvetica, sans-serif; color:#FFFFFF; cursor:pointer;}
+table.blueButton{height:29px; overflow:hidden;}
+table.blueButton td.left{background:url(../../public/p25/images/blue_btn_bg.png); background-repeat:no-repeat;behavior: url('../../public/p25/images/iepngfix.htc');}
+table.blueButton td.left div{float:left; width:auto;}
+table.blueButton td.left div.blueButtonText{padding-left:12px;padding-top:5px;}
+table.blueButton td.right{width:13px;background:url(../../public/p25/images/blue_btn_bg.png); background-position:0 -29px; background-repeat:no-repeat;behavior: url('../../public/p25/images/iepngfix.htc');}
+
+table.blueButton td.leftRo{background:url(../../public/p25/images/blue_btn_bg.png); background-position:0 -58px; background-repeat:no-repeat;behavior: url('../../public/p25/images/iepngfix.htc');}
+table.blueButton td.leftRo div{float:left; width:auto;}
+table.blueButton td.leftRo div.blueButtonText{padding-left:12px;padding-top:5px; color:#33ccff}
+table.blueButton td.rightRo{width:13px;background:url(../../public/p25/images/blue_btn_bg.png); background-position:-1px -87px; background-repeat:no-repeat;behavior: url('../../public/p25/images/iepngfix.htc');}
+.blueButtonPlayIcon{ height:29px; width:30px !important;background:url(../../public/p25/images/icn-play.png) no-repeat; background-position:5px -1px;behavior: url('../../public/p25/images/iepngfix.htc');}
+
+table.whiteButton{text-decoration:none; font-size:12px; font-family:Arial, Helvetica, sans-serif; cursor:pointer;}
+table.whiteButton{height:32px; overflow:hidden; color:#006699;}
+table.whiteButton td.left{background:url(../../public/p25/images/white_btn_bg.png); background-repeat:no-repeat;behavior: url('../../public/p25/images/iepngfix.htc');}
+table.whiteButton td.left div{float:left; width:auto;}
+table.whiteButton td.left div.whiteButtonText{padding-left:12px;padding-top:8px;}
+table.whiteButton td.right{width:13px;background:url(../../public/p25/images/white_btn_bg.png); background-position:0 -31px; background-repeat:no-repeat;behavior: url('../../public/p25/images/iepngfix.htc');}
+
+
+table.whiteButton td.leftRo{background:url(../../public/p25/images/white_btn_bg.png); background-position:0 -63px; background-repeat:no-repeat;behavior: url('../../public/p25/images/iepngfix.htc');}
+table.whiteButton td.leftRo div{float:left; width:auto; color:#003366;}
+table.whiteButton td.leftRo div.whiteButtonText{padding-left:12px;padding-top:8px;}
+table.whiteButton td.rightRo{width:13px;background:url(../../public/p25/images/white_btn_bg.png); background-position:0 -92px; background-repeat:no-repeat;behavior: url('../../public/p25/images/iepngfix.htc');}
+
+
+
+
+/*
+Custom Jquery Dropdownlist components (sort/filter)
+*/
+
+
+.dropDownWrapper {
+	position: absolute;
+	display: block;
+}
+
+.dropDownListHeader {
+	display: block;
+	cursor: pointer;
+	margin-left: 0px;
+	padding:0px;
+}
+
+.dropDownListHeader .middlepart a,.dropDownListHeader .active .middlepart a {
+	font-family:Arial;
+	font-size:12px;
+	font-weight: bold;
+	color: #045BA8;
+	text-align:left;
+	margin-left:5px;
+	margin-top:auto;
+	margin-bottom: auto;
+	vertical-align: middle;
+	cursor:pointer;
+}
+
+.dropDownListHeader.middlepart a:hover, .dropDownListHeader.active .middlepart a:hover {
+	color: #012954;
+}
+
+.dropDownListHeader .leftpart {
+display: block;
+background: transparent url(../../public/p25/images/btn/btn-white-lt.png) no-repeat; behavior: url("../../public/p25/images/iepngfix.htc");
+height:30px;
+width:9px;
+float:left;
+}
+.dropDownListHeader .middlepart {
+	display: block;
+	background:transparent url(../../public/p25/images/btn/btn-white-mid.png) repeat-x; behavior: url("../../public/p25/images/iepngfix.htc");	
+	height: 30px;
+	float:left;
+	vertical-align: middle;
+}
+
+
+.dropDownListHeader .rightpart {
+display: block;
+background:transparent url(../../public/p25/images/btn/btn-sortby-bg-right.png) no-repeat; behavior: url("../../public/p25/images/iepngfix.htc");
+height:30px;
+width:36px;
+float:left;
+}
+
+.dropDownListHeader.active {
+	display: block;
+	cursor: pointer;
+ 
+}
+.dropDownListHeader.active .leftpart {
+display: block;
+background: transparent url(../../public/p25/images/btn/btn-white-lt-ro.png) no-repeat left center; behavior: url("../../public/p25/images/iepngfix.htc");
+height:30px;
+width:9px;
+float:left;
+}
+.dropDownListHeader.active .middlepart {
+	display: block;
+	background:transparent url(../../public/p25/images/btn/btn-white-mid-ro.png) repeat-x; behavior: url("../../public/p25/images/iepngfix.htc");	
+	height: 30px;
+	float:left;
+	vertical-align: center;
+}
+
+
+.dropDownListHeader.active .rightpart {
+display: block;
+background:transparent url(../../public/p25/images/btn/btn-white-rt-ro.png) no-repeat; behavior: url("../../public/p25/images/iepngfix.htc");
+height:30px;
+width:10px;
+float:left;
+}
+
+.dropDownListBody {
+	position: relative;
+	display: block;
+}
+
+.dropDownListBody  ul li a{
+	font-family:Arial;
+	font-size:12px;
+	color: #012954;
+	text-align:left;
+	margin-left:10px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.dropDownListBody  ul li a:hover {
+	text-decoration:underline;
+}
+
+.dropDownListBody ul li.listOption {
+clear: left;
+cursor: pointer;
+}
+
+.dropDownListBody .leftpart {
+display: block;
+background: transparent url(../../public/p25/images/btn/btn-white-sidelt-ro.png) repeat-y right; behavior: url("../../public/p25/images/iepngfix.htc");
+height:20px;
+width:4px;
+float:left;
+}
+.dropDownListBody .middlepart {
+	display: block;
+	background-color: #A9C0D8;	
+	height: 30px;
+	float:left;
+}
+.dropDownListBody .rightpart {
+display: block;
+background:transparent url(../../public/p25/images/btn/btn-white-sidert-ro.png) repeat-y right; behavior: url("../../public/p25/images/iepngfix.htc");
+height:30px;
+width:4px;
+float:left;
+}
+
+
+.dropDownListBody .dropDownListFooter{
+display: block;
+clear:left;
+}
+
+.dropDownListBody .dropDownListFooter .leftpart {
+display: block;
+background: transparent url(../../public/p25/images/btn/btn-white-botlt-ro.png) no-repeat top; behavior: url("../../public/p25/images/iepngfix.htc");
+height:30px;
+width:9px;
+float:left;
+}
+.dropDownListBody .dropDownListFooter .middlepart {
+	display: block;
+	background:transparent url(../../public/p25/images/btn/btn-white-botmid-ro.png) repeat-x; behavior: url("../../public/p25/images/iepngfix.htc");	
+	height: 30px;
+	float:left;
+}
+.dropDownListBody .dropDownListFooter .rightpart {
+display: block;
+background:transparent url(../../public/p25/images/btn/btn-white-botrt-ro.png) no-repeat top; behavior: url("../../public/p25/images/iepngfix.htc");
+height:30px;
+width:9px;
+float:left;
+}
+
+
+.p25_breadcrumbs * { color:#ffffff !important; }
+#p25_content { padding-top:90px !important; }
+body { background:none; background-color:##03213d; }
+
+/* 
+	@title : for changing class of samsung P2.5
+	@author : ACG HTML publishing TEAM. sookyoung Yi kizna@astrum.co.kr
+	@Description : fix by Rendering Maintenance
+	@Date : 3. 9. 2010
+	@Last Modify : 
+*/
+
+
+.dropDownListHeader div.middlepart {
+background:url("../../public/p25/images/btn/btn-white-mid.png") repeat-x scroll 0 0 transparent;
+color:#045BA8;
+cursor:pointer;
+display:block;
+float:left;
+font-family:Arial;
+font-size:12px;
+font-weight:bold;
+height:23px;
+margin-bottom:auto;
+margin-top:auto;
+padding-left:2px;
+padding-top:7px;
+text-align:left;
+vertical-align:middle;
+}

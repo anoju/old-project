@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>14_jquerymobile사용</title>
+  <!-- viewport -->
+  <meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <!-- jquery mobile css 적용 -->	
+  <link rel="stylesheet" href="jquery.mobile-1.2.0.min.css" />
+  <!-- jquery import -->
+  <script src="js/jquery-1.8.2.min.js"></script>
+  <!-- jquery mobile import -->
+  <script src="jquery.mobile-1.2.0.min.js"></script>
+</head>
+<body>
+	<!--
+		jquery mobile의 특징 
+		
+		1. jquery mobile은 우리가 마크업한대로 실제 DOM이 생성되지 않고,
+		더 많은 요소들이 추가됩니다.
+		
+		2. 요소들에 역할을 지정하기 위해 data-role 속성을 부여합니다.
+		
+		
+		
+	  -->
+	  <div data-role="page" id="index">
+	  	<div data-role="header">
+	  		<h1>메인페이지</h1>
+	  	</div>
+	  	<div data-role="content">
+	  		<h2>첫번째 페이지의 본문</h2>
+	  		<p>
+	  			<a href="#two" data-role="button"
+	  			 data-transition="slide">두번째 페이지로 이동</a>
+	  		</p>
+	  	</div>
+	  	<div data-role="footer">
+	  		&copy;2012 html5.com
+	  	</div>
+	  </div>
+	  
+	  
+	  <div data-role="page" id="two">
+	  	<div data-role="header">
+	  		<h1>두번째페이지</h1>
+	  	</div>
+	  	<div data-role="content">
+	  		<h2>두번째 페이지의 본문</h2>
+	  		<p>
+	  			<a href=""  data-role="button">홈으로 이동</a>
+	  		</p>
+	  	</div>
+	  	<div data-role="footer">
+	  		&copy;2012 html5.com
+	  	</div>
+	  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

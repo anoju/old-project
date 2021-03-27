@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+	div#wrap { width:1000px; margin:0 auto; height:300px; border:1px solid red; position: relative;}
+	div#wrap div {width:248px; height:100px; background:pink; position: absolute; border:1px solid blue;}
+	div#wrap p {text-overflow: ellipsis; white-space: nowrap; width:100%;overflow: hidden;}
+	div#wrap.res768 { width:750px;}
+	div#wrap.res768 p { width:150px;} 
+	div#wrap.res320 { width:250px;}
+	div#wrap.res320 p { width:100px;} 
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">	
+	$(function(){
+		var $wrap = $('#wrap');
+		var $wrap_width = $wrap.width();
+		var $wrap_height = $wrap.height();
+		var $box = $('.box');
+		var $box_width = $box.outerWidth();
+		var $box_height = $box.outerHeight();
+		var j = 0, h = 0, sum =0;
+		$box.each(function(index){
+			if($wrap_width <= sum){
+				sum = 0;
+				h++;
+				j = 0;
+			}
+			$(this).css({'left':$box_width * j, 'top':$box_height * h});
+			j++;
+			sum += $box_width;
+		});
+		
+		
+		var className = "res";
+		var per = 1;
+		function resizeWidth(){
+			var windowWidth = $(window).outerWidth();
+			if(windowWidth <= 1024 && windowWidth > 768){
+				$wrap.removeClass().addClass(className + '768');
+				box_motion();
+			}else if(windowWidth <= 768){
+				$wrap.removeClass().addClass(className + '320');
+				box_motion();
+			}else {
+				$wrap.removeClass();
+				box_motion();
+			}
+		}
+		
+		function box_motion(){
+			$wrap_width = $wrap.width();
+			low = 0, col = 0, sum =0;
+			$box.each(function(index){
+				if($wrap_width <= sum){
+					sum = 0;
+					col++;
+					low = 0;
+				}
+				$(this).stop().animate({'left':$box_width * low, 'top':$box_height * col});
+				low++;
+				sum += $box_width;
+			});
+			$wrap.stop().animate({'height':$box_height * (col + 1)})
+		}
+		resizeWidth();
+		$(window).resize(function(){
+			resizeWidth();
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<div class="box">
+			<p>adkadvjklbv jaao;jioa;sdnvaknvuiaiajtoiewjnrkjladfkjladfgvauidfaidfgviop;aiop;a ejtgnajkelwajkelrajkelrgoi;adfj;adfjgvklad;jgadjgkl;</p>
+		</div>
+		<div class="box">2</div>
+		<div class="box">3</div>
+		<div class="box">4</div>
+		<div class="box">5</div>
+		<div class="box">6</div>
+		<div class="box">7</div>
+		<div class="box">8</div>
+		<div class="box">9</div>
+		<div class="box">10</div>
+		<div class="box">11</div>
+		<div class="box">12</div>
+	</div>
+</body>
+</html>

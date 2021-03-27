@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>3_jquery의애니메이션</title>
+		<style>
+			img {
+				display:block;
+				position: relative;
+				left:0;
+			}
+		</style>
+		<script src="js/jquery-1.8.2.min.js"></script>
+		<script src="js/jquery.easing.min.js"></script>
+	</head>
+	<body>
+		<p>
+			<button>시작!</button>
+		</p>
+		<img src="img/evolution_1998.jpg" />
+		<img src="img/evolution_1998.jpg" />
+		<img src="img/evolution_1998.jpg" />
+		<script>
+			$("button").click(function() {
+				//alert("test");
+				
+				//animate(CSS속성객체,[시간(천분의1초),가속도,콜백함수]);
+				//가속도는 swing,linear두개밖에 없음
+				//easing플러그인을 사용하면 다양한 가속도
+				
+				$("img:eq(0)").animate({"left":1000},1000,"easeOutBounce");
+				$("img:eq(1)").animate({"left":1000},1000,"easeOutBack");
+				$("img:eq(2)").animate({"left":1000},1000,"easeOutElastic");
+				
+			});
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>게시판 예제</title>
+        <link rel="stylesheet" href="css/reset.css" type="text/css" />
+		<style type="text/css">
+			.zoom_body { border:1px solid #666; width:296px; position:relative; margin:50px;}
+			.zoom_body img { cursor: default;}
+			.zoomPup { width:55px; height:55px; opacity: 0.6; overflow: hidden; position: absolute; cursor: move; top:0px; left:0px; border:1px solid #ccc; background:#fff;}
+			.zoomIn {width:300px; height:300px;position:absolute; top:0px; left:300px;}
+			.zoomImg { width:300px; height:300px; overflow:hidden; position:absolute; border: 1px solid #999999;}
+			.zoomImg img { position:absolute;}
+			.scroll_x { position:absolute; bottom:-12px; left:0px; width:300px; height:10px; border: 1px solid #999999;}
+			.scroll_y { position:absolute; top:0px; left:300px; width:10px; height:100%; border: 1px solid #999999;}
+			.scroll_y span { display:inline-block; width:10px; height:100px; background:#444; cursor:pointer; position:absolute; }
+			.scroll_x span {display:inline-block;width:59px; height:10px; background:#444; cursor:pointer; position:absolute;}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var offsetX = $('.zoom_body').offset().left;
+				var offsetY = $('.zoom_body').offset().top;
+				var margin =  Math.round(($('.zoomPup').width())/2);
+				var width = $('.zoom_body').outerWidth();
+				var height = $('.zoom_body').outerHeight();
+				
+				$('.zoomPup').mousedown(function(){
+					$(this).bind('mousemove',function(e){
+						var x = e.pageX;
+						var y = e.pageY;
+						if(Math.round(x-offsetX-margin) < 0 || x-offsetX+margin > width){}else{
+						//if(Math.round(x-offsetX-margin) > 0 && x-offsetX+margin < width){
+							$(this).css({'left': Math.round(x-offsetX),'margin-left':-margin});
+							$('.zoomImg>img').css({'left': Math.round(-(x-offsetX-margin)*5.4)});
+							$('.scroll_x>span').css({'left': x-offsetX,'margin-left':-margin});
+						}
+						if(Math.round(y-offsetY-margin) <0 || y-offsetY+margin > height){}else{
+							$(this).css({'top' : Math.round(y - offsetY), 'margin-top':-margin});
+							$('.zoomImg>img').css({'top' : Math.round(-(y - offsetY-margin)*5.4)});
+							$('.scroll_y>span').css({'top': (y - offsetY) *1.45,'margin-top':-margin*1.4});
+						}
+					});
+				});
+				
+				$('.zoomPup').mouseup(function(){
+					$(this).unbind('mousemove');
+				});
+				
+				$('.zoom_body').mouseleave(function(){
+					$('.zoomPup').unbind('mousemove');
+				});
+				
+				/* 스크롤 */
+				$('.scroll_x').mousedown(function(){
+					var scroll_x = $(this).offset().left;
+					$(this).children().bind('mousemove',function(e){
+						var x = e.pageX;
+						if(Math.round(x-scroll_x-margin) < 0 ||x-scroll_x+margin >width){}else{
+							$(this).css({'left':x-scroll_x,'margin-left':-margin});
+							$('.zoomImg>img').css({'left': Math.round(-(x-scroll_x-margin)*5.4)});
+							$('.zoomPup').css({'left': Math.round(x-scroll_x),'margin-left':-margin});
+						}
+					});
+				});
+				
+				$('.scroll_y').mousedown(function(){
+					var scroll_y = $(this).offset().top;
+					$(this).children().bind('mousemove',function(e){
+						var y = e.pageY;
+						if(Math.round(y-scroll_y-margin) < 0 ||y-scroll_y-margin-7 > height){}else{
+							$(this).css({'top':y-scroll_y,'margin-top':-margin});
+							$('.zoomImg>img').css({'top' : Math.round(-(y - scroll_y-margin)*5.4)/1.45});
+							$('.zoomPup').css({'top' : Math.round(y - scroll_y)/1.45, 'margin-top':-margin/1.4});
+						}
+					});
+				});
+				
+				$('.scroll_x,.scroll_y').mouseup(function(){
+					$(this).children().unbind('mousemove');
+				});
+				
+				$('.scroll_x,.scroll_y').mouseleave(function(){
+					$('.scroll_x>span').unbind('mousemove');
+				});
+				
+			});
+		</script>
+    </head>
+    <body>
+    	<div class="zoom_body">
+    		<img src="images/honda-cb1000r_small.jpg" alt="자동차 이미지 줄임" />
+    		<div class="zoomPup"></div>
+    		<div class="zoomIn">
+	    		<div class="zoomImg">
+	    			<img src="images/honda-cb1000r.jpg" alt="" />
+	    		</div>
+	    		<div class="scroll_x">
+	    			<span></span>
+	    		</div>
+	    		<div class="scroll_y">
+	    			<span></span>
+	    		</div>
+    		</div>
+    	</div>
+    </body>
+</html>
+
+
+
+
+
+

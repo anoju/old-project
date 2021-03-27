@@ -1,0 +1,21 @@
+body,div,ul,li,a,img{margin:0;padding:0;}
+body {font-family: "NanumGothicWeb",'돋움',dotum,Helvetica,sans-serif;}
+li{list-style:none;}
+.wrap{width:100%;height:100%;overflow:hidden;position:relative;}
+.container{width:1000px;position:relative;}
+.lnb{width:200px;position:fixed;}
+.contens{width:800px;margin-left:200px;}
+.footer{clear:both;background:#999999;width:1000px;height:60px;z-index:100;position:relative;}
+
+
+/* contens */
+.contents img {vertical-align: middle;}
+.banner{width:100%;height:200px;background:#E5CCA5;}
+.section{width:100%;height:400px;background:#dddddd;border-bottom:1px solid #999999;}
+
+.galleryImg {position: relative;width: 550px;height: 480px;margin: 0 auto;}
+.thumbsGallery {position: relative;width: 402px;overflow: hidden;margin: 20px auto;}
+.thumbs {position: relative;float: left;width: 800px;height: 100%;margin-left: 36px;margin-right: 23px;display: inline;}
+.thumbs li {float: left;margin-right: 13px;}
+.thumbsGallery .btnPrev {position: absolute;top: 0;left: 0;z-index: 100;}
+.thumbsGallery .btnNext {position: absolute;top: 0;right: 0;z-index: 100;}

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" itemscope="itemscope" itemtype="http://schema.org/WebPage" lang="ko"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>스타일가이드</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="../../static/css/component.css" media="handheld, all">
+
+	<style type="text/css">
+	.frame {margin:2em}
+	dl {margin-bottom:1em; padding:1em; background:#fafafa;}
+	dl dt {margin-bottom:.5em}
+	dl dd {margin-bottom:2em}
+	</style>
+	
+	<!-- Le supporter -->
+	<script src="../../static/js/lib/modernizr-2.6.2.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+	<script>window.jQuery || document.write('<script src="../../static/js/lib/jquery-1.8.2.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script src="../../static/js/lib/jquery-ui-1.9.0.min.js"><\/script>')</script>
+</head>
+
+<body>
+<div class="frame">
+
+
+	<h3>버튼들은 클래스만 넣고, Button, A, Span 등 태그에서 동일하게 사용</h3>
+	<dl>
+		<dt>입력 폼</dt>
+		<dd>
+			<form action="">				
+				<div class="bbsPost">
+					<fieldset>
+						<legend>Posting</legend>
+
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><label for="postDate">등록일</label></div>
+							</div>	
+							<div class="table-cell table-td">
+								<input type="text" class="inputBox inputDisable" value="2013-06-31" readonly="readonly" />
+							</div>	
+						</div>
+						
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><label for="postId">아이디</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<input type="text" id="postId" class="inputBox" value="" required="required" />
+								<button class="btnRound"><span>중복체크</span></button>
+								<span class="input-helper helper"> ※ 6~16자리 숫자, 영문 대소문자, 특수문자 사용</span>
+							</div>
+						</div>
+						
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><em class="must">*</em><label for="subject">제목</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<input type="text" id="subject" class="inputBox" value="" required="required" style="width:100%" />
+							</div>	
+						</div>
+						
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><label for="test">두 단짜리</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<input type="password" id="test" class="inputBox" value="" required="required" />
+							</div>
+
+							<div class="column2"> <!-- 우측 column-->
+								<div class="table-cell table-th">
+									<div><label for="test">두 단짜리</label></div>
+								</div>
+								<div class="table-cell table-td">
+									<input type="password" id="test" class="inputBox" value="" required="required" />
+								</div>
+							</div>
+						</div>
+
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><em class="must">*</em><label for="oldPWD">기존 비밀번호</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<input type="password" id="oldPWD" class="inputBox" value="" required="required" />
+								<span class="input-helper helper"> ※ 6~16자리 숫자, 영문 대소문자, 특수문자 사용</span>
+							</div>	
+						</div>
+
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><label for="forThumbPC">PC Web<br />썸네일 이미지</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<div class="previewThumb">
+									<img src="../../static/img/@thumb.jpg" alt="애니카 서비스 기본 썸네일" />
+								</div>
+								<div class="thumbHelper helper">
+									<p>이미지 사이즈 000x000 pixel</p>
+									<p>파일 형식 Gif, Bmp, JPG, PNG</p>
+									<p>업로드 가능 이미지 용량 : 000 MB</p> 
+									<p>기본 배너 이미지입니다.</p>
+								</div>
+								<div class="thumbAlter">
+									<p>● 이미지용 대체 텍스트</p>
+									<textarea id="forThumbPC" class="textarea" cols="50" rows="6" >대체 텍스트</textarea>
+								</div>
+								<hr />
+								<input type="text" id="attachThumb1" class="inputBox" value="" title="PC 썸네일" /> 
+								<button class="btnRound"><span>찾아보기</span></button>
+								<button class="btnRound btnRoundBlack"><span>업로드</span></button>
+							</div>	
+						</div>
+
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><label for="forThumbMobile">Mobile Web<br />썸네일 이미지</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<div class="previewThumb">
+									<img src="../../static/img/@thumb.jpg" alt="애니카 서비스 기본 썸네일" />
+								</div>
+								<div class="thumbHelper helper">
+									<p>이미지 사이즈 000x000 pixel</p>
+									<p>파일 형식 Gif, Bmp, JPG, PNG</p>
+									<p>업로드 가능 이미지 용량 : 000 MB</p> 
+									<p>기본 배너 이미지입니다.</p>
+								</div>
+								<div class="thumbAlter">
+									<p>● 이미지용 대체 텍스트</p>
+									<textarea id="forThumbMobile" class="textarea" cols="50" rows="6" >대체 텍스트</textarea>
+								</div>
+								<hr />
+								<input type="text" id="attachThumb2" class="inputBox" value="" title="PC 썸네일" /> 
+								<button class="btnRound"><span>찾아보기</span></button>
+								<button class="btnRound btnRoundBlack"><span>업로드</span></button>
+							</div>	
+						</div>
+
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><label for="attach">첨부파일</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<input type="text" id="attach" class="inputBox" value=""  title="첨부파일" /> 
+									<button class="btnRound"><span>찾아보기</span></button>
+									<button class="btnRound btnRoundBlack"><span>업로드</span></button>
+							</div>	
+						</div>
+
+
+
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><em class="must">*</em><label for="textarea">상세내용</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<textarea id="textarea" class="textarea" cols="50" rows="6">회사소개 관리 나모 크로스에디터 적용 부분</textarea>
+							</div>	
+						</div>
+
+
+
+
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><label for="dpArticle">리스트 노출여부</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<label class="radio">
+									<input type="radio" id="dpArticle" name="dpArticle" checked="checked" />
+									노출
+								</label>
+								<label class="radio">
+									<input type="radio" name="ndpArticle" />
+									숨김
+								</label>
+
+
+								<span class="input-helper">노출순서</span>
+								<select class="select withBtn">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+								</select>
+								<span class="input-helper">번째</span>
+								<span class="input-helper helper">별도 설정을 하지 않을 경우 첫 번째 노출이 Default로 지정됩니다.</span>
+							</div>	
+						</div>
+
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><label for="dpMain">PC Web<Br />메인 노출 여부</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<label class="radio">
+									<input type="radio" id="dpMain" name="dpMain" checked="checked" />
+									노출
+								</label>
+								<label class="radio">
+									<input type="radio" name="ndpMain" />
+									숨김
+								</label>
+							</div>	
+						</div>
+						 
+						 <div class="postItem">
+							<div class="table-cell table-th">
+								<div><em class="must">*</em><label for="department">부서</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<select id="department" class="inputBox">
+									<option>손해사정사업부</option>
+								</select>
+							</div>
+
+							<div class="column2"> <!-- 우측 column-->
+								<div class="table-cell table-th">
+									<div><em class="must">*</em><label for="position">직급</label></div>
+								</div>
+								<div class="table-cell table-td">
+									<input type="text" id="position" class="inputBox" value="대리" />
+								</div>
+							</div>
+						</div>
+						
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><em class="must">*</em><label for="phoneNum">휴대전화</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<select id="phoneNum" class="select withBtn">
+									<option>010</option>
+								</select>
+								-
+								<input class="select withBtn" type="text" value="1234" />
+								-
+								<input class="select withBtn" type="text" value="5678" />
+							</div>
+
+							<div class="column2"> <!-- 우측 column-->
+								<div class="table-cell table-th">
+									<div><em class="must">*</em><label for="officeNum">사내전화</label></div>
+								</div>
+								<div class="table-cell table-td">
+									<select id="officeNum" class="select withBtn">
+										<option>010</option>
+									</select>
+									-
+									<input class="select withBtn" type="text" value="1234" />
+									-
+									<input class="select withBtn" type="text" value="5678" />
+								</div>
+							</div>
+						</div>
+						
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><em class="must">*</em><label for="txtMail">이메일</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<input type="password" id="txtMail" class="inputBox" value="" required="required" />
+								<span class="input-helper"> @ samsunglife.com</span>
+							</div>	
+						</div>						
+						
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><label for="explain">설명</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<textarea style="width:98%;" id="explain" class="textarea" cols="50" rows="6">설명부분</textarea>
+							</div>	
+						</div>
+						
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><em class="must">*</em>권한설정</div>
+							</div>
+							<div class="table-cell table-td">
+								<div class="treeWrap">			
+									<div class="tree">
+										<p><label class="checkbox"><input type="checkbox" name="" />회사소개</label></p>
+										<ul>
+											<li class="last"><label class="checkbox"><input type="checkbox" name="" />연혁</label></li>
+										</ul>				
+									</div>
+									<div class="tree">
+										<p><label class="checkbox"><input type="checkbox" name="" />인재채용</label></p>
+										<ul>
+											<li class="last"><label class="checkbox"><input type="checkbox" name="" checked disabled />굿피플스토리</label><!-- 체크박스 클릭 유무를 몰라서 하나만 disabled 처리 했습니다.-->
+												<ul>
+													<li><label class="checkbox"><input type="checkbox" name="" />손해사정사업부</label></li>
+													<li><label class="checkbox"><input type="checkbox" name="" />네트윅 사업부</label></li>
+													<li><label class="checkbox"><input type="checkbox" name="" />콜센터 사업부</label></li>
+													<li class="last"><label class="checkbox"><input type="checkbox" name="" />Staff</label></li>
+												</ul>
+											</li>
+										</ul>				
+									</div>
+									<div class="tree">
+										<p><label class="checkbox"><input type="checkbox" name="" />홍보센터</label></p>
+										<ul>
+											<li><label class="checkbox"><input type="checkbox" name="" />매거진</label>
+												<ul>
+													<li><label class="checkbox"><input type="checkbox" name="" />뉴스</label></li>
+													<li><label class="checkbox"><input type="checkbox" name="" />보도자료</label></li>
+													<li class="last"><label class="checkbox"><input type="checkbox" name="" />애니툰</label></li>
+												</ul>
+											</li>
+											<li class="last"><label class="checkbox"><input type="checkbox" name="" />애니카 문화</label>
+												<ul>
+													<li><label class="checkbox"><input type="checkbox" name="" />나눔문화</label></li>
+													<li class="last"><label class="checkbox"><input type="checkbox" name="" />행복일상</label></li>
+												</ul>
+											</li>
+										</ul>				
+									</div>
+									<div class="tree">
+										<p><label class="checkbox"><input type="checkbox" name="" />고객센터</label></p>
+										<ul>
+											<li><label class="checkbox"><input type="checkbox" name="" />고객의 소리</label>
+												<ul>
+													<li><label class="checkbox"><input type="checkbox" name="" />감동사례</label></li>
+													<li><label class="checkbox"><input type="checkbox" name="" />FAQ</label></li>
+													<li class="last"><label class="checkbox"><input type="checkbox" name="" />Q&amp;A</label></li>
+												</ul>
+											</li>
+											<li class="last"><label class="checkbox"><input type="checkbox" name="" />이벤트</label></li>
+										</ul>				
+									</div>
+								</div>
+					
+								<div class="treeWrap">
+									<div class="tree">
+										<p><label class="checkbox"><input type="checkbox" name="" />네트윅</label></p>
+										<ul>
+											<li class="last"><label class="checkbox"><input type="checkbox" name="" />애니카랜드 찾기</label></li>
+										</ul>				
+									</div>
+									<div class="tree">
+										<p><label class="checkbox"><input type="checkbox" name="" />메인관리</label></p>
+										<ul>
+											<li><label class="checkbox"><input type="checkbox" name="" />메인 이미지 관리</label></li>
+											<li><label class="checkbox"><input type="checkbox" name="" />배너관리</label></li>
+											<li><label class="checkbox"><input type="checkbox" name="" />컨텐츠 노출관리</label></li>
+											<li class="last"><label class="checkbox"><input type="checkbox" name="" />팝업관리</label></li>
+										</ul>				
+									</div>
+									<div class="tree">
+										<p><label class="checkbox"><input type="checkbox" name="" />운영자 관리</label></p>
+										<ul>
+											<li><label class="checkbox"><input type="checkbox" name="" />운영자 정보 변경</label></li>
+											<li class="last"><label class="checkbox"><input type="checkbox" name="" />계정 권한 관리</label></li>
+										</ul>				
+									</div>
+								</div>
+							</div>	
+						</div>	
+						
+
+					</fieldset>
+				</div>
+				<div class="bbsPostHandle">
+					<input type="image" class="btnImg" src="../../static/img/common/btn_save.png" alt="저장" />
+					<button class="btnImg"><img src="../../static/img/common/btn_cancle.png" alt="취소" /></button>
+
+					<a href="#list" class="btnImg pull-right"><img src="../../static/img/common/btn_list.png" alt="목록" /></a>
+
+				</div>
+			</form>
+
+
+		</dd>
+	</dl>
+
+
+</div> <!-- /frame -->
+
+<script src="../../static/js/plugins.js"></script>
+<script src="../../static/js/main.js"></script>
+</body>
+</html>
+

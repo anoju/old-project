@@ -1,0 +1,194 @@
+
+/* font setting */
+.boxNotice h2,
+.boxNews h2, 
+.boxStock, 
+.boxBizList01, 
+.boxBizList02, 
+.boxCeo,
+.conRecruit,
+.boxSell,
+.boxNotice02 h2 { font-family:NanumGothic, '나눔고딕', NanumGothicWeb; }
+
+#skipNavi { display:none; }
+
+/* skipNavi */
+#skipNaviMain { position:absolute; top:0; left:0; z-index:5000; width:100%; height:0; }
+#skipNaviMain a { display:block; overflow:hidden; width:1px; height:1px; margin-left:-1px; margin-bottom:-1px; text-align:center; font-size:0; color:#222;  }
+#skipNaviMain a:focus, #skipNaviMain a:hover { width:100%; height:15px; padding:10px 0; font-size:1em; background:#222; color:#fff; z-index:5000; }
+
+body.index { overflow-x:hidden; background:none #222; }
+
+#mainWrap { position:relative; overflow:hidden; background:url('http://www.kumhoenc.com/images/main/bgIndex.gif') 0 0 repeat-y; }
+#mainWrap #header { width:170px; overflow:hidden; }
+
+#boxConWrap { position:relative; z-index:500; width:430px; height:1100px; overflow:hidden; margin-left:170px; background:#fff; }
+
+.boxCon { position:absolute; top:0; width:430px; height:1100px; overflow:hidden; }
+
+#boxMain { left:0; }
+#boxCompany { left:430px; }
+#boxBusiness { left:860px; }
+#boxInvest { left:1290px; }
+#boxRecruit { left:1720px; }
+#boxPromote { left:2150px; }
+
+.boxNotice { position:relative; height:75px; overflow:hidden; padding-top:15px; background:url('http://www.kumhoenc.com/images/main/bgBoxNoticeNew.gif') 0 bottom repeat-x; }
+.boxNotice h2 { float:left; width:80px;  color:#313131; font-size:1.1em; font-weight:normal; padding:10px 0 0 20px; }
+.boxNotice .bx-wrapper { float:left; height:60px; overflow:hidden; }
+.boxNotice ul { float:left; width:324px; height:60px; overflow:hidden; }
+.boxNotice ul li { position:relative; width:304px; height:20px; line-height:20px; padding-left:20px; overflow:hidden; }
+.boxNotice ul li a { color:#999; }
+.boxNotice ul li a strong { color:#444; font-weight:normal; margin:0 5px 0 0; }
+.boxNotice ul li span { position:absolute; right:20px; top:0; color:#999; }
+.boxNotice ul li a:hover, .boxNotice ul li a:focus, .boxNotice ul li a:active { color:#444; }
+.boxNotice .pNavi { position:absolute; left:40px; top:50px; text-align:center; }
+.boxNotice .pNavi a { display:inline-block; width:7px; height:7px; margin:0 3px; font-size:0;, color:#fff; text-indent:1000px; background:url('http://www.kumhoenc.com/images/main/bgPageOff.gif') 0 0 no-repeat; }
+.boxNotice .pNavi a:hover, .boxNotice .pNavi a:focus, .boxNotice .pNavi a:active, .boxNotice .pNavi a.on {  background:url('http://www.kumhoenc.com/images/main/bgPageOn.gif') 0 0 no-repeat; }
+
+.boxNews { clear:both; position:relative; width:215px; height:75px;  overflow:hidden; padding:40px 0 0 215px;  border-bottom:1px solid #ededed; }
+.boxNews h2 { position:absolute; top:0; right:0; overflow:hidden;   }
+.boxNews h2.first { right:107px; border-right:1px solid #999; }
+.boxNews h2 a { display:block; width:107px; height:26px; padding-top:14px; text-align:center; color:#fff; font-weight:400; background:url('http://www.kumhoenc.com/images/main/bgMainTab01Off.gif') 0 0 repeat-x; }
+.boxNews h2 a.on { color:#333; background:url('http://www.kumhoenc.com/images/main/bgMainTab01On.gif') 0 -1px repeat-x; }
+.boxNews .tabBox { overflow:hidden;  }
+.boxNews .imgNews { position:absolute; top:0; left:0; width:215px; height:115px; overflow:hidden; }
+.boxNews .imgNews li { width:215px; height:140px; overflow:hidden; }
+.boxNews .imgNews li img { width:215px; height:115px; }
+.boxNews .txtNews  { overflow:hidden; padding-top:10px; }
+.boxNews .txtNews li { overflow:hidden; text-align:center; }
+.boxNews .txtNews li a { font-size:0.9em; color:#999; letter-spacing:-1px; }
+.boxNews .txtNews li a span { display:block; margin:0 0 5px 0; color:#333; font-size:1.1em; letter-spacing:0; line-height:140%; }
+.boxNews .pNavi { margin-top:10px; text-align:center; }
+.boxNews .pNavi a { display:inline-block; width:7px; height:7px; margin:0 3px; font-size:0;, color:#fff; text-indent:1000px; background:url('http://www.kumhoenc.com/images/main/bgPageOff.gif') 0 0 no-repeat; }
+.boxNews .pNavi a:hover, .boxNews .pNavi a:focus, .boxNews .pNavi a:active, .boxNews .pNavi a.on {  background:url('http://www.kumhoenc.com/images/main/bgPageOn.gif') 0 0 no-repeat; }
+
+
+
+.boxStockWrap { clear:both; overflow:hidden; margin-top:-10px;}
+.boxStock { clear:both; width:430px; overflow:hidden; color:#4c4c4c; border-bottom:1px solid #c7c7c7; }
+.boxStock div { float:left; width:190px; overflow:hidden; padding:30px 0 0 25px; }
+.boxStock div p { margin:0 0 10px 0; font-size:0.9em; }
+.boxStock div strong { display:block; margin:0 0 10px 0; font-size:2.2em;  }
+.boxStock div p img { margin:0 3px; }
+
+
+.boxBizList01 { clear:both; overflow:hidden;  }
+.boxBizList01 li { clear:both; height:50px; overflow:hidden; padding:15px 0 0 40px; border-top:1px solid #f1f1f1; background:url('http://www.kumhoenc.com/images/main/bgMainList01.gif') 410px 25px no-repeat;  }
+.boxBizList01 li a { display:block; overflow:hidden; color:#858585; }
+.boxBizList01 li a strong { float:left; width:110px; font-size:1.5em; color:#333; font-weight:normal; line-height:140%; }
+.boxBizList01 li a span { float:left; width:260px; line-height:150%; }
+
+.boxBizList02 { overflow:hidden; }
+.boxBizList02 li { clear:both; overflow:hidden; padding:15px 0 0 40px; border-top:1px solid #f1f1f1; }
+.boxBizList02 li.bgOn { height:190px;  background:url('http://www.kumhoenc.com/images/main/bgBizLink01.gif') right 0 no-repeat; }
+.boxBizList02 li.bgOn p.link a { float:none; }
+.boxBizList02 strong { float:left; display:block; width:115px; font-size:1.5em; color:#333; font-weight:normal; line-height:140%; }
+.boxBizList02 div { float:left; width:260px; overflow:hidden; }
+.boxBizList02 div strong { float:none; margin:0 0 10px 0; }
+.boxBizList02 div p { clear:both; }
+.boxBizList02 div p.txt { line-height:150%; color:#858585; }
+.boxBizList02 div p.link { overflow:hidden; margin:10px 0 20px 0; }
+.boxBizList02 div p.link a { display:block; float:left; width:113px; height:20px; padding:10px 0 0 10px; margin:0 3px 0 0; font-size:0.9em; color:#858585; background:url('http://www.kumhoenc.com/images/main/bgBizLink.gif') 0 0 no-repeat; }
+
+
+.boxBanner { clear:both; margin-top:20px; text-align:center; }
+
+.boxCeo { overflow:hidden; border-bottom:1px solid #c2c2c2;  }
+.boxCeo li { clear:both; height:54px; overflow:hidden; padding:19px 0 0 40px; border-top:1px solid #f1f1f1; background:url('http://www.kumhoenc.com/images/main/bgMainList01.gif') 410px 25px no-repeat;  }
+.boxCeo li a { display:block; overflow:hidden; color:#858585; }
+.boxCeo li a strong { float:left; width:110px; font-size:1.5em; color:#333; font-weight:normal;  line-height:140%;  }
+.boxCeo li a span { float:left; width:265px; line-height:150%; }
+
+.boxLink { overflow:hidden; border-top:1px solid #f1f1f1; }
+.boxLink a { float:left; overflow:hidden; }
+
+.conRecruit { overflow:hidden; border-bottom:1px solid #c7c7c7;  padding:0 0 20px 0; }
+.conRecruit .tit { margin:20px 0 0 25px; font-weight:normal; font-size:1.5em; color:#333; }
+.conRecruit .img { text-align:center; padding:30px 0 25px 0; }
+.conRecruit .txt { text-align:center; color:#858585; font-size:0.9em; line-height:150%; }
+.conRecruit .link { text-align:right; padding:10px 25px 0 0; }
+.conRecruit .sub { padding:0 0 0 170px; }
+.conRecruit .subT { color:#333;  font-weight:normal; padding:20px 0 15px 0; }
+.conRecruit .list li { padding-left:8px; font-size:0.9em; color:#858585; background:url('http://www.kumhoenc.com/images/main/bgRecruitList.gif') 0 7px no-repeat; line-height:150%; }
+.conRecruit.con02 { border-bottom:0; border-top:1px solid #f1f1f1; background:url('http://www.kumhoenc.com/images/main/bgRecruitCon.gif') 0 0 no-repeat; }
+
+.boxNotice02 { overflow:hidden;  }
+.boxNotice02 h2 { position:relative;  color:#313131; font-size:1.1em; font-weight:normal; height:30px; padding:12px 0 0 20px; background:url('http://www.kumhoenc.com/images/main/bgBoxNotice02.gif') 0 0 repeat-x; }
+.boxNotice02 .btnRss { position:absolute; top:15px; right:30px; } 
+.boxNotice02 ul { padding:10px 20px; overflow:hidden; background:#fff; }
+.boxNotice02 ul li { position:relative; width:383px; overflow:hidden; _zoom:1; padding:10px 0; background:url('http://www.kumhoenc.com/images/main/bgNoticeList02.gif') 0 bottom repeat-x; }
+.boxNotice02 ul li.last { background:none; }
+.boxNotice02 ul li a { color:#999; }
+.boxNotice02 ul li a strong { margin:0 10px 0 0; font-weight:normal; }
+.boxNotice02 ul li span { position:absolute; right:0; top:10px; color:#999; }
+.boxNotice02 ul li a:hover, .boxNotice02 ul li a:focus, .boxNotice02 ul li a:active { color:#444; }
+
+.boxSell { position:relative; width:430px; height:250px; overflow:hidden; }
+.boxSell div {  position:absolute; top:0; left:0; z-index:1000; width:430px; height:70px; overflow:hidden;  }
+.boxSell h2 { float:left; width:356px;  text-align:center; color:#fff; font-size:1.5em; font-weight:400; padding-top:10px; line-height:150%; }
+.boxSell h2 span { display:block; font-size:0.7em; }
+.boxSell div span.bgBox { position:absolute; top:0; left:0; width:430px; height:70px; z-index:-1; background:url('http://www.kumhoenc.com/images/main/bgTitSell.gif') 0 0 repeat-x; }
+.boxSell h2 a { position:relative; z-index:2000; color:#fff;   }
+.boxSell .titImg { width:430px; height:250px;  }
+.boxSell .titImg img { width:430px; height:250px; }
+.boxSell a.prevNews { float:left; height:40px; padding:30px 10px 0 20px; }
+.boxSell a.nextNews { float:right; height:40px; padding:30px 20px 0 10px; }
+.boxSell span.txt { padding-top:15px; color:#444;  }
+
+
+
+#maskCon { display:none; position:absolute; top:0; left:0; z-index:2000; width:430px; height:1100px; background:#000 }
+
+#visualArea { position:absolute; left:600px; top:0; z-index:1000; width:1110px; height:1100px; overflow:visible; background:url('http://www.kumhoenc.com/images/common/bg/bgKumho.gif') 0 0 repeat;  }
+#visualArea p { position:absolute; top:259px; left:0; z-index:1100;  } /*305px*/
+#visualArea button { display:block; }
+#visualArea button.closeCon { width:25px; height:65px; padding:0; border:0; cursor:pointer; background:url('http://www.kumhoenc.com/images/main/btnSlideOff.gif') 0 0 no-repeat; }
+#visualArea button.openCon { width:25px; height:65px; padding:0; border:0; cursor:pointer; background:url('http://www.kumhoenc.com/images/main/btnSlideOn.gif') 0 0 no-repeat;}
+
+#boxVisual { position:relative; height:1100px;  overflow:hidden; }
+#boxVisual div { position:absolute; top:0; left:0;  width:1110px; height:1100px; z-index:1000;  }
+#boxVisual img { position:absolute;  }
+.boxMain { background:url('http://www.kumhoenc.com/images/main/visualMainBg.jpg') 0 0 no-repeat; }
+.boxCompany { display:none; background:url('http://www.kumhoenc.com/images/main/visualCompany.gif') 0 0 no-repeat; }
+.boxBusiness { display:none; background:url('http://www.kumhoenc.com/images/main/visualBusinessBg.gif') 0 0 no-repeat; }
+.boxInvest { display:none; background:url('http://www.kumhoenc.com/images/main/visualInvest.jpg') 0 0 no-repeat; }
+.boxRecruit { display:none; background:url('http://www.kumhoenc.com/images/main/visualRecruit.jpg') 0 0 no-repeat; }
+.boxPromote { display:none; background:url('http://www.kumhoenc.com/images/main/visualPromoteBg.jpg') 0 0 no-repeat; }
+
+/* main animate */
+#objTit { top:-400px; left:0; }
+#obj01 { bottom:-1000px; left:0; }
+#obj02 { top:74px; right:-500px; }
+#obj03 { top:194px; right:-800px; }
+#obj04 { top:560px; right:-500px; }
+
+/* business animate */
+#objAir { top:1100px; left:-100px; width:0; height:0; }
+
+/* invest animate */
+#objArrow { position:absolute; top:0; left:0; width:0; height:267px; overflow:hidden; }
+
+
+/* promtoe animate */
+#objTitPromote { top:-500px; left:0; }
+#objNews { top:226px; left:-500px; }
+#objWebzine { top:-500px; left:276px; }
+#objPen { top:518px; left:-600px; }
+#objPic { top:-500px; right:-500px; }
+#objCi { top:-500px; left:484px; }
+#objPrint { bottom:-700px; left:-500px; }
+#objTv { bottom:-700px; left:213px; }
+#objGallery { bottom:-500px; right:-400px; }
+#objMedia { bottom:-500px; right:-500px; }
+
+
+
+#visualArea #quickSub { top:259px; }
+
+#footer { position:absolute; bottom:0; left:0; }
+
+/* media for ( height > 900 ) */
+@media screen and  (min-height: 901px) {
+	#footer { position:fixed; bottom:0; left:0; }
+}

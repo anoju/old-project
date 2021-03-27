@@ -1,0 +1,16 @@
+body,div,ul,li,a,img{margin:0;padding:0;}
+body {font-family: "NanumGothicWeb",'돋움',dotum,Helvetica,sans-serif;}
+.wrap{width:100%;height:100%;overflow:hidden;position:relative;}
+.container{width:100%;height:865px;;}
+.lnb{background:#aaaaaa;width:200px;height:100%;float:left;position:relative;z-index:100;}
+.contens{width:100%;height:865px;position:absolute;left:200px;}
+.contens_inner{background:#dddddd;width:5000px;height:100%;position:absolute;}
+.footer{clear:both;background:#999999;width:1280px;height:60px;z-index:100;position:relative;}
+
+
+/* contens */
+
+.banner{float:left;width:300px;height:100%;background:#E5CCA5;}
+.section{float:left;width:1079px;height:100%;border-left:1px solid #999999;}
+.prev{position:absolute;top:450px;left:30px;}
+.next{position:fixed;top:450px;right:30px;}

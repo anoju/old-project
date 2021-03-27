@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>PARALLAX</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link type="text/css" rel="stylesheet" href="../css/reset.css" />
+	<style type="text/css">
+		#wrap {position: relative; width: 100%; top: 0; left: 0;}
+		#first_bg, #second_bg, #third_bg, #forth_bg{position: relative; height: 1080px; overflow: hidden; min-width: 1024px;}
+		#first_bg {background: url('./img/bg_1.png') 0 0 no-repeat fixed;}
+		#second_bg {background: url('./img/bg_2.jpg') 0 0 no-repeat fixed;}
+		#third_bg {background: url('./img/bg_3.jpeg') 0 0 no-repeat fixed;}
+		#forth_bg {background: url('./img/bg_4.jpg') 0 0 no-repeat fixed;}
+
+		p {font-size: 30px; color: white; font-weight: bold; position: relative; top: 200px; left: -1500px;}
+		
+		h1 {font-size: 2.8em; position: fixed; top: 30px; left: 60px; color: white;}
+		#txt {font-size: 2em; position: fixed; top: 120px; left: 60px; width: 100%; height: 100px; color: red;}
+		#txt2 {font-size: 2em; position: fixed; top: 155px; left: 60px; width: 100%; height: 100px; color: red;}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.0.0.js"></script>
+	<script type="text/javascript">
+	<!--
+		var $txt;
+		var $txt2;
+
+		var wh;
+		var timer;
+		var isState = true;
+
+		$(document).ready(function(){
+			init();
+		});
+
+		function init(){
+			$txt = $("#txt");
+			$txt2 = $("#txt2");
+			wh = $("#wrap").height();
+
+			// scroll event
+			move();
+			// resize event
+			resizeHandler();
+			
+			// 초기에 trigger 시켜 줌.
+			$(window).trigger('scroll');
+			$(window).trigger('resize');
+		}
+
+		function resizeHandler(){
+			$(window).bind('resize', function(){
+				if ($(this).width() >= 1920)
+				{
+					resizeImage(100, "%");
+				}else if($(this).width() < 1920){
+					resizeImage(1920, "px");
+				}
+
+				$txt2.html("window Width : " + $(this).width());
+			});
+		}
+
+		function resizeImage(imgSize, unit){
+			for (var i = 0; i < $("#wrap").children.length; i++)
+			{
+				$("#wrap > div").css({'background-size':imgSize + unit});
+			}
+		}
+
+		function move(){
+			$(window).bind('scroll', function(){
+				// 유저의 마우스 휠 스크롤 사용시 timer 작동.
+				if (isState == true)
+				{
+					window.clearTimeout(timer);
+					timer = setTimeout(refresh, 1200); // refresh 함수 실행.
+				}
+				
+				// 각 컨텐츠의 시차 -(윈도우 스크롤된 거리 * 속도)
+				var	posY_1 = -($(window).scrollTop() * 0.25);
+				var	posY_2 = -($(window).scrollTop() * 0.08);
+				var	posY_3 = -($(window).scrollTop() * 0.04);
+				var	posY_4 = -($(window).scrollTop() * 0.02);
+				
+				// 각 컨텐츠 백그라운드 포지션 설정.
+				$("#first_bg").css('background-position', '0 ' + posY_1 + 'px');
+				$("#second_bg").css('background-position', '0 ' + posY_2 + 'px');
+				$("#third_bg").css('background-position', '0 ' + posY_3 + 'px');
+				$("#forth_bg").css('background-position', '0 ' + posY_4 + 'px');
+
+				setST($(window).scrollTop());
+			})
+			
+			// isState가 true일때 실행.
+			var refresh = function(){
+				isState = false;	// 바로 상태를 false로 바꿔 줌.
+				var con_height = $("#wrap").height() / $("#wrap").children().length;	//전체 컨텐츠 height에서 컨텐츠 개수를 나누면, 각 컨텐츠의 height가 나옴.
+				var page = Math.floor($(window).scrollTop() / con_height);	// 현재 윈도우 스크롤에서 각 컨텐츠 height를 나누면 현재 컨텐츠의 페이지를 구함.
+				var winH = $(window).height();
+				var winHalf = winH / 2;
+				
+				// 각 컨텐츠의 중심을 기준으로 뷰포으와 더 가까운 컨텐츠를 찾아내는 공식.
+				// 절대값( 윈도우 높이 - 컨텐츠 높이 * 해당 컨텐츠 페이지) + 윈도우 높이의 절반.
+				var p_1 = Math.abs((winH - con_height)) + (winHalf);
+				var p_2 = Math.abs((winH - con_height*2)) + (winHalf);
+				var p_3 = Math.abs((winH - con_height*3)) + (winHalf);
+
+				$txt.html("contentH : " + con_height + ", winH " + winHalf + " ::: " + p_1 + " : " + p_2 + " : " + p_3 + " :: page : " + page);
+				
+				// 현재 스크롤 위치와 컨텐츠의 Y 포지션을 비교.
+				// 스크롤 애니메이션이 완료된 후, isState = true; 유저의 마우스 스크롤 가능하게 함.
+				if (getST() < p_1)
+				{
+					$("html, body").stop().animate({scrollTop: 0}, 400, 
+					function(){
+						$("#first_bg p").stop().animate({left:60}, 600);
+						isState = true;
+					});
+				}else if (getST() >= p_1 && getST() < p_2){
+					$("html, body").stop().animate({scrollTop: 1080}, 400, 
+					function(){
+						$("#second_bg p").stop().animate({left:60}, 600);
+						isState = true;
+					});
+				}else if (getST() >= p_2 && getST() < p_3){				
+					$("html, body").stop().animate({scrollTop: 2160}, 400, 
+					function(){
+						$("#third_bg p").stop().animate({left:60}, 600);
+						isState = true;
+					});
+				}else if (getST() >= p_3){
+					$("html, body").stop().animate({scrollTop: 3240}, 400, 
+					function(){
+						$("#forth_bg p").stop().animate({left:60}, 600);
+						isState = true;
+					});
+				}
+			}
+		}
+		
+		// 현재 윈도우 스크롤의 Y 좌표를 얻기위한 getter, setter
+		var st = 0;
+		function setST(s){st = s;}
+		function getST(){return st;}
+
+	//-->
+	</script>
+</head> 
+<body>
+	<div id="wrap">
+		<div id="first_bg">
+			<p>A new, highly limited edition Lamborghini in Geneva</p>
+		</div>
+		<div id="second_bg">
+			<p>Ferruccio Lamborghini, a biography</p>
+		</div>
+		<div id="third_bg">
+			<p>Jump the queue and buy an Aventador Roadster at auction.</p>
+		</div>
+		<div id="forth_bg">
+			<p>Will we be seeing a new Lamborghini GT concept in Geneva </p>
+		</div>
+	</div>
+<!----------------https://code.google.com/p/jquery-scroll-events/wiki/Reference-------->
+	<div><h1>PARALLAX_SCROLLING : BACKGROUND EFFECTS, AUTO SCROLL, MAX-IMAGE RESIZE<h1></div>
+	<div id="txt"></div>
+	<div id="txt2"></div>
+</body>
+</html>

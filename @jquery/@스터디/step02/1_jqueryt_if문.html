@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">	
+	$(function(){
+		/* 1번째방법!!!*/
+		$('input[type=button]').click(function(){
+			var $number = parseInt($('input[type=text]').val()); //정수형 변환 - parselnt
+			if ($number == 1){
+				font_color('red');
+			}else if($number == 2){
+				font_color('blue');
+			}else if($number == 3){
+				font_color('yellow');
+			}else if($number == 4){
+				font_color('pink');
+			}else if($number == 5){
+				font_color('silver');
+			}else{
+				alert('이건아니잖아~~♬');
+				$('input[type=text]').val('').focus();
+			}
+		});
+		
+		
+		/* 2번째 방법!!!
+		$('input[type=button]').click(function(){
+  		    var $number = parseInt($('input[type=text]').val()); //정수형 변환 - parselnt
+			if ($number == 1) {font_color('red'); return};
+			if($number == 2) {font_color('blue'); return};
+			if($number == 3) {font_color('yellow'); return};
+			if($number == 4) {font_color('pink'); return};
+			if($number == 5) {font_color('silver'); return};
+			alert('이건아니잖아~~♬');
+			$('input[type=text]').val('').focus();
+		});
+		*/
+		
+		/* 응용작!!!!!!!!!! 
+		$('input[type=button]').click(function(){
+			var $number = parseInt($('input[type=text]').val()); //정수형 변환 - parselnt
+			var _number = ['red','blue','yellow','pink','silver']; //색깔에 관한 객체 생성
+			if ($number > 0 && $number <= 5){ //만약 입력한 값이 0보다 크고 5보다 작거나 같다면 참
+				font_color(_number[$number-1]) //색상에 관한 객체 대입 (-1한 이유 : 객체의 순서는 0부터 시작하므로)
+				return;//click이벤트 끝!!
+			}
+			alert('이건아니잖아~~♬');
+			$('input[type=text]').val('').focus();
+		});
+		*/
+		function font_color(font){
+			$('p').css({'color':font,'font-weight':'bold'});
+		}
+	});
+</script>
+</head>
+<body>
+	<h1><label for="number">1부터 5까지 값중 임의값을 넣어주시기 바랍니다.</label></h1>
+    
+    <input type="text" id="number" title="숫자입력" />
+    
+    <input type="button" value="확인" />
+    
+    <p>숫자마다 글자색상이 다르지요~</p>
+</body>
+</html>

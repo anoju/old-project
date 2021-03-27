@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Testing mousewheel plugin</title>		
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.js"></script>		
+		<script type="text/javascript" src="../jquery.mousewheel.js"></script>		
+		<style type="text/css">	
+			*{margin:0;padding:0}
+			ol,ul,li{list-style:none}
+			#action_area{width:800px;height:500px;background:#000;position:relative;overflow:hidden}
+			
+			#mover{width:600px;height:100px;position:absolute;left:-440px;bottom:0}
+			#mover ul li{float:left;margin-right:10px}
+			#mover ul li a{display:inline-block;background:#f00;width:100px;height:100px}
+		</style>
+
+		<script type="text/javascript">
+			$(function() {
+				//$('#userAgent').html(navigator.userAgent);				
+			
+				$('#action_area')
+					.mousewheel(function(event, delta, deltaX, deltaY) {
+						var o = '',
+						mover_gap = 450;
+						posY = $("#mover").position().top,
+						posX = $("#mover").position().left,
+						down = posY + mover_gap,
+						up = posY - mover_gap,
+						left = posX - mover_gap,
+						right = posX + mover_gap;
+						
+						if(right >= 700) {
+							right = 700;
+						}else{}
+						/* try Easing Test!! */
+						console.log(delta)
+						if (delta > 0) { 		
+							if(left <= -440) {
+								$("#mover").stop().animate({'left': -440});
+							}else{
+								$("#mover").stop().animate({'left': left});
+							}								
+						}
+						else if (delta < 0) { 							
+								$("#mover").stop().animate({'left': right});
+														
+						}					
+						event.stopPropagation();
+						event.preventDefault();
+					});
+				
+				
+				
+				
+			});
+		</script>
+	</head>
+
+	<body>	
+		
+		<div id="action_area">action_area
+			<div id="mover">
+				<ul>
+				<li><a href="#">click1</a></li>
+				<li><a href="#">click2</a></li>
+				<li><a href="#">click3</a></li>
+				<li><a href="#">click4</a></li>
+				<li><a href="#">click5</a></li>
+				</ul>
+			</div>
+		</div>	
+		
+
+	</body>
+</html>

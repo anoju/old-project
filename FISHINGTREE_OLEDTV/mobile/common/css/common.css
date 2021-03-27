@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+/*기본태그 정의*/
+*{font-family: Apple Gothic, 돋음, Dotum, Baekmuk Dotum, Undotum, Latin font, sans-serif; }
+html, body {padding:0;margin:0;height:100%;}
+body, td, select, textarea, input {font-size:12px;font-family: 돋음, Dotum, Baekmuk Dotum, Undotum, Apple Gothic, Latin font, sans-serif; }
+
+/* 마진과 패딩의 초기화 */
+body, div, dl, dt, dd, ul,  li, h1, h2, h3, h4, h5, h6, p {margin:0;padding:0;}
+
+/* 헤더 폰트 사이즈 초기화 */
+h1, h2, h3, h4, h5, h6 {font-size:100%;}
+
+/* 리스트의 스타일 제거 */
+ol, ul {list-style:none;}
+
+/* 이미지 보더 표시 초기화 */
+img{vertical-align:middle;border:0;}
+
+/* 링크 초기화 */
+a:link,
+a:active,
+a:visited,
+a:hover{text-decoration:none;}
+.pad_t47{padding-top:47px}

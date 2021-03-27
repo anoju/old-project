@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type"
+		content="text/html; charset=utf-8">
+		<title>이벤트 객체</title>
+		<style type="text/css">
+			body {
+				margin:0;
+			}
+			#mouse {
+				width:400px;
+				height:300px;
+				border:1px solid #000;
+				font:bold 30px/300px dotum,"돋움",sans-serif;
+				text-align:center;
+				cursor:crosshair;
+			}
+		</style>
+		<!-- jquery 라이브러리 등록 -->
+		<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("#mouse").click(function(e) {					
+					//jquery에서는 e.pageX, e.pageY
+					var x = e.pageX;
+					var y = e.pageY;
+					
+					$(this).text("x좌표 : " + x + " / y좌표 : " + y);
+					
+				});			
+			});
+		</script>
+	</head>
+	<body>
+		<div id="mouse">
+			  x좌표:? / y좌표:?
+		</div>	
+	</body>
+</html>
+
+
+
+
+
+
+
+

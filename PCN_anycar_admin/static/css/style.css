@@ -1,0 +1,147 @@
+@charset "utf-8";
+/* ==========================================================================
+   Base styles & Helper
+   ========================================================================== */
+
+
+
+/* ==========================================================================
+   Main
+   ========================================================================== */
+
+
+
+
+/* ==========================================================================
+	admin_syhong 
+	========================================================================== */
+
+/* common */
+html {height:100%;}
+body {height:100%; background:#f8f8f8 url('../img/common/header/bg_top.gif') 0 0 repeat-x; }
+#wrap { position:relative; margin:0 auto; width:1260px; min-height:100%; margin-bottom:-27px; overflow:hidden; background:url(../img/common/bg_wrap.png) repeat-y; zoom:1;}
+#header {}
+	.brand {position:absolute; top:0; left:0; width:219px; height:82px;}
+	.brand h1 {margin:0; padding:0; width:219px; height:82px; text-indent:-9999px; background:#FFF url('../img/common/header/topLogo.gif') no-repeat; }
+	.brand h1 a { display:block; width:219px; height:82px; }
+	.user-info {position:absolute; top:0; right:0; padding:7px 0 0; color:#b2adac;}
+		.user-info strong {color:#9fbbe5;}
+		.user-info .time {color:#FFF}
+		.btn-logout {margin-left:12px; vertical-align:middle}
+		.btn-logout img {margin-top:-5px; }
+	/* GNB */
+	#gnb {margin:29px 0 0 219px;height:61px;}
+	#gnb ul {overflow:hidden;margin:0; padding:0; height:53px;}
+		#gnb li {float:left; display:block; width:130px; height:53px;}
+		#gnb li.on {background:url(../img/common/header/gnb_bg_on.png) repeat-x;}
+		#gnb li a {display:block; line-height:53px; width:130px; height:53px; text-align:center;}
+
+	/* Aside sub menu */
+	#subMenuWrap {float:left; display:block; width:217px; background:#FFF; border:1px solid #eaeaea; border-top:none;}
+		#lnb {padding-top:67px;}
+		#lnb h2 {margin:0; padding:0 0 24px 25px; border-bottom:1px solid #eaeaea;}
+		#lnb ul {margin:0; padding:0; font:normal 14px Dotum}
+			#lnb > ul > li {border-bottom:1px solid #eaeaea;}
+			#lnb > ul > li > a {display:block; height:48px; line-height:48px; padding-left:20px; font-weight:bold; color:#4a566e; text-decoration:none}
+			#lnb > ul > li.on > a {color:#0b86fa; border-bottom:1px solid #515151}
+			
+			#lnb > ul > li.on > ul {display:block; padding:19px 18px;}
+			#lnb > ul > li > ul {display:none; border-top:4px solid #dce2e4; background:#f7f8fb;}
+			#lnb > ul > li > ul > li {padding-left:20px; }
+			#lnb > ul > li > ul > li > a {display:block; height:28px; line-height:28px; color:#515151; text-decoration:none}
+			#lnb > ul > li > ul > li.on {background:url(../img/common/bul_circle_blue.png) 0 9px no-repeat;}
+			#lnb > ul > li > ul > li.on a {color:#00ade7}
+			
+/* Footer */
+#footer {width:100%; height:27px; background:#d5d5d5}
+	#footer div {margin:0 auto; padding:6px 0 0; width:1260px; }
+	#footer div p {margin:0; padding-left:244px; color:#FFF;}
+
+
+/* Content Area */
+#contentWrap {margin-left:251px; padding:0 0 27px;}
+	#location {position:absolute; right:0; top:82px; color:#b2adac;}
+		#location .current {color:#1684f6;}
+
+	#contentWrap h1 {margin:0 0 35px; height:65px; line-height:70px; border-bottom:2px solid #414141;}
+	#contentWrap h1.noshadow {border-bottom:none; margin-bottom:10px;}
+
+	#contentWrap .search-filter {margin:0 0 42px; padding-bottom:20px; border-bottom:2px solid #e4e4e4; }
+	#contentWrap .listWrapper {}
+		#contentWrap .cont-info {overflow:hidden; padding-bottom:8px;}
+			#contentWrap .cont-info .total {float:left;}
+			#contentWrap .cont-info .total em {font-style:normal; color:#3f99f0;}
+			#contentWrap .cont-info .list-count {float:right; }
+			#contentWrap .cont-info .list-count a {text-decoration:none; color:#a0bce3;}
+			#contentWrap .cont-info .list-count a.on {color:#3f99f0;}
+		#contentWrap .listWrapper .cont {padding:30px 20px;background:#FFF; border:1px solid #eaeaea;}
+
+
+
+
+
+/* Login */
+body.login {width:100%; min-height:500px; background:#f8f8f8}
+body.login #wrap {width:100%; background:url(../img/login/bg_body_line.png) 0 50% repeat-x;;}
+body.login #loginWrapper {position:absolute; top:50%; left:50%; margin:-199px 0 0 -318px; width:636px; height:388px; background:#f8f8f8;}
+	body.login #header {height:83px; padding-top:50px; background:url(../img/login/img_login.jpg) 450px bottom no-repeat;}
+	body.login #loginBox {height:60px; padding:37px 45px; background:#FFF url(../img/login/bg_input_box.png) 0 top no-repeat;}
+		body.login #loginBox legend {position:absolute; left:-9999px;}
+		body.login #loginBox .input {vertical-align:middle;width:209px; padding-left:12px; margin-right:2px; height:40px; line-height:40px; font-size:13px; font-weight:bold; color:#AAA; border:1px solid #ababab;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing:border-box;
+			-ms-box-sizing:border-box;
+			box-sizing:border-box;}
+		body.login #loginBox .submit {vertical-align:middle; margin:1px 0 0 10px;}
+	
+	body.login .login-info {margin-top:40px;}
+	body.login .login-info ul {list-style:none;margin:0;padding:0;}
+		body.login .login-info li {margin-bottom:2px; padding-left:20px; color:#999; background:url(../img/login/bul_list.png) 0 5px no-repeat;}
+		body.login .login-info li.contact {margin-top:17px; color:#666;}
+			body.login .login-info li.contact strong {display:block; font-weight:bold; color:#005dab;}
+			body.login .login-info li.contact a {margin-left:5px; color:#439bf0}
+
+
+
+
+body.login #footer {}
+	body.login #footer div {width:auto;}
+	body.login #footer div p {padding-left:70px;}
+
+
+
+
+/* common form element */
+input, textarea {}
+
+
+/* ==========================================================================
+   Sub 
+   ========================================================================== */
+
+
+	
+	
+	
+/* ==========================================================================
+   ie fix
+   ========================================================================== */
+
+
+
+/* ==========================================================================
+   Media Queries for Responsive Design.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {}
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {}
+
+
+

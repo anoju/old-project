@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">	
+	$(function(){
+		$('input[type=button]').click(function(){
+			var $number = parseInt($('input[type=text]').val()); //문자열 중 숫자는 정수로 표현, 정수형 변환 - parselnt
+			switch ($number){
+				case 1 : //number값이 1이면
+					font_color('#00659f'); //함수 font_color실행
+					/*$('p').css({'color':'#00659f','font-weight':'bold'})*/
+					break;
+				case 2 ://number값이 2이면
+					font_color('blue');
+					break;
+				case 3 ://number값이 3이면
+					font_color('red');
+					break;
+				case 4 ://number값이 4이면
+					font_color('yellow');
+					break;
+				case 5 ://number값이 5이면
+					font_color('pink');
+					break;
+				default://number값이 1~5값이 아니라면,
+					alert('제대로된 숫자를 써주십시오.');
+					$('input[type=text]').val('다시써').focus();//focus를 다시 주는걸 선언
+					break;
+			}
+		});
+		function font_color(font){
+			$('p').css({'color':font,'font-weight':'bold'});
+		}
+	});
+</script>
+</head>
+<body>
+	<h1><label for="number">1부터 5까지 값중 임의값을 넣어주시기 바랍니다.</label></h1>
+    
+    <input type="text" id="number" title="숫자입력" />
+    
+    <input type="button" value="확인" />
+    
+    <p>숫자마다 글자색상이 다르지요~</p>
+</body>
+</html>

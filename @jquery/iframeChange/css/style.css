@@ -1,0 +1,22 @@
+body,div,ul,li,a,img{margin:0;padding:0;}
+body {font-family: Segoe UI, '나눔고딕',dotum,Helvetica,sans-serif;}
+li{list-style:none;}
+.wrap{width:100%;height:100%;overflow:hidden;position:relative;}
+.container{width:1000px;position:relative;}
+.lnb{width:200px;position:fixed;}
+.contens{width:800px;margin-left:200px;}
+.footer{clear:both;background:#999999;width:1000px;height:60px;z-index:100;position:relative;}
+
+
+/* contens */
+.contents img {vertical-align: middle;}
+#multimedia {position: relative;width: 940px;height: 593px;background: url("../img/bg_thumb_multimedia.jpg") no-repeat;}
+.multiWrap {position: relative;}
+.mediaView {float: left;width: 578px;margin-left: 52px;margin-top: 105px;background: #000;}
+.conMulti {float: right;width: 250px;}
+.multiCons {width: 252px;margin-top: 55px;}
+.mediaTit {margin-bottom: 50px;}
+.mediaTit li {display: none;}
+.mediaTit li.active {display: block;}
+.thumbmulti li {margin-bottom: 5px;}
+.multiPaging {text-align: center;margin-top: 20px;width: 250px;}

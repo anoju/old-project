@@ -1,0 +1,29 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:600italic,700);
+@font-face { font-family:'NanumGothicExtraBoldWeb'; font-style:normal; font-weight:normal; src: url('../fonts/NanumGothicExtraBoldCompact.eot'); src: local('☺'), url('../fonts/NanumGothicExtraBoldCompact.woff') format('woff');}
+@font-face { font-family:'NanumGothicBoldCompact'; font-style:normal; font-weight:normal; src: url('../fonts/NanumGothicBoldCompact.eot'); src: local('☺'), url('../fonts/NanumGothicBoldCompact.woff') format('woff');}
+@font-face { font-family:'NanumGothicBold'; font-style:normal; font-weight:normal; src: url('../fonts/NanumGothicBold.woff') format('woff');}
+@font-face { font-family:'NanumGothic'; font-style:normal; font-weight:normal; src: url('../fonts/NanumGothicCompact.eot'); src: local('☺'), url('../fonts/NanumGothic.woff') format('woff');}
+
+body { position:relative;}
+#wrap { background:url(../images/header_pattern.png); width:100%; position:relative;}
+#wrap section { width:1000px; margin:auto; height:100%; position:relative; overflow:hidden;}
+#wrap section h2 {font-size: 60px;line-height: 0.9; text-transform: uppercase; margin-top:50px; margin-bottom:20px;}
+
+/* website */
+#wrap section#website h2::after {left:280px;} 
+#wrap section#website p.sub_text {padding-bottom:20px; border-bottom:1px dashed #8F8F8F;}
+#wrap section#website div.sitebox { margin-top:20px; border:2px solid #2d2d2d;}
+#wrap section#website div.sitebox>ul { overflow:hidden; border-bottom:2px solid #2d2d2d;}
+#wrap section#website div.sitebox>ul>li { float:left; width:20%; text-align:center; padding:8px 0px; }
+#wrap section#website div.sitebox>ul>li>a {color:#fff; font-size:15px; display:inline-block; width:50%;background:#2d2d2d; border-radius:5px;}
+#wrap section#website div.sitebox>ul>li.on>a { background:#1E83CA; box-shadow:1px 1px 2px 0 #2d2d2d;}
+#wrap section#website .sample {overflow:hidden; margin:20px; position:relative;}
+#wrap section#website .sample li {background:url(../images/bg.gif) no-repeat; width:86px; height:86px; color:#FFF; padding:20px; position:absolute; margin:15px; cursor:pointer; overflow:hidden;}
+#wrap section#website .sample li h2 { font-size:18px; text-align:center; margin-top:0px;}
+#wrap section#website .sample li p {word-break:break-all;}
+#wrap section#website .sample li img { position:absolute; top:0px; left:0px;}
+#wrap section#website .topLeft { background-position:0px 0px;}
+#wrap section#website .topRight { background-position:right 0px;}
+#wrap section#website .bottomLeft { background-position:0px bottom;}
+#wrap section#website .bottomRight { background-position:right bottom;}

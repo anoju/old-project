@@ -1,0 +1,22 @@
+.viewport {width: 320px;overflow: hidden;margin: 0 auto;margin-bottom:50px;}
+.flipsnap{width: 1195px;padding-left: 45px; /* 320px(item width) * 3(item count) */}
+.item {width: 200px;margin: 0 10px;font-size: 50px;text-align: center;padding: 50px 0;background: #EFEFEF;border: 5px solid #999;float: left;color: #666;}
+
+
+.snap.flipsnap{width: 1620px;padding: 0;}
+.snap .item{width: 310px;margin: 0;}
+
+.snap3.flipsnap{width: 800px;padding: 0;}
+.snap3 .item{width: 50px;font-size: 20px;padding: 10px 0;}
+
+.pointer {text-align: center;}
+.pointer span{display: inline-block;width: 8px;height: 8px;border-radius: 8px;border: 1px solid #000;}
+.pointer span.current {background: #FC0;}
+
+.controls {text-align: center;margin: 0 0 15px 0;}
+
+.snap7 .item{padding: 0;}
+.snap7 .item a {width: 200px;height: 180px;display: table-cell;vertical-align: middle;text-align: center;color: #00F;font-size: 18px;}
+
+/*next, prev 버튼 사라지게 하는 css*/
+/*button[disabled=disabled] {display: none;}*/

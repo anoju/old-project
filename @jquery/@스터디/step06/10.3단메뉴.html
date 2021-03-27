@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link type="text/css" rel="stylesheet" href="css/reset.css" />
+<style type="text/css">
+	div.gnbMenu { height:90px; width:774px; margin:auto; margin-top:30px;}
+	div.gnbMenu ul { position:relative;}
+	div.gnbMenu ul li { float:left;}
+	div.gnbMenu ul li a { height:41px; display:block; overflow:hidden;}
+	div.gnbMenu ul li.on a img { margin-top:-41px;}
+
+	div.gnbMenu div.subbox { position:absolute; left:0px; top:50px; display:none;}
+	div.gnbMenu div.subbox ul li + li{ margin-left:10px;}
+	div.gnbMenu div.subbox ul li a { height:12px; display:block; overflow:hidden;}
+	div.gnbMenu .on div.subbox { display:block;}
+	div.gnbMenu .on div.subbox ul li a img { margin-top:0px;}
+	div.gnbMenu .on div.subbox ul li.gnb_on a img { margin-top:-12px;}
+	div.gnbMenu .on ul.subbox_2 { position:absolute; top:15px; left:0px; display:none;} 
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.gnbMenu>ul>li>a').click(function(){
+			$(this).parent().addClass('on').siblings('.on').removeClass('on');
+		});
+		var memory = $('.gnb_on');
+		$('.subbox>ul>li>a').hover(function(){
+			if(memory != ''){
+				memory.removeClass('gnb_on');
+			}
+			memory = $(this).parent();
+			memory.addClass('gnb_on');
+		});
+		
+		$('.subbox>ul>li>a').click(function(){
+			$('.subbox_2').not($(this).next()).hide();
+			$(this).next().toggle();
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="gnbMenu"> 
+        <ul>
+            <!-- 처음 on된 이미지를 보기위해선 class="on"을 줍니다. -->
+            <li class="on"><a href="#임시"><img src="images/header/gnb_1.gif" alt="공공기관 지방이전" /></a>
+                <!-- 2뎁스 부분정의 -->
+                <div class="subbox">
+                    <ul>
+                        <li class="gnb_on"><a href="#임시"><img src="images/header/gnb_1_1.gif" alt="공공기관 지방이전의 필요성" /></a>
+                        	<ul class="subbox_2">
+                            	<li>1번째 메뉴 1</li>
+                                <li>1번째 메뉴 2</li>
+                                <li>1번째 메뉴 3</li>
+                                <li>1번째 메뉴 4</li>
+                                <li>1번째 메뉴 5</li>
+                            </ul>
+                        </li>
+                        <li><a href="#임시"><img src="images/header/gnb_1_2.gif" alt="추진경과" /></a>
+                        	<ul class="subbox_2">
+                            	<li>2번째 메뉴 1</li>
+                                <li>2번째 메뉴 2</li>
+                                <li>2번째 메뉴 3</li>
+                                <li>2번째 메뉴 4</li>
+                                <li>2번째 메뉴 5</li>
+                            </ul>
+                        </li>
+                        <li><a href="#임시"><img src="images/header/gnb_1_3.gif" alt="이전대상 공공기관" /></a>
+                        	<ul class="subbox_2">
+                            	<li>3번째 메뉴 1</li>
+                                <li>3번째 메뉴 2</li>
+                                <li>3번째 메뉴 3</li>
+                                <li>3번째 메뉴 4</li>
+                                <li>3번째 메뉴 5</li>
+                            </ul>
+                        </li>
+                        <li><a href="#임시"><img src="images/header/gnb_1_4.gif" alt="정부 지원방안" /></a>
+                        	<ul class="subbox_2">
+                            	<li>4번째 메뉴 1</li>
+                                <li>4번째 메뉴 2</li>
+                                <li>4번째 메뉴 3</li>
+                                <li>4번째 메뉴 4</li>
+                                <li>4번째 메뉴 5</li>
+                            </ul>
+                        </li>
+                        <li><a href="#임시"><img src="images/header/gnb_1_5.gif" alt="지역발전의 기대효과" /></a>
+                        	<ul class="subbox_2">
+                            	<li>5번째 메뉴 1</li>
+                                <li>5번째 메뉴 2</li>
+                                <li>5번째 메뉴 3</li>
+                                <li>5번째 메뉴 4</li>
+                                <li>5번째 메뉴 5</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 2뎁스 부분정의 끝-->
+            </li>
+            <li><a href="#임시"><img src="images/header/gnb_2.gif" alt="혁신도시" /></a>
+                <!-- 2뎁스 부분정의 -->
+                <div class="subbox">
+                    <ul>
+                        <li><a href="#임시"><img src="images/header/gnb_2_1.gif" alt="혁신도시란?" /></a>
+                        	<ul class="subbox_2">
+                            	<li>6번째 메뉴 1</li>
+                                <li>6번째 메뉴 2</li>
+                                <li>6번째 메뉴 3</li>
+                                <li>6번째 메뉴 4</li>
+                                <li>6번째 메뉴 5</li>
+                            </ul>
+                        </li>
+                        <li><a href="#임시"><img src="images/header/gnb_2_2.gif" alt="지역별 혁신도시" /></a>
+                        	<ul class="subbox_2">
+                            	<li>7번째 메뉴 1</li>
+                                <li>7번째 메뉴 2</li>
+                                <li>7번째 메뉴 3</li>
+                                <li>7번째 메뉴 4</li>
+                                <li>7번째 메뉴 5</li>
+                            </ul>
+                        </li>
+                        <li><a href="#임시"><img src="images/header/gnb_2_3.gif" alt="혁신도시 사업 추진현황" /></a>
+                        	<ul class="subbox_2">
+                            	<li>8번째 메뉴 1</li>
+                                <li>8번째 메뉴 2</li>
+                                <li>8번째 메뉴 3</li>
+                                <li>8번째 메뉴 4</li>
+                                <li>8번째 메뉴 5</li>
+                            </ul>
+                        </li>
+                        <li><a href="#임시"><img src="images/header/gnb_2_4.gif" alt="혁신도시 건설현황" /></a></li>
+                        <li><a href="#임시"><img src="images/header/gnb_2_5.gif" alt="혁신도시별 주택정보" /></a></li>
+                    </ul>
+                </div>
+                <!-- 2뎁스 부분정의 끝 -->
+            </li>
+            <li><a href="#임시"><img src="images/header/gnb_4.gif" alt="알림마당" /></a>
+                <!-- 2뎁스 부분정의 -->
+                <div class="subbox">
+                    <ul>
+                        <li><a href="#임시"><img src="images/header/gnb_4_1.gif" alt="혁신도시 뉴스" /></a></li>
+                        <li><a href="#임시"><img src="images/header/gnb_4_2.gif" alt="공지사항" /></a></li>
+                        <li><a href="#임시"><img src="images/header/gnb_4_3.gif" alt="언론자료" /></a></li>
+                        <li><a href="#임시"><img src="images/header/gnb_4_4.gif" alt="혁신 뉴스레터" /></a></li>
+                        <li><a href="#임시"><img src="images/header/gnb_4_5.gif" alt="산학연 클러스터" /></a></li>
+                        <li><a href="#임시"><img src="images/header/gnb_4_6.gif" alt="소셜홈" /></a></li>
+                        <li><a href="#임시"><img src="images/header/gnb_4_7.gif" alt="온라인 여론조사" /></a></li>
+                    </ul>
+                </div>
+                <!-- 2뎁스 부분정의 끝 -->
+            </li>
+            <li><a href="#임시"><img src="images/header/gnb_5.gif" alt="정보마당" /></a>
+                <!-- 2뎁스 부분정의 -->
+                <div class="subbox">
+                    <ul>
+                        <li><a href="#임시"><img src="images/header/gnb_5_1.gif" alt="혁신도시 이모저모" /></a></li>
+                        <li><a href="#임시"><img src="images/header/gnb_5_2.gif" alt="세계의 선진도시" /></a></li>
+                        <li><a href="#임시"><img src="images/header/gnb_5_3.gif" alt="사이버 홍보관" /></a></li>
+                        <li><a href="#임시"><img src="images/header/gnb_5_4.gif" alt="자료실" /></a></li>
+                    </ul>
+                </div>
+                <!-- 2뎁스 부분정의 끝 -->
+            </li>
+            <li><a href="#임시"><img src="images/header/gnb_3.gif" alt="종전부동산 매각" /></a>
+                <!-- 2뎁스 부분정의 -->
+                <div class="subbox">
+                    <ul>
+                        <li><a href="#임시"><img src="images/header/gnb_3_1.gif" alt="종전부동산 정보" /></a></li>
+                        <li><a href="#임시"><img src="images/header/gnb_3_2.gif" alt="종전부동산 기관별 현황" /></a></li>
+                        <li><a href="#임시"><img src="images/header/gnb_3_3.gif" alt="입찰 정보" /></a></li>
+                        <li><a href="#임시"><img src="images/header/gnb_3_4.gif" alt="위치 정보" /></a></li>
+                    </ul>
+                </div>
+                <!-- 2뎁스 부분정의 끝 -->
+            </li>
+            <li><a href="#임시"><img src="images/header/gnb_6.gif" alt="소개마당" /></a>
+                <!-- 2뎁스 부분정의 -->
+                <div class="subbox">
+                     <ul>
+                        <li><a href="#임시"><img src="images/header/gnb_6_1.gif" alt="단장 인사말" /></a></li>
+                        <li><a href="#임시"><img src="images/header/gnb_6_2.gif" alt="업무 및 기능" /></a></li>
+                        <li><a href="#임시"><img src="images/header/gnb_6_3.gif" alt="CI 소개" /></a></li>
+                        <li><a href="#임시"><img src="images/header/gnb_6_4.gif" alt="조직 구성" /></a></li>
+                        <li><a href="#임시"><img src="images/header/gnb_6_5.gif" alt="관련사이트" /></a></li>
+                        <li><a href="#임시"><img src="images/header/gnb_6_6.gif" alt="찾아오시는 길" /></a></li>                                
+                    </ul>
+                </div>
+                <!-- 2뎁스 부분정의 끝 -->
+            </li>
+        </ul>
+    </div>
+    <!-- GNB메뉴 정의 끝 -->
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>12_farukat메뉴</title>
+		<!--[if lt IE 9]>
+		<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+		<![endif]-->
+		<style>
+			body {
+				margin: 0;
+			}
+
+			.hide {
+				display: none;
+			}
+
+			#mainMenu {
+				width: 200px;
+				margin: auto;
+				background: silver;
+			}
+
+			#mainMenu > ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+
+			#mainMenu > ul > li > a {
+				width: 200px;
+				height: 64px;
+				display: block;
+				color: #000;
+				font: bold 16px/64px Arial, Helvetica, sans-serif;
+				text-decoration: none;
+				text-indent: 30px;
+				border-radius: 0 32px 32px 0;
+				opacity: .4;
+				background: url(img/icons.png) no-repeat;
+				transition: .2s ease;
+				-moz-transition: .2s ease;
+				-webkit-transition: .2s ease;
+				-ms-transition: .2s ease;
+				-o-transition: .2s ease;
+			}
+
+			#mainMenu > ul > li > a:hover {
+				width: 250px;
+				color: #fff;
+				opacity: 1;
+				text-shadow: 2px 2px 2px #000;
+				box-shadow: 2px 2px 2px #000;
+				
+			}
+
+			#mainMenu li:nth-child(1)> a {
+				background-position: right 0;
+			}
+			#mainMenu li:nth-child(2)> a {
+				background-position: right -66px;
+			}
+			#mainMenu li:nth-child(3)> a {
+				background-position: right -132px;
+			}
+			#mainMenu li:nth-child(4)> a {
+				background-position: right -464px;
+			}
+			#mainMenu li:nth-child(5)> a {
+				background-position: right -530px;
+			}
+
+			/*hover*/
+			#mainMenu > ul > li:nth-child(1)> a:hover {
+				background-color: rgb(236, 68, 156);
+			}
+			#mainMenu > ul > li:nth-child(2)> a:hover {
+				background-color: #44B3F5
+			}
+			#mainMenu > ul > li:nth-child(3)> a:hover {
+				background-color: #399AC6
+			}
+			#mainMenu > ul > li:nth-child(4)> a:hover {
+				background-color: #556C84
+			}
+			#mainMenu > ul > li:nth-child(5)> a:hover {
+				background-color: #D7524B
+			}
+			
+			
+
+		</style>
+		<!--[if lt IE 9]>
+			<style>
+				#mainMenu > ul > li > a {
+					behavior:url(img/PIE.htc);
+					position:relative;
+				}
+				
+				#mainMenu > ul >li >a:hover {
+					filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2,OffY=2,Color=#444444,Positive=true);
+				}
+			</style>
+		<![endif]-->
+		<script src="js/jquery-1.8.2.min.js"></script>
+		<!-- modernizr를 import -->	
+		<script src="js/modernizr.js"></script>
+	</head>
+	<body>
+
+		<!--
+		구조,표현,동작의 분리
+		-->
+		<nav id="mainMenu">
+			<h2 class="hide">메인 메뉴</h2>
+			<ul>
+				<li>
+					<a href="">flickr</a>
+				</li>
+				<li>
+					<a href="">twitter</a>
+				</li>
+				<li>
+					<a href="">vimeo</a>
+				</li>
+				<li>
+					<a href="">newsvine</a>
+				</li>
+				<li>
+					<a href="">last.fm</a>
+				</li>
+			</ul>
+		</nav>
+		<script>
+		
+			// 안되는 브라우저를 위한 fallback(대비책) 구현 
+			
+			//1. HTML5, CSS3의 기능을 다 사용하고
+			//   안되는 브라우저는 최소로 비슷하게(혹은 그냥 이미지 대체, 움직임 없음)
+			
+			//2. 안되는 브라우저에서 javascript로 가능한 부분까지만 사용
+			
+			
+		
+			//modernizr를 이용하여 transition이 안되는 브라우저 찾기
+			
+			if(!Modernizr.csstransitions) {
+			
+				$("#mainMenu a").hover(function() {
+					
+					$(this).css("width",200)
+					                .stop()
+					                .animate({width:250},200,'swing');
+					
+				}, function() {
+					
+					$(this).css("width",250)
+					                .stop()
+					                .animate({width:200},200,'swing');
+					
+				});
+				
+			}
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+

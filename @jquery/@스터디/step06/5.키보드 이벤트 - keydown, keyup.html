@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+fieldset { margin-bottom: 1em; }
+input { display: block; margin-bottom: .25em; }
+div.text { border:1px solid #333;}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#target').keydown(function(){
+			var text = $('.text').html()
+			$('.text').html( text + 'keydown이벤트 발생 <br />');
+		});
+		$('#target').keyup(function(){
+			var text = $('.text').html()
+			$('.text').html( text + 'keyup이벤트 발생 <br />');
+		});
+	});
+</script>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<label for="target">Type Something:</label>
+			<input id="target" type="text" />
+		</fieldset>
+	</form>
+	<div class="text"></div>
+</body>
+</html>

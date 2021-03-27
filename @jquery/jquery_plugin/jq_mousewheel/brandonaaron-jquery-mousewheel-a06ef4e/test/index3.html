@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Testing mousewheel plugin</title>		
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.js"></script>		
+		<script type="text/javascript" src="../jquery.mousewheel.js"></script>		
+		<style type="text/css">	
+			*{margin:0;padding:0}
+			#action_area{width:800px;height:500px;background:#000;position:relative}			
+			#mover{width:100px;height:100px;background:#f00;position:absolute;right:0;top:0}
+		</style>
+
+		<script type="text/javascript">
+			$(function() {
+				//$('#userAgent').html(navigator.userAgent);				
+			
+				$('#action_area')
+					.mousewheel(function(event, delta, deltaX, deltaY) {
+						var o = '',
+						mover_gap = 50;
+						posY = $("#mover").position().top,
+						down = posY + mover_gap,
+						up = posY - mover_gap;
+						
+						if(up <= 0) {
+							up = 0;
+						}else{}
+
+						
+
+						if (delta > 0) { 
+							o = '#test5: up ('+delta+')';								
+								$("#mover").css({'top': up});						
+						}
+						else if (delta < 0) { // 
+							o = '#test5: down ('+delta+')';
+							if(down <= 400) {
+								$("#mover").css({'top': down});
+							}
+							
+						}
+						if (deltaX > 0)
+							o = o + ', east ('+deltaX+')';
+						else if (deltaX < 0)
+							o = o + ', west ('+deltaX+')';
+						
+						if (deltaY > 0)
+							o = o + ', north ('+deltaY+')';
+						else if (deltaY < 0)
+							o = o + ', south ('+deltaY+')';		
+						
+						
+						event.stopPropagation();
+						event.preventDefault();
+					});
+				
+				
+				
+				
+			});
+		</script>
+	</head>
+
+	<body>	
+		
+		<div id="action_area">action_area
+			<div id="mover"></div>
+		</div>	
+		
+
+	</body>
+</html>

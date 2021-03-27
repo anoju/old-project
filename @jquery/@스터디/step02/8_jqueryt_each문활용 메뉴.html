@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+	ul, li { list-style: none; margin:0px; padding:0px; border:0px; }
+	h2 { display:none;}
+	#menu ul {background: url(images/globalnavbg.png) no-repeat; width:982px; height:38px;}
+	#menu ul li { float:left;}
+	#menu ul li a { display:inline-block; background:url(images/globalnavbg.png) no-repeat 0px 20px; text-indent:-9999px; width:103px; height:38px;}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">	
+	$(function(){
+		var width = 103;
+		var height = 38;
+		$('#menu>ul>li').each(function(index){
+			var position = width * index; 
+			$(this).children('a').css('background-position',-position + 'px 0px');
+		});
+		$('#menu>ul>li').hover(function(){
+			var index = $(this).index();
+			var position = width * index;
+			$(this).children('a').css('background-position',-position + 'px ' + -height + 'px');
+		},function(){
+			var index = $(this).index();
+			var position = width * index;
+			$(this).children('a').css('background-position',-position + 'px 0px');
+		})
+	});
+</script>
+</head>
+<body>
+    <div id="menu">
+			<h2 class="hide">주요서비스</h2>
+			<ul>
+				<li><a href="#apple">apple</a></li>
+				<li><a href="#애플스토어">애플스토어</a></li>
+				<li><a href="#Mac">Ma</a></li>
+				<li><a href="#ipod">ipod</a></li>
+				<li><a href="#iphone">iphone</a></li>
+				<li><a href="#ipad">ipad</a></li>
+				<li><a href="#iTunes">iTunes</a></li>
+				<li><a href="#support">support</a></li>
+			</ul>
+		</div>
+</body>
+</html>

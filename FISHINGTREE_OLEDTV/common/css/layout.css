@@ -1,0 +1,44 @@
+@charset "utf-8";
+body {background:#3c3c3c;  width:100%; height:11050px; position:relative;}
+body.sub {height:auto}
+.bg {background:url(../../images/common/bg_body.png) repeat-y 0 0; margin:0 auto;  width:2000px; height:11050px;}
+.wrap {width:1280px;  margin-left:-640px; position:fixed; top:0; left:50%; }
+	.gnb_area {position:absolute;  top:0; left:57px; width:180px; min-height:1200px; background:url(../../images/common/bg_gnb.gif) repeat-y 0 0; }
+	.gnb {height:900px; position:relative;}
+	.gnb h1 {padding:40px 0 0 33px;}
+	.gnb > ul {padding:215px 0 0 32px; }
+	.gnb > ul > li {padding-bottom:28px;}
+	.gnb > ul > li.last {padding-bottom:0;}
+	.gnb .copy {position:absolute; bottom:0; left:10px;}
+
+	.view {width:1080px; margin:0 auto; padding-left:178px;}
+	.view .view_08 {position:relative;width:1080px; height:1175px; background:url(../../images/view/bg_08.jpg) no-repeat 0 0;}
+	.view .view_08 .play {position:absolute; top:291px; left:142px; }
+
+
+	.view .view_07 {position:relative;width:1080px; height:1450px; background:url(../../images/view/bg_07.jpg) no-repeat 0 0;}
+		.view .view_07 .tit {position:absolute; top:60px; left:0; }
+
+
+	.view .view_06 {position:relative;width:1080px; height:1450px; background:url(../../images/view/bg_06.jpg) no-repeat 0 0;}
+		.view .view_06 .tit {position:absolute; top:60px; left:0; }
+
+	.view .view_05 {position:relative;width:1080px; height:1450px; background:url(../../images/view/bg_05.jpg) no-repeat 0 0;}
+		.view .view_05 .tit {position:absolute; top:60px; left:0; }
+
+	.view .view_04 {position:relative;width:1080px; height:1450px; background:url(../../images/view/bg_04.jpg) no-repeat 0 0;}
+		.view .view_04 .tit {position:absolute; top:60px; left:0; }
+
+	.view .view_03 {position:relative;width:1080px; height:1450px; background:url(../../images/view/bg_03.jpg) no-repeat 0 0;}
+		.view .view_03 .tit {position:absolute; top:60px; left:0; }
+
+	.view .view_02 {position:relative;width:1080px; height:1450px; background:url(../../images/view/bg_02.jpg) no-repeat 0 0;}
+		.view .view_02 .tit {position:absolute; top:333px; left:0; }
+		.view .view_02 .action_01 {position:absolute; bottom:182px; left:0; }
+		.view .view_02 .action_02 {position:absolute; top:423px; right:45px ; }
+
+
+	.view .view_01 {position:relative; width:1080px; height:1175px; background:url(../../images/view/bg_01.jpg) no-repeat 0 0;}
+	.view .btn_cetner {width:151px; height:154px; position:absolute; top:44%; left:50%; margin-left:-85px;}
+
+

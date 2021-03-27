@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+#container {
+    padding: 20px;
+}
+.tooltip {
+cursor: default;
+font-size:12px;
+}
+a.tooltip {
+cursor: pointer;
+}
+#tooltip_outer,
+#tooltip_inner {
+border: 1px solid;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+}
+#tooltip_outer {
+background: #fff;
+border-color: #666;
+display: none;
+font-size: 10px;
+padding: 1px;
+position: absolute;
+left: -9999px;
+width: 200px;
+z-index: 9999;
+}
+#tooltip_inner {
+background: #f9f9f9;
+border-color: #ccc;
+padding: 10px;
+}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">	
+	//<![CDATA[
+	$(function(){
+		init_tooltip();
+	});
+	function init_tooltip(){
+			if(!$('.tooltip').length){return}
+			
+			$('body').append("<div id='tooltip_outer'><div id='tooltip_inner'></div></div>");
+			
+			var $tt_title, $tt_alt;
+			var $tt = $('#tooltip_outer');
+			var $tt_i = $('#tooltip_inner');
+			
+			$('.tooltip').hover(function(){
+				if($(this).attr('title')){
+					$tt_title = $(this).attr('title');
+					$(this).attr('title','');
+				}
+				
+				if($(this).attr('alt')){
+					$tt_alt = $(this).attr('alt');
+					$(this).attr('alt','');
+				}
+				
+				$tt_i.html($tt_title);
+				
+				$tt.show();
+			},function(){
+				$tt.hide();
+				$tt_i.html('');
+				if($tt_title){
+					$(this).attr('title',$tt_title);
+				}
+				if($tt_alt){
+					$(this).attr('alt',$tt_alt);
+				}
+			}).mousemove(function(ev){
+				var $ev_x = ev.pageX;
+				var $ev_y = ev.pageY;
+				var $tt_x = $tt.outerWidth();
+				var $tt_y = $tt.outerHeight();
+				
+				var $bd_x = $('body').outerWidth();
+				var $bd_y = $('body').outerHeight();
+				
+				$tt.css({
+						'top':$ev_y + $tt_y > $bd_y ? $ev_y - $tt_y : $ev_y,
+						'left':$ev_x + $tt_x + 20 > $bd_x ? $ev_x - $tt_x - 10 : $ev_x + 15
+				});
+			});
+		};
+	//]]>
+</script>
+</head>
+<body>
+	<div id="container">
+	    <p>
+		    <span class="tooltip" title="This is my title. There are many like it, but this one is mine. You will see it as you hover your mouse over me."> Mouse over me to read my title in a tooltip! </span>
+		</p>
+		<p>
+		    <span class="tooltip" title="This is more content that will appear in a tooltip. Don't be alarmed, because this is only a test of a tooltip."> Guess what? I have a tooltip too. Please read it. </span>
+		</p>
+	</div>
+</body>
+</html>

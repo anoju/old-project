@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>test</title>
+		<meta name="viewport" content="user-scalable=yes, initial-scale = 1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<style type="text/css">
+			*{margin:0;padding:0}
+			.wrap{width:100%;height:505px;background:red; }
+		</style>
+		<script type="text/javascript">
+			$(function(){				
+				var docHeight= $(document).outerHeight();
+				var bodyHeight= $('body').outerHeight();
+				//alert(docHeight);
+				
+				//화면이 모바일 세로 사이즈보다 작을경우를 위한 내용
+				if(docHeight > bodyHeight){
+					$('body').css({'height':docHeight+50})
+				}
+
+				setTimeout(function(){window.scrollTo(0, 1);}, 10);
+			});
+		</script>
+
+	</head>
+
+	<body>
+		<div class="wrap">
+			모바일 상단 주소창 숨기기
+		</div>
+	</body>
+</html>

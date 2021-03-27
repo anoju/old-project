@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>게시판 예제</title>
+		<style type="text/css">
+			
+			body {
+				font-family:'dotum',"돋움",sans-serif;
+			}
+
+			#board {
+				width:800px;
+				height:600px;
+				background:url(img/cork.jpg);
+				border:5px solid #000;
+				float:left;
+				margin-right:10px;
+				overflow:hidden;
+				box-shadow:10px 10px 10px rgba(0,0,0,0.8);
+				-moz-box-shadow:10px 10px 10px rgba(0,0,0,0.8);
+				-webkit-box-shadow:10px 10px 10px rgba(0,0,0,0.8);
+				-ms-box-shadow:10px 10px 10px rgba(0,0,0,0.8);
+				-o-box-shadow:10px 10px 10px rgba(0,0,0,0.8);
+			}
+
+			#imgBox {
+				float:left;
+				width:160px;
+			}
+
+			#imgBox img {
+				display:block;
+				width:160px;
+				height:120px;
+				border:5px solid #fff;
+				cursor:pointer;
+			}
+			
+			#imgBox img:hover {
+				border-color:#00bfff;
+			}
+			
+			.boardImg {
+				width:200px;
+				height:150px;
+				background-color:#fff;
+				border:5px solid #fff;
+				border-bottom-width:20px;
+				text-align:right;
+				position:absolute;
+				left:0;
+				top:0;
+				box-shadow:5px 5px 10px rgba(0,0,0,0.7);
+			}
+			
+			.boardImg.move {
+				opacity: 0.4;
+			}
+			
+			.boardImg>img {
+				width:200px;
+				height:150px;
+				display: block;
+			}
+			
+			.boardImg>span {
+				font:bold 12px arial,sans-serif;
+			}
+			
+			.boardImg>img.pin {
+				width:31px;
+				height:44px;
+				position:absolute;
+				left:86px;
+				top:-25px;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				$('#imgBox>img').click(function(e){
+					
+					var x = e.pageX -100; // X좌표 구하기
+					var y = e.pageY - (175/2); // Y좌표 구하기
+
+					//src경로 변수 설정
+					var src = "img/" + ($(this).index()+1) + ".jpg";
+					var alt = $(this).attr('alt');
+					
+					//요소 생성 : <div class="boardImg"><img src="  "><span>time</span></div>
+					$("<div><img /><span /></div>").addClass('boardImg move')
+												   .find('img') // img요소 찾기
+												   .attr({"src" : src, "alt" : alt})
+												   .end()
+					                               .appendTo('#board') 
+												   .css({left:x, top:y});
+					//body에 mousemove 추가
+					$('body').mousemove(function(e){
+						
+						var x = e.pageX -105;
+						var y = e.pageY - (175/2);
+						
+						//현재 움직일 요소를 선택후 x,y좌표를 left와 top으로 설정
+						$('.move').css({
+							left:x,
+							top:y
+						});
+						
+					});//mousemove end
+					
+					
+					//board안에 click이미지 넣기
+					$('#board').click(function(){
+						
+						//랜덤한 각도 변수
+						var deg ="rotate(" + Math.floor(Math.random()*31+(-15))+'deg)';
+						
+						//pind의 경로
+						
+						var pin = "img/pin" + Math.floor(Math.random()*4) + ".png";
+						
+						$('body').unbind('mousemove'); //mousemove 제거
+						$('#board').unbind('click');					
+						
+						$("<img alt='핀'>").attr('src',pin)
+						                   .addClass('pin')
+										   .appendTo('.move');
+
+						$('.move').removeClass('move')
+						          .css({'transform': deg,'-moz-transform': deg,'-ms-transform': deg,'-o-transform': deg,'-webkit-transform': deg});
+						
+					});
+					
+				});  //click end
+						
+				
+			}); // $(functiion(){} end
+			function fixTime(num){
+				//삼항 연산자 
+				num = num<10 ? "0"+num : num;  // 조건식 ? 참 : 거짓
+				return num;
+			}
+		</script>
+    </head>
+    <body>
+    	<h1>게시판</h1>
+        <div id="board"></div>
+		<div id="imgBox">
+			<img src="img/1_t.jpg" alt="volvo S60">
+			<img src="img/2_t.jpg" alt="audi Q3">
+			<img src="img/3_t.jpg" alt="FIAT F500">
+			<img src="img/4_t.jpg" alt="람보르기니 아반타도르">
+			<img src="img/5_t.jpg" alt="재규어 XJ">
+		</div>
+    </body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" 
+		content="text/html; charset=utf-8" />
+        <title>Untitled Document</title>
+		<style type="text/css">
+			#imgDiv {
+				width:700px;
+				min-height:300px;
+				background:silver;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('button').click(function(){
+					var tag = $("#q").val();
+					// json을 포맷을 사용하는 이유는 
+					//1. 용량이 xml보다 작다.
+					//2. xml은 다른도메인에서 받아올수 없다.(보안때문에)
+					//그러나 json 은 가능.
+					
+					var url = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+					
+					var data = { tagmode:'any',format:'json',tags:tag}
+					console.log(data)
+					
+					$.getJSON(url,data,function(json){
+						$(json.items).each(function(){
+							$('<img>').attr('src',this.media.m).appendTo('#imgDiv');
+						});
+					});
+					
+				});
+			});
+		</script>
+    </head>
+    <body>
+    	<p>
+    		태그 : <input type="text" id="q" name="q"/>
+    		<button>이미지얻어오기</button>
+		</p>
+		<div id="imgDiv"></div>
+    </body>
+</html>

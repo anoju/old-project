@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" itemscope="itemscope" itemtype="http://schema.org/WebPage" lang="ko"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>스타일가이드 | 애니카서비스</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="../../static/css/component.css" media="handheld, all">
+	<link rel="stylesheet" href="../../static/css/recruit.css" media="all">
+
+	<!-- Le supporter -->
+	<script src="../../static/js/lib/modernizr-2.6.2.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+	<script>window.jQuery || document.write('<script src="../../static/js/lib/jquery-1.8.2.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script src="../../static/js/lib/jquery-ui-1.9.0.min.js"><\/script>')</script>
+</head>
+
+<body>
+<div id="wrap">
+	<header id="header">
+		<div>
+			<div class="brand">
+				<h1><a href="#">애니카 서비스</a></h1>
+			</div>		
+
+			<div class="user-info">
+				<strong>Superadmin</strong> <span>님의 최종 접속일 </span>
+				<span class="time">2013.06.12 01:43</span>
+				<a href="#" class="btn-logout"><img src="../../static/img/common/header/btn_logout.png" alt="LogOut" /></a>
+			</div>
+			<nav id="gnb">
+				<ul>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb01.png" alt="공고/현황" /></a>
+						<div class="subGnb01">
+							<ul>
+								<li><a href="#">채용공고</a></li>
+								<li><a href="#">공고별현황</a></li>
+								<li><a href="#">지원자현황</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb02.png" alt="서류진행" /></a>
+						<div class="subGnb02">
+							<ul>
+								<li><a href="#">결과설정/알림</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb03.png" alt="SSAT" /></a>
+						<div class="subGnb03">
+							<ul>
+								<li><a href="#">결과입력/알림</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="on"> <!-- [D] on class로 활성화 표시제어-->
+						<a href="#"><img src="../../static/img/common/recruit/gnb04.png" alt="면접전형" /></a>
+						<div class="subGnb04">
+							<ul>
+								<li><a href="#">면접조설정/알림</a></li>
+								<li class="on"><a href="#">결과설정/알림</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb05.png" alt="검진/교육" /></a>
+						<div class="subGnb05">
+							<ul>
+								<li><a href="#">채용 FAQ</a></li>
+								<li><a href="#">채용 Q&amp;A</a></li>
+								<li><a href="#">카테고리관리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb06.png" alt="지원안내" /></a>
+						<div class="subGnb06">
+							<ul>
+								<li><a href="#">면접평가</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb07.png" alt="운영자관리" /></a>
+						<div class="subGnb07">
+							<ul>
+								<li><a href="#">내정보</a></li>
+								<li><a href="#">계정/권한설정</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+			<script type="text/javascript">
+				/*GNB 관련 스크립트*/
+				$(function() {
+					
+					var idx = $('#gnb>ul>li').index($('.on'));
+					
+					$('#gnb>ul>li').hover(function () {
+						$(this).addClass('over').siblings().removeClass('over');					
+						$("#gnb>ul>li").removeClass('on');
+					});
+
+					$('#gnb').mouseleave(function () {
+						$("#gnb>ul>li").removeClass('over');
+						$("#gnb>ul>li").eq(idx).addClass('on');
+					});
+				});
+			</script>
+		</div>
+	</header>
+
+	<!-- Content -->
+	<section id="contentWrap">
+		<p id="location">
+			<span class="home">Home</span> <span class="depth">&gt;</span>
+			<span>면접전형</span> <span class="depth">&gt;</span>
+			<span class="current">결과설정/알림</span>
+		</p>
+
+		<h1 class="noshadow"> <!-- [D] noshadow class -->
+			<img src="../../static/img/common/recruit/title/title04.gif" alt="결과설정/알림" />
+		</h1>
+		<div class="content">
+			<h2>GNB 메뉴에 대한 설명</h2>
+			<p>GNB 서브 메뉴관련하여 <span style="color:red;text-decoration:underline">태그 하단에 임시 스크립트</span>를 넣었습니다.<br /><br />
+			그리고 GNB 1depth, 2depth 모두 li 태그에 'on'클래스로 depth의 활성화를 표시 합니다.('면접전형'메뉴에 적용)<br />
+			1depth에는 마우스 오버시 li 태그에 'over'클래스를 부여해서 적용 시켰는데,<br /> 
+			마우스 오버시 'on'클래스는 뺏다가 GNB에서 마우스가 떠나면 다시 'on'클래스가 들어갑니다.<br />
+			</p>
+
+		</div>
+	</section>
+	<!-- / Content -->
+
+	<footer id="footer">
+		<div>
+			<p>Copyright © 2013 Samsung Anycar Service. All rights reserved.</p>
+		</div>
+	</footer>	
+</div>
+
+
+
+
+<script src="../../static/js/plugins.js"></script>
+<script src="../../static/js/main.js"></script>
+</body>
+</html>
+

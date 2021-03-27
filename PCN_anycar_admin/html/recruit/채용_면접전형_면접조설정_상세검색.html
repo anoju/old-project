@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" itemscope="itemscope" itemtype="http://schema.org/WebPage" lang="ko"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>스타일가이드 | 애니카서비스</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="../../static/css/component.css" media="handheld, all">
+	<link rel="stylesheet" href="../../static/css/recruit.css" media="all">
+
+	<!-- Le supporter -->
+	<script src="../../static/js/lib/modernizr-2.6.2.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+	<script>window.jQuery || document.write('<script src="../../static/js/lib/jquery-1.8.2.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script src="../../static/js/lib/jquery-ui-1.9.0.min.js"><\/script>')</script>
+</head>
+
+<body>
+<div id="wrap">
+	<header id="header">
+		<div>
+			<div class="brand">
+				<h1><a href="#">애니카 서비스</a></h1>
+			</div>		
+
+			<div class="user-info">
+				<strong>Superadmin</strong> <span>님의 최종 접속일 </span>
+				<span class="time">2013.06.12 01:43</span>
+				<a href="#" class="btn-logout"><img src="../../static/img/common/header/btn_logout.png" alt="LogOut" /></a>
+			</div>
+			<nav id="gnb">
+				<ul>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb01.png" alt="공고/현황" /></a>
+						<div class="subGnb01">
+							<ul>
+								<li><a href="#">채용공고</a></li>
+								<li><a href="#">공고별현황</a></li>
+								<li><a href="#">지원자현황</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb02.png" alt="서류진행" /></a>
+						<div class="subGnb02">
+							<ul>
+								<li><a href="#">결과설정/알림</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb03.png" alt="SSAT" /></a>
+						<div class="subGnb03">
+							<ul>
+								<li><a href="#">결과입력/알림</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="on"> <!-- [D] on class로 활성화 표시제어-->
+						<a href="#"><img src="../../static/img/common/recruit/gnb04.png" alt="면접전형" /></a>
+						<div class="subGnb04">
+							<ul>
+								<li class="on"><a href="#">면접조설정/알림</a></li>
+								<li><a href="#">결과설정/알림</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb05.png" alt="검진/교육" /></a>
+						<div class="subGnb05">
+							<ul>
+								<li><a href="#">채용 FAQ</a></li>
+								<li><a href="#">채용 Q&amp;A</a></li>
+								<li><a href="#">카테고리관리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb06.png" alt="지원안내" /></a>
+						<div class="subGnb06">
+							<ul>
+								<li><a href="#">면접평가</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb07.png" alt="운영자관리" /></a>
+						<div class="subGnb07">
+							<ul>
+								<li><a href="#">내정보</a></li>
+								<li><a href="#">계정/권한설정</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+			<script type="text/javascript">
+				/*GNB 관련 스크립트*/
+				$(function() {
+					
+					var idx = $('#gnb>ul>li').index($('.on'));
+					
+					$('#gnb>ul>li').hover(function () {
+						$(this).addClass('over').siblings().removeClass('over');					
+						$("#gnb>ul>li").removeClass('on');
+					});
+
+					$('#gnb').mouseleave(function () {
+						$("#gnb>ul>li").removeClass('over');
+						$("#gnb>ul>li").eq(idx).addClass('on');
+					});
+				});
+			</script>
+		</div>
+	</header>
+
+	<!-- Content -->
+	<section id="contentWrap">
+		<p id="location">
+			<span class="home">Home</span> <span class="depth">&gt;</span>
+			<span>면접전형</span> <span class="depth">&gt;</span>
+			<span class="current">면접조설정/알림</span>
+		</p>
+
+		<h1 class="noshadow"> <!-- [D] noshadow class -->
+			<img src="../../static/img/common/recruit/title/title06.gif" alt="면접조설정/알림" />
+		</h1>
+		<div class="content">			
+			<form action="#">
+			<fieldset>
+			<div class="bbsPost">
+				<div class="postItem">
+					<div class="table-cell table-th">
+						<div>발표일 구분</div>
+					</div>
+					<div class="table-cell table-td">
+						<label class="radio"><input type="radio" name="Dday" checked="checked">서류전형 완료일</label>
+						<label class="radio"><input type="radio" name="Dday" checked="checked">SSAT 발표일</label>
+					</div>	
+				</div>
+				
+				<div class="postItem ">
+					<div class="table-cell table-th">
+						<div>발표일</div>
+					</div>
+					<div class="table-cell table-td">
+						<div class="schedule">
+							<input type="text" class="inputBox inputSchedule" name="from" id="fromCal" value="2013-06-16" readonly="readonly" title="시작일">
+							<label for="fromCal"><button class="btnImg" id="btnFromCal"><img src="../../static/img/common/ico_calendar.png" alt="달력"></button></label>
+						</div>
+						<span class="inline-dash">-</span>
+						<div class="schedule">
+							<input type="text" class="inputBox inputSchedule" name="from" id="toCal" value="2013-06-16" readonly="readonly" title="시작일">
+							<label for="toCal"><button class="btnImg" id="btnToCal"><img src="../../static/img/common/ico_calendar.png" alt="달력"></button></label>
+						</div>
+						<button class="btnRound"><span>최근 3개월</span></button>
+						<button class="btnRound"><span>최근 6개월</span></button>
+						<button class="btnRound"><span>최근 1년</span></button>
+					</div>
+				</div>
+
+				<div class="postItem ">
+					<div class="table-cell table-th">
+						<div>공고명</div>
+					</div>
+					<div class="table-cell table-td">
+						<input type="text" class="inputBox" value="" style="width:100%" />						
+					</div>
+				</div>
+			</div>
+
+			<div class="btnDetailArea">
+				<a class="btnDetail" href="#">상세검색 열기</a><!-- close 클래스 추가되면 bg이미지 변경됨 -->
+			</div>
+
+			<script type="text/javascript">
+				/*상세검색 관련 스크립트*/
+				$(function() {					
+					$('.btnDetail').click(function () {
+						$(this).toggleClass('close')
+						if($(this).hasClass('close')){
+							$('.detailView').show();
+							$(this).text("상세검색 닫기");
+						}else{
+							$('.detailView').hide();
+							$(this).text("상세검색 열기");
+						}
+					});
+				});
+			</script>
+
+			<div class="bbsPost detailView"><!-- 상세 검색되는 bbsPost영역에는 detailView 클래스 추가 -->
+				<div class="postItem col2">
+					<div class="table-cell table-th">
+						<div><label for="userGroupAll">직군</label><p class="check"><input id="userGroupAll" type="checkbox" name="userGroupAll" /></p></div>
+					</div>
+					<div class="table-cell table-td">
+						<label class="checkbox"><input type="checkbox" name="userGroup" />일반</label>
+						<label class="checkbox"><input type="checkbox" name="userGroup" />손해사정</label>
+						<label class="checkbox"><input type="checkbox" name="userGroup" />상담</label>
+						<label class="checkbox"><input type="checkbox" name="userGroup" />아르바이트</label>
+					</div>	
+
+					<div class="table-cell table-th">
+						<div>모집유형</div>
+					</div>
+					<div class="table-cell table-td">
+						<select class="select">
+							<option>전체</option>
+							<option>내용1</option>
+							<option>내용2</option>
+						</select>
+					</div>	
+				</div>
+
+				<div class="postItem">
+					<div class="table-cell table-th">
+						<div>지역</div>
+					</div>
+					<div class="table-cell table-td">
+						<select class="select">
+							<option>전체</option>
+							<option>내용1</option>
+							<option>내용2</option>
+						</select>
+					</div>	
+				</div>
+
+				<div class="postItem">
+					<div class="table-cell table-th">
+						<div>상태</div>
+					</div>
+					<div class="table-cell table-td">
+						<select class="select">
+							<option>서류전형</option>
+							<option>내용1</option>
+							<option>내용2</option>
+						</select>
+
+						<select class="select">
+							<option>SSAT</option>
+							<option>내용1</option>
+							<option>내용2</option>
+						</select>
+
+						<select class="select">
+							<option>면접전형</option>
+							<option>내용1</option>
+							<option>내용2</option>
+						</select>
+					</div>	
+				</div>
+			</div>			
+			<div class="bbsPostHandle pull-right">
+				<input type="image" class="btnImg" src="../../static/img/common/btn_search.png" alt="검색" />
+				<button class="btnImg"><img src="../../static/img/common/btn_reset_search.png" alt="검색초기화" /></button>
+			</div>
+			</fieldset>
+			</form>
+			<div class="clear"></div>
+			<p style="color:red;">
+				상세검색 임시 스크립트는 버튼 영역 바로 아래 삽입 <br />
+				상세 검색되는 bbsPost영역에는 detailView 클래스 추가
+			</p>
+
+			<hr />
+
+			<div class="listWrapper">
+				<div class="cont-info">
+					<div class="total">총 <em>10</em>건</div>
+					<div class="list-count">
+						리스트 보기 
+						<a href="#" class="on">10</a>
+						<a href="#">20</a>
+						<a href="#">30</a>
+						<a href="#">50</a>
+					</div>
+				</div>
+				
+				<div class="cont">
+					<div class="bbsAction">
+						<span class="input-helper">선택한 항목을 </span>
+						<select class="select withBtn">
+							<option>노출</option>
+							<option>숨김</option>
+							<option>삭제</option>
+						</select>
+						<button class="btnSquare"><span>적용</span></button>
+						<select class="select withBtn" style="margin-left:15px">
+							<option>면접합격</option>
+							<option>면접불합격</option>
+							<option>미응시</option>
+						</select>
+						<button class="btnSquare"><span>적용</span></button>
+					</div>
+
+					<table class="bbsList type01">
+						<caption>BBS List</caption>
+						<colgroup> <!-- 해당 컬럼의 가로 크기는 인라인 스타일을 통해  유동적으로 제어 -->
+							<col style="width:44px" />
+							<col />
+							<col style="width:90px" />
+							<col style="width:90px" />
+							<col style="width:90px" />
+							<col style="width:135px" />
+							<col style="width:130px" />
+							<col style="width:130px" />
+						</colgroup>
+						<thead>
+							<tr> 
+								<th>번호</th>
+								<th>공고명</th>
+								<th>직군</th>
+								<th>지역</th>
+								<th>인원</th>
+								<th>상태</th>
+								<th>서류전형 발표일</th>
+								<th>SSAT 발표일</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr> 
+								<th scope="row">62</th>
+								<td><span class="title"><a class="" href="#">애니카 서비스 정규직 채용 공고</a></span></td>
+								<td>일반</td>
+								<td>서울</td>	
+								<td>200명</td>
+								<td><span class="tblIcon01">SSAT발표</span></td>
+								<td><span class="bold">2013.04.21 08:00</span></td>
+								<td><span class="bold">2013.04.21 08:00</span></td>
+							</tr>
+							<tr> 
+								<th scope="row">61</th>
+								<td><span class="title"><a class="" href="#">애니카 서비스 정규직 채용 공고</a></span></td>
+								<td>일반</td>
+								<td>서울</td>	
+								<td>200명</td>
+								<td><span class="tblIcon02">서류발표</span></td>
+								<td><span class="bold">2013.04.21 08:00</span></td>
+								<td><span class="bold">2013.04.21 08:00</span></td>
+							</tr>
+							<tr> 
+								<th scope="row">60</th>
+								<td><span class="title"><a class="" href="#">애니카 서비스 정규직 채용 공고</a></span></td>
+								<td>일반</td>
+								<td>서울</td>	
+								<td>200명</td>
+								<td><span class="tblIcon03">면접발표</span></td>
+								<td><span class="bold">2013.04.21 08:00</span></td>
+								<td><span class="bold">2013.04.21 08:00</span></td>
+							</tr>
+							<tr> 
+								<th scope="row">59</th>
+								<td><span class="title"><a class="" href="#">애니카 서비스 정규직 채용 공고</a></span></td>
+								<td>일반</td>
+								<td>서울</td>	
+								<td>200명</td>
+								<td><span class="tblIcon04">서류발표</span></td>
+								<td><span class="bold">2013.04.21 08:00</span></td>
+								<td><span class="bold">2013.04.21 08:00</span></td>
+							</tr>
+							<tr> 
+								<th scope="row">58</th>
+								<td><span class="title"><a class="" href="#">애니카 서비스 정규직 채용 공고</a></span></td>
+								<td>일반</td>
+								<td>서울</td>	
+								<td>200명</td>
+								<td>면접대기</td>
+								<td><span class="bold">2013.04.21 08:00</span></td>
+								<td><span class="bold">2013.04.21 08:00</span></td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<!-- list handle -->
+					<div class="bbsListHandle">
+						<span class="btnImg pull-left"><img src="../../static/img/common/btn_download.png" alt="파일 다운로드"></span>
+						<a href="#" class="btnImg pull-right"><img src="../../static/img/common/btn_post.png" alt="등록"></a>
+
+						<div class="pagination">
+							<nav class="pageNav">
+								<a href="" class="util first">«</a>
+								<a href="" class="util prev">&lt;</a>
+								<a href="">1</a>
+								<span class="current">2</span>
+								<a href="">3</a>
+								<a href="">4</a>
+								<a href="">5</a>
+								<a href="">6</a>
+								<a href="">7</a>
+								<a href="">8</a>
+								<a href="">9</a>
+								<a href="">10</a>
+								<a href="" class="util next">&gt;</a>
+								<a href="" class="util last">»</a>
+							</nav>
+						</div> <!-- /pagination -->
+					</div>
+					<!-- /list handle -->
+				</div>				
+			</div> <!-- /listWrapper -->
+		</div>
+	</section>
+	<!-- / Content -->
+
+	<footer id="footer">
+		<div>
+			<p>Copyright © 2013 Samsung Anycar Service. All rights reserved.</p>
+		</div>
+	</footer>
+	
+</div>
+
+
+
+
+<script src="../../static/js/plugins.js"></script>
+<script src="../../static/js/main.js"></script>
+</body>
+</html>
+

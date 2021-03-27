@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title> MANDO FOOTLOOSE </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8;" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+<link rel="stylesheet" type="text/css" href="common/css/mando_common.css" />
+<script type="text/javascript" src="common/js/jquery-latest.js"></script>
+<script type="text/javascript" src="common/js/jquery.scrollTo.js"></script>
+<script type="text/javascript" src="common/js/mando.js"></script>
+
+<!--main-->
+<script type="text/javascript" src="common/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="common/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="common/js/main.js"></script>
+
+<!--GNB-->
+<script type="text/javascript">
+<!--
+	$(function(){
+		var $gnb = $("#gnb li");
+		var d1 = "<%=d1%>";
+		var d2 = "<%=d2%>";
+		$(".sGnbArea").hide();
+
+		$gnb.bind("click mouseover",function(e){
+
+			var thisNo = $(this).index();
+
+			$(".sGnbArea").slideDown(300)
+			$gnb.removeClass("selected").eq(thisNo).addClass("selected")
+			$(".sGnb ul").hide().eq(thisNo).show()
+		}).eq(d1-1).trigger("click")
+
+		/* 메뉴:mouse out 원래메뉴로 복귀 */
+		$("#headWrap").not("#utilWrap").hover(function(){
+
+		},function(){
+			if(d1>0 || d1<6){
+				$gnb.removeClass("selected").eq(d1-1).addClass("selected");
+				$(".sGnb ul").hide().eq(d1-1).show().find("li").eq(d2-1).addClass("selected").siblings().removeClass("selected");
+			}
+		})
+
+		/* 메뉴:mouse out 원래메뉴로 복귀 */
+		$(".sGnb ul").mouseover(function(){
+			
+			var $this = $(this);
+			var $thisNo = $this.index();			
+			$this.find("li").hover(function(){
+				$(this).addClass("selected").siblings().removeClass("selected")
+			},function(){
+				if(d1!=0 && d1<=6){
+					$(".sGnb ul").eq($thisNo).find("li").eq(d2-1).addClass("selected").siblings().removeClass("selected");
+				}
+			})
+		})
+
+		/* Util 메뉴 mouse over */
+		$("#utilOut li").bind("click mouseover",function(e){
+			var thisNo = $(this).index();
+			$(this).addClass("selected").siblings().removeClass("selected");
+		});
+		$("#utilIn li").bind("click mouseover",function(e){
+			var thisNo = $(this).index();
+			$(this).addClass("selected").siblings().removeClass("selected");
+		});
+
+		$("#utilWrap ul").hover(function(){
+			var $thisNo = $(this).index();
+			$("#utilWrap ul").eq($thisNo).find("li").mouseover(function(){
+			})
+		},function(){
+		})
+
+		$(".sGnb_0"+d1).find("li").removeClass("selected").eq(d2-1).addClass("selected");
+
+		if(d1==0 || d1>6){
+			$("#gnb li").each(function(){
+				$(this).removeClass("selected");
+			})
+			$(".sGnbArea").hide();
+/**/
+			if(d1==0 || d1 > 6){
+				$("#headWrap").hover(function(){
+
+				},function(){
+					$(".sGnbArea").stop().slideUp(300);
+					$gnb.removeClass("selected");
+				});
+			}
+
+			/* Util */
+			if(d1==7){
+				var $utilWrapOut = $("#utilOut li");
+				var $utilWrapIn = $("#utilIn li");
+				$utilWrapOut.bind("click mouseover",function(){
+					$(this).addClass("selected").siblings().removeClass("selected");
+				}).eq(d2-1).trigger("click")
+				$utilWrapIn.bind("click mouseover",function(){
+					$(this).addClass("selected").siblings().removeClass("selected");
+				}).eq(d2-1).trigger("click")
+			}
+		}
+	})
+//-->
+</script>
+</head>
+<body>
+	<div id="headWrap">
+		<h1><a href="main.asp"><img src="images/common/logo_mando.png" alt="mando footloose" /></a></h1>
+		<div id="gnbWrap">
+			<ul id="gnb">
+				<li class="gnb_01"><a href="story/footloose.asp">FOOTLOOSE STORY</a></li>
+				<li class="gnb_02"><a href="product/vr.asp">PRODUCT</a></li>
+				<li class="gnb_03"><a href="funandlife/Press_list.asp">FUN &amp; LIFE</a></li>
+				<li class="gnb_04"><a href="cafe/introduction.asp">CAFE FOOTLOOSE</a></li>
+				<li class="gnb_05"><a href="buy/productinfo.asp">BUY</a></li>
+				<li class="gnb_06"><a href="support/notice.asp">SUPPORT</a></li>
+			</ul><!-- //gnb -->
+		</div>
+		<div id="utilWrap">
+			<ul id="utilIn">
+				<li class="util_01"><a href="member/login.asp">로그인</a></li>
+				<li class="util_02"><a href="member/terms.asp">회원가입</a></li>
+				<li class="util_03"><a href="buy/order_list.asp">주문/배송</a></li>
+			</ul><!-- //util -->
+
+			<ul id="utilOut">
+				<li class="util_01"><a href="member/login.asp">로그아웃</a></li>
+				<li class="util_02"><a href="myPage/mem_modify.asp">마이페이지</a></li>
+				<li class="util_03"><a href="buy/goodscart.asp">장바구니</a></li>
+				<li class="util_04"><a href="buy/order_list.asp">주문/배송</a></li>
+			</ul><!-- //util -->
+		</div>
+
+		<div class="sGnbArea">
+			<div class="sGnb">
+				<ul class="sGnb_01">
+					<li class="sGnb_01a selected"><a href="story/footloose.asp">Footloose is</a></li>
+					<li class="sGnb_01b"><a href="story/brand.asp">Making Story</a></li>
+					<li class="sGnb_01c"><a href="story/concept.asp">Brand Identity</a></li>
+				</ul>
+				<ul class="sGnb_02">
+					<li class="sGnb_02a selected"><a href="product/vr.asp">3D VR/Color</a></li>
+					<li class="sGnb_02b"><a href="product/design.asp">Design</a></li>
+					<li class="sGnb_02c"><a href="product/technology.asp">Technology</a></li>
+					<li class="sGnb_02d"><a href="product/spec.asp">Specification</a></li>
+					<li class="sGnb_02e"><a href="product/gallery.asp">Gallery</a></li>
+				</ul>
+				<ul class="sGnb_03">
+					<li class="sGnb_03a selected"><a href="funandlife/Press_list.asp">Press</a></li>
+					<li class="sGnb_03b"><a href="funandlife/multimedia.asp">Multimedia</a></li>
+				</ul>
+				<ul class="sGnb_04">
+					<li class="sGnb_04a selected"><a href="cafe/introduction.asp">Introduction</a></li>
+					<li class="sGnb_04b"><a href="cafe/cafe_news.asp">cafe소식</a></li>
+					<li class="sGnb_04c"><a href="cafe/reserve.asp">시승예약</a></li>
+					<li class="sGnb_04d"><a href="cafe/map.asp">오시는길</a></li>
+				</ul>
+
+				<ul class="sGnb_05">
+					<li class="sGnb_05a selected"><a href="buy/productinfo.asp">제품구매</a></li>
+					<li class="sGnb_05b"><a href="buy/honest.asp">정품등록</a></li>
+				</ul>
+				<ul class="sGnb_06">
+					<li class="sGnb_06a selected"><a href="support/notice.asp">공지사항</a></li>
+					<li class="sGnb_06b"><a href="support/consultation.asp">1 : 1  고객상담</a></li>
+					<li class="sGnb_06c"><a href="support/faq.asp">자주묻는 질문</a></li>
+				</ul>
+			</div>
+		</div><!-- //sGnbArea -->
+	</div><!-- //headWrap -->
+
+	<!-- conWrap -->
+	<div id="mainVisual">
+		<div id="wrapVisual">
+			<ul class="visualImg">
+				<li id="visual_01" class="visual active">
+					<div class="visualTxt">
+						<h3><img src="images/main/h3_visual_01.png" alt="" /></h3>
+						<p><img src="images/main/p_visual_01.png" alt="" /></p>
+					</div>
+					<img src="images/main/main_visual_01.jpg" alt="" id="visualImg01" class="visualMainImg"/>
+				</li><!-- //#visual_01 -->
+				<li id="visual_02" class="visual">
+					<div class="visualTxt">
+						<h3><img src="images/main/h3_visual_02.png" alt="" /></h3>
+						<p><img src="images/main/p_visual_02.png" alt="" /></p>
+					</div>
+					<img src="images/main/main_visual_02.jpg" alt="" id="visualImg02" class="visualMainImg" />
+				</li><!-- //#visual_02 -->
+				<li id="visual_03" class="visual">
+					<div class="visualTxt">
+						<h3><img src="images/main/h3_visual_03.png" alt="" /></h3>
+						<p><img src="images/main/p_visual_03.png" alt="" /></p>
+					</div>
+					<img src="images/main/main_visual_03.jpg" alt="" id="visualImg03" class="visualMainImg" />
+				</li><!-- //#visual_03 -->
+			</ul><!-- //visualImg -->
+		</div>
+
+		<ul class="btnPrevNext">
+			<li><a href="#"><img src="images/common/btn/btn_main_prev.png" alt="prev" class="prev"/></a></li>
+			<li><a href="#"><img src="images/common/btn/btn_main_next.png" alt="next" class="next"/></a></li>
+		</ul><!-- //btnPrevNext -->
+	</div><!-- //mainVisual -->
+
+	<div id="footerWrap">
+		<div class="footerTop">
+			<div id="sns">
+				<ul>
+					<li class="links_01"><a href="#">facebook</a></li>
+					<li class="links_02"><a href="#">twitter</a></li>
+				</ul>
+				<p id="copyright"><img src="images/common/copyright.png" alt="copyright&copy; 2012 mando footloose .all right reserved" /></p><!-- //121107_이미지명 바꿈 -->
+			</div><!-- //sns -->
+
+			<div id="links">
+				<ul>
+					<li class="links_01"><a href="http://www.meister.co.kr/Default.asp" target="_blank">회사소개</a></li>
+					<li class="links_02"><a href="util/terms.asp">이용약관</a></li>
+					<li class="links_03"><a href="util/privacy.asp">개인정보취급방침</a></li>
+					<li class="links_04"><a href="util/sitemap.asp">사이트맵</a></li>
+				</ul>
+			</div><!-- //links -->
+
+			<p id="familySite">
+				<img src="images/common/btn/btn_familysite.gif" alt="familysite" />
+				<div id="familyNav">
+					<ul>
+						<li class="family_01"><a href="http://www.halla.com/ko/" target="_blank">한라그룹</a></li>
+						<li class="family_02"><a href="http://www.halla.co.kr/" target="_blank">한라건설</a></li>
+						<li class="family_03"><a href="http://www.mando.com/" target="_blank">만도</a></li>
+						<li class="family_04"><a href="http://www.hallawelthtech.co.kr/contents/home/home.asp" target="_blank">한라웰스텍</a></li>
+						<li class="family_05"><a href="http://www.mokpoport.com/new/index.asp" target="_blank">목포신항만운영</a></li>
+						<li class="family_06"><a href="http://www.hallainc.co.kr/" target="_blank">한라 I&amp;C</a></li>
+					</ul>
+				</div>
+			</p>
+
+			<div  id="languageNav" >
+				<img src="images/common/btn/btn_language.gif" alt="language" />
+				<div class="subNav">
+					<ul>
+						<li class="subNav_01"><a href="eng/main.asp">ENGLISH</a></li>
+						<li class="subNav_02"><a href="main.asp">KOREAN</a></li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- //footerTop -->
+		<div class="footerBt">
+			<img src="images/common/footer_bt_copyright.png" alt="" class="btAddress" />
+			<a href="http://www.ftc.go.kr/info/bizinfo/communicationView.jsp?apv_perm_no=2012322016230203006&area1=&area2=&currpage=1&searchKey=01&searchVal=마이스터&stdate=&enddate=" target="_blank"><img src="images/common/space.gif" alt="" class="btnCheck" /></a>
+
+			 <ul class="btSystem">
+				<li><img src="images/common/footer_bt_system_01.gif" border="0" alt="클릭하시면 이니시스 결제시스템의 유효성을 확인하실 수 있습니다." style="cursor:pointer" Onclick='window.open("https://mark.inicis.com/mark/escrow_popup.php?no=29543&st=1351751592","mark","scrollbars=no,resizable=no,width=530,height=690")'></li>
+				<li><img src="images/common/footer_bt_system_02.gif" alt="eTrust 인증" /></li>
+				<li><img src="images/common/footer_bt_system_03.gif" alt="공정거래 위원회 표준약관 사용" /></li>
+				<li><img src="images/common/footer_bt_system_04.gif" alt="현금영수증 발행가맹점" /></li>
+			</ul>
+		</div><!-- //footerBt -->
+	</div><!-- //footerWrap -->
+	<p class="btnTop"><a href="#"><img src="images/common/btn/btn_top.gif" alt="TOP" /></a></p>
+</body>
+</html>

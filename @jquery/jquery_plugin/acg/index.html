@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>ACG :: Astrum Creative Group</title>
+<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.masonry.min.js"></script>
+<style type="text/css">
+	.section1 {float: left; border:none; border-left: 1px solid #fff; border-top:1px solid #fff; background:#efefef;}
+	.section2 {float: left; border:none; border-left: 1px solid #fff; border-top:1px solid #fff; background:#efefef;}
+
+	.clearfix:before, .clearfix:after { content: ""; display: table; }
+	.clearfix:after { clear: both; }
+
+	.dpNone {display:none;}
+	.button {border:none; border-left: 1px solid #fff; border-top:1px solid #fff; }
+	.button .more img {margin-top:55px; border:none;}
+
+	.cols1 {width :199px; height :199px;}
+</style>
+<script type="text/javascript">
+	var mas = function(){
+		$('#container').masonry({
+			itemSelector : '.section',
+			columnWidth : 100,
+			isAnimated : true
+		});
+	}
+	$(function(){
+		mas();
+		$('#container .sec1 div:not(.button), #container .sec2 div:not(.button)').click(function(){
+			var inx = $(this).index();
+			$('#container .sec1 div.section:not(:eq('+inx+'), .button), #container .sec2 div.section:not(:eq('+inx+'), .button)').css({
+				'border':'none',
+				'border-left': '1px solid #fff',
+				'border-top':'1px solid #fff',
+				width : '199px',
+				height : '199px',
+				background : '#efefef',
+				'z-index': '1'
+			});
+			$(this).css({
+				background: 'blue',
+				'z-index': '1000'
+			})
+			.animate({
+				width : '399px',
+				height : '399px'
+			},{
+				duration : 300,
+				complete : function(){
+					mas();
+				}
+			});
+		});
+
+		$('.more').click(function(){
+			$('.sec2').removeClass('dpNone');
+			mas();
+		});
+	});
+</script>
+</head>
+<body>
+<div id="container" class="clearfix">
+	<div class="sec sec1">
+		<div class="section section1 cols1">1</div>
+		<div class="section section1 cols1">2</div>
+		<div class="section section1 cols1">3</div>
+		<div class="section section1 cols1">4</div>
+		<div class="section section1 cols1">5</div>
+		<div class="section section1 cols1">6</div>
+		<div class="section section1 cols1">7</div>
+		<div class="section section1 cols1">8</div>
+		<div class="section section1 cols1">9</div>
+		<div class="section section1 cols1">10</div>
+		<div class="section button cols1" style="background:red; text-align:center;"><a href="#" class="more"><img src="img/icon_more.gif" alt="" /></a></div>
+	</div>
+
+	<div class="sec sec2 dpNone">
+		<div class="section section2 cols1">11</div>
+		<div class="section section2 cols1">12</div>
+		<div class="section section2 cols1">13</div>
+		<div class="section section2 cols1">14</div>
+		<div class="section section2 cols1">15</div>
+		<div class="section section2 cols1">16</div>
+		<div class="section section2 cols1">17</div>
+		<div class="section section2 cols1">18</div>
+		<div class="section section2 cols1">19</div>
+		<div class="section section2 cols1">20</div>
+	</div>
+</div>
+</body>
+</html>

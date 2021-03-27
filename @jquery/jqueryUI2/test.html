@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>test</title>
+		<meta name="viewport" content="user-scalable=yes, initial-scale = 1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<style type="text/css">
+			*{margin:0;padding:0}
+			img, select, input {vertical-align: middle;}
+			.wrap{width:100%;height:100%;background:red; }
+			.hideScroll {overflow-y: hidden;}
+			#imgOn {margin-left: -50px;padding: 40px 20px 20px 20px;display: none;position: fixed;top: 20%;left: 50%;z-index: 3001;overflow-y: auto;overflow-x: hidden;background: #fff;width: 580px;height: auto;border: 5px solid #9c8d7b;text-align: center;}
+			.bgLayer {display: none;position: fixed;top: 0;left: 0;z-index: 3000;width: 100%;height: 100%;background: #333;opacity: 0.6;}
+		</style>
+		<script type="text/javascript">			
+			$(function(){			
+				$('.open').click(function(e) {
+					e.preventDefault();
+					$('html').addClass('hideScroll');
+					$('<div class=bgLayer></div>').appendTo('body');
+					var tar = $(this).attr('href');
+					$(window).on('resize', function() {
+						//$(tar).css('width', $('.wrap').width());
+						$(tar).css('marginLeft',-($(tar).width()/2) );
+						//$(tar).css('height',$(window).height());
+					});
+					
+					//setTdValue(tar, '#'+$(this).parent().parent().parent().attr('id'));
+					
+					$(window).resize();
+					$('.bgLayer').fadeTo('fast', 0.6, function() {
+						$(tar).fadeIn();
+					});
+
+					$('.close').click(function() {
+						$(tar).fadeOut(300,function() {							
+							$('.bgLayer').hide(500,function(){
+								//$('html').removeClass('hideScroll');
+								$('.bgLayer').remove();
+							});
+							
+						});
+					});
+					
+					var imgSrc = $(this).children('img').attr('src');
+					var imgAlt = $(this).children('img').attr('alt');
+					$('#imgOn img.largeImg').attr('src', imgSrc ).attr('alt', imgAlt);
+					
+					var $img = $('#imgOn img.largeImg');
+					$img.each(function(){
+						var _this = $(this)
+						_this.attr('src', _this.attr('src').replace('.gif', '_large.jpg'));
+					})
+				});						
+			});		
+		</script>
+
+	</head>
+
+	<body>
+		<div class="wrap">
+			<a class="open" href="#imgOn"><img src="img/imgF01A.gif" alt=""></a>
+			<a class="open" href="#imgOn"><img src="img/imgF01B.gif" alt=""></a>
+			<div id="imgOn">
+				<img class="largeImg" src="" alt="" />
+				<button type="button" class="close">닫기</button>
+			</div>
+		</div>
+	</body>
+</html>

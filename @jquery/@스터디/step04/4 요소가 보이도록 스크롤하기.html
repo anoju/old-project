@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+	#foo { width:300px; padding:10px; height:200px; border:1px solid black; overflow-y:scroll; position:relative;}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">	
+	$(function(){
+		var $foo = $('#foo');
+		$('#bar').click(function(){
+			var lastparagraphPosition = $('#foo p:first').position();
+			var scrollPosition = $foo.scrollTop() + lastparagraphPosition.top;
+			$foo.stop().animate({'scrollTop':scrollPosition},1000);
+		});
+		$('#bam').click(function(){
+			var lastparagraphPosition = $('#foo p:last').position();
+			var scrollPosition = $foo.scrollTop() + lastparagraphPosition.top;
+			$foo.stop().animate({'scrollTop':scrollPosition},1000);
+		});
+	});
+</script>
+</head>
+<body>
+	<input type="button" id="bar" value="Click to scroll to first paragraph" />
+    <input type="button" id="bam" value="Click to scroll to last paragraph with animation" />
+    <div id="foo">
+    	<p>1. 폴더명(folder name), 파일명(file name) 정의
+      가. 이미지(Image) 폴더 정의
+         이미지 폴더는 “images”로 정하며, 하위 폴더명은 다음과 같이 정의한다.
+         ‧ 메인 이미지 : 홈페이지의 가장 처음인 메인페이지의 img파일 모음으로 별도로 폴더를 만들어 저장해야 한다. 폴더명은 “main”으로 정한다.
+         ‧ 공통 이미지 : 메인페이지, 서브페이지등 공통적으로 들어가는 부분(즉, header, footer, gnb, lnb, button 등)에 들어가는 이미지들의 모음, 폴더명은 “common”으로 정한다.
+         ‧ 서브페이지 이미지 : 메인이미지, 공통이미지를 제외한 컨텐츠 부분의 이미지들의 모음, 폴더명은 “sub”으로 정한다.
+         이후 각 폴더 하위에 들어 갈 세부적인 구분은 상황에 따라 유동적으로 정할 수 있다.
+
+      나. 자바스크립트(Javascript) 폴더 정의
+         자바스크립트 폴더는 “js”로 정하며, 하위 폴더명은 다음과 같이 정의한다.
+         ‧ 메인 스크립트 : 메인페이지의 스크립트 동작에 관한 스크립트는 파일명은 “main.js”로 정한다. 
+         ‧ 공통 스크립트 : 메인페이지, 서브페이지등 공통적으로 들어가는 부분 (즉, gnb, lnb, notice 등)에 들어가는 js파일 모음, 파일명은 “common.js”로 정한다.
+         ‧ 줌 스크립트 : 글자 크기 조절에 관한 스크립트 정의이며, 파일명은 “zoom.js”로 정한다.
+         이후 추가적으로 들어가는 동작(img slide, modal window, popup)은 상황에 따라 유동적으로 정할 수 있다.        	
+        </p>
+        <p>
+        	 다. CSS(Cascading Style Sheets) 폴더 정의
+         CSS 폴더는 “css”로 정하며, 하위 폴더명은 다음과 같이 정의한다.
+         ‧ 스타일 초기화 : 기본 스타일은 각 웹 브라우저마다 기본 스타일이 달라서 각 웹 브라우저마다 다르게 적용되어 있는 기본 스타일을 초기화를 해야 한다. CSS전문가인 에릭마이어가 고안해낸 “reset.css”를 사용하도록 한다. 
+           다운로드 : http://is.gd/IU61tH
+         ‧ 메인 CSS : 메인페이지 스타일에 관한 css 파일명은 “main.css”로 정의 한다.
+         ‧ 공통 CSS : 메인페이지, 서브페이지 등 공통적으로 들어가는 스타일 (즉, header, footer, gnb, lnb, button 등)을  지정하는 곳으로 파일명은 “global.css”로 정한다.
+         ‧ 컨텐츠 CSS : 메인 CSS, 공통 CSS를 제외한 컨텐츠 페이지에 관한 스타일 정의로 파일명은 “contents.css”로 정한다.
+         ‧ 테이블 CSS : 테이블에 관한 종합적인 CSS이며 HTML에 들어가는 모든 테이블을 정의한다. 파일명은“board.css”로 정한다.
+
+      라. 기타 폴더 (컨텐츠, popup, gnb, lnb 등) 정의
+         ‧ 컨텐츠 폴더 : 컨텐츠에 관하여 메뉴별로 폴더명을 명시하며, 영문 혹은 한글로 작성해야 한다. 
+          (예) 폴더명 “01contents_menu1” : 첫 글자는 숫자로 순서도를 명시하며, 이후 메뉴 내용을 작성해야 한다.
+         ‧ 기타 폴더 : 상황에 따라 여러 추가적인 페이지 발생 시 폴더명을 해당 페이지 이름에 맞춰 작성해야 한다.
+          (예)“popup”페이지 발생시 ‣ popup 폴더를 만들어 작성해야 한다.
+
+    2. HTML 정의
+      가. 메인페이지 정의
+         메인페이지의 파일명은 "index.html"로 지정하며 컨텐츠 페이지와는 별도로 폴더 가장 처음에 나와야 한다.
+
+      나. 컨텐츠(서브)페이지 정의
+         컨텐츠(서브)페이지의 파일명은 페이지제목을 기준으로 영문 혹은 한글로 작성해야 한다.
+
+      다. 공통페이지 정의
+         공통페이지(header, footer, gnb, lnb 등)에 관하여 페이지 내용은 각 최초 1개씩만 작성해야 하며, 페이지 명은 각 해당 페이지명으로 한다
+         (예) gnb메뉴 4개 ‣ gnb공통 부분 1개만 제작 : 페이지명“gnb”,
+             만약 여러 메뉴를 만들어야 할 경우 : “gnb_페이지명”
+
+        </p>
+    </div>
+</body>
+</html>

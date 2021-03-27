@@ -1,0 +1,30 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+margin: 0;padding: 0;border: 0;outline: 0;font-weight: inherit;font-style: inherit;font-size: 100%;font-family: inherit;vertical-align: baseline;}
+ol, ul {list-style: none;}
+h1, h2, h3, h4, h5, h6 {font-family: 'ProximaNovaSemiBold',Arial,sans-serif;text-transform: uppercase;font-weight: normal;}
+h4 {font-size: 1.6em;line-height: 1.24em;letter-spacing: .1em;}
+li {letter-spacing: .03em;}
+a {color: #A3443E;text-decoration: none;}
+a:hover {text-decoration: underline;}
+
+body.pilots-watches {background: url('../img/family_background_pilots.jpg') 50% 350px no-repeat #edeef0 fixed;}
+#wrapper {width: 972px;margin: 0 auto;position: relative;padding: 0 0 20px 0;}
+
+.detail .pageTitle {margin-bottom: 40px;padding-bottom: 0;}
+h2.pageTitle {text-align: center;font-size: 2.2em;line-height: 1.455em;letter-spacing: .12em;color: #191919;padding: 0 0 24px;}
+
+.row {height: 1000px;clear: both;overflow: hidden;width: 100%;margin-bottom: 40px;position: relative;}
+.col {float: left;padding: 0 22px 0 23px;}
+.frontBackWrap {position: relative;margin: 24px 0 0 22px;padding: 0;width: 442px;height: 578px;background: url('../img/fb_ruler.png') no-repeat left top;}
+.frontBackWrap .front {overflow: hidden;position: absolute;left: 0;top: 20px;width: 0;z-index: 23;text-align: center;height: 538px;overflow: hidden;}
+.frontBackWrap .back {overflow: hidden;position: absolute;left: 0;top: 20px;z-index: 1;text-align: center;width: 100%;}
+
+.sliderWindow {width: 8px;height: 500px;position: absolute;left: 0;top: -8px;z-index: 25;background: url('../img/fb_slider_handle.png') no-repeat right top;}
+.sliderWindow .handle {width: 30px;height: 500px;position: absolute;right: 0;top: 0;}
+
+.frontBackWrap .fbSliderControls {position: absolute;bottom: 35px;height: 39px;left: 0;background: url('../img/fb_slider_controls_bg.png') bottom center no-repeat;width: 100%;text-align: center;padding-top: 18px;z-index: 26;}
+.frontBackWrap .fbSliderControls a {position: absolute;left: 50%;font-family: 'ProximaNovaSemiBold',Arial,Helvetica,sans-serif;text-transform: uppercase;font-size: 13px;letter-spacing: .09em;padding-top: 2px;margin-left: 17px;}
+.frontBackWrap .fbSliderControls a.first {position: absolute;right: 50%;left: auto;margin-right: 17px;}
+.frontBackWrap .fbSliderControls a:hover {color: #888989;text-decoration: none;}
+
+#pageFooter {clear: both;background: #000;height: 300px}

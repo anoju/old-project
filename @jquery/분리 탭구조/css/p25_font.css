@@ -1,0 +1,15 @@
+/* Global CSS */
+
+
+
+/* WebFont - IE6-8 */
+@font-face{font-family:'PFSquareSansProRegular';font-style:normal;font-weight:normal;src: url('http://www.samsung.com/uk/common/font/pfsquaresanspro-regular-webfont.eot?')format('eot');}
+@font-face{font-family:'PFSquareSansProMedium';font-style:normal;font-weight:normal;src: url('http://www.samsung.com/uk/common/font/pfsquaresanspro-medium-webfont.eot?')format('eot');}
+@font-face{font-family:'PFSquareSansProBold';font-style:normal;font-weight:bold;src: url('http://www.samsung.com/uk/common/font/pfsquaresanspro-bold-webfont.eot?')format('eot');}
+@font-face{font-family:'PFSquareSansProLight';font-style:normal;font-weight:normal;src: url('http://www.samsung.com/uk/common/font/pfsquaresanspro-light-webfont.eot?')format('eot');}
+
+/* WebFont - IE9, Non IE */
+@font-face{ font-family: 'PFSquareSansProRegular'; font-style: normal; font-weight: normal; src: url('http://:/')format('IE-No-404'),url('http://www.samsung.com/uk/common/font/pfsquaresanspro-regular-webfont.woff')format('woff'), url('http://www.samsung.com/uk/common/font/pfsquaresanspro-regular-webfont.ttf')format('truetype'), url('http://www.samsung.com/uk/common/font/PFSquareSansPro-Regular.otf')format('opentype'), url('http://www.samsung.com/uk/common/font/pfsquaresanspro-regular-webfont.svg#webfontv5sbfHpH')format('svg');}
+@font-face{font-family: 'PFSquareSansProMedium'; font-style: normal; font-weight: normal; src: url('http://:/')format('IE-No-404'),url('http://www.samsung.com/uk/common/font/pfsquaresanspro-medium-webfont.woff')format('woff'), url('http://www.samsung.com/uk/common/font/pfsquaresanspro-medium-webfont.ttf')format('truetype'), url('http://www.samsung.com/uk/common/font/PFSquareSansPro-Medium.otf')format('opentype'), url('http://www.samsung.com/uk/common/font/pfsquaresanspro-medium-webfont.svg#webfontZbjBElFg')format('svg');}
+@font-face{font-family: 'PFSquareSansProBold'; font-style: normal; font-weight: bold; src: url('http://:/')format('IE-No-404'),url('http://www.samsung.com/uk/common/font/pfsquaresanspro-bold-webfont.woff')format('woff'), url('http://www.samsung.com/uk/common/font/pfsquaresanspro-bold-webfont.ttf')format('truetype'), url('http://www.samsung.com/uk/common/font/PFSquareSansPro-Bold.otf')format('opentype'), url('http://www.samsung.com/uk/common/font/pfsquaresanspro-bold-webfont.svg#webfontbEyqtYYZ')format('svg');}
+@font-face{font-family: 'PFSquareSansProLight'; font-style: normal; font-weight: normal; src: url('http://:/')format('IE-No-404'),url('http://www.samsung.com/uk/common/font/pfsquaresanspro-light-webfont.woff')format('woff'), url('http://www.samsung.com/uk/common/font/pfsquaresanspro-light-webfont.ttf')format('truetype'), url('http://www.samsung.com/uk/common/font/PFSquareSansPro-Light.otf')format('opentype'), url('http://www.samsung.com/uk/common/font/pfsquaresanspro-light-webfont.svg#webfont18SLR6r1')format('svg');}

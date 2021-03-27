@@ -1,0 +1,32 @@
+@charset "euc-kr";
+
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,th,td,p { margin:0; padding:0; font-size:100%; }
+body { font-size:75%; font-family:"µ¸¿ò", Dotum, "±¼¸²", Gulim, arial; line-height:120%; color:#666; }
+table { border-collapse:collapse; border-spacing:0; }
+fieldset, img { border:0; }
+a {}
+a:link, a:visited, a:hover, a,active, a:focus { text-decoration:none; color:inherit; cursor:pointer; }
+label {}
+legend, caption { position:absoulte; top:0; left:0; width:1px; height:1px; visibility:hidden; font-size:0; line-height:0; }
+address,cite,code,dfn,em { font-style:normal; }
+ol,ul { list-style:none; }
+hr { display: none; }
+textarea, input, select { font-family:dotum,µ¸¿ò; font-size:12px !important;}
+input[type=text], input[type=file], input[type=password], textarea { padding:2px 3px 2px 3px; border:1px solid #cbd1d6; background:#fff;}
+input.radio, input.check {border:0 !important; padding:0;}
+img, input, button, select { vertical-align:middle; }
+
+body { overflow-x:hidden; width:100%; padding:20px 0 0 0; background:#fff; }
+
+#wrap { width:1024px; height:450px; margin:0 auto 0;}
+
+#wrap h1 {margin:0 auto; padding:0; text-align:center;}
+#wrap ul.type { overflow:hidden; margin:40px 0 0 0; list-style-type:none;}
+#wrap ul.type li { float:left; width:20%; text-align:center;}
+
+
+#footerWrap {  overflow:hidden; _zoom:1; width:100%; height:215px; margin:0; padding:0; background:#313131;}
+#footerWrap .footArea {  overflow:hidden; _zoom:1;  width:924px; height:215px; margin:0 auto;  text-align:right; background:#313131;}	
+#footerWrap .footArea .footLogo { margin:33px 0 0 0; padding:0; }
+#footerWrap .footArea .footTxt { margin:22px 0 0 0; padding:0; }

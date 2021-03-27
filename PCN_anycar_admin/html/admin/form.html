@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" itemscope="itemscope" itemtype="http://schema.org/WebPage" lang="ko"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>스타일가이드</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="../../static/css/component.css" media="handheld, all">
+
+	<style type="text/css">
+	.frame {margin:2em}
+	.helper {text-indent:1em; margin-bottom:2em}
+	dl {margin-bottom:1em; padding:1em; background:#fafafa;}
+	dl dt {margin-bottom:.5em}
+	dl dd {margin-bottom:2em}
+	</style>
+	
+	<!-- Le supporter -->
+	<script src="../../static/js/lib/modernizr-2.6.2.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+	<script>window.jQuery || document.write('<script src="../../static/js/lib/jquery-1.8.2.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script src="../../static/js/lib/jquery-ui-1.9.0.min.js"><\/script>')</script>
+</head>
+
+<body>
+<div class="frame">
+
+
+	<h3>폼 관련 컴포넌트</h3>
+	<p class="helper">폼 관련 컴포넌트는 필요하다면 따라 인라인 스타일로 크기 제어</p>
+
+	<dl>
+		<dt>셀렉트박스</dt>
+		<dd>
+	
+			<select class="select">
+				<option>전체</option>
+				<option>내용1</option>
+				<option>내용2</option>
+			</select>
+
+		</dd>
+
+		<dt>셀렉트박스 + 버튼</dt>
+		<dd>
+
+			<span class="input-helper">선택한 항목을 </span>
+
+			<select class="select withBtn">
+				<option>노출</option>
+				<option>숨김</option>
+				<option>삭제</option>
+			</select>
+
+			<button class="btnSquare"><span>적용</span></button>
+
+		</dd>
+	</dl>
+
+	<dl>
+		<dt>인풋박스</dt>
+		<dd>
+
+			<input type="text" class="inputBox" value="" />			
+
+		</dd>
+
+		<dt>인풋박스 그룹</dt>
+		<dd>
+			
+			<div class="inputGroup">
+				<select class="select">
+					<option>전체</option>
+					<option>내용1</option>
+					<option>내용2</option>
+				</select>
+				<span>-</span>
+				<input type="text" class="inputBox" value="" />
+				<span>-</span>
+				<input type="text" class="inputBox" value="" />
+			</div>			
+
+		</dd>
+	</dl>
+	
+	<dl>
+		<dt>텍스트박스 - cols, rows 어트리뷰트로 크기 조절 || 인라인 스타일을 통해 정확한 수치</dt>
+		<dd>
+			
+			<textarea class="textarea" cols="50" rows="6">회사소개 관리
+인재채용의 굿피플 스토리의 손해사정 사업부 관리
+홍보센터 관리
+고객센터 FAQ, Q&A 관리</textarea>
+			
+
+		</dd>
+	</dl>
+
+	<dl>
+		<dt>라디오</dt>
+		<dd>
+			
+			<label class="radio">
+				<input type="radio" name="hello" checked="checked" />
+				활성
+			</label>
+			<label class="radio">
+				<input type="radio" name="hello" />
+				비활성
+			</label>
+		</dd>
+
+		<dt>체크박스</dt>
+		<dd>
+			<label class="checkbox">
+				<input type="checkbox" name="world" checked="checked" />
+				선택1
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" name="world" />
+				선택2
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" name="world" />
+				선택3
+			</label>
+
+		</dd>
+	</dl>
+
+</div> <!-- /frame -->
+
+<script src="../../static/js/plugins.js"></script>
+<script src="../../static/js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* base */
+			*			{ margin: 0; padding: 0; }
+		body		{ font-size: 12px; color: #898989;  }
+		ul, ol	{ list-style: none;  }
+		img			{ border: none; }
+		em			{ font-style: normal;  }
+		table		{ border-collapse: collapse; table-layout: fixed; font-size: 12px; }
+		h1,h2,h3,h4,h5,h6		{ font-size: 12px; }
+		a:link, a:visited, a:active		{ color: #898989; text-decoration: none; }
+		select, input, img, textarea	{ vertical-align: middle; font-size: 12px; color: #848485; }
+
+	/* script */
+		.hidden	{ display: none; }
+		.none		{ display:none; }

@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link type="text/css" rel="stylesheet" href="css/reset.css" />
+<style type="text/css">
+	.view { width:600px; height:400px; margin:auto; margin-top:40px; overflow:hidden; position:relative;}
+	.box { position:absolute;}
+	.box ul { float:left;}
+	
+	.statusbar { width:200px; overflow:hidden; position:fixed; top:10px; left:10px;}
+	.statusbar ul { float:left;}
+	.statusbar ul li{ width:25px; height:25px; background:#CCC; margin:12.5px; cursor:pointer;}
+	.statusbar ul li.on { background:#06F;}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var width = $('img').width();
+		var height = $('img').height();
+		var ul_length = $('.box>ul').length;
+		var li_length;
+		var col = 0; //행 (가로)
+		var row = 0; //열 (세로)
+		$('.box').css('width',width * ul_length);
+		$('body').keydown(function(e){
+			var key = e.keyCode;
+			switch(key){
+				case 37 : //좌측
+					col--;
+					row=0;
+					img_motion();
+					break;
+				case 38 : //위
+					row--;
+					img_motion();
+					break;
+				case 39 : //우측
+					col++;
+					row=0;
+					img_motion();
+					break;
+				case 40 : //아래
+				    row++;
+					img_motion();
+					break;
+			}
+		});
+		
+		function img_motion(){
+			li_length = $('.on').siblings().length + 1;
+			if(li_length < row+1 || row < 0){
+				row < 0 ? row = 0 : row = li_length-1;
+			}else if(ul_length < col + 1 || col < 0){
+				col < 0 ? col = 0 : col = ul_length-1;
+			}else{
+				$('.box').animate({'left':-width * col,'top':-height * row},function(){motion=true});
+				$('.on').removeClass('on');
+				$('.statusbar').children().eq(col).children().eq(row).addClass('on');
+			}
+		}
+	})
+</script>
+</head>
+<body>
+	<div class="view">
+		<div class="box">
+	    	<ul>
+	        	<li><img src="images/1.jpg" alt="" /></li>
+	            <li><img src="images/2.jpg" alt="" /></li>
+	            <li><img src="images/3.jpg" alt="" /></li>
+	            <li><img src="images/4.jpg" alt="" /></li>
+	        </ul>
+	        <ul>
+	        	<li><img src="images/5.jpg" alt="" /></li>
+	            <li><img src="images/6.jpg" alt="" /></li>
+	            <li><img src="images/7.jpg" alt="" /></li>
+	        </ul>
+	        <ul>
+	        	<li><img src="images/8.jpg" alt="" /></li>
+	            <li><img src="images/9.jpg" alt="" /></li>
+	            <li><img src="images/10.jpg" alt="" /></li>
+	            <li><img src="images/11.jpg" alt="" /></li>
+	            <li><img src="images/12.jpg" alt="" /></li>
+	        </ul>
+	        <ul>
+	        	<li><img src="images/13.jpg" alt="" /></li>
+	            <li><img src="images/14.jpg" alt="" /></li>
+	            <li><img src="images/15.jpg" alt="" /></li>
+	        </ul>
+	    </div>
+    </div>
+    <div class="statusbar">
+    	<ul>
+            <li class="on"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

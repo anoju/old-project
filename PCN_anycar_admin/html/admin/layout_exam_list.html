@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" itemscope="itemscope" itemtype="http://schema.org/WebPage" lang="ko"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>스타일가이드 | 애니카서비스</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="../../static/css/component.css" media="handheld, all">
+	<link rel="stylesheet" href="../../static/css/style.css" media="all">
+
+	<!-- Le supporter -->
+	<script src="../../static/js/lib/modernizr-2.6.2.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+	<script>window.jQuery || document.write('<script src="../../static/js/lib/jquery-1.8.2.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script src="../../static/js/lib/jquery-ui-1.9.0.min.js"><\/script>')</script>
+</head>
+
+<body>
+<div id="wrap">
+	<header id="header">
+		<div class="brand">
+			<h1><a href="#">애니카 서비스 운영자 시스템</a></h1>
+		</div>		
+
+		<div class="user-info">
+			<strong>Superadmin</strong> <span>님의 최종 접속일 </span>
+			<span class="time">2013.06.12 01:43</span>
+			<a href="#" class="btn-logout"><img src="../../static/img/common/header/btn_logout.png" alt="LogOut" /></a>
+		</div>
+		<nav id="gnb">
+			<ul>
+				<li>
+					<a href="#"><img src="../../static/img/common/header/gnb_01_off.gif" alt="회사소개" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="../../static/img/common/header/gnb_02_off.gif" alt="인재채용" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="../../static/img/common/header/gnb_03_off.gif" alt="미디어센터" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="../../static/img/common/header/gnb_04_off.gif" alt="고객센터" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="../../static/img/common/header/gnb_05_off.gif" alt="네트웍" /></a>
+				</li>
+				<li class="on"> <!-- [D] on class, 이미지 _on 교체 -->
+					<a href="#"><img src="../../static/img/common/header/gnb_06_on.gif" alt="메인 관리" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="../../static/img/common/header/gnb_07_off.gif" alt="운영자 관리" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="../../static/img/common/header/gnb_08_off.gif" alt="사이트 관리" /></a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<aside id="subMenuWrap">
+		<nav id="lnb">
+			<h2><img src="../../static/img/common/title/titC.gif" alt="미디어 센터" /></h2>
+			<ul>
+				<li class="on"> <!-- [D] on class -->
+					<a class="on" href="#">메뉴 1</a>
+					<ul>
+						<li><a href="#">서브메뉴 1</a></li>
+						<li class="on"><a href="#">서브메뉴 2</a></li>
+						<li><a class="on" href="#">서브메뉴 3</a></li>
+						<li><a href="#">서브메뉴 4</a></li>
+					</ul>	
+				</li>
+				<li>
+					<a href="#">메뉴 2</a>
+					<ul>
+						<li><a href="#">서브메뉴 1</a></li>
+						<li><a href="#">서브메뉴 2</a></li>
+						<li><a href="#">서브메뉴 3</a></li>
+						<li><a href="#">서브메뉴 4</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">메뉴 3</a>
+					<ul>
+						<li><a href="#">서브메뉴 1</a></li>
+						<li><a href="#">서브메뉴 2</a></li>
+						<li><a href="#">서브메뉴 3</a></li>
+						<li><a href="#">서브메뉴 4</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">메뉴 4</a>
+					<ul>
+						<li><a href="#">서브메뉴 1</a></li>
+						<li><a href="#">서브메뉴 2</a></li>
+						<li><a href="#">서브메뉴 3</a></li>
+						<li><a href="#">서브메뉴 4</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</aside>
+
+
+	<!-- Content -->
+	<section id="contentWrap">
+		<p id="location">
+			<span class="home">Home</span> <span class="depth">&gt;</span>
+			<span>미디어센터</span> <span class="depth">&gt;</span>
+			<span>매거진</span> <span class="depth">&gt;</span>
+			<span class="current">뉴스</span>
+		</p>
+
+		<h1 class="noshadow"> <!-- [D] noshadow class -->
+			<img src="../../static/img/common/title/titC01.gif" alt="뉴스" />
+		</h1>
+		<div class="content">
+			
+			<header class="search-filter">
+				<!-- example filter -->
+				<form action="">				
+					<div class="bbsPost">
+						<fieldset>
+							<legend>Posting</legend>
+
+							<div class="postItem">
+								<div class="table-cell table-th">
+									<div><label for="statusActive">상태</label></div>
+								</div>
+								<div class="table-cell table-td">
+									<label class="radio">
+										<input type="checkbox" id="dpMain" name="statusActive" />
+										활성
+									</label>
+									<label class="radio">
+										<input type="checkbox" name="statusDeactive" checked="checked" />
+										비활성
+									</label>
+								</div>	
+							</div>
+							<div class="postItem">
+								<div class="table-cell table-th">
+									<div><label for="createDate">생성일</label></div>
+								</div>
+								<div class="table-cell table-td">
+
+
+									<div class="schedule">
+										<input type="text" class="inputBox inputSchedule" name="createDate" id="createDate" value="2013-06-16" readonly="readonly" title="시작일" />
+										<label for="fromCal"><button class="btnImg" id="btnFromCal"><img src="../../static/img/common/ico_calendar.png" alt="달력" /></button></label>
+										
+										<!-- 싱글 달력 -->
+										<div class="calendarBox single" style="display:none"> <!-- [D] 토글 show, hidden 필요 -->
+											<div class="calendarInner">
+												<div class="header">
+													<div class="year">
+														<input type="text" value="2013" readonly="readonly" />
+														<button class="btnUp" onclick="alert('up')">업</button>
+														<button class="btnDown" onclick="alert('down')">다운</button>
+													</div>
+													<div class="month">
+														<input type="text" value="06" readonly="" />
+														<button class="btnUp" onclick="alert('up')">업</button>
+														<button class="btnDown" onclick="alert('down')">다운</button>
+													</div>
+												</div>
+												<div class="calendar">
+													<table>
+														<caption>스케쥴 달력</caption>
+														<colgroup>
+															<col style="width:45px;" />
+															<col style="width:45px;" />
+															<col style="width:45px;" />
+															<col style="width:45px;" />
+															<col style="width:45px;" />
+															<col style="width:45px;" />
+															<col style="width:45px;" />
+														</colgroup>
+														<thead>
+															<tr>
+																<th scope="col">일</th>
+																<th scope="col">월</th>
+																<th scope="col">화</th>
+																<th scope="col">수</th>
+																<th scope="col">목</th>
+																<th scope="col">금</th>
+																<th scope="col">토</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>
+																	<div></div>
+																</td>
+																<td>
+																	<div></div>
+																</td>
+																<td>
+																	<div>1</div>
+																</td>
+																<td>
+																	<div>2</div>
+																</td>
+																<td>
+																	<div>3</div>
+																</td>
+																<td>
+																	<div>4</div>
+																</td>
+																<td>
+																	<div>6</div>
+																</td>
+															</tr>
+															<tr>
+																<td>
+																	<div>7</div>
+																</td>
+																<td>
+																	<div>8</div>
+																</td>
+																<td>
+																	<div>9</div>
+																</td>
+																<td>
+																	<div>10</div>
+																</td>
+																<td>
+																	<div>11</div>
+																</td>
+																<td class="today">
+																	<div>12</div>
+																</td>
+																<td>
+																	<div>13</div>
+																</td>
+															</tr>
+															<tr>
+																<td>
+																	<div>14</div>
+																</td>
+																<td>
+																	<div>15</div>
+																</td>
+																<td class="active">
+																	<div>16</div>
+																</td>
+																<td>
+																	<div>17</div>
+																</td>
+																<td>
+																	<div>18</div>
+																</td>
+																<td>
+																	<div>19</div>
+																</td>
+																<td>
+																	<div>20</div>
+																</td>
+															</tr>
+															<tr>
+																<td>
+																	<div>21</div>
+																</td>
+																<td>
+																	<div>22</div>
+																</td>
+																<td>
+																	<div>23</div>
+																</td>
+																<td>
+																	<div>24</div>
+																</td>
+																<td>
+																	<div>25</div>
+																</td>
+																<td>
+																	<div>26</div>
+																</td>
+																<td>
+																	<div>27</div>
+																</td>
+															</tr>
+															<tr>
+																<td>
+																	<div>28</div>
+																</td>
+																<td>
+																	<div>29</div>
+																</td>
+																<td>
+																	<div>30</div>
+																</td>
+																<td>
+																	<div>31</div>
+																</td>
+																<td>
+																	<div></div>
+																</td>
+																<td>
+																	<div></div>
+																</td>
+																<td>
+																	<div></div>
+																</td>
+															</tr>
+															<tr>
+																<td>
+																	<div></div>
+																</td>
+																<td>
+																	<div></div>
+																</td>
+																<td>
+																	<div></div>
+																</td>
+																<td>
+																	<div></div>
+																</td>
+																<td>
+																	<div></div>
+																</td>
+																<td>
+																	<div></div>
+																</td>
+																<td>
+																	<div></div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									
+									<button class="btnRound"><span>최근 1주일</span></button>
+									<a href="#" class="btnRound"><span>최근 1개월</span></a>
+									<span class="btnRound"><span>최근 3개월</span></span>
+								</div>	
+							</div>
+							
+
+							<div class="postItem">
+								<div class="table-cell table-th">
+									<div><label for="searchFilter">검색</label></div>
+								</div>
+								<div class="table-cell table-td">
+									<select class="select" title="검색필터">
+										<option>전체</option>
+										<option>조건A</option>
+										<option>조건B</option>
+									</select>
+									<input type="text" class="inputBox" value="" title="검색어" id="searchFilter" />		
+								</div>	
+							</div>
+
+						</fieldset>
+					</div>
+					<div class="searchHandle">
+						<input type="image" class="btnImg" src="../../static/img/common/btn_search.png" alt="검색" />
+						<button class="btnImg"><img src="../../static/img/common/btn_reset_search.png" alt="검색초기화" /></button>
+					</div>
+				</form>
+				<!-- / example filter -->
+			</header> <!-- /search-filter -->
+
+			
+			<div class="listWrapper">
+				<div class="cont-info">
+					<div class="total">총 <em>10</em>건</div>
+					<div class="list-count">
+						리스트 보기 
+						<a href="#" class="on">10</a>
+						<a href="#">20</a>
+						<a href="#">30</a>
+						<a href="#">50</a>
+					</div>
+				</div>
+				
+				<div class="cont">
+					
+
+
+					<div class="bbsAction">
+						<span class="input-helper">선택한 항목을 </span>
+						<select class="select withBtn">
+							<option>노출</option>
+							<option>숨김</option>
+							<option>삭제</option>
+						</select>
+						<button class="btnSquare"><span>적용</span></button>
+					</div>
+
+					<table class="bbsList type01">
+						<caption>BBS List</caption>
+						<colgroup> <!-- 해당 컬럼의 가로 크기는 인라인 스타일을 통해  유동적으로 제어 -->
+							<col style="width:51px" />
+							<col style="width:44px" />
+							<col />
+							<col />
+							<col />
+							<col />
+							<col />
+							<col />
+							<col />
+							<col style="width:45px;" />
+						</colgroup>
+						<thead>
+							<tr> 
+								<th>
+									<label class="checkbox"><input type="checkbox" name="world" /></label>
+								</th>
+								<th>번호</th>
+								<th>아이디</th>
+								<th>이름(직급)</th>
+								<th>부서명</th>
+								<th>휴대폰 번호</th>
+								<th>이메일</th>
+								<th><a href="#">생성일</a></th> <!-- thead > th > a 앵커 => order by -->
+								<th>상태</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr> 
+								<td class="checkTD">
+									<label class="checkbox"><input type="checkbox" name="" /></label>
+								</td>
+								<th scope="row">62</th>
+								<td><a href="#">administrator23</a></td>
+								<td>홍길동(대리)</td>
+								<td>손해사정사업부</td>
+								<td>010-1234-5678</td>
+								<td><em>hongildong</em>@samsunglife.com</td>
+								<td>2012-11-06 09:25</td>
+								<td><span class="status-active">활성</span></td>
+							</tr>
+							<tr> 
+								<td class="checkTD">
+									<label class="checkbox"><input type="checkbox" name="" /></label>
+								</td>
+								<th scope="row">61</th>
+								<td><a href="#">administrator23</a></td>
+								<td>홍길동(대리)</td>
+								<td>손해사정사업부</td>
+								<td>010-1234-5678</td>
+								<td><em>hongildong</em>@samsunglife.com</td>
+								<td>2012-11-06 09:21</td>
+								<td><span class="status-disable">비활성</span></td>
+							</tr>
+							<tr> 
+								<td class="checkTD">
+									<label class="checkbox"><input type="checkbox" name="" /></label>
+								</td>
+								<th scope="row">62</th>
+								<td><a href="#">administrator23</a></td>
+								<td>홍길동(대리)</td>
+								<td>손해사정사업부</td>
+								<td>010-1234-5678</td>
+								<td><em>hongildong</em>@samsunglife.com</td>
+								<td>2012-11-06 09:25</td>
+								<td><span class="status-active">활성</span></td>
+							</tr>
+							<tr> 
+								<td class="checkTD">
+									<label class="checkbox"><input type="checkbox" name="" /></label>
+								</td>
+								<th scope="row">61</th>
+								<td><a href="#">administrator23</a></td>
+								<td>홍길동(대리)</td>
+								<td>손해사정사업부</td>
+								<td>010-1234-5678</td>
+								<td><em>hongildong</em>@samsunglife.com</td>
+								<td>2012-11-06 09:21</td>
+								<td><span class="status-disable">비활성</span></td>
+							</tr>
+							<tr> 
+								<td class="checkTD">
+									<label class="checkbox"><input type="checkbox" name="" /></label>
+								</td>
+								<th scope="row">62</th>
+								<td><a href="#">administrator23</a></td>
+								<td>홍길동(대리)</td>
+								<td>손해사정사업부</td>
+								<td>010-1234-5678</td>
+								<td><em>hongildong</em>@samsunglife.com</td>
+								<td>2012-11-06 09:25</td>
+								<td><span class="status-active">활성</span></td>
+							</tr>
+							<tr> 
+								<td class="checkTD">
+									<label class="checkbox"><input type="checkbox" name="" /></label>
+								</td>
+								<th scope="row">61</th>
+								<td><a href="#">administrator23</a></td>
+								<td>홍길동(대리)</td>
+								<td>손해사정사업부</td>
+								<td>010-1234-5678</td>
+								<td><em>hongildong</em>@samsunglife.com</td>
+								<td>2012-11-06 09:21</td>
+								<td><span class="status-disable">비활성</span></td>
+							</tr>
+							<tr> 
+								<td class="checkTD">
+									<label class="checkbox"><input type="checkbox" name="" /></label>
+								</td>
+								<th scope="row">62</th>
+								<td><a href="#">administrator23</a></td>
+								<td>홍길동(대리)</td>
+								<td>손해사정사업부</td>
+								<td>010-1234-5678</td>
+								<td><em>hongildong</em>@samsunglife.com</td>
+								<td>2012-11-06 09:25</td>
+								<td><span class="status-active">활성</span></td>
+							</tr>
+							<tr> 
+								<td class="checkTD">
+									<label class="checkbox"><input type="checkbox" name="" /></label>
+								</td>
+								<th scope="row">61</th>
+								<td><a href="#">administrator23</a></td>
+								<td>홍길동(대리)</td>
+								<td>손해사정사업부</td>
+								<td>010-1234-5678</td>
+								<td><em>hongildong</em>@samsunglife.com</td>
+								<td>2012-11-06 09:21</td>
+								<td><span class="status-disable">비활성</span></td>
+							</tr>
+						</tbody>
+					</table>
+					
+					
+					<!-- list handle -->
+					<div class="bbsListHandle">
+						<span class="btnImg pull-left"><img src="../../static/img/common/btn_download.png" alt="파일 다운로드"></span>
+						<a href="#" class="btnImg pull-right"><img src="../../static/img/common/btn_post.png" alt="등록"></a>
+
+						<div class="pagination">
+							<nav class="pageNav">
+								<a href="" class="util first">«</a>
+								<a href="" class="util prev">&lt;</a>
+								<a href="">1</a>
+								<span class="current">2</span>
+								<a href="">3</a>
+								<a href="">4</a>
+								<a href="">5</a>
+								<a href="">6</a>
+								<a href="">7</a>
+								<a href="">8</a>
+								<a href="">9</a>
+								<a href="">10</a>
+								<a href="" class="util next">&gt;</a>
+								<a href="" class="util last">»</a>
+							</nav>
+						</div> <!-- /pagination -->
+					</div>
+					<!-- /list handle -->
+
+
+
+				</div>				
+			</div> <!-- /listWrapper -->
+				
+		</div>
+	</section>
+	<!-- / Content -->
+
+
+	
+</div>
+
+<footer id="footer">
+	<div>
+		<p>Copyright © 2013 Samsung Anycar Service. All rights reserved.</p>
+	</div>
+</footer>
+
+
+<script src="../../static/js/plugins.js"></script>
+<script src="../../static/js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>test</title>
+		<meta name="viewport" content="user-scalable=yes, initial-scale = 1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<style type="text/css">
+			*{margin:0;padding:0}
+			.wrap{width:100%;height:505px;background:gray; }
+
+			.popBg {position:fixed;left:0; top:0; z-index:30; width:100%; height:100%; background:#000; opacity:0.6; filter: alpha(opacity=60); }
+			.layerPop { position:fixed; left:50%; top:50%; margin-left:-146px; margin-top:-121px; z-index:40; background:#fff;}
+			.layerPop .txt { overflow:hidden; width:292px; height:221px; background-size:292px auto; }
+			.layerPop .txt h1 { margin:12px 0 20px 0; font-size:18px; text-align:center; }
+			.layerPop .txt h1 span { color:#ffaa24; }
+			.layerPop .txt p { padding:0 10px; font-size:11px; line-height:18px; }
+			.layerPop .popFoot { position:relative; padding:3px 0;border-radius:0 0 7px 7px; }
+			.layerPop .popFoot span { margin-left:10px; font-size:11px;}
+			.layerPop .popFoot a { position:absolute; right:10px; top:3px; }
+		</style>
+		<script type="text/javascript">
+		$(document).ready(function(){			
+			setOrientation();
+			if ("onorientationchange" in window) {   
+				window.onorientationchange = setOrientation;   
+			} else {   
+				window.onresize = setOrientation;   
+			}
+
+			
+		});
+		
+		function setOrientation() {
+			var orient = Math.abs(window.orientation) === 90 ? 'landscape' : 'portrait';
+			var cl = document.body.className;
+			cl = cl.replace(/portrait|landscape/, orient);
+			document.body.className = cl;
+			//alert(cl)
+			$('.wrap>p').text(cl); 
+		}
+
+
+		</script>
+
+	</head>
+
+	<body class="portrait">
+		<div class="wrap">
+			<p></p>
+		</div>
+	</body>
+</html>

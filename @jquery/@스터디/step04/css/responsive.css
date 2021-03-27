@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+#wrap {width:1024px; margin:auto; border:1px solid #ccc;}
+.left { width:50%; height:300px; float:left; background:#CCC; color:#fff;}
+.right {width:50%; height:300px; float:left; background:#666; color:#fff;}
+
+.table_ct {border-top: 2px solid #585858; text-align:center;}
+.table_ct th {color: #636363; background:#F3F2F2; border-bottom: 1px solid #E1E1E1; padding:3px; text-align:center;}
+.table_ct th + th { border-left: 1px solid #E1E1E1;}
+.table_ct td {border-bottom: 1px solid #E1E1E1;padding:3px; text-align:center;}
+.table_ct td + td {border-left: 1px solid #E1E1E1;}
+.table_ct .width { width:20%;}
+
+#wrap.res768 { width:768px;}
+#wrap.res320 { width:320px;}

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+	.test { padding:20px;margin:20px; background:silver;}
+	.test li:hover { background:pink; cursor:pointer;}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('button').eq(0).click(function(){
+			$('.test').append('<li>클릭임돠</li>')
+		});
+		
+		$('.test').dblclick(function(){
+			$(this).append('<li>더블클릭임돠</li>')
+		});
+		
+		$('button').eq(1).mousedown(function(){
+			$('.test').append('<li>mousedown임돠</li>')
+		});
+		
+		$('button').eq(2).mouseup(function(){
+			$('.test').append('<li>mouseup임돠</li>')
+		});
+	});
+</script>
+</head>
+<body>
+	<button>event(click)</button>
+    <button>event(mousedown)</button>
+    <button>event(mouseup)</button>
+    <ul class="test">
+    	<li>기존에 있는 li</li>
+        <li>기존에 있는 li</li>
+        <li>기존에 있는 li</li>
+    </ul>
+</body>
+</html>

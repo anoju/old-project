@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+	ul, li { list-style: none; margin:0px; padding:0px; border:0px; }
+	.menu { width:900px; border:1px solid #cdcdcd; overflow:hidden; padding:5px;}
+	.menu li { float: left; border:1px solid #ccc;}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">	
+	$(function(){
+		var menu_width = $('.menu').width();
+		var sum = 0,
+		li_length = $('.menu>li').length;
+		$.each($('.menu>li'),function(){
+			sum += $(this).outerWidth();	//outerWidth : 마진 패딩 보더값을 포함한 모든 넓이값
+		});
+		//alert(sum);
+		sum = parseInt((menu_width - sum)/li_length);
+		$('.menu>li').css({'margin-left':sum/2, 'margin-right':sum/2})
+	});
+</script>
+</head>
+<body>
+    <ul class="menu">
+    	<li>메뉴의 </li>
+    	<li>사이즈별로</li>
+    	<li>자동계산하여</li>
+    	<li>마진값을 적용하여</li>
+    	<li>위치들이 보인다.</li>
+    </ul>
+</body>
+</html>

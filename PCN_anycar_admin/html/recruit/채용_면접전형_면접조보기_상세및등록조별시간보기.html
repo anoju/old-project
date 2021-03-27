@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" itemscope="itemscope" itemtype="http://schema.org/WebPage" lang="ko"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>스타일가이드 | 애니카서비스</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="../../static/css/component.css" media="handheld, all">
+	<link rel="stylesheet" href="../../static/css/recruit.css" media="all">
+
+	<!-- Le supporter -->
+	<script src="../../static/js/lib/modernizr-2.6.2.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+	<script>window.jQuery || document.write('<script src="../../static/js/lib/jquery-1.8.2.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script src="../../static/js/lib/jquery-ui-1.9.0.min.js"><\/script>')</script>
+</head>
+
+<body>
+<div id="wrap">
+	<header id="header">
+		<div>
+			<div class="brand">
+				<h1><a href="#">애니카 서비스</a></h1>
+			</div>		
+
+			<div class="user-info">
+				<strong>Superadmin</strong> <span>님의 최종 접속일 </span>
+				<span class="time">2013.06.12 01:43</span>
+				<a href="#" class="btn-logout"><img src="../../static/img/common/header/btn_logout.png" alt="LogOut" /></a>
+			</div>
+			<nav id="gnb">
+				<ul>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb01.png" alt="공고/현황" /></a>
+						<div class="subGnb01">
+							<ul>
+								<li><a href="#">채용공고</a></li>
+								<li><a href="#">공고별현황</a></li>
+								<li><a href="#">지원자현황</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb02.png" alt="서류진행" /></a>
+						<div class="subGnb02">
+							<ul>
+								<li><a href="#">결과설정/알림</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb03.png" alt="SSAT" /></a>
+						<div class="subGnb03">
+							<ul>
+								<li><a href="#">결과입력/알림</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="on"> <!-- [D] on class로 활성화 표시제어-->
+						<a href="#"><img src="../../static/img/common/recruit/gnb04.png" alt="면접전형" /></a>
+						<div class="subGnb04">
+							<ul>
+								<li class="on"><a href="#">면접조설정/알림</a></li>
+								<li><a href="#">결과설정/알림</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb05.png" alt="검진/교육" /></a>
+						<div class="subGnb05">
+							<ul>
+								<li><a href="#">채용 FAQ</a></li>
+								<li><a href="#">채용 Q&amp;A</a></li>
+								<li><a href="#">카테고리관리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb06.png" alt="지원안내" /></a>
+						<div class="subGnb06">
+							<ul>
+								<li><a href="#">면접평가</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb07.png" alt="운영자관리" /></a>
+						<div class="subGnb07">
+							<ul>
+								<li><a href="#">내정보</a></li>
+								<li><a href="#">계정/권한설정</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+			<script type="text/javascript">
+				/*GNB 관련 스크립트*/
+				$(function() {
+					
+					var idx = $('#gnb>ul>li').index($('.on'));
+					
+					$('#gnb>ul>li').hover(function () {
+						$(this).addClass('over').siblings().removeClass('over');					
+						$("#gnb>ul>li").removeClass('on');
+					});
+
+					$('#gnb').mouseleave(function () {
+						$("#gnb>ul>li").removeClass('over');
+						$("#gnb>ul>li").eq(idx).addClass('on');
+					});
+				});
+			</script>
+		</div>
+	</header>
+
+	<!-- Content -->
+	<section id="contentWrap">
+		<p id="location">
+			<span class="home">Home</span> <span class="depth">&gt;</span>
+			<span>면접전형</span> <span class="depth">&gt;</span>
+			<span class="current">면접조설정/알림</span>
+		</p>
+
+		<h1 class="noshadow"> <!-- [D] noshadow class -->
+			<img src="../../static/img/common/recruit/title/title06.gif" alt="면접조설정/알림" />
+		</h1>
+		<div class="content">			
+			<div class="bbsPost">
+				<div class="postItem">
+					<div class="table-cell table-th">
+						<div>등록일</div>
+					</div>
+					<div class="table-cell table-td">
+						<span class="table-tit">애니카서비스 총무사원 채용공고<span class="iconGray">서류발표</span></span>
+					</div>	
+				</div>
+				
+				<div class="postItem ">
+					<div class="table-cell table-th">
+						<div>직군</div>
+					</div>
+					<div class="table-cell table-td">
+						아르바이트
+					</div>
+				</div>
+
+				<div class="postItem ">
+					<div class="table-cell table-th">
+						<div>조편성<br />(인원,면접관)</div>
+					</div>
+					<div class="table-cell table-td">
+						
+						<table class="table01">
+							<colgroup>
+								<col style="width:165px"/>
+								<col />
+								<col style="width:165px"/>
+								<col />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>1조</th>
+									<td><span class="bold">2013.06.16</span> 20:30</td>
+									<th>2조</th>
+									<td><span class="bold">2013.06.16</span> 20:30</td>
+								</tr>
+								<tr>
+									<th>3조</th>
+									<td><span class="bold">2013.06.16</span> 20:30</td>
+									<th>4조</th>
+									<td><span class="bold">2013.06.16</span> 20:30</td>
+								</tr>
+								<tr>
+									<th>5조</th>
+									<td><span class="bold">2013.06.16</span> 20:30</td>
+									<th>6조</th>
+									<td><span class="bold">2013.06.16</span> 20:30</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="btnArea">
+							<a href="#" class="btnRound pull-right"><span>상세보기</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="bbsPostHandle">
+					<button class="btnImg pull-left"><img src="../../static/img/common/btn_delete.png" alt="삭제"></button>
+					
+					<input type="image" class="btnImg" src="../../static/img/common/btn_save.png" alt="저장" />
+					<button class="btnImg"><img src="../../static/img/common/btn_cancle.png" alt="취소"></button>
+
+					<a href="#list" class="btnImg pull-right"><img src="../../static/img/common/btn_list.png" alt="목록" /></a>
+				</div>
+		</div>
+	</section>
+	<!-- / Content -->
+
+	<footer id="footer">
+		<div>
+			<p>Copyright © 2013 Samsung Anycar Service. All rights reserved.</p>
+		</div>
+	</footer>
+	
+</div>
+
+
+
+
+<script src="../../static/js/plugins.js"></script>
+<script src="../../static/js/main.js"></script>
+</body>
+</html>
+

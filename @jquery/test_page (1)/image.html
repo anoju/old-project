@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+	.aa li{color:gray;width: 300px;margin-bottom: 10px;}
+	li b{color:blue;}
+	li a{float:right;}
+	.tabMenu{float:left;margin-bottom:20px;}
+	.tabMenu li{float:left; margin-right:10px;list-style:none;}
+	p{clear:both;}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.aa a[class*=btn_]').hover(function(){
+			$(this).parent().not('.lock').find('img').attr('src',$(this).children().attr('src').replace('_off','_on'));
+		},function(){
+			$(this).parent().not('.lock').find('img').attr('src',$(this).children().attr('src').replace('_on','_off'));
+		});
+	});
+	//==================================================================
+	
+	
+	$(function(){
+		$('.tabMenu a[class*=btn_]').hover(function(){
+			$(this).parent().not('.lock').find('img').attr('src',$(this).children().attr('src').replace('_off','_on'));
+		},function(){
+			$(this).parent().not('.lock').find('img').attr('src',$(this).children().attr('src').replace('_on','_off'));
+		});
+
+		var memory = $('.tabMenu>ul>li:eq(0)>a');
+		if($('body').find('.tabMenu')){
+			memory.children().attr('src',memory.children().attr('src').replace('_off','_on'));
+		}
+		$('.tabMenu a[class*=btn_]').click(function(){
+			if(memory != ''){
+				memory.parent().removeClass('lock').find('img').attr('src',memory.children().attr('src').replace('_on','_off'));
+			}
+			memory = $(this)
+			memory.parent().addClass('lock').find('img').attr('src',memory.children().attr('src').replace('_off','_on'));
+			return false;
+		});
+	});
+//======================================================================
+	
+	$(function(){
+		
+		$('.tabMenu2 a[class*=btn_]').hover(function(){
+			$(this).not('.lock').find('img').attr('src',$(this).children().attr('src').replace('_off','_on'));
+		},function(){
+			$(this).not('.lock').find('img').attr('src',$(this).children().attr('src').replace('_on','_off'));
+		});
+		
+		
+		var memory = $('.tabMenu2 a:eq(0)');
+		
+		if($('body').find('.tabMenu2')){
+			memory.addClass('lock').children().attr('src',memory.children().attr('src').replace('_off','_on'));
+		}	
+		//alert('aa');
+		
+		$('.tabMenu2 a[class*=btn_]').click(function(){
+			if(memory != ''){
+				memory.removeClass('lock').children().attr('src',memory.children().attr('src').replace('_on','_off'));
+			}
+			memory = $(this)
+			memory.addClass('lock').children().attr('src',memory.children().attr('src').replace('_off','_on'));
+			return false;
+		});
+		
+	});
+	
+		
+	
+</script>
+</head>
+<body>
+	<h2>마우스 오버 시</h2>
+	<ul class="aa">
+		<li><b>바꿔야되는 이미지</b><a href="#" class="btn_1month"><img src="images/btn_date1month_off.png" alt="이미지" /></a></li>
+		<li>안바꿔야되는 이미지<a href="#" class="3month"><img src="images/btn_date3month.png" alt="이미지" /></a></li>
+		<li><b>바꿔야되는 이미지</b><a href="#" class="btn_3month"><img src="images/btn_date3month_off.png" alt="이미지" /></a></li>
+
+		<li>안바꿔야되는 이미지<a href="#" class="6month"><img src="images/btn_date6month_off.png" alt="이미지" /></a></li>
+		<li><b>바꿔야되는 이미지</b><a href="#" class="btn_6month"><img src="images/btn_date6month_off.png" alt="이미지" /></a></li>
+		<li>안바꿔야되는 이미지<a href="#" class="btn_1year"><img src="images/btn_date1year.png" alt="이미지" /></a></li>
+		<li><b>바꿔야되는 이미지</b><a href="#" class="btn_1year"><img src="images/btn_date1year_off.png" alt="이미지" /></a></li>
+	</ul>
+
+	<h2>탭역할의 버튼</h2>
+	<div class="tabMenu">
+		<ul>
+			<li><a href="#" class="btn_1month"><img src="images/btn_date1month_off.png" alt="이미지" /></a></li>
+			<li><a href="#" class="btn_3month"><img src="images/btn_date3month_off.png" alt="이미지" /></a></li>
+			<li><a href="#" class="btn_6month"><img src="images/btn_date6month_off.png" alt="이미지" /></a></li>
+			<li><a href="#" class="btn_1year"><img src="images/btn_date1year_off.png" alt="이미지" /></a></li>
+		</ul>
+	</div>
+	<p>마우스 오버 역할은 동일하나 클릭했을때 _on으로 바꿔주고 형제 요소들은 _off로 바꿔준다.</p>
+	<div class="tabMenu2">
+		<a href="#" class="btn_1month"><img src="images/btn_date1month_off.png" alt="이미지" /></a>
+		<a href="#" class="btn_3month"><img src="images/btn_date3month_off.png" alt="이미지" /></a>
+		<a href="#" class="btn_6month"><img src="images/btn_date6month_off.png" alt="이미지" /></a>
+		<a href="#" class="btn_1year"><img src="images/btn_date1year_off.png" alt="이미지" /></a>
+	</div>
+</body>
+</html>

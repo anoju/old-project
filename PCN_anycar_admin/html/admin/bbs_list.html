@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" itemscope="itemscope" itemtype="http://schema.org/WebPage" lang="ko"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>스타일가이드</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="../../static/css/component.css" media="handheld, all">
+
+	<style type="text/css">
+	.frame {margin:2em}
+	dl {margin-bottom:1em; padding:1em; background:#fafafa;}
+	dl dt {margin-bottom:.5em}
+	dl dd {margin-bottom:2em}
+	</style>
+	
+	<!-- Le supporter -->
+	<script src="../../static/js/lib/modernizr-2.6.2.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+	<script>window.jQuery || document.write('<script src="../../static/js/lib/jquery-1.8.2.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script src="../../static/js/lib/jquery-ui-1.9.0.min.js"><\/script>')</script>
+</head>
+
+<body>
+<div class="frame">
+
+
+	<h3>테이블</h3>
+	<dl>
+		<dt>게시판 리스트</dt>
+		<dd>
+			
+			<div class="bbsAction">
+				<span class="input-helper">선택한 항목을 </span>
+				<select class="select withBtn">
+					<option>노출</option>
+					<option>숨김</option>
+					<option>삭제</option>
+				</select>
+				<button class="btnSquare"><span>적용</span></button>
+			</div>
+
+			<table class="bbsList type01">
+				<caption>BBS List</caption>
+				<colgroup> <!-- 해당 컬럼의 가로 크기는 인라인 스타일을 통해  유동적으로 제어 -->
+					<col style="width:51px" />
+					<col style="width:44px" />
+					<col />
+					<col />
+					<col />
+					<col />
+					<col />
+					<col />
+					<col />
+					<col style="width:45px;" />
+				</colgroup>
+				<thead>
+					<tr> 
+						<th>
+							<label class="checkbox"><input type="checkbox" name="world" /></label>
+						</th>
+						<th>번호</th>
+						<th>아이디</th>
+						<th>이름(직급)</th>
+						<th>부서명</th>
+						<th>휴대폰 번호</th>
+						<th>이메일</th>
+						<th><a href="#">생성일</a></th> <!-- thead > th > a 앵커 => order by -->
+						<th><a class="up" href="#">상태</a></th>  <!-- up 클래스로 bg: ico_arr_up 변경 -->
+					</tr>
+				</thead>
+				<tbody>
+					<tr> 
+						<td class="checkTD">
+							<label class="checkbox"><input type="checkbox" name="" /></label>
+						</td>
+						<th scope="row">62</th>
+						<td><a href="#">administrator23</a></td>
+						<td>홍길동(대리)</td>
+						<td>손해사정사업부</td>
+						<td>010-1234-5678</td>
+						<td><em>hongildong</em>@samsunglife.com</td>
+						<td>2012-11-06 09:25</td>
+						<td><span class="status-active">활성</span></td>
+					</tr>
+					<tr> 
+						<td class="checkTD">
+							<label class="checkbox"><input type="checkbox" name="" /></label>
+						</td>
+						<th scope="row">61</th>
+						<td><a href="#">administrator23</a></td>
+						<td>홍길동(대리)</td>
+						<td>손해사정사업부</td>
+						<td>010-1234-5678</td>
+						<td><em>hongildong</em>@samsunglife.com</td>
+						<td>2012-11-06 09:21</td>
+						<td><span class="status-disable">비활성</span></td>
+					</tr>
+				</tbody>
+			</table>
+			<p style="color:red">테이블에 th의 a태그에 up 클래스로 bg: ico_arr_up 변경(예:상태) <br />마우스 hover 시 테이블 배경 컬러 변경 임시스크립트가 있습니다.</p>
+			<script type="text/javascript">
+				//임시 스크립트
+				$(function() {
+					$('.bbsList tbody tr').hover(function() { 
+						$(this).addClass('on'); 
+					},function() { 
+						$(this).removeClass('on'); 
+					});
+				});
+			</script>
+			
+			<!-- list handle -->
+			<div class="bbsListHandle">
+				<span class="btnImg pull-left"><img src="../../static/img/common/btn_download.png" alt="파일 다운로드"></span>
+				<a href="#" class="btnImg pull-right"><img src="../../static/img/common/btn_post.png" alt="등록"></a>
+
+				<div class="pagination">
+					<nav class="pageNav">
+						<a href="" class="util first">«</a>
+						<a href="" class="util prev">&lt;</a>
+						<a href="">1</a>
+						<span class="current">2</span>
+						<a href="">3</a>
+						<a href="">4</a>
+						<a href="">5</a>
+						<a href="">6</a>
+						<a href="">7</a>
+						<a href="">8</a>
+						<a href="">9</a>
+						<a href="">10</a>
+						<a href="" class="util next">&gt;</a>
+						<a href="" class="util last">»</a>
+					</nav>
+				</div> <!-- /pagination -->
+			</div>
+			<!-- /list handle -->
+
+		</dd>
+	</dl>
+	
+
+
+
+	<dl>
+		<dt>게시판 리스트 02</dt>
+		<dd>
+
+			<div class="bbsAction">
+				<span class="input-helper">선택한 항목을 </span>
+				<select class="select withBtn">
+					<option>노출</option>
+					<option>숨김</option>
+					<option>삭제</option>
+				</select>
+				<button class="btnSquare"><span>적용</span></button>
+			</div>
+
+			<table class="bbsList type02">
+				<caption>BBS List</caption>
+				<colgroup> <!-- 해당 컬럼의 가로 크기는 인라인 스타일을 통해  유동적으로 제어 -->
+					<col style="width:51px" />
+					<col style="width:44px" />
+					<col style="width:60px" />
+					<col style="width:150px" />
+					<col />
+					<col />
+					<col />
+					<col />
+					<col />
+					<col style="width:45px;" />
+				</colgroup>
+				<thead>
+					<tr> 
+						<th>
+							<label class="checkbox"><input type="checkbox" name="world" /></label>
+						</th>
+						<th>번호</th>
+						<th>년도</th>
+						<th>이미지</th>
+						<th class="subject">제목</th>
+						<th>리스트 노출</th>
+						<th><a href="#">리스트<br />노출순서</a></th>
+						<th>등록일</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr> 
+						<td class="checkTD">
+							<label class="checkbox"><input type="checkbox" name="" /></label>
+						</td>
+						<th scope="row">62</th>
+						<td><span class="date">2013.06</span></td>
+						<td>
+							<div class="listThumb">
+								<img src="../../static/img/@thumb_s.jpg" alt="애니카 서비스 기본 썸네일">
+							</div>
+						</td>
+						<td class="subject">대구 콜센터 오픈</td>
+						<td><span class="status-active">활성</span></td>
+						<td>
+							<input type="text" class="inputBox orderNum" value="1" title="노출순서" />
+						</td>
+						<td>2012-11-06 09:25</td>
+					</tr>
+					<tr> 
+						<td class="checkTD">
+							<label class="checkbox"><input type="checkbox" name="" /></label>
+						</td>
+						<th scope="row">62</th>
+						<td><span class="date">2013.06</span></td>
+						<td>
+							<div class="listThumb">
+								<img src="../../static/img/@thumb_s.jpg" alt="애니카 서비스 기본 썸네일">
+							</div>
+						</td>
+						<td class="subject">대구 콜센터 오픈</td>
+						<td><span class="status-disable">비활성</span></td>
+						<td>
+							<input type="text" class="inputBox orderNum" value="2" title="노출순서" />
+						</td>
+						<td>2012-11-06 09:25</td>
+					</tr>
+					<tr> 
+						<td class="checkTD">
+							<label class="checkbox"><input type="checkbox" name="" /></label>
+						</td>
+						<th scope="row">62</th>
+						<td><span class="date">2013.06</span></td>
+						<td>
+							<div class="listThumb">
+								<img src="../../static/img/@thumb_s.jpg" alt="애니카 서비스 기본 썸네일">
+							</div>
+						</td>
+						<td class="subject">대구 콜센터 오픈</td>
+						<td><span class="status-disable">비활성</span></td>
+						<td>
+							<input type="text" class="inputBox orderNum" value="3" title="노출순서" />
+						</td>
+						<td>2012-11-06 09:25</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			
+			<!-- list handle -->
+			<div class="bbsListHandle">
+				<span class="btnImg pull-left"><img src="../../static/img/common/btn_download.png" alt="파일 다운로드"></span>
+				<a href="#" class="btnImg pull-right"><img src="../../static/img/common/btn_post.png" alt="등록"></a>
+
+				<div class="pagination">
+					<nav class="pageNav">
+						<a href="" class="util first">«</a>
+						<a href="" class="util prev">&lt;</a>
+						<a href="">1</a>
+						<span class="current">2</span>
+						<a href="">3</a>
+						<a href="">4</a>
+						<a href="">5</a>
+						<a href="">6</a>
+						<a href="">7</a>
+						<a href="">8</a>
+						<a href="">9</a>
+						<a href="">10</a>
+						<a href="" class="util next">&gt;</a>
+						<a href="" class="util last">»</a>
+					</nav>
+				</div> <!-- /pagination -->
+			</div>
+			<!-- /list handle -->
+
+		</dd>
+	</dl>
+
+	<dl>
+		<dt>단순 게시판 리스트 01</dt>
+		<dd>
+			<table class="table01">
+				<colgroup>
+					<col style="width:165px"/>
+					<col />
+					<col style="width:165px"/>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>1조</th>
+						<td><span class="bold">2013.06.16</span> 20:30</td>
+						<th>2조</th>
+						<td><span class="bold">2013.06.16</span> 20:30</td>
+					</tr>
+					<tr>
+						<th>3조</th>
+						<td><span class="bold">2013.06.16</span> 20:30</td>
+						<th>4조</th>
+						<td><span class="bold">2013.06.16</span> 20:30</td>
+					</tr>
+					<tr>
+						<th>5조</th>
+						<td><span class="bold">2013.06.16</span> 20:30</td>
+						<th>6조</th>
+						<td><span class="bold">2013.06.16</span> 20:30</td>
+					</tr>
+				</tbody>
+			</table>
+		</dd>
+	</dl>
+
+	<dl>
+		<dt>추가 게시판 리스트</dt>
+		<dd>
+			<table class="table02">
+				<colgroup> 
+					<col style="width:120x" />
+					<col />
+					<col style="width:250px" />
+					<col style="width:120px"/>
+					<col style="width:100px" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th>조 이름</th>
+						<th>일정</th>
+						<th>인원 및 멵접관 설정</th>
+						<th>SMS</th>
+						<th>조삭제</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>1조</th>
+						<td class="text-left">
+							<div class="schedule">
+								<input type="text" class="inputBox inputSchedule" name="from" id="cal01" value="2013-06-16" readonly="readonly" title="시작일">
+								<label for="cal01"><button class="btnImg"><img src="../../static/img/common/ico_calendar.png" alt="달력"></button></label>
+							</div>
+							<select class="select">
+								<option>노출</option>
+								<option>숨김</option>
+								<option>삭제</option>
+							</select>
+							<select class="select">
+								<option>노출</option>
+								<option>숨김</option>
+								<option>삭제</option>
+							</select>
+						</td>
+						<td><button class="btnRound"><span>인원설정</span></button> <button class="btnRound"><span>면접관 설정</span></button></td>
+						<td><button class="btnRound btnRoundBlack"><span>SMS 보내기</span></button></td>
+						<td><button class="btnRound btnRoundRed">조 삭제</button></td>
+					</tr>
+					<tr>
+						<th>2조</th>
+						<td class="text-left">
+							<div class="schedule">
+								<input type="text" class="inputBox inputSchedule" name="from" id="cal02" value="2013-06-16" readonly="readonly" title="시작일">
+								<label for="cal02"><button class="btnImg"><img src="../../static/img/common/ico_calendar.png" alt="달력"></button></label>
+							</div>
+							<select class="select">
+								<option>노출</option>
+								<option>숨김</option>
+								<option>삭제</option>
+							</select>
+							<select class="select">
+								<option>노출</option>
+								<option>숨김</option>
+								<option>삭제</option>
+							</select>
+						</td>
+						<td><button class="btnRound"><span>인원설정</span></button> <button class="btnRound"><span>면접관 설정</span></button></td>
+						<td><button class="btnRound btnRoundBlack"><span>SMS 보내기</span></button></td>
+						<td><button class="btnRound btnRoundRed">조 삭제</button></td>
+					</tr>
+					<tr>
+						<th>3조</th>
+						<td class="text-left">
+							<div class="schedule">
+								<input type="text" class="inputBox inputSchedule" name="from" id="cal03" value="2013-06-16" readonly="readonly" title="시작일">
+								<label for="cal03"><button class="btnImg"><img src="../../static/img/common/ico_calendar.png" alt="달력"></button></label>
+							</div>
+							<select class="select">
+								<option>노출</option>
+								<option>숨김</option>
+								<option>삭제</option>
+							</select>
+							<select class="select">
+								<option>노출</option>
+								<option>숨김</option>
+								<option>삭제</option>
+							</select>
+						</td>
+						<td><button class="btnRound"><span>인원설정</span></button> <button class="btnRound"><span>면접관 설정</span></button></td>
+						<td><button class="btnRound btnRoundBlack"><span>SMS 보내기</span></button></td>
+						<td><button class="btnRound btnRoundRed">조 삭제</button></td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td	colspan="5">
+							<button class="noBtn">+ 조 추가</button>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+		</dd>
+	</dl>
+
+</div> <!-- /frame -->
+
+<script src="../../static/js/plugins.js"></script>
+<script src="../../static/js/main.js"></script>
+</body>
+</html>
+

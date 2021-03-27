@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+	ul,li { margin:0px; padding:0px; list-style:none;}
+	.tab_menu { width:500px; height:200px; border:1px solid #666; position:relative;}
+	li { float:left; padding:10px;}
+	li:hover { background:silver;}
+	div.box { position:absolute; top:40px; left:0px; display:none;}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('div.box').eq(0).show();
+		$('.tab_menu>ul>li>a').click(function(){
+			$(this).next().fadeToggle();
+			$('div.box').not($(this).next()).fadeOut();
+			return false;
+		});
+	});
+</script>
+</head>
+<body>
+    <div class="tab_menu">
+    	<ul>
+        	<li><a href="#">웹접근성 품질마크란?</a>
+            	<div class="box">장애인 및 고령자가 웹 사이트 이용에 불편이 없도록 웹 접근성 표준지침을 준수한 우수 사이트에 대해 웹 접근성 수준을 인정하고 이를 상징하는 품질 마크를 부여하는 인증제도</div>
+            </li>
+            <li><a href="#">배경</a>
+            	<div class="box">웹 접근성을 향상하기 위한 국가적인 노력이 계속되고 있으나, 국내 대부분 사이트의 웹 접근성 수준은 매우 낮음<br />공공기관에서 조차도 웹 접근성이 선진국들에 비하여 낮아 공공기관이 제공하는 중요 정보도 접근이 어려운 실태</div>
+            </li>
+            <li><a href="#">인증대상</a>
+            	<div class="box">인터넷을 통해 정보통신서비스를 제공하는 웹 사이트를 운영하는 정부 및 공공기관, 민간 사업장('12년까지 의무화 준수 사업장)</div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

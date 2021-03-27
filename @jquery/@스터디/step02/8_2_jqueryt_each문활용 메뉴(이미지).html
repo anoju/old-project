@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+	ul, li { list-style: none; margin:0px; padding:0px; border:0px; }
+	h2 { display:none;}
+	#menu ul {background: url(images/globalnavbg.png) no-repeat; width:982px; height:38px;}
+	#menu ul li { float:left;}
+	#menu ul li a { display:inline-block; height:38px; overflow:hidden;}
+	#menu ul li.on a img { margin-top:-38px;}
+	#menu ul li.click a img { margin-top:-38px;}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">	
+	$(function(){
+		$('#menu>ul>li').hover(function(){
+			$(this).addClass('on');
+		},function(){
+			$(this).removeClass('on');
+		});
+		$('#menu>ul>li').click(function(){
+			$('.click').removeClass('click');
+			$(this).addClass('click');			
+		});
+	});
+</script>
+</head>
+<body>
+    <div id="menu">
+			<h2 class="hide">주요서비스</h2>
+			<ul>
+				<li><a href="#apple"><img src="images/menu1.gif" alt="apple" /></a></li>
+				<li><a href="#애플스토어"><img src="images/menu2.gif" alt="애플스토어" /></a></li>
+				<li><a href="#Mac"><img src="images/menu3.gif" alt="Mac" /></a></li>
+				<li><a href="#ipod"><img src="images/menu4.gif" alt="ipod" /></a></li>
+				<li><a href="#iphone"><img src="images/menu5.gif" alt="iphone" /></a></li>
+				<li><a href="#ipad"><img src="images/menu6.gif" alt="ipad" /></a></li>
+				<li><a href="#iTunes"><img src="images/menu7.gif" alt="iTunes" /></a></li>
+				<li><a href="#support"><img src="images/menu8.gif" alt="support" /></a></li>
+			</ul>
+		</div>
+</body>
+</html>

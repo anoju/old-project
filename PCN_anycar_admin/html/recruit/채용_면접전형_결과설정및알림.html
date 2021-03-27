@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" itemscope="itemscope" itemtype="http://schema.org/WebPage" lang="ko"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>스타일가이드 | 애니카서비스</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="../../static/css/component.css" media="handheld, all">
+	<link rel="stylesheet" href="../../static/css/recruit.css" media="all">
+
+	<!-- Le supporter -->
+	<script src="../../static/js/lib/modernizr-2.6.2.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+	<script>window.jQuery || document.write('<script src="../../static/js/lib/jquery-1.8.2.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script src="../../static/js/lib/jquery-ui-1.9.0.min.js"><\/script>')</script>
+</head>
+
+<body>
+<div id="wrap">
+	<header id="header">
+		<div>
+			<div class="brand">
+				<h1><a href="#">애니카 서비스</a></h1>
+			</div>		
+
+			<div class="user-info">
+				<strong>Superadmin</strong> <span>님의 최종 접속일 </span>
+				<span class="time">2013.06.12 01:43</span>
+				<a href="#" class="btn-logout"><img src="../../static/img/common/header/btn_logout.png" alt="LogOut" /></a>
+			</div>
+			<nav id="gnb">
+				<ul>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb01.png" alt="공고/현황" /></a>
+						<div class="subGnb01">
+							<ul>
+								<li><a href="#">채용공고</a></li>
+								<li><a href="#">공고별현황</a></li>
+								<li><a href="#">지원자현황</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb02.png" alt="서류진행" /></a>
+						<div class="subGnb02">
+							<ul>
+								<li><a href="#">결과설정/알림</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb03.png" alt="SSAT" /></a>
+						<div class="subGnb03">
+							<ul>
+								<li><a href="#">결과입력/알림</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="on"> <!-- [D] on class로 활성화 표시제어-->
+						<a href="#"><img src="../../static/img/common/recruit/gnb04.png" alt="면접전형" /></a>
+						<div class="subGnb04">
+							<ul>
+								<li><a href="#">면접조설정/알림</a></li>
+								<li class="on"><a href="#">결과설정/알림</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb05.png" alt="검진/교육" /></a>
+						<div class="subGnb05">
+							<ul>
+								<li><a href="#">채용 FAQ</a></li>
+								<li><a href="#">채용 Q&amp;A</a></li>
+								<li><a href="#">카테고리관리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb06.png" alt="지원안내" /></a>
+						<div class="subGnb06">
+							<ul>
+								<li><a href="#">면접평가</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="../../static/img/common/recruit/gnb07.png" alt="운영자관리" /></a>
+						<div class="subGnb07">
+							<ul>
+								<li><a href="#">내정보</a></li>
+								<li><a href="#">계정/권한설정</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+			<script type="text/javascript">
+				/*GNB 관련 스크립트*/
+				$(function() {
+					
+					var idx = $('#gnb>ul>li').index($('.on'));
+					
+					$('#gnb>ul>li').hover(function () {
+						$(this).addClass('over').siblings().removeClass('over');					
+						$("#gnb>ul>li").removeClass('on');
+					});
+
+					$('#gnb').mouseleave(function () {
+						$("#gnb>ul>li").removeClass('over');
+						$("#gnb>ul>li").eq(idx).addClass('on');
+					});
+				});
+			</script>
+		</div>
+	</header>
+
+	<!-- Content -->
+	<section id="contentWrap">
+		<p id="location">
+			<span class="home">Home</span> <span class="depth">&gt;</span>
+			<span>면접전형</span> <span class="depth">&gt;</span>
+			<span class="current">결과설정/알림</span>
+		</p>
+
+		<h1 class="noshadow"> <!-- [D] noshadow class -->
+			<img src="../../static/img/common/recruit/title/title04.gif" alt="결과설정/알림" />
+		</h1>
+		<div class="content">			
+			<div class="bbsPost">
+				<div class="postItem">
+					<div class="table-cell table-th">
+						<div>등록일</div>
+					</div>
+					<div class="table-cell table-td">
+						<span class="table-tit">애니카서비스 총무사원 채용공고<span class="iconRed">면접전형 평가 마감</span></span>						
+						<span class="table-comment">※ 클릭시, 채용진행상태가 ‘면접발표’로 변경됩니다.</span>
+					</div>	
+				</div>
+				
+				<div class="postItem col2"><!-- 2단일때 col2 클래스 추가-->
+					<div class="table-cell table-th">
+						<div>직군</div>
+					</div>
+					<div class="table-cell table-td">
+						일반 | 경력
+					</div>
+
+					 <!-- 우측 column-->
+					<div class="table-cell table-th">
+						<div>지역</div>
+					</div>
+					<div class="table-cell table-td">
+						서울
+					</div>
+				</div>
+
+				<div class="postItem">
+					<div class="table-cell table-th">
+						<div>상태</div>
+					</div>
+					<div class="table-cell table-td">
+						면접 완료
+					</div>	
+				</div>
+			</div>
+
+			<form action="">				
+				<div class="bbsPost" style="margin-top:30px;">
+					<fieldset>
+						<div class="postItem col2"><!-- 2단일때 col2 클래스 추가-->
+							<div class="table-cell table-th">
+								<div><label for="userName">이름</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<input type="text" id="userName" class="inputBox" value="홍길동" required="required" />
+							</div>
+
+							<div class="table-cell table-th">
+								<div><label for="userNumber">수험번호</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<input type="text" id="userNumber" class="inputBox" value="대리" required="required" />
+							</div>
+						</div>
+
+						<div class="postItem col2"><!-- 2단일때 col2 클래스 추가-->
+							<div class="table-cell table-th">
+								<div><label for="genderAll">성별</label><p class="check"><input id="genderAll" type="checkbox" name="genderAll" /></p></div>								
+							</div>
+							<div class="table-cell table-td">
+								<div class="tableCheck">
+									<label class="checkbox">
+										<input type="checkbox" name="gender" />
+										남
+									</label>
+									<label class="checkbox">
+										<input type="checkbox" name="gender" />
+										녀
+									</label>
+								</div>
+							</div>
+
+							<div class="table-cell table-th">
+								<div>지원지역</div>
+							</div>
+							<div class="table-cell table-td">
+								<select class="select">
+									<option>전체</option>
+									<option>내용1</option>
+									<option>내용2</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="postItem col2"><!-- 2단일때 col2 클래스 추가-->
+							<div class="table-cell table-th">
+								<div><label for="veteransAll">보훈</label><p class="check"><input id="veteransAll" type="checkbox" name="veteransAll" /></p></div>								
+							</div>
+							<div class="table-cell table-td">
+								<div class="tableCheck">
+									<label class="checkbox">
+										<input type="checkbox" name="veterans" />
+										Y
+									</label>
+									<label class="checkbox">
+										<input type="checkbox" name="veterans" />
+										N
+									</label>
+								</div>
+							</div>
+
+							<div class="table-cell table-th">
+								<div><label for="disabilityAll">장애</label><p class="check"><input id="disabilityAll" type="checkbox" name="disabilityAll" /></p></div>								
+							</div>
+							<div class="table-cell table-td">
+								<div class="tableCheck">
+									<label class="checkbox">
+										<input type="checkbox" name="disability" />
+										Y
+									</label>
+									<label class="checkbox">
+										<input type="checkbox" name="disability" />
+										N
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><label for="userAgeAll">나이</label><p class="check"><input id="userAgeAll" type="checkbox" name="userAgeAll" /></p></div>
+							</div>
+							<div class="table-cell table-td">
+								<div class="tableCheck">
+									<label class="checkbox">
+										<input type="checkbox" name="userAge" />
+										20대
+									</label>
+									<label class="checkbox">
+										<input type="checkbox" name="userAge" />
+										30대
+									</label>
+									<label class="checkbox">
+										<input type="checkbox" name="userAge" />
+										40대
+									</label>
+									<label class="checkbox">
+										<input type="checkbox" name="userAge" />
+										50대 이상
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><label for="academyAll">학력</label><p class="check"><input id="academyAll" type="checkbox" name="academyAll" /></p></div>
+							</div>
+							<div class="table-cell table-td">
+								<div class="tableCheck">
+									<label class="checkbox">
+										<input type="checkbox" name="academy" />
+										중졸이하
+									</label>
+									<label class="checkbox">
+										<input type="checkbox" name="academy" />
+										고졸
+									</label>
+									<label class="checkbox">
+										<input type="checkbox" name="academy" />
+										대학졸
+									</label>
+									<label class="checkbox">
+										<input type="checkbox" name="academy" />
+										대졸
+									</label>
+									<label class="checkbox">
+										<input type="checkbox" name="academy" />
+										대학원졸 (석사)
+									</label>
+									<label class="checkbox">
+										<input type="checkbox" name="academy" />
+										대학원졸 (박사)
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="postItem col2"><!-- 2단일때 col2 클래스 추가-->
+							<div class="table-cell table-th">
+								<div><label for="conditionAll">면접평가상태</label><p class="check"><input id="conditionAll" type="checkbox" name="conditionAll" /></p></div>								
+							</div>
+							<div class="table-cell table-td">
+								<div class="tableCheck">
+									<label class="checkbox">
+										<input type="checkbox" name="condition" />
+										완료
+									</label>
+									<label class="checkbox">
+										<input type="checkbox" name="condition" />
+										누락
+									</label>
+									<label class="checkbox">
+										<input type="checkbox" name="condition" />
+										미응시
+									</label>
+								</div>
+							</div>
+
+							<div class="table-cell table-th">
+								<div><label for="passAll">합격여부</label><p class="check"><input id="passAll" type="checkbox" name="passAll" /></p></div>								
+							</div>
+							<div class="table-cell table-td">
+								<div class="tableCheck">
+									<label class="checkbox">
+										<input type="checkbox" name="pass" />
+										합격
+									</label>
+									<label class="checkbox">
+										<input type="checkbox" name="pass" />
+										미응시
+									</label>
+								</div>
+							</div>
+						</div>
+
+					</fieldset>
+				</div>
+				<p style="color:red">채동공고 관리자는 width값이 달라서 위 폼에서 2단 영역 방법이 다릅니다.소스 주석문 확인바랍니다.</p>
+				<div class="bbsPostHandle">
+					<div class="pull-right">
+					<input type="image" class="btnImg" src="../../static/img/common/btn_search.png" alt="검색" />
+					<button class="btnImg"><img src="../../static/img/common/btn_reset_search.png" alt="검색초기화" /></button>
+					</div>
+				</div>
+			</form>			
+
+			<hr />
+
+			<div class="listWrapper">
+				<div class="cont-info">
+					<div class="total">총 <em>10</em>건</div>
+					<div class="list-count">
+						리스트 보기 
+						<a href="#" class="on">10</a>
+						<a href="#">20</a>
+						<a href="#">30</a>
+						<a href="#">50</a>
+					</div>
+				</div>
+				
+				<div class="cont">
+					<div class="bbsAction">
+						<span class="input-helper">선택한 항목을 </span>
+						<select class="select withBtn">
+							<option>노출</option>
+							<option>숨김</option>
+							<option>삭제</option>
+						</select>
+						<button class="btnSquare"><span>적용</span></button>
+						<select class="select withBtn" style="margin-left:15px">
+							<option>면접합격</option>
+							<option>면접불합격</option>
+							<option>미응시</option>
+						</select>
+						<button class="btnSquare"><span>적용</span></button>
+					</div>
+
+					<table class="bbsList type01">
+						<caption>BBS List</caption>
+						<colgroup> <!-- 해당 컬럼의 가로 크기는 인라인 스타일을 통해  유동적으로 제어 -->
+							<col style="width:51px" />
+							<col style="width:44px" />
+							<col />
+							<col />
+							<col />
+							<col />
+							<col />
+							<col />
+							<col />
+							<col />
+							<col />
+							<col />
+							<col />
+							<col />
+						</colgroup>
+						<thead>
+							<tr> 
+								<th>
+									<label class="checkbox"><input type="checkbox" name="world" /></label>
+								</th>
+								<th>번호</th>
+								<th><a href="#">이름</a></th><!-- thead > th > a 앵커 => order by -->
+								<th><a class="up" href="#">수험번호</a></th> <!-- up 클래스로 bg: ico_arr_up 변경 -->
+								<th>편성조</th>
+								<th>성별</th>
+								<th>지원지역</th>
+								<th>나이(만)</th>
+								<th>보훈</th>
+								<th>장애(급)/유형</th>
+								<th>학력</th>
+								<th>지원횟수</th>
+								<th>면접평가상태</th>
+								<th><a href="#">합격여부</a></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr> 
+								<td class="checkTD">
+									<label class="checkbox"><input type="checkbox" name="" /></label>
+								</td>
+								<th scope="row">62</th>
+								<td><a href="#">홍길동</a></td>
+								<td>AN0012345</td>
+								<td>02</td>
+								<td>남</td>
+								<td>서울</td>
+								<td>22</td>
+								<td><span class="purple">Y</span></td>								
+								<td>N / -</td>								
+								<td>중졸이하</td>
+								<td><a class="blue" href="#" target="blank" title="새창열림">1</a></td>
+								<td><a class="blue" href="#" target="blank" title="새창열림">누락</a></td>
+								<td><a class="purple" href="#"target="blank" title="새창열림">불합격</a></td>
+							</tr>
+							<tr> 
+								<td class="checkTD">
+									<label class="checkbox"><input type="checkbox" name="" /></label>
+								</td>
+								<th scope="row">61</th>
+								<td><a href="#">박지성</a></td>
+								<td>AN0012345</td>
+								<td>01</td>
+								<td>남</td>
+								<td>부산</td>
+								<td>32</td>
+								<td>N</td>								
+								<td><span class="purple">Y</span>(4) / 지체장애</td>								
+								<td>대학졸</td>
+								<td><a class="blue" href="#" target="blank" title="새창열림">2</a></td>
+								<td><a class="blue" href="#" target="blank" title="새창열림">완료</a></td>
+								<td><a class="blue" href="#"target="blank" title="새창열림">합격</a></td>
+							</tr>
+							<tr> 
+								<td class="checkTD">
+									<label class="checkbox"><input type="checkbox" name="" /></label>
+								</td>
+								<th scope="row">60</th>
+								<td><a href="#">박주영</a></td>
+								<td>AN0012345</td>
+								<td>06</td>
+								<td>남</td>
+								<td>대구</td>
+								<td>19</td>
+								<td>N</td>								
+								<td>N / -</td>								
+								<td>대학원졸(박사)</td>
+								<td>-</td>
+								<td>미응시</td>
+								<td>-</td>
+							</tr>
+						</tbody>
+					</table>
+					<p style="color:red">테이블에 th의 a태그에 up 클래스로 bg: ico_arr_up 변경(예:수험번호)</p>
+					
+					<!-- list handle -->
+					<div class="bbsListHandle">
+						<span class="btnImg pull-left"><img src="../../static/img/common/btn_download.png" alt="파일 다운로드"></span>
+						<a href="#" class="btnImg pull-right"><img src="../../static/img/common/btn_post.png" alt="등록"></a>
+
+						<div class="pagination">
+							<nav class="pageNav">
+								<a href="" class="util first">«</a>
+								<a href="" class="util prev">&lt;</a>
+								<a href="">1</a>
+								<span class="current">2</span>
+								<a href="">3</a>
+								<a href="">4</a>
+								<a href="">5</a>
+								<a href="">6</a>
+								<a href="">7</a>
+								<a href="">8</a>
+								<a href="">9</a>
+								<a href="">10</a>
+								<a href="" class="util next">&gt;</a>
+								<a href="" class="util last">»</a>
+							</nav>
+						</div> <!-- /pagination -->
+					</div>
+					<!-- /list handle -->
+				</div>				
+			</div> <!-- /listWrapper -->
+
+
+			
+
+		</div>
+	</section>
+	<!-- / Content -->
+
+	<footer id="footer">
+		<div>
+			<p>Copyright © 2013 Samsung Anycar Service. All rights reserved.</p>
+		</div>
+	</footer>
+	
+</div>
+
+
+
+
+<script src="../../static/js/plugins.js"></script>
+<script src="../../static/js/main.js"></script>
+</body>
+</html>
+

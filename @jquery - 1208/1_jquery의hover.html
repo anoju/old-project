@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>1_jquery의hover</title>
+		<style>
+			#hover {
+				width:300px;
+				height:80px;
+				background:skyblue;
+				cursor:pointer;
+				transition: .2s ease;
+			}
+			
+			#hover:hover {
+				width:400px;
+			}
+			
+		</style>
+		<script src="js/jquery-1.8.2.min.js"></script>
+		<script src="js/modernizr.js"></script>
+	</head>
+	<body>
+		<!--
+			우선 CSS3를 적용시킵니다.
+			
+			그리고 안되는 브라우저를 찾아냅니다.(modernizr.js를 이용)
+			
+			그 브라우저만 jquery(javascript)를 이용하여
+			똑같거나 비슷한 액션을 취하시면 됩니다.
+			
+			
+			 -->
+		<div id="hover"></div>
+		<script>
+			
+			//true를 false로 false를 true로 변경하는 연산자
+			// !(부정연산자)
+			
+			if(!Modernizr.csstransitions) {
+				//css3의 transition을 지원하지 않기 때문에
+				//여기서 jquery의 애니메이션과 hover를 이용하면 됩니다.
+				//alert("미지원!")
+				
+				//hover(함수(마우스 오버시),함수(마우스 아웃시))
+				
+				$("#hover").hover(function() {
+					//자바스크립트에서 this는 이벤트 작동되는 요소
+					
+					$(this).css("width",300)
+					       .stop()
+					       .animate({width:400},200,"swing");
+					
+				},function() {
+					$(this).css("width",400)
+					       .stop()
+					       .animate({width:300},200,"swing");
+				});
+				
+			}
+			
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+

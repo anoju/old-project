@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<style type="text/css">
+	div { /*float:left; */width:300px;  margin-right:30px; position:relative;}
+	div>ul{ overflow:hidden; background:url(images/tab_bg.gif) repeat-x 0px 27px;/*height:120px;*/}
+	div>ul>li>a { height: 28px;overflow: hidden;position: absolute;top: 0;}
+	div>ul>li.on>a>img {margin-top:-28px;}
+	div>ul>li>ul{ /*position:absolute; top:35px; left:0px; */display:none;width:100%;border-bottom:2px solid #333333;margin-top:30px}
+	div>ul>li>ul>li { padding-left:20px; background:url(images/blt_red.gif) no-repeat 8px 6px;}
+	div>ul>li.on>ul { display:block;}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="js/tab_plugin.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.tab_menu1').tabMenu({
+			tab_method : 'one',
+			tab_event : 'click'
+		});
+		$('.tab_menu2').tabMenu({
+			tab_method : 'two',
+			tab_event : 'hover'
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="tab_menu1">
+		<ul>
+			<li class="on">
+				<a href="#"><img src="images/tab_notice.gif" alt="공지사항" /></a>
+				<ul style="height: 300px;">
+					<li>테스트 텍스트 내용입니다</li>
+					<li>테스트 텍스트 내용입니다</li>
+					<li>테스트 텍스트 내용입니다</li>
+					<li>테스트 텍스트 내용입니다</li>
+				</ul>
+			</li>
+			<li>
+				<a style="left: 70px;" href="#"><img src="images/tab_press.gif" alt="보도자료" /></a>
+				<ul style="height: 200px;">
+					<li>테스트 내용입니다</li>
+					<li>테스트 내용입니다</li>
+					<li>테스트 내용입니다</li>
+					<li>테스트 내용입니다</li>
+				</ul>
+			</li>
+			<li>
+				<a style="left: 140px;" href="#"><img src="images/tab_review.gif" alt="사용후기" /></a>
+				<ul style="height: 500px;">
+					<li>내용입니다</li>
+					<li>내용입니다</li>
+					<li>내용입니다</li>
+					<li>내용입니다</li>
+				</ul>
+			</li>
+		</ul>		
+	</div>
+	<p>하단내용</p>
+	<div class="tab_menu2">
+		<ul>
+			<li class="on">
+				<a href="#"><img src="images/tab_img1.gif" alt="공지사항" /></a>
+				<ul>
+					<li>테스트 텍스트 내용입니다</li>
+					<li>테스트 텍스트 내용입니다</li>
+					<li>테스트 텍스트 내용입니다</li>
+					<li>테스트 텍스트 내용입니다</li>
+				</ul>
+			</li>
+			<li>
+				<a style="left: 70px;" href="#"><img src="images/tab_img2.gif" alt="보도자료" /></a>
+				<ul>
+					<li>테스트 내용입니다</li>
+					<li>테스트 내용입니다</li>
+					<li>테스트 내용입니다</li>
+					<li>테스트 내용입니다</li>
+				</ul>
+			</li>
+			<li>
+				<a style="left: 140px;" href="#"><img src="images/tab_img3.gif" alt="사용후기" /></a>
+				<ul>
+					<li>내용입니다</li>
+					<li>내용입니다</li>
+					<li>내용입니다</li>
+					<li>내용입니다</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+	body { margin:0px; padding:10px;}
+	h1 { margin:20px 0px 0px 0px; padding:0px; height:50px;}
+	.box { width:300px; height:200px; border:1px solid #999; text-align:center;}
+	.sub_box { width:250px; height:100px; background:pink; margin:auto; line-height:100px;}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var $box = $('.box');
+		var $sub_box = $('.sub_box');
+		
+		var box_position = $box.position(); // 포지션지정 (box)
+		var sub_box_position = $sub_box.position();  // 포지션지정 (sub_box)
+		
+		var box_offset = $box.offset(); // offset지정 (box)
+		var sub_box_offset = $sub_box.offset();  // offset지정 (sub_box)
+		
+		var box_offsetparent = $box.offsetParent(); // offsetParent지정 (box)
+		var sub_box_offsetparent = $sub_box.offsetParent();  // offsetParent지정 (sub_box)	
+		
+		console.log(box_position);
+		document_offset('box_position_top',box_position.top);
+		document_offset('box_position_left',box_position.left);
+		
+		console.log(sub_box_position);
+		document_offset('sub_box_position_top',sub_box_position.top);
+		document_offset('sub_box_position_left',sub_box_position.left);
+		
+		console.log(box_offset);
+		document_offset('box_offset_top',box_offset.top);
+		document_offset('box_offset_left',box_offset.left);
+		
+		console.log(sub_box_offset);
+		document_offset('sub_box_offset_top',sub_box_offset.top);
+		document_offset('sub_box_offset_left',sub_box_offset.left);
+		
+		console.log(box_offsetparent);
+		document_offset('box_offsetparent',box_offsetparent.attr('class'));
+		
+		console.log(sub_box_offsetparent);
+		document_offset('sub_box_offsetparent',sub_box_offsetparent.attr('class'));
+		
+		function document_offset(a,b){
+			$('<p>' + a + ' : ' + b + '</p>' ).appendTo('.text');
+		}
+	})
+</script>
+</head>
+<body class="offset">
+	<div class="box">
+    	<h1>요소의 offset</h1>
+    	<div class="sub_box">
+        	내용1
+        </div>
+    </div>
+    <div class="text"></div>
+</body>
+</html>

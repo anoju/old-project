@@ -1,0 +1,26 @@
+/*.pClock{background:#061225;font-family:ng;font-size:25pt;letter-spacing:-3px;color:#5882b2;text-align:center}*/
+.pClock{background:url('../img/bricks/main_brick_digiclock.jpg') no-repeat 0 0;font-family:ng;font-size:31px;color:#fff;text-align:center}
+.pepCtitle{margin:35px 0 20px;letter-spacing:-2px}
+.pepClock{text-align:center;font-family:arial,tahoma,Dotum,sans-serif;font-size:84px;letter-spacing:-3px;color:#fff}/*#03d7e4*/
+span.tod{font-size:40px}
+
+.news{background-color:#061225}
+.news p{margin:0;padding:0}
+.news dl{overflow:hidden}
+.news dl dt{line-height:0}
+.news dl dd{width:535px}
+.news dl dd div{float:left;color:#fff}
+.news dl dd div.num{font-size:120px;line-height:92px;height:92px;width:119px;border-right:2px solid #1d354b;text-align:center}
+.news dl dd div.subj{padding:0 14px;width:299px;height:92px}
+.news dl dd div.subj p.s1{font-size:14pt}
+.news dl dd div.subj p.s1 a{color:#fff;text-decoration:none}
+.news dl dd div.subj p.s2{font-size:10pt;margin-top:30px;line-height:15px}
+.news dl dd div.subj p.s2 a{color:#5882b2;text-decoration:none}
+.news dl dd div.idate{width:87px;height:90px;color:#7589b8;font-size:9pt;padding-top:2px}
+.news dl dd div.idate p.arrow{color:#0963d4;font-size:25pt;margin:30px 0 0 0}
+
+aside.asidePL0625{position:absolute;width:429px;height:512px;top:50%;left:50%;margin-left:-215px;margin-top:-256px;z-index:100;background:url('../img/pLayer/0625.jpg') no-repeat 0 0;box-shadow:6px 6px 5px #111}
+.pLayer0625{position:relative}
+a.pLayerBtn1{display:block;background-color:#1a3459;position:absolute;bottom:45px;left:137px;width:156px;height:43px;border-radius:8px;line-height:43px;color:#fff;text-align:center}
+a.pLayerBtn2{display:block;background-color:#061225;position:absolute;bottom:0;width:100%;color:#5882b2;height:22px;line-height:22px;font-size:10pt;text-align:right}
+a.pLayerBtn3{position:absolute;top:-38px;right:-18px}

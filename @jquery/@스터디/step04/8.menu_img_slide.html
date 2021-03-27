@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+	body,ul,li,p { margin:0px; padding:0px; list-style:none;}
+	a { text-decoration:none; color:#000;}
+	#menu { width:600px; border:1px solid #ededed; margin:auto; margin-top:50px; padding:30px; position:relative;}
+	#menu ul { overflow:hidden; position:relative;}
+	#menu ul li { float:left;}
+	#menu ul li + li { margin-left:53px;}
+	#menu .menu_img { position:absolute; top:50px; left:30px; width:600px; height:5px;}
+	#menu .menu_img p { height:5px; background:blue; position:absolute; top:0px; left:0px;}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">	
+	//<![CDATA[
+	$(function(){
+		var margin, width, left;
+		function set(){
+			margin = parseInt($('#menu').find('.focus').css('margin-left'));//parseInt:정수값
+			width = $('#menu').find('.focus').outerWidth();
+			left = $('#menu').find('.focus').position().left;
+			$('.menu_img>p').stop().animate({'width':width,'left':left + margin});
+		}
+		set();
+		
+		$('#menu>ul>li').hover(function(){
+			width = $(this).outerWidth();
+			left = $(this).position().left;
+			margin = parseInt($(this).css('margin-left'));
+			$('.menu_img>p').stop().animate({'width':width,'left':left + margin});
+		});
+		
+		$('#menu').mouseleave(function(){
+			set();
+		});
+		
+		$('#menu>ul>li').click(function(){
+			$('#menu>ul>li.focus').removeClass('focus');							
+			$(this).addClass('focus');
+		});
+	});
+	//]]>
+</script>
+</head>
+<body>
+	<div id="menu">
+		<ul>
+			<li class="focus"><a href="#"><strong>H</strong>ome</a></li>
+			<li><a href="#"><strong>C</strong>ompany</a></li>
+			<li><a href="#"><strong>S</strong>ervice</a></li>
+			<li><a href="#"><strong>C</strong>areer</a></li>
+			<li><a href="#"><strong>R</strong>ecruit</a></li>
+			<li><a href="#"><strong>C</strong>ontact</a></li>
+		</ul>
+		<div class="menu_img"><p></p></div>
+	</div>
+</body>
+</html>

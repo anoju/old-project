@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+	div, ul, li { margin:0px; padding:0px; list-style:none;}
+	div#wrap { width:1000px; margin:0 auto; height:100px; border:1px solid red; position: relative;overflow:hidden;}
+	div#wrap ul { position:absolute;}
+	div#wrap ul li {width:200px; height:50px; background:pink; border:1px solid blue; margin:25px; float:left;}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">	
+	$(function(){
+		var index = $('#wrap>ul>li').index() + 1;
+		var width = $('#wrap>ul>li').outerWidth();
+		var left = 0;
+		var test = true;
+		$('#wrap>ul').css({'width':(width+50) * index });
+		
+		//움직이는 소스
+		var time = setInterval(slide,50)
+		function slide(){
+			if(Math.abs(left) >= width+50){
+				left = 0;
+				$('#wrap>ul>li').eq(0).appendTo($('#wrap>ul'));
+			}else{
+			left = left-2;
+			$('#wrap>ul').css('left',left);
+			}
+		}
+
+		function slide2(){
+			if(left == 0){
+				left = -(width+50);
+				$('#wrap>ul>li').eq(index-1).prependTo($('#wrap>ul'));
+			}else{
+			left = left+2;
+			$('#wrap>ul').css('left',left);
+			}
+		}
+
+
+
+		$('#wrap>ul').hover(function(){
+			clearInterval(time);
+		},function(){
+			time = setInterval(slide,50);
+		})
+		;
+
+		$('#prev').click(function(){
+			test = true;
+			clearInterval(time);
+			time = setInterval(slide,50);
+		});
+		$('#next').click(function(){
+			test = false;
+			clearInterval(time);
+			time = setInterval(slide2,50);
+		});
+		$('#stop').click(function(){
+			clearInterval(time);
+		});
+		$('#play').click(function(){
+			if(test == true){
+				time = setInterval(slide,50);
+			}else{
+				time = setInterval(slide2,50);
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			<li>11</li>
+			<li>12</li>
+		</ul>
+	</div>
+	<ul>
+		<li><a id="prev" href="#">prev</a></li>
+		<li><a id="stop" href="#">stop</a></li>
+		<li><a id="play" href="#">play</a></li>
+		<li><a id="next" href="#">next</a></li>
+	</ul>
+</body>
+</html>

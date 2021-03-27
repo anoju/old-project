@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title> LG OLED TV. The Ultimate Display </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="55 inches and only 4mm thin, the world's largest and slimmest OLED TV with picture quality that is sheer perfection. This is not an evolution. It's a brave new beginning." />
+<META NAME="Keywords" CONTENT="oled, oled tv, oled tv when, what is oled tv, what is an oled tv, tv oled, oled television, oled and led, led and oled, samsung oled, oled samsung, oled display, oled screen, oled monitor, lcd oled, oled displays, 2012 oled, samsung tv oled, oled samsung tv, tv oled samsung, oled tv samsung, samsung oled tv, oled tv lg, oled lg tv, lg oled tv, lg tv oled, oled 55, samsung oled television, lg oled television, led oled lcd, lcd led oled, amoled tv, 55 oled lg, 55 lg oled, lg oled 55, oled 55 lg, oled lg 55, tv oled 2012, 2012 oled tv, oled tv 2012, oled tv in 2012, tvs oled, oled tvs, what are oled tvs, led oled tv, oled led tv, what is oled technology, oled technology, oled monitors, hdtv oled, oled hdtv, oled versus led, led versus oled, oled tv 55, 55 in oled tv, oled tv price, 55 inch oled, oled 55 inch, oled lights, oled organic, oled ces, ces oled, oled tv prices, sony oled television, oled 55 samsung, 55 samsung oled, samsung 55 oled, oled samsung 55, 55 oled tv lg, lg oled 55 tv, 55 lg oled tv, oled tv lg 55, lg 55 oled tv, lg oled tv 55, samsung oled 2012, samsung 2012 oled, samsung oled display, super oled tv, oled lcd tv">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 "/>
+<script type="text/javascript" src="common/js/jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="common/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="common/js/jquery.scrollTo.js"></script>
+<script type="text/javascript" src="common/js/iscroll.js"></script>
+<script type="text/javascript" src="common/js/default.js"></script>
+<script type="text/javascript" src="common/js/share.js"></script>	
+<link rel="stylesheet" type="text/css" href="common/css/style.css" />
+<script>
+$(function(){
+	
+	
+	if (location.href.indexOf("?main_go=") > 0)
+	{
+		var main_idx = location.href.split("?main_go=")[1];
+		defMenuName(main_idx);
+		$(".main_top_btn").fadeIn();
+		$(".loading").hide();
+
+		setTimeout(function(){
+			main_scroll2(main_idx);
+		},1000)		
+
+	}else{
+		$(window).load(function(){
+			introChk () ;
+		});	
+	}
+	
+	function introChk () {
+		$('html , body').animate({ 'scrollTop' : 0 + 'px' } , 250 ) ;
+
+		var $visualBox = $('.loading');
+		var $introBox = $('.intro') ;
+		var $opBox = $( '.op' , $introBox ) ;
+		var $guageBar = $( '.guageBar' , $introBox ) ;
+		var $guage = $( '.guage' , $guageBar ) ;
+		var min_h = 400
+		if (min_h < $(window).height())
+		{
+			min_h = $(window).height()
+		}
+		$visualBox.height(min_h);
+		
+		$guage.animate({ 'height' : $guageBar.height() + 'px' } , 5000 , 'easeInOutQuart' , function(){
+			$visualBox.animate({ 'opacity' : 0 }, 500 , 'easeInOutQuart' , function(){				
+				$('html , body').animate({ 'scrollTop' : $("#section08").offset().top } , 4000 , 'easeInOutQuart', function(){
+					$visualBox.hide();
+					$(".main_top_btn").show();
+					
+				})	
+			}) ;
+			
+		}) ;
+	}
+})
+</script>
+<script type="text/javascript">
+ var _gaq = _gaq || [];
+ _gaq.push(['_setAccount', 'UA-34136929-2' ]);
+_gaq.push(['_setAllowLinker', true]);
+ _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<body>
+<header id="top">
+	<h1><a href="http://www.lg.com/global" target="_blank"><img src="images/lg_title.png" alt="lg" /></a></h1>
+	<span class="menu_toggle"><a href="#"><img src="images/top_btn_menu_off.png" alt="menu" /></a></span>
+	<p><a href="index.html"><img src="images/top_title.png" alt="lg oled tv" /></a></p>	
+	<nav class="gnb" style="display:none">
+		<div class="snsBox">
+			<a href="#" class="facebook"><img src="images/gnb_facebook.gif" alt="FACEBOOK" /></a>
+			<a href="#" class="tweeter"><img src="images/gnb_tweeter.gif" alt="FACEBOOK" /></a>
+		</div>
+		<ul class="gnb_con">
+			<li><a href="javascript:main_scroll(1);defMenuName(1);"><img src="images/gnb_01.gif" alt="ABOVEANDBEYOND" width="158" /></a></li>
+			<li><a href="javascript:main_scroll(2);defMenuName(2);"><img src="images/gnb_02.gif" alt="Perfect Viewing Angle" width="212" /></a></li>
+			<li><a href="javascript:main_scroll(3);defMenuName(3);"><img src="images/gnb_03.gif" alt="Color Refiner" width="140" /></a></li>
+			<li><a href="javascript:main_scroll(4);defMenuName(4);"><img src="images/gnb_04.gif" alt="Absolute Motion Clarity" width="233" /></a></li>
+			<li><a href="javascript:main_scroll(5);defMenuName(5);"><img src="images/gnb_05.gif" alt="Paper Slim" width="99" /></a></li>
+			<li><a href="javascript:main_scroll(6);defMenuName(6);"><img src="images/gnb_06.gif" alt="4 Color Pixel" width="128" /></a></li>
+			<li><a href="javascript:main_scroll(7);defMenuName(7);"><img src="images/gnb_07.gif" alt="Infinite Contrast" width="163" /></a></li>
+			<li class="last"><a href="javascript:main_scroll(8);defMenuName(8);"><img src="images/gnb_08.gif" alt="New Beggining" width="135" /></a></li>
+		</ul>
+		<ul class="util_con">
+			<li class="first"><a href="viewtv/type_floor.html"><img src="images/gnb_util01.gif" alt="360º View" width="87" /></a></li>
+			<li><a href="feature/oled_tv.html"><img src="images/gnb_util02.gif" alt="features" width="86" /></a></li>
+			<li><a href="pr/pr_room03.html"><img src="images/gnb_util03.gif" alt="PR ROOM" width="81" /></a></li>
+		</ul>
+	</nav>
+</header>
+
+<section class="section_wrap">
+	<div class="loading">
+		<div class="intro">
+			<div class="op">
+				<div class="guageBar">
+					<p class="guage"></p>
+				</div>
+				<p class="txt"></p>
+			</div>
+		</div><!-- end of intro -->
+	</div>
+	<article>
+		<p class="visual_img"  id="section01">
+			<img src="images/img_above_01.png" alt="" />
+			<span class="click_video1"><a href="http://www.youtube.com/watch?v=QRLRp1vGvfA&feature=player_detailpage" target="_blank"><img src="images/click_video01.png" alt="" /></a></span>
+		</p>
+		<p class="visual_img" id="section02">
+			<img src="images/img_above_02.png" alt="" />
+			<span class="click"><a href="./subpop/sub02.html"><img src="images/click_above02.png" alt="" /></a></span>
+		</p>
+		<p class="visual_img" id="section03">
+			<img src="images/img_above_03.png" alt="" />
+			<span class="click"><a href="./subpop/sub03.html"><img src="images/click_above03.png" alt="" /></a></span>
+		</p>
+		<p class="visual_img" id="section04">
+			<img src="images/img_above_04.png" alt="" />
+			<span class="click"><a href="./subpop/sub04.html"><img src="images/click_above04.png" alt="" /></a></span>
+		</p>
+		<p class="visual_img" id="section05">
+			<img src="images/img_above_05.png" alt="" />
+			<span class="click"><a href="./subpop/sub05.html"><img src="images/click_above05.png" alt="" /></a></span>
+		</p>
+		<p class="visual_img" id="section06">
+			<img src="images/img_above_06.png" alt="" />
+			<span class="click"><a href="./subpop/sub06.html"><img src="images/click_above06.png" alt="" /></a></span>
+		</p>
+		<p class="visual_img" id="section07">
+			<img src="images/img_above_07.png" alt="" />
+			<span class="click"><a href="./subpop/sub07.html"><img src="images/click_above07.png" alt="" /></a></span>
+		</p>
+	</article>
+	<article id="section08">
+		<p class="visual_img">
+			<img src="images/img_new_begin.png" alt="" />
+		</p>
+	</article>
+	<a href="javascript:main_scroll(1)" class="main_top_btn"><img src="images/main_top_btn.png" alt=""/></a>
+</section>
+<footer class="footer">
+	<p class="capy"><img src="images/txt_capy.png" alt="Copyright © 2012 LG Electronics. all rights reserved." /></p>
+	<p class="topsec"><a href="javascript:main_scroll(1)"><img src="images/txt_top.png" alt="TOP" /></a></p>
+</footer>
+
+
+
+<!-- SiteCatalyst code version: H.24.4.
+Copyright 1996-2012 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="/common/js/s_code.js"></script>
+<script language="JavaScript" type="text/javascript"><!--
+s.pageName="ABOVE AND BEYOND – LG OLED TV Mobile"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img src="http://lgelectronics.d2.sc.omtrdc.net/b/ss/lgeoledtv/1/H.24.4--NS/0"
+height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.24.4. -->
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+	p.text { font-size:50px;}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">	
+	$(function(){
+		var matrix_text = ['j','q','u','e','r','y','s','t','u','d','y'];
+		var $text = $('p.text').text();
+		var matrix_index = 0, $text_index = 0;
+		var timer = setInterval(function(){
+			if(matrix_text.length == matrix_index){
+				matrix_index = 0;
+				$('p.text').text($text.substr(0,$text_index) + matrix_text[matrix_index])
+				$text_index++;
+				if($text_index == $text.length){
+					clearInterval(timer);
+					$('p.text').text($text);
+				}
+				return;
+			}
+				$('p.text').text($text.substr(0,$text_index) + matrix_text[matrix_index]);	//substr :몇번째에서 몇번쨰까지 보여주겠다
+				matrix_index++;
+			},30)
+		$('p.text').text('');
+	});
+</script>
+</head>
+<body>
+    <p class="text">Matrix Text Effect</p>
+</body>
+</html>

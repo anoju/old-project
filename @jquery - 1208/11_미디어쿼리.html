@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>11_미디어쿼리</title>
+		<style>
+			body {
+				margin:0;
+			}
+			#wrap {
+				width:800px;
+				margin:auto;
+				background:silver;
+				overflow: hidden;
+			}
+			#landscape,#portrait {
+				display: none;
+			}
+			
+			.box {
+				width:300px;
+				height:100px;
+				margin:50px;
+				background:skyblue;
+				float:left;
+			}
+			
+		/*가로 세로*/
+			@media screen and (orientation:landscape) {
+				#landscape {
+					display: block;
+				}
+			}
+			
+			@media screen and (orientation:portrait) {
+				#portrait {
+					display: block;
+				}
+			}
+			
+		/* 최대 너비 */
+			@media screen and (max-width:799px) {
+				#wrap {
+					width:100%;
+				}
+				/*.box {
+					width:90%;
+					height:60px;
+					margin:10px 5%;
+				}*/
+				.box {
+					width:46%;
+					margin:2%;
+				}
+			}
+			
+			/*데스크탑등 일반 ppi */
+			@media screen and (-webkit-min-device-pixel-ratio:1) {
+				div {
+					background-image:url(img/evolution1998.png);
+				}
+			}
+			
+			/* 고해상도 ppi : 이미지 2배짜리 사용 */
+			@media screen and (-webkit-min-device-pixel-ratio:2) {
+				div {
+					background-image:url(img/evolution1998X2.png);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<h1 id="landscape">가로 레이아웃(Landscape)</h1>
+			<h1 id="portrait">세로 레이아웃(Portrait)</h1>
+			<div class="box"></div><!--
+		 --><div class="box"></div><!--
+		 --><div class="box"></div><!--
+		 --><div class="box"></div><!--
+	 --></div>
+	</body>
+</html>
+
+
+
+
+
+
+

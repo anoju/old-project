@@ -1,0 +1,16 @@
+body {font-size: 0.75em; width: 760px; margin: 0 auto;}
+#wrap {position: relative; background: url('/fanpage/image/fanpage_bg.png') 0 0 no-repeat; width: 761px; height: 833px; margin: 0 auto;}
+.txt, .startGame, .prize, .showroom {position: relative;}
+.txt {top: 135px; margin-left: 291px;}
+.startGame {top: 130px; margin-left: 275px;}
+.prize {top: 536px; width: 418px; margin: 0 auto;}
+.showroom {top: 544px; margin-left: 636px;}
+.gameNot {position: relative; width: 35px; height: 20px; cursor: pointer; top: 525px; left: 20px; background: red; opacity: 0; filter: alpha(opacity=0);}
+
+/*footer*/ 
+.footContainer {position: relative; width: 760px; margin-top: 10px;}
+#footer li {float: left;}
+.copy {padding-right: 13px;}
+.tc, .pp {margin-top: 4px;}
+.fb {position: relative; top: 4px; width: 227px;}
+div.fb-like {position: absolute; right:0;}

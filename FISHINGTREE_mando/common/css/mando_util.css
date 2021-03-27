@@ -1,0 +1,167 @@
+﻿@charset "UTF-8";
+
+
+/* login*/
+.loginTheme					{ float: left; width: 940px; background:#fff; border-top: 3px solid #666666; border-bottom: 1px solid #dddddd; margin-bottom: 30px; }
+.loginTheme li				{ float: left; }
+.loginWrap					{ width: 410px; padding:0 30px; border-right: 1px solid #e1e1e1; }
+.loginWrap dl img			{ vertical-align: bottom; }
+.chkMember					{ color:#999; position:absolute; left: 80px; top: 20px; margin-bottom: 10px; }
+.login						{ width: 370px; float: left; position: relative; padding: 50px 20px 20px; border-bottom: 1px dotted #bcbcbc; }
+.login dl					{ float: left; margin-bottom: 6px; }
+.login dt					{ float: left; width:60px; margin-top: 5px; }
+.login dd					{ float: left; width: 230px; margin-bottom: 3px; }
+.login dd.pt_10				{ padding-left: 60px; }
+.login p					{ position: absolute; top:50px; right:20px; }
+.loginInfo					{ float: left; padding: 20px; }
+.loginInfo dl:last-child	{ margin-bottom: 0px; }
+.loginInfo dt				{ width: 230px; float: left; background: url("/images/common/bu/bu_list_square.gif") no-repeat 0 5px; margin-top: 10px; padding-left: 7px; font-size:11px; color:#666;  }
+.loginInfo dd				{ float: right; margin-bottom: 5px;  }
+
+.loginWrap_02				{ width: 465px;  }
+.loginWrap_02 h4			{ text-align: center; }
+.loginWrap_02 h4 img		{ margin-top:85px; }
+
+
+/* paging_공통 */
+.pagingWarp			{  width: 940px; letter-spacing: -2px; }
+.paging				{ text-align: center; font-size: 11px;}
+.paging li			{ display: inline; margin:2px; font-weight:bold;}
+.paging li a		{ display: inline-block; border:1px solid #d5d5d5; border-radius: 2px; color:#666; padding:2px 8px 2px 5px; }
+.paging li a:hover 	{ display: inline-block; background:#aeaeae; color:#fff; }
+.paging li a.selected , .paging li a:link.selected, .paging li a:visited.selected, .paging li a:active.selected { padding:2px 8px 2px 5px; border-radius: 2px; background:#aeaeae; color:#fff; }
+.paging li.prev a, .paging li.next a { border:0 none; margin: 0 3px; }
+.paging .noMar		{ margin:0 -10px; }
+
+
+/* member_terms */
+.tnc				{ width: 940px; border-top:3px solid #333333; }
+.tnc dl				{ position: relative; }
+.tnc dt				{ padding:30px 0 10px 0;}
+.tnc dd.agreeChk	{ text-align: right; margin-top: 10px; font-weight:bold; margin-bottom: 25px; }
+.termsCon			{ padding: 20px; height: 140px; overflow-y: scroll; border:1px solid #ddd; background:#fff; line-height: 1.5em; }
+.termsTxet			{ width:940px; height:150px; resize:none; padding:10px;}
+
+.termsCon dt		{ padding:20px 0 10px 0; }
+.utilTerms ul, .termsCon ul		{ margin-top:10px; color:#999; }
+.termsCon ul li		{ margin-bottom: 5px; }
+.termsCon h5		{ font-weight:bold; color:#666; margin:50px 0 10px 0; }
+.dayInfo			{ color:#666; text-align: center; font-weight: bold; padding-bottom: 50px; border-bottom:1px dashed #999; }
+.termsInfo			{ color:#666; text-align: center; font-weight: bold; padding-bottom: 50px; }
+
+.master dd			{ color: #999; margin-left: 15px; }
+.infoCall			{ color:#666; margin-top: 50px;  }
+.infoCall p			{ margin-bottom: 20px; }
+.infoCall li		{ margin-bottom: 10px; }
+
+
+
+
+
+/* member_nameCheck */
+.certWrap					{ /*margin-bottom: 380px;*/}
+.certify					{ float: left; text-align: center; background:#fff; margin-bottom: 10px; border-top: 3px solid #333; border-bottom: 1px solid #dbdbdb;}
+.certify li					{ float: left; position: relative; width: 312px;  height:275px; border-right: 1px solid #e3e3e3;  }
+.certify li:last-child		{ width: 312px; border-right: 0 none; }
+.certify li.noBor			{ border-right: none; }
+.certify h5					{ margin-bottom: 23px; padding-top: 30px; }
+.certify p					{ color: #666666; font-size: 12px; margin-bottom: 10px; line-height: 150%; }
+.certify .certInfo			{ color: #999999; font-size: 11px;  letter-spacing: -1px; }
+.btnCertify					{ position:absolute;bottom: 28px; left: 130px; }
+
+
+/* member_회원정보입력 */
+#memberWrap					{ margin-bottom: 30px; font-family: dotum; font-size:12px; color:#666; }
+.contents img				{ vertical-align: middle; }
+.contents h3				{ margin-bottom: 11px; }
+.contents .infom			{ margin-bottom: 10px; color:#666;  }
+.contents .infoTxt			{ font-family: dotum,"돋움"; font-size: 12px; color: #666; margin-bottom: 15px; letter-spacing:-1px; }
+
+.infoTit					{ margin-left: 10px; font-size:11px; color:#aaa;  }
+.repasswd 					{ margin-bottom: 100px;  font-size: 12px; color:#333; }
+.memberNavi					{ position: absolute; top:35px; right:10px; width:335px; height:13px; overflow:hidden; }
+.memberNavi ul				{ position: relative; width:100%; height:100%;}
+.memberNavi ul li			{ float:left; height:100%; }
+.memberNavi ul li.memNavi_01{ width:77px; }
+.memberNavi ul li.memNavi_02{ width:85px; }
+.memberNavi ul li.memNavi_03{ width:103px; }
+.memberNavi ul li.memNavi_04{ width:69px; }
+.memberNavi ul li span		{ display:block; width:100%; height:100%; background:url("/images/member/bg_member_navi.gif") no-repeat 0px 0; text-indent:-5000px; }
+.memberNavi ul li.memNavi_01 span	{ background-position:0px 0; }
+.memberNavi ul li.memNavi_02 span	{ background-position:-74px 0; }
+.memberNavi ul li.memNavi_03 span	{ background-position:-159px 0; }
+.memberNavi ul li.memNavi_04 span	{ background-position:-262px 0; }
+.memberNavi ul li.memNavi_01.selected span { background-position:0px -15px; }
+.memberNavi ul li.memNavi_02.selected span { background-position:-74px -15px; }
+.memberNavi ul li.memNavi_03.selected span { background-position:-159px -15px; }
+.memberNavi ul li.memNavi_04.selected span { background-position:-262px -15px; }
+.memBoard					{ width: 940px; clear: both; margin-bottom:30px; }
+.memBoard tr:first-child th, .memBoard tr:first-child td	{ border-top:3px solid #333333; }
+.memBoard tr:last-child th, .memBoard tr:last-child td		{ border-bottom:1px solid #e1e1e1; background: none;}
+.memBoard tr:last-child th	{ background:#F0F0F0; }
+.memBoard th				{ background:#F0F0F0 url("/images/common/borderLine.gif") repeat-x 0 100%; padding: 10px 0;  text-indent: 15px; text-align: left; font-weight: normal; color:#333; }
+.memBoard td				{ background: url("/images/common/borderLine.gif") repeat-x 0 100%;	padding: 10px 15px; }
+.memBoard td.noBg			{ background: none; }
+.memsInfo					{ /*clear: both; float: left; */margin-bottom: 30px; font-size:11px; color:#aaa;  }
+.memsInfo li				{ line-height: 1.4em; background: url("/images/common/bu/bu_exclamation.gif") no-repeat 0 0; padding-left: 20px; margin-bottom: 5px; }
+.btnArea					{ clear: both; text-align: center; }
+.btnArea li					{ display: inline; margin-right: 5px; }
+.btnArea li:last			{ margin:0; }
+.smsOK						{ margin-right: 20px; }
+
+
+/* member_ok */
+.memComplete	{ width:940px; height:178px; background: #fff; border-top:3px solid #333; border-bottom:1px solid #e1e1e1; margin-bottom:26px; }
+.memComplete p	{ text-align:center; }
+.memName		{ color:#6d0020; font-size:14px; font-weight:bold; margin-top: 40px; margin-bottom: 25px; }
+
+
+/* idPw FIND */
+.idpwFind			{ width:940px; float: left; border-top:3px solid #333; border-bottom:1px solid #e1e1e1; font-weight:bold; background:#fff; margin-bottom: 30px; }
+.idpwFind li		{ position: relative; width: 469px; height: 175px; float: left; border-right:1px solid #e6e6e6; }
+.idpwFind .finePw	{ border-right:0 none; }
+.idpwFind h4		{ text-align: center; margin-bottom: 23px; padding: 20px 0; border-bottom: 1px solid #e3e3e3;   }
+.idpwFind dl		{ width: 290px;float: left; margin-bottom: 5px; padding-left: 52px;  }
+.idpwFind dt		{ width: 50px; float: left; margin-top: 3px; color:#333; vertical-align: bottom; }
+.idpwFind dd		{ width: 235px; float: left; }
+.idpwFind .btnOk	{ position: absolute; top:78px; right:45px; }
+.supportEmail		{ font-weight: bold; text-decoration: underline; color:#666; }
+
+
+/* 회원탈퇴 */
+.memberout					{ float: left; background:#fff; border-top:3px solid #333; border-bottom:1px solid #e1e1e1; padding: 30px 332px 30px 297px; margin-bottom: 30px; }
+.memberout dt,.memberout dd	{  font-weight:bold; color:#333333; padding-bottom: 5px; }
+.memberout dt				{ float: left;width: 60px; margin-top: 5px; }
+.memberout dd				{ float: right;  }
+
+
+
+
+/* mypage */
+#mypageWrap				{ position: relative; font-family: "dotum"; font-size:12px; color:#666; }
+.pageNav				{ position:absolute; top: 20px; right: 0px; }
+.pageNav li				{ float:left;}
+/* mypage_정품등록내역 */
+.regist					{ background:#FFF; border-top:3px solid #333; height:155px; border-bottom:1px solid #e1e1e1; margin-bottom:26px;  text-align: center; }
+.regist .registNo		{ margin-top:41px; }
+.regist .txtThanks		{ text-align:center; margin:35px 0 20px 0; }
+.regist .serialNum		{ font-size:14px; font-weight:bold; color:#6d0020; line-height: 1.5em; }
+.goods_txt_02			{ margin-top: 7px; }
+/* mypage_구매내역 */
+.searchBox				{ width: 800px; float: left; position:relative; background:#f0f0f0;  border-top:3px solid #333333; padding: 25px 0px 25px 140px; }
+.searchBox li			{ float: left;  padding:2px; }
+.searchDate input		{ font-size:11px; margin:0px 7px; padding: 3px 10px; }
+.calendar				{ margin:3px 5px 0 -6px;}
+.btnSearch				{ overflow: hidden;  margin-top: 3px; margin-left: 10px; width:52px; height:25px; margin-top: -2px; text-indent:-5000px; }
+.btnSearch a			{ display:block; width:100%; height:100%; background:url("/images/common/btn/btn_search_order.gif") no-repeat 0 0; }
+.btnSearch a:hover		{ background-position:0 -26px;}
+.btnSearch a:active		{ background-position:0px -52px;}
+
+
+
+
+.reservBoard					{ width:100%; border-top:3px solid #333; margin-bottom: 30px;  }
+.reservBoard thead tr th		{ background:url("/images/common/bg_th_border.gif") no-repeat 100% 50%; color:#000; font-weight:normal; padding: 15px 0; border-bottom:1px solid #ababab; }
+.reservBoard thead tr th.noBg	{ background:none;}
+.reservBoard th,.reservBoard td	{ text-align: center; width: 100%; background:url("/images/common/borderLine.gif") repeat-x 0 100%; }
+.reservBoard td					{  line-height: 3.5em; }

@@ -1,0 +1,9 @@
+body,div,ul,li,a,img{margin:0;padding:0;}
+body {font-family: "NanumGothicWeb",'돋움',dotum,Helvetica,sans-serif;}
+li{list-style:none}
+img{border:0 none;}
+.wrap{margin:0 auto;width:600px;}
+.wrap>ul{width:600px;height:500px;position:relative;}
+.wrap>ul>li{position:absolute;top:0;left:0;display:block;width:600px;height:400px;}
+.wrap>ul>li>img{display:block;}
+.wrap>a{padding:10px;}

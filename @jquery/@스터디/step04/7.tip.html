@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+	body { margin:0px; padding:0px; position:relative;}
+	.body { width:500px; height:3000px; background:pink;}
+	.tip { position:absolute; width:150px; height:150px; background:blue; top:200px; left:500px;}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">	
+	//<![CDATA[
+	$(function(){
+		var tip = $('.tip').offset().top;
+		$(window).scroll(function(){
+			var top = $(this).scrollTop();
+			$('.tip').stop().animate({'top':top < tip? tip : top + tip //마지막 tip대신 숫자 입력해도 됨
+			})
+		});
+	});
+	//]]>
+</script>
+</head>
+<body>
+	<div class="body">    
+	</div>
+    <div class="tip">
+    </div>
+</body>
+</html>

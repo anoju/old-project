@@ -1,0 +1,119 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	/*font: inherit;*/
+	font-weight: inherit;
+	font-style: inherit;
+	/*font-family: inherit;*/
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{text-decoration:none}
+
+
+@font-face{font-family:ng;src:url('../fonts/NanumGothicCompact.eot');src:local(※), url('../fonts/NanumGothicCompact.woff') format('woff')}*/
+
+
+.ng{font-family:ng}
+.ar{font-family:arial;letter-spacing:-1px}
+.thm{font-family:tahoma,sans-serif;letter-spacing:0px}
+.bold{font-weight:bold}
+.ls-0{letter-spacing:0px}
+.ls-1{letter-spacing:-1px}
+
+.hide{display:none}
+
+/*layout*/
+html{height:100%}
+body{background:#01274b url('../img/common/bg.gif');width:100%;height:100%}
+header{position:fixed;width:121px;height:100%;display:block;top:0;z-index:2;background:#114a83;border-right:solid 1px #0175b5}	
+section.contents{padding:5px 0 0 137px;max-width:1650px;background:transparent;overflow:scroll-y;z-index:1}
+nav ul{width:140px;overflow:hidden;position:absolute}
+nav ul li{height:47px;font-family:arial,"tahoma","Dotum","Helvetica","sans-serif";font-size:14px;font-weight:bold;letter-spacing:-1px;line-height:47px}
+nav ul li a{padding-left:18px;color:#4f99da;display:block;height:47px;background-color:transparent}
+nav ul li.over, nav ul li.now{background:url('../img/common/menu_over.png') no-repeat 0 0}
+nav ul li.over a, nav ul li.now a{color:#fff}
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -81px; /* the bottom margin is the negative value of the footer's height */
+}
+.push{height:81px}
+ 
+@media all and (max-width: 1236px) { 	footer{max-width:810px} }
+@media all and (min-width: 1237px) { footer{max-width:1085px} }
+@media all and (min-width: 1512px) { footer{max-width:1360px} }
+@media all and (min-width: 1788px) { footer{max-width:1635px} }
+footer{height:63px;padding:18px 0 0 137px}
+footer div.fpc{float:left;font-size:11px;line-height:20px}
+footer p.policy a{color:#4f99da}
+footer p.crts{color:#fff;}
+footer ul{color:#fff;float:right;margin-top:10px}/*padding-left:90px*/
+footer ul li{float:left;padding:0 4px 0 8px}
+
+.item{position:absolute;margin:5px 0 5px;float:left}
+.b0{width:810px;height:2010px;text-align:center;overflow:hidden}
+.b00{background:#fff;width:810px;height:830px;text-align:center;overflow:hidden}
+.b1{width:535px;height:620px}
+.b2{width:260px;height:200px}
+.b3{width:260px;height:410px}
+.b4{width:535px;height:200px}
+.b5{width:840px;height:200px}
+.b6{width:535px;height:200px}
+.op10{-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";filter: alpha(opacity=10);-moz-opacity: 0.1;-khtml-opacity: 0.1;opacity: 0.1}
+.op50{-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";filter: alpha(opacity=30);-moz-opacity: 0.3;-khtml-opacity: 0.3;opacity: 0.3}
+.op60{-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";filter: alpha(opacity=60);-moz-opacity: 0.6;-khtml-opacity: 0.6;opacity: 0.6}
+.op80{-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";filter: alpha(opacity=80);-moz-opacity: 0.8;-khtml-opacity: 0.8;opacity: 0.8}
+.whatis{display:block;width:260px;height:200px;background:#4aa1e4;font-family:sans-serif;font-size:190px;font-weight:bold;color:#fff;text-align:center}
+.bgBrick{background:url('../img/common/bg_brick.gif')}
+.b-3wide{width:810px}
+.b-3tall{height:620px}
+.b-4tall{height:830px}
+.b-4talle{height:725px}
+.b-5tall{height:1040px}
+.b-6tall{height:1250px}
+
+.layerBox{border-bottom:18px solid #003c7d;border-right:18px solid #003c7d;border-left:18px solid #db1315;border-top:18px solid #db1315;font-family:ng}
+
+
+/*policy*/
+div.policy{width:800px;height:550px;padding:10px;color:#5b5353;font-size:10pt;overflow-y:auto;line-height:18px;border-bottom:18px solid #003c7d;border-right:18px solid #003c7d;border-left:18px solid #db1315;border-top:18px solid #db1315}
+div.policy h1, div.policy h2, div.policy h3{font-size:11pt;font-weight:bold;margin:16px 0 14px}
+div.policy h1{font-size:14pt;color:#000}

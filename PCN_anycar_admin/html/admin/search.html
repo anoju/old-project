@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" itemscope="itemscope" itemtype="http://schema.org/WebPage" lang="ko"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>스타일가이드</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="../../static/css/component.css" media="handheld, all">
+
+	<style type="text/css">
+	.frame {margin:2em}
+	dl {margin-bottom:1em; padding:1em; background:#fafafa;}
+	dl dt {margin-bottom:.5em}
+	dl dd {margin-bottom:2em}
+	</style>
+	
+	<!-- Le supporter -->
+	<script src="../../static/js/lib/modernizr-2.6.2.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+	<script>window.jQuery || document.write('<script src="../../static/js/lib/jquery-1.8.2.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script src="../../static/js/lib/jquery-ui-1.9.0.min.js"><\/script>')</script>
+</head>
+
+<body>
+<div class="frame">
+
+
+	<h3>버튼들은 클래스만 넣고, Button, A, Span 등 태그에서 동일하게 사용</h3>
+	<dl>
+		<dt>검색 필터</dt>
+		<dd>
+			
+			<form action="">				
+				<div class="bbsPost">
+					<fieldset>
+						<legend>Posting</legend>
+
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><label for="statusActive">상태</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<label class="radio">
+									<input type="radio" id="dpMain" name="statusActive" checked="checked" />
+									활성
+								</label>
+								<label class="radio">
+									<input type="radio" name="statusDeactive" />
+									비활성
+								</label>
+							</div>	
+						</div>
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><label for="createDate">생성일</label></div>
+							</div>
+							<div class="table-cell table-td">
+
+
+								<div class="schedule">
+									<input type="text" class="inputBox inputSchedule" name="createDate" id="createDate" value="2013-06-16" readonly="readonly" title="시작일" />
+									<label for="fromCal"><button class="btnImg" id="btnFromCal"><img src="../../static/img/common/ico_calendar.png" alt="달력" /></button></label>
+									
+									<!-- 싱글 달력 -->
+									<div class="calendarBox single" style="display:none"> <!-- [D] 토글 show, hidden 필요 -->
+										<div class="calendarInner">
+											<div class="header">
+												<div class="year">
+													<input type="text" value="2013" readonly="readonly" />
+													<button class="btnUp" onclick="alert('up')">업</button>
+													<button class="btnDown" onclick="alert('down')">다운</button>
+												</div>
+												<div class="month">
+													<input type="text" value="06" readonly="" />
+													<button class="btnUp" onclick="alert('up')">업</button>
+													<button class="btnDown" onclick="alert('down')">다운</button>
+												</div>
+											</div>
+											<div class="calendar">
+												<table>
+													<caption>스케쥴 달력</caption>
+													<colgroup>
+														<col style="width:45px;" />
+														<col style="width:45px;" />
+														<col style="width:45px;" />
+														<col style="width:45px;" />
+														<col style="width:45px;" />
+														<col style="width:45px;" />
+														<col style="width:45px;" />
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">일</th>
+															<th scope="col">월</th>
+															<th scope="col">화</th>
+															<th scope="col">수</th>
+															<th scope="col">목</th>
+															<th scope="col">금</th>
+															<th scope="col">토</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																<div></div>
+															</td>
+															<td>
+																<div></div>
+															</td>
+															<td>
+																<div>1</div>
+															</td>
+															<td>
+																<div>2</div>
+															</td>
+															<td>
+																<div>3</div>
+															</td>
+															<td>
+																<div>4</div>
+															</td>
+															<td>
+																<div>6</div>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div>7</div>
+															</td>
+															<td>
+																<div>8</div>
+															</td>
+															<td>
+																<div>9</div>
+															</td>
+															<td>
+																<div>10</div>
+															</td>
+															<td>
+																<div>11</div>
+															</td>
+															<td class="today">
+																<div>12</div>
+															</td>
+															<td>
+																<div>13</div>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div>14</div>
+															</td>
+															<td>
+																<div>15</div>
+															</td>
+															<td class="active">
+																<div>16</div>
+															</td>
+															<td>
+																<div>17</div>
+															</td>
+															<td>
+																<div>18</div>
+															</td>
+															<td>
+																<div>19</div>
+															</td>
+															<td>
+																<div>20</div>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div>21</div>
+															</td>
+															<td>
+																<div>22</div>
+															</td>
+															<td>
+																<div>23</div>
+															</td>
+															<td>
+																<div>24</div>
+															</td>
+															<td>
+																<div>25</div>
+															</td>
+															<td>
+																<div>26</div>
+															</td>
+															<td>
+																<div>27</div>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div>28</div>
+															</td>
+															<td>
+																<div>29</div>
+															</td>
+															<td>
+																<div>30</div>
+															</td>
+															<td>
+																<div>31</div>
+															</td>
+															<td>
+																<div></div>
+															</td>
+															<td>
+																<div></div>
+															</td>
+															<td>
+																<div></div>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div></div>
+															</td>
+															<td>
+																<div></div>
+															</td>
+															<td>
+																<div></div>
+															</td>
+															<td>
+																<div></div>
+															</td>
+															<td>
+																<div></div>
+															</td>
+															<td>
+																<div></div>
+															</td>
+															<td>
+																<div></div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								
+								<button class="btnRound"><span>최근 1주일</span></button>
+								<a href="#" class="btnRound"><span>최근 1개월</span></a>
+								<span class="btnRound"><span>최근 3개월</span></span>
+							</div>	
+						</div>
+						
+
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><label for="searchFilter">검색</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<select class="select" title="검색필터">
+									<option>전체</option>
+									<option>조건A</option>
+									<option>조건B</option>
+								</select>
+								<input type="text" class="inputBox" value="" title="검색어" id="searchFilter" />		
+							</div>	
+						</div>
+
+					</fieldset>
+				</div>
+				<div class="searchHandle">
+					<input type="image" class="btnImg" src="../../static/img/common/btn_search.png" alt="검색" />
+					<button class="btnImg"><img src="../../static/img/common/btn_reset_search.png" alt="검색초기화" /></button>
+				</div>
+			</form>
+
+
+		</dd>
+	</dl>
+
+
+</div> <!-- /frame -->
+
+<script src="../../static/js/plugins.js"></script>
+<script src="../../static/js/main.js"></script>
+</body>
+</html>
+

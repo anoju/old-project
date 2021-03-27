@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+	.test { width:100px; height:100px; padding:10px; border:2px dashed blue; margin:20px; background:silver;}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('button').eq(0).click(function(){
+			motion()
+		});
+		$('button').eq(1).click(function(){
+			$('.test:animated').css({'background':'pink'})
+		});
+		
+		function motion(){
+			$('.test').animate({'opacity':'toggle','height':'toggle', 'width':'toggle'},1000,function(){
+				motion();
+			});
+		}
+	})
+</script>
+</head>
+<body>
+	<button>animate</button>
+    <button>:animate</button>
+    <div class="test"></div>
+</body>
+</html>

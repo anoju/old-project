@@ -1,0 +1,67 @@
+﻿@charset "UTF-8";
+
+/* zipcode */
+#popWrap img			{ vertical-align:middle; }
+#popWrap h3				{ width: 100%; background:#7cc242; padding: 15px; margin-bottom: 30px; }
+
+.popZipcode				{ width:600px; }
+.popSearch, .zipBoard,.popInfo_02	{ margin-left: 20px; }
+.popInfo, .popInfo_02			{ clear: both; }
+.popInfo						{ text-align: center;margin-bottom: 20px;  }
+.popInfo .infoEx				{ color: #999999; margin-top: 5px; }
+.popInfo_02						{ letter-spacing: -0.5px; font-size: 11px; margin-bottom: 30px; }
+.popInfo_02 img					{ margin-left: 10px;}
+.popInfo_02	a					{ color:#666; }
+.popSearch_01					{ width: 470px; padding: 13px 0px 13px 90px;  }
+.popSearch_02					{ width: 530px; padding: 13px 5px 13px 25px;  }
+.popSearch						{ float: left; border:1px solid #bebebe; background:#f3f3f3; margin-bottom: 20px; }
+.popSearch li					{ float: left; margin-bottom: 5px; }
+.popSearch dl					{ float: left; }
+.popSearch dt, .popSearch dd	{ float: left; }
+.popSearch dt					{ width: 50px; margin-top: 4px; }
+.popSearch dd					{ margin-right: 10px; }
+.popSearch dd:last-child		{ margin-right: 0px; }
+
+.zipBoard						{ float: left; margin-bottom: 30px; }
+.zipBoard ul					{ float: left; width: 560px; }
+.zipBoard li					{ float: left; line-height: 2.2em; }
+.zipBoard .zipTit				{ width: 103px; text-align: center; }
+.zipBoard .zipNum				{ background:url("../../images/common/bg_th_border.gif") no-repeat 100% 50%; }
+.zipBoard .zipCon				{ width: 415px; }
+.zipBoard .zipW					{ padding: 5px 0; border-top: 3px solid #323232; }
+.zipBoard .zipH					{ float: left; width: 560px; padding: 10px 0; border-top: 1px solid #e1e1e1; border-bottom: 1px solid #e1e1e1; }
+.zipBoard .zipH ul				{ height: 215px; overflow-y: scroll; }
+.popSearch dt, .popInfo_02	p	{ background: url("/images/common/bu/bu_list_square.gif" ) no-repeat  0 50%; text-indent: 0px; padding-left: 12px;  }
+.bg2Line p						{ background-position: 0 28%; margin-bottom:5px; line-height: 1.8em; }
+
+
+
+/* 세금계산서 신청 */
+.billBoard					{ width: 485px; }
+.cashBoard					{ width: 525px; }
+
+.popBill					{ width:100%;  }
+.popBill h4					{ background: url("/images/common/bu/bu_list_square.gif" ) no-repeat  0 50%; padding-left:5px; color: #333; font-weight: bold; margin-top: 15px; margin-bottom: 10px; margin-left: 20px;}
+.infoBill li				{ background: url("/images/common/bu/bu_list_square.gif" ) no-repeat  0 30%; padding-left:5px; margin-bottom: 30px; line-height: 1.5em; }
+.popBill tr:first-child th, .popBill tr:first-child td		{ border-top: 3px solid #323232;  }
+.popBill tr					{ background:url("/images/common/borderLine.gif") repeat-x 0 100%;  z-index:100; }
+.popBill th, .popBill td	{ padding: 13px 0; }
+.popBill th					{ color: #333; background:#f3f3f3 url("/images/common/borderLine.gif") repeat-x 0 100%;  text-align: left; padding-left: 20px; font-weight: normal; }
+.popBill td					{ color: #666; padding-left: 15px;  }
+.popBill .btnArea			{ margin-top: 20px; }
+.txtC						{ color:#adadad; font-size:11px; }
+.popBill textarea,.billBoard,.infoBill li	{ margin-left: 20px; }
+.popBill .titCon			{ margin-top: 30px; }
+.oderName					{ font-weight: bold; }
+.oderName .price			{ color: #333; }
+
+
+
+
+/* 회원탈퇴,아이디 중복확인 */
+.memberOut, .popIdchk			{ width: 360px; text-align: center; margin-top: 30px; padding: 0 20px ; line-height: 1.5em; }
+.memberOut p,.popIdchk p		{ width: 360px; padding-bottom:30px; margin-bottom: 20px; border-bottom:1px solid #e1e1e1; }
+
+
+.popIdchk h5{ color:#333; font-weight: bold; margin-bottom: 10px;}
+.popIdchk p{ color: #999; }

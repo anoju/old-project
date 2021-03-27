@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>7_아이맥진화</title>
+		<style>
+			#evolutionBox {
+				width:900px;
+				margin:auto;
+				text-align: center;
+			}
+			
+			#evolutionBox>img {
+				margin:5px;
+				position: relative;
+				transition:.5s ease;
+			}
+			
+			#evolutionBox>img {
+				opacity:0;
+				left:100px;
+				
+			}
+			
+			#evolutionBox.animate>img {
+				opacity:1;
+				left:0;
+			}
+			
+			#evolutionBox.animate>img:nth-child(1) {
+				transition-delay:0;
+			}
+			
+			#evolutionBox.animate>img:nth-child(2) {
+				transition-delay:.2s;
+			}
+			#evolutionBox.animate>img:nth-child(3) {
+				transition-delay:.4s;
+			}
+			#evolutionBox.animate>img:nth-child(4) {
+				transition-delay:.6s;
+			}
+			#evolutionBox.animate>img:nth-child(5) {
+				transition-delay:.8s;
+			}
+			#evolutionBox.animate>img:nth-child(6) {
+				transition-delay:1s;
+			}
+			#evolutionBox.animate>img:nth-child(7) {
+				transition-delay:1.2s;
+			}
+			#evolutionBox.animate>img:nth-child(8) {
+				transition-delay:1.4s;
+			}
+			
+			
+		</style>
+		<script src="js/jquery-1.8.2.min.js"></script>
+		<script>
+			
+		
+			// jQuery.ready(function() {
+// 				
+			// })
+			
+			$(function() {
+				$("button").click(function() {
+					
+					//여기에서 #evolutionBox에 animate라는 클래스를 추가합니다.
+					$("#evolutionBox").attr("class","animate");
+					
+				})
+			});
+			
+		</script>
+	</head>
+	<body>
+		<p>
+			<button>애니메이션!</button>
+		</p>
+		<!-- 여러 요소들이 한번에 움직이는 애니메이션을 구현하려면 감싸고 있는
+			부모요소에 클래스를 한번 주는 걸로 애니메이션을 제작합니다.
+			그리고 javascript로 class를 동적으로 부여합니다.
+			
+			 -->
+		<div id="evolutionBox">
+			<img src="img/evolution_1998.jpg" />
+			<img src="img/evolution_2000.jpg" />
+			<img src="img/evolution_2002.jpg" />
+			<img src="img/evolution_2004.jpg" />
+			<img src="img/evolution_2005.jpg" />
+			<img src="img/evolution_2007.jpg" />
+			<img src="img/evolution_2009.jpg" />
+			<img src="img/evolution_today.jpg" />	
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+

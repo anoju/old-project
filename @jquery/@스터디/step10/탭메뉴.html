@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" href="css/reset.css" type="text/css" />
+<style type="text/css">
+	.board_list {position:relative; width:380px; height:130px; overflow:hidden; background:url('images/main/tab_bg.gif') repeat-x 0 27px; float:left; margin:50px;}
+	.board_list ul li {float:left; width:70px; height:28px;}
+	.board_list ul li h3 {width:70px; height:28px; }
+	.board_list ul li h3 a {height:28px; overflow:hidden;display:inline-block;}
+	.board_list ul li h3 a img {margin-top:-28px;}
+	.board_list ul li.on h3 a img {margin-top:0;}
+	.board_list ul li div.listcont {position:absolute; left:0; top:41px; display:none;}
+	.board_list ul li.on div.listcont {display:block;}
+	.board_list ul li div.morebtn {position:absolute; top:-30px; right:2px;}
+	.board_list ul li div.listcont ul li {width:380px; height:21px;}
+	.board_list ul li div.listcont ul li a {display:inline-block; padding-left:12px; height:21px; border-bottom:1px solid #efefef; background:url('images/main/blt_red.gif') no-repeat 2px 9px; margin-left:1px; line-height:21px; width:278px; float:left;}
+	.board_list ul li div.listcont ul li span.date {float:right; display:inline-block; height:22px; line-height:22px;}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">	
+	$(function(){
+		var speed = 2000;
+		var random = Math.floor(Math.random()*3);
+		var time = setInterval(timer,speed);
+		
+		$('.board_list>ul>li').eq(random).addClass('on');
+		
+		$('.board_list>ul>li').click(function(){
+			$(this).addClass('on').siblings().removeClass('on');
+		});
+		
+		function timer(){
+			random >= 2 ? random = 0 : random++
+			$('.board_list>ul>li').eq(random).addClass('on').siblings().removeClass('on');
+		}
+	});
+</script>
+</head>
+<body>
+	<div class="board_list">
+    	<ul>
+        	<li class="tablistz"><h3><a href="#공지사항"><img src="images/main/tab_notice.gif" alt="공지사항" /></a></h3>
+            	<div class="listcont">
+                	<ul>
+                    	<li><a href="#공지사항">카히스토리 웹 접근성 개선 및 개인정보보호</a><span class="date">2012-02-03</span></li>
+                        <li><a href="#공지사항">2011년도 카히스토리 고객만족 설문조사</a><span class="date">2012-02-03</span></li>
+                        <li><a href="#공지사항">OK캐쉬백 포인트로 사고이력조회</a><span class="date">2012-02-03</span></li>
+                        <li><a href="#공지사항">카히스토리 웹사이트개선 공개입찰 공고</a><span class="date">2012-02-03</span></li>
+                    </ul>
+                    <div class="morebtn"><a href="#공지사항더보기" title="공지사항 더보기"><img src="images/main/btn_more.gif" alt="더 보기" /></a></div>
+                </div>
+            </li>
+            <li class="tablist"><h3><a href="#보도자료"><img src="images/main/tab_press.gif" alt="보도자료" /></a></h3>
+            	<div class="listcont">
+                	<ul>
+                    	<li><a href="#보도자료">카히스토리 웹 접근성 개선 및 보도자료</a><span class="date">2012-02-03</span></li>
+                        <li><a href="#보도자료">2011년도 카히스토리 고객만족 설문조사</a><span class="date">2012-02-03</span></li>
+                        <li><a href="#보도자료">OK캐쉬백 포인트로 사고이력조회</a><span class="date">2012-02-03</span></li>
+                        <li><a href="#보도자료">카히스토리 웹사이트개선 공개입찰 공고</a><span class="date">2012-02-03</span></li>
+                    </ul>
+                    <div class="morebtn"><a href="#보도자료더보기" title="보도자료 더보기"><img src="images/main/btn_more.gif" alt="더 보기" /></a></div>
+                </div>
+            </li>
+            <li class="tablist"><h3><a href="#사용후기"><img src="images/main/tab_review.gif" alt="사용후기" /></a></h3>
+            	<div class="listcont">
+                	<ul>
+                    	<li><a href="#사용후기">카히스토리 웹 접근성 개선 및 사용후기</a><span class="date">2012-02-03</span></li>
+                        <li><a href="#사용후기">2011년도 카히스토리 고객만족 설문조사</a><span class="date">2012-02-03</span></li>
+                        <li><a href="#사용후기">OK캐쉬백 포인트로 사고이력조회</a><span class="date">2012-02-03</span></li>
+                        <li><a href="#사용후기">카히스토리 웹사이트개선 공개입찰 공고</a><span class="date">2012-02-03</span></li>
+                    </ul>
+                    <div class="morebtn"><a href="#사용후기더보기" title="사용후기 더보기"><img src="images/main/btn_more.gif" alt="더 보기" /></a></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

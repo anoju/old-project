@@ -1,0 +1,47 @@
+/* Player */
+
+#player_overlay {
+	background-color: #000;
+	left: 0;
+	height: 100%;
+	opacity: 0.7;
+	filter: alpha(opacity = 70);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 200;
+}
+.pdp #player_embedlayer {
+margin-left:-437px;
+}
+
+/*
+#player_embedlayer {
+left:50%;
+margin-left:-436px;
+margin-top:7px;
+position:absolute;
+top:229px;
+width:890px;
+z-index:61;
+}
+*/
+
+#player_embedlayer {
+left:50%;
+margin-left:-436px;
+margin-top:7px;
+position:fixed;
+top:100px;
+width:890px;
+z-index:201;
+}
+
+#player_container {
+	margin: 0 auto;
+	position: relative;
+	width: 896px;
+}
+
+.player_pdp { padding-left: 24px; }
+.player_hide { display: none; }

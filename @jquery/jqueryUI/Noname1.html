@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>new_file</title>
+		<meta name="viewport" content="user-scalable=yes, initial-scale = 1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			ol, ul {list-style: none;overflow: hidden;}
+			#wrap{background:gray;height:500px;}
+			#content{padding:30px 3%;height:300px;}
+			.main #content{padding:0;background:red;}
+			#content ul{border-bottom:1px solid #000}
+			#content li{height:20px;background:#fff;border-top:1px solid #000}
+		</style>
+		<script type="text/javascript">
+            $(function(){
+                $('body').addClass('main');
+            })
+		</script>		
+	</head>
+
+	<body>
+		<div id="wrap">
+			<p>wrap</p>
+			<section id="content">
+				<p>content</p>
+				<ul>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+				</ul>
+			</section>
+		</div>
+	</body>
+</html>

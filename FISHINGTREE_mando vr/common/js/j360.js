@@ -1,0 +1,235 @@
+/**
+ * j360 jQuery plugin
+ * author     Stable Flow
+ * copyright  (c) 2009-2010 by StableFlow
+ * link       http://www.stableflow.com/downloads/jquery-plugins/360-degrees-product-view/
+ *
+ * Version: 1.0.0 (12/13/2010)
+ * Requires: jQuery v1.3+
+ *
+ * Dual licensed under the MIT and GPL licenses:
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/licenses/gpl.html
+ */
+(function($){
+    $.fn.j360 = function(options) {
+        var defaults = {
+            clicked: false,
+            currImg: 1,
+			nowSelect : 0
+        }
+        var options = jQuery.extend(defaults, options);
+        return this.each(function() {
+            var $obj = jQuery(this);
+			if(options.nowSelect==0){
+				var $spot = jQuery(".folding")
+			}else if(options.nowSelect==1){
+				var $spot = jQuery(".enfolding")
+			}
+            var aImages = {};
+            $obj.css({
+                'margin-left' : 'auto',
+                'margin-right' : 'auto',
+                'text-align' : 'center',
+                'overflow' : 'hidden'
+            });
+            // $obj.prepend('<img src="/images/loader.gif" class="loader" style="margin-top:' + ($obj.height()/2 - 15) + 'px" />');
+
+            $overlay = $obj.clone(true);
+            $overlay.html('<img src="../images/common/loader.gif" class="loader" style="margin-top:' + ($obj.height()/2 - 15) + 'px" />');
+            $overlay.attr('id', 'view_overlay');
+            $overlay.css({
+                'position' : 'absolute',
+                'z-index': '4',
+//                'top' : $obj.offset().top,
+//                'left' : $obj.offset().left,
+				'top' : 0,
+                'left' : '94px',
+                'background' : '#fcfcfc'
+            });
+            $obj.after($overlay);
+            $obj.after('<li id="colors_ctrls"></li>');
+            jQuery('#colors_ctrls').css({
+                'width' : $obj.width(),
+                'position' : 'absolute',
+                'z-index': '5',
+                'top' : $obj.offset().top + $obj.height - 50,
+                'left' : $obj.offset().left
+            });
+
+            var imageTotal = 0;
+            jQuery('img', $obj).each(function() {
+                aImages[++imageTotal] = jQuery(this).attr('src');
+                preload(jQuery(this).attr('src'));
+            })
+            var imageCount = 0;
+            jQuery('.preload_img').load(function() {
+                if (++imageCount == imageTotal) {
+					if(!$.browser.msie){
+						$overlay.animate({
+							'filter' : 'alpha(Opacity=0)',
+							'opacity' : 0
+						}, 1800);
+						$spot.animate({
+							'filter' : 'alpha(Opacity=1)',
+							'opacity' : 1
+						}, 1800);
+					}else{
+						$overlay.animate({
+							'filter' : 'alpha(Opacity=0)',
+							'opacity' : 0,
+							'display' : 'none'
+						}, 1800);
+						$spot.animate({
+							'filter' : 'alpha(Opacity=1)',
+							'opacity' : 1,
+							'display' : 'block'
+						}, 1800);
+					}
+                    $obj.html('<img src="' + aImages[1] + '" />');
+                    $overlay.bind('mousedown touchstart', function(e) {
+                        if (e.type == "touchstart") {
+                            options.currPos = window.event.touches[0].pageX;
+                        } else {
+                            options.currPos = e.pageX;
+                        }
+                        options.clicked = true;
+                        return false;
+                    });
+                    jQuery(document).bind('mouseup touchend', function() {
+                        options.clicked = false;
+                    });
+                    //jQuery(document).bind('mousemove touchmove', function(e) {
+                    jQuery(document).bind('touchmove', function(e) {
+                        if (options.clicked) {
+                            var pageX;
+                            if (e.type == "touchmove") {
+                                pageX = window.event.targetTouches[0].pageX;
+                            } else {
+                                pageX = e.pageX;
+                            }
+
+                            var width_step = 1;
+                            if (Math.abs(options.currPos - pageX) >= width_step) {
+                                if (options.currPos - pageX >= width_step) {
+                                    options.currImg++;
+                                    if (options.currImg > imageTotal) {
+                                        options.currImg = 1;
+                                    }
+                                } else {
+                                    options.currImg--;
+                                    if (options.currImg < 1) {
+                                        options.currImg = imageTotal;
+                                    }
+                                }
+                                options.currPos = pageX;
+                                $obj.html('<img src=../"' + aImages[options.currImg] + '" />');
+                            }
+							
+							spotView(options.currImg,false)
+                        }
+						
+                    });
+
+
+					var imgStep = 2;
+					jQuery("#btnR").bind("click",function(e){
+						
+						options.currImg += imgStep;
+						if (options.currImg > imageTotal) {
+							options.currImg = 1;
+						}
+						$obj.html('<img src="' + aImages[options.currImg] + '" />');
+						spotView(options.currImg,false)
+					});
+					jQuery("#btnL").bind("click",function(){
+						options.currImg -= imgStep;
+						if (options.currImg < 1) {
+							options.currImg = imageTotal;
+						}						
+						$obj.html('<img src="' + aImages[options.currImg] + '" />');
+						spotView(options.currImg,false)
+					});
+					/*
+					jQuery("#btnBegin").bind("click",function(){
+						var nowNo = options.currImg;
+						if(nowNo != 1 ){
+							ar = setInterval(function(){
+								options.currImg -= imgStep;	
+								if (options.currImg < 1) {
+									options.currImg = imageTotal;
+								}		
+								$obj.html('<img src="' + aImages[options.currImg] + '" />');
+								if(options.currImg==1){
+									clearInterval(ar);
+									spotView(options.currImg,true)
+								}
+							},10);
+						}	
+						spotView(options.currImg,true)
+					});
+					*/
+
+					spotView(options.currImg,true)
+                }
+            });
+
+            if (jQuery.browser.msie || jQuery.browser.mozilla || jQuery.browser.opera || jQuery.browser.safari ) {
+                jQuery(window).resize(function() {
+                    onresizeFunc($obj, $overlay);
+                });
+            } else {
+                var supportsOrientationChange = "onorientationchange" in window,
+                orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
+                window.addEventListener(orientationEvent, function() {
+                    onresizeFunc($obj, $overlay);
+                }, false);
+            }
+            onresizeFunc($obj, $overlay)
+			function spotView(n,f){
+				if(n==1){
+					if(f){
+						$spot.fadeIn(600);
+					}
+				}else{
+					$spot.fadeOut(300);
+				}
+			}
+        });
+    };
+})(jQuery)
+
+function onresizeFunc($obj, $overlay) {
+    /*
+	$obj.css({
+        'margin-top' : $(document).height()/2 - 150
+    });*/
+    $overlay.css({
+        'margin-top' : 0,
+        'top' : 0,
+        'left' : '94px'
+//        'top' : $obj.offset().top,
+//        'left' : $obj.offset().left
+    });
+
+    jQuery('#colors_ctrls').css({
+        'top' : $obj.offset().top + $obj.height - 50,
+        'left' : $obj.offset().left
+    });
+}
+
+function preload(image) {
+    if (typeof document.body == "undefined") return;
+    try {
+        var div = document.createElement("div");
+        var s = div.style;
+        s.position = "absolute";
+        s.top = s.left = 0;
+        s.visibility = "hidden";
+        document.body.appendChild(div);
+        div.innerHTML = "<img class=\"preload_img\" src=\"" + image + "\" />";
+    } catch(e) {
+    // Error. Do nothing.
+    }
+}
+

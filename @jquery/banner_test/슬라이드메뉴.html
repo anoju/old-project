@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link type="text/css" rel="stylesheet" href="css/reset.css" />
+<style type="text/css">
+	body,div,ul,li,a,img{margin:0;padding:0;}
+	li{list-style:none;}
+	img{border:0 none;}
+	.mainbanner_wrap{position: relative;margin:0 auto;width: 687px;height: 283px;}
+	.mainbanner {position:relative;overflow:hidden;width:687px;height:283px;}
+	.mainbanner ul{position:absolute}
+	.mainbanner ul li{float:left;width:687px;}
+	.mainbanner ul li img{width:100%;vertical-align:top;}
+
+	.btn_mainbanner{position:absolute;bottom:20px;right: 90px;}
+	.btn_mainbanner li{border:1px solid #e5e5e5;float:left;margin-left:5px;}
+	.btn_mainbanner li a{display:block;width:10px;height:10px;background:url(img/btn_mainbanner.png) no-repeat 0px 0px;text-indent:-9999em;}
+	.btn_mainbanner li.on{}
+	.btn_mainbanner li.on a{background-position:0 -20px;}
+
+	.mainbanner_player{position:absolute;bottom:20px;right: 18px;}
+	.mainbanner_player li{border:1px solid #e5e5e5;float:left;margin-left:5px;}
+	.mainbanner_player li a{display:block;}
+
+</style>
+<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var stopTime = 1000;
+		var slideTime = 1000;
+		var li_length = $('.mainbanner>ul>li').length;
+		var li_width =  $('.mainbanner>ul>li').outerWidth();
+		var ul_width =  li_width * li_length
+		//var random = Math.floor(Math.random()*length);					
+		var time = setInterval(function(){img_slide()},stopTime), check = true;
+		
+		$('.mainbanner>ul').css( 'width',ul_width +'px');
+		
+		function img_slide(){
+			$('.mainbanner>ul').not(':animated').animate({'left':(-li_width)+'px'},slideTime,function(){
+				$(this).css({'left':'0px'}).children(':eq(0)').appendTo($(this));
+			});
+		};
+		
+		$('.mainbanner_wrap').hover(function(){
+			clearInterval(time);
+		},function(){
+			if(check == true){
+				clearInterval(time);
+				time = setInterval(function(){img_slide()},stopTime);
+			}
+		});
+		var i = 0;
+		$('.mainbanner_player>li').click(function(){
+			switch ($(this).index()){
+				case 0 :
+					if(i==0){
+						i = 1;
+						$('.mainbanner>ul').css({'left':(-li_width)+'px'}).children(':last').prependTo($('.mainbanner>ul'));
+						$('.mainbanner>ul').not(':animated').animate({'left':'0px'},slideTime,function(){i=0;});
+					}
+					break;
+				case 1 :
+					clearInterval(time);
+					$(this).toggle().next().toggle();
+					check = false;
+					break;
+				case 2 :
+					clearInterval(time);
+					time = setInterval(function(){img_slide()},stopTime);
+					$(this).toggle().prev().toggle();
+					check = true;
+					break;
+				case 3 :
+					img_slide();
+					break;
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="mainbanner_wrap">
+		<div class="mainbanner">
+			<ul>
+				<li><a href="#" title="새창열림"><img src="img/main_banner01.jpg"alt=""></a></li>
+				<li><a href="#" title="새창열림"><img src="img/main_banner02.jpg"alt=""></a></li>
+				<li><a href="#" title="새창열림"><img src="img/main_banner03.jpg"alt=""></a></li>
+			</ul>
+		</div>
+		<ul class="mainbanner_player">
+			<li><a href="#"><img src="img/bnt_main_prev.png"alt="이전 배너 보기"></a></li>
+			<li><a href="#"><img src="img/btn_main_stop.png"alt="배너 정지"></a></li>
+			<li><a href="#"><img src="img/btn_main_play.png"alt="배너 자동 스크롤"></a></li>
+			<li><a href="#"><img src="img/bnt_main_next.png"alt="다음 배너 보기"></a></li>
+		</ul>
+
+		<!--구현전-->
+		<ul class="btn_mainbanner">
+			<li class='on'><a href="#">1번 이벤트</a></li>
+			<li><a href="#">2번 이벤트</a></li>
+			<li><a href="#">3번 이벤트</a></li>
+		</ul>
+
+	</div>
+</body>
+</html>

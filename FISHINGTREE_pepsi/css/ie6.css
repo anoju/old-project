@@ -1,0 +1,9 @@
+*header{
+		width:120px;height:100%;background:#114a83;display:block;z-index:2;
+		position: absolute; left: 0px; top: 0px;
+		left: expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+		top: expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );		
+}
+
+nav ul li.over-ie6, nav ul li.now-ie6{background:url('/img/menu_over.j') no-repeat 0 0}
+nav ul li.over-ie6 a, nav ul li.now-ie6 a{color:#fff}

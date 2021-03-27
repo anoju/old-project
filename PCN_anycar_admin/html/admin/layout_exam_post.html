@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" itemscope="itemscope" itemtype="http://schema.org/WebPage" lang="ko"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>스타일가이드 | 애니카서비스</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="../../static/css/component.css" media="handheld, all">
+	<link rel="stylesheet" href="../../static/css/style.css" media="all">
+
+	<!-- Le supporter -->
+	<script src="../../static/js/lib/modernizr-2.6.2.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+	<script>window.jQuery || document.write('<script src="../../static/js/lib/jquery-1.8.2.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script src="../../static/js/lib/jquery-ui-1.9.0.min.js"><\/script>')</script>
+</head>
+
+<body>
+<div id="wrap">
+	<header id="header">
+		<div class="brand">
+			<h1><a href="#">애니카 서비스 운영자 시스템</a></h1>
+		</div>		
+
+		<div class="user-info">
+			<strong>Superadmin</strong> <span>님의 최종 접속일 </span>
+			<span class="time">2013.06.12 01:43</span>
+			<a href="#" class="btn-logout"><img src="../../static/img/common/header/btn_logout.png" alt="LogOut" /></a>
+		</div>
+		<nav id="gnb">
+			<ul>
+				<li>
+					<a href="#"><img src="../../static/img/common/header/gnb_01_off.gif" alt="회사소개" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="../../static/img/common/header/gnb_02_off.gif" alt="인재채용" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="../../static/img/common/header/gnb_03_off.gif" alt="미디어센터" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="../../static/img/common/header/gnb_04_off.gif" alt="고객센터" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="../../static/img/common/header/gnb_05_off.gif" alt="네트웍" /></a>
+				</li>
+				<li class="on"> <!-- [D] on class, 이미지 _on 교체 -->
+					<a href="#"><img src="../../static/img/common/header/gnb_06_on.gif" alt="메인 관리" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="../../static/img/common/header/gnb_07_off.gif" alt="운영자 관리" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="../../static/img/common/header/gnb_08_off.gif" alt="사이트 관리" /></a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<aside id="subMenuWrap">
+		<nav id="lnb">
+			<h2><img src="../../static/img/common/title/titC.gif" alt="미디어 센터" /></h2>
+			<ul>
+				<li class="on"> <!-- [D] on class -->
+					<a class="on" href="#">메뉴 1</a>
+					<ul>
+						<li><a href="#">서브메뉴 1</a></li>
+						<li class="on"><a href="#">서브메뉴 2</a></li>
+						<li><a class="on" href="#">서브메뉴 3</a></li>
+						<li><a href="#">서브메뉴 4</a></li>
+					</ul>	
+				</li>
+				<li>
+					<a href="#">메뉴 2</a>
+					<ul>
+						<li><a href="#">서브메뉴 1</a></li>
+						<li><a href="#">서브메뉴 2</a></li>
+						<li><a href="#">서브메뉴 3</a></li>
+						<li><a href="#">서브메뉴 4</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">메뉴 3</a>
+					<ul>
+						<li><a href="#">서브메뉴 1</a></li>
+						<li><a href="#">서브메뉴 2</a></li>
+						<li><a href="#">서브메뉴 3</a></li>
+						<li><a href="#">서브메뉴 4</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">메뉴 4</a>
+					<ul>
+						<li><a href="#">서브메뉴 1</a></li>
+						<li><a href="#">서브메뉴 2</a></li>
+						<li><a href="#">서브메뉴 3</a></li>
+						<li><a href="#">서브메뉴 4</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</aside>
+
+
+	<!-- Content -->
+	<section id="contentWrap">
+		<p id="location">
+			<span class="home">Home</span> <span class="depth">&gt;</span>
+			<span>미디어센터</span> <span class="depth">&gt;</span>
+			<span>매거진</span> <span class="depth">&gt;</span>
+			<span class="current">뉴스</span>
+		</p>
+
+		<h1> <!-- [D] noshadow class -->
+			<img src="../../static/img/common/title/titC01.gif" alt="뉴스" />
+		</h1>
+		<div class="content">
+			
+			<form action="">				
+				<div class="bbsPost">
+					<fieldset>
+						<legend>Posting</legend>
+
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><label for="postDate">등록일</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<input type="text" class="inputBox inputDisable" value="2013-06-31" readonly="readonly" />
+							</div>	
+						</div>
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><em class="must">*</em><label for="subject">제목</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<input type="text" id="subject" class="inputBox" value="" required="required" style="width:100%" />
+							</div>	
+						</div>
+						
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><label for="test">두 단짜리</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<input type="password" id="test" class="inputBox" value="" required="required" />
+							</div>
+
+							<div class="column2"> <!-- 우측 column-->
+								<div class="table-cell table-th">
+									<div><label for="test">두 단짜리</label></div>
+								</div>
+								<div class="table-cell table-td">
+									<input type="password" id="test" class="inputBox" value="" required="required" />
+								</div>
+							</div>
+
+						</div>
+
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><em class="must">*</em><label for="oldPWD">기존 비밀번호</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<input type="password" id="oldPWD" class="inputBox" value="" required="required" />
+								<span class="input-helper helper"> ※ 6~16자리 숫자, 영문 대소문자, 특수문자 사용</span>
+							</div>	
+						</div>
+
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><label for="forThumbPC">PC Web<br />썸네일 이미지</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<div class="previewThumb">
+									<img src="../../static/img/@thumb.jpg" alt="애니카 서비스 기본 썸네일" />
+								</div>
+								<div class="thumbHelper helper">
+									<p>이미지 사이즈 000x000 pixel</p>
+									<p>파일 형식 Gif, Bmp, JPG, PNG</p>
+									<p>업로드 가능 이미지 용량 : 000 MB</p> 
+									<p>기본 배너 이미지입니다.</p>
+								</div>
+								<div class="thumbAlter">
+									<p>● 이미지용 대체 텍스트</p>
+									<textarea id="forThumbPC" class="textarea" cols="50" rows="6" >대체 텍스트</textarea>
+								</div>
+								<hr />
+								<input type="text" id="attachThumb1" class="inputBox" value="" title="PC 썸네일" /> 
+								<button class="btnRound"><span>찾아보기</span></button>
+								<button class="btnRound btnRoundBlack"><span>업로드</span></button>
+							</div>	
+						</div>
+
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><label for="forThumbMobile">Mobile Web<br />썸네일 이미지</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<div class="previewThumb">
+									<img src="../../static/img/@thumb.jpg" alt="애니카 서비스 기본 썸네일" />
+								</div>
+								<div class="thumbHelper helper">
+									<p>이미지 사이즈 000x000 pixel</p>
+									<p>파일 형식 Gif, Bmp, JPG, PNG</p>
+									<p>업로드 가능 이미지 용량 : 000 MB</p> 
+									<p>기본 배너 이미지입니다.</p>
+								</div>
+								<div class="thumbAlter">
+									<p>● 이미지용 대체 텍스트</p>
+									<textarea id="forThumbMobile" class="textarea" cols="50" rows="6" >대체 텍스트</textarea>
+								</div>
+								<hr />
+								<input type="text" id="attachThumb2" class="inputBox" value="" title="PC 썸네일" /> 
+								<button class="btnRound"><span>찾아보기</span></button>
+								<button class="btnRound btnRoundBlack"><span>업로드</span></button>
+							</div>	
+						</div>
+
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><label for="attach">첨부파일</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<input type="text" id="attach" class="inputBox" value=""  title="첨부파일" /> 
+									<button class="btnRound"><span>찾아보기</span></button>
+									<button class="btnRound btnRoundBlack"><span>업로드</span></button>
+							</div>	
+						</div>
+
+
+
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><em class="must">*</em><label for="textarea">상세내용</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<textarea id="textarea" class="textarea" cols="50" rows="6">회사소개 관리 나모 크로스에디터 적용 부분</textarea>
+							</div>	
+						</div>
+
+
+
+
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><label for="dpArticle">리스트 노출여부</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<label class="radio">
+									<input type="radio" id="dpArticle" name="dpArticle" checked="checked" />
+									노출
+								</label>
+								<label class="radio">
+									<input type="radio" name="ndpArticle" />
+									숨김
+								</label>
+
+
+								<span class="input-helper">노출순서</span>
+								<select class="select withBtn">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+								</select>
+								<span class="input-helper">번째</span>
+								<span class="input-helper helper">별도 설정을 하지 않을 경우 첫 번째 노출이 Default로 지정됩니다.</span>
+							</div>	
+						</div>
+
+						<div class="postItem">
+							<div class="table-cell table-th">
+								<div><label for="dpMain">PC Web<Br />메인 노출 여부</label></div>
+							</div>
+							<div class="table-cell table-td">
+								<label class="radio">
+									<input type="radio" id="dpMain" name="dpMain" checked="checked" />
+									노출
+								</label>
+								<label class="radio">
+									<input type="radio" name="ndpMain" />
+									숨김
+								</label>
+							</div>	
+						</div>
+
+					</fieldset>
+				</div>
+				<div class="bbsPostHandle">
+					<input type="image" class="btnImg" src="../../static/img/common/btn_save.png" alt="저장" />
+					<button class="btnImg"><img src="../../static/img/common/btn_cancle.png" alt="취소" /></button>
+
+					<a href="#list" class="btnImg pull-right"><img src="../../static/img/common/btn_list.png" alt="목록" /></a>
+
+				</div>
+			</form>
+				
+		</div>
+	</section>
+	<!-- / Content -->
+
+
+	
+</div>
+
+<footer id="footer">
+	<div>
+		<p>Copyright © 2013 Samsung Anycar Service. All rights reserved.</p>
+	</div>
+</footer>
+
+
+<script src="../../static/js/plugins.js"></script>
+<script src="../../static/js/main.js"></script>
+</body>
+</html>
+

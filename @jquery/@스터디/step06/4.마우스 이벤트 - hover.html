@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+div.out {
+width:40%;
+height:120px;
+margin:0 15px;
+background-color:#D6EDFC;
+float:left;
+}
+div.in {
+width:60%;
+height:60%;
+background-color:#FFCC00;
+margin:10px auto;
+}
+p {
+line-height:1em;
+margin:0;
+padding:0;
+}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script>
+	$(function(){	
+	    var n = 0;
+	    $("div.enterleave").hover(function(){
+	      $("p:first",this).text("mouse enter");
+	      $("p:last",this).text(++n);
+	    },function(){
+	      $("p:first",this).text("mouse leave");
+	    });
+	})
+</script>
+</head>
+<body>
+	<div class="out enterleave">
+		<p>move your mouse</p>
+	    <div class="in enterleave">
+	    	<p>move your mouse</p>
+	        <p>0</p>
+	    </div>
+	    <p>0</p>
+	</div>
+</body>
+</html>

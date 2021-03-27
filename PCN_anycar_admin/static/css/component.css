@@ -1,0 +1,528 @@
+@charset "utf-8";
+@import url('normalize.css');
+
+/* ==========================================================================
+   Component Style
+   ========================================================================== */
+
+/* Typo & Color */
+body {margin:0; padding:0; font:normal 12px/1.5 Dotum; color:#666;}
+.subTitle {}
+.must {color:#E34098}
+.helper {color:#D8946D}
+
+/* utility */
+.pull-left {float:left;}
+.pull-right {float:right}
+.clear {clear:both}
+.bold{font-weight:bold}
+.text-left {text-align:left;}
+.text-right {text-align:right;}
+/* 
+*  Buttons 
+*/
+/* 이미지 버튼 */
+.btnImg {display:inline-block; vertical-align:middle; padding:0; cursor:pointer; border:none; background:none;}
+
+/* 라운드 버튼 */
+.btnRound {display:inline-block; vertical-align:middle; padding:0 0 0 10px; height:25px; text-decoration:none; cursor:pointer; border:none; background:#92A4BF url(../img/common/bg_btn_round_gray.png) 0 0 no-repeat;}
+.btnRound span {display:block; padding-right:10px; font:normal 12px/25px Dotum; color:#FFF; background:#92A4BF url(../img/common/bg_btn_round_gray.png) right 0 no-repeat;}
+
+.btnRound.btnRoundBlack {background:#545454 url(../img/common/bg_btn_round_black.png) 0 0 no-repeat;}
+.btnRound.btnRoundBlack span {background:#545454 url(../img/common/bg_btn_round_black.png) right 0 no-repeat;}
+.btnRound.btnRoundRed{padding-right: 10px;color:#fff;background:#ff4716;-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius: 4px;}
+
+/* 사각형 버튼 */
+.btnSquare {display:inline-block; vertical-align:middle; padding:0 8px; height:21px; text-decoration:none; cursor:pointer; border:none; background:#92A4BF;}
+.btnSquare span {display:block; font:normal 12px/21px Dotum; color:#FFF; background:#92A4BF;}
+
+.btnSquare.btnSquareBlack {background:#545454}
+.btnSquare.btnSquareBlack span {background:#545454} 
+
+/*기타버튼*/
+.noBtn{border:0 none; background:none;}/*텍스트 버튼*/
+
+/* 
+*  icon 
+*/
+/*icon*/
+.iconRed{display:inline-block;padding:3px 7px 2px;color:#fff;background:#ff4716;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+.iconGray{display:inline-block;padding:3px 7px 2px;background:#dfe3e9;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+
+/*tableIcon*/
+span[class ^= tblIcon]{display:inline-block;padding:3px 0x 2px;width:113px; text-align:center;}
+.tblIcon01{color:#fff;background:#92a4bf;}
+.tblIcon02{background:#dfe3ea;}
+.tblIcon03{color:#fff;background:#ff4716;}
+.tblIcon04{background:#ffca00;}
+
+
+
+/*
+* 폼 
+*/
+/* 인라인 텍스트 */
+.input-helper {display:inline-block; vertical-align:middle; margin:0 5px; height:23px ;line-height:25px;}
+
+/* 셀렉트박스*/
+.select {width:209px; height:25px; vertical-align:middle; padding:0; line-height:25px; color:#666; border:1px solid #ababab;}
+.select.withBtn {width:79px; height:21px; margin-right:2px; line-height:21px;}
+input.select.withBtn { padding-left:5px; }
+.ie8 .select, .ie7 .select {height:25px; padding:1px 0;}
+.select option {}
+.select + .select{/*margin-left:5px*/}
+
+/* 인풋박스 */
+select.inputBox { padding:0px; }
+.inputBox {width:209px; height:23px; vertical-align:middle; padding:0 8px; line-height:23px; color:#666; border:1px solid #ababab; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;}
+.inputDisable {color:#666; font-weight:bold; font-family:Dotum;border:none;background:none;}
+.orderNum {width:39px; text-align:center;}
+
+/* 복합 인풋그룹 */
+.inline-dash {display:inline-block; vertical-align:middle; height:21px; width:19px; text-align:center; line-height:27px;}
+.inputGroup .select {width:69px;}
+.inputGroup .inputBox {width:51px;}
+
+/* 텍스트박스 */
+.textarea {padding:7px 8px; font:normal 12px/1.5 Dotum; color:#666; border:1px solid #ababab;}
+
+/* 라디오, 체크박스 */
+.radio, .checkbox {display:inline-block; vertical-align:middle; margin:0 8px; height:20px; font:normal 12px/1.5 Dotum; cursor:pointer;}
+.radio input, .checkbox input {float:left; display:inline-block; vertical-align:middle; margin:2px 6px 0 0; line-height:5;} 
+.ie7 .radio input, .ie7 .checkbox input {margin-top:3px}
+
+/* 우측 column */
+.column2 {float:right; width:500px}
+
+
+/*
+* 캘린더
+*/
+.schedule {position:relative;display:inline-block;/*margin-right:17px*/}
+.schedule + .btnRound{margin-left:17px;}
+.inputSchedule {margin-right:6px; width:85px;}
+
+.schedule-dual {}
+.schedule-dual .inputSchedule-from {margin-right:-5px; width:85px; border-right:none}
+.schedule-dual .inputSchedule-to {margin:0 5px 0 -5px; width:85px; border-left:none}
+.schedule-dual .inline-dash {border-top:1px solid #ababab; border-bottom:1px solid #ababab; background:#FFF;}
+
+.calendarBox {position:absolute; z-index:10; width:254px; height:248px; background:url(../img/common/bg_calendar.png) no-repeat;}
+.calendarBox.single {left:-18px; top:12px;}
+.calendarBox.dual {left:-24px; top:12px; width:472px; background:url(../img/common/bg_calendar_dual.png) no-repeat;}
+	.calendarInner {position:absolute; top:30px; left:21px; width:212px; height:193px; background:#5a778d;}
+	.calendarInner.second-calendarInner {left:239px;}
+		.calendarInner .header {position:absolute; left:32px; top:8px; width:149px; height:27px; background:url(../img/common/bg_calendar_select.png) no-repeat;}
+		.calendarInner .header .year {position:absolute; width:78px; height:27px;}
+		.calendarInner .header .year input {margin:3px 0 0 12px; width:45px; font:normal 16px/1.1 Arial; color:#FFF; border:none; background:#50697e;}
+		.calendarInner .header .year .btnUp {position:absolute; right:0; top:0;width:17px; height:12px; font-size:0;line-height:0; border:none; background:transparent;}
+		.calendarInner .header .year .btnDown {position:absolute; right:0; bottom:0; width:17px; height:12px; font-size:0;line-height:0; border:none; background:transparent;}
+		.calendarInner .header .month {position:absolute; right:0; width:59px; height:27px;}
+		.calendarInner .header .month input {margin:3px 0 0 12px; width:29px; font:normal 16px/1.1 Arial; color:#FFF; border:none; background:#50697e;}
+		.calendarInner .header .month .btnUp {position:absolute; right:0; top:0;width:17px; height:12px; font-size:0;line-height:0; border:none; background:transparent;}
+		.calendarInner .header .month .btnDown {position:absolute; right:0; bottom:0; width:17px; height:12px; font-size:0;line-height:0; border:none; background:transparent;}
+		
+		.calendar {padding-top:42px;width:212px;}
+		.calendar table {display:block; border:none; border-collapse:collapse; background:#FFF}
+			.calendar caption {position:absolute; top:-9999px}
+			.calendar thead {display:none}
+			.calendar th {color:#534b3a; border:1px solid #d5d5d5; background:#FFF;}
+			.calendar td {vertical-align:top; height:22px; color:#666; border:1px solid #eaeaea;}
+			.calendar .sun {color:#f05435; border-left:none;}
+			.calendar .sat {color:#1c3257; border-right:none;}
+			.calendar .today {color:#FFF; background:#b2b2b2;}
+			.calendar .active {color:#FFF; background:#1CADE4;}
+			.calendar td div {padding:3px 0 0; text-align:center; }
+			.calendar td div.ext {color:#c4c4c4;}
+			.calendar td div.schedule-info {position:absolute; width:50px; height:15px; font-size:13px; line-height:1; padding:0; text-align:center;}
+			.calendar td div.schedule-info i {}
+
+
+
+/* jqueryUI css override */
+.ui-widget-content {border:none}
+.ui-datepicker .ui-datepicker-header {padding:0; border:none}
+.ui-widget-header .ui-icon {background:none}
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon {background:none}	
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {border:none;}
+.ui-datepicker th {padding:0;}
+.ui-datepicker td {padding:0;}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {border:none;background:none;}
+.ui-datepicker td span, .ui-datepicker td a {padding:0;text-align:center;text-decoration:none;}
+.ui-corner-all,.ui-corner-top,.ui-corner-left,.ui-corner-tl {border-top-left-radius:0;}
+.ui-corner-all,.ui-corner-top,.ui-corner-right,.ui-corner-tr {border-top-right-radius: 0;}
+.ui-corner-all,.ui-corner-bottom,.ui-corner-left,.ui-corner-bl {border-bottom-left-radius: 0;}
+.ui-corner-all,.ui-corner-bottom,.ui-corner-right,.ui-corner-br {border-bottom-right-radius: 0;}
+
+/* jQueryUI Datepicker override */
+.ui-datepicker-trigger {cursor:pointer}
+.ui-datepicker {display:block; width:233px; margin:-13px 0 0 -25px; padding:0 0 0 21px; background:url(../img/common/bg_calendar.png) no-repeat;}
+	.ui-datepicker .ui-datepicker-header {position:relative; margin-top:30px; width:212px; height:40px; background:url(../img/common/bg_calendar_header.png) no-repeat;}
+		.ui-datepicker .ui-datepicker-header .ui-datepicker-title {font:normal 16px/1.1 Arial; color:#FFF; }
+		.ui-datepicker .ui-datepicker-header .ui-datepicker-month {position:absolute; left:130px; top:13px;}
+		.ui-datepicker .ui-datepicker-header .ui-datepicker-year {position:absolute; left:64px; top:13px;}
+
+		.ui-datepicker .ui-datepicker-prev {position:absolute; left:14px; top:12px; width:20px; height:20px; cursor:pointer; background:url(../img/common/btn_cal_prev.png) 50% 50% no-repeat}
+		.ui-datepicker .ui-datepicker-next {position:absolute; right:14px; top:12px; width:20px; height:20px; cursor:pointer; background:url(../img/common/btn_cal_next.png) 50% 50% no-repeat}
+		.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {display:inline-block;text-indent:-999px}
+
+	.ui-datepicker .ui-datepicker-calendar {display:block; table-layout:fixed; margin-bottom:30px;width:206px; height:148px; border-collapse:collapse; background:#FFF; border:3px solid #5a778d; }
+	.ui-datepicker .ui-datepicker-calendar caption {position:absolute; top:-9999px}	
+			.ui-datepicker .ui-datepicker-calendar thead {}
+			.ui-datepicker .ui-datepicker-calendar th {width:30px; height:20px; color:#534b3a; font-weight:normal; border:1px solid #d5d5d5; background:#FFF;}
+			.ui-datepicker .ui-datepicker-calendar td {vertical-align:top; color:#666; text-align:center; border:1px solid #eaeaea;}
+			.ui-datepicker .ui-datepicker-calendar td a {display:block; height:20px; font-weight:normal; color:#666; text-decoration:none}
+			.ui-datepicker .ui-datepicker-calendar .ui-datepicker-today {background:#b2b2b2;}
+			.ui-datepicker .ui-datepicker-calendar .ui-datepicker-today a {color:#FFF;}
+			.ui-datepicker .ui-datepicker-calendar td:hover {color:#FFF; background:#1CADE4;}
+			.ui-datepicker .ui-datepicker-calendar td:hover a {color:#FFF;}
+
+	
+
+/*
+* 테이블
+*/
+/* bbs POST */
+.bbsPost {background:#FFF; border-bottom:4px solid #e4e4e4;}
+.bbsPost legend {display:none}
+
+.bbsPost .postItem {display:table; width:100%; padding:3px; min-height:41px; border:1px solid #eaeaea; border-top:none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;}
+.bbsPost .postItem:first-child {border-top:1px solid #eaeaea;}
+.bbsPost .postItem .table-cell {display:table-cell; vertical-align:middle;}
+.bbsPost .postItem .table-th {width:150px; font-weight:bold; background:#f3f3f3}
+	.bbsPost .postItem .table-th > div {margin:8px 0 5px 13px;}
+	.bbsPost .postItem .table-th > div .check{float:right;padding:10px 9px;height:13px;margin:0;background:#e8e8e8;margin-top: -7px;}
+
+.bbsPost .postItem .table-td {/*padding:5px 7px 4px 6px;*/padding:5px 15px 4px;}
+.bbsPost .postItem.col2 .table-td {width:446px} /*채용관리자에서 2단 표시할때 사용*/
+	.bbsPost .previewThumb {display:inline-block; vertical-align:bottom; margin-right:7px; padding:4px; border:1px solid #ababab;}
+	.bbsPost .thumbHelper {display:inline-block;vertical-align:bottom;}
+	.bbsPost .thumbHelper > p {margin:.4em 0;}
+	.bbsPost .thumbAlter {float:right; display:inline-block;vertical-align:bottom;}
+	.bbsPost .thumbAlter > p {font-weight:bold}
+	.bbsPost .thumbAlter > textarea {width:332px; height:112px}	
+	.bbsPost .btnArea{margin:15px 0;overflow:hidden}
+	.bbsPost hr {width:100%;margin:7px 0; border-top: 1px solid #eaeaea;}
+
+	.bbsPostHandle {margin:30px 0; text-align:center;overflow:hidden;}
+	.searchHandle {margin:10px 0; text-align:right;}
+
+	.table-tit{font-weight:bold;margin-right:8px}
+	.table-tit span{margin-left:8px;font-weight:normal}
+	.table-comment{color:#d8946d}
+
+	.tableCheck .checkbox{width:123px;}
+/* bbs LIST */
+.bbsAction {margin-bottom:11px}
+.bbsList {width:100%; border-bottom:1px solid #49556f; background:#FFF;}
+	.bbsList caption {display:none}
+	.bbsList thead th {vertical-align:middle; padding:12px 0 8px; line-height:1.5; color:#FFF; background:#49556f; }
+	.bbsList thead th a {display:inline-block;padding-right:14px; color:#FFF; text-decoration:none; background:url(../img/common/ico_arr_down.png) right 50% no-repeat;}
+	.bbsList thead th a.up{background:url(../img/common/ico_arr_up.png) right 50% no-repeat;}
+	.bbsList tbody th {font-weight:normal; border-top:1px solid #e0e0e0;}
+	.bbsList tbody td {height:38px; padding:0 10px; border-top:1px solid #e0e0e0;}
+	.bbsList tbody td em {color:#666;font-style:normal; font-weight:bold;}
+	.bbsList tbody tr.on td,.bbsList tbody tr.on th{background:#f7f7f7}
+	
+	.bbsList tbody a {color:#1684f6; text-decoration:none;font-weight:bold}
+	.bbsList tbody a.blue {text-decoration:underline}
+	.bbsList tbody a.purple {color:#e33f98; text-decoration:underline}
+	.bbsList tbody .title{display: block;text-align:left;}
+	.bbsList tbody .title a {color:#666;font-weight:normal}
+	.bbsList tbody .purple{color:#e33f98; font-weight:bold}
+	.bbsList tbody:first-child th {border-top:none}
+	.bbsList tbody:first-child td {border-top:none}
+	.bbsList tfoot td {height:38px; padding:0 10px; border-top:4px solid #4a566e; font-weight:600 !important;}
+	.bbsList .checkTD {text-align:center;}
+	.bbsList .status-active {color:#e33f98;}
+	.bbsList .status-disable {}
+
+	.bbsList.type01 {}
+		.bbsList.type01 td {text-align:center;}
+	
+	.bbsList.type02 {}
+		.bbsList.type02 th.subject {padding-left:20px; text-align:left;}
+		.bbsList.type02 td.subject {text-align:left;}		
+		.bbsList.type02 td {height:111px; text-align:center;}
+		.bbsList.type02 td .date {font-weight:bold; color:#1684f6;}
+		.bbsList.type02 .listThumb {width:120px; height:91px; padding:1px; background:#FFF; border:1px solid #ababab}
+		.bbsList.type02 .listThumb img {max-width:120px; max-height:91px;}
+
+	.bbsListHandle {margin-top:28px}
+
+/*상세검색 관련*/
+.btnDetailArea{margin:20px 0 25px;float:left}
+.btnDetail{display:inline-block;width:102px;height:14px;text-indent:-999em;background:url(../img/common/btn_detail.gif) no-repeat left bottom}
+.btnDetail.close{background:url(../img/common/btn_detail.gif) no-repeat left top}
+
+.bbsPost.detailView{display:none;clear:both}
+.bbsPost.detailView + .bbsPostHandle{margin-top:10px;}
+
+
+/* Pagination */
+.pagination {padding-top:3px; text-align:center;}
+	.pagination .pageNav {font:normal 11px/1.1 Arial;}
+	.pagination .pageNav a {display:inline-block;padding:7px 9px 5px; text-decoration:none; color:#999; border:1px solid #ebebeb; background:#FFF;}
+	.pagination .pageNav span.current {display:inline-block;padding:7px 9px 5px; border:1px solid #ededed; color:#FFF; background:#1c7ce6;}
+	.pagination .pageNav a:hover {background:#f8f8f8;}
+	.pagination .pageNav a.util {}
+	.pagination .pageNav a.util:hover {background:#f1f1f1;}	
+	.pagination .pageNav a.first, .pagination .pageNav a.last {padding-top:5px; font-size:1.25em; line-height:1; }
+	.pagination .pageNav a.prev, .pagination .pageNav a.next  {font-size:0.96em;}
+	.pagination .pageNav a.prev {margin-right:9px;}
+	.pagination .pageNav a.next  {margin-left:9px;}
+
+/*단순테이블*/
+.table01 {width: 100%;border-bottom: 4px solid #e4e4e4;background: #FFF;}
+.table01 th, .table01 td{height: 38px;padding: 0 10px;border: 1px solid #e0e0e0;font-weight:normal}
+
+.table02{width: 100%;border-top: 2px solid #000;border-bottom: 1px solid #000;}
+.table02 th,.table02 td{height: 38px;padding: 0 10px;border-left: 1px solid #e0e0e0;border-right: 1px solid #e0e0e0;}
+.table02 thead th,.table02 tfoot td{font-weight:bold;background:#f3f3f3}
+.table02 tfoot td{text-align:right;border-top: 4px solid #e0e0e0;height: 34px;}
+.table02 tfoot td button{font-weight:bold;}
+.table02 thead th{border-bottom: 1px solid #92a4bf;}
+.table02 tbody th,.table02 tbody td{border-bottom: 1px solid #e0e0e0;background:#fff;text-align:center}
+.table02 .text-left{text-align:left}
+
+.table02 .schedule{margin-right:15px;}
+.table02 .select{width:70px}
+
+/*
+.bbsPost table {display:block; border-collapse:collapse; border:1px solid #eaeaea; }
+.bbsPost caption {display:none}
+.bbsPost table th { padding:2px; vertical-align:middle; text-align:left; border-top:1px solid #eaeaea;border-bottom:1px solid #eaeaea;}
+.bbsPost table td { padding:2px; border-top:1px solid #eaeaea;border-bottom:1px solid #eaeaea;}
+.bbsPost table th div {display:table-row; margin:3px; background:#f3f3f3}
+*/
+
+
+/*
+* 카테고리 관리
+*/
+/* categoryMenu */
+.categoryMenu{margin-top:8px;overflow:hidden;}
+.categoryMenu p{margin:0;}
+.categoryMenu .col2{width:50%;float:left;}
+.categoryMenu .col2 .bbsPost{border-left: 1px solid #e4e4e4;}
+.categoryMenu .col2 + .col2 .bbsPost{border-left: 0 none;border-right: 1px solid #e4e4e4;}
+.categoryMenu .bbsPost .postItem{border-right:0 none;border-left:0 none;padding: 3px 0 3px 3px;}
+.categoryMenu .bbsPost .postItem .table-td{padding:0}
+.categoryMenu .bbsPost .postItem .table-td>div{padding: 5px 7px 4px 6px;}
+.categoryMenu .bbsPost .postItem .table-td>div + div{border-top:1px solid #e4e4e4}
+.categoryMenu .choiceMenu{height:137px;overflow-y:auto;}
+/*.categoryMenu .choiceMenu p{padding:3px 0 3px 5px;margin-bottom: 3px;}
+.categoryMenu .choiceMenu p.on{color:#fff;background:#b0cbe5}*/
+.categoryMenu .choiceMenu ul{margin:0;padding:0}
+.categoryMenu .choiceMenu li{padding:3px 0 3px 5px;margin-bottom: 3px;list-style:none;cursor:pointer;}
+.categoryMenu .choiceMenu li.on{color:#fff;background:#b0cbe5}
+.categoryMenu .btnArea{margin-left:155px;margin-top:4px;overflow:hidden;}
+.categoryMenu .btnArea p{margin-bottom:13px;text-align:right}
+.categoryMenu .btnArea p button{width:66px;}
+
+/*
+* 탭메뉴
+*/
+/*tabMenu*/
+.tabMenu{padding-top:12px;padding-left:11px;margin-bottom:27px;background:url(../img/common/bgTabMenu.gif) no-repeat left top;}
+.tabMenu ul{margin:0;padding:0;overflow:hidden;}
+.tabMenu ul li{float:left;list-style:none;}
+.tabMenu ul li + li{margin-left:1px;}
+.tabMenu ul li a{display:block;width:172px;height:40px;background:url(../img/common/bgTabBtn.gif) no-repeat right top;text-align:center;line-height:40px;font-size:14px;color:#ffffff;font-weight:bold;text-decoration:none;}
+.tabMenu ul li.on a{background:url(../img/common/bgTabBtn.gif) no-repeat left top;color:#242527;}
+
+/*
+* 트리뷰
+*/
+/*tree*/
+.treeWrap{overflow:hidden;padding:20px 0}
+.treeWrap .tree{width:22%;padding-left:3%;float:left}
+.tree p{margin:0;height: 14px;}
+.tree ul{margin:0;padding:0;padding:17px 0;background:url(../img/common/bg_treeUl.gif) no-repeat 14px 0px;}
+.tree li{list-style:none;padding-left:20px;background:url(../img/common/bg_tree.gif) no-repeat 14px -17px;}
+	.tree li.last{background-position: 14px -242px;}
+.tree>p>label{font-weight:bold}
+
+
+/* ==========================================================================
+   JCarousel
+   ========================================================================== */
+.jcarousel-skin {overflow:hidden; height:78px;}
+.jcarousel-skin li {float:left;}
+.jcarousel-skin .jcarousel-item {
+	border:1px solid transparent;
+	filter: url(filters.svg#gray); /* Gecko and FF*/
+	filter: gray; /* IE */
+	-moz-filter: grayscale(1);
+	-ms-filter: grayscale(100%); 
+	 -o-filter: grayscale(100%); /* Not yet supported in Gecko, Opera or IE  */
+	-webkit-filter: grayscale(1); /* Old WebKit */
+}
+.jcarousel-skin .jcarousel-item a {display:block;}
+.jcarousel-skin .jcarousel-item img, .jcarousel-skin .jcarousel-item iframe {display:block; margin:0 auto; width:105px; height:76px;}
+
+.jcarousel-skin .jcarousel-item.current {
+	border-width:2px;
+	border-color:#198cf7;
+	width:103px; height:74px;
+	filter: none;
+	-moz-filter: none;
+	-ms-filter: none; 
+	 -o-filter: none; /* Not yet supported in Gecko, Opera or IE  */
+	-webkit-filter: none; /* Old WebKit */
+}
+.jcarousel-skin .jcarousel-item.current img, .jcarousel-skin .jcarousel-item.current iframe {width:103px; height:74px;}
+
+
+
+.jcarousel-skin .jcarousel-container {}
+.jcarousel-skin .jcarousel-direction-rtl {direction: rtl;}
+.jcarousel-skin .jcarousel-container-horizontal {padding:0 40px; width:auto;} /* item container */
+.jcarousel-skin .jcarousel-container-vertical {}
+.jcarousel-skin .jcarousel-clip {overflow: hidden;}
+.jcarousel-skin .jcarousel-clip-horizontal {width:100%; height:78px;}
+.jcarousel-skin .jcarousel-clip-vertical {}
+
+.jcarousel-skin .jcarousel-item {width:105px; height:76px; overflow:hidden;}
+.jcarousel-skin .jcarousel-item-horizontal {margin:0 1px 0 0;}
+.jcarousel-skin .jcarousel-direction-rtl .jcarousel-item-horizontal {margin-left: 10px; margin-right: 0;}
+
+.jcarousel-skin .jcarousel-item-vertical {margin-bottom: 10px;}
+.jcarousel-skin .jcarousel-item-placeholder {background:#fff; color: #000;}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin .jcarousel-next-horizontal {
+    position: absolute; top: 0; right: 0;
+    width: 35px; height: 78px; cursor: pointer;
+    background: transparent url(../img/common/nav/nav_next.gif) no-repeat 0 0;
+}
+.jcarousel-skin .jcarousel-direction-rtl .jcarousel-next-horizontal {
+    left:0; right: auto;
+    background-image: url(../img/common/nav/nav_prev.gif);
+}
+.jcarousel-skin .jcarousel-next-horizontal:hover,
+.jcarousel-skin .jcarousel-next-horizontal:active,
+.jcarousel-skin .jcarousel-next-horizontal:focus {
+    background-position: -46px 0;
+}
+.jcarousel-skin .jcarousel-next-disabled-horizontal,
+.jcarousel-skin .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin .jcarousel-next-disabled-horizontal:focus,
+.jcarousel-skin .jcarousel-next-disabled-horizontal:active {
+    cursor: default;
+    background-position: -92px 0;
+}
+
+.jcarousel-skin .jcarousel-prev-horizontal {
+    position: absolute; top: 0; left: 0; 
+    width: 35px; height: 78px; cursor: pointer;
+    background: transparent url(../img/common/nav/nav_prev.gif) no-repeat 0 0;
+}
+.jcarousel-skin .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+    left: auto; right: 0;
+    background-image: url(../img/common/nav/nav_next.gif);
+}
+
+.jcarousel-skin .jcarousel-prev-horizontal:hover, 
+.jcarousel-skin .jcarousel-prev-horizontal:active,
+.jcarousel-skin .jcarousel-prev-horizontal:focus {
+    background-position: -46px 0;
+}
+.jcarousel-skin .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin .jcarousel-prev-disabled-horizontal:focus,
+.jcarousel-skin .jcarousel-prev-disabled-horizontal:active {
+    cursor: default;
+    background-position: -92px 0;
+}
+
+/**
+ *  Vertical Buttons
+ */
+.jcarousel-skin .jcarousel-next-vertical {
+    position: absolute;
+    bottom: 5px;
+    left: 43px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(../img/common/nav/next-vertical.png) no-repeat 0 0;
+}
+
+.jcarousel-skin .jcarousel-next-vertical:hover,
+.jcarousel-skin .jcarousel-next-vertical:focus {
+    background-position: 0 -32px;
+}
+
+.jcarousel-skin .jcarousel-next-vertical:active {
+    background-position: 0 -64px;
+}
+
+.jcarousel-skin .jcarousel-next-disabled-vertical,
+.jcarousel-skin .jcarousel-next-disabled-vertical:hover,
+.jcarousel-skin .jcarousel-next-disabled-vertical:focus,
+.jcarousel-skin .jcarousel-next-disabled-vertical:active {
+    cursor: default;
+    background-position: 0 -96px;
+}
+
+.jcarousel-skin .jcarousel-prev-vertical {
+    position: absolute;
+    top: 5px;
+    left: 43px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(../img/common/nav/prev-vertical.png) no-repeat 0 0;
+}
+
+.jcarousel-skin .jcarousel-prev-vertical:hover,
+.jcarousel-skin .jcarousel-prev-vertical:focus {
+    background-position: 0 -32px;
+}
+
+.jcarousel-skin .jcarousel-prev-vertical:active {
+    background-position: 0 -64px;
+}
+
+.jcarousel-skin .jcarousel-prev-disabled-vertical,
+.jcarousel-skin .jcarousel-prev-disabled-vertical:hover,
+.jcarousel-skin .jcarousel-prev-disabled-vertical:focus,
+.jcarousel-skin .jcarousel-prev-disabled-vertical:active {
+    cursor: default;
+    background-position: 0 -96px;
+}
+
+
+
+
+/* ==========================================================================
+   IE fix
+   ========================================================================== */
+/* IE 6 fix*/
+
+/* IE 7 fix */
+/* bbsPost */
+.ie7 .bbsPost .previewThumb {float:left;display:block; vertical-align:bottom; margin-right:7px; margin-bottom:7px; padding:4px; border:1px solid #eaeaea;}
+.ie7 .bbsPost .thumbHelper {float:left;display:block;vertical-align:bottom;}
+.ie7 .bbsPost .thumbHelper > p {margin:.4em 0;}
+.ie7 .bbsPost .thumbAlter {float:right; display:block;vertical-align:bottom;}
+.ie7 .bbsPost .thumbAlter > p {font-weight:bold}
+.ie7 .bbsPost .thumbAlter > textarea {width:332px; height:112px}
+.ie7 .bbsPost hr {clear:both;width:100%;}
+
+
+/* IE 8 fix */
+.lt-ie8 .bbsPost table textarea {width:90%; padding:5%;}
+
+	

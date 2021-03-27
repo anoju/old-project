@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ko"> 
+<head>
+  <meta charset="utf-8" />
+  <title>site</title>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="jquery.easing.1.3.js"></script>
+  <style type="text/css">
+  * { margin:0; padding:0; }
+	/* .mainContents{overflow:hidden; background:url(images/main_bg01.jpg) no-repeat left top; height:10px; width:1260px; margin:0 auto; position:relative; min-width:1260px;} */
+	.mainContents{overflow:hidden; background:url(images/main_bg01.jpg) no-repeat left top; height:10px; width:1260px; margin:0 auto; position:relative; min-width:1260px;}
+	.mountainObj{  display:none; position:absolute; left:0; bottom:-120%; z-index:999}
+	.mainObj{position:absolute; left:556px; top:200px}
+	.mainTitle01{position:absolute; left:140px; top:200px;}
+	.mainTitle02{position:absolute; left:275px; top:245px;}
+	.mainTitle03{position:absolute; left:220px; top:380px;}
+	.mainTitle04{position:absolute; right:320px; top:250px; width:119px; height:119px; }
+	.mainTitle04 img { text-align:center;  vertical-align:middle; }
+	.mainTitle05{position:absolute; right:320px ; top:380px;}
+	.smObj{position:absolute; top:650px; right:108px; z-index:999}
+	.con { height:700px;background:#efefef}
+  </style>
+  <script type="text/javascript">
+	$(document).ready(function(){
+
+		var visWrap = $('.mainContents');
+		var mountain = $('.mountainObj');
+		var water = $('.mainObj');
+		var tit01 = $('.mainTitle01');
+		var tit02 = $('.mainTitle02');
+		var tit03 = $('.mainTitle03');
+		var tit04 = $('.mainTitle04');
+		var tit05 = $('.mainTitle05');
+
+		water.css('top',500);
+		tit01.hide();
+		tit02.css('left','-200%');
+		tit03.hide();
+		tit04.children().css('width', 0);
+		tit05.hide();
+		visWrap.delay(300).animate({'height' : 720},900, 'easeInOutQuad', function() {
+			mountain.show().animate({'bottom' : 0},700,'linear');
+			water.animate({'top' : 200},1200,'easeInOutBack', function() {
+				tit02.animate({'left' : 275},900, 'easeOutQuad', function() {
+					tit01.fadeIn(1200);
+					tit03.fadeIn(1200);	
+					tit04.children().animate({'width' : 119},900,'easeInQuint', function() {
+						tit05.fadeIn(700);
+					});
+				});
+			});
+		});
+	});
+
+</script>
+</head>
+
+<body>
+
+	<div class="mainContents">
+		<div class="mountainObj"><img src="images/mountain.png" alt="" /></div>
+		<div class="mainObj"><img src="images/newCon04.png" alt="백산수" /></div>
+		<div class="mainTitle01"><img src="images/newCon01.png" alt="하늘아래 첫물 저온 천연 화산암반수" /></div>
+		<div class="mainTitle02"><img src="images/newCon02.png" alt="백산수" /></div>
+		<div class="mainTitle03"><img src="images/newCon03.png" alt="백두산 백산수의 원수(原水)는 백두산이 품은 물로
+		백두산 천지물은 수백만 년에 걸쳐 형성된 화산암반층을 따라 흐릅니다. 그 오랜 세월을 견디면서 자연정화 되고, 몸에 이로운 각종 미네랄 성분을 품습니다. " /></div>
+		<div class="mainTitle04"><img src="images/newCon05.png" alt="인증마크" /></div>
+		<div class="mainTitle05"><img src="images/newCon06.png" alt="천연 미네랄이 적절히 함유되어 목넘김이 부드럽고 물 맛이 좋은 프리미엄 화산암반수 백산수" /></div>	
+	</div>
+	<div class="con"></div>
+
+ </body>
+</html>

@@ -1,0 +1,982 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr"/>
+	<title>금호건설</title>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<link rel="shortcut icon" href="http://www.kumhoenc.com/images/favicon.ico" type="image/x-icon">
+	<link type="text/css" rel="stylesheet" href="http://www.kumhoenc.com/css/common/common.css" media="screen" />	
+	<link type="text/css" rel="stylesheet" href="http://www.kumhoenc.com/css/common/layout.css" media="screen" />	
+	<link type="text/css" rel="stylesheet" href="http://www.kumhoenc.com/css/common/board.css" media="screen" />	
+	<link type="text/css" rel="stylesheet" href="http://www.kumhoenc.com/css/common/print.css" media="print" />
+	<link type="text/css" rel="stylesheet" href="http://www.kumhoenc.com/js/front/print-preview.css" media="screen" />	
+	<script type="text/javascript" src="http://www.kumhoenc.com/js/jquery-1.7.2.js"></script>
+	<script type="text/javascript" src="http://www.kumhoenc.com/js/front/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="http://www.kumhoenc.com/js/front/jquery.scrollTo-1.4.2-min.js"></script>
+	<script type="text/javascript" src="http://www.kumhoenc.com/js/front/jquery.filestyle.js"></script>
+	<script type="text/javascript" src="http://www.kumhoenc.com/js/front/jquery.selectbox-0.6.1.js"></script>
+	<script type="text/javascript" src="http://www.kumhoenc.com/js/front/jquery.bxSlider.min.js"></script>
+	<script type="text/javascript" src="http://www.kumhoenc.com/js/front/jquery.print-preview.js"></script>
+	<script type="text/javascript" src="http://www.kumhoenc.com/js/front/ui.kumho.js"></script>
+	<!--<script type="text/javascript">
+		 $(function() { 
+            $(this).bind("contextmenu", function(e) { 
+                e.preventDefault(); 
+            }); 
+
+			$("a").focus(function() {
+				$(this).blur();
+			});
+        }); 
+	</script>-->
+	<link type="text/css" rel="stylesheet" href="main.css">
+	<script type="text/javascript" src="ui.kumhoMain.js"></script>
+
+	<script type="text/javascript" src="http://www.kumhoenc.com/js/front/jquery.roundabout.js"></script>
+	<script type="text/javascript" src="http://www.kumhoenc.com/js/front//jquery.roundabout-shapes2.js"></script>
+	<script type="text/javascript" src="http://www.kumhoenc.com/js/cookie.js"></script>
+	<script type="text/javascript">
+		$(function(){			
+			
+			$('.topDepth[name=]').triggerHandler('click');
+			
+			$('.boxSell span.bgBox').fadeTo('slow',0.7);
+
+			$(".boxSell:gt(0)").hide();
+	
+			$(".boxSell .nextNews").click(function(e) {
+				e.preventDefault();
+				$(this).parents(".boxSell").hide();
+
+				var nextCnt = $(this).parents(".boxSell").next(".boxSell").length;
+
+				if (nextCnt > 0) {
+					$(this).parents(".boxSell").next(".boxSell").show();
+				} else {
+					$(".boxSell:first").show();
+				}
+			});
+
+			$(".boxSell .prevNews").click(function(e) {
+				e.preventDefault();
+				$(this).parents(".boxSell").hide();
+
+				var prevCnt = $(this).parents(".boxSell").prev(".boxSell").length;
+
+				if (prevCnt > 0) {
+					$(this).parents(".boxSell").prev(".boxSell").show();
+				} else {
+					$(".boxSell:last").show();
+				}
+			});
+			
+			$(".boxSell h2 a, .eullim_link").click(function(e) {
+				e.preventDefault();
+				var url = $(this).attr("href");
+
+				$("input[name=goPageURL]").val(url);
+				$("form[name=eullimForm]").submit();
+			});
+
+			
+		});
+
+		function resize_frame(obj) { 
+			var obj_document = obj.contentWindow.document; 
+			if(obj_document.height) { 
+			obj.style.height = obj_document.height; 
+			obj.style.width = obj_document.width; 
+			} else { 
+			obj.style.height = obj_document.body.scrollHeight; 
+			obj.style.width = obj_document.body.scrollWidth; 
+			}
+		}
+	</script>
+</head>
+<body class="index">
+
+	<div id="skipNaviMain">
+		<a href="#boxConWrap">본문 컨텐츠 바로가기</a>
+	</div>
+
+	<div id="mainWrap">
+	
+		<form name="eullimForm" action="http://www.khapt.co.kr/Index.asp" method="post" target="_blank">
+		<input type="hidden" name="goPageURL" />	
+		</form>
+		<!-- header : start -->
+		
+		<div id="skipNavi">
+			<a href="#content">본문 컨텐츠 바로가기</a>
+		</div>
+		
+		<div id="header">
+			
+			<p class="topLink">
+				<a href="http://www.kumhoenc.com/eng" target="_blank" title="새창열림" class="btnLang">English</a>
+				<a href="http://www.kumhoenc.com/etc/sitemap.asp">Sitemap</a>
+			</p>
+
+			<h1><a href="http://www.kumhoenc.com/main/index.asp"><img src="http://www.kumhoenc.com/images/common/gnb/topLogo.gif" alt="금호건설" /></a></h1>
+			<ul id="gnb">
+				<li>
+					<!--<span class="toMain"><a href="http://www.kumhoenc.com/main/index.asp?subM=boxCompany">메인</a></span>-->
+					<a href="http://www.kumhoenc.com/main/index.asp?subM=boxCompany" class="topDepth" name="boxCompany">회사소개</a>
+					<ul>
+						<li><a href="http://www.kumhoenc.com/company/about.asp">기업정보</a></li>
+						<li><a href="http://www.kumhoenc.com/company/greeting.asp">CEO인사말</a></li>
+						<li><a href="http://www.kumhoenc.com/company/vision.asp">기업비전</a></li>
+						<li>
+							<a href="http://www.kumhoenc.com/company/history.asp">연혁</a>
+							<div class="gnbSub">
+								<h2 class="sub01">연혁</h2>
+								<ul>
+									<li>
+										<a href="http://www.kumhoenc.com/company/history.asp">주요연혁</a>
+										<ul>
+											<li><a href="http://www.kumhoenc.com/company/historyF.asp">2010s</a></li>
+											<li><a href="http://www.kumhoenc.com/company/historyA.asp">2000s</a></li>
+											<li><a href="http://www.kumhoenc.com/company/historyB.asp">1990s</a></li>
+											<li><a href="http://www.kumhoenc.com/company/historyC.asp">1980s</a></li>
+											<li><a href="http://www.kumhoenc.com/company/historyD.asp">1970s</a></li>
+											<li><a href="http://www.kumhoenc.com/company/historyE.asp">1960s</a></li>
+										</ul>
+									</li>
+									<li><a href="http://www.kumhoenc.com/company/award.asp?def_code=3">수상실적</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="http://www.kumhoenc.com/company/org.asp">조직도</a></li>
+						<li>
+							<a href="http://www.kumhoenc.com/company/tech/labInfo.asp">기술혁신</a>
+							<div class="gnbSub">
+								<h2 class="sub01">기술혁신</h2>
+								<ul>
+									<li>
+										<a href="http://www.kumhoenc.com/company/tech/labInfo.asp">연구소 소개</a>
+										<ul>
+											<li><a href="http://www.kumhoenc.com/company/tech/labInfo.asp">개요</a></li>
+											<li><a href="http://www.kumhoenc.com/company/tech/history.asp">연혁&nbsp;</a></li>
+											<li><a href="http://www.kumhoenc.com/company/tech/certify.asp?def_code=60">인증서</a></li>
+											<li><a href="http://www.kumhoenc.com/company/tech/location.asp">오시는길</a></li> <!-- wed -->
+										</ul>
+									</li>
+									<li>
+										<a href="http://www.kumhoenc.com/company/tech/rndInfo01.asp">건축토목분야R&amp;D</a>
+										<ul>
+											<li><a href="http://www.kumhoenc.com/company/tech/rndInfo01.asp">개요&nbsp;</a></li>
+											<li><a href="http://www.kumhoenc.com/company/tech/system.asp">교량면진시스템</a></li>
+											<li><a href="http://www.kumhoenc.com/company/tech/strarch.asp">STRARCH공법</a></li>
+											<li><a href="http://www.kumhoenc.com/company/tech/environment.asp">친환경건축</a></li>
+											<li><a href="http://www.kumhoenc.com/company/tech/proof.asp">방수공법</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="http://www.kumhoenc.com/company/tech/rndInfo02.asp">환경분야R&amp;D</a>
+										<ul>
+											<li><a href="http://www.kumhoenc.com/company/tech/rndInfo02.asp">개요&nbsp;&nbsp;</a></li>
+											<li><a href="http://www.kumhoenc.com/company/tech/kidea.asp">KIDEA/KIDEA-XD</a></li>
+											<li><a href="http://www.kumhoenc.com/company/tech/kmbr.asp">K-MBR</a></li>
+											<li><a href="http://www.kumhoenc.com/company/tech/kumhoMbr.asp">KUMHO-MBR</a></li>
+											<li><a href="http://www.kumhoenc.com/company/tech/tech01.asp">막여과정수처리</a></li><!-- thu -->
+											<li><a href="http://www.kumhoenc.com/company/tech/tech02.asp">해수담수화</a></li>
+											<li><a href="http://www.kumhoenc.com/company/tech/tech03.asp">하수재이용</a></li>
+											<li><a href="http://www.kumhoenc.com/company/tech/tech04.asp">바이오가스</a></li>  
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="http://www.kumhoenc.com/company/manage/manageA01.asp">지속가능경영</a>
+							<div class="gnbSub">
+								<h2 class="sub01">지속가능경영</h2>
+								<ul>
+									<li>
+										<a href="http://www.kumhoenc.com/company/manage/manageA01.asp">윤리경영</a>
+										<ul>
+											<li><a href="http://www.kumhoenc.com/company/manage/manageA01.asp">윤리경영개요</a></li>
+											<!--<li><a href="http://www.kumhoenc.com/company/manage/manageA02.asp">7대실천과제</a></li> fri -->
+											<li><a href="http://www.kumhoenc.com/company/manage/manageA03.asp">사회공헌</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="http://www.kumhoenc.com/company/manage/manageB01.asp">품질경영</a>
+										<ul>
+											<li><a href="http://www.kumhoenc.com/company/manage/manageB01.asp">품질경영방침</a></li>
+											<li><a href="http://www.kumhoenc.com/company/manage/manageB02.asp">품질경영시스템</a></li>
+											<li><a href="http://www.kumhoenc.com/company/manage/manageB03.asp">품질경영활동</a></li>
+											<li><a href="http://www.kumhoenc.com/company/manage/manageB04.asp">수상및인증서</a></li> 
+										</ul>
+									</li>
+									<li>
+										<a href="http://www.kumhoenc.com/company/manage/manageC01.asp">안전경영</a>
+										<ul>
+											<li><a href="http://www.kumhoenc.com/company/manage/manageC01.asp">안전경영방침및목표</a></li>
+											<li><a href="http://www.kumhoenc.com/company/manage/manageC02.asp">안전보건경영체계</a></li>
+											<li><a href="http://www.kumhoenc.com/company/manage/manageC03.asp">안전보건활동</a></li>
+											<li><a href="http://www.kumhoenc.com/company/manage/manageC04.asp">수상및인증서&nbsp;</a></li><!-- mon -->
+										</ul>
+									</li>
+									<li>
+										<a href="http://www.kumhoenc.com/company/manage/manageD01.asp">환경경영</a>
+										<ul>
+											<li><a href="http://www.kumhoenc.com/company/manage/manageD01.asp">환경방침및목표</a></li>
+											<li><a href="http://www.kumhoenc.com/company/manage/manageD02.asp">환경경영시스템</a></li>
+											<li><a href="http://www.kumhoenc.com/company/manage/manageD03.asp">분야별 환경관리</a></li>
+											<li><a href="http://www.kumhoenc.com/company/manage/manageD04.asp">수상및인증서&nbsp;&nbsp;</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="http://www.kumhoenc.com/company/manage/manageE01.asp">상생경영</a>
+										<ul>
+											<li><a href="http://www.kumhoenc.com/company/manage/manageE01.asp">상생경영개요</a></li> 
+											<li><a href="http://www.kumhoenc.com/company/manage/manageE02.asp">소통적동반</a></li>
+											<li><a href="http://www.kumhoenc.com/company/manage/manageE03.asp">윤리적동반</a></li>
+											<li><a href="http://www.kumhoenc.com/company/manage/manageE04.asp">창조적동반</a></li><!-- tue -->  
+										</ul>
+									</li>																	<!-- wed 탭 + 이미지 + 2차수정 -->
+								</ul>
+							</div>
+						</li>
+						<li><a href="http://www.kumhoenc.com/company/group.asp">그룹소개</a></li>
+						<li><a href="http://www.kumhoenc.com/company/location.asp">찾아오시는길</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="http://www.kumhoenc.com/main/index.asp?subM=boxBusiness" class="topDepth" name="boxBusiness">사업분야</a>
+					<ul>
+						<li>
+							<a href="http://www.kumhoenc.com/business/businessList.asp?def_code=6&scategory=18">건축사업</a>
+							<div class="gnbSub">
+								<h2 class="sub02">건축사업</h2>
+								<ul>
+									<li><a href="http://www.kumhoenc.com/business/businessList.asp?def_code=6&scategory=18">공공/업무시설</a></li>
+									<li><a href="http://www.kumhoenc.com/business/businessList.asp?def_code=6&scategory=19">공항/판매/물류시설</a></li>
+									<li><a href="http://www.kumhoenc.com/business/businessList.asp?def_code=6&scategory=20">교육/연구시설</a></li>
+									<li><a href="http://www.kumhoenc.com/business/businessList.asp?def_code=6&scategory=33">문화/의료시설</a></li>
+									<li><a href="http://www.kumhoenc.com/business/businessList.asp?def_code=6&scategory=34">교정/군사시설</a></li>
+									<li><a href="http://www.kumhoenc.com/business/businessList.asp?def_code=6&scategory=35">해외공사</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="http://www.kumhoenc.com/business/businessList.asp?def_code=38&scategory=21">토목사업</a>
+							<div class="gnbSub">
+								<h2 class="sub02">토목사업</h2>
+								<ul>
+									<li><a href="http://www.kumhoenc.com/business/businessList.asp?def_code=38&scategory=21">공항</a></li>
+									<li><a href="http://www.kumhoenc.com/business/businessList.asp?def_code=38&scategory=22">도로</a></li>
+									<li><a href="http://www.kumhoenc.com/business/businessList.asp?def_code=38&scategory=23">철도</a></li>
+									<li><a href="http://www.kumhoenc.com/business/businessList.asp?def_code=38&scategory=24">택지/항만</a></li>
+									<li><a href="http://www.kumhoenc.com/business/businessList.asp?def_code=38&scategory=36">해외공사 </a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="http://www.kumhoenc.com/business/houseList.asp">주택사업</a>
+							<div class="gnbSub">
+								<h2 class="sub02">주택사업</h2>
+								<ul>
+									<li><a href="http://www.kumhoenc.com/business/houseList.asp?flag=1">아파트</a></li>
+									<li><a href="http://www.kumhoenc.com/business/houseList.asp?flag=2">주상복합</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="http://www.kumhoenc.com/business/businessList.asp?def_code=39&scategory=25">플랜트/환경사업</a>
+							<div class="gnbSub">
+								<h2 class="sub02">플랜트/환경사업</h2>
+								<ul>
+									<li><a href="http://www.kumhoenc.com/business/businessList.asp?def_code=39&scategory=25">발전</a></li>
+									<li><a href="http://www.kumhoenc.com/business/businessList.asp?def_code=39&scategory=26">에너지저장/공급</a></li>
+									<li><a href="http://www.kumhoenc.com/business/businessList.asp?def_code=39&scategory=27">석유화학</a></li>
+									<li><a href="http://www.kumhoenc.com/business/businessList.asp?def_code=39&scategory=31">산업</a></li>
+									<li><a href="http://www.kumhoenc.com/business/businessList.asp?def_code=39&scategory=37">환경</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="http://www.kumhoenc.com/business/businessSrch.asp">사업실적검색</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="http://www.kumhoenc.com/main/index.asp?subM=boxInvest" class="topDepth" name="boxInvest">투자정보</a>
+					<ul>
+						<li>
+							<a href="http://www.kumhoenc.com/invest/corpInfo01.asp">기업지배구조</a>
+							<div class="gnbSub">
+								<h2 class="sub03">기업지배구조</h2>
+								<ul>
+									<li><a href="http://www.kumhoenc.com/invest/corpInfo01.asp">회사개요</a></li>
+									<li><a href="http://www.kumhoenc.com/invest/corpInfo02.asp">주주에관한사항</a></li>
+									<li><a href="http://www.kumhoenc.com/invest/corpInfo03.asp">이사회및위원회</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="http://www.kumhoenc.com/invest/infoList.asp?def_code=11">경영정보</a>
+							<div class="gnbSub">
+								<h2 class="sub03">경영정보</h2>
+								<ul>
+									<li><a href="http://www.kumhoenc.com/invest/infoList.asp?def_code=11">일반공시</a></li>
+									<li><a href="http://www.kumhoenc.com/invest/reportList.asp">사업보고서</a></li>
+									<li><a href="http://www.kumhoenc.com/invest/creditInfo.asp">신용등급</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="http://www.kumhoenc.com/invest/benefit01.asp">재무정보</a>
+							<div class="gnbSub">
+								<h2 class="sub03">재무정보</h2>
+								<ul>
+									<li><a href="http://www.kumhoenc.com/invest/benefit01.asp">매출및이익추이</a></li>
+									<li><a href="http://www.kumhoenc.com/invest/benefit02.asp">요약재무제표</a></li>
+									<li><a href="http://www.kumhoenc.com/invest/benefit03.asp">재무제표</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="http://www.kumhoenc.com/invest/analystList.asp?def_code=13">IR</a>
+							<div class="gnbSub">
+								<h2 class="sub03">IR</h2>
+								<ul>
+									<li><a href="http://www.kumhoenc.com/invest/analystList.asp?def_code=13">Analyst보고서</a></li>
+									<li><a href="http://www.kumhoenc.com/invest/presentationList.asp">IR Presentation</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="http://www.kumhoenc.com/invest/stock01.asp">주가정보</a>
+							<div class="gnbSub">
+								<h2 class="sub03">주가정보</h2>
+								<ul>
+									<li><a href="http://www.kumhoenc.com/invest/stock01.asp">현재시세</a></li>
+									<li><a href="http://www.kumhoenc.com/invest/stock02.asp">시간대별시세</a></li>
+									<li><a href="http://www.kumhoenc.com/invest/stock03.asp">주가추이</a></li>
+									<li><a href="http://www.kumhoenc.com/invest/stock04.asp">외국인지분</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="http://www.kumhoenc.com/invest/contact.asp">IR Contact</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="http://www.kumhoenc.com/main/index.asp?subM=boxRecruit" class="topDepth" name="boxRecruit">인재채용</a>
+					<ul>
+						<li><a href="http://www.kumhoenc.com/recruit/recruit01.asp">인재상</a></li>
+						<li><a href="http://www.kumhoenc.com/recruit/recruit02.asp">인사제도</a></li>
+						<li><a href="http://www.kumhoenc.com/recruit/recruit03.asp">인재육성</a></li>
+						<li><a href="http://www.kumhoenc.com/recruit/newsList.asp">채용소식</a></li>
+						<li><a href="http://www.kumhoenc.com/recruit/step01.asp">채용문의</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="http://www.kumhoenc.com/main/index.asp?subM=boxPromote" class="topDepth" name="boxPromote">홍보센터</a>
+					<ul>
+						<li><a href="http://www.kumhoenc.com/promote/newsList.asp?def_code=18">금호뉴스</a></li>
+						<li><a href="http://www.kumhoenc.com/promote/sellList.asp">분양뉴스</a></li>
+						<li><a href="http://www.kumhoenc.com/promote/reportList.asp?def_code=19">언론보도자료</a></li>
+						<li><a href="http://www.kumhoenc.com/promote/ci.asp">CI/BI</a></li>
+						<li>
+							<a href="http://www.kumhoenc.com/promote/movieList.asp?mType=movieKor">PR갤러리</a>
+							<div class="gnbSub">
+								<h2 class="sub05">PR갤러리</h2>
+								<ul>
+									<li><a href="http://www.kumhoenc.com/promote/movieList.asp?mType=movieKor">홍보영화</a></li>
+									<li><a href="http://www.kumhoenc.com/promote/brochure.asp">홍보브로셔</a></li>
+									<li><a href="http://www.kumhoenc.com/promote/mediaList.asp?def_code=35">방송매체</a></li>
+									<li><a href="http://www.kumhoenc.com/promote/printList.asp?def_code=36">인쇄매체</a></li>
+									<li><a href="http://www.kumhoenc.com/promote/wallpaper.asp">월페이퍼</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="http://www.kumhoenc.com/promote/webzineList.asp?def_code=64">웹진어울림</a></li>
+						<li><a href="http://www.kumhoenc.com/promote/history.asp">금호역사관</a></li>
+					</ul>
+				</li>
+			</ul>
+		
+		</div>
+
+
+		<!-- header : end -->
+		
+		<div id="boxConWrap">
+			<div id="maskCon"></div>
+
+			<!-- ###### 전체메인 ###### -->
+			<div id="boxMain" class="boxCon">
+				<p><img src="http://www.kumhoenc.com/images/main/titMain.gif" alt="It's beautiful 건설계의 글로벌스탠다드 - 금호건설의 미래의 건축문화를 이끌어 갑니다" /></p>
+				
+				<!-- 금호뉴스 -->
+				<div class="boxNotice">
+					<h2>금호 News</h2>
+					<ul>
+
+						<li>
+							<a href="http://www.kumhoenc.com/promote/newsView.asp?def_code=18&bd_idx=799"><strong>[건설]</strong>파블로 9기를 모집합니다.</a>
+							<span>06.07</span>
+						</li>
+
+						<li>
+							<a href="http://www.kumhoenc.com/promote/newsView.asp?def_code=18&bd_idx=798"><strong>[건설]</strong>웹진 5월호 오픈</a>
+							<span>05.08</span>
+						</li>
+
+						<li>
+							<a href="http://www.kumhoenc.com/promote/newsView.asp?def_code=18&bd_idx=797"><strong>[건설]</strong>웹진 3월호 오픈</a>
+							<span>03.04</span>
+						</li>
+
+						<li>
+							<a href="http://www.kumhoenc.com/promote/newsView.asp?def_code=18&bd_idx=795"><strong>[건설]</strong>금호건설, 독거노인 찾아 봉사활동</a>
+							<span>02.06</span>
+						</li>
+
+						<li>
+							<a href="http://www.kumhoenc.com/promote/newsView.asp?def_code=18&bd_idx=796"><strong>[건설]</strong>중앙선 도담~영천복선전철 제6공구 ..</a>
+							<span>02.04</span>
+						</li>
+
+						<li>
+							<a href="http://www.kumhoenc.com/promote/newsView.asp?def_code=18&bd_idx=794"><strong>[건설]</strong>취업도, 기업문화 체험도 금호건설에..</a>
+							<span>01.07</span>
+						</li>
+
+					</ul>
+					<p class="pNavi"></p>
+				</div>
+				
+				<!-- 분양뉴스 -->
+				<div class="boxNews">
+					<h2 class="first"><a href="#tabNews01" class="on">분양중</a></h2>
+					<div id="tabNews01" class="tabBox">
+						<div class="imgNews">
+							<ul>
+
+								<li><a class="eullim_link" href="http://www.kumhoenc.com/01_Sale/NewApt_View.asp?EULIDX=236&prevPress=0&pressBt=1"><img src="http://www.khapt.co.kr/UpFile/Eullim/Base/Img_236_20120113171601531.jpg" alt="옥수 어울림 THE RIVER"  /></a></li>
+
+								<li><a class="eullim_link" href="http://www.kumhoenc.com/01_Sale/NewApt_View.asp?EULIDX=200&prevPress=0&pressBt=1"><img src="http://www.khapt.co.kr/UpFile/Eullim/Base/Img_200_20100910153402811.jpg" alt="신별내 퇴계원"  /></a></li>
+
+								<li><a class="eullim_link" href="http://www.kumhoenc.com/01_Sale/NewApt_View.asp?EULIDX=239&prevPress=0&pressBt=1"><img src="http://www.khapt.co.kr/UpFile/Eullim/Base/Img_239_20110607112601365.jpg" alt="안양호계동 어울림"  /></a></li>
+
+							</ul>
+						</div>
+						<div class="txtNews">
+							<ul>
+
+								<li><a class="eullim_link" href="http://www.kumhoenc.com/01_Sale/NewApt_View.asp?EULIDX=236&prevPress=0&pressBt=1"><span>옥수 어울림 THE RIVER</span>서울&nbsp;성동구&nbsp;옥수동 14번지외 97필지</a></li>
+
+								<li><a class="eullim_link" href="http://www.kumhoenc.com/01_Sale/NewApt_View.asp?EULIDX=200&prevPress=0&pressBt=1"><span>신별내 퇴계원</span>경기&nbsp;남양주시&nbsp;퇴계원면&nbsp;퇴계원리&nbsp;</a></li>
+
+								<li><a class="eullim_link" href="http://www.kumhoenc.com/01_Sale/NewApt_View.asp?EULIDX=239&prevPress=0&pressBt=1"><span>안양호계동 어울림</span>경기&nbsp;안양시 동안구&nbsp;호계동 837-5번지 외2필지</a></li>
+
+							</ul>
+						</div>
+						<p class="pNavi"></p>
+					</div>
+
+					<h2><a href="#tabNews02">분양예정</a></h2>
+					<div id="tabNews02" class="tabBox">
+						<div class="imgNews">
+							<ul>
+
+								<li><a class="eullim_link" href="http://www.kumhoenc.com/01_Sale/NewApt_View.asp?EULIDX=246&prevPress=0&pressBt=3"><img src="http://www.khapt.co.kr/UpFile/Eullim/Base/Img_246_20120410081315366.jpg" alt="돈암 어울림" /></a></li>
+
+							</ul>
+						</div>
+						<div class="txtNews">
+							<ul>
+
+								<li><a class="eullim_link" href="http://www.kumhoenc.com/01_Sale/NewApt_View.asp?EULIDX=246&prevPress=0&pressBt=3"><span>돈암 어울림</span>서울&nbsp;성북구&nbsp;돈암동 13-7번지외 일원</a></li>
+
+							</ul>
+						</div>
+						<p class="pNavi"></p>
+					</div>
+				</div>
+				
+				<!-- 주가정보 -->
+				<div class="boxStockWrap">
+
+					<!-- iframe 삽입영역 : start -->
+					<!-- width:430px; height:100px; -->
+					<iframe src="http://chart.mk.co.kr/stock/cp/new/kumho/smain1.php" title="주가정보 프레임" width="430" height="79" frameborder="0" scrolling="no"></iframe>
+					<!-- iframe 삽입영역 : end -->
+
+				</div>
+				
+				<!-- 서브메인 링크 -->
+				<div class="boxBizList01">
+					<ul>
+						<li>
+							<a href="http://www.kumhoenc.com/business/businessList.asp?def_code=6&scategory=18">
+								<strong>건축사업</strong>
+								<span>빌딩의 개발에서 도시의 개발로<br />이어지는 금호건설의 건축사업!</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.kumhoenc.com/business/businessList.asp?def_code=38&scategory=21">
+								<strong>토목사업</strong>
+								<span>도시와 국토의 핏줄을 잇는 토목기술은<br />한마디로 공간과 공간을 잇는 예술입니다</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.kumhoenc.com/business/houseList.asp">
+								<strong>주택사업</strong>
+								<span>전국 곳곳에서 신주거단지 조성으로<br />고객의 높은 신뢰를 얻어온 금호</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.kumhoenc.com/business/businessList.asp?def_code=39&scategory=25">
+								<strong>환경/플랜트</strong>
+								<span>산업발전의 기틀을 다지는 플랜트 사업</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				<!-- 배너 -->
+				<div class="boxBanner">
+					<a href="http://www.kumhoenc.com/recruit/newsList.asp"><img src="http://www.kumhoenc.com/images/banner/banner2012.gif" alt="상반기 경력사원 그룹공채 모집" /></a>
+				</div>
+				
+			</div>
+			<!--  ###### 전체메인 : END ###### -->
+
+			<!-- ###### 회사소개 메인 : START ###### -->
+			<div id="boxCompany" class="boxCon">
+				<p><img src="http://www.kumhoenc.com/images/main/titCompanyMain.gif" alt="사람과 자연이 어우러지다 - 금호건설은 사람과 자연이 어우러지는 건설철학을 펼쳐 나아갑니다" /></p>
+
+				<!--<ul class="boxCeo">
+					<li>
+						<a href="http://www.kumhoenc.com/company/greeting.asp">
+							<strong>CEO인사말</strong>
+							<span>금호건설 홈페이지를 방문해주신 여러분,<br />
+							환영합니다. 저는 금호건설의 CEO, 기옥사장입니다. </span>
+						</a>
+					</li>
+				</ul>-->
+				
+				<p><a href="http://www.kumhoenc.com/company/manage/manageA01.asp"><img src="http://www.kumhoenc.com/images/main/imgCompanyLink01.jpg" alt="지속가능경영[바로가기] - 품질+윤리+환경+상생+안전 , 지구촌을 위한 꿈의건설, 인류를 위한 미래 건설" /></a></p>
+				
+				<div class="boxBizList01">
+					<ul>
+						<li>
+							<a href="http://www.kumhoenc.com/company/history.asp">
+								<strong>주요연혁</strong>
+								<span>세계속의 한국, 한국속의 세계를 건설하기 위해<br />새천년의 초일류 기업으로 거듭 태어나겠습니다.</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.kumhoenc.com/company/tech/labInfo.asp">
+								<strong>기술혁신</strong>
+								<span>연구활동으로 기술 선진국의 꿈을 펼쳐가고<br />있습니다.금호의 최고의 기술력을 만나보세요</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				<p class="boxLink">
+					<img src="http://www.kumhoenc.com/images/main/imgCompanyLink02.gif" alt="조직안내 바로가기" /></a>
+					<!--<a href="http://www.kumhoenc.com/company/org.asp"><img src="http://www.kumhoenc.com/images/main/imgCompanyLink02.gif" alt="조직안내 바로가기" /></a>-->
+					<a href="http://www.kumhoenc.com/company/location.asp"><img src="http://www.kumhoenc.com/images/main/imgCompanyLink03.gif" alt="Contact us 바로가기" /></a>
+				</p>
+
+			</div>
+			<!--  ###### 회사소개 메인 : END ###### -->
+			
+			<!-- ###### 사업분야 메인 : START ###### -->
+			<div id="boxBusiness" class="boxCon">
+				<p><img src="http://www.kumhoenc.com/images/main/titBusinessMain.jpg" alt="글로벌넘버원에 도전합니다 - 전분야에 걸쳐 우수한 기술력을 바탕으로 쾌적한 생활을 이룩합니다" /></p>
+
+				<div class="boxBizList02">
+					<ul>
+						<li>			
+							<strong>건축사업</strong>
+							<div>
+								<p class="txt">빌딩의 개발에서 도시의 개발로 이어지는<br />금호건설의 건축사업!</p>
+								<p class="link">
+									<a href="http://www.kumhoenc.com/business/businessList.asp?def_code=6&scategory=18">공공/업무</a>
+									<a href="http://www.kumhoenc.com/business/businessList.asp?def_code=6&scategory=19">공항/판매/물류</a>
+									<a href="http://www.kumhoenc.com/business/businessList.asp?def_code=6&scategory=20">교육/연구</a>
+									<a href="http://www.kumhoenc.com/business/businessList.asp?def_code=6&scategory=33">문화/의료</a>
+									<a href="http://www.kumhoenc.com/business/businessList.asp?def_code=6&scategory=34">교정/군사</a>
+									<a href="http://www.kumhoenc.com/business/businessList.asp?def_code=6&scategory=35">해외공사</a>
+								</p>
+							</div>			
+						</li>
+						<li>			
+							<strong>토목사업</strong>
+							<div>
+								<p class="txt">도시와 국토의 핏줄을 잇는 토목기술은<br />한마디로 공간과 공간을 잇는 예술입니다</p>
+								<p class="link">
+									<a href="http://www.kumhoenc.com/business/businessList.asp?def_code=38&scategory=21">공항</a>
+									<a href="http://www.kumhoenc.com/business/businessList.asp?def_code=38&scategory=22">도로</a>
+									<a href="http://www.kumhoenc.com/business/businessList.asp?def_code=38&scategory=23">철도</a>
+									<a href="http://www.kumhoenc.com/business/businessList.asp?def_code=38&scategory=24">택지/항만</a>
+									<a href="http://www.kumhoenc.com/business/businessList.asp?def_code=38&scategory=36">해외공사</a>
+								</p>
+							</div>								
+						</li>
+						<li>			
+							<strong>주택사업</strong>
+							<div>
+								<p class="txt">전국 곳곳에서 신주거단지 조성으로<br />고객의 높은 신뢰를 얻어온 금호</p>
+								<p class="link">
+									<a href="http://www.kumhoenc.com/business/houseList.asp?flag=1">아파트</a>
+									<a href="http://www.kumhoenc.com/business/houseList.asp?flag=2">주상복합</a>
+								</p>
+							</div>								
+						</li>
+						<li>			
+							<strong>환경/플랜트</strong>
+							<div>
+								<p class="txt">산업발전의 기틀을 다지는 플랜트 사업</p>
+								<p class="link">
+									<a href="http://www.kumhoenc.com/business/businessList.asp?def_code=39&scategory=25">발전</a>
+									<a href="http://www.kumhoenc.com/business/businessList.asp?def_code=39&scategory=26">에너지저장/공급</a>
+									<a href="http://www.kumhoenc.com/business/businessList.asp?def_code=39&scategory=27">석유화학</a>
+									<a href="http://www.kumhoenc.com/business/businessList.asp?def_code=39&scategory=31">산업</a>
+									<a href="http://www.kumhoenc.com/business/businessList.asp?def_code=39&scategory=37">환경</a>
+								</p>
+								<p><a href="http://www.kumhoenc.com/business/businessSrch.asp"><img src="http://www.kumhoenc.com/images/main/btnBizLink.gif" alt="분야별 사업실적" /></a></p>
+							</div>								
+						</li>
+					</ul>
+				</div>
+		
+			</div>
+			<!--  ###### 사업분야 메인 : END ###### -->
+			
+			<!-- ###### 투자정보 메인 : START ###### -->
+			<div id="boxInvest" class="boxCon">
+				<p>
+					<img src="http://www.kumhoenc.com/images/main/titInvestMainNew.gif" alt="투명한경영 안전한 투자 - 소중한 자산,투명경영으로 보답하겠습니다." />
+					<span id="objArrow"><img src="http://www.kumhoenc.com/images/main/objectArrow.png" alt="" class="png24" /></span>
+				</p>
+				
+				<!-- 주가정보 -->
+				<div class="boxStockWrap">
+					<!-- iframe 삽입영역 : start -->
+					<!-- width:430px; height:260px; -->
+					<iframe src="http://chart.mk.co.kr/stock/cp/new/kumho/main_ju.php" title="주가 정보 프레임" width="430" height="249" frameborder="0" scrolling="no"></iframe>
+					<!-- iframe 삽입영역 : end -->
+				</div>
+				
+				<div class="boxBizList02">
+					<ul>
+						<li>			
+							<strong>경영정보</strong>
+							<div>
+								<p class="txt">최근 공시정보 및 사업보고서를 열람하실 수 있습니다</p>
+								<p class="link">
+									<a href="http://www.kumhoenc.com/invest/infoList.asp?def_code=11">일반공시</a>
+									<a href="http://www.kumhoenc.com/invest/reportList.asp">사업보고서</a>
+								</p>
+							</div>			
+						</li>
+						<li>			
+							<strong>재무정보</strong>
+							<div>
+								<p class="txt">투명한 경영을 통한 금호건설의 재무정보입니다</p>
+								<p class="link">
+									<a href="http://www.kumhoenc.com/invest/benefit01.asp">매출및이익추이</a>
+									<a href="http://www.kumhoenc.com/invest/benefit02.asp">요약재무제표</a>
+									<a href="http://www.kumhoenc.com/invest/benefit03.asp">재무제표</a>
+								</p>
+							</div>								
+						</li>
+						<li class="bgOn">			
+							<div>
+								<strong>IR정보</strong>
+								<p class="txt">객관적인 경영실적과 향후전망을<br />하실 수 있습니다.</p>
+								<p class="link">
+									<a href="http://www.kumhoenc.com/invest/analystList.asp?def_code=13">Analyst 보고서</a>
+									<a href="http://www.kumhoenc.com/invest/contact.asp">IR Contact</a>
+								</p>
+							</div>								
+						</li>
+					</ul>
+				</div>
+		
+			</div>
+			<!--  ###### 투자정보 메인 : END ###### -->
+			
+			<!-- ###### 인재채용 메인 : START ###### -->
+			<div id="boxRecruit" class="boxCon">
+				<p><img src="http://www.kumhoenc.com/images/main/titRecruitMain.gif" alt="집념의세계인 - 끈기와 지혜로 세계에 도전하는 금호아시아나인입니다." /></p>
+
+				<div class="conRecruit">
+					<h3 class="tit">인재상</h3>
+					<p class="img" style="padding-bottom:0px;"><img src="http://www.kumhoenc.com/images/main/imgRecruit01.gif" alt="성실하고 부지런한 사람, 연구하고 공부하는 사람, 진지하고 적극적인 사람" /></p>
+					<!--
+					<p class="txt">
+						직업에 대한 윤리의식을 갖추고 맡은 직무에 대한 책임의식을 갖춘 프로페셔녈로서<br />
+						업계 최고 1등 기업가치 창출을 위해 매진하는 집념의 금호아시아인
+					</p>
+					-->
+					<p class="link"><a href="http://www.kumhoenc.com/recruit/recruit01.asp"><img src="http://www.kumhoenc.com/images/main/btnGo.gif" alt="바로가기" /></a></p>
+				</div>
+
+				
+				<div class="conRecruit con02">
+					<h3 class="tit">핵심인재육성</h3>
+					<div class="sub">
+						<h4 class="subT">금호아시아나 MBA과정</h4>
+						<ul class="list">
+							<li>전문 경영지식 습득 기회부여 및 고급인력 양성</li>
+							<li>국내 유수대학 위탁과정으로 운영</li>
+						</ul>
+						<h4 class="subT">국내 MBA과정</h4>
+						<ul class="list">
+							<li>국내경영전문대학원 입학을 위한 인재 선발&amp;지원</li>
+						</ul>
+						<h4 class="subT">해외 MBA과정</h4>
+						<ul class="list">
+							<li>미국,일본,중국 해외 명문대학원 입학을 위한 핵심<br />인재 선발 및 지원 (학비 및 체류비 등 지원)</li>
+						</ul>
+					</div>
+					<p class="link"><a href="http://www.kumhoenc.com/recruit/recruit03.asp"><img src="http://www.kumhoenc.com/images/main/btnGo.gif" alt="바로가기" /></a></p>
+				</div>
+				
+				<!-- 배너 -->
+				<div class="boxBanner">
+					<a href="http://www.kumhoenc.com/recruit/newsList.asp"><img src="http://www.kumhoenc.com/images/banner/banner2012.gif" alt="상반기 경력사원 그룹공채 모집" /></a>
+				</div>
+
+			</div>
+			<!--  ###### 인재채용 메인 : END ###### -->
+
+			<!-- ###### 홍보센터 메인 : START ###### -->
+			<div id="boxPromote" class="boxCon">
+				<p><img src="http://www.kumhoenc.com/images/main/titPromoteMain.jpg" alt="고객의 곁에서 함께합니다. 고객과 함께 아름다운 미래로 비상하는 금호건설입니다." /></p>
+				
+				<!-- 금호뉴스 -->
+				<div class="boxNotice02">
+					<h2>금호 News</h2>
+					<ul>
+
+						<li>
+							<a href="http://www.kumhoenc.com/promote/newsView.asp?def_code=18&bd_idx=799"><strong>[건설]</strong>파블로 9기를 모집합니다.</a>
+							<span>06.07</span>
+						</li>
+
+						<li>
+							<a href="http://www.kumhoenc.com/promote/newsView.asp?def_code=18&bd_idx=798"><strong>[건설]</strong>웹진 5월호 오픈</a>
+							<span>05.08</span>
+						</li>
+
+						<li>
+							<a href="http://www.kumhoenc.com/promote/newsView.asp?def_code=18&bd_idx=797"><strong>[건설]</strong>웹진 3월호 오픈</a>
+							<span>03.04</span>
+						</li>
+
+						<li>
+							<a href="http://www.kumhoenc.com/promote/newsView.asp?def_code=18&bd_idx=795"><strong>[건설]</strong>금호건설, 독거노인 찾아 봉사활동</a>
+							<span>02.06</span>
+						</li>
+
+					</ul>
+				</div>
+
+				<!-- 분양중 뉴스 -->
+
+				<div id="sellNews" class="boxSell">
+					<div>
+						<a href="#sellNews" class="prevNews"><img src="http://www.kumhoenc.com/images/main/btnPrevNews.png" alt="이전뉴스" /></a>
+						<h2><a href="http://www.kumhoenc.com/01_Sale/NewApt_View.asp?EULIDX=236&prevPress=0&pressBt=1">옥수 어울림 THE RIVER</a><span>분양중</span></h2>
+						
+						<a href="#sellNews" class="nextNews"><img src="http://www.kumhoenc.com/images/main/btnNextNews.png" alt="다음뉴스" /></a>
+						<span class="bgBox"></span>
+					</div>
+					<p class="titImg"><img src="http://www.khapt.co.kr/UpFile/Eullim/Base/Img_236_20120113171601531.jpg" alt="옥수 어울림 THE RIVER" /></p>
+				</div>
+
+				<div id="sellNews" class="boxSell">
+					<div>
+						<a href="#sellNews" class="prevNews"><img src="http://www.kumhoenc.com/images/main/btnPrevNews.png" alt="이전뉴스" /></a>
+						<h2><a href="http://www.kumhoenc.com/01_Sale/NewApt_View.asp?EULIDX=200&prevPress=0&pressBt=1">신별내 퇴계원</a><span>분양중</span></h2>
+						
+						<a href="#sellNews" class="nextNews"><img src="http://www.kumhoenc.com/images/main/btnNextNews.png" alt="다음뉴스" /></a>
+						<span class="bgBox"></span>
+					</div>
+					<p class="titImg"><img src="http://www.khapt.co.kr/UpFile/Eullim/Base/Img_200_20100910153402811.jpg" alt="신별내 퇴계원" /></p>
+				</div>
+
+				<div id="sellNews" class="boxSell">
+					<div>
+						<a href="#sellNews" class="prevNews"><img src="http://www.kumhoenc.com/images/main/btnPrevNews.png" alt="이전뉴스" /></a>
+						<h2><a href="http://www.kumhoenc.com/01_Sale/NewApt_View.asp?EULIDX=239&prevPress=0&pressBt=1">안양호계동 어울림</a><span>분양중</span></h2>
+						
+						<a href="#sellNews" class="nextNews"><img src="http://www.kumhoenc.com/images/main/btnNextNews.png" alt="다음뉴스" /></a>
+						<span class="bgBox"></span>
+					</div>
+					<p class="titImg"><img src="http://www.khapt.co.kr/UpFile/Eullim/Base/Img_239_20110607112601365.jpg" alt="안양호계동 어울림" /></p>
+				</div>
+
+				<div id="sellNews2" class="boxSell">
+					<div>
+						<a href="#sellNews2" class="prevNews"><img src="http://www.kumhoenc.com/images/main/btnPrevNews.png" alt="이전뉴스" /></a>
+						<h2><a href="http://www.kumhoenc.com/01_Sale/NewApt_View.asp?EULIDX=246&prevPress=0&pressBt=3" alt="새창열림">돈암 어울림</a><span>분양예정</span></h2>
+						<a href="#sellNews2" class="nextNews"><img src="http://www.kumhoenc.com/images/main/btnNextNews.png" alt="다음뉴스" /></a>
+						<span class="bgBox"></span>
+					</div>
+					<p class="titImg"><img src="http://www.khapt.co.kr/UpFile/Eullim/Base/Img_246_20120410081315366.jpg" alt="돈암 어울림" /></p>				
+				</div>
+
+				<!-- 링크 -->
+				<div class="boxBizList01">
+					<ul>
+						<li>
+							<a href="http://www.kumhoenc.com/promote/movieList.asp">
+								<strong>홍보영화</strong>
+								<span>반세기 전, 대한민국의 건설 역사와<br />함께 첫발을 디딘 금호건설</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.kumhoenc.com/promote/brochure.asp">
+								<strong>PR갤러리</strong>
+								<span>금호건설의 비전과 경영철학을 만나보세요 </span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- 배너 -->
+				<div class="boxBanner" style="margin-top:0;">
+					<a href="http://www.kumhoenc.com/promote/webzineList.asp?def_code=64"><img src="http://www.kumhoenc.com/images/banner/banner2012.jpg" alt="WebZine - 사랑과 감사의 계절 5월! 가족과 함게 아름다운 어울림을 만드세요!" /></a>
+				</div>
+
+			</div>
+			<!--  ###### 홍보센터 메인 : END ###### -->
+			
+		</div>
+
+		<div id="visualArea">
+			<p>
+				<button type="button" class="openQuick"></button>
+				<button type="button" class="closeQuick" style="display:none;"></button>
+				<button type="button" class="closeCon"></button>
+				<button type="button" class="openCon"  style="display:none;"></button>
+			</p>
+			<div id="quickSub">
+				<div>
+					<h2>사이버제보실</h2>
+					<ul>
+						<li><a href="https://www.kumhoenc.com/cyber/step01.asp">제보작성</a></li>
+						<li><a href="https://www.kumhoenc.com/cyber/result.asp">제보결과확인</a></li>
+					</ul>
+
+					<h2 class="depth02">고객센터</h2>
+					<ul>
+						<li><a href="http://www.kumhoenc.com/customer/faqList.asp">분야별FAQ</a></li>
+						<li><a href="http://www.kumhoenc.com/customer/center.asp">고객상담실</a></li>
+						<li><a href="https://www.kumhoenc.com/customer/result.asp">상담결과확인</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="boxVisual">
+				<div class="boxMain">
+					<img src="http://www.kumhoenc.com/images/main/objectTit.png" alt="ABU DHABI INTERNATION AIRPORT, UAE" id="objTit" class="png24" />
+					<!--<img src="http://www.kumhoenc.com/images/main/object01.png" alt="" id="obj01" class="png24" />-->
+					<img src="http://www.kumhoenc.com/images/main/object02.png" alt="디자인 : 배의 돛 모양을 형상화한 독특한 외관 삼각형의 큰 돛을 단 다우(DHOW)선 모양에서 착안된 디자인" id="obj02" class="png24" />
+					<img src="http://www.kumhoenc.com/images/main/object03.png" alt="ETFE_foli 공법" id="obj03" class="png24" />
+					<img src="http://www.kumhoenc.com/images/main/object04.png" alt="UP-UP공법 : 상하부 두 철골을 동시에 시공하여 중앙에서 접합시키는 공법으로 공사시간을 단축 시킴" id="obj04" class="png24" />
+				</div>
+				<div class="boxCompany"></div>
+				<div class="boxBusiness">
+					<img src="http://www.kumhoenc.com/images/main/objectAir.png" alt="" id="objAir" class="png24" />
+				</div>
+				<div class="boxInvest"></div>
+				<div class="boxRecruit"></div>
+				<div class="boxPromote">
+					<img src="http://www.kumhoenc.com/images/main/objectPromoteTit.png" alt="PUBLIC RELATIONS" id="objTitPromote" class="png24" />
+					<img src="http://www.kumhoenc.com/images/main/objectNews.png" alt="NEWS" id="objNews" class="png24" />
+					<img src="http://www.kumhoenc.com/images/main/objectWebzine.png" alt="webzine" id="objWebzine" class="png24" />
+					<img src="http://www.kumhoenc.com/images/main/objectPen.png" alt="" id="objPen" class="png24" />
+					<img src="http://www.kumhoenc.com/images/main/objectPic.png" alt="창업회장 고 박인천" id="objPic" class="png24" />
+					<!--<img src="http://www.kumhoenc.com/images/main/objectCi.png" alt="CI&amp;BI" id="objCi" class="png24" />-->
+					<img src="http://www.kumhoenc.com/images/main/objectPrint.png" alt="Print AD" id="objPrint" class="png24" />
+					<img src="http://www.kumhoenc.com/images/main/objectTv.png" alt="TV/CF" id="objTv" class="png24" />
+					<img src="http://www.kumhoenc.com/images/main/objectGallery.png" alt="Gallery" id="objGallery" class="png24" />
+					<img src="http://www.kumhoenc.com/images/main/objectMedia.png" alt="Media" id="objMedia" class="png24" />
+				</div>
+			</div>
+		</div>
+		<!-- footer : start -->
+		
+		
+		<div id="footer">
+			<ul class="etcLink">
+				<li><a href="http://www.kumhoenc.com/company/location.asp">Contact us</a></li>
+<!--				<li><a href="http://ob.kumhoenc.com/OB/ob_main.asp" target="_blank" title="새창열림">금호OB마당</a></li> -->
+				<li class="link02"><a href="http://www.kumhoenc.com/etc/privacy.asp">개인정보취급방침</a></li>
+			</ul>
+			<dl class="family">
+				<dt><a href="#familyList"><img src="http://www.kumhoenc.com/images/common/footer/titSite01Off.gif" alt="FAMILY SITE" /></a></dt>
+				<dd id="familyList">
+					<ul>
+						<li><a href="http://www.khapt.co.kr" target="_blank" title="새창열림">금호건설어울림</a></li>
+						<li><a href="http://webzine.kumhoenc.com" target="_blank" title="새창열림">금호건설 웹진 어울림</a></li>
+						<li><a href="http://www.kumhoasiana.co.kr/" target="_blank" title="새창열림">금호아시아나그룹</a></li>
+						<li><a href="http://www.kumhotire.co.kr" target="_blank" title="새창열림">금호타이어</a></li>
+						<li><a href="http://www.kumhobuslines.co.kr" target="_blank" title="새창열림">금호고속</a></li>
+						<li><a href="http://flyasiana.com/gateway/gateway_en.html" target="_blank" title="새창열림">아시아나항공</a></li>
+						<li><a href="http://www.asianaidt.com" target="_blank" title="새창열림">아시아나IDT</a></li>
+						<li><a href="http://www.kumhoresort.co.kr" target="_blank" title="새창열림">금호리조트</a></li>
+						<li><a href="http://www.kumhoedunet.co.kr" target="_blank" title="새창열림">금호아시아나인재개발원</a></li>
+						<li><a href="http://www.kumhoarthall.com" target="_blank" title="새창열림">금호아트홀</a></li>
+						<li><a href="http://www.asianacc.co.kr" target="_blank" title="새창열림">아시아나레저(주)</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl class="system">
+				<dt><a href="#systemList"><img src="http://www.kumhoenc.com/images/common/footer/titSIte02Off.gif" alt="KUMHO SYSTEM" /></a></dt>
+				<dd id="systemList">
+					<ul>
+						<li><a href="http://www.kumhoencb2b.com" target="_blank" title="새창열림">전자조달시스템 B2B</a></li>
+						<li><a href="http://www.khapt.co.kr" target="_blank" title="새창열림">분양대금납부조회</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<address><img src="http://www.kumhoenc.com/images/common/footer/imgAddress.gif" alt="서울특별시 종로구 새문안로 76 금호아시아나 본관" /></address>
+			<p><img src="http://www.kumhoenc.com/images/common/footer/imgCopyright.gif" alt="copyright(c) KUMHO E&amp;C ALL RIGHTS RESERVED" /></p>
+		</div>
+
+		<!--[if IE 8]>
+		<script type="text/javascript" src="http://www.kumhoenc.com/js/front/respond.src.js"></script>
+		<![endif]-->
+		<!-- footer : end -->
+	</div>
+
+			<!-- 팝업주석
+			
+			<script type="text/javascript">
+				function getCookie(strName){
+					var strCookieName = strName + "=";
+					var objCookie = document.cookie;
+					if (objCookie.length > 0){
+						var nBegin = objCookie.indexOf(strCookieName);
+						if (nBegin < 0){
+							return "";
+						}
+					nBegin += strCookieName.length;
+					var nEnd = objCookie.indexOf(";", nBegin);
+						if (nEnd == -1){
+							nEnd = objCookie.length;
+						}
+					}
+					return unescape(objCookie.substring(nBegin, nEnd));
+					}
+
+				if (getCookie(8) != "done" ){
+				    
+					window.open("main_pop.asp?idx="+8,"",'width=450, height=424, top=10 , left=10,  toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no');
+				}
+				
+				
+			</script>-->
+	
+</body>
+</html>

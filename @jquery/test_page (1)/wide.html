@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+	body { margin:0px;}
+	#wrap{height: 100%;width: 1030px;background:#d7d7d7;position:relative;margin-left:20px;}
+	#header{height: 190px;width: 1000px;background:red;}
+	#container{width: 1000px;height:700px;}
+	#lnb{float: left;width: 180px;margin-right:20px;height:100%;background:green;}
+	#content{float: left;width: 800px;height: 100%;background:blue;}
+	#content p{color:#ffffff;}
+	#footer{clear:both;height: 190px;width: 1000px;background:red;}
+	#wide{position: absolute;right: 0;top: 400px;width: 22px;height: 168px;}
+	.w_text{display:block;width: 20px;height: 166px;border:1px solid #d7d7d7;background:#ffffff;text-align:center;vertical-align:middle;}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="js/layout.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">header</div>
+		<div id="container">
+				<div id="lnb">lnb</div>
+				<div id="content">
+					<p>wrap에 margin-left:20px가 추가되었음 ㅠㅠ</p>
+					<p>그랬더니 와이드 기능 사용시 버튼이 숨고 하단에 스크롤이 생김</p>
+				</div>
+		</div>
+		<div id="footer">footer</div>
+		<div id="wide">
+			<a href="#"><span class="w_text">w<br />i<br />d<br />e</span></a>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" itemscope="itemscope" itemtype="http://schema.org/WebPage" lang="ko"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>스타일가이드</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="../../static/css/component.css" media="handheld, all">
+
+	<style type="text/css">
+	.frame {margin:2em}
+	dl {margin-bottom:1em; padding:1em; background:#fafafa;}
+	dl dt {margin-bottom:.5em}
+	dl dd {margin-bottom:2em}
+	</style>
+	
+	<!-- Le supporter -->
+	<script src="../../static/js/lib/modernizr-2.6.2.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+	<script>window.jQuery || document.write('<script src="../../static/js/lib/jquery-1.8.2.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script src="../../static/js/lib/jquery-ui-1.9.0.min.js"><\/script>')</script>
+</head>
+
+<body>
+<div class="frame">
+
+
+	<h3>버튼들은 클래스만 넣고, Button, A, Span 등 태그에서 동일하게 사용</h3>
+	<dl>
+		<dt>이미지 버튼 - btnImg class</dt>
+		<dd>
+	
+			<!-- 이미지 버튼 -->
+			<button class="btnImg"><img src="../../static/img/common/btn_reset_search.png" alt="검색초기화" /></button>
+			<a href="#" class="btnImg"><img src="../../static/img/common/btn_reset_search.png" alt="검색초기화" /></a>
+			<span class="btnImg"><img src="../../static/img/common/btn_reset_search.png" alt="검색초기화" /></span>
+			<!-- /이미지 버튼 -->
+
+		</dd>
+
+		<dt>이미지 버튼 종류</dt>
+		<dd>
+	
+			<!-- 이미지 버튼 종류 -->
+			<button class="btnImg"><img src="../../static/img/common/btn_save.png" alt="저장" /></button>
+			<a href="#" class="btnImg"><img src="../../static/img/common/btn_cancle.png" alt="취소" /></a>
+			<span class="btnImg"><img src="../../static/img/common/btn_list.png" alt="목록" /></span>
+			<span class="btnImg"><img src="../../static/img/common/btn_download.png" alt="파일 다운로드" /></span>
+			<button class="btnImg"><img src="../../static/img/common/btn_reset_search.png" alt="검색초기화" /></button>
+			<button class="btnImg"><img src="../../static/img/common/btn_reset.png" alt="초기화" /></button>
+			
+			<a href="#" class="btnImg"><img src="../../static/img/common/btn_post.png" alt="등록" /></a>
+			<a href="#" class="btnImg"><img src="../../static/img/common/btn_OK.png" alt="확인" /></a>
+			<input type="image" class="btnImg" src="../../static/img/common/btn_search.png" alt="검색" />
+			<a href="#" class="btnImg"><img src="../../static/img/common/btn_delete.png" alt="삭제" /></a>
+			<button class="btnImg"><img src="../../static/img/common/btn_itemDelete.png" alt="선택항목 삭제" /></button>
+			<a href="#" class="btnImg"><img src="../../static/img/common/btn_find.png" alt="찾아보기" /></a>
+			<!-- /이미지 버튼 종류 -->
+		</dd>
+	</dl>
+
+	<dl>
+		<dt>라운드 버튼 - btnRound | btnRound btnRoundBlack</dt>
+		<dd>
+
+			<!-- 라운드 버튼들 -->
+			<button class="btnRound"><span>최근 1주일</span></button>
+			<a href="#" class="btnRound"><span>최근 1개월</span></a>
+			<span class="btnRound"><span>최근 3개월</span></span>
+
+			<button class="btnRound"><span>찾아보기</span></button>
+			<button class="btnRound btnRoundBlack"><span>업로드</span></button>
+
+			<button class="btnRound"><span>상세보기</span></button>
+
+			<button class="btnRound btnRoundBlack"><span><img src="../../static/img/common/btn_arrowFirst.png" alt="첫메뉴선택" /></span></button>
+			<button class="btnRound btnRoundBlack"><span><img src="../../static/img/common/btn_arrowLast.png" alt="마지막메뉴선택" /></span></button>
+			<button class="btnRound btnRoundBlack"><span><img src="../../static/img/common/btn_arrowPrev.png" alt="이전메뉴선택" /></span></button>
+			<button class="btnRound btnRoundBlack"><span><img src="../../static/img/common/btn_arrowNext.png" alt="다음메뉴선택" /></span></button>
+			<button class="btnRound"><span>추가</span></button>
+			<button class="btnRound"><span>수정</span></button>
+			<button class="btnRound btnRoundBlack"><span>삭제</span></button>
+			<!-- /라운드 버튼들 -->
+
+		</dd>
+	</dl>
+	
+	<dl>
+		<dt>작은 사각형 버튼 - btnSquare | btnSquare btnSquareBlack</dt>
+		<dd>
+
+			<!-- 작은 사각형 버튼들 -->
+			<button class="btnSquare"><span>적용</span></button>
+			<a href="#" class="btnSquare"><span>적용적용</span></a>
+			<span class="btnSquare"><span>적용</span></span>
+			<button class="btnSquare btnSquareBlack"><span>업로드</span></button>
+			<!-- /작은 사각형 버튼들 -->
+
+		</dd>
+	</dl>
+
+</div> <!-- /frame -->
+
+<script src="../../static/js/plugins.js"></script>
+<script src="../../static/js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>10_canvas</title>
+		<script src="js/jquery-1.8.2.min.js"></script>
+		<script>
+			$(function() {
+				
+				//자바스크립트 객체인 캔버스요소얻기
+				var canvas = $("canvas").get(0);
+				
+				//캔버스는 도화지
+				
+				//실제 붓객체는 context객체
+				
+				var context = canvas.getContext("2d");
+				
+				//색상이 채워진 사각형을 그려봅시다.
+				//context.fillRect(x,y,width,height)
+				
+				 //색상 변경
+				 context.fillStyle="#234567";
+				
+				 context.fillRect(100,25,100,100);
+				 
+				 //선그리기
+				 
+				 //새로운 선
+				 context.beginPath();
+				 
+				 //선의 색상 변경
+				 context.strokeStyle = "skyblue";
+				 //선의 두께
+				 context.lineWidth = 20;
+				 
+				 
+				 context.moveTo(100,300);
+				 context.lineTo(400,100);
+				 context.lineTo(500,200);
+				 context.lineTo(550,50);
+				 
+				 //선을 그릴때 stroke()
+				 
+				 //면을 그릴때 fill()
+				 
+				 context.stroke();
+				 
+				 context.closePath();
+				 
+				 //또다시 새로운 선
+				 context.beginPath();
+				 
+				 //색상을 변경하여 다른 선을 그려봅시다.
+				 context.strokeStyle="hotpink";
+				 
+				 context.moveTo(350,80);
+				 
+				 context.lineTo(150,200);
+				 
+				 context.stroke();
+				 
+				 //다 연결되어 있는 도형이므로, beginPath(), closePath()으로 끊고 맺음
+				 
+				 context.closePath();
+				 
+				 //새로운 선
+				 context.beginPath();
+				 
+				 context.fillStyle="lightgreen";
+				 
+				 //호그리기(원은 닫힌도형이 아니라 호가 360도)
+				// context.arc(x,y,r,시작각도,끝각도,방향)
+				
+				context.arc(350,250,50,0,Math.PI*2,true);
+				
+				context.fill();
+				 
+				
+				
+			})
+		</script>
+		<style>
+			canvas {
+			/* canvas는 css에서 크기를 지정하면 그만큼 확대됩니다.
+			 * 요소의 속성 width, height로(자바스크립트에서)
+			 * 
+				width:1000px;
+				height:500px;*/
+				
+				
+				border:1px solid #000;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			캔버스는 2d, 3d는 webGl입니다.
+			
+			webGl은 당장 사용하기 어렵습니다.
+			
+			
+			게임이나 인포그래픽, 평점등 그래프들, 이미지의 처리등에 사용할 수 있습니다. 
+			
+			캔버스의 기본크기는 300 * 150 px입니다.
+			
+			
+			
+			 -->
+		<canvas width="600" height="400"></canvas>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+

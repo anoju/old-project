@@ -1,0 +1,38 @@
+body {background: url('/image/bg.jpg') 0 0;}
+#wrap {position: relative; min-width: 995px;}
+#sec_00 {height: 742px; background: #000 url('/image/sec_00.jpg') 50% 0 no-repeat; position: relative;}
+#sec_01 {height: 569px; background: url('/image/sec_01_bg.jpg') 50% 0 no-repeat; position: relative;}
+#sec_02 {height: 1587px; background: #222 url('/image/sec_02_bg.jpg') 0 0 repeat; position: relative;}
+#sec_03 {height: 686px; background: url('/image/sec_03_bg.jpg') 50% 0 no-repeat; position: relative;}
+#sec_04 {height: 80px; background: #aaa url('/image/sec_04_bg.jpg') 0 0 repeat; position: relative;}
+
+.contentWrap {position: relative; width: 995px; margin: 0 auto; padding: z-index: 100;}
+h1 {position: absolute;  right: 0; text-indent: -9999px; background: url('/image/logo.png') 0 0 no-repeat; width: 141px; height: 24px; top: 30px;}
+h2 {position: relative; padding-top: 43px; margin-bottom: 35px;}
+.subject {position: relative; top: 75px;}
+.mainBtn {position: relative; top:290px;}
+.mainBtn li {float: left; margin-right: 10px;}
+
+.tabContainer {position: relative; margin-top: 30px;}
+.tab li {float: left; height: 24px; overflow: hidden; margin-right: 6px; *position: relative;}
+.tab li img {position: relative; top: -24px;}
+.tab li img.active {top: 0px;}
+.tabSummary {position: relative; top: 11px; left: 0; *top: 30px;}
+.summary {*position: absolute; *left: 0;}
+
+.winner {height: 390px; width: 810px; margin:0 auto; position: relative; overflow: hidden;}
+.w_present {position: absolute; top: 505px; left: 97px;}
+.winTitle00 {margin: 50px 0;}
+.winnerList {width: 841px; margin: 0 auto; margin-top: 40px;}
+.winnerList li {float: left;}
+.pdt02 {margin: 0 80px 0 69px;}
+.evtInfo {width: 653px; margin-top: 60px;}
+.evtTitle2 {margin: 87px 0 58px 0;}
+.sns_pdt {width: 956px; margin: 0 auto;}
+
+.btnZoom {position: absolute; top: 247px; left: 890px;}
+.map {position: absolute; top: 0px; left: 0; z-index: 100; display: none; width: 995px;}
+#modalWindow {width: 100%; position: absolute; top: 0; lfet: 0; background: #000; opacity: 0.7;, filter:alpha(opacity = 70); -moz-opacity:0.5; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; z-index: 10; *z-index:10;}
+.closeBtn {position: absolute; top: 75px; right: 20px;}
+
+.copyright {position: relative; width: 417px; margin: 0 auto; top: 33px;}

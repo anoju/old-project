@@ -1,0 +1,110 @@
+@font-face {font-family: 's_if_Bd'; src: url('../font/SamsungIF_Bd.ttf');  font-weight: normal; font-style: normal; font-variant: normal;}
+@font-face {font-family: 's_if_Rg'; src: url('../font/SamsungIF_Rg.ttf'); font-weight: normal; font-style: normal; font-variant: normal;}
+
+body {font-size: 0.75em; width: 760px; margin: 0 auto; margin-top: 25px; font-family: '돋움', 'Arial Unicode MS', Arial;}
+
+h1 {background: url('../../image/common/imageLogo.png') 0 0 no-repeat; width: 274px; height: 149px; position: absolute; text-indent: -9999px; left: 250px; top: -20px; cursor: pointer; z-index: 9999;}
+#nav {background: url('../../image/common/top_bg.gif') 0 0 no-repeat; width: 760px; height: 49px; margin-left: 1px;}
+#nav li {float: left; margin-top: 13px; height: 21px; overflow: hidden; *position: relative;}
+#nav li img {position: relative;}
+#nav li img.active {top: -23px;}
+#nav li.n_0 {margin-left: 15px; margin-right: 30px;}
+#nav li.n_2 {margin-left: 375px; margin-right: 25px;}
+
+a {text-decoration: none;}
+a:hover {text-decoration: none;}
+a:active {text-decoration: none;}
+
+
+/*invite*/
+#inviteWrap {background: url('../../image/invite/invite_bg.jpg') 0 28px no-repeat; width: 760px; height: 810px; position: relative; top: 25px; margin-bottom: 25px;}
+#content_invite {position: relative; top: 226px; margin-left: 120px; width: 545px;}
+.f_container {top: -37px; position: relative; width: 546px; height: 433px; overflow-y: auto;}
+.friendList {padding-top: 8px;}
+.friendList li {width: 260px; float: left; margin-bottom: 10px;}
+.friendList li img {padding: 0 5px;}
+input, span {vertical-align: top; margin-top: 20px; display: inline-block;}
+@-moz-document url-prefix(){
+	.btnGroup {position: relative; margin: 0px 0 0 110px;}
+}
+.btnGroup {position: relative; margin: -10px 0 0 110px;}
+.btnGroup p {display: inline;}
+.desc {position: absolute; z-index:9999; top: -75px; left: -35px;}
+
+
+
+/*event*/
+#eventWrap {background: url('../../image/event/event_bg.jpg') 0 28px no-repeat; width: 760px; height: 810px; position: relative; top: 25px; margin-bottom: 25px;}
+#content_event {position: relative;}
+.prize {position: relative; top: 23px; left: -7px;}
+.evtDesc {position: relative; top: 215px; width: 478px; margin: 0 auto;}
+.evtPeriod {width: 261px; margin: 0 auto; position: relative; top: 523px;}
+.showroom {position: relative; top: -55px; margin-left: 240px; *top: -50px; width: 110px; height: 20px; cursor:pointer; background: #fff; opacity: 0; filter: alpha(opacity=0);}
+.evtMonkey {position: relative; width: 647px; margin: 0 auto; top: 352px; left: 10px;}
+/*
+.p_00 {margin: 0 0 0 -1px;}
+.p_01 {margin: -10px 0 0 0;}
+.p_02 {margin: 20px 0;}
+*/
+
+
+/*rank*/
+#rankWrap {background: url('../../image/rank/rank_bg.jpg') 0 28px no-repeat; width: 760px; height: 810px; position: relative; top: 25px; margin-bottom: 25px;}
+#content_rank {position: relative; top: 175px; margin-left: 120px; width: 545px;}
+.inviteRankTitle {position: absolute; width: 542px; top: -80px;}
+.scoreRankTitle {position: absolute; width: 542px; top: -80px; left: 55px;}
+.newGame {position: absolute; top: -100px; right: -85px;}
+.tabRank {width: 760px; position: relative;}
+.tabRank li {float: left; margin-top: 3px;}
+.btnPoint {margin-left: 7px;}
+.btnInvite {right: 0; position: absolute; margin-right: 4px;}
+.rankDate {position: relative; top: 565px; width: 172px; margin: 0 auto;}
+.rankNameBar {position: absolute; background: url('../../image/rank/ribon.png') 0 0 no-repeat; top: -17px; margin-left: 108px; width: 311px; height: 48px;}
+.countryName {position: relative; top: 5px;}
+.flag {position: absolute; top: -7px;}
+.flag img {vertical-align: top; width: 20px; height: 13px; margin-top: 0px;}
+table {margin-top: 35px; margin-left: -5px; width: 532px;}
+td {vertical-align: middle; position: relative;}
+td.rankNum {font-family: 's_if_Bd'; font-size: 25px; color: #3883e6; width: 23px; margin-left: 10px; text-align: center;}
+td.gameScore {font-family: 's_if_Rg'; font-size: 25px; color: #111; margin: 0 44px 0 0; text-align: center;}
+td.thumbnail {width: 65px;}
+td.userName {width: 315px;}
+td img {width: 32px; height: 32px; margin: 4px 13px 2px 20px; *margin: 4px 13px 4px 20px;}
+td.line {background: #e4e5e6; height: 1px;}
+.pageContainer {margin-top: 10px; (-bracket-:hack; margin-top: 20px; ); *margin-top: 8px;}
+.page {text-align: center; margin-top: -10px;}
+.page li {font-family:'s_if_Rg'; font-size: 15px; padding: 0 2px; display: inline-block; *display: inline; vertical-align: middle;}
+.page li a {color: #d8d8d8;}
+.page li a.activate {color: #2b88e6;}
+.worldSelect {background: url('../../image/rank/worldSelect.png') 0 0 no-repeat; width: 193px; height: 102px; position: absolute; top: -40px; left: -62px;}
+#worldList {position: absolute; top: 40px; left: 50px; width: 97px;}
+#worldList option {color: #3d2cb3; font-size: 11px;}
+@-moz-document url-prefix(){
+	#worldList {position: absolute; top: 42px; left: 50px; width: 97px;}
+}
+
+.userSearch {position: relative; width: 600px; margin: 45px 0 0 -34px; height: 22px;}
+.userSearch li {float: left; margin: 1px;}
+.userSearch li input {width: 421px; position: relative; top: -20px;}
+
+/*like*/
+#likeWrap {background: url('../../image/common/like_bg.jpg') 0 28px no-repeat; width: 760px; height: 810px; position: relative; top: 25px; margin-bottom: 25px;}
+#content_like .fb-like {position: relative; top: 596px; left: 327px;}
+.btnNext {position: relative; top: 650px; margin-left: 640px;}
+
+/*flash*/
+#flashWrap {background: url('../../image/common/flash_bg.jpg') 0 28px no-repeat; width: 760px; height: 810px; position: relative; top: 25px; margin-bottom: 25px;}
+.btnFlash {position: relative; top: 192px; width: 220px; margin: 0 auto;}
+
+/*sorry*/
+#sorryWrap {background: url('../../image/common/sorry_bg.jpg') 0 28px no-repeat; width: 760px; height: 810px; position: relative; top: 25px; margin-bottom: 25px;}
+.btnSorry {position: relative; top: 555px; width: 138px; margin: 0 auto;}
+
+/*footer*/ 
+.footContainer {position: relative; width: 760px; margin-top: 10px;}
+#footer li {float: left;}
+.copy {padding-right: 13px;}
+.tc, .pp {margin-top: 6px;}
+/*.fb {position: absolute; right: 0; top: -15px;}*/
+.fb {position: relative; top: -15px; width: 227px;}
+#footer div.fb-like {position: absolute; right:0;}

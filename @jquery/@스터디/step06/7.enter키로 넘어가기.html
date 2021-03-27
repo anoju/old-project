@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link type="text/css" rel="stylesheet" href="css/reset.css" />
+<style type="text/css">
+	.login_form { background:url(images/contents/login_bg.gif) no-repeat; width:359px; height:125px; position:relative; padding:60px 0px 0px 300px; margin:auto; margin-top:50px;}
+	.login_form ul {margin-top:15px; position:relative; padding-bottom:10px;}
+	.login_form ul li { margin-top:5px;}
+	.login_form ul li.id strong { margin-right:20px; color:#333;}
+	.login_form ul li.pwd strong { margin-right:7px; color:#333; }
+	.login_form ul li.login_btn { position:absolute; top:-5px; right:75px;}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#pwd').keypress(function(e){
+			if(e.which == 13){
+				alert('실행');				
+			}
+		});
+	});
+</script>
+</head>
+<body>
+    <div class="login_form m20_bt">
+        <p><img src="images/contents/subtext1_2_3.gif" alt="회원으로 가입하신 고객님께서는, 로그인 해 주시기 바랍니다." /></p>
+        <ul>
+            <li class="id"><label for="id"><strong>아이디</strong></label><input type="text" class="input04" id="id" title="아이디를 입력하세요" name="" /></li>
+            <li class="pwd"><label for="pwd"><strong>비밀번호</strong></label><input type="password" class="input04" id="pwd" title="아이디를 입력하세요" name="" /></li>
+            <li class="login_btn"><a href="#"><img src="images/contents/btn_login1.gif" alt="로그인" /></a></li>
+            <li class="m60_lt" ><a href="#등록"><img src="images/contents/btn_search.gif" alt="아이디/비밀번호 찾기" /></a>
+            <a href="#등록"><img src="images/contents/btn_join.gif" alt="회원가입" /></a></li>
+        </ul>
+    </div>
+</body>
+</html>

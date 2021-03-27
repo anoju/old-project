@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>6_돌아가는슬라이드</title>
+		<style>
+			body {
+				background:#333;
+			}
+			#slideBox {
+				width:800px;
+				height:600px;
+				background:silver;
+				margin:auto;
+				position: relative;
+				border:5px solid #fff;
+				cursor:pointer;
+				overflow: hidden;
+			}
+			
+			#rotate {
+				width:2000px;
+				height:2000px;
+				background:#333;
+				position: absolute;
+				left:-600px;
+				
+			}
+			
+			/*
+			#rotate:hover {
+				-moz-animation:rotate 4s ease infinite;
+			}*/
+			
+			@-moz-keyframes rotate {
+				0%,22% {transform:rotate(0deg)}
+				25%,47% {transform:rotate(90deg)}
+				50%,72% {transform:rotate(180deg)}
+				75%,97% {transform:rotate(270deg)}
+				100% {transform:rotate(360deg)}
+			}
+			
+			#rotate>img {
+				position: absolute;
+				left:600px;
+				transform-origin:50% 1000px;
+				-moz-transform-origin:50% 1000px;
+				-webkit-transform-origin:50% 1000px;
+				-ms-transform-origin:50% 1000px;
+				-o-transform-origin:50% 1000px;
+			}
+			
+			#rotate>img:nth-child(1) {
+				transform:rotate(0deg);
+				-moz-transform:rotate(0deg);
+				-webkit-transform:rotate(0deg);
+				-ms-transform:rotate(0deg);
+				-o-transform:rotate(0deg);
+			}
+			
+			#rotate>img:nth-child(2) {
+				transform:rotate(90deg);
+				-moz-transform:rotate(90deg);
+				-webkit-transform:rotate(90deg);
+				-ms-transform:rotate(90deg);
+				-o-transform:rotate(90deg);
+			}
+			
+			#rotate>img:nth-child(3) {
+				transform:rotate(180deg);
+				-moz-transform:rotate(180deg);
+				-webkit-transform:rotate(180deg);
+				-ms-transform:rotate(180deg);
+				-o-transform:rotate(180deg);
+			}
+			#rotate>img:nth-child(4) {
+				transform:rotate(270deg);
+				-moz-transform:rotate(270deg);
+				-webkit-transform:rotate(270deg);
+				-ms-transform:rotate(270deg);
+				-o-transform:rotate(270deg);
+			}
+			
+			#rotate.rotate1 {
+				-moz-animation:rotate1 1s ease 1;
+				-moz-transform:rotate(90deg);
+			}
+			
+			@-moz-keyframes rotate1 {
+				from{-moz-transform:rotate(0deg)}
+				to{-moz-transform:rotate(90deg)}
+			}
+			
+			#rotate.rotate2 {
+				-moz-animation:rotate2 1s ease 1;
+				-moz-transform:rotate(180deg);
+			}
+			
+			@-moz-keyframes rotate2 {
+				from{-moz-transform:rotate(90deg)}
+				to{-moz-transform:rotate(180deg)}
+			}
+			
+			#rotate.rotate3 {
+				-moz-animation:rotate3 1s ease 1;
+				-moz-transform:rotate(270deg);
+			}
+			
+			@-moz-keyframes rotate3 {
+				from{-moz-transform:rotate(180deg)}
+				to{-moz-transform:rotate(270deg)}
+			}
+			
+			#rotate.rotate4 {
+				-moz-animation:rotate4 1s ease 1;
+				-moz-transform:rotate(0deg);
+			}
+			
+			@-moz-keyframes rotate4 {
+				from{-moz-transform:rotate(270deg)}
+				to{-moz-transform:rotate(360deg)}
+			}
+			
+		</style>
+		<script src="js/jquery-1.8.2.min.js"></script>
+		<script>
+		//body가 전부 로딩된 후(img요소 로딩된 후 아님)
+			$(function() {
+				
+				//1,2,3,4 이런 숫자를 저장하는 변수선언
+				
+				var index = 1;
+				
+				$("button").click(function() {
+					
+					//#rotate요소에 클래스속성을 입력합니다.
+					
+					//속성관련 메서드 : attribute의 준말인 attr()
+					
+					$("#rotate").attr("class","rotate" +index);  
+					
+					//index를 증가
+					index = index + 1;
+					
+					//만약 index가 5가되면 다시 1로 바꾸면 됩니다.
+					if(index == 5) {
+						index = 1;
+					}   
+					
+				});
+				
+			});
+		</script>
+	</head>
+	<body>
+		<p>
+			<button>슬라이드</button>
+		</p>
+		<div id="slideBox">
+			<div id="rotate">
+				<img src="img/BMW1.jpg"/>
+				<img src="img/BMW2.jpg"/>
+				<img src="img/BMW3.jpg"/>
+				<img src="img/BMW4.jpg"/>
+			</div>
+		</div>
+		
+	</body>
+</html>
