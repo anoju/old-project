@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+	/* 접근성 메뉴와 제목 가리기 */
+	#skipnavi, .hide{
+		position:absolute;
+		overflow:hidden;
+		width:1px;
+		height:1px;
+		font-size:0;
+		line-height:0;
+		text-indent:-1000px;}
+	
+	/* 배경설정 */
+	body{
+		height:100%;
+		width:100%;
+		background:url(../images/menubg.gif) repeat-x 0 80px;}
+	
+	
+	/*헤더 설정*/
+	#header{
+		height:120px;
+		width:950px;
+		margin:0 auto;}
+
+		#header h1{
+			float:left;;}
+
+		#tmenu{
+			float:right;}
+
+			#tmenu li{
+				float:left;
+				padding-left:10px;}
+
+		#gnb{
+			clear:both;
+			padding-top:15px;
+			position:relative;
+			width:950px;}
+
+			#navigation li{
+				float:left;}
+
+			#navigation li ul{
+				position:absolute;
+				top:60px;}
+
+				##navigation li ul li{
+					display:inline;}
+
+				#nav_sub01{left:0;}
+				#nav_sub02{left:155px; display:none}
+				#nav_sub03{left:310px; display:none}
+				#nav_sub04{left:470px; display:none}
+				#nav_sub06{left:620px; display:none}
+
+	/* 배너 설정 */
+	#w_banner{
+		width:100%;
+		border-top:1px solid #97a479;
+		border-bottom:1px solid #dedede;}
+		
+	#banner{
+		clear:both;
+		position:relative;
+		width:950px;
+		height:62px;
+		margin:0 auto;}
+
+		ul#f_quick{
+			float:left;
+			padding-left:10px;
+			padding-top:25px;}
+			ul#f_quick li{
+				float:left;}
+
+		#rolling{
+			float:right;
+			margin-right:35px;
+			display:inline;
+			position:relative;
+			overflow:hidden;
+			width:648px;
+			height:25px;
+			margin-top:20px;}
+			ul#slide_banner{				
+				width:1320px;
+				height:25px;}
+				ul#slide_banner li{
+					float:left;
+					padding-left:13px;}
+			p .left_btn{
+				position:absolute;
+				top:23px;
+				left:245px;}
+			p .right_btn{
+				position:absolute;
+				top:23px;
+				right:0px;}
+
+	/* 푸터 설정 */
+	#footer{
+		clear:both;
+		width:950px;
+		height:68px;
+		margin:0 auto;}
+		
+		#f_logo{
+			float:left;
+			padding-top:16px;}
+		address{
+			float:left;
+			padding-left:26px;
+			padding-top:21px;}
+		#copy{
+			padding-top:4px;}
+		#f_site{
+			float:right;
+			margin-top:16px;}
+
+
+	/* 서브 페이지-중앙 컨텐츠 */
+	#container{
+		width:950px;
+		margin:0 auto;
+		padding-top:50px;
+		padding-bottom:100px;
+		overflow:auto;}
+

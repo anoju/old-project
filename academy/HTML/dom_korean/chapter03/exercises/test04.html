@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=euc-kr" />
+    <title>Shopping list</title>
+	<style type="text/css">
+body{
+	font-family:"나눔고딕";
+  color: white;
+  background-color:#176691;
+}
+.classBefore{
+background:blue;
+border:#F00 solid 2px;
+margin-bottom:10px;
+width:200px;
+height:100px;
+}
+.classAfter{
+background:orange;
+border:yellow dotted 1px;
+margin-bottom:10px;
+width:200px;
+height:100px;
+}
+
+	</style>
+  </head>
+  <body>
+    <h1>문서내의 모든 div요소중 class속성을 다른 class속성으로 변경한다</h1>
+<div class="classBefore">
+원래는 파란색배경 붉은색 솔리드 2px 라인<br />
+변경후는 오랜지색배경 노란색 도트 1px 라인
+</div>
+<div class="classBefore">
+원래는 파란색배경 붉은색 솔리드 2px 라인<br />
+변경후는 오랜지색배경 노란색 도트 1px 라인
+</div>
+<div class="classBefore">
+원래는 파란색배경 붉은색 솔리드 2px 라인<br />
+변경후는 오랜지색배경 노란색 도트 1px 라인
+</div>
+
+
+	<script type="text/JavaScript">
+	var change=document.getElementsByTagName("div")
+//for문을 이용하여 문서내의 모든p요소를 검색한다
+for(var find=0; find<change.length; find++){
+	var titleText=change[find].getAttribute("class")
+	if(titleText){
+		change[find].setAttribute("class", "classAfter");
+		alert(change[find].getAttribute("class"))
+		}
+	}
+	</script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5</title>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb'>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicBoldWeb'>
+
+		<style>
+			body{ font-family: 'NanumGothicWeb'; }
+		</style>
+
+
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<header>
+			<hgroup>
+				<h1><a href="index.html">HTML5<img src="D:/anoju/html5/informationTechnology/images/logo.jpg" width="180" height="180" border="0" alt="로고"> 헤럴드</a></h1>
+				<h2>HTML5 &amp; CSS3를 이용해 예신문 스타일을 재현하다</h2>
+			</hgroup>
+
+			<nav>
+				<ul>
+					<li><a href="index.html">홈</a></li>
+					<li><a href="register.html">등록</a></li>
+				</ul>
+			</nav>
+
+			<p id="volume">Vol.MMXI</p>
+			<p id="issue"><time datetime="1904-06-04" pubdate>june 4,1904</time></p>
+		</header>
+
+		<form method="post" id="register">
+			<hgroup>
+				<h1>등록해주세요!</h1>
+				<h2>이 멋진 신문을 구독하고 싶습니다.</h2>
+			</hgroup>
+
+			<ul>
+				<li>
+					<label for="name">제이름은요:</label>
+					<input type="text" id="name" name="name" required />
+				</li>
+
+				<li>
+					<label for="email">제 이메일 주소는요:</label>
+					<input type="email" id="email" name="email" required />
+				</li>
+
+				<li>
+					<label for="rememberme">이 컴퓨터에서 제 정보를 기억하도록 합니다.</label>
+					<input type="checkbox" id="rememberme" name="rememberme" value="yes" />
+				</li>
+
+				<li>
+					<label for="url">제 웹사이트 주소는요:</label>
+					<input type="url" id="url" name="url" placeholder="http://example.com" />
+				</li>
+
+				<li>
+					<label for="password">비밀번호는 이것이 좋겠어요:</label>
+					<p>(최소6자, 공백없이)</p>
+					<input type="password" id="password" name="password" required pattern="\s{6,}" />
+				</li>
+
+				<li>
+					<label for="rating">제 HTML에 대한 지식 수준은요, 1에서 10중에서:</label>
+					<input type="range" id="rating" name="rating" min="1" max="10"/>
+				</li>
+
+				<li>
+					<label for="startdate">이 날짜부터 구독하고 싶어요:</label>
+					<input type="date" min="2012-09-14" max="2013-09-14" id="startdate" name="startdate" required />
+				</li>
+
+				<li>
+					<label for="quantity"><cite>HTML5 헤럴드</cite>를 <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" />부터받고 싶습니다.</label>
+				</li>
+
+				<li>
+					<label for="upsell"><cite>CSS3 이야기</cite>에도 함께 등록하겠습니다.</label>
+					<input type="checkbox" id="upsell" name="upsell" />
+				</li>
+			</ul>
+			
+			<input type="submit" id="register-submit" name="register-submit" value="입력정보 보내기" />
+		</form>
+
+		<footer>
+			<small>&copy; SitePoint</small>
+			<p><a href="http://www.sitepoint.com"><img src="D:/anoju/html5/informationTechnology/images/logo.jpg" width="180" height="180" border="0" alt=""></a></p>
+		</footer>
+	</body>
+</html>

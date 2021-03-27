@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>flexbox</title>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb'>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicBoldWeb'>
+
+		<style>
+			*{margin:0;padding:0;}
+			body{ 
+				font-family: 'NanumGothicWeb';
+				width:100%;
+
+				/*부모가 flex기법을 지원할지의 여부*/
+				display:box;
+				display:-moz-box;
+				display:-webkit-box;
+				
+				/*자식박스를 정렬: left, right, center, justify(양쪽 정렬)*/
+				box-pack:center;
+				-moz-box-pack:center;
+				-webkit-box-pack:center;
+				
+				/*수직정렬 및 수평정렬 여부,기본값은 수평*/
+				box-orient:vertical;
+				-moz-box-orient:vertical;
+				-webkit-box-orient:vertical;
+				}
+
+			div{
+				width:100%
+				border:1px solid blue;
+
+				display:box;
+				display:-moz-box;
+				display:-webkit-box;
+				
+				box-pack:justify;
+				-moz-box-pack:justify;
+				-webkit-box-pack:justify;
+				}
+
+			.flexBox, .noneFlexBox{
+				width:200px;
+				height:200px;
+				padding:10px;}
+			.flexBox{
+				background:#ffccff;
+				border:10px solid #ff00cc;
+				
+				/*박스 요소를 보더나 패딩이 첨가되어도 원래 넓이로*/
+				box-sizing:border-box;
+				-moz-box-sizing:border-box;
+				-webkit-box-sizing:border-box;
+				}
+			.noneFlexBox{
+				background:#ccccff;
+				border:10px solid #9900ff;}
+
+				
+		</style>
+
+
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<div>
+			<p class="flexBox">flex 적용 박스<br>width:200px<br>padding:10px<br>border:10px</p>
+			<p class="noneFlexBox">flex 비적용 박스<br>width:200px<br>padding:10px<br>border:10px</p>
+			<p class="flexBox">flex 적용 박스<br>width:200px<br>padding:10px<br>border:10px</p>
+			<p class="noneFlexBox">flex 비적용 박스<br>width:200px<br>padding:10px<br>border:10px</p>
+		</div>
+		<div>
+			<p class="flexBox">flex 적용 박스<br>width:200px<br>padding:10px<br>border:10px</p>
+			<p class="noneFlexBox">flex 비적용 박스<br>width:200px<br>padding:10px<br>border:10px</p>
+		</div>
+		<div>
+			<p class="flexBox">flex 적용 박스<br>width:200px<br>padding:10px<br>border:10px</p>
+			<p class="flexBox">flex 적용 박스<br>width:200px<br>padding:10px<br>border:10px</p>
+			<p class="noneFlexBox">flex 비적용 박스<br>width:200px<br>padding:10px<br>border:10px</p>
+		</div>
+	</body>
+</html>

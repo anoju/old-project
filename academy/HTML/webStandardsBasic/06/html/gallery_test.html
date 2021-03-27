@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<title>CosmoFarmer Gallery</title>
+<style type="text/css">
+body {
+	font-size: 62.5%;
+	margin: 0px;
+	padding: 0px;
+}
+.photo {
+	/*그림자배경을 오른쪽아래로 이동*/
+		background: url(../image/drop_shadow.gif) no-repeat right bottom;
+}
+
+.photo img {
+	/*1px띠 이것이 패딩주위를 감싼다*/
+	border: 1px solid #666;
+	background-color:#FFF;
+	/*패딩에 의해 여백이 생성*/
+	padding: 4px;
+	/*이미지요소가 원래 위치한곳으로 부터 왼쪽상단으로 위치를 옮김*/
+	position: relative;
+	top: -5px;
+	left:-5px;
+}
+
+.figure1 p {
+	font: 1.1em/normal 나눔고딕;
+	/*그림설명의 상단여백과 주앙정렬 높이지정*/
+	text-align: center;
+	margin: 10px 0 0 0;
+	height: 5em;
+}
+
+	/*모든요소를 감싸는 컨테이너*/
+.figure1 {
+	width: 210px;
+	margin: 10px 10px 10px 10px;
+}
+</style>
+</head>
+
+<body>
+<div class="figure1">
+  <div class="photo"> <img src="../image/carpet.jpg" alt="Carpet Grass" width="200" height="200" /></div>
+  <p>Figure 3: 네트워크에 쉽게 연결할 수 있습니다. 네트워크가 자동으로 나타나므로 클릭 몇 번이면 인터넷에 연결할 수 있습니다.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="js/sortable.js"></script>
+<link rel="stylesheet" href="css/sortable.css" type="text/css" media="screen" />
+  <title>다이내믹 테이블 정렬</title>
+</head>
+<body>
+<h1>테이블 정렬 예제</h1> 
+
+<table id="myTable" class="sort-table" cellspacing="0">
+  <colgroup>
+      <col />
+      <col  style="text-align: right" />
+      <col />
+      <col />
+      <col />
+</colgroup>
+  <thead>
+    <tr>
+<td>이름</td><td>나이</td><td>성별</td><td>직장명</td><td>입사일</td>
+</tr>
+  </thead>
+  <tbody>
+   <tr>
+     <td>김철수</td><td>32</td><td>남자</td><td>한국전자</td><td>2000-11-04</td>
+   </tr>
+<tr>
+     <td>홍길동</td><td>28</td><td>남자</td><td>마데전자</td><td>1983-06-23</td>
+   </tr>
+<tr>
+     <td>김영희</td><td>29</td><td>여자</td><td>한국전자</td><td>1996-01-04</td>
+   </tr>
+<tr>
+     <td>박문수</td><td>43</td><td>남자</td><td>마데전자</td><td>2007-06-04</td>
+   </tr>
+</tbody>
+</table>
+
+<script type="text/javascript">
+var st1 = new SortableTable(document.getElementById("myTable"), ["String", "Number", "String", "String", "Date"]);
+</script>
+
+</body>
+</html>

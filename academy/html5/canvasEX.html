@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+			canvas{
+				border:black solid 1px;
+			}
+		</style>
+		
+		
+	</head>
+
+	<body>
+		<canvas width="600" height="200" id="tshirtCanvas">
+			<p>Tweetshirt를 사용하려면 브라우저를 업데이트하세요</p>
+			<p>이예제는 <a href="http://www.w3.org/html/wg/html5/">HTML5</a>&lt;canvas&gt; 요소를 지원하는 브라우저에서만 제대로 됩니다.</p>
+		</canvas>
+		<form>
+			<p>
+				<label for="backgroundColor">배경색 선택</label>
+				<select id="backgroundColor">
+					<option value="white" selected="selected">흰색</option>
+					<option value="black">검정색</option>
+				</select>
+			</p>
+			<p>
+				<label for="shape">배경무늬 선택</label>
+				<select id="shape">
+					<option value="none" selected="selected">없음</option>
+					<option value="circles">원</option>
+					<option value="squares">정사각형</option>
+				</select>
+			</p>
+			<p>
+				<label for="foregroundColor">글자색 선택</label>
+				<select id="foregroundColor">
+					<option value="black" selected="selected">검정색</option>
+					<option value="white">흰색</option>
+				</select>
+			</p>
+			<p>
+				<label for="tweets">삽입할 트윗내용 선택</label>
+				<select id="tweets">
+				</select>
+			</p>
+			<p><input type="button" id="previewButton" value="미리보기" /></p>
+			
+		</form>
+		<script src="http://twitter.com/statuses/user_timeline/frog799.json?callback=updateTweets"></script>
+	</body>
+</html>

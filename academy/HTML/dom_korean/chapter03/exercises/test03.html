@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=euc-kr" />
+    <title>Shopping list</title>
+	<style type="text/css">
+ul, li{
+margin:0;
+padding:0;
+}
+body{
+	font-family:"나눔고딕";
+  color: white;
+  background-color:#176691;
+font-weight:bold;
+}
+li{
+float:left;
+list-style:none;
+background:#0CF;
+margin-bottom:1px;
+margin-left:10px;
+display: inline;
+width:auto;
+height:auto;
+}
+ul{
+clear:left;
+}
+#nav1{
+color:#FC6;
+}
+#nav3{
+color:#F9C;
+}
+
+	</style>
+  </head>
+  <body>
+    <h1>문서내의 모든 ul요소중 id속성가지고 있는 ul의 id만을 출력한다</h1>
+<ul id="nav1">
+    <li>첫번째링크1</li>
+    <li>첫번째링크2</li>
+    <li>첫번째링크3</li>
+    <li>첫번째링크4</li>
+  </ul>
+
+<ul>
+    <li>두번째링크1</li>
+    <li>두번째링크2</li>
+    <li>두번째링크3</li>
+    <li>두번째링크4</li>
+  </ul>
+
+<ul id="nav3">
+    <li>세번째링크1</li>
+    <li>세번째링크2</li>
+    <li>세번째링크3</li>
+    <li>세번째링크4</li>
+  </ul>
+  <script type="text/JavaScript">
+	var ulAttribute = document.getElementsByTagName("ul");
+	for (var i=0; i< ulAttribute.length; i++) {
+	  var titleText = ulAttribute[i].getAttribute("id");
+/*	  if (titleText != null) {
+		alert(titleText);
+	  }*/
+ if (titleText) {
+		alert(titleText);
+	  }
+}
+	</script>
+  </body>
+</html>

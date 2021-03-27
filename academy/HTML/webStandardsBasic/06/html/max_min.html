@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<title>Untitled Document</title>
+<style type="text/css">
+body{
+	font-family:"나눔고딕", "맑은 고딕";
+	font-weight:bold;
+	color:#FFF;
+}
+div#max{
+	max-height:300px;
+	max-width:300px;
+	background-color:#09F;
+}
+div#min{
+	min-height:100px;
+	min-width:100px;
+	background-color:#099;
+	float:left;
+}
+div#pushbox{
+	background-color:#930;
+}
+div#clear{
+	clear:left;
+	background-color:#930;
+}
+</style>
+</head>
+
+<body>
+<div id="max">최대너비가 적용되어 있어 오른쪽 요소가 없더라도 확장되지 않는다</div>
+<div id="min">최소너비가 적용되어 있어 오른쪽 요소가 있더라도 더이상 축소 되지 않는다</div>
+<div id="pushbox">pushbox</div>
+<div id="clear">pushbox</div>
+</body>
+</html>

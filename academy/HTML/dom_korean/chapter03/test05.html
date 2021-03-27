@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=euc-kr" />
+    <title>Shopping list</title>
+	<style type="text/css">
+body{
+	font-family:"나눔고딕", "맑은 고딕";
+}
+p {
+  color: yellow;
+  font-size: 1.2em;
+}
+body {
+  color: white;
+  background-color: black;
+}
+#myList {
+  border: 1px solid white;
+  background-color: #333;
+  color: #ccc;
+  padding:1em 2em;
+}
+#myList li {
+  font-weight: bold;
+}
+
+	</style>
+  </head>
+  <body>
+    <h1>만약 title속성이 비어 있다면</h1>
+    <p title="title속성출력">null값을 출력할것이다</p>
+	<p>조건문을 이용해</p>
+    <ul id="myList">
+      <li>이것을 수정해본다면</li>
+      <li>!=연산자와 함께</li>
+      <li>조건으로 거른다</li>
+    </ul>
+    <p>그리고 더간단한코드로 표현한다면</p>
+	<script type="text/JavaScript">
+	var pAttribute = document.getElementsByTagName("p");
+	for (var i=0; i< pAttribute.length; i++) {
+	  var titleText = pAttribute[i].getAttribute("title");
+	  if (titleText != null) {
+		alert(titleText);
+	  }
+	  if (titleText) {
+		alert(titleText);
+	  }
+	}
+	</script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+		/* left 영역 */
+		#leftmenu{
+			width:178px;
+			float:left;
+			padding-top:87px;
+			background:url(../subimg/leftmenu_bg01.gif) no-repeat 0 0;}
+			
+			#lm_end{
+				background:url(../subimg/leftmenu_bg02.gif) no-repeat left bottom;}
+
+			#leftmenu li{
+				padding-left:18px;}
+
+				#leftmenu li a{
+					display:block;
+					width:142px;
+					height:25px;
+					text-indent:-9999px;
+					overflow:hidden;}
+
+				#leftmenu #lm_end{
+					padding-bottom:40px;}
+
+				#leftmenu #lm_01 a{background:url(../subimg/leftMenu_01_01_up.gif) no-repeat left top;}
+				#leftmenu #lm_02 a{background:url(../subimg/leftMenu_01_02_up.gif) no-repeat left top;}
+				#leftmenu #lm_03 a{background:url(../subimg/leftMenu_01_03_up.gif) no-repeat left top;}
+				#leftmenu #lm_04 a{background:url(../subimg/leftMenu_01_04_up.gif) no-repeat left top;}
+				#leftmenu #lm_end a{background:url(../subimg/leftMenu_01_05_up.gif) no-repeat left top;}
+
+				#leftmenu #lm_01 a:hover{background:url(../subimg/leftMenu_01_01_over.gif) no-repeat left top;}
+				#leftmenu #lm_02 a:hover{background:url(../subimg/leftMenu_01_02_over.gif) no-repeat left top;}
+				#leftmenu #lm_03 a:hover{background:url(../subimg/leftMenu_01_03_over.gif) no-repeat left top;}
+				#leftmenu #lm_04 a:hover{background:url(../subimg/leftMenu_01_04_over.gif) no-repeat left top;}
+				#leftmenu #lm_end a:hover{background:url(../subimg/leftMenu_01_05_over.gif) no-repeat left top;}
+
+
+		/* content 영역 */
+		#content{
+			padding-left:36px;
+			float:left;}

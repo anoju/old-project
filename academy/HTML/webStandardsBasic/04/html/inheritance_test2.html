@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<title>Untitled Document</title>
+<style type="text/css">
+body{
+	font-family:"나눔고딕", "맑은 고딕";
+	color:#396;
+}
+#div1 {
+	width:200px;
+	height:200px;
+	background-color:#0FF;
+}
+#div2 {
+	width:200px;
+	height:200px;
+	background-color:#FC0;
+}
+#div2 p + p + p em {
+	color:#F00;
+}
+</style>
+</head>
+<body>
+<div id="div1">
+  <p>div1내용</p>
+  <p>div1내용</p>
+  <p>div1내용</p>
+</div>
+<div id="div2">
+  <p>div2내용</p>
+  <p>div2내용</p>
+  <p>div2세번째<em>인접동기를 셀렉터로 지정내용</em></p>
+</div>
+</body>
+</html>

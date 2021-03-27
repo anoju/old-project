@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=euc-kr" />
+    <title>Shopping list</title>
+	<style type="text/css">
+body{
+	font-family:"나눔고딕";
+}
+p {
+  color: yellow;
+  font-size: 1.2em;
+
+}
+body {
+  color: white;
+  background-color:#176691;
+}
+a{
+display:block;
+color:#FF0;
+text-decoration:none;
+margin-bottom:1px;
+background:#3DB1DE;
+}
+
+	</style>
+  </head>
+  <body>
+    <h1>다음 p요소내의 a요소의 데이터타입 종류와 개수를 알아본다</h1>
+<p>
+<a href="http://www.naver.com">네이버</a>
+<a href="http://www.naver.com">네이트</a>
+<a href="http://www.naver.com">야후</a>
+<a href="http://www.thefwa.com">FWA</a>
+</p>
+	<script type="text/JavaScript">
+alert(document.getElementsByTagName("a"))
+alert(document.getElementsByTagName("a").length)
+	</script>
+  </body>
+</html>

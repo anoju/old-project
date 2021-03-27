@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js ie6" lang="ko"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie7" lang="ko"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8" lang="ko"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ko"> <!--<![endif]-->
+<head>
+<title>농심 B안</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="./css/layout.css" type="text/css" />
+<style type="text/css">
+	*{margin:0;padding:0;}
+	body{overflow-x:hidden}
+	ul,li{list-style:none;}
+	#wrap{width: 1600px;position:relative;left:50%;margin-left:-800px}
+	#wrap>p{display:none}
+	#wrap>p.on{display:block}
+
+	.gnb{overflow:hidden;position:absolute;top: 0;left: 266px;}
+	.gnb>li{float:left;}
+	.gnb>li>a{display:block;width:111px;height:46px;text-indent:-999em;background:url(../img/space.gif) repeat}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+			$('#wrap p').click(function(){
+				var aa = $(this).index();
+				var bb = $('#wrap>p').length;
+
+				if(aa==(bb-1)){
+					$('#wrap p').eq(0).addClass('on').siblings().removeClass('on');
+				}else{
+					$(this).next().addClass('on').siblings().removeClass('on');
+				}
+				
+				return false;
+			});
+		});
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<p class="on"><img src="./img/1.jpg" alt="서브1" /></p>
+		<p><img src="./img/2.jpg" alt="서브2" /></p>
+		<ul class="gnb">
+			<li><a href="index.html">메인</a></li>
+			<li><a href="sub1.html">서브1</a></li>
+			<li><a href="sub2.html">서브2</a></li>
+			<li><a href="sub3.html">서브3</a></li>
+		</ul>
+	</div>
+</body>
+</html>
+

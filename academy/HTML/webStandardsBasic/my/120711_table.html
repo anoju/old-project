@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<title> 테이블의 기본형식 </title>
+	</head>
+
+	<body>
+		<h1>테이블의 기본형식</h1>
+		<table border="1" summary="웹 접근성 및 웹 표준 관련 3권의 서적명,출판사, 가격정보">
+			<caption>웹 접근성 및 웹표준 관련 서적</caption>
+			<tr>
+				<th>서적명</th>
+				<th>출판사</th>
+				<th>가격</th>
+			</tr>
+			<tr>
+				<td>HTML&CSS 모든걸 알켜주마</td>
+				<td>제우미디어</td>
+				<td>25,000원</td>
+			</tr>
+			<tr>
+				<td>크리에이티브 디자이너를 위한 웹 표준</td>
+				<td>제우미디어</td>
+				<td>20,000원</td>
+			</tr>
+			<tr>
+				<td>웹 표준 바로바로 알려주마</td>
+				<td>제우미디어</td>
+				<td>28,000원</td>
+			</tr>
+		</table>
+
+		<h2>셀합치기</h2>
+		<table border="1" width = "300">
+			<tr>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td rowspan="3">&nbsp;</td>
+				<td colspan="3">&nbsp;</td>				
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>				
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>				
+			</tr>
+		</table>
+		<br />
+
+		<table border="1">
+			<tr>
+				<th>출판사</th>
+				<th>서적명</th>
+				<th>판매 부수</th>
+			</tr>
+			<tr>
+				<td rowspan="3">제우미디어</td>
+				<td>웹접근성 향상을 위한 웹표준</td>
+				<td>25,000부</td>
+			</tr>
+			<tr>
+				<td>크리에이티브 디자이너를 위한 웹 표준</td>
+				<td>20,000부</td>
+			</tr>
+			<tr>
+				<td>웹 표준 바로바로 알려주마</td>
+				<td>21,000부</td>
+			</tr>
+			<tr>
+				<td colspan="2">평균 판매 부수</td>
+				<td>22,000부</td>
+			</tr>
+		</table>
+
+		<h2>열 그룹화</h2>
+		<table rules="groups" border="1" width = "300">
+			<caption> 테이블 제목</caption>
+			<colgroup span="2">
+				<col id="1column" />
+				<col id="2column" />
+			</colgroup>
+			<colgroup>
+				<col id="3column" />
+			</colgroup>
+			<colgroup span="2">
+				<col id="4column" />
+				<col id="5column" />
+			</colgroup>
+
+			<tr>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+
+		<h2>열 그룹화 요소</h2>
+		<table rules="groups" border="1">
+			<caption>웹 접근성 및 웹 표준 관련 서적</caption>
+			<colgroup span="2">
+				<col id="publishing"></col>
+				<col id="bookTitle"></col>
+			</colgroup>
+			<colgroup >
+				<col id="circulation"></col>
+			</colgroup>
+			<tr>
+				<th>출판사</th>
+				<th>서적명</th>
+				<th>판매 부수</th>
+			</tr>
+			<tr>
+				<td rowspan="3">제우미디어</td>
+				<td>웹접근성 향상을 위한 웹표준</td>
+				<td>25,000부</td>
+			</tr>
+			<tr>
+				<td>크리에이티브 디자이너를 위한 웹 표준</td>
+				<td>20,000부</td>
+			</tr>
+			<tr>
+				<td>웹 표준 바로바로 알려주마</td>
+				<td>21,000부</td>
+			</tr>
+			<tr>
+				<td colspan="2">평균 판매 부수</td>
+				<td>22,000부</td>
+			</tr>
+		</table>
+
+		<h2>행 그룹화</h2>
+		<table rules="groups" border="1" width = "300">
+			<caption> 테이블 제목</caption>
+			<thead>
+				<tr>
+					<td>분류</td>
+					<td>분류</td>
+					<td>분류</td>
+					<td>분류</td>
+					<td>분류</td>
+				</tr>
+			</thead>
+
+			<tfoot>
+				<tr>
+					<td>결론</td>
+					<td>결론</td>
+					<td>결론</td>
+					<td>결론</td>
+					<td>결론</td>
+				</tr>
+			</tfoot>
+
+			<tbody>
+				<tr>
+					<td>본문</td>
+					<td>본문</td>
+					<td>본문</td>
+					<td>본문</td>
+					<td>본문</td>
+				</tr>
+				<tr>
+					<td>본문</td>
+					<td>본문</td>
+					<td>본문</td>
+					<td>본문</td>
+					<td>본문</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2>scope</h2>
+		<table rules="groups" border="1" width = "300">
+			<caption> 테이블 제목</caption>
+				<tr>
+					<th scope="col">분류</th>
+					<th scope="col">분류</th>
+					<th scope="col">분류</th>
+					<th scope="col">분류</th>
+					<th scope="col">분류</th>
+				</tr>
+				<tr>
+					<th scope="row">본문</th>
+					<td>본문</td>
+					<td>본문</td>
+					<td>본문</td>
+					<td>본문</td>
+				</tr>
+				<tr>
+					<th scope="row">본문</th>
+					<td>본문</td>
+					<td>본문</td>
+					<td>본문</td>
+					<td>본문</td>
+				</tr>
+				<tr>
+					<th scope="row">결론</th>
+					<td>결론</td>
+					<td>결론</td>
+					<td>결론</td>
+					<td>결론</td>
+				</tr>
+			</tfoot>
+		</table>
+
+		<h2>scope</h2>
+		<table rules="groups" border="1">
+			<caption> 테이블 제목</caption>
+				<tr>
+					<th id="time">시간표</th>
+					<th id="seat">좌석종류</th>
+					<th>분류</th>
+					<th>분류</th>
+					<th>분류</th>
+				</tr>
+				<tr>
+					<th>본문</th>
+					<td>본문</td>
+					<td>본문</td>
+					<td>본문</td>
+					<td>본문</td>
+				</tr>
+				<tr>
+					<th>결론</th>
+					<td headers="time seat">우등좌석, 10시 15분</td>
+					<td>결론</td>
+					<td>결론</td>
+					<td>결론</td>
+				</tr>
+		</table>
+	</body>
+</html>

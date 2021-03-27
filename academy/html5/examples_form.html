@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5</title>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb'>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicBoldWeb'>
+
+		<style>
+			body{ font-family: 'NanumGothicWeb'; }
+		</style>
+
+
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<form>
+			<fieldset>
+				<legend>로그인 정보</legend>
+				<ol>
+					<li>
+						<label for="userid">아이디</label>
+						<input type="text" id="userid" name="userid" placeholder="6~12자 사이" maxlength="12" pattern="\s{6,}" required title="아이디를 6~12자 사이로 입력해주세요" autofocus />영문과 숫자를 6~12자로 조합해서 입력해주세요.
+					</li>
+					<li>
+						<label for="pwd1">비밀번호</label>
+						<input type="password" id="pwd1" name="pwd1" maxlength="12" required title="비밀번호를 8~12자리로 입력해주세요"/>비밀번호(8~12자리)를 입력해주세요.
+					</li>
+					<li>
+						<label for="pwd2">비밀번호 확인</label>
+						<input type="password" id="pwd2" name="pwd2" maxlength="12" required title="비밀번호 확인을 위해 재입력해주세요"/>비밀번호를 다시 입력해주세요.
+					</li>
+					<li>
+						<label for="level">회원 등급</label>
+						<input type="text" id="level" name="level" readonly value="준회원" />회원가입하면 준회원으로 적용됩니다.
+					</li>
+				</ol>
+			</fieldset>
+
+			<fieldset>
+				<legend>개인정보</legend>
+				<ol>
+					<li>
+						<label for="fullname">이름</label>
+						<input type="text" id="fullname" name="fullname" placeholder="5자미만 공백없이" required />
+					</li>
+					<li>
+						<label for="email">이메일</label>
+						<input type="email" id="email" name="email" placeholder="abcd@domain.com" required autocomplete="off" />
+					</li>
+					<li>
+						<label for="tel">연락처</label>
+						<input type="tel" id="tel" name="tel" autocomplete="off" maxlength="14" placeholder="010-1234-5678"/>
+					</li>
+				</ol>
+			</fieldset>
+
+			<fieldset>
+				<legend>코딩 숙련도(상,중,하)</legend>
+				<ol>
+					<li>
+						<input type="range" id="skill" name="skill"min="1" max="3" step="1" />
+					</li>
+				</ol>
+			</fieldset>
+			
+			<fieldset>
+				<button type="submit">제출</button>
+			</fieldset>
+		</form>
+
+	</body>
+</html>

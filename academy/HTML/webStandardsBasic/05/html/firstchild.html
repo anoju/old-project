@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+/*
+형식
+부모선택자 대상선택자(주로 타입셀렉터){속성:값}
+*/
+body:first-child{ background:#963}
+/*이코드는 적용되지 않는다 body의 개수는 하나이기때문*/
+body div:first-child{ background:#963}
+body p:first-child{background:#963}
+/*이코드는 p자체로는 첫자식이지만 그위에 div가가리고 있어 첫형제는아니다*/
+.wrapper h4:first-child{ background:#963}
+/*이코드는 페이지 전체에 적용된다*/
+span:first-child{ background:#963}
+/*이코드는 페이지 전체에 적용된다*/
+#wrapper .child:first-child{ background:#963}
+/*type셀렉터가 아니어도 가능*/
+</style>
+</head>
+
+<body>
+
+<div>첫째div</div>
+<div>둘째div</div
+<div>세째div</div>
+<p>이페이지에 처음 p이지만 div뒤에 나오므로 첫째대상에서 제외 </p>
+    
+<div class="wrapper">
+    <h4>wrapper속의 첫번째h4</h4>
+    <h4>wrapper속의 h4
+        <span>이것도 첫째span이다</span>
+        <span>span</span>
+        <span>span</span>
+    </h4>
+    <h4>wrapper속 h4</h4>
+</div>
+    
+<h4>
+    <span>span</span>
+    <span>span</span>
+    <span>span</span>
+</h4>
+
+<div id="wrapper">
+	<p class="child">id#wrapper의 첫.child</p>
+    <p class="child">id#wrapper의 .child</p>
+    <p class="child">id#wrapper의 .child</p>
+</div>
+
+</body>
+</html>

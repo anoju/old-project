@@ -1,0 +1,46 @@
+
+/*메인과 서브페이지의 공통사항*/
+
+#skipnavi, .hide{font-size:0; line-height:0; width:0; height:0; position:absolute;left:-9999px;}
+
+#header{position:relative; margin:0 auto; width:950px;height:120px; /*border:1px solid green;*/}
+	h1{float:left;}
+	ul#tmenu{float:right;}
+		#tmenu li{float:left; padding-left:10px;}
+
+	#gnb{position:absolute; left:0; top:60px; clear:both;}
+		#gnb h3{float:left;}/*메뉴와 서브메뉴 둘다 가로로 정렬 및 사이 간격 조절된다*/
+		#gnb ul{position:absolute; left:0; top:40px;} /*서브메뉴위치 조절*/
+			#gnb ul li{display:inline;}
+		#gnb ul#m_news{left:200px;}
+		#gnb ul#m_data{left:340px;}
+		#gnb ul#producer{left:500px;}
+		#gnb ul#m_board{left:600px;}
+
+
+#w_banner{width:100%; border-top:1px solid #97a479; border-bottom:1px solid #dedede;}
+	#banner{position:relative; margin:0 auto; width:950px; height:62px; /*border:1px solid red;*/}
+		ul#f_quick{float:left; padding-top:25px;}
+			#f_quick li{float:left;}
+		div#rolling{
+			position:relative; left:65px; top:20px; /*롤링배너위치지정*/
+			overflow:hidden; /*배너의 보이는 영역*/
+			width:648px; height:25px;  /*border:1px solid red;*/
+		}
+			#gallery{
+				width:1296px; height:25px; 
+				position:absolute; 
+				/*border:1px solid green;*/
+			}
+				#gallery li{float:left; padding-left:13px;}
+
+	#banner p{position:absolute; top:23px;}
+		#r_left{left:245px;}
+		#r_right{right:0;}
+
+
+#footer{position:relative; margin:0 auto; width:950px; height:52px; padding-top:16px; /*border:1px solid red;*/}
+	#f_logo{position:absolute; left:0; top:16px;}
+	address{position:absolute; left:200px; top:21px; width:500px;}
+	#copy{position:absolute; left:200px; top:35px;}
+	#f_site{position:absolute; right:0; top:16px; }

@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Type B</title>
+	<style type="text/css">		
+		* { margin:0; padding:0; }		
+		img {border:0;}		
+		ol,ul,li{list-style:none}
+		.wrap{width:100%}
+		.header{ position: relative;width:100%;background: url(../images/b/bgHeader.gif) repeat-x;z-index: 5;}
+		.header p{width:960px; margin:0 auto}
+		
+		.container{position:relative;margin-top: -51px;}
+		.contents{position:relative;}
+		.footer{width:100%;background: url(../images/b/bgFooter.gif) repeat-x;}
+		.footer p{width:960px; margin:0 auto}	
+
+		.left, .right{position:absolute;top:50%;margin-top:-70px;/*left:50%;*/}
+		.left{/*margin-left:-600px;*/left:5%}
+		.right{/*margin-left:529px;*/left:90%}
+		.mainSlide{position:relative;width:100%;min-width: 960px;max-width: 1440px;margin:0 auto;overflow:hidden}
+		.mainSlide ul li img{width:100%}
+		.slide{overflow:hidden;width:100%;}
+		.slide ul{width:500%;overflow:hidden;position: relative;left:0;}
+		.slide ul li{width:20%;float:left;}
+		.mainCon{position: relative;margin-top:-12px;width:100%;padding-top:5px;background: url(../images/b/bgTimeline2.png) repeat-x 50% top;}
+		.mainCon>div{position: relative;width:960px;margin:0 auto;}
+
+		.mark{position:relative;z-index:5}
+		.mark li{position: absolute;/*top:0;*/display:none;bottom: -49px;z-index:15}
+		/*.mark li.on{display:block}*/
+		.mark .mark1{left:40px;display:block}
+		.mark .mark2{left:229px}
+		.mark .mark3{left:418px}
+		.mark .mark4{left:609px}
+		.mark .mark5{left:798px}
+
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" ></script>
+	<script type="text/javascript">
+		
+		$(function(){
+			//$('.left').hide();
+			var $ul = $('.slide>ul')
+			var $ulWidth = $ul.outerWidth();
+			var $liWidth = $('.slide>ul>li').outerWidth();
+			//alert($ulWidth);
+			
+			$('.left').click(function(){
+				var ulLeft = parseInt($ul.css('left'));
+				var $liWidth = $('.slide>ul>li').outerWidth();
+				var $on = $('.mark').find('.on');
+				var $onIdx = $('.mark li').index($on);
+				//alert($onIdx);
+
+				if($onIdx == 0){
+					$ul.not(':animated ').stop().animate({'left':'-400%'});
+					$('.mark').children('li').last().addClass('on').slideDown().siblings().removeClass('on').slideUp();					
+				}else{
+					$ul.not(':animated ').stop().animate({'left': -($onIdx-1)*100 +'%'});	
+					$on.prev().addClass('on').slideDown().siblings().removeClass('on').slideUp();
+				}
+				return false;
+			});
+
+			$('.right').click(function(){
+				var ulLeft = parseInt($ul.css('left'));
+				var $liWidth = $('.slide>ul>li').outerWidth();				
+				var $on = $('.mark').find('.on');
+				var $onIdx = $('.mark li').index($on);
+				//alert($onIdx);
+
+				if($onIdx == 4){
+					$ul.not(':animated ').stop().animate({'left':0});
+					$('.mark').children('li').first().addClass('on').slideDown().siblings().removeClass('on').slideUp();
+				}else{					
+					$ul.not(':animated ').stop().animate({'left': -($onIdx+1)*100 +'%'});
+					$on.next().addClass('on').slideDown().siblings().removeClass('on').slideUp();
+				}
+				return false;
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div id="header" class="header">
+			<p><a href="typeB_1.html"><img src="../images/b/Header.png" alt="헤더" /></a></p>
+		</div>
+		<div id="container" class="main container">
+			<div id="contents" class="contents">
+				<div class="mainSlide">
+					<div class="slide">
+						<ul>
+							<li><img src="../images/b/visual01.jpg" alt="1" /></li>
+							<li><img src="../images/b/visual02.jpg" alt="2" /></li>
+							<li><img src="../images/b/visual03.jpg" alt="3" /></li>
+							<li><img src="../images/b/visual04.jpg" alt="4" /></li>
+							<li><img src="../images/b/visual05.jpg" alt="5" /></li>
+						</ul>
+					</div>
+					<a href="#" class="left"><img src="../images/b/btnLeft.png" alt="이전" /></a>
+					<a href="#" class="right"><img src="../images/b/btnRight.png" alt="다음" /></a>
+				</div>
+				<div class="mainCon">
+					<div>
+						<ul class="mark">
+							<li class="mark1 on"><img src="../images/b/mark1.png" alt="1" /></li>
+							<li class="mark2"><img src="../images/b/mark2.png" alt="2" /></li>
+							<li class="mark3"><img src="../images/b/mark3.png" alt="3" /></li>
+							<li class="mark4"><img src="../images/b/mark4.png" alt="4" /></li>
+							<li class="mark5"><img src="../images/b/mark5.png" alt="5" /></li>
+						</ul>
+						<img src="../images/b/mainCon2.png" alt="메인컨텐츠" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer" class="footer">
+			<p><img src="../images/b/footer.gif" alt="푸터" /></p>
+		</div>
+	</div>
+</body>
+</html>

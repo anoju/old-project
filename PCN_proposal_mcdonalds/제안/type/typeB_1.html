@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Type B</title>
+	<style type="text/css">		
+		* { margin:0; padding:0; }		
+		img {border:0;}		
+		ol,ul,li{list-style:none}
+		.wrap{width:100%}
+		.header{position: relative;width:100%;background: url(../images/b/bgSubheader.gif) repeat-x;z-index: 5;}
+		.header p{width:960px; margin:0 auto}
+		
+		.container{position:relative;}
+		.contents{width:960px;margin:0 auto;position:relative;}
+		.footer{width:100%;background: url(../images/b/bgFooter.gif) repeat-x;}
+		.footer p{width:960px; margin:0 auto}
+		
+		.left, .right{position:absolute;top:50%;margin-top:-70px;}
+		.left{left:-120px;}
+		.right{right:-120px;}
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" ></script>
+	<script type="text/javascript">
+		
+		/*$(function(){
+			$('.contents div').click(function(){
+				var aa = $(this).index();
+				var bb = $('.contents>div').length;
+				if(aa==(bb-1)){
+					$('.contents div').eq(0).addClass('on').siblings().removeClass('on');
+				}else{
+					$(this).next().addClass('on').siblings().removeClass('on');
+				}
+				
+				
+				return false;
+			});
+		});*/
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div id="header" class="header">
+			<p><a href="typeB.html"><img src="../images/b/subheader.png" alt="헤더" /></a></p>
+		</div>
+		<div id="container" class="container">
+			<div id="contents" class="contents">
+				<img src="../images/b/sub.jpg" alt="서브1" />
+				<a href="#" class="left"><img src="../images/c/btnLeft.png" alt="이전" /></a>
+				<a href="#" class="right"><img src="../images/c/btnRight.png" alt="다음" /></a>
+			</div>
+
+		</div>
+		<div id="footer" class="footer">
+			<p><img src="../images/b/footer.gif" alt="푸터" /></p>
+		</div>
+	</div>
+</body>
+</html>

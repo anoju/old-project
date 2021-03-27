@@ -1,0 +1,80 @@
+﻿@charset "utf-8";
+
+/*** event information ***/
+#container.event_infor {position:relative; width:940px; min-height:350px; margin:0 auto; margin-top:20px; padding:15px 19px 0 19px; background:#fff; border:1px solid #e1e3e3;}
+
+
+/** event_infor_wrap **/
+.event_infor_wrap {padding-top:7px;}
+.event_infor_box {position:relative; height:50px; background:url(../img/event_infor/event_dot_line.gif) left bottom repeat-x; overflow:hidden; font-family:Helvetica, Arial, "돋움", Dotum, "굴림", Gulim, sans-serif, AppleGothic;}
+.event_infor_box.fir {background:none;}
+.event_infor_tit {height:23px; margin:8px 0 7px 0; padding:11px 30px 0 34px; background:url(../img/event_infor/event_infor_tit_bg.gif) repeat-x; color:#000; font-size:14px; font-weight:bold; line-height:14px; cursor:pointer;}
+.event_infor_tit:hover {background:#d6d6d6;}
+
+/* event_infor_cont */
+.event_infor_cont {width:940px; display:none;}
+.event_infor_img {width:940px; margin-bottom:1px; text-align:center;}
+
+/* reply_write */
+.reply_write {position:relative; height:65px; padding:35px 0 0 12px; margin-bottom:10px; background:#e8e8e8 url(../img/event_infor/reply_write_tit.gif) 13px 13px no-repeat;}
+.reply_write textarea {width:738px; height:38px; margin:0; padding:5px; border:1px solid #ababab; color:#000; font-size:12px; -webkit-border-radius:0px;}
+.reply_write p {position:absolute; top:35px; right:10px;}
+.reply_write p a span.act_p {position:absolute; top:0; left:0; display:none; cursor:pointer;}
+
+/* reply_view */
+.reply_view {padding:0 10px; background:#f3f3f3;}
+.reply_view table {width:100%;}
+.reply_view tbody tr.fir th {background:none;}
+.reply_view tbody tr.fir td {background:none;}
+.reply_view tbody th {padding:15px 0 7px 2px; background:url(../img/event_infor/event_dot_line.gif) repeat-x; color:#3d3d3d; font-size:12px; line-height:16px; font-weight:normal; text-align:left; vertical-align:top; word-wrap:break-word; word-break:break-all;}
+.reply_view tbody th dl {margin:0; padding:0;}
+.reply_view tbody th dt {margin:0; padding:0 0 8px 0; font-weight:bold;}
+.reply_view tbody th dt span {padding-left:15px; color:#bababa; font-weight:normal;}
+.reply_view tbody th dd {margin:0; padding:0 0 5px 0; line-height:16px;}
+.reply_view tbody th p.btn_reply {position:relative;}
+.reply_view tbody th p.btn_reply span.act_p {position:absolute; top:0; left:0; display:none; cursor:pointer;}
+.reply_view tbody th.reply {padding:15px 0 7px 52px;}
+.reply_view tbody th.reply_w {padding:8px 0 7px 52px;}/* 2012.12.12 추가 */
+
+.reply_view tbody td {padding:15px 0 7px 0; background:url(../img/event_infor/event_dot_line.gif) repeat-x; font-size:12px; line-height:16px; text-align:center; vertical-align:top; word-wrap:break-word; word-break:break-all;}
+.reply_view tbody td a {padding:0 5px; color:#3d3d3d !important}
+.reply_view tbody td a:hover {text-decoration:underline;}
+.reply_view tbody td.emp {padding:38px 5px 37px 5px; background:none; text-align:center;}
+
+/* 2012.12.12 추가 */
+.reply_write_r {position:relative;}
+.reply_write_r textarea {width:689px; height:38px; margin:0; padding:5px; border:1px solid #ababab; color:#000; font-size:12px; -webkit-border-radius:0px;}
+.reply_write_r p {position:absolute; top:0px; right:0px;}
+.reply_write_r p a span.act_p {position:absolute; top:0; left:0; display:none; cursor:pointer;}
+
+/* 2013.01.08 추가 */
+.reply_write_m {position:relative;}
+.reply_write_m p { position:absolute;top:-23px; right:0;}
+.reply_write_m textarea {width:99%; height:38px; margin:0 0 3px 0; padding:5px; border:1px solid #ababab; color:#000; font-size:12px; -webkit-border-radius:0px;}
+a.modify_on {text-decoration:underline;}
+
+/* btn */
+.event_infor_btn {height:32px; padding:30px 0 70px 0;}
+.event_infor_btn ul {margin:0; padding-left:150px;}
+.event_infor_btn li {position:relative; float:left; padding:10px;}
+.event_infor_btn li span.act_p {position:absolute; top:10px; left:10px; display:none; cursor:pointer;}
+
+
+/* reply_num */
+.reply_num {height:20px; padding:0 12px; color:#a3a3a3; font-size:12px; font-weight:bold;}
+.reply_num span {color:#f00;}
+
+/* paginate */
+.paginate {height:40px; margin-top:20px; text-align:center; line-height:15px; font-weight:bold; vertical-align:top;}
+.paginate img {vertical-align:top;}
+.paginate a {margin:0; padding:0 2px 0 7px; color:#9f9f9f; line-height:15px; vertical-align:top;} 
+.paginate a.ed {background:none;}
+.paginate strong {color:#000;}
+.paginate a.pre {padding:0 2px 0 0; background:none;}
+.paginate a.pre2 {padding:0; background:none;}
+.paginate a.next {padding:0 0 0 9px; background:none;}
+.paginate a.next2 {padding:0; background:none;}
+
+
+
+

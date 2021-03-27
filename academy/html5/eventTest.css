@@ -1,0 +1,36 @@
+#playList{
+	border:#220077 1px solid;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	
+	margin-top: 10px;
+	padding:0;
+	list-style:none;	
+}
+
+#playList li{
+	border-bottom: #000066 1px solid;
+	padding:10px;
+	background-image: -webkit-gradient(linear,left top, left bottom,from(#f9f9f9),to(#e3e3e3));
+	background-image: -moz-linear-gradient(#f9f9f9,#e3e3e3);
+	background-image: linear-gradient(#f9f9f9,#e3e3e3);
+	
+}
+
+#playList li:last-child{
+	/*하단 보더겹침빼기*/
+	border-bottom:none;
+	
+	/*하단 누락된 코너 레디우스 처리*/
+	-moz-border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+}
+
+#playList li:first-child{	
+	/*상단 누락된 코너 레디우스 처리*/
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;	
+}

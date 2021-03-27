@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5</title>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb'>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicBoldWeb'>
+
+		<style>
+			body{ font-family: 'NanumGothicWeb'; }
+		</style>
+
+
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<script>
+
+			//html5용 이벤트
+			function popWindow(){
+				alert("addEventListener를 이용한 이벤트 처리")
+			}
+
+			function myClick(){
+				var myP = document.getElementsByTagName("p")[0]
+				//대상.addEventListener("이벤트종류","호출할 함수이름","중복이벤트 처리에대한 여부")
+				myP.addEventListener("click",popWindow,false)
+			}
+
+			window.addEventListener("load", myClick, false)
+
+		</script>
+
+	</head>
+
+	<body>
+		<div id="main">
+			<p>이부분을 클릭하세요</p>
+			<p>이것은 일반 문단입니다.</p>
+		</div>
+	</body>
+</html>

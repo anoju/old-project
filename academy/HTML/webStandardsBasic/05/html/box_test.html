@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<title>Untitled Document</title>
+<style type="text/css">
+body{
+	font-family:"나눔고딕", "맑은 고딕";
+	font-size:110%
+}
+div {
+	background-color:#0FC;
+	width:300px;
+	height:300px;
+	margin:10px;
+	
+}
+
+div.one h1{
+	font-size:40px;
+}
+div.one p em{
+	font-size:15px;
+}
+div.two h1{
+	font-size:2em;
+}
+div.two p em{
+	font-size:1.2em;
+}
+div.three h1{
+	font-size:150%;
+}
+div.four ul{
+	font-size:80%;
+}
+div.four ul li ul{
+	font-size:100%;
+}
+
+</style>
+</head>
+<body>
+<div class="one">픽셀단위설정
+	<h1>머리글60px</h1>
+	<p><em>em15px</em></p>
+</div>
+<div class="two">em단위설정
+	<h1>머리글2em</h1>
+	<p><em>em1.2em</em></p>
+</div>
+<div class="three">%단위설정
+	<h1>머리글150%</h1>
+	<p><em>em120%</em></p>
+</div>
+
+<div class="four">중첩목록주의
+  <h1>중첩의 문제점</h1>
+  <ul>
+    <li>첫리스트
+      <ul>
+        <li>첫번째의 첫번째</li>
+        <li>첫번째의 두번째</li>
+        <li>첫번째의 세번째</li>
+      </ul>
+    </li>
+    <li>두번째리스트
+      <ul>
+        <li>두번째의 첫번째</li>
+        <li>두번째의 두번째</li>
+        <li>두번째의 세번째</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>

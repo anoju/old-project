@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+			canvas{
+				border:#00f solid 2px;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			function init(){
+				//마크업에서 켄바스를 가져온다
+				var elem = document.getElementById("canvas")
+				var myCanvas = elem.getContext('2d')
+				
+				myCanvas.beginPath()
+				//arc(원의중점 가로좌표, 세로좌표, 반지름, 시작각도, 끝나는각도, 반시계방향지원여부(true,false))
+				myCanvas.arc(100,100,50,0,Math.PI*2,false)
+				myCanvas.stroke()
+				
+				myCanvas.beginPath()
+				myCanvas.arc(250,100,50,0,(Math.PI/180)*40,true)
+				myCanvas.stroke()
+				
+				myCanvas.beginPath()
+				myCanvas.arc(252,102,50,0,(Math.PI/180)*40,false)
+				myCanvas.stroke()
+								
+				
+				
+				
+				var elem2 = document.getElementById("canvas2")
+				var myCanvas2 = elem2.getContext('2d')
+				
+				myCanvas2.beginPath()
+				myCanvas2.moveTo(50,50)
+				myCanvas2.quadraticCurveTo(100,125,50,200)
+				myCanvas2.moveTo(250,50)
+				myCanvas2.bezierCurveTo(200,125,300,125,250,200)
+				myCanvas2.stroke()
+				
+				
+				
+			
+				var elem3 = document.getElementById("canvas3")
+				var myCanvas3 = elem3.getContext('2d')
+				
+				myCanvas3.beginPath()
+				myCanvas3.arc(200,150,50,0,Math.PI*2,false)
+				myCanvas3.stroke()
+				
+				myCanvas3.lineWidth=10
+				myCanvas3.lineCap="round"
+				myCanvas3.beginPath()
+				myCanvas3.moveTo(230,150)
+				myCanvas3.arc(200,150,30,0,Math.PI,false)
+				myCanvas3.stroke()
+				
+				myCanvas3.lineWidth=5
+				myCanvas3.lineJoin="miter"
+				myCanvas3.beginPath()
+				myCanvas3.moveTo(195,135)
+				myCanvas3.lineTo(215,155)
+				myCanvas3.lineTo(195,155)
+				myCanvas3.stroke()
+				
+				
+				
+				
+				
+				var elem4 = document.getElementById("canvas4")
+				var myCanvas4 = elem4.getContext('2d')
+				
+				myCanvas4.font="bold 24px 나눔고딕"
+				myCanvas4.textAlign="start"
+				myCanvas4.fillText("안효주 천재",100,100)
+				
+				
+				
+				
+				var elem5 = document.getElementById("canvas5")
+				var myCanvas5 = elem5.getContext('2d')
+				
+				myCanvas5.font="bold 24px 나눔고딕"
+				myCanvas5.textAlign="start"
+				myCanvas5.textBaseline="bottom"
+				myCanvas5.fillText("안효주 왕자",100,124)
+				
+				var size = myCanvas5.measureText("가나다 바보")
+				myCanvas5.strokeRect(100,100,size.width,24)
+				
+				
+				
+				
+				
+				var elem6 = document.getElementById("canvas6")
+				var myCanvas6 = elem6.getContext('2d')
+				
+				myCanvas6.shadowColor="rgba(0,0,0,0.5)"
+				myCanvas6.shadowOffsetX=4
+				myCanvas6.shadowOffsetY=4
+				myCanvas6.shadowBlur=5
+				
+				myCanvas6.font="bold 50px 나눔고딕"
+				myCanvas6.fillText("안효주 대장",100,100)
+					
+			}
+			
+			window.addEventListener("load", init, false)
+		</script>
+		
+	</head>
+
+	<body>
+		<section id="canvasbox">
+			<canvas id="canvas" width="500" height="300">
+				이브라우저는 켄바스를 지원하지 않습니다.
+				
+			</canvas>
+		</section>
+		<section id="canvasbox2">
+			<canvas id="canvas2" width="500" height="300">
+				이브라우저는 켄바스를 지원하지 않습니다.
+				
+			</canvas>
+		</section>
+		<section id="canvasbox3">
+			<canvas id="canvas3" width="500" height="300">
+				이브라우저는 켄바스를 지원하지 않습니다.
+				
+			</canvas>
+		</section>
+		<section id="canvasbox4">
+			<canvas id="canvas4" width="500" height="300">
+				이브라우저는 켄바스를 지원하지 않습니다.
+				
+			</canvas>
+		</section>
+		<section id="canvasbox5">
+			<canvas id="canvas5" width="500" height="300">
+				이브라우저는 켄바스를 지원하지 않습니다.
+				
+			</canvas>
+		</section>
+		<section id="canvasbox6">
+			<canvas id="canvas6" width="500" height="300">
+				이브라우저는 켄바스를 지원하지 않습니다.
+				
+			</canvas>
+		</section>
+	</body>
+</html>

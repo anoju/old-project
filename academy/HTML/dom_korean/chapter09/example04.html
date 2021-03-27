@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=euc-kr" />
+  <title>Example</title>
+  <style type="text/css">
+  p {
+	  color:gray;
+	  font-family:"나눔고딕", "맑은 고딕";
+	  cursor:pointer;
+	  width:5em;
+
+	  }
+  </style>
+  <script type="text/javascript">
+window.onload = function() {
+  var para01 = document.getElementById("example")
+  para01.style.fontFamily="궁서체"
+  var para02 = document.getElementById("color")
+  para02.style.color="black"
+  var para03 = document.getElementById("size")
+  para03.style.fontSize="5em"
+}
+  </script>
+</head>
+<body>
+  <p id="example" style="font-family:'나눔고딕', '맑은 고딕'">
+서체변경하기
+  </p>
+  
+   <p id="color" style="color:#099;">
+컬러변경
+  </p>
+  
+   <p id="size" style="font-size:2em;">
+글자크기변경하기
+  </p>
+
+  
+</body>
+</html>

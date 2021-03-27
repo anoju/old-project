@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Type B</title>
+	<style type="text/css">		
+		* { margin:0; padding:0; }		
+		img {border:0;}		
+		ol,ul,li{list-style:none}
+		.wrap{width:100%}
+		.header{ position: relative;width:100%;background: url(../images/b/bgHeader.gif) repeat-x;z-index: 5;}
+		.header p{width:960px; position: relative;left:50%;margin-left:-480px;}
+		
+		.container{position:relative;margin-top: -51px;}
+		.contents{position:relative;width:1440px;margin:0 auto}
+		.footer{width:100%;background: url(../images/b/bgFooter.gif) repeat-x;}
+		.footer p{width:960px;  position: relative;left:50%;margin-left:-480px;}	
+
+		.left, .right{position:absolute;top:50%;margin-top:-70px;left:50%;}
+		.left{margin-left:-600px;}
+		.right{margin-left:529px;}
+		.mainSlide{position:relative;width: 1440px;}
+		.slide{overflow:hidden;}
+		.slide ul{width:7200px;overflow:hidden;position: relative;left:0;}
+		.slide ul li{width:1440px;float:left;}
+		.mainCon{margin-top: -12px;position: relative;z-index: 5;}
+
+		.mark{position:absolute;/*top:-83px;*/top:0px;left: 50%;margin-left: -432px;}
+		.mark li{position: absolute;/*top:0;*/display:none;bottom: -52px;}
+		/*.mark li.on{display:block}*/
+		.mark .mark1{left:0;display:block}
+		.mark .mark2{left:190px}
+		.mark .mark3{left:380px}
+		.mark .mark4{left:570px}
+		.mark .mark5{left:760px}
+
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" ></script>
+	<script type="text/javascript">
+		
+		$(function(){
+			//$('.left').hide();
+			var $ul = $('.slide>ul')
+			var $ulWidth = $ul.outerWidth();
+			var $liWidth = $('.slide>ul>li').outerWidth();
+			//alert($ulWidth-$liWidth);
+			
+			$('.left').click(function(){
+				var ulLeft = parseInt($ul.css('left'));
+				var $on = $('.mark').find('.on');
+				if(ulLeft < 0){
+					$ul.not(':animated ').stop().animate({'left': (ulLeft+$liWidth)});	
+					$on.prev().addClass('on').slideDown().siblings().removeClass('on').slideUp();
+				}else{
+					$ul.not(':animated ').stop().animate({'left':-($ulWidth-$liWidth)});
+					$('.mark').children('li').last().addClass('on').slideDown().siblings().removeClass('on').slideUp();
+				}
+				return false;
+			});
+
+			$('.right').click(function(){
+				var ulLeft = parseInt($ul.css('left'));
+				//alert(ulLeft)
+				var $on = $('.mark').find('.on');
+				if(ulLeft > -($ulWidth-$liWidth)){
+					$ul.not(':animated ').stop().animate({'left': (ulLeft-$liWidth)});
+					$on.next().addClass('on').slideDown().siblings().removeClass('on').slideUp();
+				}else{
+					$ul.not(':animated ').stop().animate({'left':0});
+					$('.mark').children('li').first().addClass('on').slideDown().siblings().removeClass('on').slideUp();
+				}
+				return false;
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div id="header" class="header">
+			<p><a href="typeB_1.html"><img src="../images/b/Header.png" alt="헤더" /></a></p>
+		</div>
+		<div id="container" class="main container">
+			<div id="contents" class="contents">
+				<div class="mainSlide">
+					<div class="slide">
+						<ul>
+							<li><img src="../images/b/visual01.jpg" alt="1" /></li>
+							<li><img src="../images/b/visual02.jpg" alt="2" /></li>
+							<li><img src="../images/b/visual03.jpg" alt="3" /></li>
+							<li><img src="../images/b/visual04.jpg" alt="4" /></li>
+							<li><img src="../images/b/visual05.jpg" alt="5" /></li>
+						</ul>
+					</div>
+					<a href="#" class="left"><img src="../images/b/btnLeft.png" alt="이전" /></a>
+					<a href="#" class="right"><img src="../images/b/btnRight.png" alt="다음" /></a>
+				</div>
+				<div class="mainCon">
+					<ul class="mark">
+						<li class="mark1 on"><img src="../images/b/mark1.png" alt="1" /></li>
+						<li class="mark2"><img src="../images/b/mark2.png" alt="2" /></li>
+						<li class="mark3"><img src="../images/b/mark3.png" alt="3" /></li>
+						<li class="mark4"><img src="../images/b/mark4.png" alt="4" /></li>
+						<li class="mark5"><img src="../images/b/mark5.png" alt="5" /></li>
+					</ul>
+					<img src="../images/b/mainCon.png" alt="메인컨텐츠" />
+				</div>
+			</div>
+		</div>
+		<div id="footer" class="footer">
+			<p><img src="../images/b/footer.gif" alt="푸터" /></p>
+		</div>
+	</div>
+</body>
+</html>

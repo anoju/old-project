@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=euc-kr" />
+  <title>Example</title>
+  <style type="text/css">
+  p {
+	  color:gray;
+	  font-family:"나눔고딕", "맑은 고딕";
+	  cursor:pointer;
+	  width:5em;
+
+	  }
+  </style>
+  <script type="text/javascript">
+window.onload = function() {
+  var para = document.getElementById("example")
+  alert(typeof para.nodeName)
+  alert(typeof para.style)
+}
+  </script>
+</head>
+<body>
+  <p id="example" style="color:gray; font-family:'나눔고딕', '맑은 고딕'">
+단락예제1
+  </p>
+  
+   <p>
+단락예제2
+  </p>
+  
+   <p>
+단락예제3
+  </p>
+  
+</body>
+</html>

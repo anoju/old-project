@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta http-equiv="content-type";content="text/html" ;charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+			canvas{
+				border:#999 solid 2px;
+			}
+		</style>
+		<script type="application/javascript">
+			function init(){
+				var elem1 = document.getElementById("canvas1")
+				//canvas를 지원하지 않는 브라우져를 위해 if문을 사용하여 얼럿표시
+				if(elem1.getContext){
+					var myCanvas1 = elem1.getContext('2d');
+
+					myCanvas1.fillStyle = "rgb(200,0,0)";
+					myCanvas1.fillRect(10,10,100,100);
+					myCanvas1.fillStyle = "rgba(0,0,200,0.5)";
+					myCanvas1.fillRect(50,50,100,100);
+					myCanvas1.clearRect(60,60,40,40);
+					myCanvas1.strokeStyle="rgb(200,0,250)";
+					myCanvas1.strokeRect(200,50,70,150);
+					
+				}else{
+					alert("내용이 보이지않으면 브라우져를 최신버전으로 업데이트하거나 다른 브라우져를 이용바랍니다.")
+				}
+				
+				
+				
+				var elem2 = document.getElementById("canvas2")
+				
+				var myCanvas2 = elem2.getContext('2d')
+				
+				myCanvas2.beginPath()
+				myCanvas2.moveTo(10,10)
+				myCanvas2.lineTo(110,10)
+				myCanvas2.lineTo(10,110)
+				myCanvas2.fill()
+				
+				myCanvas2.beginPath()
+				myCanvas2.moveTo(120,10)
+				myCanvas2.lineTo(120,110)
+				myCanvas2.lineTo(20,110)
+				//myCanvas2.lineTo(120,10)
+				myCanvas2.closePath()
+				myCanvas2.stroke()
+				
+				
+				myCanvas2.beginPath()
+				myCanvas2.moveTo(150,50)
+				myCanvas2.lineTo(250,50)
+				myCanvas2.lineTo(150,150)
+				myCanvas2.fill()
+				
+				myCanvas2.beginPath()
+				myCanvas2.moveTo(180,80)
+				myCanvas2.lineTo(300,100)
+				myCanvas2.lineTo(200,200)
+				myCanvas2.closePath()
+				myCanvas2.strokeStyle="rgb(200,0,0)"
+				myCanvas2.stroke()
+				
+				
+				
+				var elem3 = document.getElementById("canvas3")
+				
+				var myCanvas3 = elem3.getContext('2d')
+				
+				myCanvas3.beginPath()
+				myCanvas3.arc(70,70,20,0,(Math.PI/180)*60,true)
+				myCanvas3.stroke()		
+			
+				myCanvas3.beginPath()
+				myCanvas3.arc(130,110,50,0,Math.PI*2,true)
+				myCanvas3.fillStyle="rgb(0,200,200)"
+				myCanvas3.fill()
+				myCanvas3.stroke()
+				
+				myCanvas3.beginPath()
+				myCanvas3.arc(190,70,20,(Math.PI/180)*110,(Math.PI/180)*170,true)
+				myCanvas3.stroke()
+				
+				myCanvas3.beginPath()
+				myCanvas3.arc(300,150,30,0,(Math.PI/180)*200,false)
+				myCanvas3.fillStyle="rgb(0,200,0)"
+				myCanvas3.fill()
+				
+				
+				
+				var elem4 = document.getElementById("canvas4")
+				
+				var myCanvas4 = elem4.getContext('2d')
+				
+				myCanvas4.beginPath()
+				myCanvas4.moveTo(50,200)
+				myCanvas4.quadraticCurveTo(200,50,350,200)
+				myCanvas4.stroke()
+				
+				myCanvas4.beginPath()
+				myCanvas4.moveTo(50,250)
+				myCanvas4.bezierCurveTo(90,100,310,100,350,250)
+				myCanvas4.stroke()
+			}
+			window.addEventListener("load", init, false)
+		</script>
+		
+	</head>
+
+	<body>
+		<canvas id="canvas1" width="500" height="300"></canvas>
+		<canvas id="canvas2" width="500" height="300"></canvas>
+		<canvas id="canvas3" width="500" height="300"></canvas>
+		<canvas id="canvas4" width="500" height="300"></canvas>
+	</body>
+</html>

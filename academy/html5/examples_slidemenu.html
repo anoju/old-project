@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5</title>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb'>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicBoldWeb'>
+
+		<style>
+			body{ font-family: 'NanumGothicWeb'; }
+			.nav{
+				list-style:none;
+				height:40px;
+				padding:0;
+				margin:0;
+				}
+			
+			.nav li{
+				float:left;
+				position:relative;
+				padding:0;
+				line-height:40px;
+				background:#600;
+				
+				-webkit-transition:all 0.2s;}
+
+			.nav li a{
+				display:block;
+				font-family:"굴림";
+				font-weight:600;
+				font-size:14px;
+				padding:5px 25px;
+				color:#fff;
+				text-decoration:none;
+				
+				-webkit-transition:all 0.5s;}
+			.nav li a:hover{
+				color:#f90;}
+
+			.nav li ul{
+				opacity:0;
+				position:absolute;
+				left:0;
+				width:180px;
+				background:#d8afaf;
+				list-style:none;
+				padding:0;
+				margin:0;
+				
+				-webkit-transition:all 1s;}
+			.nav li:hover ul{
+				opacity:1;}
+
+			.nav li ul li{
+				float:none;
+				position:static;
+				height:0;
+				line-height:0;
+				background:none;
+				
+				-webkit-transition:height 0.5s;}
+			.nav li:hover ul li{
+				height:30px;
+				line-height:30px;
+				padding:5px 0;}
+
+			.nav li ul li a{
+				background:#d8afaf;
+				font-family:"굴림";
+				font-weight:600;
+				font-size:14px;
+				color:#900;}
+
+			.nav li ul li a:hover{
+				background:#900;}
+		</style>
+
+
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<ul class="nav">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">웹개발</a>
+				<ul>
+					<li><a href="#">웹디자인</a></li>
+					<li><a href="#">HTML5</a></li>
+					<li><a href="#">Jquery</a></li>
+					<li><a href="#">웹 + 모바일</a></li>
+				</ul>
+			</li>
+			<li><a href="#">게시판</a>
+				<ul>
+					<li><a href="#">Q & A</a></li>
+					<li><a href="#">방명록</a></li>
+				</ul>
+			</li>
+			<li><a href="#">프로필</a></li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Type F</title>
+	<style type="text/css">		
+		* { margin:0; padding:0; }		
+		img {border:0;}		
+		ol,ul,li{list-style:none}
+		.wrap{width:1440px;position:absolute;left:50%;margin-left:-720px}
+		.header{position: relative;width:100%;z-index: 5;}
+		.header p{ margin:0 auto}
+		
+		.container{position:relative;margin-top: -45px;}
+		.contents{}
+		.footer{width:100%;}
+		.footer p{margin:0 auto}	
+
+		.left, .right{position:absolute;top:50%;margin-top:-70px;left:50%;}
+		.left{margin-left:-600px;}
+		.right{margin-left:529px;}
+		.mainSlide{position:relative}
+		.slide{overflow:hidden;}
+		.slide ul{width:7220px;overflow:hidden;position: relative;left:0;}
+		.slide ul li{width:1440px;float:left;}
+		.mainCon{margin-top: -13px;position: relative;z-index: 5;}
+
+		.visual1 a{display:block;width:1440px;height:726px;background: url(../images/f/visual1.jpg) no-repeat;}
+		.visual1.on a{background: url(../images/f/visual1_1.jpg) no-repeat;}
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" ></script>
+	<script type="text/javascript">
+		
+		$(function(){
+			//$('.left').hide();
+			var $ul = $('.slide ul')
+			
+			
+			$('.left').click(function(){
+				var ulLeft = parseInt($ul.css('left'));
+				var $on = $('.mark').find('.on');
+				if(ulLeft < 0){
+					$ul.not(':animated ').stop().animate({'left': (ulLeft+1440)});						
+				}else{
+					$ul.not(':animated ').stop().animate({'left':-5760});					
+				}
+				return false;
+			});
+
+			$('.right').click(function(){
+				var ulLeft = parseInt($ul.css('left'));
+				var $on = $('.mark').find('.on');
+				if(ulLeft > -5760){
+					$ul.not(':animated ').stop().animate({'left': (ulLeft-1440)});					
+				}else{
+					$ul.not(':animated ').stop().animate({'left':0});					
+				}
+				return false;
+			});
+			
+			$('.visual1 a').click(function(){
+				$(this).parent().toggleClass('on');
+				return false;
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div id="header" class="header">
+			<p><img src="../images/f/Header.png" alt="헤더" /></p>
+		</div>
+		<div id="container" class="main container">
+			<div id="contents" class="contents">
+				<div class="mainSlide">
+					<div class="slide">
+						<ul>
+							<li class="visual1"><a href="#"></a></li>
+							<li><img src="../images/f/visual2.jpg" alt="2" /></li>
+							<li><img src="../images/f/visual3.jpg" alt="3" /></li>
+							<li><img src="../images/f/visual4.jpg" alt="4" /></li>
+							<li><img src="../images/f/visual5.jpg" alt="5" /></li>
+						</ul>
+					</div>
+					<a href="#" class="left"><img src="../images/f/btnLeft.png" alt="이전" /></a>
+					<a href="#" class="right"><img src="../images/f/btnRight.png" alt="다음" /></a>
+				</div>
+				<div class="mainCon">
+					<img src="../images/f/mainCon.png" alt="메인컨텐츠" />
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

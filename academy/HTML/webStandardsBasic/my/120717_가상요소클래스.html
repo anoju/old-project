@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>      </title>
+
+		<style type="text/css">
+			body{
+				line-height:1.6em;
+				}
+			.aclass:before{
+				content:"문단시작";
+				color:red;
+				}
+			.aclass:after{
+				content:"문단종료";
+				color:blue;
+				}
+			.child p:first-child{
+				font-size:2em;
+				color:orange;
+				}
+			a:link{
+				color:blue;
+				}
+			a:visited{
+				color:gray;
+				}
+			a:hover{
+				color:orange;
+				}
+			a:active{
+				color:red;
+				}
+			input:focus{
+				background-color:#ffc;
+				}
+		</style>
+	</head>
+
+	<body>
+		<h2>before,after 가상요소</h2>
+		<p class="aclass">가상의 콘텐츠를 이전(before)이나 이후(after)에 추가할 수 있는 선택자로,content 속성에 원하는 문자열을 지정할 수 있습니다.</p>
+
+		<h2>first-child 가상클래스</h2>
+		<div class="child">
+			<p>first-child 가상 클래스는 첫 번째 자식 요소만 스타일을 적용 할 수 있는 선택자 입니다.</p>
+			<p>child 클래스의 두번째 자식 요소에는 스타일이 적용되지 않습니다.</p>
+			<p>child 클래스의 세번째 자식 요소에는 스타일이 적용되지 않습니다.</p>
+		</div>
+
+		<h2>link 가상 클래스</h2>
+		<ul>
+			<li><a href="http://www.naver.com">홈</a></li>
+			<li><a href="http://www.naver.com">회원가입</a></li>
+			<li><a href="http://www.naver.com">아이디찾기</a> / <a href="http://www.naver.com">비밀번호 찾기</a></li>
+			<li><a href="http://www.naver.com">사이트맵</a></li>
+		</ul>
+		<p>로그인<input style="text" /></p>
+		<p>비밀번호<input style="password" /></p>
+	 
+	</body>
+
+</html>

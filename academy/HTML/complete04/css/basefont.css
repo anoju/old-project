@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/*메인_폰트*/
+.mnews dt a{font-size:20px;font-weight:bold;line-height:2em}
+.mnews ul a{line-height:1.6em;color:#777}
+.mnews ul a:hover{color:#f00}
+.srch input#srch_txt{color:#fff}
+.high span{font-size:11px;line-height:1em;color:#777}
+.sche .frst{font-size:11px;color:#777}
+.sche .last{font-size:11px;color:#777}
+.gallery span{font-size:11px;color:#fff}
+.score h5{font-size:12px;font-weight:bold;line-height:1em;color:#333}
+.score ol li span{line-height:1.3em}
+
+/*정규시즌*/
+.tour_now dd.txt{color:#888}
+.tour_now dd.txt span{color:#000}
+.tour_now p span{font-size:13px;font-weight:bold}
+.tour_now dt{font-size:17px;font-weight:bold}
+.tour_list td.frst,.tour_list td.thir,.tour_list td.last{color:#777;font-size:11px}
+
+/*뉴스*/
+.nw_top span{font-weight:bold}
+.nw_list dt{font-size:16px;font-weight:bold}
+.nw_list dd.nw_date{font-size:11px;color:#999}
+.paginate a{font-weight:bold;color:#999;text-align:center}
+
+/*기록실*/
+.lank_group li.lank1{font-weight:bold}
+.lank_group li.lank_et1{font-weight:bold}
+.lank_group li.lank_et1 span{color:#f00}
+
+/*하이라이트*/
+.high_view dt{font-size:15px;font-weight:bold;color:#555}
+.high_view dd.txt{font-size:11px}
+.high_thmb span{font-size:11px;line-height:1.6em;color:#777}
+.high_thmb strong{font-size:12px;line-height:1.3em;color:#333}
+
+/*레슨*/
+.lessn{color:#555;line-height:1.8em}
+.lessn .lessn_stn h5{font-family:'돋움',Dotum;font-size:12px;line-height:1.5em} 
+.lessn .lessn_top h4{font-size:15px;font-weight:bold}
+.lessn_thmb span{font-size:11px;line-height:1.3em;color:#777}
+.lessn_thmb strong{font-size:12px;line-height:1.6em;color:#333}
+
+/*포토갤러리*/
+.pht_dsc dt{font-size:14px;font-weight:bold;color:#555}
+.pht_dsc em{color:#555}

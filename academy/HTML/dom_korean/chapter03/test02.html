@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=euc-kr" />
+    <title>Shopping list</title>
+	<style type="text/css">
+body{
+	font-family:"나눔고딕";
+}
+p {
+  color: yellow;
+  font-size: 1.2em;
+}
+body {
+  color: white;
+  background-color: black;
+}
+#myList {
+  border: 1px solid white;
+  background-color: #333;
+  color: #ccc;
+  padding:1em 2em;
+}
+#myList li {
+  font-weight: bold;
+}
+
+	</style>
+  </head>
+  <body>
+    <h1>getElementsByTagName를이용하여 특정태그에 접근할 수 있다</h1>
+    <p>이속성을 이용해 아래 리스트 태그에 접근한다면..</p>
+	<p>그문서객체의 총개수를 알아내려 한다면</p>
+    <ul id="myList">
+      <li>첫번째목록</li>
+      <li>두번째목록</li>
+      <li>세번째목록</li>
+    </ul>
+	<script type="text/JavaScript">
+alert(document.getElementsByTagName("li"))
+alert(document.getElementsByTagName("li").length)
+	</script>
+  </body>
+</html>

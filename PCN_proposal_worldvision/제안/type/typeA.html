@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Type A</title>
+	<style type="text/css">		
+		* { margin:0; padding:0; }		
+		img {border:0;}		
+		ol,ul,li{list-style:none}
+		
+		.wrap{width:100%;overflow:hidden;position:relative;}
+		.contents div{display:none;}
+		.contents div.on{display:block;}
+		.contents p{width:1024px; margin:0 auto}
+		.contents p a{display:block;}
+		.bg1{background:url(../images/a/bg1.gif) repeat-x}
+		.bg2{background:url(../images/a/bg2.gif) repeat-x}
+		.bg3{background:url(../images/a/bg3.gif) repeat-x}
+		.bg4{background:url(../images/a/bg4.gif) repeat-x}
+		.bg3 p,.bg4 p{width:820px}
+		/*.bg1 p,.bg2 p{height:772px}*/
+
+		/*.footer{width:820px;margin:-78px auto 0}*/
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" ></script>
+	<script type="text/javascript">
+		
+		$(function(){
+			$('.contents a').click(function(){
+				var aa = $(this).parent().parent().index();
+				var bb = $('.contents>div').length;
+				//alert(bb);
+				if(aa==(bb-1)){
+					$('.contents div').eq(0).addClass('on').siblings().removeClass('on');
+				}else{
+					$(this).parent().parent().next().addClass('on').siblings().removeClass('on');
+				}
+				return false;
+			});
+
+			$('.footer a').click(function(){
+				$('.contents').find('.on').prev().addClass('on').siblings().removeClass('on');
+				return false;
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div id="contents" class="contents">
+			<div class="bg1 on"><p><a href="#"><img src="../images/a/world vision_login_1.jpg" alt="메인1" /></a></p></div>
+			<div class="bg2"><p><a href="#"><img src="../images/a/world vision_login_2.jpg" alt="메인2" /></a></p></div>
+			<div class="bg3"><p><a href="#"><img src="../images/a/world vision_main_1.jpg" alt="서브1" /></a></p></div>
+			<div class="bg3"><p><a href="#"><img src="../images/a/world vision_main_2.jpg" alt="서브2" /></a></p></div>
+			<div class="bg4"><p><a href="#"><img src="../images/a/world vision_view3_mail.jpg" alt="서브3" /></a></p></div>
+		</div>
+		<!--p class="footer">
+			<a href="#"><img src="../images/a/footer.jpg" alt="푸터" /></a>
+		</p-->
+	</div>
+</body>
+</html>

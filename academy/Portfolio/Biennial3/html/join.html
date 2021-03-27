@@ -1,0 +1,478 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>회원가입</title>
+
+		<!-- 외부 CSS 링크-->
+		<link rel="stylesheet" type="text/css" href="../css/import.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/join.css"/>
+        
+		<!-- 외부 javascript 링크-->
+		<script type="text/javascript" src="../js/onload.js"></script>
+		<!-- GNB메뉴 -->
+		<script type="text/javascript" src="../js/slide_GNBmenu.js"></script>
+		<!-- 푸터 배너 스크롤 -->
+		<script type="text/javascript" src="../js/slide_banner.js"></script>
+		<!--  퀵메뉴 -->
+		<script type="text/javascript" src="../js/quickmenu.js"></script>
+        
+        <!-- 익스 플로러 6번전 png파일 오류 -->
+        <!--[if IE 6]>
+		<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<div class="header_wrap">
+			<div id="header">
+				<!-- 로고 -->
+				<h1><a href="../index.html"><img src="../image/common/logo.gif" width="167" height="84" alt="광주비엔날래" /></a></h1>
+                
+				<div id="util">
+					<div id="select_lang">
+						<div id="bt_sec">
+							<img id="left" src="../image/common/select_lang_txt.gif" width="94" height="7" alt="select language" />
+							<img id="right"src="../image/common/select_lang_bt.gif" width="29" height="29" alt="" />
+						</div>
+						<ul id="language">
+							<li><a href="#"><img src="../image/common/lang_eng.gif" width="42" height="7" alt="english" /></a></li>
+						</ul>
+					</div>
+					<!-- select_lang 끝 -->
+
+					<div class="top_menu">
+						<ul>
+							<li class="li_first"><a href="#"><img src="../image/common/util_bt01.gif" width="30" height="7" alt="log in" /></a></li>
+							<li><a href="#"><img src="../image/common/util_bt02.gif" width="40" height="7" alt="sign up" /></a></li>
+							<li><a href="#"><img src="../image/common/util_bt05.gif" width="43" height="7" alt="sitemap" /></a></li>
+						</ul>
+						<a href="#"><img class="facebook" src="../image/common/facebook_bt.gif" width="85" height="21" alt="facebook" /></a>
+						<a href="#"><img class="twitter" src="../image/common/twitter_bt.gif" width="85" height="21" alt="twitter" /></a>
+					</div>
+				</div>
+				<!-- util 끝 -->
+
+				<div id="quickmenu01">
+					<table border="0" cellspacing="0" cellpadding="0" summary="티켓정보,관람안내,모바일웹,오시는길,프레스룸,지역미술관,관람객편의시설,광주투어가이즈,Noon비엔날레정론지">
+						<caption>퀵메뉴</caption>
+						<colgroup>
+							<col width="88px" />
+							<col width="97px" />
+							<col width="80px" />
+						</colgroup>
+						<tr>
+							<td><a href="#"><img src="../image/common/quick_bt01.gif" width="48" height="11" alt="티켓정보" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt05.gif" width="80" height="11" alt="오시는길" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt06.gif" width="80" height="11" alt="관람객 편의시설" /></a></td>
+						</tr>
+						<tr>
+							<td><a href="#"><img src="../image/common/quick_bt04.gif" width="80" height="11" alt="관람안내" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt08.gif" width="80" height="11" alt="프레스룸" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt03.gif" width="80" height="11" alt="광주투어가이드" /></a></td>
+						</tr>
+						<tr>
+							<td><a href="#"><img src="../image/common/quick_bt07.gif" width="80" height="11" alt="모바일웹" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt09.gif" width="80" height="11" alt="지역미술관" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt02.gif" width="101" height="11" alt="noon비엔날레정론지" /></a></td>
+						</tr>
+					</table>				
+				</div>
+				<!-- qiuckmenu 끝 -->
+
+				<div id="menu">
+					<div id="bts">
+						<ul>
+							<li><a href="#"><img src="../image/common/menu01.gif" width="55" height="15" alt="알림마당" /></a></li>
+							<li><a href="#"><img src="../image/common/menu02.gif" width="55" height="15" alt="자료마당" /></a></li>
+							<li><a href="#"><img src="../image/common/menu03.gif" width="55" height="15" alt="고객마당" /></a></li>
+						</ul>
+					</div>
+					<!-- bts 끝 -->
+					<div id="search">
+						<form action="#" method="post">
+							<fieldset>
+								<legend>통합검색</legend>
+								<input id="search_area" type="text" /><input id="search_btn" type="image" src="../image/common/search_bt.gif" alt="search" />
+							</fieldset>
+						</form>
+					</div>
+					<!-- search 끝 -->
+				</div>
+				<!-- menu 끝 -->
+				<div id="gnb">
+					<div class="depth1">
+						<ul>
+							<li id="gnb1"><a href="#">광주비엔날레</a></li>
+							<li id="gnb2"><a href="#">광주디자인비엔날레</a></li>
+							<li id="gnb3"><a href="#">재단소개</a></li>
+						</ul>
+					</div>
+					<!-- 주메뉴 끝 -->
+
+				</div>
+				<!-- gnb 끝 -->
+			</div>
+			<!-- header 끝 -->
+		</div>
+		<!-- header_wrap 끝 -->
+        
+        
+		<div id="contents_wrap">
+        		<div id="contents">
+
+				<div class="depth2">
+					<div id="sub_menu01">
+						<span class="sub_title">9th GB, 2012</span>
+						<ul class="sub_list01">
+							<li><a href="#">소개</a></li>
+							<li><a href="#">행사개요 및 프로그램</a></li>
+							<li><a href="#">전시기획자</a></li>
+							<li><a href="#">전시구성</a></li>
+							<li><a href="#">전시작가</a></li>
+							<li><a href="#">전시작품</a></li>
+							<li><a href="#">관람안내</a></li>
+							<li><a href="#">티켓정보</a></li>
+							<li><a href="#">지난 광주비엔날레</a></li>
+						</ul>
+					</div>
+					<!-- 서브메뉴1 -->	
+					<div id="sub_menu02">
+						<span class="sub_title">4th GDB, 2011</span>
+						<ul class="sub_list01">
+							<li><a href="#">소개</a></li>
+							<li><a href="#">행사개요 및 프로그램</a></li>
+							<li><a href="#">전시기획자</a></li>
+							<li><a href="#">전시구성</a></li>
+							<li><a href="#">전시작가</a></li>
+							<li><a href="#">전시작품</a></li>
+							<li><a href="#">관람안내</a></li>
+							<li><a href="#">티켓정보</a></li>
+							<li><a href="#">지난 광주비엔날레</a></li>
+						</ul>
+					</div>
+					<!-- 서브메뉴2 -->	
+					<div id="sub_menu03">
+						<ul class="sub_list02">
+							<li><a href="#">인사말</a></li>
+							<li><a href="#">연혁</a></li>
+							<li><a href="#">CI소개</a></li>
+							<li><a href="#">조직도</a></li>
+							<li><a href="#">후원/협찬</a></li>
+							<li><a href="#">찾아오시는 길</a></li>
+						</ul>
+					</div>
+					<!-- 서브메뉴3 -->	
+				</div>
+				<!-- 서브메뉴 끝  -->
+
+				<div id="quickmenu02">
+					<p class="quick_title">QUICK<br />MENU</p>
+					<ul>
+						<li><a href="#">로그인</a></li>
+						<li><a href="join.html">회원가입</a></li>
+						<li><a href="borad.html">공지사항</a></li>
+						<li><a href="gallery.html">갤러리</a></li>
+						<li><a href="schedule.html">단체 예약</a></li>
+						<li class="li_end"><a href="ticket.html">티켓정보</a></li>
+					</ul>
+					<p class="top"><a href="#">&Delta;TOP</a></p>
+				</div>
+				<!-- quickmenu02 끝 -->
+				
+
+				<div id="contents_sec">
+					<div id="sub_visual">
+						<img src="../image/join/join_sub_v.gif" width="1100" height="80" alt="회원가입" />
+					</div>
+					<!-- visual 끝 -->
+
+					<div id="sub_left_sec">
+						<form action="#" method="post">
+							<fieldset>
+								<legend>회원가입 정보 입력</legend>
+								<h3 class="data1_title">필수 입력 사항</h3>
+								<table class="join_data1" width="100%" border="0" cellspacing="0" cellpadding="0" summary="총 9개의 입력항목">
+									<caption>필수 입력 사항</caption>
+									<colgroup>
+										<col class="table_left" width="170px" />
+										<col class="table_right" width="573px" />
+									</colgroup>
+									<tr>
+										<th scope="row">
+											<label for="user_id">아이디<span style="color:red;font-weight:normal;">[자동확인]</span></label>
+										</th>
+										<td>
+											<input class="text_box" name="user_id" id="user_id" type="text" maxlength="12" style="width:110px;" title="아이디 입력" />
+											<img src="../image/join/input_infor_txt02.gif" alt="영문, 숫자 4~12자리 이내를 입력해주세요" />
+										</td>
+									</tr>
+
+									<tr>
+										<th scope="row">
+											<label for="passwd">패스워드</label>
+										</th>
+										<td class="inform">
+											<input class="text_box" name="passwd" id="passwd" maxlength="16" type="password" style="width:110px;" title="비밀번호 입력" />
+											<img src="../image/join/input_infor_txt03.gif" width="339" height="14" alt="6~16자의 영문 대소문자,숫자, 특수문자를 조합 할 수 있습니다." />
+										</td>
+									</tr>
+
+									<tr>
+										<th scope="row">
+											<label for="repasswd">패스워드확인<span style="color:red;font-weight:normal;">[자동확인]</span></label>
+										</th>
+										<td>
+											<input class="text_box" name="repasswd" id="repasswd" maxlength="16" type="password" style="width:110px;" title="비밀번호 확인" />
+										</td>
+									</tr>
+
+									<tr>
+										<th scope="row">
+											<label for="email">이메일</label>
+										</th>
+										<td>
+											<input class="text_box" name="email_01" id="email" type="text" maxlength="20" style="width:110px;" title="이메일 앞지리" />
+											&nbsp;@&nbsp; 
+											<input class="text_box" name="email_02" type="text" maxlength="20" style="width:110px;" title="이메일 뒷지리" />
+											<select id="email_select" title="이메일 선택">
+												<option value="">직접입력</option>
+												<option value='naver.com'>naver.com</option>
+												<option value='hanmail.net'>hanmail.net</option>
+												<option value='nate.com'>nate.com</option>
+												<option value='hotmail.com'>hotmail.com</option>
+												<option value='paran.com'>paran.com</option>
+												<option value='yahoo.com'>yahoo.com</option>
+												<option value='chol.com'>chol.com</option>
+												<option value='dreamwiz.com'>dreamwiz.com</option>
+												<option value='empal.com'>empal.com</option>
+												<option value='freechal.com'>freechal.com</option>
+												<option value='gmail.com'>gmail.com</option>
+												<option value='hanafos.com'>hanafos.com</option>
+												<option value='hanmir.com'>hanmir.com</option>
+												<option value='hitel.net'>hitel.net</option>
+												<option value='korea.com'>korea.com</option>
+												<option value='lycos.co.kr'>lycos.co.kr</option>
+												<option value='netian.com'>netian.com</option>
+											</select>
+										</td>
+									</tr>
+
+									<tr>
+										<th scope="row">
+											<label for="receive_yes" class="gap">메일링 리스트 가입</label>
+										</th>
+										<td class="mailling">
+											<p>메일링 리스트에 가입하시면 비엔날레의 뉴스레터를 받아보실수 있습니다.</p>
+											<input name="receivecd" id="receive_yes" type="radio" value="y" checked="checked" title="메일링리스트 가입여부" /><label for="receive_yes">예</label> <input id="receive_no" name="receivecd" type="radio" value="n" title="메일링리스트 가입여부" /><label for="receive_no">아니오</label>
+										</td>
+									</tr>
+								</table>
+
+								<h3 class="data2_title">선택 입력 사항</h3>
+								<table class="join_data2" width="100%" border="0" cellspacing="0" cellpadding="0" summary="총 9개의 입력항목">
+									<caption>선택 입력 사항</caption>
+
+									<colgroup>
+										<col class="table_left" width="170px" />
+										<col class="table_right" width="573px" />
+									</colgroup>
+
+									<tr>
+										<th scope="row">
+											<label for="username">이름</label>
+										</th>
+										<td>
+											<input class="text_box" name="username" id="username" style="width:110px;" type="text" title="이름입력" />
+										</td>
+									</tr>
+
+									<tr>
+										<th scope="row">
+											<label for="usercode">주민번호</label>
+										</th>
+										<td>
+											<input class="text_box" name="usercode1" id="usercode" type="text" maxlength="6" size="10" title="주민번호 앞자리" />
+											&nbsp;-&nbsp;
+											<input class="text_box" name="usercode2" type="password" maxlength="7" size="10" title="주민번호 뒷자리" />
+											<button type="submit" id="usercode_btn">실명인증</button>
+										</td>
+					</tr>
+
+									<tr>
+										<th scope="row">
+											<label for="zipcd" class="gap">주 소</label>
+										</th>
+										<td>
+											<input class="text_box" name="zip_cd1" id="zipcd" type="text" maxlength="3" size="4" title="우편번호 앞자리" />
+											&nbsp;-&nbsp;
+											<input class="text_box" name="zip_cd2" type="text" maxlength="3" size="4" title="우편번호 뒷자리" />
+											<button type="submit" id="zipcd_btn">주소 찾기</button><br />
+											<input class="text_box" name="address1" type="text" style="margin-top:4px;" maxlength="100" size="40" title="기본주소입력" />
+											<input class="text_box" name="address2" type="text" style="margin-top:4px;" maxlength="100" size="40" title="상세주소입력" />
+										</td>
+									</tr>
+
+									<tr>
+										<th scope="row">
+											<label for="phone_no" class="gap">연락처</label>
+										</th>
+										<td>
+											<select name="phone_no1" id="phone_no" title="연락처 첫째자리" >
+												<option value="">선택</option>
+												<option value='010' >010</option>
+												<option value='011' >011</option>
+												<option value='016' >016</option>
+												<option value='017' >017</option>
+												<option value='018' >018</option>
+												<option value='019' >019</option>
+											</select>
+											&nbsp;-&nbsp;
+											<input class="text_box" name="phone_no2" type="text" maxlength="4" size="4" title="연락처 둘째자리" />
+											&nbsp;-&nbsp;
+											<input class="text_box" name="phone_no3" type="text" maxlength="4" size="4" title="연락처 셋째자리" />
+										</td>
+									</tr>
+								</table>
+
+
+								<p class="btn_area">
+									<input type="image" src="../image/join/join_ok_bt.gif" alt="회원가입 확인"/>
+									<a href="#"><img src="../image/join/join_cancel_bt.gif" width="198" height="35" alt="회원가입 취소" /></a>
+								</p>
+				
+			       
+								<h3 class="data3_title">이용약관 동의</h3>
+								<div class="all_check">
+									<input type="checkbox" id="all_check" name="all_check"  title="아래 이용약관 모두 동의 체크" />
+									<label for="all_check">아래 이용약관에 모두 동의합니다.</label>
+								</div>
+				
+								<table class="join_data3" width="100%" border="0" cellspacing="0" cellpadding="0" summary="총 2개의 이용약관">
+									<caption>이용약관</caption>
+									<colgroup>
+										<col class="table_left" width="170px" />
+										<col class="table_right" width="573px" />
+									</colgroup>
+				    
+									<tr>
+										<th scope="row">
+											<label for="check2">광주비엔날레 이용약관</label>
+										</th>
+										<td>
+											<div class="box">
+												<p><strong>제1조 (목적)</strong><br /><br />									
+												이 약관은 광주비엔날레가 홈페이지를 통해 제공하는 각종 정보 서비스(이하 &quot;서비스&quot;)의 이용조건 및 절차에 관한 사항과 기타 필요한 사항을 규정함을 목적으로 합니다.<br /><br />
+												<strong>제2조 (약관의 효력과 개정)</strong><br /><br />
+												① 이 약관은 회원등록 시 이용자의 동의와 함께 효력이 발생합니다.<br />
+												② 광주비엔날레는 정보 운영의 변경 및 기타 사유로 회원약관을 개정할 수 있으며 개정된 약관은 인터넷서비스 화면에 게재하거나 기타 다른 방법으로 이용자에게 공지함으로써 효력을 발생합니다.<br /><br />
+												<strong>제3조 (약관외 준칙)</strong><br /><br />
+												이 약관에 명시되지 않은 사항은 관련법령에 규정되어 있는 경우 그 규정에 따릅니다.<br /><br />
+												<strong>제4조 (용어의 정의)</strong><br /><br />
+												이 약관에서 사용하는 용어의 정의는 다음 각 호와 같습니다.<br />
+												1. 회원 : 회원서비스의 이용을 신청하고 광주비엔날레가 승낙하여 회원ID를 발급받은 자.<br /></p>
+											</div>
+											<div class="check">
+												<input type="checkbox" id="join_check1" name="join_check1" class="join_check" title="이용약관 동의 체크" />
+												<label for="join_check1">이용약관에 동의합니다</label>
+											</div>
+										</td>
+									</tr>
+				    
+									<tr>
+										<th scope="row">
+											<label for="check3">개인 정보 취급 방침</label>
+										</th>
+										<td>
+											<div class="box">
+												<p><strong>제1조 (목적)</strong><br /><br />
+												이 약관은 광주비엔날레가 홈페이지를 통해 제공하는 각종 정보 서비스(이하 "서비스")의 이용조건 및 절차에 관한 사항과 기타 필요한 사항을 규정함을 목적으로 합니다.<br /><br />
+												<strong>제2조 (약관의 효력과 개정)</strong><br /><br />
+												① 이 약관은 회원등록 시 이용자의 동의와 함께 효력이 발생합니다.<br />
+												② 광주비엔날레는 정보 운영의 변경 및 기타 사유로 회원약관을 개정할 수 있으며 개정된 약관은 인터넷서비스 화면에 게재하거나 기타 다른 방법으로 이용자에게 공지함으로써 효력을 발생합니다.<br /><br />
+												<strong>제3조 (약관외 준칙)</strong><br /><br />
+												이 약관에 명시되지 않은 사항은 관련법령에 규정되어 있는 경우 그 규정에 따릅니다.<br /><br />
+												<strong>제4조 (용어의 정의)</strong><br /><br />
+												이 약관에서 사용하는 용어의 정의는 다음 각 호와 같습니다.<br />
+												1. 회원 : 회원서비스의 이용을 신청하고 광주비엔날레가 승낙하여 회원ID를 발급받은 자.<br /></p>
+											</div>
+											<div class="check">
+												<input type="checkbox" id="join_check2" name="join_check2" class="join_check" title="개인인정보 취급방침 동의 체크" />
+												<label for="join_check2">개인정보 취급방침에 동의합니다</label>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</fieldset>
+							<script type="text/javascript">
+							
+							</script>
+						</form>
+					</div>
+
+					<!-- sub_left_sec 끝 -->
+					<div id="sub_right_sec">
+						<h3><img src="../image/join/lnb_tit07_login.gif" width="75" height="27" alt="로그인" /></h3>
+						<ul class="rightmenu">
+							<li class="rm_01"><a href="#">로그인</a></li>
+							<li class="rm_02"><a href="#">회원가입</a></li>
+							<li class="rm_03"><a href="#">아이디찾기</a></li>
+							<li class="rm_04"><a href="#">비밀번호찾기</a></li>
+						</ul>
+					</div>
+					<!-- sub_right_sec 끝 -->
+				</div>
+				<!-- contents_sec 끝 -->
+			</div>
+			<!-- contents 끝 -->
+		</div>
+		<!-- contents_wrap 끝 -->
+
+
+
+
+		<div class="banner_wrap">
+			<div class="banner">
+				<div id="banner01">
+					<ul>
+						<li><a href="#"><img src="../image/banner/submain_sponsor01.gif" width="130" height="50" alt="광주신세계" /></a></li>
+						<li><a href="#"><img src="../image/banner/submain_sponsor02.gif" width="130" height="50" alt="신한카드" /></a></li>
+					</ul>
+				</div>
+				 <div id="banner02">
+					<ul id="slide_banner">
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor03.gif" width="130" height="50" alt="국민카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor04.gif" width="130" height="50" alt="비씨카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor05.gif" width="130" height="50" alt="광주은행" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor06.gif" width="130" height="50" alt="현대카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor07.gif" width="130" height="50" alt="해피포인트" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor08.gif" width="130" height="50" alt="금호화순리조트" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor03.gif" width="130" height="50" alt="국민카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor04.gif" width="130" height="50" alt="비씨카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor05.gif" width="130" height="50" alt="광주은행" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor06.gif" width="130" height="50" alt="현대카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor07.gif" width="130" height="50" alt="해피포인트" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor08.gif" width="130" height="50" alt="금호화순리조트" /></a></li>
+					</ul>
+				</div>			
+			</div>			
+		</div>
+		<!-- banner_wrap 끝 -->
+
+		<div class="footer">
+			<div class="footer_menu">
+				<ul>
+					<li><a href="#"><img src="../image/common/footer_bt01.gif" width="104" height="14" alt="개인정보 보호정책" /></a></li>
+					<li><a href="#"><img src="../image/common/footer_bt02.gif" width="50" height="14" alt="이용약관" /></a></li>
+					<li><a href="#"><img src="../image/common/footer_bt03.gif" width="121" height="14" alt="이메일 무단수집 거부" /></a></li>
+				</ul>
+			</div>
+			 <p class="address"><img src="../image/common/footer_txt.gif" width="638" height="26" alt="재단법인 광주 비엔날레, 광주광역시 북구 비엔날레로111, 전화 062-608-4114, 이메일 beinnale@gb.or.kr, copyright" /></p>
+		</div>
+		<!-- footer 끝 -->
+	</body>
+
+</html>

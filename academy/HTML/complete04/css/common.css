@@ -1,0 +1,29 @@
+@charset "utf-8";
+@import url(gnb.css);/*gnb*/
+@import url(footer.css);/*footer*/
+@import url(basefont.css);/*폰트*/
+
+/*reset*/
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,address
+{margin:0; padding:0}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+li img{vertical-align:middle}
+a{text-decoration:none}
+a:hover, a:active, a:focus{text-decoration:none;}
+body, input, textarea, select, button, table{font-family:'돋움', Dotum, AppleGothic, sans-serif; font-size:12px}
+em,address{font-style:normal;}
+
+/*공통*/
+h2,.blind,form legend{position:absolute;left:-9999px;width:0;height:0;font-size:0;line-height:0}
+hr{display:none}
+
+/*접근성패널*/
+#skipnavi{display:none}
+
+/*폰트(공통)*/
+body{font-family:'돋움',Dotum;font-size:12px;font-weight:normal;font-style:normal;line-height:1.5em;color:#333}
+a{color:#333}
+a:hover, a:active{color:#f00}
+a:focus{color:#333}
+input{font-size:11px;line-height:1.5em}

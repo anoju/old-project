@@ -1,0 +1,137 @@
+﻿@charset "utf-8";
+body {
+	font: 10pt 돋움;
+	background: url(images/bg.jpg) repeat-x left top;
+	margin: 0; 
+	padding: 10px 0 0 10px;
+	text-align: center; 
+	color: #000000;
+}
+
+.container {
+	width: 776px;
+	background:transparent;
+	margin: 0 auto; 
+	border: 1px solid #999;
+}
+
+
+
+header {
+	background: url(images/bg-head.jpg) no-repeat left top;
+	padding: 0 10px 0 20px;  
+	height: 175px;
+	width: 746px;
+	border-bottom: thick solid #333;
+}
+
+
+header h1 {
+	margin: 0;
+	padding: 10px 0;
+	color:  #fff;
+	position: relative;
+	top: 50px;
+	width:720px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 38px;
+	text-align: right;
+}
+
+header h2 {
+	margin: 0;
+	padding: 10px 0;
+	width:720px;
+	font-family:돋움;
+	color:#fff	;
+	position:relative;
+	top:50px;
+	text-align:right;
+}
+
+
+.sero ul {
+	margin-top: 50px;
+	margin-left: 0px;
+	padding-left: 30px;
+	list-style: none;
+	text-align: left;
+}
+
+.sero ul li {
+	margin-bottom: 25px;
+	margin-left: 0px;
+	font-family: "굴림";
+	font-size: 15px;
+	color: #009;
+	font-weight: bold;
+	border-bottom: 1px solid #e4e4e4;
+	padding-bottom: 7px;
+}
+.memo {
+	margin: 15px;
+	border: 1px solid #09F;
+	font-family: "굴림";
+	font-size: 12px;
+	line-height: 20px;
+}
+
+
+.garo ul {
+	display: inline;
+	margin-top: 10px;
+	margin-left: 0px;
+	list-style: none;
+}
+
+
+aside {
+	float: left;
+	width:250px;
+
+	padding-bottom: 10px;
+	border-right: 1px solid #999;
+}
+
+#content {
+	margin: 0 0 0 250px;
+	padding: 20px 5px 5px;
+}
+
+
+footer {
+	padding: 10px 0;
+	background: #6F7D94;
+	position: relative;
+	clear: both; 
+}
+
+
+.clearfloat { 
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.accent {	
+    font-weight:bold;
+	color: #03F;
+}
+
+address {
+	color:white;	
+}
+
+
+
+
+[if lte IE 7]>
+
+article { margin-right: -1px; } 
+ul.nav a { zoom: 1; } 
+
+
+/* HTML5 tages */
+header, section, footer, aside, nav, article, hgroup {
+	display:block;
+}

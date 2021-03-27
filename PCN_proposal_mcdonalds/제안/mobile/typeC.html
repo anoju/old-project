@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Type C</title>
+	<style type="text/css">		
+		* { margin:0; padding:0; }		
+		img {border:0;}		
+		ol,ul,li{list-style:none}
+		body{overflow-x:hidden;}
+		.wrap{width:1440px;margin-left:-720px;position:absolute;left:50%;background:url(../images/bgMobile.jpg) no-repeat;padding-top: 155px;height:645px;}		
+		.container{overflow:hidden;width:283px;height:502px;margin-left: 579px;}
+		.contents{width:300px;height:485px;overflow:auto;}
+		.container img{width:283px;}
+		.contents p{display:none;}
+		.contents p.on{display:block;}
+		.contents p a{display:block;}
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" ></script>
+	<script type="text/javascript">		
+		$(function(){
+			$('.contents p a').click(function(){
+				var aa = $(this).parent().index();
+				var bb = $('.contents>p').length;
+				//alert(bb);
+				if(aa==(bb-1)){
+					$('.contents p').eq(0).addClass('on').siblings().removeClass('on');
+				}else{
+					$(this).parent().next().addClass('on').siblings().removeClass('on');
+				}
+				
+				/*$('.contents').stop().animate({opacity:0}, 0, function(){
+					$(this).stop().animate({opacity:1}, 200);	
+				});*/
+				return false;
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="container">
+			<p><img src="../images/bgMobile2.gif" alt="서브2" /></p>
+			<div id="contents" class="contents">
+				<p class="on"><a href="#"><img src="../images/c/mobile1.jpg" alt="서브1" /></a></p>
+				<p><a href="#"><img src="../images/c/mobile2.jpg" alt="서브2" /></a></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

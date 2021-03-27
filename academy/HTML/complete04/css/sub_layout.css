@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+body{background:url(../images/common/bg_gnb.jpg) repeat-x}
+/*wrap*/
+#wrap{width:976px;margin:0 auto}
+/*header*/
+#header{position:relative;height:109px;padding:5px 3px 5px}
+/*container*/
+#container{float:left;width:970px;padding:20px 3px 40px}
+/*aside*/
+#aside{float:left;width:180px}
+/*content*/
+#content{float:right;width:760px}
+/*footer*/
+#footer{clear:both;height:112px;padding:8px 22px 0;margin:0 3px;border:1px solid #dedede;border-top:2px solid #565656;background:url(../images/common/bg_footer.gif) repeat-x}

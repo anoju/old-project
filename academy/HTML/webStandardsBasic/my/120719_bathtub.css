@@ -1,0 +1,90 @@
+@charset "utf-8";
+/*리셋*/
+body, h1, h2, h3, h4, p, ul li, a{
+	margin:0;
+	padding:0;}
+body{
+	font-family:"나눔고딕","맑은 고딕";
+	font-size:62.5%;}
+body#feature{
+	background:url(../07/image/page_bg.png) #e6e6e6 repeat-y center top;}
+
+#wrapper{
+	width:760px;
+	margin:0 auto;
+	text-align:center;}
+
+#banner{
+	background:url(../07/image/banner.png)  no-repeat center top;
+	padding-top:90px;}
+
+#main{
+	text-align:left;
+	padding:10px 20px;}
+
+h1{
+	color:#152d6a;
+	font-size: 2.7em;
+	background:url(../07/image/feature_bug.png)  no-repeat 99% top ;
+	border-bottom:2px solid #b2f511;
+	padding-top:5px;}
+
+h2{
+	color:#152d6a;
+	font-size: 1.8em;
+	padding:5px 10px 3px 30px;
+	margin-top:20px;}
+
+h2.warning{
+	background:url(../07/image/warning.png)  no-repeat left center ;
+	border-bottom:1px dotted #cccccc;}
+
+h3 {
+	font-size: 1.3em;}
+
+h1,h3{
+	text-transform:uppercase;}
+
+p{
+	font-size: 1.3em;
+	line-height:1.6em;
+	margin-bottom:10px;}
+
+
+/*푸터 설정*/
+div#legal{
+	text-align:left;
+	border-top:#999999 1px dashed;
+	color:#666666;
+	font-size:1.1em;
+	padding:5px;
+	margin-bottom:20px;}
+div#legal a{
+	color:#666666;
+	background:url(../07/image/email.gif) no-repeat 5px center;
+	padding-left:30px;}
+
+/*링크설정*/	
+#main a{
+	font-weight:bold;
+	color:#8c1951;
+	text-decoration:none;}
+
+#main a.link_one{
+	border-bottom:2px dotted #a5e410;}
+
+#main a.link_two{
+	background:url(../07/image/globe.png)  no-repeat right top;
+	padding-right:30px;}
+
+/*마우스 오버 설정*/
+#main a.link_one:hover{
+	background:#ff9933;}
+			
+#main a.link_two:hover{
+	color:#003399;
+	background:url(../07/image/globe.png)  no-repeat right bottom;}
+
+/*visited 설정*/
+#main a:visited{
+	color:#999;}

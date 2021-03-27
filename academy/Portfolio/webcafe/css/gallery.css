@@ -1,0 +1,62 @@
+@charset "utf-8";	
+	
+	/*----갤러리----*/
+	.gallery li{
+		margin-left:15px;}
+		
+		.gallery li{
+			float:left;
+			display:inline;
+			width:120px;
+			height:167px;
+			margin:0 30px 28px 30px;}
+
+		.gallery li p{
+			padding:9px 2px 0 2px;}
+
+		.gallery li p{
+			font-size:0.9em;
+			color:#9b9b9b;}
+
+		.gallery li a img{
+			border:4px solid #e3e3e3;}
+
+		.gallery li a:hover img, .gallery li a:focus img{
+			border:4px solid #8be2df;}
+
+
+	/*----버튼/페이징 영역----*/
+	.paging{
+		clear:both;
+		margin-top:5px;
+		text-align:center;}
+
+		.num strong,.num a{
+			padding:5px 6px 5px 9px;
+			text-decoration:none;
+			background:url(../images/board/paging_bar.gif) no-repeat 0px 8px;
+			color:#707070;
+			line-height:1.2em;}
+
+			.paging .num .first_item{
+				background-image:none;}
+
+		.num a:hover, .num a:focus{
+			color:#336666;}
+
+		.num strong{
+			font-weight:bold;
+			color:#336666;
+			font-size:1.5em}
+
+		.paging img{
+			padding-top:4px;}
+
+		/*페이징 넘버에 보더 칠때
+		
+		.num a{
+			width:18px;
+			display:inline-block;
+			border:1px solid #707070;} 			*/
+
+		

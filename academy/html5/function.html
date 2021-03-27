@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+		</style>
+		<script>
+			//round:소수점반올림
+			//alert(Math.round(Math.random()*100))
+			
+			//floor:소수점버림
+			//alert(Math.floor(Math.random()*100))
+			
+			window.onload=init
+			
+			function init(){
+				var button = document.getElementById("colorButton")
+				button.onclick = handleButtonClick
+			}
+			
+			function handleButtonClick(){
+				var colorArray = ["빨간색", "파란색","녹색"]
+				var comColor = Math.floor(Math.random()*3)
+				
+				var textInput = document.getElementById("myColor")
+				var userColor = textInput.value
+				
+				if(userColor==colorArray[comColor]){
+					alert("제생각과 같습니다.    "+ comColor)
+				}else{
+					alert("컴퓨터가 생각한 색상은 "+ colorArray[comColor] + " 입니다.    " + comColor)
+				}
+			}
+		</script>
+		
+	</head>
+
+	<body>
+		<p>입력박스에 사용자가 "빨간색", "파란색","녹색"을 입력할 경우<br> 
+			컴퓨터가 랜덤하게 뽑은 색상과 일치하면 "제생각과 같습니다."<br> 
+			불일치하면 "컴퓨터가 생각한 색상은...입니다"를 출력</p>
+		<form>
+			<select id="myColor">
+				<option>빨간색</option>
+				<option>파란색</option>
+				<option>녹색</option>
+			</select>
+			
+			<input type="button" id="colorButton" value="컴퓨터 랜덤색상 추출" />
+		</form>
+	</body>
+</html>

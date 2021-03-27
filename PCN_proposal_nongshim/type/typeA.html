@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Type A</title>
+	<style type="text/css">
+		body { position:relative; width:1024px; margin:auto; overflow-x:hidden;}
+		* { margin:0; padding:0; }
+		img { display:none; position:absolute; top:0px; left:50%; margin-left:-512px; border:0;}
+		img.on { display:block;}
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" ></script>
+	<script type="text/javascript">
+		$(function(){
+			var size = $('img').size()-1;
+			$('img').click(function(){
+				var index = $(this).index();
+				if(size == index){
+					$(this).fadeOut().siblings(':eq(0)').fadeIn();
+				}else{
+					$(this).fadeOut().next().fadeIn();
+				};
+			});
+		});
+	</script>
+</head>
+<body>
+	<img class="on" src="../images/a/A (1).jpg" alt="" />
+	<img src="../images/a/A (2).jpg" alt="" />
+	<img src="../images/a/A (3).jpg" alt="" />
+	<img src="../images/a/A (4).jpg" alt="" />
+	<img src="../images/a/A (5).jpg" alt="" />
+	<img src="../images/a/A (6).jpg" alt="" />
+	<img src="../images/a/A (7).jpg" alt="" />
+	<img src="../images/a/A (8).jpg" alt="" />
+	<img src="../images/a/A (9).jpg" alt="" />
+	<img src="../images/a/A (10).jpg" alt="" />
+	<img src="../images/a/A (11).jpg" alt="" />
+	<img src="../images/a/A (12).jpg" alt="" />
+	<img src="../images/a/A (13).jpg" alt="" />
+	<img src="../images/a/A (14).jpg" alt="" />
+	<img src="../images/a/A (15).jpg" alt="" />
+	<img src="../images/a/A (16).jpg" alt="" />
+</body>
+</html>

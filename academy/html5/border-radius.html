@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5</title>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb'>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicBoldWeb'>
+
+		<style>
+			body{ 
+				font-family: 'NanumGothicWeb';
+				text-align:center;}
+
+			.main_box{
+				display:block;
+				width:500px;
+				padding:15px;
+				border:3px solid red;
+				background:#ffff99;
+				margin:50px auto;}
+				
+			.one{
+				/*border-radius:좌상 우상 우하 좌하;*/
+				-moz-border-radius:20px 15px 10px 5px;
+				-webkit-border-radius:20px 15px 10px 5px;
+				border-radius:20px 15px 10px 5px;}
+				
+			.two{
+				/*모서리만 선택해서 처리*/
+				/*좌측 상단 둥글게*/
+				-moz-border-radius-topleft:20px;
+				-webkit-border-top-left-radius:20px;
+				
+				/*우측 하단 둥글게*/
+				-moz-border-radius-bottomright:20px;
+				-webkit-border-bottom-right-radius:20px;}
+
+			.three{
+				/*타원 지정*/
+				/*border-radius:가로반경 / 세로반경;*/
+				-moz-border-radius:50px / 40px;
+				-webkit-border-radius:50px / 40px;
+				border-radius:50px / 40px;
+				}
+
+			#title{
+				font-size:40px;
+				font-weight:bold;}
+
+			
+			/*정 원(circle)*/
+			#circle1{
+				display:block;
+				width:100px;
+				height:100px;
+				border:3px solid #cc66ff;
+				background:#ccffff;
+				margin:50px auto;
+				
+				-moz-border-radius:50px;
+				-webkit-border-radius:50px;
+				border-radius:50px;}
+
+			#circle2{
+				display:block;
+				width:100px;
+				height:100px;
+				border:3px solid #ff33cc;
+				background:#ffffcc;
+				margin:50px auto;
+				overflow:hidden;
+				
+				-moz-border-radius:50px / 50px;
+				-webkit-border-radius:50px / 50px;
+				border-radius:50px / 50px;}
+
+			/*반원*/
+			#circle3{
+				display:block;
+				width:50px;
+				height:100px;
+				border:3px solid #ff33cc;
+				background:#ffffcc;
+				margin:50px auto;
+				overflow:hidden;
+				
+				-moz-border-radius:50px 0 0 50px;
+				-webkit-border-radius:50px 0 0 50px;
+				border-radius:50px 0 0 50px;}
+			#circle4{
+				display:block;
+				width:100px;
+				height:50px;
+				border:3px solid #ff33cc;
+				background:#ffffcc;
+				margin:50px auto;
+				overflow:hidden;
+				
+				-moz-border-radius:50px 50px 0 0;
+				-webkit-border-radius:50px 50px 0 0;
+				border-radius:50px 50px 0 0;}
+
+			/*반의 반원*/
+			#circle5{
+				display:block;
+				width:100px;
+				height:100px;
+				border:3px solid #ff33cc;
+				background:#ffffcc;
+				margin:50px auto;
+				overflow:hidden;
+				
+				-moz-border-radius:100px 0 0 0;
+				-webkit-border-radius:100px 0 0 0;
+				border-radius:100px 0 0 0;}
+
+			
+			/*초승달 만들기*/
+			#circle6{
+				display:block;
+				width:100px;
+				height:100px;
+				background:#ffcc66;
+				margin:50px auto;
+				
+				-moz-border-radius:50px;
+				-webkit-border-radius:50px;
+				border-radius:50px;}
+			#circle7{
+				display:block;
+				width:80px;
+				height:80px;
+				background:#fff;
+				margin:50px auto;
+				position:relative;
+				top:-140px;
+				left:15px;
+				
+				-moz-border-radius:40px;
+				-webkit-border-radius:40px;
+				border-radius:40px;}
+				
+		</style>
+
+
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<header class="main_box one">
+			<span id="title">모서리를 부드럽게</span>
+		</header>
+		<header class="main_box two">
+			<span id="title">모서리를 부드럽게</span>
+		</header>
+		<header class="main_box three">
+			<span id="title">모서리를 부드럽게</span>
+		</header>
+
+		<div id="circle1">가나다라마바사아자차카타파하</div>
+		<div id="circle2">가나다라마바사아자차카타파하</div>
+		<div id="circle3">가나다라마바사아자차카타파하</div>
+		<div id="circle4">가나다라마바사아자차카타파하</div>
+		<div id="circle5">가나다라마바사아자차카타파하</div>
+
+		<div id="circle6"></div>
+		<div id="circle7"></div>
+	</body>
+</html>

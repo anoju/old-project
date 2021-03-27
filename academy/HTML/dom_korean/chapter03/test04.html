@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shopping list</title>
+<style type="text/css">
+body {
+	font-family:"나눔고딕", "맑은 고딕";
+}
+p {
+	color: yellow;
+	font-size: 1.2em;
+}
+body {
+	color: white;
+	background-color: black;
+}
+#myList {
+	border: 1px solid white;
+	background-color: #333;
+	color: #ccc;
+	padding:1em 2em;
+}
+#myList li {
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+<h1>원하는 요소에 접근한뒤 각속성값을 알아내려 한다면</h1>
+<p title="title속성출력">getAttribute를 이용</p>
+<p>이것은 함수기때문에 인수를 갖는다 그것은 속성명</p>
+<ul id="myList">
+  <li>지금까지본메소드와 달리</li>
+  <li>속성을 얻기위해서는</li>
+  <li>getElementsByTagName과 함께 사용해야한다</li>
+</ul>
+<p>예를 들어 모든 p요소의 title속성을 얻는다면</p>
+<script type="text/JavaScript">
+	var pAttribute = document.getElementsByTagName("p");
+	for (var i=0; i< pAttribute.length; i++) {
+		alert(pAttribute[i].getAttribute("title"));
+	  }
+	</script>
+</body>
+</html>

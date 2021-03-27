@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>여러개의 입력 폼을 가지는 콘텐츠와 레이블</title>
+</head>
+
+<body><table border="1" summary="이름, 휴대폰, 이메일 정보 입력 및 메일링 가입여부 확인">
+  <caption>
+    개인정보 입력
+  </caption>
+  <tr>
+    <th scope="row"><label for="username">이름</label></th>
+    <td><input type="text" name="username" id="username" /></td>
+  </tr>
+  <tr>
+    <th scope="row"><label for="cellno">휴대폰</label></th>
+    <td><input name="cellno" type="text" id="cellno" size="3" maxlength="3" title="휴대폰첫째자리" />
+      -
+      <input name="cellno2" type="text" id="cellno2" size="4" maxlength="4" title="휴대폰중간자리" />
+      -
+      <input name="cellno3" type="text" id="cellno3" size="4" maxlength="4" title="휴대폰끝자리" /></td>
+  </tr>
+  <tr>
+    <th scope="row"><label for="mailaddr">이메일</label></th>
+    <td><input name="mailaddr" type="text" id="mailaddr" size="57" maxlength="60" /></td>
+  </tr>
+  <tr>
+    <th scope="row">메일링 리스트 가입</th>
+    <td><input name="receivecd" type="radio" id="reciveYes" value="Y" checked="checked" title="메일링 리스트 가입여부" />
+      <label for="reciveYes">예</label>
+      
+        <input name="receivecd" type="radio"  id="reciveNo" value="N" title="메일링 리스트 가입여부" />
+        <label for="reciveNo">아니오</label></td>
+  </tr>
+</table>
+
+</body>
+</html>

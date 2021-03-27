@@ -1,0 +1,36 @@
+@charset "utf-8";
+@import url(common.css);/*공통*/
+@import url(sub_layout.css);/*서브레이아웃*/
+@import url(sub.css);/*서브공통*/
+
+/*하이라이트보기*/
+.high_view{padding:20px 17px;border:1px solid #ccc;border-top:3px solid #555}
+.high_view dl{height:80px}
+.high_view dt{padding-bottom:3px}
+.high_view dd.txt{float:left;padding:15px 50px 10px 0}
+
+/*댓글*/
+.comt{padding:10px 0 0 18px;margin-bottom:40px;border:1px solid #ccc;border-top:0;background:#f4f4f4}
+.comt form{width:724px;height:66px;padding:10px 0 0 16px;background:url(../images/view/bg_photo_input.gif) no-repeat}
+.comt form textarea{width:600px;height:35px;padding:5px;margin:0;border:1px solid #ccc;overflow:hidden}
+.comt form #btn_comt{position:relative;top:3px}
+.comt ul{padding:20px 19px 0 0}
+.comt li{position:relative;left:0;top:0;padding:5px 5px;border-bottom:1px solid #ccc;color:#555}
+.comt li span{position:absolute;top:5px;color:#777}
+.comt li span.comt_id{left:550px}
+.comt li span.comt_dt{left:650px}
+
+/*하이라이트섬네일*/
+.high_thmb{float:left;padding:0 20px 20px;margin:10px 0 10px;border:1px solid #ddd}
+.high_thmb li{float:left;width:157px;padding:20px 30px 0 0}
+.high_thmb li.last{padding:20px 0 0}
+.high_thmb li span{display:block;padding-top:3px;font-size:11px;line-height:1.3em;color:#777}
+
+/*paginate2*/
+.paginate2{margin:20px 0 20px;text-align:center}
+.paginate2 a{display:inline-block;width:20px;height:20px;vertical-align:middle;line-height:1.8em;}
+
+/*paginate*/
+.paginate{clear:both;width:400px;height:23px;margin:20px auto 0}
+.paginate a{float:left;width:23px;height:19px;padding-top:2px;margin-right:5px;border:1px solid #ccc;font-weight:bold;color:#999;text-align:center}
+.paginate a.pgskip{height:21px;padding:0}

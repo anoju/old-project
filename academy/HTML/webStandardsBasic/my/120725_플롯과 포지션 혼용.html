@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>  </title>
+
+		<style type="text/css">
+			html, body{
+				margin:0;
+				padding:0;}
+
+			body{
+				font-family:"나눔고딕","맑은 고딕";
+				}
+
+			#top{
+				 height:196px;
+				 width:596px;
+				 background:#00cc33;
+				 border:2px solid #3300cc;
+				 }
+
+			#main_wrapper{
+				width:600px;}
+
+			#left{
+				border:2px solid #ffff00;
+				float:left;
+				width:196px;
+				height:596px;}
+
+			#right_wrapper{
+				background:#33ccff;
+				float:left;
+				width:400px;
+				height:600px;}
+
+			#right_1,#right_2,#right_3{
+				height:196px;
+				width:396px;
+				position:relative;}
+
+			#right_1{
+				border:2px solid #ff0000;}
+
+			#right_2{
+				border:2px solid #ff00ff;}
+
+			#right_3{
+				border:2px solid #cc0033;}
+
+			#right_1 p,#right_2 p,#right_3 p{
+				position:absolute;
+				top:70px;
+				left:0px;}
+			
+			#right_1 img,#right_2 img,#right_3 img{
+				position:absolute;
+				top:130px;
+				left:250px;}
+
+		</style>
+	</head>
+
+	<body>
+		<div id="top">
+			<h1>플롯과 포지션 혼용</h1>
+		</div>
+		
+		<div id="main_wrapper">
+			<div id="left">
+				left
+			</div>
+			<div id="right_wrapper">
+				<div id="right_1">
+					right_1<p>이 지역은 위치가 자기부모의 포지션이 절대이기때문에 부모의 원래 위치로 계산되었다.</p><img src="../08/image/go.png" width="22" height="22" alt="이미지" />
+				</div>
+				<div id="right_2">
+					right_2<p>이 지역은 위치가 자기부모의 포지션이 절대이기때문에 부모의 원래 위치로 계산되었다.</p><img src="../08/image/go.png" width="22" height="22" alt="이미지" />
+				</div>
+				<div id="right_3">
+					right_3<p>이 지역은 위치가 자기부모의 포지션이 절대이기때문에 부모의 원래 위치로 계산되었다.</p><img src="../08/image/go.png" width="22" height="22" alt="이미지" />
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

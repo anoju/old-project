@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+	#contents_area h2{
+		padding:0 0 15px 24px;
+		color:#1698a7;
+		font-weight:bold;
+		background:url(../images/common/icon_h2.gif) no-repeat 4px 2px;}
+
+	#contents_area .text{
+		padding:0 0 15px 24px;
+		line-height:1.4em;
+		color:#595959;}
+
+	#contents_area .view_code{
+		margin:0 0 20px 24px;
+		padding:14px;
+		border-left:4px solid #dadada;
+		background:#f7f7f7;}
+
+	.view_code code{
+		padding-right:15px;
+		line-height:1.5em;
+		color:#587174;
+		font-family:"Courier New", Courier, monospace;}
+

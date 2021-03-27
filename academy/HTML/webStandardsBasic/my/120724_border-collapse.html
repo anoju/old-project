@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>  </title>
+
+		<style type="text/css">
+			body{
+				font-family:"나눔고딕","맑은 고딕";
+				}
+			h2{
+				background:silver;}
+			
+			table, td, th{
+				border:1px solid blue;}
+				
+			table.separate{
+				border-collapse:separate;}
+
+			table.collapse{
+				border-collapse:collapse;}
+		</style>
+	</head>
+
+	<body>
+		<h2>border 분리모델의 적용</h2>
+		<table class="separate">
+			<tr>
+				<th>교재명</th>
+				<th>가격</th>
+			</tr>
+			<tr>
+				<td>시맨틱 마크업</td>
+				<td>28,000원</td>
+			</tr>
+			<tr>
+				<td>웹 표준의 모든 것</td>
+				<td>35,000원</td>
+			</tr>
+			<tr>
+				<td>CSS 파헤치기</td>
+				<td>30,000원</td>
+			</tr>
+			<tr>
+				<td>DOM 그리고 스크립트</td>
+				<td>33,000원</td>
+			</tr>
+		</table>
+
+		<h2>border 병합모델의 적용</h2>
+		<table class="collapse">
+			<tr>
+				<th>교재명</th>
+				<th>가격</th>
+			</tr>
+			<tr>
+				<td>시맨틱 마크업</td>
+				<td>28,000원</td>
+			</tr>
+			<tr>
+				<td>웹 표준의 모든 것</td>
+				<td>35,000원</td>
+			</tr>
+			<tr>
+				<td>CSS 파헤치기</td>
+				<td>30,000원</td>
+			</tr>
+			<tr>
+				<td>DOM 그리고 스크립트</td>
+				<td>33,000원</td>
+			</tr>
+		</table>
+	</body>
+
+</html>

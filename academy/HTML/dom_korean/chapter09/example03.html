@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=euc-kr" />
+  <title>Example</title>
+  <style type="text/css">
+  p {
+	  color:gray;
+	  font-family:"나눔고딕", "맑은 고딕";
+	  cursor:pointer;
+	  width:5em;
+
+	  }
+  </style>
+  <script type="text/javascript">
+window.onload = function() {
+  var para01 = document.getElementById("example")
+  var para02 = document.getElementById("color")
+  var para03 = document.getElementById("size")
+  var para03 = document.getElementById("rgb")
+  alert("글꼴정보: " + para01.style.fontFamily)
+  alert("글꼴색상: " + para01.style.color)
+  alert("글꼴크기: " + para03.style.fontSize)
+  alert("또다른색상정보: " + para03.style.color)
+}
+  </script>
+</head>
+<body>
+  <p id="example" style="color:gray; font-family:'나눔고딕', '맑은 고딕'">
+CSS속성중에 &quot;-&quot;가붙은 스타일을 얻으려면
+  </p>
+  
+   <p id="color" style="color:#099; font-family:'나눔고딕', '맑은 고딕'">
+단락예제2
+  </p>
+  
+   <p id="size" style="font-size:2em;">
+단락예제3
+  </p>
+  
+     <p id="rgb" style="color:#09C;">
+단락예제4
+  </p>
+  
+</body>
+</html>

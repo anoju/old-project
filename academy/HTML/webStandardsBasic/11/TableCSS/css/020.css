@@ -1,0 +1,55 @@
+@charset "utf-8";
+table {
+	border-spacing:1px;
+	font-family: "나눔고딕";
+	font-size:10px;
+	background-color:#E7E7E7;
+	color: #b7b7b7;
+}
+
+caption {
+	font-weight: bold;
+	background: #50ADEA url(http://infectedfx.net/css/tables/corner.gif) no-repeat right top;
+	border-bottom:2px solid #1975d7;
+	color: #FFF;
+	text-transform:uppercase;
+	padding:10px;
+}
+
+td, th {
+	padding: 4px;
+}
+
+thead th {
+	text-align: center;
+	background: #F5F5F5;
+	color: #666;
+	border: 1px solid #FFF;
+	text-transform:uppercase;
+}
+
+tbody th {
+	font-weight: bold;
+}
+
+tbody tr		{
+	background-color:#FFF; 
+	text-align:left;
+	}
+tbody tr.odd 	{
+	background: #f9f9f9;
+	border-top:1px solid #FFF;
+}
+
+tbody tr td { 
+	height:50px;
+	background: #FFF;
+	border: 1px solid #FFF;
+	}
+
+tbody tr.odd td{ 
+	background: #f9f9f9;
+	border-top:1px solid #FFF;
+	}
+
+

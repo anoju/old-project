@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+body{
+	font-family: "나눔고딕";
+}
+
+#left {
+
+	font-size: 12px;
+	color: #FFF;
+	background-color: #0CF;
+	float: left;
+	height: 300px;
+	width: 200px;
+}
+
+#right {
+	font-family: "나눔고딕";
+	font-size: 12px;
+	color:#FFF;
+	background-color:#03F;
+	float:right;
+	height: 200px;
+	width: 300px;
+}
+#wrapper{
+	border:#069 solid 1px;
+	text-align:center;
+}
+.clear{
+	clear:both;
+	border:#030 solid thin;
+}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+플롯이 지정된 엘리먼트를 감싸지 못하는 컨테이너에 clear용 빈div요소 추가
+
+  <div id="left">왼쪽float가 지정되었다</div>
+<div id="right">오른쪽float가 지정되었다</div>
+
+<div class="clear">이부분 때문에 해제 된다</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,562 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>단체관람 예약</title>
+
+		<!-- 외부 CSS 링크-->
+		<link rel="stylesheet" type="text/css" href="../css/import.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/schedule.css"/>
+        
+		<!-- 외부 javascript 링크-->
+		<script type="text/javascript" src="../js/onload.js"></script>
+		<!-- GNB메뉴 -->
+		<script type="text/javascript" src="../js/slide_GNBmenu.js"></script>
+		<!-- 푸터 배너 스크롤 -->
+		<script type="text/javascript" src="../js/slide_banner.js"></script>
+		<!--  퀵메뉴 -->
+		<script type="text/javascript" src="../js/quickmenu.js"></script>
+        
+        <!-- 익스 플로러 6번전 png파일 오류 -->
+        <!--[if IE 6]>
+		<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<div class="header_wrap">
+			<div id="header">
+				<!-- 로고 -->
+				<h1><a href="../index.html"><img src="../image/common/logo.gif" width="167" height="84" alt="광주비엔날래" /></a></h1>
+                
+				<div id="util">
+					<div id="select_lang">
+						<div id="bt_sec">
+							<img id="left" src="../image/common/select_lang_txt.gif" width="94" height="7" alt="select language" />
+							<img id="right"src="../image/common/select_lang_bt.gif" width="29" height="29" alt="" />
+						</div>
+						<ul id="language">
+							<li><a href="#"><img src="../image/common/lang_eng.gif" width="42" height="7" alt="english" /></a></li>
+						</ul>
+					</div>
+					<!-- select_lang 끝 -->
+
+					<div class="top_menu">
+						<ul>
+							<li class="li_first"><a href="#"><img src="../image/common/util_bt01.gif" width="30" height="7" alt="log in" /></a></li>
+							<li><a href="#"><img src="../image/common/util_bt02.gif" width="40" height="7" alt="sign up" /></a></li>
+							<li><a href="#"><img src="../image/common/util_bt05.gif" width="43" height="7" alt="sitemap" /></a></li>
+						</ul>
+						<a href="#"><img class="facebook" src="../image/common/facebook_bt.gif" width="85" height="21" alt="facebook" /></a>
+						<a href="#"><img class="twitter" src="../image/common/twitter_bt.gif" width="85" height="21" alt="twitter" /></a>
+					</div>
+				</div>
+				<!-- util 끝 -->
+
+				<div id="quickmenu01">
+					<table border="0" cellspacing="0" cellpadding="0" summary="티켓정보,관람안내,모바일웹,오시는길,프레스룸,지역미술관,관람객편의시설,광주투어가이즈,Noon비엔날레정론지">
+						<caption>퀵메뉴</caption>
+						<colgroup>
+							<col width="88px" />
+							<col width="97px" />
+							<col width="80px" />
+						</colgroup>
+						<tr>
+							<td><a href="#"><img src="../image/common/quick_bt01.gif" width="48" height="11" alt="티켓정보" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt05.gif" width="80" height="11" alt="오시는길" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt06.gif" width="80" height="11" alt="관람객 편의시설" /></a></td>
+						</tr>
+						<tr>
+							<td><a href="#"><img src="../image/common/quick_bt04.gif" width="80" height="11" alt="관람안내" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt08.gif" width="80" height="11" alt="프레스룸" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt03.gif" width="80" height="11" alt="광주투어가이드" /></a></td>
+						</tr>
+						<tr>
+							<td><a href="#"><img src="../image/common/quick_bt07.gif" width="80" height="11" alt="모바일웹" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt09.gif" width="80" height="11" alt="지역미술관" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt02.gif" width="101" height="11" alt="noon비엔날레정론지" /></a></td>
+						</tr>
+					</table>				
+				</div>
+				<!-- qiuckmenu 끝 -->
+
+				<div id="menu">
+					<div id="bts">
+						<ul>
+							<li><a href="#"><img src="../image/common/menu01.gif" width="55" height="15" alt="알림마당" /></a></li>
+							<li><a href="#"><img src="../image/common/menu02.gif" width="55" height="15" alt="자료마당" /></a></li>
+							<li><a href="#"><img src="../image/common/menu03.gif" width="55" height="15" alt="고객마당" /></a></li>
+						</ul>
+					</div>
+					<!-- bts 끝 -->
+					<div id="search">
+						<form action="#" method="post">
+							<fieldset>
+								<legend>통합검색</legend>
+								<input id="search_area" type="text" title="검색어 입력" /><input id="search_btn" type="image" src="../image/common/search_bt.gif" alt="검색" />
+							</fieldset>
+						</form>
+					</div>
+					<!-- search 끝 -->
+				</div>
+				<!-- menu 끝 -->
+				<div id="gnb">
+					<div class="depth1">
+						<ul>
+							<li id="gnb1"><a href="#">광주비엔날레</a></li>
+							<li id="gnb2"><a href="#">광주디자인비엔날레</a></li>
+							<li id="gnb3"><a href="#">재단소개</a></li>
+						</ul>
+					</div>
+					<!-- 주메뉴 끝 -->
+
+				</div>
+				<!-- gnb 끝 -->
+			</div>
+			<!-- header 끝 -->
+		</div>
+		<!-- header_wrap 끝 -->
+		
+        
+        
+        
+        
+        
+        
+		<div id="contents_wrap">
+        		<div id="contents">
+
+				<div class="depth2">
+					<div id="sub_menu01">
+						<span class="sub_title">9th GB, 2012</span>
+						<ul class="sub_list01">
+							<li><a href="#">소개</a></li>
+							<li><a href="#">행사개요 및 프로그램</a></li>
+							<li><a href="#">전시기획자</a></li>
+							<li><a href="#">전시구성</a></li>
+							<li><a href="#">전시작가</a></li>
+							<li><a href="#">전시작품</a></li>
+							<li><a href="#">관람안내</a></li>
+							<li><a href="#">티켓정보</a></li>
+							<li><a href="#">지난 광주비엔날레</a></li>
+						</ul>
+					</div>
+					<!-- 서브메뉴1 -->	
+					<div id="sub_menu02">
+						<span class="sub_title">4th GDB, 2011</span>
+						<ul class="sub_list01">
+							<li><a href="#">소개</a></li>
+							<li><a href="#">행사개요 및 프로그램</a></li>
+							<li><a href="#">전시기획자</a></li>
+							<li><a href="#">전시구성</a></li>
+							<li><a href="#">전시작가</a></li>
+							<li><a href="#">전시작품</a></li>
+							<li><a href="#">관람안내</a></li>
+							<li><a href="#">티켓정보</a></li>
+							<li><a href="#">지난 광주비엔날레</a></li>
+						</ul>
+					</div>
+					<!-- 서브메뉴2 -->	
+					<div id="sub_menu03">
+						<ul class="sub_list02">
+							<li><a href="#">인사말</a></li>
+							<li><a href="#">연혁</a></li>
+							<li><a href="#">CI소개</a></li>
+							<li><a href="#">조직도</a></li>
+							<li><a href="#">후원/협찬</a></li>
+							<li><a href="#">찾아오시는 길</a></li>
+						</ul>
+					</div>
+					<!-- 서브메뉴3 -->	
+				</div>
+				<!-- 서브메뉴 끝  -->
+
+				<div id="quickmenu02">
+					<p class="quick_title">QUICK<br />MENU</p>
+					<ul>
+						<li><a href="#">로그인</a></li>
+						<li><a href="join.html">회원가입</a></li>
+						<li><a href="borad.html">공지사항</a></li>
+						<li><a href="gallery.html">갤러리</a></li>
+						<li><a href="schedule.html">단체 예약</a></li>
+						<li class="li_end"><a href="ticket.html">티켓정보</a></li>
+					</ul>
+					<p class="top"><a href="#">&Delta;TOP</a></p>
+				</div>
+				<!-- quickmenu02 끝 -->
+
+				<div id="contents_sec">
+					<div id="sub_visual">
+						<img src="../image/schedule/reservation_sub_v.gif" width="1100" height="80" alt="단체관람 예약" />
+					</div>
+					<!-- visual 끝 -->
+
+					<div id="sub_left_sec">
+						<div class="information">
+							<div class="infor_img">
+								<img src="../image/schedule/roundtable.jpg" width="180" height="90" alt="이미지" />
+							</div>
+							<div class="infor_txt">
+								<p><strong>광주비엔날레</strong></p>
+
+								<p>ROUNDTABLE</p>
+
+								<p class="infor_day"><img src="../image/schedule/event_day_icon.gif" width="58" height="17" alt="행사기간 " /> 2012년 09월 07일 ~ 2012년 11월 11일</p>
+
+								<p class="infor_day"><img src="../image/schedule/regist_day_icon.gif" width="58" height="17" alt="접수기간" /> 2012년 08월 14일 ~ 2012년 11월 10일</p>
+							</div>
+						</div>
+
+						<div class="calendar">
+							<div class="cal_info">
+								<p>
+									<a href="#"><img src="../image/schedule/calendar_leftbt.gif" width="52" height="52" alt="이전" /></a>
+									<img src="../image/schedule/y2012.gif" width="151" height="52" alt="2012년" />
+									<img src="../image/schedule/cal_dot.gif" width="11" height="52" alt="." />
+									<img src="../image/schedule/m08.gif" width="110" height="52" alt="8월" />
+									<a href="#"><img src="../image/schedule/calendar_rightbt.gif" width="52" height="52" alt="다음" /></a>
+								</p>
+							</div>
+							<table border="0" cellspacing="0" cellpadding="0" summary="달력">
+								<caption>캘린더</caption>
+								<colgroup>
+									<col width="105px" />
+									<col width="105px" />
+									<col width="105px" />
+									<col width="105px" />
+									<col width="105px" />
+									<col width="105px" />
+									<col width="105px" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th class="cal_sun">SUN</th>
+										<th>MON</th>
+										<th>TUE</th>
+										<th>WED</th>
+										<th>THU</th>
+										<th>FRI</th>
+										<th class="cal_sat">SAT</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td class="cal_first">
+											<div class="day">
+												<div class="day_num cal_sun">&nbsp;</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">&nbsp;</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">&nbsp;</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">01</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">02</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">03</div>
+												<div class="day_txt">
+													<p><a href="#" title="광주 신세계백화점 홍보관 개최">광주 신세계백화점 홍보관..</a></p>
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num cal_sat">04</div>
+												<div class="day_txt">
+													<p><a href="#" title="단체관람 예약 온라인 오픈">단체관람 예약 온라인 오..</a></p>
+													<p><a href="#" title="2012년 광주 비엔날레 소식지 발간">2012년 광주 비엔날레 소..</a></p>
+												</div>
+											</div>
+										</td>
+									</tr>
+
+									<tr>
+										<td class="cal_first">
+											<div class="day">
+												<div class="day_num cal_sun">05</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">06</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">07</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">08</div>
+												<div class="day_txt">
+													<p><a href="#" title="단체관람 예약 온라인 오픈">단체관람 예약 온라인 오..</a></p>
+													<p><a href="#" title="2012년 광주 비엔날레 소식지 발간">2012년 광주 비엔날레 소..</a></p>
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">09</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">10</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num cal_sat">11</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+									</tr>
+
+									<tr>
+										<td class="cal_first">
+											<div class="day">
+												<div class="day_num cal_sun">12</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">13</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">14</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">15</div>
+												<div class="day_txt">
+													<p><a href="#" title="광주 신세계백화점 홍보관 개최">광주 신세계백화점 홍보관..</a></p>
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">16</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">17</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num cal_sat">18</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+									</tr>
+
+									<tr>
+										<td class="cal_first">
+											<div class="day">
+												<div class="day_num cal_sun">19</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">20</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">21</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">22</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">23</div>
+												<div class="day_txt">
+													<p><a href="#" title="광주 신세계백화점 홍보관 개최">광주 신세계백화점 홍보관..</a></p>
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">24</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num cal_sat">25</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+									</tr>
+
+									<tr>
+										<td class="cal_first">
+											<div class="day">
+												<div class="day_num cal_sun">26</div>
+												<div class="day_txt">
+													<p><a href="#" title="단체관람 예약 온라인 오픈">단체관람 예약 온라인 오..</a></p>
+													<p><a href="#" title="2012년 광주 비엔날레 소식지 발간">2012년 광주 비엔날레 소..</a></p>
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">27</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">28</div>
+												<div class="day_txt">
+													<p><a href="#" title="광주 신세계백화점 홍보관 개최">광주 신세계백화점 홍보관..</a></p>
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">29</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">30</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num">31</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+										<td>
+											<div class="day">
+												<div class="day_num cal_sat">&nbsp;</div>
+												<div class="day_txt">&nbsp;</div>
+											</div>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+							<p class="notice"><img src="../image/schedule/calendar_txt01.gif" width="325" height="25" alt="상기 일정은 추진과정에서 일부 변경 될 수 있습니다." /></p>
+							<p class="schedule_btn"><img src="../image/schedule/calendar_myreser_bt.gif" width="198" height="35" alt="나의 예약 현황" /></p>
+						</div>
+					</div>
+					<!-- sub_left_sec 끝 -->
+
+					<div id="sub_right_sec">
+						<h3><img src="../image/schedule/lnb_tit06.gif" width="101" height="27" alt="고객마당" /></h3>
+						<ul class="rightmenu">
+							<li class="rm_01"><a href="#">FAQ</a></li>
+							<li class="rm_02"><a href="#">자유게시판</a></li>
+							<li class="rm_03"><a href="#">단체관람 예약</a></li>
+							<li class="rm_04"><a href="#">이벤트</a></li>
+							<li class="rm_05"><a href="#">시민참여 프로그램</a></li>
+							<li class="rm_06"><a href="#">지역미술관</a></li>
+							<li class="rm_07"><a href="#">광주투어</a></li>
+							<li class="rm_08"><a href="#">편의시설</a></li>
+						</ul>
+					</div>
+					<!-- sub_right_sec 끝 -->
+				</div>
+				<!-- contents_sec 끝 -->
+			</div>
+			<!-- contents 끝 -->
+		</div>
+		<!-- contents_wrap 끝 -->
+
+
+
+
+		<div class="banner_wrap">
+			<div class="banner">
+				<div id="banner01">
+					<ul>
+						<li><a href="#"><img src="../image/banner/submain_sponsor01.gif" width="130" height="50" alt="광주신세계" /></a></li>
+						<li><a href="#"><img src="../image/banner/submain_sponsor02.gif" width="130" height="50" alt="신한카드" /></a></li>
+					</ul>
+				</div>
+				 <div id="banner02">
+					<ul id="slide_banner">
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor03.gif" width="130" height="50" alt="국민카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor04.gif" width="130" height="50" alt="비씨카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor05.gif" width="130" height="50" alt="광주은행" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor06.gif" width="130" height="50" alt="현대카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor07.gif" width="130" height="50" alt="해피포인트" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor08.gif" width="130" height="50" alt="금호화순리조트" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor03.gif" width="130" height="50" alt="국민카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor04.gif" width="130" height="50" alt="비씨카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor05.gif" width="130" height="50" alt="광주은행" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor06.gif" width="130" height="50" alt="현대카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor07.gif" width="130" height="50" alt="해피포인트" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor08.gif" width="130" height="50" alt="금호화순리조트" /></a></li>
+					</ul>
+				</div>			
+			</div>			
+		</div>
+		<!-- banner_wrap 끝 -->
+
+		<div class="footer">
+			<div class="footer_menu">
+				<ul>
+					<li><a href="#"><img src="../image/common/footer_bt01.gif" width="104" height="14" alt="개인정보 보호정책" /></a></li>
+					<li><a href="#"><img src="../image/common/footer_bt02.gif" width="50" height="14" alt="이용약관" /></a></li>
+					<li><a href="#"><img src="../image/common/footer_bt03.gif" width="121" height="14" alt="이메일 무단수집 거부" /></a></li>
+				</ul>
+			</div>
+			 <p class="address"><img src="../image/common/footer_txt.gif" width="638" height="26" alt="재단법인 광주 비엔날레, 광주광역시 북구 비엔날레로111, 전화 062-608-4114, 이메일 beinnale@gb.or.kr, copyright" /></p>
+		</div>
+		<!-- footer 끝 -->
+	</body>
+
+</html>

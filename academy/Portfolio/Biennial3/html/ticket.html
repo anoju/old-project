@@ -1,0 +1,732 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>티켓정보</title>
+
+		<!-- 외부 CSS 링크-->
+        <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/base2.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/ticket.css"/>
+        
+		<!-- 외부 javascript 링크-->
+		<script type="text/javascript" src="../js/onload.js"></script>
+		<!-- GNB메뉴 -->
+		<script type="text/javascript" src="../js/subMenu.js"></script>
+		<!-- 푸터 배너 스크롤 -->
+		<script type="text/javascript" src="../js/slide_banner.js"></script>
+        <!--  퀵메뉴 -->
+		<script type="text/javascript" src="../js/quickmenu.js"></script>
+        
+        <!-- 익스 플로러 6번전 png파일 오류 -->
+        <!--[if IE 6]>
+		<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+		<![endif]-->
+		
+        
+	</head>
+
+	<body>
+		<div class="header_wrap">
+			<div id="header">
+				<!-- 로고 -->
+				<h1><a href="../index.html"><img src="../image/common/logo.gif" width="167" height="84" alt="광주비엔날래" /></a></h1>
+				
+				<div id="util">
+					<div id="select_lang">
+						<div id="bt_sec">
+							<img id="left" src="../image/common/select_lang_txt.gif" width="94" height="7" alt="select language" />
+							<img id="right"src="../image/common/select_lang_bt.gif" width="29" height="29" alt="" />
+						</div>
+						<ul id="language">
+							<li><a href="#"><img src="../image/common/lang_eng.gif" width="42" height="7" alt="english" /></a></li>
+						</ul>
+					</div>
+					<!-- select_lang 끝 -->
+
+					<div class="top_menu">
+						<ul>
+							<li class="li_first"><a href="#"><img src="../image/common/util_bt01.gif" width="30" height="7" alt="log in" /></a></li>
+							<li><a href="#"><img src="../image/common/util_bt02.gif" width="40" height="7" alt="sign up" /></a></li>
+							<li><a href="#"><img src="../image/common/util_bt05.gif" width="43" height="7" alt="sitemap" /></a></li>
+						</ul>
+						<a href="#"><img class="facebook" src="../image/common/facebook_bt.gif" width="85" height="21" alt="facebook" /></a>
+						<a href="#"><img class="twitter" src="../image/common/twitter_bt.gif" width="85" height="21" alt="twitter" /></a>
+					</div>
+				</div>
+				<!-- util 끝 -->
+
+				<div id="quickmenu01">
+					<table border="0" cellspacing="0" cellpadding="0" summary="티켓정보,관람안내,모바일웹,오시는길,프레스룸,지역미술관,관람객편의시설,광주투어가이즈,Noon비엔날레정론지">
+						<caption>퀵메뉴</caption>
+						<colgroup>
+							<col width="88px" />
+							<col width="97px" />
+							<col width="80px" />
+						</colgroup>
+						<tr>
+							<td><a href="#"><img src="../image/common/quick_bt01.gif" width="48" height="11" alt="티켓정보" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt05.gif" width="80" height="11" alt="오시는길" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt06.gif" width="80" height="11" alt="관람객 편의시설" /></a></td>
+						</tr>
+						<tr>
+							<td><a href="#"><img src="../image/common/quick_bt04.gif" width="80" height="11" alt="관람안내" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt08.gif" width="80" height="11" alt="프레스룸" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt03.gif" width="80" height="11" alt="광주투어가이드" /></a></td>
+						</tr>
+						<tr>
+							<td><a href="#"><img src="../image/common/quick_bt07.gif" width="80" height="11" alt="모바일웹" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt09.gif" width="80" height="11" alt="지역미술관" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt02.gif" width="101" height="11" alt="noon비엔날레정론지" /></a></td>
+						</tr>
+					</table>				
+				</div>
+				<!-- quickmenu01 끝 -->
+
+				<div id="menu">
+					<div id="bts">
+						<ul>
+							<li><a href="#"><img src="../image/common/menu01.gif" width="55" height="15" alt="알림마당" /></a></li>
+							<li><a href="#"><img src="../image/common/menu02.gif" width="55" height="15" alt="자료마당" /></a></li>
+							<li><a href="#"><img src="../image/common/menu03.gif" width="55" height="15" alt="고객마당" /></a></li>
+						</ul>
+					</div>
+					<!-- bts 끝 -->
+					<div id="search">
+						<form action="#" method="post">
+							<fieldset>
+								<legend>통합검색</legend>
+								<input id="search_area" type="text" /><input id="search_btn" type="image" src="../image/common/search_bt.gif" alt="search" />
+							</fieldset>
+						</form>
+					</div>
+					<!-- search 끝 -->
+				</div>
+				<!-- menu 끝 -->
+				<div id="gnb">
+					<div class="depth1">
+						<ul>
+							<li id="gnb1"><a href="#">광주비엔날레</a></li>
+							<li id="gnb2"><a href="#">광주디자인비엔날레</a></li>
+							<li id="gnb3"><a href="#">재단소개</a></li>
+						</ul>
+					</div>
+					<!-- 주메뉴 끝 -->
+					<div class="depth2">
+						<div id="sub_menu01">
+							<span class="sub_title">9th GB, 2012</span>
+							<ul class="sub_list01">
+								<li><a href="#">소개</a></li>
+								<li><a href="#">행사개요 및 프로그램</a></li>
+								<li><a href="#">전시기획자</a></li>
+								<li><a href="#">전시구성</a></li>
+								<li><a href="#">전시작가</a></li>
+								<li><a href="#">전시작품</a></li>
+								<li><a href="#">관람안내</a></li>
+								<li><a href="#">티켓정보</a></li>
+								<li><a href="#">지난 광주비엔날레</a></li>
+							</ul>
+						</div>
+						<!-- 서브메뉴1 -->	
+						
+						<div id="sub_menu02">
+							<span class="sub_title">4th GDB, 2011</span>
+							<ul class="sub_list01">
+								<li><a href="#">소개</a></li>
+								<li><a href="#">행사개요 및 프로그램</a></li>
+								<li><a href="#">전시기획자</a></li>
+								<li><a href="#">전시구성</a></li>
+								<li><a href="#">전시작가</a></li>
+								<li><a href="#">전시작품</a></li>
+								<li><a href="#">관람안내</a></li>
+								<li><a href="#">티켓정보</a></li>
+								<li><a href="#">지난 광주비엔날레</a></li>
+							</ul>
+						</div>
+						<!-- 서브메뉴2 -->	
+
+						<div id="sub_menu03">
+							<ul class="sub_list02">
+								<li><a href="#">인사말</a></li>
+								<li><a href="#">연혁</a></li>
+								<li><a href="#">CI소개</a></li>
+								<li><a href="#">조직도</a></li>
+								<li><a href="#">후원/협찬</a></li>
+								<li><a href="#">찾아오시는 길</a></li>
+							</ul>
+						</div>
+						<!-- 서브메뉴3 -->	
+					</div>
+					<!-- 서브메뉴 끝  -->	
+				</div>
+				<!-- gnb 끝 -->
+			</div>
+			<!-- header 끝 -->
+		</div>
+		<!-- header_wrap 끝 -->
+		
+		
+		
+		
+		<div id="contents_wrap">
+			<div id="contents">
+				<div id="quickmenu02">
+					<p class="quick_title">QUICK<br />MENU</p>
+					<ul>
+						<li><a href="#">로그인</a></li>
+						<li><a href="join.html">회원가입</a></li>
+						<li><a href="borad.html">공지사항</a></li>
+						<li><a href="gallery.html">갤러리</a></li>
+						<li><a href="schedule.html">단체 예약</a></li>
+						<li class="li_end"><a href="ticket.html">티켓정보</a></li>
+					</ul>
+					<p class="top"><a href="#">&Delta;TOP</a></p>
+				</div>
+				<!-- quickmenu02 끝 -->
+				<div id="sub_visual">
+					<img src="../image/ticket/ticket_sub_v.gif" width="1100" height="80" alt="티켓정보" />
+				</div>
+				<!-- visual 끝 -->
+
+				<div id="sub_left_sec">
+					<table class="table1" width="100%" cellspacing="0" cellpadding="0" summary="입장요금,적용범위,무료입장,판매기간,판매처,구입문의,우편판매안내">
+						<caption>입장권 예매안내</caption>
+						<colgroup>
+							<col width="120px" />
+							<col width="60px" />
+							<col width="60px" />
+							<col width="70px" />
+							<col width="70px" />
+							<col width="350px" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th rowspan="2" scope="col">구분</th>
+								<th rowspan="2" scope="col">종류</th>
+								<th rowspan="2" scope="col">구분</th>
+								<th colspan="2" scope="col">입장요금</th>
+								<th rowspan="2" scope="col">적용범위</th>
+							</tr>
+							<tr>
+								<th scope="col">예매</th>
+								<th scope="col">본판매</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th rowspan="9" scope="row">입장당일1회용</th>
+								<td rowspan="3">보통</td>
+								<td>어른</td>
+								<td>11,000</td>
+								<td>14,000</td>
+								<td rowspan="3">
+									<ul>
+										<li>만19세~64세</li>
+										<li>만13세~18세</li>
+										<li>만 4세~12세 (입장일 현재)</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>청소년</td>
+								<td>4,000</td>
+								<td>6,000</td>
+							</tr>
+							<tr>
+								<td>어린이</td>
+								<td>2,000</td>
+								<td>4,000</td>
+							</tr>
+							<tr>
+								<td rowspan="3">단체할인</td>
+								<td>어른</td>
+								<td>11,000</td>
+								<td>11,000</td>
+								<td rowspan="3">
+									<ul>
+										<li>20인이상 단체</li>
+										<li>중·고등학생</li>
+										<li>유치원·초등학생</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>청소년</td>
+								<td>4,000</td>
+								<td>5,000</td>
+							</tr>
+							<tr>
+								<td>어린이</td>
+								<td>2,000</td>
+								<td>3,000</td>
+							</tr>
+							<tr>
+								<td rowspan="3">특별할인</td>
+								<td>어른</td>
+								<td>&nbsp;</td>
+								<td>4,000</td>
+								<td rowspan="3">
+									 <ul>
+										<li>만65세 이상자</li>
+										<li>4급 이하 장애인 및 3급 이상 장애인 및 보호자 1인</li>
+										<li>국민기초생활보장수급자</li>
+										<li>하사 이하 현역군인 및 전,의경</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>청소년</td>
+								<td>&nbsp;</td>
+								<td>2,000</td>
+							</tr>
+							<tr>
+								<td>어린이</td>
+								<td>&nbsp;</td>
+								<td>1,000</td>
+							</tr>
+							<tr>
+								<th rowspan="3" scope="row">행사기간 통용</th>
+								<td rowspan="3">&nbsp;</td>
+								<td>어른</td>
+								<td>&nbsp;</td>
+								<td>25,000</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>청소년</td>
+								<td>&nbsp;</td>
+								<td>15,000</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>어린이</td>
+								<td>&nbsp;</td>
+								<td>10,000</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<th scope="row">무료입장 범위</th>
+								<td>&nbsp;</td>
+								<td colspan="4">
+									<ul>
+										<li>국가유공자</li>
+										<li>3급 이상 장애인</li>
+										<li>만 4세 미만 어린이</li>
+										<li>단체관람객 인솔자 및 인솔교사(20명당 1인)</li>
+										<li>단체관람객 유치여행사 가이드 또는 버스기사</li>
+										<li>각급 학교(고등학교 이하) 단체관람시 국민기초생활보장수급자 (관람인원의 10% 이내)</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><strong>입장권 판매기간</strong></th>
+								<td>&nbsp;</td>
+								<td colspan="4">
+									<ul>
+										<li>예매입장권 : 2012. 7 ～ 9. 6</li>
+										<li>본판매입장권 : 2012. 9. 7 ～ 11. 11(66일) (행사장내 3개 매표소, 광주은행 전 영업점)</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><strong>입장권 판매처 및<br />구입 문의</strong></th>
+								<td>&nbsp;</td>
+								<td colspan="4">
+									<ul>
+										<li>재)광주비엔날레 T. 062-608-4221</li>
+										<li>광주은행 전 영업점 T. 062-239-5213</li>
+										<li>인터넷 판매 (주) 티켓링크 바로가기<a href="#"><img src="../image/ticket/btn_ticketlink.png" width="101" height="20" alt="티켓링크" /></a></li>
+									</ul>
+								</td>
+							</tr>
+							<tr class="table_end">
+								<th scope="row"><strong>예매입장권<br />우편판매 안내</strong></th>
+								<td>&nbsp;</td>
+								<td colspan="4">
+									<ul>
+										<li>입금계좌 : 광주은행 055-107-006629</li>
+										<li>담 당 자 : (재)광주비엔날레 홍보사업부 </li>
+										<li>연 락 처 : T. 062-608-4221</li>
+										<li>입금후 mansub.roh@gwangjubiennale.org 로</li>
+										<li>주소, 성명, 연락처, 예매신청서를 보내 주시면 우송하여 드립니다</li>
+										<li>입장권 구입 신청서 다운<a href="#"><img src="../image/ticket/btn_down.gif" width="13" height="13" alt="파일다운" /></a></li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3>2012광주비엔날레 맞춤형 전시관람 서비스 현대미술을 사랑하는 당신을 위한 모든 혜택 </h3>
+
+					<h4>2012광주디자인비엔날레 행사기간 중 카드 할인혜택</h4>
+
+					<table width="100%" cellspacing="0" cellpadding="0" summary="정상요금, 할인요금, 할인율">
+						<caption>카드할인혜택</caption>
+						<thead>
+							<tr>
+								<th scope="col">구분</th>
+								<th scope="col">정상요금</th>
+								<th scope="col"><strong>할인요금</strong></th>
+								<th scope="col">할인율</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">어른</th>
+								<td>14,000</td>
+								<td><strong>11,900</strong></td>
+								<td>20%</td>
+							</tr>
+							<tr>
+								<th scope="row">청소년</th>
+								<td>6,000</td>
+								<td><strong>4,800</strong></td>
+								<td>20%</td>
+							</tr>
+							<tr>
+								<th scope="row">어린이</th>
+								<td>4,000</td>
+								<td><strong>3,200</strong></td>
+								<td>20%</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p style="padding-bottom:30px;">대상카드 : 신한카드, KB국민카드, 광주은행VISA카드, 비씨카드, 현대카드, GS&amp;Point 보너스카드<br />
+					 할인대상 : 4인 이내(본인 및 동반 3인)<br />
+					 할인내용 : 보통권 현장판매가격의 20% 할인 광주은행의 비엔날레 제휴카드는 50% 할인, 현대카드 M포인트 결재시에는 40% 사용 해피포인트 카드회원 본인은 20% 할인(현금 결재)</p>
+
+					<h4>전시관람과 놀이공원이 하나로</h4>
+
+					<p>꿈과 동화의 세계 “금호패밀리랜드”의 놀이시설과 함께 짜릿한 즐거움을 경험해보세요!!</p>
+
+					<table width="100%" cellspacing="0" cellpadding="0" summary="중고등학교,초등학교,비엔날레+놀이5종+열차왕복,비엔날레+자유이용권+열차왕복">
+						<caption>비엔날레와 놀이공원 동시 이용금액</caption>
+						<colgroup>
+							<col width="200px" />
+							<col width="90px" />
+							<col width="80px" />
+							<col width="80px" />
+							<col width="80px" />
+							<col width="80px" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th rowspan="2" scope="col">구분</th>
+								<th rowspan="2" scope="col">종류</th>
+								<th colspan="2" scope="col">중고등학교</th>
+								<th colspan="2" scope="col">초등학교</th>
+							</tr>
+							<tr>
+								 <td>정상가격</td>
+								 <td><strong>할인가격</strong></td>
+								 <td>정상가격</td>
+								 <td><strong>할인가격</strong></td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th rowspan="3" scope="row">비엔날레+놀이5종+열차왕복</th>
+								<th>비엔날레</th>
+								<td>5,000</td>
+								<td>4,000</td>
+								<td>3,000</td>
+								<td>2,700</td>
+							</tr>
+							<tr>
+								<th>패밀리랜드</th>
+								<td>11,000</td>
+								<td>8,800</td>
+								<td>10,000</td>
+								<td>9,000</td>
+							</tr>
+							<tr>
+								<th>계</th>
+								<td>16,000</td>
+								<td><strong>12,800</strong></td>
+								<td>13,000</td>
+								<td><strong>11,700</strong></td>
+							</tr>
+							<tr>
+								<th rowspan="3" scope="row">비엔날레+자유이용권+열차왕복</th>
+								<th>비엔날레</th>
+								<td>5,000</td>
+								<td>4,000</td>
+								<td>3,000</td>
+								<td>2,700</td>
+							</tr>
+							<tr>
+								<th>패밀리랜드</th>
+								<td>13,000</td>
+								<td>10,400</td>
+								<td>12,000</td>
+								<td>10,800</td>
+							</tr>
+							<tr>
+								<th>계</th>
+								<td>18,000</td>
+								<td><strong>14,400</strong></td>
+								<td>15,000</td>
+								<td><strong>13,500</strong></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p style="padding-bottom:30px;">단체 20인 이상 이용시 적용<br />
+					 문의처 062)571-0082 / 금호패밀리랜드 놀이시설을 자세히 보고 싶으시면 http://www.kumhofamilyland.co.kr를 확인하세요.</p>
+
+					<p>중외공원 “해피랜드”의 놀이시설과 함께 잊지 못할 추억을 쌓을 수 있습니다!</p>
+
+					<table width="100%" cellspacing="0" cellpadding="0" summary="빅3종 놀이기구, 빅5종 놀이기구, 정상가격, 할인가격">
+						<caption>해피랜드 놀이기구 이용가격</caption>
+						<colgroup>
+							<col width="200px" />
+							<col width="90px" />
+							<col width="90px" />
+							<col width="50px" />
+							<col width="90px" />
+							<col width="90px" />
+							<col width="50px" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th rowspan="2" scope="col">구분</th>
+								<th colspan="2" scope="col">빅3종 놀이기구</th>
+								<th rowspan="2" scope="col">&nbsp;</th>
+								<th colspan="2" scope="col">빅5종 놀이기구</th>
+								<th rowspan="2" scope="col">&nbsp;</th>
+							</tr>
+							<tr>
+								<td>정상가격</td>
+								<td><strong>할인가격</strong></td>
+								<td>정상가격</td>
+								<td><strong>할인가격</strong></td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">어른,청소년</th>
+								<td>12,000</td>
+								<td><strong>10,000</strong></td>
+								<td>&nbsp;</td>
+								<td>19,000</td>
+								<td><strong>13,000</strong></td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<th scope="row">어린이</th>
+								<td>10,500</td>
+								<td><strong>9,000</strong></td>
+								<td>&nbsp;</td>
+								<td>16,500</td>
+								<td><strong>11,000</strong></td>
+								<td>&nbsp;</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p style="padding-bottom:30px;">주) 유치원 및 초등학생 단체 이용(20명 이상)은 1종 1,500원 균일요금 적용<br />
+					 비엔날레 입장권 소지자에 대하여 할인요금이 적용됩니다.<br />
+					 문의처 062)528-2327 / 서안개발</p>
+
+					<h4>2011광주디자인비엔날레 행사기간중 숙박 할인 혜택</h4>
+
+					<p>현대인을 위한 종합온천 레져타운 “금호리조트(주)화순”에서 쾌적한 휴식을 즐겨보시기 바랍니다!!</p>
+
+					<table width="100%" cellspacing="0" cellpadding="0" summary="객실,17평,아쿠아나,온천,어린이,성인,정상요금,할인요금,할인율,주중,준주말,주말">
+						<caption>숙박할인 혜택</caption>
+						<colgroup>
+							<col width="50px" />
+							<col width="50px" />
+							<col width="90px" />
+							<col width="90px" />
+							<col width="45px" />
+							<col width="30px" />
+							<col width="50px" />
+							<col width="40px" />
+							<col width="90px" />
+							<col width="90px" />
+							<col width="45px" />
+							<col width="30px" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th colspan="2" rowspan="2" scope="col">구분</th>
+								<th colspan="3" scope="col">객실</th>
+								<th rowspan="2" scope="col">&nbsp;</th>
+								<th colspan="2" rowspan="2" scope="col">구분</th>
+								<th colspan="3" scope="col">아쿠아나</th>
+								<th rowspan="2" scope="col">&nbsp;</th>
+							</tr>
+							<tr>
+								<th>정상요금</th>
+								<th><strong>할인요금</strong></th>
+								<th>할인율</th>
+								<th>정상요금</th>
+								<th><strong>할인요금</strong></th>
+								<th>할인율</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th rowspan="3" scope="row">17평</th>
+								<td>주중</td>
+								<td>220,000</td>
+								<td><strong>70,000</strong></td>
+								<td>68%</td>
+								<td rowspan="3">&nbsp;</td>
+								<th colspan="2">온천</th>
+								<td>8,000</td>
+								<td><strong>5,600</strong></td>
+								<td>30%</td>
+								<td rowspan="3">&nbsp;</td>
+							</tr>
+							<tr>
+								<td>준주말</td>
+								<td>220,000</td>
+								<td><strong>75,000</strong></td>
+								<td>66%</td>
+								<th rowspan="2">아쿠아나</th>
+								<th>어린이</th>
+								<td>23,000</td>
+								<td><strong>13,600</strong></td>
+								<td>40%</td>
+							</tr>
+							<tr>
+								<td>주말</td>
+								<td>220,000</td>
+								<td><strong>105,000</strong></td>
+								<td>52%</td>
+								<th>성인</th>
+								<td>28,000</td>
+								<td><strong>16,800</strong></td>
+								<td>40%</td>
+							</tr>
+						</tbody>
+					</table>
+					<p style="padding-bottom:30px;">준주말 : 금요일, 주말 : 공휴일 및 토요일<br />
+					 어린이 : 초등학생 이하, 성인 : 중학생 이상<br />
+					 비엔날레 입장권 소지자에 대하여 할인요금이 적용됩니다.<br />
+					 문의처 062)514-9951 이종현 과장/ 전남 화순군 북면 옥리 510-1금호리조트(주)화순을 자세히 보고 싶으시면 <a href="http://www.kumhoresort.co.kr">http://www.kumhoresort.co.kr</a>를 확인하세요.</p>
+
+					<p>품격 있는 당신을 위한 편안하고 근사한 밤을 특급호텔 “라마다플라자 광주호텔”에서 함께하세요!</p>
+
+					<table width="100%" cellspacing="0" cellpadding="0" summary="라마다플라자 광주 호텔 가격표,Deluxe Room,Suite Room,정상요금 할인요금">
+						<caption>라마다플라자 광주 호텔 가격표</caption>
+						<thead>
+							<tr>
+								<th scope="col">구분</th>
+								<th scope="col">객실</th>
+								<th scope="col"><strong>할인요금</strong></th>
+								<th scope="col">할인율</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">Deluxe Room</th>
+								<td>459,800</td>
+								<td><strong>169,400</strong></td>
+								<td>73%</td>
+							</tr>
+							<tr>
+								<th scope="row">Suite Room</th>
+								<td>701,800</td>
+								<td><strong>253,000</strong></td>
+								<td>64%</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p>객실 예약은 사전 예약을 원칙으로 합니다.<br />
+					문의처 062)717-7000 김주연 실장/ <a href="http://www.ramadagwangju.com">http://www.ramadagwangju.com</a></p>
+
+					<h5>2011광주디자인비엔날레 관람 KTX 문화열차 운행</h5>
+
+					<p>운행기간 및 운행요일 : 2012. 9. 7 ~ 2012. 11.11<br />
+					주 관 사 : (주)투어레일네트웍<br />
+					문의처 1600-7788 / 김청수 실장 문화열차를 자세히 보고 싶으시면 <a href="http://www.k7788.co.kr">http://www.k7788.co.kr</a>를 확인하세요</p>
+
+					<h5>기분좋은 에너지 - GS칼텍스의 문화 마케팅</h5>
+
+					<p><a href="http://www.kixx.co.kr">GS칼텍스 홈페이지 등을 통한 온라인 홍보(www.kixx.co.kr)</a> <br />
+					GS&amp;Point 보너스카드 고객에 대한 온라인 및 오프라인 홍보<br />
+					광주/전남/전북지역 GS칼텍스 계열 주유소와 충전소 등을 통한 각종 홍보 지원<br />
+					GS칼텍스 상품권으로 비엔날레 행사기간중 입장권 구입<br />
+					GS&amp;POINT 보너스카드 포인트 차감을 통한 비엔날레 행사기간중 입장권 구입 (2012광주비엔날레 행사기간중 카드 할인 혜택 참조)</p>
+
+					<h5>‘친환경 골프장 - 함평다이너스티CC’의 문화 마케팅</h5>
+
+					<p>홈페이지 등을 통한 온라인 홍보<br />
+					각종 영업 홍보물과 비엔날레 홍보용 대형 현수막 설치 등 홍보 실시<br />
+					비엔날레 관람객에 대한 그린피 1만원 할인 혜택 제공<br />
+					골프 회원의 비엔날레 관람 시 입장권 할인 판매(단체권 현장판매요금 적용)<br />
+					비엔날레 예매입장권 판매대행</p>
+				</div>
+				<!-- sub_left_sec 끝 -->
+
+				<div id="sub_right_sec">
+					<h3><img src="../image/ticket/lnb_tit01.gif" width="229" height="28" alt="광주비엔날레 2012" /></h3>
+					<ul class="rightmenu">
+						<li class="rm_01"><a href="#">광주비엔날레 소개</a></li>
+						<li class="rm_02"><a href="#">행사개요 및 프로그램</a></li>
+						<li class="rm_03"><a href="#">전시기획자</a></li>
+						<li class="rm_04"><a href="#">전시구성</a></li>
+						<li class="rm_05"><a href="#">전시작가</a></li>
+						<li class="rm_06"><a href="#">전시작품</a></li>
+						<li class="rm_07"><a href="#">관람안내</a></li>
+						<li class="rm_08"><a href="#">티켓정보</a></li>
+						<li class="rm_09"><a href="#">지난 광주 비엔날레</a></li>
+					</ul>
+				</div>
+				<!-- sub_right_sec 끝 -->
+			</div>
+			<!-- sub_contents 끝 -->
+		</div>
+		<!-- contents_wrap 끝 -->
+
+
+
+		<div class="banner_wrap">
+			<div class="banner">
+				<div id="banner01">
+					<ul>
+						<li><a href="#"><img src="../image/banner/submain_sponsor01.gif" width="130" height="50" alt="광주신세계" /></a></li>
+						<li><a href="#"><img src="../image/banner/submain_sponsor02.gif" width="130" height="50" alt="신한카드" /></a></li>
+					</ul>
+				</div>
+				 <div id="banner02">
+					<ul id="slide_banner">
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor03.gif" width="130" height="50" alt="국민카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor04.gif" width="130" height="50" alt="비씨카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor05.gif" width="130" height="50" alt="광주은행" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor06.gif" width="130" height="50" alt="현대카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor07.gif" width="130" height="50" alt="해피포인트" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor08.gif" width="130" height="50" alt="금호화순리조트" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor03.gif" width="130" height="50" alt="국민카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor04.gif" width="130" height="50" alt="비씨카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor05.gif" width="130" height="50" alt="광주은행" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor06.gif" width="130" height="50" alt="현대카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor07.gif" width="130" height="50" alt="해피포인트" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor08.gif" width="130" height="50" alt="금호화순리조트" /></a></li>
+					</ul>
+				</div>			
+			</div>			
+		</div>
+		<!-- banner_wrap 끝 -->
+
+		<div class="footer">
+			<div class="footer_menu">
+				<ul>
+					<li><a href="#"><img src="../image/common/footer_bt01.gif" width="104" height="14" alt="개인정보 보호정책" /></a></li>
+					<li><a href="#"><img src="../image/common/footer_bt02.gif" width="50" height="14" alt="이용약관" /></a></li>
+					<li><a href="#"><img src="../image/common/footer_bt03.gif" width="121" height="14" alt="이메일 무단수집 거부" /></a></li>
+				</ul>
+			</div>
+			 <p class="address"><img src="../image/common/footer_txt.gif" width="638" height="26" alt="재단법인 광주 비엔날레, 광주광역시 북구 비엔날레로111, 전화 062-608-4114, 이메일 beinnale@gb.or.kr, copyright" /></p>
+		</div>
+		<!-- footer 끝 -->
+	</body>
+
+</html>

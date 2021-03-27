@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+/*어느부모에 속해있던지 간에 해당요소종류중의 첫번째 자식은?*/
+body:first-child{ background:#963}
+h3:first-child{ background:#963}
+h4:first-child{ background:#963}
+span:first-child{ background:#963}
+li:first-child{ background:#963}
+</style>
+</head>
+
+<body>
+
+<div>첫째</div>
+<div>첫째</div>
+<div>첫째</div>
+
+    <div>
+        <div>
+        	<h4>div속의 div속의 첫번째h4</h4>
+            <h4>div속의 div속의 h4
+                <span>이것도 첫째 자식이다</span>
+                <span>span</span>
+                <span>span</span>
+            </h4>
+            <h4>div속의 div속의 h4</h4>
+        </div>
+    </div>
+    
+    <h4>이h4는 body의 첫번째 자식이다</h4>
+    <h4>h4</h4>
+    <h4>h4</h4>
+    
+    <h4>
+        <span>span</span>
+        <span>span</span>
+        <span>span</span>
+    </h4> 
+      
+    <ul>
+      <li><span>span</span></li>
+      <li>li</li>
+      <li>li</li>
+    </ul>
+
+</body>
+</html>

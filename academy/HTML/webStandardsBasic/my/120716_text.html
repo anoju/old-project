@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>      </title>
+
+		<style type="text/css">
+			#box1,#box2,#box3,#box4{
+				border:dotted 1px gray
+				margin:10px
+				}
+
+			/*텍스트 서식*/
+			.indentIn{
+				text-indent:50px;
+				background:yellow;
+				}
+			.indentOut{
+				text-indent:50px;
+				padding-left:50px;
+				background:aqua;
+				}
+			/*문단 가로 정렬*/
+			.left{
+				text-align:left;
+				background:red;
+				}
+			.center{
+				text-align:center;
+				background:blue;
+				}
+			.right{
+				text-align:right;
+				background:yellow;
+				}
+			.justify{
+				text-align:justify;
+				background:green;
+				}
+			/*인라인 요소 수직 위치 지정*/
+			.super{
+				vertical-align:super;
+				font-size:0.7em;
+				}
+			.sub{
+				vertical-align:sub;
+				font-size:0.7em;
+				}
+			.top{
+				vertical-align:top;
+				}
+			.middle{
+				vertical-align:middle;
+				}
+			.bottom{
+				vertical-align:bottom;
+				}
+
+			/*텍스트 꾸미기*/
+			.none{
+				text-decoration:none}
+			.overline{
+				text-decoration:overline;}
+			.through{
+				text-decoration:line-through;}
+			.underline{
+				text-decoration:underline;}
+			.blink{
+				text-decoration:blink;}
+
+		</style>
+	</head>
+
+	<body>
+		<!-- 텍스트서식 -->
+		<div id="box1">
+		<h2>텍스트 서식 지정하기</h2>
+		<p>문서를 작성 할때 사용하는 텍스트 관련 서식중 첫줄 들여쓰기 기능을 의미하는것은 text-indent 속성입니다. text-indent 속성에 원하는 값을 지정하면 단락의 첫줄이 해당 크기만큼 들여쓰기 됩니다.</p>
+		<p class="indentIn">text-indent값에 음수값을 지정하면 첫줄 내어쓰기 효과를 적용할 수 있는데, 이 경우에는 내어쓰기하려고 하는 크기만큼 text-indent 속성에 값을 지정하고 동일한 수치의 패딩을 외쪽에 선언하면 됩니다.</p>
+		<p class="indentOut">text-indent에 사용할 수 있는 값은 px,em등과 같은 길이 단위와 %가 있습니다. 주의해야할 점은 text-intent 속성은 블록요소에만 적용 할 수 있다는 것입니다.</p>
+		</div>
+
+		<!-- 문단가로 정렬 -->
+		<div id="box2">
+		<h2>문단 가로 정렬하기</h2>
+		<p class="left">단락내의 텍스트를 왼쪽 정렬 할 경우</p>
+		<p class="center">단락내의 텍스트를 가운데 정렬 할 경우</p>
+		<p class="right">단락내의 텍스트를 오른쪽 정렬 할 경우</p>
+		<p class="justify">일반적으로 justify는 양쪽 정렬을 의마하지만 웹브라우저에 따라 다르게 동작 할 수 있으므로 letter-spacing이나 word-spacing으로 조절한다</p>
+		</div>
+
+		<!-- 인라인 수직 위치 지정 -->
+		<div id="box3">
+		<h2>인라인 수직 위치 지정</h2>
+		<p>X<span class="super">2</span>와 같이 윗첨자가 적용된 모습</p>
+		<p>H<span class="sub">2</span>O와 같이 아래첨자가 적용된 모습</p>
+		<p><img class="top" src="../04/image/adobe-lq.png" width="43" height="72" alt="이미지" />
+		이미지요소에 vertical-align:top이 적용된 모습</p>
+		<p><img class="middle" src="../04/image/adobe-lq.png" width="43" height="72" alt="이미지" />
+		이미지요소에 vertical-align:middle이 적용된 모습</p>
+		<p><img class="bottom" src="../04/image/adobe-lq.png" width="43" height="72" alt="이미지" />
+		이미지요소에 vertical-align:bottom이 적용된 모습</p>
+		</div>
+
+		<!-- 텍스트 꾸미기 -->
+		<div id="box4">
+		<h2>텍스트 꾸미기</h2>
+		<p class="none">text-decoration:none ;이 적용된 경우</p>
+		<p class="overline">text-decoration:overline ;이 적용된 경우</p>
+		<p class="through">text-decoration:line-through ;이 적용된 경우</p>
+		<p class="underline">text-decoration:underline ;이 적용된 경우</p>
+		<p class="blink">text-decoration:blink ;이 적용된 경우</p>
+		</div>
+
+		<
+	</body>
+
+</html>

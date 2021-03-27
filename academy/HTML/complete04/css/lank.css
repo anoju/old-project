@@ -1,0 +1,31 @@
+@charset "utf-8";
+@import url(common.css);/*공통*/
+@import url(sub_layout.css);/*서브레이아웃*/
+@import url(sub.css);/*서브공통*/
+
+/*순위상단*/
+.lank_top{height:32px;padding-top:12px;text-align:center;border:1px solid #ccc;border-top:3px solid #555;background:url(../images/view/bg_tourlank_1.gif) repeat-x}
+.lank_top select{width:150px;vertical-align:top}
+.lank_top #lank_sel1{margin-right:40px}
+.lank_top img{padding-top:2px}
+
+/*순위리스트*/
+.lank_group{float:left;position:relative;width:240px;padding-top:30px;margin-right:20px}
+.lank_group.last{margin:0}
+.lank_group h4{padding-bottom:5px}
+.lank_group p{position:absolute;top:30px;right:0}
+.lank_group ol{padding:10px;border:1px solid #ddd}
+.lank_group li{position:relative;padding:3px 0 3px 23px;background:url(../images/view/bu_lank_num.gif) no-repeat}
+.lank_group li.lank1{background-position:0 3px}
+.lank_group li.lank2{background-position:0 -123px}
+.lank_group li.lank3{background-position:0 -149px}
+.lank_group li.lank4{background-position:0 -175px}
+.lank_group li.lank5{background-position:0 -201px}
+.lank_group li.lankt1{background-position:0 -227px}
+.lank_group li.lankt2{background-position:0 -253px}
+.lank_group li.lankt3{background-position:0 -279px}
+.lank_group li.lankt4{background-position:0 -304px}
+.lank_group li span{position:absolute;top:3px;right:0}
+.lank_group li.lank_et1{height:120px;padding:0;background-position:115px 1px}
+.lank_group li.lank_et1 img{float:left;padding-right:30px}
+.lank_group li.lank_et1 span{display:block;position:static;padding-top:3px}

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+html, 
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+#head {
+	height: 100px;
+	background: #ddd;
+	position: relative;
+	z-index: 1;
+}
+#body {
+	min-height: 100%;
+	margin: -100px 0 -50px;/*헤더와 푸터의 높이만큼 음수 마진*/
+}
+* html #body {
+	height: 100%;
+}
+#content-area {
+	padding: 100px 0 50px;
+}
+#foot {
+	height: 50px;
+	background: #ddd;
+}
+</style>
+</head>
+
+<body>
+<div id="head">
+	요건 100px 높이 헤드
+</div>
+<div id="body">
+	<div id="content-area">
+		<p>컨텐츠 영역 1</p>
+		<p>컨텐츠 영역 2</p>
+		<p>컨텐츠 영역 3</p>
+		<p>(계속 추가해서 테스트 가능)</p>
+        <p>우선 height 100%를 사용하려면 html element와 body element의 높이를 100%로 확보해 준다.
+#body 는 min-height 로 100%높이를 유지 해주고, #content-area 는 원하고자 하는 컨텐츠 영역을 확보 한다.
+이때, IE 는 min-height 를 지원하지 않으므로, conditional comment를 사용하여 height를 100% 로 확보 한다. (주석같이 보이는 부분)
+#head 의 높이와 #foot 의 높이가 고정이어야 한다는 제약이 있지만거의 대부분의 웹사이트가 고정이므로 별 문제는 없으리라 본다.
+</p>
+	</div>
+</div>
+<div id="foot">
+	요건 50px 높이 풋
+</div>
+</body>
+</html>

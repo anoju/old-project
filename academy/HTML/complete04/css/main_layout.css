@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+body{background:url(../images/common/bg_gnb.jpg) repeat-x} 
+/*wrap*/
+#wrap{width:976px;margin:0 auto}
+/*header*/
+#header{position:relative;height:109px;padding:5px 3px 5px}
+/*spot*/
+#spot{height:268px;background:url(../images/main/bg_spot.gif) no-repeat top center}
+/*container*/
+#container{position:relative;width:970px;padding:0 3px 40px}
+/*content*/
+#content{position:relative;width:639px}
+/*aside*/
+#aside{position:absolute;right:3px;top:0;width:282px;padding:0 11px;border:1px solid #ebeaea;border-top:0;background:#f4f4f4}
+/*footer*/
+#footer{height:112px;padding:8px 22px 0;margin:0 3px;border:1px solid #dedede;border-top:2px solid #565656;background:url(../images/common/bg_footer.gif) repeat-x}

@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>  </title>
+
+		<style type="text/css">
+			body{
+				font-family:"나눔고딕","맑은 고딕";
+				width:760px;
+				height:480px;
+				background:#e0e0e0;}
+			
+			h1{
+				background:silver;}
+
+			p{
+				background:yellow;
+				padding:10px;}
+
+			.rela{
+				position:relative;
+				top:200px;
+				left:100px;
+				width:300px;
+				height:100px;
+				background:aqua;}
+
+			.abs-one{
+				position:absolute;
+				top:50px;
+				right:50px;
+				width:300px;
+				height:100px;
+				background:#990099;}
+
+			div#con{
+				position:relative;
+				background:orange;
+				width:700px;
+				height:200px;}
+			
+			.abs_two{
+				position:absolute;
+				top:50px;
+				right:50px;
+				width:300px;
+				height:100px;
+				background:#990099;}
+
+			.fix{
+				position:fixed;
+				bottom:0;
+				right:0;
+				width:350px;
+				height:80px;}
+			
+		</style>
+	</head>
+
+	<body>
+		<h1>Relative Position</h1>
+		<p>박스의 위치를 지정할때 사용할 수 있는 오프셋 속성으로는 top,right,left,bottom등이 있으면 박스의 볼래 위치를 기준으로 배치됩니다.</p>
+
+		<p class="rela">상대위치(relative position) 지정방식으로 박스가 배치될 경우 다른 블록 요소의 배치에 영향을 주지않고 배치됩니다.</p>
+
+		<p class="abs-one">절대위치(absolute position) 지정 방식으로 박스가 배치될경우, 문서의 일반적인 흐름을 벗어나 배치되므로 다른 블록 요소의 배치에 영향을 주고 본문요소와 겹칠수도 있습니다.</p>
+
+		<div id="con" class="">
+			컨테이닝 블록이 pdsition: relative일 경우
+			<p class="abs_two">절대위치(absolute position) 지정 방식으로 박스가 배치될경우, 문서의 일반적인 흐름을 벗어나 배치되므로 다른 블록 요소의 배치에 영향을 주고 본문요소와 겹칠수도 있습니다.</p>
+		</div>
+
+		<p class="fix">absolute요소와 유사하나 absolute는 컨테이닝 기준으로 배치되지만 fixed는 스크린 기준으로 배치됩니다.인터넷 익스플로러6과 같은 구버전의 웹 브라우저에서는 제대로 종작하지 않습니다</p>
+	</body>
+
+</html>

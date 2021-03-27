@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+
+			ul {
+				border: 1px solid #0000CC;
+				width: 200px;
+			}
+		</style>
+
+		<script>
+			window.onload = function() {				
+				function Movie(myTitle, myGenre, myRating, myShowtime) {
+					//생성자함수내의 매개변수를 자신의 매개변수에 대입
+					this.title = myTitle
+					this.genre = myGenre
+					this.rating = myRating
+					this.showtime = myShowtime
+
+					this.getNextShowing = function() {
+						//시간데이터를 가져옴
+						var now = new Date().getTime()
+
+						//매게변수로 타고 들어온 객체안의 시간들을 반복해서 읽음
+						for (var i = 0; i < this.showtime.length; i++) {
+							//천분의 1초단위를 정규식으로 변환해서 일반초로 바꿔주는 함수를 거쳐서 변수에 저장
+							var showtime = getTimeFromString(this.showtime[i])
+
+							//현재시간이 지나치지 않았는지 판독하는 조건문
+							if ((showtime - now) > 0) {
+								return this.title + "의 다음 상영시간은" + this.showtime[i] + "입니다."
+							}
+						}
+						//시간이 지나면 빈값 반환
+						return null;
+					}
+				}
+
+				//밀리세컨을 일반초로 환산하는 정규식 코드
+				function getTimeFromString(timeString) {
+					var theTime = new Date()
+					var time = timeString.match(/(\d+)(?::(\d\d))?\s*(p?)/)
+					theTime.setHours(parseInt(time[1]) + (time[3] ? 12 : 0))
+					theTime.setMinutes(parseInt(time[2]) || 0)
+					return theTime.getTime()
+				}
+				
+				
+				//영화정보라는 하나의 객체 생성
+				var movie1 = new Movie("공모자들","스릴러",3,["11:00am", "1:00pm", "3:00pm", "5:00pm", "7:00pm", "9:00pm", "11:00pm"])
+				var movie2 = new Movie("광해","사극",1,["11:00am", "1:30pm", "3:00pm", "5:30pm", "8:00pm", "10:30pm"])
+				var movie3 = new Movie("본레거시","액션",2,["10:30am", "12:30am", "2:30pm", "4:30pm", "6:30pm", "8:30pm", "10:30pm"])
+				
+				alert(movie1.getNextShowing())
+				alert(movie2.getNextShowing())
+				alert(movie3.getNextShowing())
+
+			}
+		</script>
+	</head>
+
+	<body>
+		<h3>공모자들 상영시간</h3>
+		<ul class="movie1">
+			<li>11:00am</li>
+			<li>1:00pm</li>
+			<li>3:00pm</li>
+			<li>5:00pm</li>
+			<li>7:00pm</li>
+			<li>9:00pm</li>
+			<li>11:00pm</li>
+		</ul>
+
+		<h3>광해 상영시간</h3>
+		<ul class="movie2">
+			<li>11:00am</li>
+			<li>1:30pm</li>
+			<li>3:00pm</li>
+			<li>5:30pm</li>
+			<li>8:00pm</li>
+			<li>10:30pm</li>
+		</ul>
+
+		<h3>본레거시 상영시간</h3>
+		<ul class="movie3">
+			<li>10:30am</li>
+			<li>12:30am</li>
+			<li>2:30pm</li>
+			<li>4:30pm</li>
+			<li>6:30pm</li>
+			<li>8:30pm</li>
+			<li>10:30pm</li>
+		</ul>
+
+	</body>
+</html>

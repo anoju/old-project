@@ -1,0 +1,78 @@
+html,body {margin:0;background:#ffffff;}
+
+h1,h2,h3,h4,h5, div, article, section, aside, dl, dt, dd, ul, ol, li,  p, span {margin:0;padding:0;font-family:dotum;}
+
+li {list-style:none;}
+img {vertical-align:center;}
+table {border-spacing:0px;border:0px;border-collapse:collapse;}
+address,hr,
+.dn{display:none;}
+form {display:inline;}
+fieldset {padding:0;margin:0;border:none;}
+legend, caption, hr {display:none;}
+input {padding:0;margin:0;}
+* {-webkit-text-size-adjust:none;}
+
+
+/* main */
+#mainVisual {margin:0px auto;position:relative;overflow:hidden;width:480px;height:322px;}
+#mainVisual ul{width:1440px;}
+#mainVisual ul li {float:left;}
+#mainVisual ul li img {width:100%;vertical-align:top;}
+#mainVisual .Rbanner_page {position:absolute;bottom:10px;width:100%;text-align:center;}
+#mainVisual .Rbanner_page a {display:inline-block;width:20px;height:20px;overflow:hidden;text-align:left;text-indent:-999px;background:url("image/rolling_step.png") no-repeat left -25px;margin-left:5px;margin-right:5px;}
+#mainVisual .Rbanner_page a.on {background:url("image/rolling_step.png") no-repeat left 0px;}
+
+
+#photo{			
+	clear:both;
+	margin-top:20px;}
+	
+#photo #bigImg_wrap{
+	width:316px;
+	height:206px;
+	display:block;
+	overflow:hidden;
+	position:relative;
+	margin-bottom:10px;}
+	
+	#photo #bigImg_wrap .bigImg{
+		float:left;
+		width:948px;}
+	
+	#photo #bigImg_wrap .bigImg li{
+		float:left;}
+	
+	#photo #bigImg_wrap .bigImg li img{
+		width:316px;
+		height:206px;
+		vertical-align:top;}
+	
+#photo .smallImg{
+	/*float:left;*/}				
+
+	#photo .smallImg li{
+		float:left;
+		display:inline;
+		margin-left:5px;}
+		
+		#photo .smallImg li.li_first{
+			margin-left:0px;}
+			
+		#photo .smallImg li.rollimg a{
+			display:inline-block;
+			overflow:hidden;
+			border:1px black solid;
+			width:100px;
+			height:80px;}
+			
+		#photo .smallImg li.rollimg a.on{
+			border:1px red solid;}
+			
+		#photo .smallImg li a img{
+			width:100px;
+			height:80px;}
+	
+#photo p{
+	clear:both;
+	margin-bottom:20px;}

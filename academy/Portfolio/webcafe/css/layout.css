@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+	/*전체 배경(꽃배경) 삽입*/
+	#wrapper{
+		background:url(../images/common/wrap_bg.jpg) no-repeat top center;
+		}
+	
+	
+/* 레이아웃 위치 및 배경삽입 및 크기 설정*/
+
+	/* 헤더 */
+	#header{
+		margin:0 auto;		
+		width:940px;
+		height:105px;
+		background:url(../images/common/bg_menubox.png) no-repeat left top;
+		position:relative;}
+
+	/* 컨텐츠 */
+	#contents{
+		position:relative;
+		margin:0 auto;		
+		width:940px;
+
+		min-height:400px;
+		/*ie6 min-height 오류 추가 코드*/
+		height:auto !important;
+		height:400px;
+		background:url(../images/common/contents_box.png) no-repeat left top;
+		padding-top:30px;}
+	
+
+		/* 메인 컨텐츠 영역 */
+		.section{
+			width:239px;
+			float:left;
+			display:inline;
+			margin-left:20px;
+			}
+
+		.section_info{			
+			width:375px;
+			float:left;
+			display:inline;
+			margin-left:25px;
+			margin-right:24px;}
+
+		.section_event{
+			float:left;
+			width:185px;
+			}
+		
+		
+		
+		/* 서브 컨텐츠 영역 */
+		#sub_wrap{
+			float:left;
+			display:inline;
+			width:213px;			
+			margin-left:30px;
+			background:url(../images/common/subwrap_bg.gif) no-repeat right top;}
+
+		#contents_wrap{
+			float:left;
+			display:inline;
+			position:relative;
+			width:590px;
+			margin-left:18px;}
+
+		#quickmenu{
+			position:absolute;
+			left:50%;
+			top:10px;
+			margin-left:420px;
+			width:50px;}		
+	
+	
+	/* 슬로건 */
+	#slogan{
+		clear:both;
+		position:relative;
+		width:940px;
+		margin:20px auto 0;}
+
+	/* 푸터 */
+	#footer{
+		height:75px;
+		margin-bottom:15px;
+		background:url(../images/common/footerbg.gif) repeat-x left top;}

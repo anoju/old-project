@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Type C</title>
+	<style type="text/css">		
+		* { margin:0; padding:0; }		
+		img {border:0;}		
+		ol,ul,li{list-style:none}
+		.wrap{width:100%}
+		.header{position: relative;width:100%;background: url(../images/c/bgHeader.gif) repeat-x;z-index: 5;}
+		.header p{width:1000px; margin:0 auto}
+		
+		.contents{width:100%;background: url(../images/c/bgMain.gif) repeat-x left bottom;}
+		.contents p{width:1000px; margin:0 auto}
+		.footer{width:100%;}
+		.footer p{width:1000px; margin:0 auto}
+	
+		
+		.mainSlide{position:relative;width:100%;min-width:1000px;margin:-30px auto 0;overflow:hidden;}
+		.slide{width:200%;overflow:hidden;}
+		.slide>div{width:50%;height:643px;float:left;}
+		.left, .right{position:absolute;top:50%;margin-top:-70px;left:50%;}
+		.left{margin-left:-475px;}
+		.right{margin-left:404px;}
+		.visual1{}
+		.visual1>ul{width:816px;padding-left:8px;margin:30px auto 0;}
+		.visual1>ul>li{float:left;}
+		.visual2{cursor:pointer;background: url(../images/c/mainVisual1.jpg) no-repeat 50% top;}
+		.visual2.on{background-image:url(../images/c/mainVisual2.jpg);}
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" ></script>
+	<script type="text/javascript">
+		
+		$(function(){
+			//$('.left').hide();
+
+			$('.left').click(function(){
+				var $left = parseInt($('.slide').css('margin-left'));
+				//alert($left);
+				if($left != 0){
+					$('.slide').stop().animate({'margin-left':'0'});
+				}else{
+					$('.slide').stop().animate({'margin-left':'-100%'});
+				}
+				return false;
+			});
+
+			$('.right').click(function(){
+				var $left = parseInt($('.slide').css('margin-left'));
+				//alert($left)
+				if($left == 0){
+					$('.slide').stop().animate({'margin-left':'-100%'});
+				}else{
+					$('.slide').stop().animate({'margin-left':'0'});
+				}
+				return false;
+			});
+
+			$('.visual2').click(function(){
+				$(this).toggleClass('on')
+				return false;
+			});
+
+			$('.visual1').one('click',function(){
+				imgTime();				
+				return false;
+			});
+
+			var i = 0;
+			function imgTime(val){
+				i++;
+				$('.visual1 li a').each(function(){
+					var src = $(this).find('img').attr('src').replace('_' + i + '.gif', '_' + (i+1) + '.gif');
+					
+					$(this).find('img').attr('src',src);
+				});
+
+				if( i != 6){
+					setTimeout(imgTime,100);
+				}
+			};
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div id="header" class="header">
+			<p><a href="typeC_1.html"><img src="../images/c/hearder.png" alt="헤더" /></a></p>
+		</div>
+		<div id="container" class="main container">
+			<div id="contents" class="contents">
+				<div class="mainSlide">
+					<div class="slide">
+						<div class="visual1">
+							<ul>
+								<li><a href="#"><img src="../images/c/main1_1.gif" alt="1" /></a></li>
+								<li><a href="#"><img src="../images/c/main2_1.gif" alt="2" /></a></li>
+								<li><a href="#"><img src="../images/c/main3_1.gif" alt="3" /></a></li>
+								<li><a href="#"><img src="../images/c/main4_1.gif" alt="4" /></a></li>
+								<li><a href="#"><img src="../images/c/main5_1.gif" alt="5" /></a></li>
+								<li><a href="#"><img src="../images/c/main6_1.gif" alt="6" /></a></li>
+								<li><img src="../images/c/iceCoffee.jpg" alt="아이스커피" /></li>
+								<li><a href="#"><img src="../images/c/main7_1.gif" alt="7" /></a></li>
+								<li><a href="#"><img src="../images/c/main8_1.gif" alt="8" /></a></li>
+								<li><a href="#"><img src="../images/c/main9_1.gif" alt="9" /></a></li>
+								<li><a href="#"><img src="../images/c/main10_1.gif" alt="10" /></a></li>
+							</ul>
+						</div>
+						<div class="visual2"></div>
+					</div>
+					<a href="#" class="left"><img src="../images/c/btnLeft.png" alt="이전" /></a>
+					<a href="#" class="right"><img src="../images/c/btnRight.png" alt="다음" /></a>
+				</div>
+				<p><img src="../images/c/mainCon.gif" alt="메인컨텐츠" /></p>
+			</div>
+		</div>
+		<div id="footer" class="footer">
+			<p><img src="../images/c/footer.gif" alt="푸터" /></p>
+		</div>
+	</div>
+</body>
+</html>

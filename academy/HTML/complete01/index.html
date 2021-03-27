@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>삼성캐피탈</title>
+<style type="text/css">
+body, h1, p, ul, li, a, img{ margin:0; padding:0 }
+#main { width:800px;background:url(image/samsungCapitalPattern.gif) repeat-x; height:450px }
+#tourSec { width:279px; height:361px; float:left; background:url(image/booth02.png) 0 73px no-repeat }
+#tourSec h1 { margin:19px 0 18px 23px }
+#tourSec p { margin-left:80px }
+#visualSec { width:321px; height:361px; float:left }
+#mainNavSec { width:200px; height:361px; float:left }
+#mainNavSec ul { list-style:none; background:url(image/boothLink07.png) no-repeat center bottom; height:361px; _height:360px;  }
+
+/*이미지를 사용시 그행에 보이지않는 기본폰트사이즈크기의 인라인이 존재한다 둘사이의 수직정렬을 균일하게 처리한다 */
+#mainNavSec ul li img { border:none; vertical-align:top}
+#mainNavSec ul li .family{ margin-left:114px; margin-top:57px}
+
+/*클리어시 음수마진적용이 안됨으로 float로 대체 이때 너비값도 잃게 됨으로 지정해줌 */
+#footerSec { height:108px; margin-top:-21px; float:left; width:800px}
+.slogan { margin-left:40px; float:left }
+.address { font:10px/12px Verdana, Geneva, sans-serif; color:#FFF; float:right; text-align:right; margin-top:47px; margin-right:34px; display:inline }
+</style>
+<!--[if IE 6]>
+	<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+
+<![endif]-->
+<script type="text/javascript"> 
+	window.onload = function(){
+		var browser = navigator.userAgent.toLowerCase();
+			var user_browser = (browser.indexOf('msie 6')!=-1);
+			
+			if ( user_browser ) {
+				alert("바보 ie6")
+				DD_belatedPNG.fix('#tourSec,#mainNavSec ul, img');
+				}
+
+	}
+</script>
+</head>
+<body>
+<div id="main">
+    <div id="tourSec">
+        <h1><img src="image/samsungLogo.png" width="134" height="35" alt="삼성캐피탈홈으로" /></h1>
+        <p><img src="image/booth03.png" alt="금융상품링크모음" width="199" height="233" border="0" usemap="#tour" />
+          <map name="tour" id="tour">
+            <area shape="rect" coords="101,182,127,208" href="#" />
+            <area shape="rect" coords="12,122,38,148" href="#" />
+            <area shape="rect" coords="41,122,67,148" href="#" />
+            <area shape="rect" coords="12,152,38,178" href="#" />
+            <area shape="rect" coords="12,182,38,208" href="#" />
+            <area shape="rect" coords="41,152,67,178" href="#" />
+            <area shape="rect" coords="41,182,67,208" href="#" />
+            <area shape="rect" coords="71,152,97,178" href="#" />
+            <area shape="rect" coords="71,182,97,208" href="#" />
+            <area shape="rect" coords="12,92,38,118" href="#" />
+            <area shape="rect" coords="156,17,187,48" href="#" />
+          </map>
+        </p>
+    </div>
+    
+    <div id="visualSec"><img src="image/booth01.png" width="321" height="340" alt="" /></div>
+    
+    <div id="mainNavSec">
+        <ul>
+          <li><a href="#"><img src="image/boothLink01.jpg" width="200" height="37" alt="회사소개" /></a></li>
+		  <li><a href="#"><img src="image/boothLink02.jpg" width="200" height="36" alt="ceo" /></a></li>
+          <li><a href="#"><img src="image/boothLink03.jpg" width="200" height="36" alt="사업부분" /></a></li>
+          <li><a href="#"><img src="image/boothLink04.jpg" width="200" height="37" alt="재무현황" /></a></li>
+          <li><a href="#"><img src="image/boothLink05.jpg" width="200" height="36" alt="홍보센터" /></a></li>
+          <li><a href="#"><img src="image/boothLink06.jpg" width="200" height="35" alt="채용정보" /></a></li>
+          <li><a href="#"><img  class="family" src="image/familySite.png" width="56" height="11" alt="채용정보" /></a></li>
+        </ul>
+    </div>
+
+
+    <div id="footerSec">
+    <p class="slogan"><img src="image/slogan.png" width="367" height="79" alt="사람과 신용이 조화로운 세상 삼성이 만들어 갑니다" /></p>
+    <p class="address">copyright&copy;2010,<br />
+      samsugn capital co.,<br />
+      ltd.all rights reserved.</p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<title>Untitled Document</title>
+<style type="text/css">
+body, div { margin:0; padding:0 }
+#mainwrapper { width:800px; margin:0 auto; background-color:#0C0; height:1px }
+#banner { width:800px; height:200px; background-color:#CC0; }
+#leftwrapper { width:800px; height:800px; background-image:url(../image/left.jpg); background-repeat:repeat-y; background-position:left top; background-color:#0099FF; }
+/*********왼쪽사이드바와 오른쪽 컨텐츠영역의 수정*************/
+/*********방법1 둘다부유시킨다*************/
+/*********방법2 부유대상의 부유반대여백에 -3px 마진 부유주변단의 마진충돌방향에  마진0*************/
+#center { width:600px; height:600px; background-color:#990; margin-left:200px; }
+* html #center { margin-left:0 }
+#left { float:left; width:200px; background:#069; height:200px; }
+* html #left { margin-right:-3px }
+</style>
+</head>
+
+<body>
+<div id="mainwrapper">
+  <div id="banner">banner</div>
+  <div id="leftwrapper">
+    <div id="left">left</div>
+    <div id="center">center</div>
+  </div>
+</div>
+</body>
+</html>

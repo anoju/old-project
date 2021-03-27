@@ -1,0 +1,7 @@
+/*기본 디자인, 공통분모*/
+
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,caption,form,fieldset,legend,input{margin:0;padding:0;}
+img,fieldset{border:0;}
+ul,ol,li{list-style-type:none;}
+
+li img{vertical-align:top;}

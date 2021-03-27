@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=euc-kr" />
+<title>Shopping list</title>
+<style type="text/css">
+body {
+	font-family:"나눔고딕", "맑은 고딕";
+}
+p {
+	color: yellow;
+	font-size: 1.2em;
+}
+body {
+	color: white;
+	background-color: black;
+}
+#myList {
+	border: 1px solid white;
+	background-color: #333;
+	color: #ccc;
+	padding:1em 2em;
+}
+#myList li {
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+<h1>getElementsByTagNmae에서 인수에 *를 이용하여 문서내모든요소를 배열에 집어넣을 수 있다</h1>
+<p>문서내모든요소를 배열에넣는다면</p>
+<p>myList란이름을 가진 ul의 모든요소를 배열에넣는다면</p>
+<ul id="myList">
+  <li>첫번째목록</li>
+  <li>두번째목록</li>
+  <li>세번째목록</li>
+</ul>
+<p>그리고 배열에 집어넣은 값들을 알고 싶다면...</p>
+<script type="text/JavaScript">
+alert(document.getElementsByTagName("*").length)
+var documentStar = document.getElementById("myList")
+var item=documentStar.getElementsByTagName("*")
+alert(item.length)
+//그리고 배열에 집어넣은 값들을 알고 싶다면...
+for(var i=0; i< item.length; i++){
+	alert(typeof item[i])
+	}
+	</script>
+</body>
+</html>

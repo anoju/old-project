@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=euc-kr" />
+    <title>Shopping list</title>
+	<style type="text/css">
+body{
+	font-family:"나눔고딕";
+  color: white;
+  background-color:#176691;
+}
+#sidebar{width:98px; height:598px; float:left; border:dotted 1px #FFF; background:#099;}
+#main{width:400px; height:600px;float:left; background:#9C3}
+#footer{width:500px;height:100px;clear:both; background:#C00}
+	</style>
+  </head>
+  <body>
+    <h1>문서내의 모든 div의 id속성값을 알아낸다</h1>
+<div id="sidebar">sidebar</div>
+<div id="main">main</div>
+<div id="footer">footer</div>
+	<script type="text/JavaScript">
+	var bodyAttribute = document.getElementsByTagName("div");
+	for (var i=0; i< bodyAttribute.length; i++) {
+		alert(bodyAttribute[i].getAttribute("id"));
+	  }
+	</script>
+  </body>
+</html>

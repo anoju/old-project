@@ -1,0 +1,60 @@
+@charset 'utf-8';
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+/* reset */
+*{margin:0;padding:0}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,th,td,p { margin:0; padding:0; font-size:100%; }
+body { font-size:75%; font-family:"µ¸¿ò", Dotum, "±¼¸²", Gulim, arial; line-height:150%; color:#666; }
+table { border-collapse:collapse; border-spacing:0; }
+fieldset, img { border:0; }
+a {}
+a:link, a:visited, a:hover, a,active, a:focus { text-decoration:none; color:inherit; cursor:pointer; }
+label {}
+legend, caption { position:absoulte; top:0; left:0; width:1px; height:1px; visibility:hidden; font-size:0; line-height:0; }
+address,cite,code,dfn,em { font-style:normal; }
+ol,ul { list-style:none; }
+hr { display: none; }
+textarea, input, select { font-family:dotum,µ¸¿ò; font-size:12px !important;}
+input[type=text], input[type=file], input[type=password], textarea { padding:2px 3px 2px 3px; border:1px solid #cbd1d6; background:#fff;}
+input.radio, input.check {border:0 !important; padding:0;}
+img, input, button, select { vertical-align:middle; }
+
+
+body { width:100%;}
+
+#wrap {width:100%;}
+
+#header{position:relative;width:100%;height:120px;background:url(../img/bg_header.png) repeat-x;z-index: 1;}
+#header>div{position:relative;height:121px;width:1163px;margin:0 auto;}
+.gnb{position:absolute;top:0;left:248px;}
+.gnb>li{float:left;}
+.gnb>li>a{display:block;width:110px;height:34px;line-height:34px;text-align:center;font-size:13px;font-weight:bold;color:#666;background:url(../img/space.gif) repeat;font-family:'³ª´®°íµñ','NanumGothic','Nanum Gothic'}
+.gnb>li.on>a{background:#e60013;color:#fff}
+.gnb>li>div{position:absolute;top:38px; left:-120px;width:1036px;display:none;}
+.gnb>li.on>div{display:block}
+
+.navi{position:absolute;right:0;top: 20px;overflow:hidden;}
+.navi li{float:left}
+.navi li + li{margin-left:6px}
+.navi li a{display:block;width:103px;height:21px;line-height:21px;font-size:13px;font-weight:bold;color:#e60013;font-family:'³ª´®°íµñ','NanumGothic','Nanum Gothic'}
+.navi li.prev a{text-align:right;padding-right:26px;background:url(../img/btnPrev.gif) no-repeat right top;}
+.navi li.next a{text-align:left;padding-left:26px;background:url(../img/btnNext.gif) no-repeat left top;}
+
+.quick{position:fixed;right:0;top:0;width:70px;height:100%;background:url(../img/bg_quick.png) repeat-y;z-index: 2;}
+.quick > img{display:inline-block;margin-top:41px;margin-left:9px}
+
+
+#footer{width:100%;/*background:url(../img/bg_footer.gif) repeat-x;*/}
+#footer>div{width:1163px;margin:0 auto}
+
+
+#contents{margin-top:-14px;position:relative;overflow: hidden;}
+#contents>div{width:500%;position:relative;}
+#contents>div>div{}
+.tabCon{float:left;width:20%;min-width:1163px;}
+/*.tabCon>div{width:1163px;margin:0 auto;}*/
+#tabcon1{height:821px;background:url(../img/con01.jpg) no-repeat 50% 0;border-bottom:1px solid #f2f2f2}
+#tabcon2{height:555px;background:url(../img/con02.jpg) no-repeat 50% 0;}
+#tabcon2.on{height:555px;background:url(../img/con03.jpg) no-repeat 50% 0;}
+#tabcon3{height:1558px;background:url(../img/con04.jpg) no-repeat 50% 0;}
+#tabcon4{height:1053px;background:url(../img/con05.jpg) no-repeat 50% 0;}

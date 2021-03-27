@@ -1,0 +1,310 @@
+@charset "utf-8";
+
+body{
+	background:url(../image/body_bg.gif) repeat-x 0 0;}
+
+/*제목 가리기*/
+legend, caption{		
+			position:absolute;
+			overflow:hidden;
+			width:1px;
+			height:1px;
+			font-size:0;
+			line-height:0;}
+
+
+#wrapper{width:1000px;
+		margin:0 auto;		}
+	#main_header{width:1000px;
+		height:400px;
+		background:url(../image/mainBack.jpg) no-repeat 0 0;
+		position:relative;}
+		#main_header h1{
+			margin-left:8px;
+			padding-top:34px;}
+		#header_seach{
+			position:absolute;
+			left:617px;
+			top:11px;}
+			#header_seach li{
+				display:inline;
+				padding:0px 5px;}
+				#header_seach li img{
+					padding-top:5px;}
+		#main_nav{
+			float:right;
+			margin-top:3px;
+			margin-right:13px;}
+			#main_nav li{
+				display:inline;
+				background:url(../image/myKoscom_32.gif) no-repeat left center;
+				padding:0px 35px 0 30px;}
+				#main_nav li img{
+					vertical-align: middle;}
+				#main_nav li.first{
+					background:none;}
+				#main_nav li.end{
+					padding:0px;
+					background:none;}
+		.main_title{
+			float:left;
+			margin-top:89px;
+			margin-left:30px;}
+
+		#culture{
+			float:right;
+			margin-top:125px;
+			margin-right:6px;}
+				
+
+	/*폴다운 메뉴*/
+	#pol{
+		width:1000px;
+		height:213px;
+		margin-left:25px;}
+		#pol li{
+			float:left;
+			display:inline;}
+
+	/*폴다운 서브메뉴*/
+	#pol_sub01,#pol_sub02,#pol_sub03,#pol_sub04{
+		width:1000px;
+		height:306px;}
+	
+	.pol_sub_left, .pol_sub_right{
+		margin-top:29px;}
+		.pol_sub_left{
+			width:213px;
+			float:left;}
+			.pol_sub_left h2{
+				margin-left:12px;
+				margin-bottom:22px;}
+			.pol_more{				
+				margin-left:8px;}
+		.pol_sub_right{
+			float:left;
+			width:706px;
+			padding-left:58px;}
+			.pol_sub_right h3{
+				margin-bottom:13px;}
+			.pol_sub_right p{
+				color:#747474;
+				margin-bottom:18px;}
+			.pol_sub_right ul{
+				float:left;				
+				margin-bottom:21px;}
+				.pol_sub_right li{
+					float:left;}					
+				.pol_sub_right dt{
+					background:#fff;
+					border-top:3px solid #615f5e;
+					height:26px;}					
+					.pol_sub_right dt img{
+						margin-top:7px;}
+				.pol_sub_right dd{
+					color:#888888;
+					background:#e5e5e5;
+					height:44px;
+					line-height:1.5em;
+					padding-top:10px;}
+				/*.pol_sub_right dd p{
+					vertical-align:middle;}*/
+				
+				.pol_li_01{
+					width:224px;}
+					.pol_li_01 dt,.pol_li_01 dd{
+						padding-left:38px;}
+				.pol_li_02{	
+					width:289px;}
+				.pol_li_03{
+					width:168px;}
+
+
+	
+	#contents_wrapper{
+		width:1000px;
+		height:266px;
+		position:relative;
+		overflow:hidden;}
+		
+		/*컨텐츠*/
+		#contents{
+			height:200px;}
+			/*증권정보*/
+			#contents_left{
+				float:left;
+				display:inline;
+				width:367px;
+				margin-left:17px;
+				margin-right:26px;
+				margin-top:35px;}
+				#contents_left h3{
+					margin-bottom:18px;}
+				.graph_left{
+					width:196px;
+					float:left;
+					margin-right:1px;}
+				.graph_right{
+					float:left;
+					width:170px;}
+					.graph_right th{
+						font-weight:bold;
+						line-height:1.5em;}
+					.graph_right td{
+						color:red;
+						text-align:right;
+						line-height:1.5em;}
+					.graph_right a{
+						display:block}
+					.graph_right span{
+						padding:1px 3px 0 3px;}
+
+			/*뉴스, 탭메뉴*/
+			#contents_center{
+				float:left;
+				position:relative;
+				width:274px;
+				margin-right:35px;
+				margin-top:29px;}
+				#contents_center h3{
+					margin-bottom:21px;}
+				#tab01{
+					position:absolute;
+					top:6px;
+					left:77px;}
+				#tab02{
+					position:absolute;
+					top:6px;
+					left:131px;}
+				#tab03{
+					position:absolute;
+					top:6px;
+					left:187px;}
+				#tap_list01,#tap_list02, #tap_list03{
+					/*line-height:2.2em;*/
+					color:#666666;}
+				#contents_center li{
+					position:relative;
+					padding-bottom:10px;}
+				#contents_center li a{
+					display:block;
+					float:left;
+					width:194px;
+					height:25px;}
+				#contents_center .date{
+					float:right;
+					width:75px;
+					height:1%;}
+				#contents_center .more{
+					position:absolute;
+					top:12px;
+					left:243px;}				
+				/*다른 리스트 가리기*/
+				#tap_list02, #tap_list03{
+					display:none;}
+
+			/*사내소식*/
+			#contents_right{
+				float:left;
+				width:281px;
+				margin-top:33px;
+				position:relative;}								
+				#contents_right h3{
+					margin-bottom:21px;}		
+				.previous_next{
+					position:absolute;
+					top:4px;
+					left:235px;}				
+					#contents_right .news_img{
+						float:left;}
+						#contents_right .news_img img{
+							width:90px;
+							height:90px;}
+					#contents_right .subject,#contents_right .news_txt,#contents_right .more{
+						float:right;
+						width:181px;}
+					#contents_right .subject{
+						font-weight:bold;
+						line-height:1.5em;}
+					#contents_right .news_txt{
+						line-height:1.3em;}
+					#contents_right .more{
+						margin-top:3px;}
+				/*다른 리스트 가리기*/
+				#intra_news02,#intra_news03,#intra_news04,#intra_news05{
+						display:none;}
+
+		/*배너*/
+		#banner{
+			height:66px;
+			width:1000px;
+			position:relative;}
+			#banner_left_btn{
+				width:7px;
+				height:12px;
+				float:left;
+				display:inline;
+				margin-top:28px;
+				margin-left:11px;}
+			.slide_banner{
+				float:left;
+				padding-top:17px;
+				width:960px;
+				height:49px;}
+				.slide_banner li{
+					float:left;
+					display:inline;
+					margin:0 10px;
+					height:1%;
+					border:1px solid #e1e1e1;}
+			#banner_right_btn{
+				width:7px;
+				height:12px;
+				float:left;
+				margin-top:28px;}
+
+	/*푸터*/
+	.footer{
+		height:94px;
+		width:1000px;
+		position:relative;}
+		.footer_logo{
+			position:absolute;
+			left:30px;
+			top:29px;}
+		.footer_menu{
+			margin-left:207px;
+			padding-top:15px;}
+			.footer_menu li{
+				display:inline;
+				vertical-align: middle;
+				background:url(../image/myKoscom_100.gif) no-repeat 0 5px;
+				padding:0 14px;}
+				.footer_menu li img{
+					padding-top:5px;}
+				.footer_menu .first{
+					background:none;
+					padding-left:0;}
+				.footer_menu .first img{
+					padding-top:0;}
+			.address{
+				margin-top:15px;}
+		.qrcode{
+			position:absolute;
+			left:680px;
+			top:20px;}
+		.footer_link{
+			position:absolute;
+			left:800px;
+			top:15px;}
+			#go_button{
+				width:110px;
+				height:20px;
+				background:#c5c5c5;
+				color:#666666;
+				border:0;
+				float:left;}
+			.go_img{
+				float:left;
+				display:inline;
+				margin-left:10px;}

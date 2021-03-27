@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title> 플루트만으로 구성된 예재 </title>
+
+		<link rel="stylesheet" type="text/css" href="../sample/css/reset.css" />
+
+		<style type="text/css">
+			body{
+				font-family:"나눔고딕","맑은 고딕";
+				}
+
+			#main{
+				width:800px;
+				margin:0 auto;
+				height:450px;
+				background:url(image/samsungCapitalPattern.gif) repeat-x;}
+
+			#teursec{
+				float:left;
+				width:279px;
+				height:361px;
+				background:url(image/booth02.png) no-repeat 0 72px;}
+
+				#teursec h1{
+					margin:19px 0 18px 23px;}
+
+				#teursec p{
+					margin-left:80px;
+					}
+				
+
+			#visualSec{
+				float:left;
+				width:321px;
+				height:361px;
+				}
+			
+			#mainNavSec{
+				float:left;
+				width:200px;
+				height:382px;
+				}
+
+				/*리스트안의 슬라이스 이미지 세로정렬(간격제거)*/
+				#mainNavSec ul li img{
+					vertical-align:top;}
+
+				#mainNavSec .family{
+					background:url(image/boothLink07.png) no-repeat;
+					width:86px;
+					height:86px;
+					padding:58px 0 0 114px;}
+
+			#footerSec{
+				float:left;
+				width:800px;
+				height:108px;
+				margin-top:-21px;
+				}
+
+				#footerSec .slogan{
+					margin-left:40px;
+					float:left;
+					display:inline;}
+
+				address{
+					font:10px/12px Verdana, Geneva, sans-serif;
+					color:#fff;
+					float:right;
+					text-align:right;					
+					display:inline;
+					margin-right:35px;
+					margin-top:28px;
+					text-transform:uppercase;}
+
+
+		</style>
+
+		<!--[if IE 6]>
+		<script src="../sample/js/DD_belatedPNG_0.0.8a-min.js"></script>
+		<![endif]-->
+		<script type="text/javascript"> 
+			window.onload = function(){
+				var browser = navigator.userAgent.toLowerCase();
+					var user_browser = (browser.indexOf('msie 6')!=-1);
+					
+					if ( user_browser ) {
+						alert("고객님은 익스플로러 6을 사용중입니다.");
+						DD_belatedPNG.fix('#main, #teursec,.family, img');
+						}
+			}
+		</script>
+
+	</head>
+
+	<body>
+		<div id="main">
+			<!-- gnb 와 이미지맵 설치 -->
+			<div id="teursec">
+				<h1><a href="#"><img src="image/samsungLogo.png" width="134" height="35" alt="삼성전자 홈으로 이동" /></a></h1>
+
+				<p>
+					<img src="image/booth03.png" width="199" height="233" alt="회원사 이미지 링크" usemap="#tour" />
+					<map name="tour" id="tour">
+						<area shape="rect" coords="13, 95, 36, 118" href="#" alt=""/>
+						<area shape="rect" coords="13, 125, 36, 148" href="#" alt=""/>
+							<area shape="rect" coords="43, 125, 66, 148" href="#" alt=""/>
+						<area shape="rect" coords="13, 155, 36, 178" href="#" alt=""/>
+							<area shape="rect" coords="43, 155, 66, 178" href="#" alt=""/>
+								<area shape="rect" coords="73, 155, 96, 178" href="#" alt=""/>
+						<area shape="rect" coords="13, 175, 36, 198" href="#" alt=""/>
+							<area shape="rect" coords="43, 175, 66, 198 " href="#" alt=""/>
+								<area shape="rect" coords="73, 175, 96, 198 " href="#" alt=""/>
+									<area shape="rect" coords="103, 175, 126, 198 " href="#" alt=""/>
+					</map>
+				</p>
+			</div>
+
+
+			<div id="visualSec">
+				<img src="image/booth01.png" width="321" height="340" alt="비주얼영역" />
+			</div>
+
+
+			<div id="mainNavSec">
+				<ul>
+					<li><a href="#"><img src="image/boothLink01.jpg" width="200" height="37" alt="회사소개" /></a></li>
+					<li><a href="#"><img src="image/boothLink02.jpg" width="200" height="36" alt="CEO" /></a></li>
+					<li><a href="#"><img src="image/boothLink03.jpg" width="200" height="36" alt="사업부문" /></a></li>
+					<li><a href="#"><img src="image/boothLink04.jpg" width="200" height="37" alt="재무현황" /></a></li>
+					<li><a href="#"><img src="image/boothLink05.jpg" width="200" height="36" alt="홍보센터" /></a></li>
+					<li><a href="#"><img src="image/boothLink06.jpg" width="200" height="35" alt="채용정보" /></a></li>
+					<li class="family"><a href="#"><img src="image/familySite.png" width="56" height="11" alt="가족사이트" /></a></li>		
+				</ul>
+			</div>
+
+
+			<div id="footerSec">
+				<p class="slogan"><img src="image/slogan.png" width="367" height="79" alt="사람과 신용이 조화로운 세상 삼성캐피탈이 만들어갑니다." /></p>
+
+				<address>copyright&copy;2010,<br />
+					samsugn capital co.,<br />
+					ltd.all rights reserved.</address>
+			</div>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+body, div, p { margin:0; padding:0 }
+body { font-family:"맑은 고딕"; font-size:12px }
+#top { border:#990 solid 2px; height: 196px; width: 596px; }
+#top h1 { font-size:200% }
+#mainwrapper { width:600px; position:relative; margin:0 auto }
+#left { border: #9C3 solid 2px; height: 596px; width: 196px; float:left }
+#rightwrapper { background:#FF6; width:400px; height:600px; float:left }
+#right_1 { border: #C6C solid 2px; height: 196px; width: 396px; position:absolute; top:200px; left:200px }
+#right_1 p { position:absolute; top:100px; left:0 }
+#right_1 img { position:absolute; top:130px; left:100px }
+#right_2 { border: #F9C solid 2px; height: 196px; width: 396px; position:absolute; top:400px; left:200px}
+#right_2 p { position:absolute; top:100px; left:0 }
+#right_2 img { position:absolute; top:130px; left:100px }
+#right_3 { border: #90F solid 2px; height: 196px; width: 396px; position:absolute;  top:600px; left:200px }
+#right_3 p { position:absolute; top:100px; left:0 }
+#right_3 img { position:absolute; top:130px; left:100px }
+</style>
+</head>
+
+<body>
+    <div id="mainwrapper">
+      <div id="top">top
+        <h1>부모relative찾기</h1>
+      </div>
+      <div id="left">left</div>
+      <div id="rightwrapper">
+        <div id="right_1">right_1
+          <p>right_1의 위치가 부모의 부모인 mainwrapper에relateive가적용 되었음으로 right_1의기준위치는 mainwrapper가된다</p>
+           </div>
+        <div id="right_2">right_2
+          <p>right_2의 위치가 부모의 부모인 mainwrapper에relateive가적용 되었음으로 right_2의기준위치는 mainwrapper가된다</p>
+           </div>
+        <div id="right_3">right_3
+          <p>right_3의 위치가 부모의 부모인 mainwrapper에relateive가적용 되었음으로 right_3의기준위치는 mainwrapper가된다</p>
+          </div>
+      </div>
+    </div>
+</body>
+</html>

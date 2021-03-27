@@ -1,0 +1,12 @@
+Feature: Adobe 제품군
+Table 1: table연습 Brand 	Cost 	Power Source 	Rating
+Acrobat 	$247.00 	Mechanical 	
+
+starstarstar
+Acrobat Connect Pro 	$370.00 	Mechanical 		
+After Effects 	        $595.00 	Gas 			
+ColdFusion 				$789.00 	Electric 		
+Design Premium 			$2500.00 	Coal 			
+Illustrator 			$400.00 	Electric 		
+InDesign 				$799.00 	Mechanical 		
+Enterprise Suite 		$8374.00 	Cold Fusion 	

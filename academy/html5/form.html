@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5</title>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb'>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicBoldWeb'>
+
+		<style>
+			body{ font-family: 'NanumGothicWeb'; }
+		</style>
+
+
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<form action="#" method="get">
+			<input type="email" placeholder="examples@ex.com" />이메일 입력 타입 모달뷰 지원(자판 변경)<br>
+			<input type="url" placeholder="http://www.ex.com" />url 입력 타입 모달뷰 지원(자판 변경)<br>
+			<input type="number" min="1912" max="2112" step="1" value="2012" />숫자 입력 타입 모달뷰 지원(아이폰인경우 스핀박스)<br>
+			<input type="range" min="0" max="4" step="1"/>슬라이더<br>
+			<input type="search" />서치<br>
+			<input type="tel" />전화번호<br>
+			<input type="date" />날짜처리<br>
+			<input type="week" />주(날짜)처리<br>
+			<input type="month" />월(날짜) 처리<br>
+			<input type="time" />시간전용<br>
+			<input type="datetime" />전체 일자와 시간입력<br>
+			<input type="datetime-local" />현지 일자와 시간<br>
+			<input type="color" />색상 선택<br>
+		</form>
+
+		<form action="#" method="get">
+			<input type="text" required pattern="\s{6,}" title="6자리이상 입력" />
+			<input type="text" />
+			<input type="submit" />
+		</form>
+
+
+	</body>
+</html>

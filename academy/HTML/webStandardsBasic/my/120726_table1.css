@@ -1,0 +1,24 @@
+@charset "utf-8";
+body{
+	font-family:"나눔고딕","맑은 고딕";}
+
+table{
+	font-size:0.8em;
+	border-collapse:collapse;
+	margin:0;
+	padding:0;}
+
+caption{
+	font-size:1.4em;
+	padding:0.5em 0;
+	font-weight:bold;}
+
+thead tr th,tbody tr th{
+	text-align:left;}
+
+th,td{
+	padding:0.6em;}
+
+tbody tr td{
+	text-transform:capitalize;}
+

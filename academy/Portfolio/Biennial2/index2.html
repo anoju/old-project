@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>비엔날레에 오신 여러분을 환영합니다</title>
+
+		<!-- 외부 CSS 링크-->
+		<link rel="stylesheet" type="text/css" href="css/import.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+        
+		<!-- 외부 javascript 링크
+		<script type="text/javascript" src="js/onload.js"></script>-->
+		<!-- 제이쿼리 연결 링크-->
+		<script type="text/javascript" src="js/jquery.js"></script>
+        
+		<!-- GNB메뉴 
+		<script type="text/javascript" src="js/slide_GNBmenu.js"></script>-->
+		<!-- 비쥬얼 슬라이딩 
+		<script type="text/javascript" src="js/slides.jquery.js"></script>-->
+		<!-- 푸터 배너 스크롤 
+		<script type="text/javascript" src="js/slide_banner.js"></script>-->
+		<!--  퀵메뉴 
+		<script type="text/javascript" src="js/quickmenu.js"></script>-->
+        
+        
+	</head>
+
+	<body>
+        <div id="slides">
+            <div class="slides_container">
+                <a href="#"><img src="image/main/main_visualimg.gif" width="1100" height="160" alt="2012년 광주 비엔날레 9월 7일부터 11월 11일" /></a>
+                <a href="#"><img src="image/main/main_visualimg1.JPG" width="1100" height="160" alt="" /></a>
+                <a href="#"><img src="image/main/main_visualimg2.JPG" width="1100" height="160" alt="" /></a>
+            </div>
+            <a href="#" class="prev"><img src="image/main/bt_left.png" width="35" height="35" alt="prev" /></a>
+            <a href="#" class="next"><img src="image/main/bt_right.png" width="35" height="35" alt="next" /></a>
+        </div>
+					
+        <script type="text/javascript">
+		$('#slides').slides({
+			preload: true,
+			preloadImage: 'image/main/ajax-loader.gif',
+			play:1000,
+			pause:500,
+			hoverPause: true
+		});
+		</script>
+	</body>
+
+</html>

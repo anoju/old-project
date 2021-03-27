@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+				background:#fff;
+			}
+			canvas{
+				border: 1px solid #00c;
+			}
+			td{
+				padding:7px;
+			}
+			/*label{
+				background:#0000CC;
+			}*/
+
+		</style>
+
+		<script type="application/javascript">
+			window.onload = function(){
+				var compositeTypes = ["source-over", "source-in", "source-out", "source-atop", "destination-over", "destination-in", "destination-out", "destination-atop", "lighter", "darker", "copy", "xor"]
+				
+				for(var i=0 ; i<compositeTypes.length ; i++){
+					var label = document.createTextNode(compositeTypes[i])
+					document.getElementById('lab'+i).appendChild(label)
+					var ctx = document.getElementById('m'+i).getContext('2d')
+					
+					//먼저그린원
+					ctx.fillStyle = "#ff6633"
+					ctx.beginPath()
+					ctx.arc(50,50,45,0,Math.PI*2,true)
+					ctx.fill()
+					
+					ctx.globalCompositeOperation = compositeTypes[i]
+					
+					//나중에 그린 사각형
+					ctx.fillStyle="#090"
+					ctx.fillRect(45,45,60,60)
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<table>
+			<tr>
+				<td><canvas id="m0" width="125" height="125">지원안함</canvas><br /><label id="lab0">&nbsp;</label></td>
+				<td><canvas id="m1" width="125" height="125">지원안함</canvas><br /><label id="lab1">&nbsp;</label></td>
+				<td><canvas id="m2" width="125" height="125">지원안함</canvas><br /><label id="lab2">&nbsp;</label></td>
+				<td><canvas id="m3" width="125" height="125">지원안함</canvas><br /><label id="lab3">&nbsp;</label></td>
+			</tr>
+			<tr>
+				<td><canvas id="m4" width="125" height="125">지원안함</canvas><br /><label id="lab4">&nbsp;</label></td>
+				<td><canvas id="m5" width="125" height="125">지원안함</canvas><br /><label id="lab5">&nbsp;</label></td>
+				<td><canvas id="m6" width="125" height="125">지원안함</canvas><br /><label id="lab6">&nbsp;</label></td>
+				<td><canvas id="m7" width="125" height="125">지원안함</canvas><br /><label id="lab7">&nbsp;</label></td>
+			</tr>
+			<tr>
+				<td><canvas id="m8" width="125" height="125">지원안함</canvas><br /><label id="lab8">&nbsp;</label></td>
+				<td><canvas id="m9" width="125" height="125">지원안함</canvas><br /><label id="lab9">&nbsp;</label></td>
+				<td><canvas id="m10" width="125" height="125">지원안함</canvas><br /><label id="lab10">&nbsp;</label></td>
+				<td><canvas id="m11" width="125" height="125">지원안함</canvas><br /><label id="lab11">&nbsp;</label></td>
+			</tr>
+		</table>
+	</body>
+</html>

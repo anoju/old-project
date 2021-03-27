@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+			canvas{
+				border:#00f solid 2px;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			function init(){
+				//마크업에서 켄바스를 가져온다
+				var elem = document.getElementById("canvas")
+				var myCanvas = elem.getContext('2d')
+				
+				//색상 적용
+				myCanvas.strokeStyle="#990000"
+				myCanvas.fillStyle="#000099"				
+				
+				//사각형 그리기
+				//myCanvas.strokeRect(좌측위치,상단위치, 넓이, 높이)
+				myCanvas.strokeRect(100,100,120,120)
+				myCanvas.fillRect(110,110,100,100)
+				myCanvas.clearRect(120,120,80,80)
+				
+				
+				
+				var elem2 = document.getElementById("canvas2")
+				var myCanvas2 = elem2.getContext('2d')
+				
+				//그라디언트
+				var grad=myCanvas2.createLinearGradient(0,0,10,100)
+				grad.addColorStop(0.5,'#00f')
+				grad.addColorStop(1,'#000')
+				myCanvas2.fillStyle=grad
+				
+				myCanvas2.fillRect(10,10,100,100)
+				myCanvas2.fillRect(130,10,200,100)
+				
+				
+			
+				var elem3 = document.getElementById("canvas3")
+				var myCanvas3 = elem3.getContext('2d')
+				
+				//삼각형 그리기
+				//직선 패스 그리기시작
+				myCanvas3.beginPath()
+				//첫점정하기
+				myCanvas3.moveTo(100,100)
+				myCanvas3.lineTo(200,300)
+				myCanvas3.lineTo(10,200)
+				myCanvas3.closePath()
+				myCanvas3.stroke()
+				
+				
+				
+				var elem4 = document.getElementById("canvas4")
+				var myCanvas4 = elem4.getContext('2d')
+				
+				//선으로 채우기
+				myCanvas4.beginPath()
+				myCanvas4.moveTo(100,100)
+				myCanvas4.lineTo(200,300)
+				myCanvas4.lineTo(10,200)
+				myCanvas4.clip()
+				
+				myCanvas4.beginPath()
+				for(f=0 ; f<300 ; f=f+10){
+					myCanvas4.moveTo(0,f)
+					myCanvas4.lineTo(500,f)
+				}
+				myCanvas4.stroke()
+				
+				
+				
+				
+				var elem5 = document.getElementById("canvas5")
+				var myCanvas5 = elem5.getContext('2d')
+				
+				//색상채우기
+				myCanvas5.beginPath()
+				myCanvas5.moveTo(100,100)
+				myCanvas5.lineTo(200,300)
+				myCanvas5.lineTo(10,200)
+				myCanvas5.fill()
+				
+			}
+			
+			window.addEventListener("load", init, false)
+		</script>
+		
+	</head>
+
+	<body>
+		<section id="canvasbox">
+			<canvas id="canvas" width="500" height="300">
+				이브라우저는 켄바스를 지원하지 않습니다.
+				
+			</canvas>
+		</section>
+		<section id="canvasbox2">
+			<canvas id="canvas2" width="500" height="300">
+				이브라우저는 켄바스를 지원하지 않습니다.
+				
+			</canvas>
+		</section>
+		<section id="canvasbox3">
+			<canvas id="canvas3" width="500" height="300">
+				이브라우저는 켄바스를 지원하지 않습니다.
+				
+			</canvas>
+		</section>
+		<section id="canvasbox4">
+			<canvas id="canvas4" width="500" height="300">
+				이브라우저는 켄바스를 지원하지 않습니다.
+				
+			</canvas>
+		</section>
+		<section id="canvasbox5">
+			<canvas id="canvas5" width="500" height="300">
+				이브라우저는 켄바스를 지원하지 않습니다.
+				
+			</canvas>
+		</section>
+	</body>
+</html>

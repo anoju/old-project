@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>  </title>
+
+		<style type="text/css">
+			html, body{
+				height:100%;
+				margin:0;
+				padding:0;}
+			
+			body{
+				font-family:"나눔고딕","맑은 고딕";
+				}
+
+			#header{
+				height:100px;
+				background:#3399ff;}
+
+			/*가운데 컨텐츠 컨테너를 상단(헤더의 높이만큼)과 하단쪽(푸터의 높이 만큼) 마진을 음수마진으로 처리로 IE6 해결*/
+			#ie6_box{
+				min-height:100%;				/*ie6에서 전용안됨*/
+				margin:-100px 0 -50px 0;}
+
+			/*ie6 버그 패치*/
+			* html #ie6_box{
+				height:100%;}
+			
+			/*상단과 하단의 높이 만큼 패딩을 줌*/
+			#content{
+				padding:100px 0 50px;}
+
+			#footer{
+				height:50px;
+				background:#669966;}
+
+		</style>
+	</head>
+
+	<body>
+		<!-- header -->
+		<div id="header">
+			100px 높이 헤드
+		</div>
+
+		<!-- IE6용 구획 컨테이너 -->
+		<div id="ie6_box">
+			<!-- 컨텐츠 -->
+			<div id="content">
+				<p>컨텐츠 영역1</p>
+				<p>컨텐츠 영역2</p>
+				<p>컨텐츠 영역3</p>
+				<p>컨텐츠 영역4</p>
+				<p>컨텐츠 영역5</p>
+				<p>컨텐츠 영역6</p>
+				<p>컨텐츠 영역7</p>
+				<p>컨텐츠 영역8</p>
+				<p>컨텐츠 영역9</p>
+				<p>컨텐츠 영역10</p>
+				<p>컨텐츠 영역11</p>
+				<p>컨텐츠 영역12</p>
+			</div>
+		</div>
+
+		<!-- footer 브라우져 크기 상관없이 아래 고정 -->
+		<div id="footer">
+			50px 높이 풋(하단 고정)
+		</div>
+
+
+	</body>
+
+</html>

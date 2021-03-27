@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+			canvas{
+				border:#999 solid 2px;
+			}
+		</style>
+
+		<script>
+			window.onload = function(){
+				var canvas = document.getElementById("canvas")
+				var myContext = canvas.getContext("2d")
+				
+				//이미지 불러오기
+				var img = new Image()
+				img.onload = function(){
+					myContext.drawImage(img, 10, 10)
+				}
+				img.src ="informationTechnology/images/itunes_460x228_20120814091450.jpg"
+				
+				//영역자르기
+				myContext.beginPath()
+				myContext.arc(158,58,55,0,Math.PI*2,true)
+				myContext.clip()
+				
+			}
+		</script>
+	</head>
+
+	<body>
+		<canvas id="canvas" width="500" height="500">이브라우져는 켄바스를 지원하지 않습니다.</canvas>
+	</body>
+</html>

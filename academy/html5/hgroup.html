@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5</title>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb'>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicBoldWeb'>
+
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<style>
+			body{ font-family: 'NanumGothicWeb'; }
+			hgroup{
+				border:1px solid red}
+		</style>
+	</head>
+
+	<body>
+		<p>hgroup 요소는 섹션의 제목을 나타냅니다. 
+			이 요소는 섹션의 제목이 몇 개의 레벨을 가질 때 - 예를 들어 부제목이나 tagline 등 - h1~h6 요소들을 그룹 짓기 위해 사용됩니다. 
+			문서의 요약이나 개요, 기타 흡사한 것에 대해 hgroup 요소의 텍스트는 자신이 포함하는 h1–h6 자식 요소 중 가장 높은 등급의 텍스트를 사용합니다. </p>
+		<p>같은 등급이 여러 개 있다면 그중 가장 먼저 등장하는 제목 요소의 텍스트를 사용합니다. 
+			자식 요소에 제목 요소가 없다면 hgroup 요소의 텍스트는 빈 문자열이 됩니다. hgroup 요소 내부에 있는 제목 컨텐츠의 다른 요소들은 부제목이나 서브타이틀을 나타냅니다. </p>
+		<p>hgroup 요소의 등급은 포함된 h1–h6 요소 중 가장 높은 등급의 것을 사용합니다. 
+			자식 요소에 제목 요소가 없다면 h1 등급이 됩니다. 
+			제목과 섹션 절에서 hgroup 요소가 개별적인 섹션들에 어떻게 할당되는지 정의할 것입니다.</p>
+
+		<p>올바르게 사용된 제목의 몇 가지 예제입니다. 제목 데이터를 추출하는 프로그램은 강조된 텍스트를 추출할 것이며 부제목은 무시할 것입니다.(h5o) </p>
+
+		<hgroup>
+			<h1>The reality dysfunction</h1>
+			<h2>Space is not the only void</h2>
+		</hgroup>
+		
+		<hgroup>
+			<h1>Dr. Strangelove</h1>
+			<h2>Or: How I Learned to Stop Worrying and Love the Bomb</h2>
+		</hgroup>
+
+		<h1>이것은 hgroup을 사용하지않은 h1</h1>
+		<h2>이것은 hgroup을 사용하지않은 h2</h2>
+		<h3>이것은 hgroup을 사용하지않은 h3</h3>
+	</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>  </title>
+
+		<style type="text/css">
+			body{
+				font-family:"나눔고딕","맑은 고딕";
+				}
+
+			#mainwrapper{
+				position:relative;
+				width:800px;}
+
+			#top{
+				height:196px;
+				width:596px;
+				background:#00cc33;
+				border:2px solid #3300cc;}
+
+			#left{
+				border:2px solid #ffff00;
+				width:196px;
+				height:596px;
+				top:200px;
+				left:0;
+				float:left;}
+
+			#right_wrapper{
+				background:#33ccff;				
+				width:400px;
+				height:600px;
+				float:left;}
+
+			#right_1,#right_2,#right_3{
+				height:196px;
+				width:396px;
+				position:absolute;}
+
+			#right_1{
+				border:2px solid #ff0000;
+				top:200px;
+				left:200px;}
+
+			#right_2{
+				border:2px solid #ff00ff;
+				top:400px;
+				left:200px;}
+
+			#right_3{
+				border:2px solid #cc0033;
+				top:600px;
+				left:200px;}
+
+			#right_1 p,#right_2 p,#right_3 p{
+				position:absolute;
+				top:50px;
+				left:10px;}
+			
+			#right_1 img,#right_2 img,#right_3 img{
+				position:absolute;
+				top:130px;
+				left:250px;}
+
+		</style>
+	</head>
+
+	<body>
+		<div id="mainwrapper">
+			<div id="top">
+				top
+				<h1>부모 relative 찾기</h1>
+			</div>
+			
+			<div id="left">
+				left
+			</div>
+		
+			<div id="right_wrapper">
+				<div id="right_1">
+					<p>right_1의 위치가 부모의 부모인 mainwrapper에 relative가 적용 되었음으로 right_1의 기준위치는 mainwrapper가 된다.</p><img src="../08/image/go.png" width="22" height="22" alt="이미지" />
+				</div>
+				<div id="right_2">
+					<p>right_2의 위치가 부모의 부모인 mainwrapper에 relative가 적용 되었음으로 right_2의 기준위치는 mainwrapper가 된다.</p><img src="../08/image/go.png" width="22" height="22" alt="이미지" />
+				</div>
+				<div id="right_3">
+					<p>right_3의 위치가 부모의 부모인 mainwrapper에 relative가 적용 되었음으로 right_3의 기준위치는 mainwrapper가 된다.</p><img src="../08/image/go.png" width="22" height="22" alt="이미지" />
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

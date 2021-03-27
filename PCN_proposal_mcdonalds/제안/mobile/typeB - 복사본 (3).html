@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="user-scalable=yes, initial-scale = 1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+	<title>Type B</title>
+	<style type="text/css">		
+		* { margin:0; padding:0; }		
+		img {border:0;}		
+		ol,ul,li{list-style:none}
+		body{overflow-x:hidden;}
+		.wrap{width:1440px;margin-left:-720px;position:absolute;left:50%;background:url(../images/bgMobile.jpg) no-repeat;padding-top: 155px;height:645px;}		
+		.container{overflow:hidden;width:283px;height:502px;margin-left: 579px;}
+		.contents{width:300px;height:399px;overflow-x:hidden;overflow-y:auto;position:relative;}
+		.container img{width:100%;}
+		.nav{width:283px;}
+		.nav ul{height:45px;overflow:hidden;background:url(../images/b/m/bgUl.gif) repeat-x;}
+		.nav ul li{float:left;width:20%;text-align:center}
+		.nav ul li.on{background:url(../images/b/m/bgLi_on.gif) no-repeat;}
+		.nav ul li a{display:block;padding-top:7px;}
+		.nav img{width:auto;height:35px;}
+		.cubeWrap{-webkit-perspective: 5000;-moz-perspective: 5000;}
+		#cube{
+			width:283px;width:272px;margin-left:6px;
+			-webkit-transform-style: preserve-3d;
+			-webkit-transform-origin: 50% 50%;*/
+			-moz-transform-style: preserve-3d;
+			/*-moz-animation-play-state: paused;*/
+			-moz-transform-origin: 50% 50%;
+		}
+		#cube:hover{}
+		#cube.spin0{-webkit-animation : spinner5 0.5s 1 ease;-moz-animation : spinner6 1s 1 ease;-webkit-transform: rotateY(-0deg);}		
+		#cube.spin1{-webkit-animation : spinner1 0.5s 1 ease;-moz-animation : spinner1 1s 1 ease;-webkit-transform: rotateY(-72deg);}
+		#cube.spin2{-webkit-animation : spinner2 0.5s 1 ease;-moz-animation : spinner2 1s 1 ease;-webkit-transform: rotateY(-144deg);}
+		#cube.spin3{-webkit-animation : spinner3 0.5s 1 ease;-moz-animation : spinner3 1s 1 ease;-webkit-transform: rotateY(-216deg);}
+		#cube.spin4{-webkit-animation : spinner4 0.5s 1 ease;-moz-animation : spinner4 1s 1 ease;-webkit-transform: rotateY(-288deg);}
+
+		#cube.spin0_b{-webkit-animation : spinner1_b 0.5s 1 ease;-moz-animation : spinner1_b 1s 1 ease;-webkit-transform: rotateY(0deg);}
+		#cube.spin1_b{-webkit-animation : spinner2_b 0.5s 1 ease;-moz-animation : spinner2_b 1s 1 ease;-webkit-transform: rotateY(-72deg);}
+		#cube.spin2_b{-webkit-animation : spinner3_b 0.5s 1 ease;-moz-animation : spinner3_b 1s 1 ease;-webkit-transform: rotateY(-144deg);}
+		#cube.spin3_b{-webkit-animation : spinner4_b 0.5s 1 ease;-moz-animation : spinner4_b 1s 1 ease;-webkit-transform: rotateY(-216deg);}
+		#cube.spin4_b{-webkit-animation : spinner5_b 0.5s 1 ease;-moz-animation : spinner5_b 1s 1 ease;-webkit-transform: rotateY(-288deg);}
+
+		@-webkit-keyframes spinner1 {
+			from { -webkit-transform: rotateY(0deg);}
+			to   { -webkit-transform: rotateY(-72deg);}
+		}
+		@-webkit-keyframes spinner1_b {
+			from { -webkit-transform: rotateY(-72deg);}
+			to   { -webkit-transform: rotateY(0deg);}
+		}
+		@-moz-keyframes spinner1 {
+			from { -moz-transform: rotateY(0deg);}
+			to   { -moz-transform: rotateY(-72deg);}
+		}
+		@-moz-keyframes spinner1_b {
+			from { -moz-transform: rotateY(-72deg);}
+			to   { -moz-transform: rotateY(0deg);}
+		}
+
+		@-webkit-keyframes spinner2 {
+			from { -webkit-transform: rotateY(-72deg);}
+			to   { -webkit-transform: rotateY(-144deg);}
+		}
+		@-webkit-keyframes spinner2_b {
+			from { -webkit-transform: rotateY(-144deg);}
+			to   { -webkit-transform: rotateY(-72deg);}
+		}
+		@-moz-keyframes spinner2 {
+			from { -moz-transform: rotateY(-72deg);}
+			to   { -moz-transform: rotateY(-144deg);}
+		}
+		@-moz-keyframes spinner2_b {
+			from { -moz-transform: rotateY(-144deg);}
+			to   { -moz-transform: rotateY(-72deg);}
+		}
+
+		@-webkit-keyframes spinner3 {
+			from { -webkit-transform: rotateY(-144deg);}
+			to   { -webkit-transform: rotateY(-216deg);}
+		}
+		@-webkit-keyframes spinner3_b {
+			from { -webkit-transform: rotateY(-216deg);}
+			to   { -webkit-transform: rotateY(-144deg);}
+		}
+		@-moz-keyframes spinner3 {
+			from { -moz-transform: rotateY(-144deg);}
+			to   { -moz-transform: rotateY(-216deg);}
+		}
+		@-moz-keyframes spinner3_b {
+			from { -moz-transform: rotateY(-216deg);}
+			to   { -moz-transform: rotateY(-144deg);}
+		}
+
+
+		@-webkit-keyframes spinner4 {
+			from { -webkit-transform: rotateY(-216deg);}
+			to   { -webkit-transform: rotateY(-288deg);}
+		}
+		@-webkit-keyframes spinner4_b {
+			from { -webkit-transform: rotateY(-288deg);}
+			to   { -webkit-transform: rotateY(-216deg);}
+		}
+		@-moz-keyframes spinner4 {
+			from { -moz-transform: rotateY(-216deg);}
+			to   { -moz-transform: rotateY(-288deg);}
+		}
+		@-moz-keyframes spinner4_b {
+			from { -moz-transform: rotateY(-288deg);}
+			to   { -moz-transform: rotateY(-216deg);}
+		}
+
+		@-webkit-keyframes spinner5 {
+			from { -webkit-transform: rotateY(-288deg);}
+			to   { -webkit-transform: rotateY(0deg);}
+		}
+		@-webkit-keyframes spinner5_b {
+			from { -webkit-transform: rotateY(0deg);}
+			to   { -webkit-transform: rotateY(-288deg);}
+		}
+		@-moz-keyframes spinner5 {
+			from { -moz-transform: rotateY(-288deg);}
+			to   { -moz-transform: rotateY(0deg);}
+		}
+		@-moz-keyframes spinner5_b {
+			from { -moz-transform: rotateY(0deg);}
+			to   { -moz-transform: rotateY(-288deg);}
+		}
+
+		#cube>div{position: absolute;/*border: 1px solid #ccc;*/background: rgba(255,255,255,.8);box-shadow: inset 0 0 20px rgba(0,0,0,.2);}
+		#cube>div img{width:283px;width: 272px;}
+		.cube1{-webkit-transform: rotateY(0deg) translateZ(187px);-moz-transform: rotateY(0deg) translateZ(187px);}
+		.cube2{-webkit-transform: rotateY(72deg) translateZ(187px);-moz-transform: rotateY(72deg) translateZ(187px);}
+		.cube3{-webkit-transform: rotateY(144deg) translateZ(187px);-moz-transform: rotateY(144deg) translateZ(187px);}
+		.cube4{-webkit-transform: rotateY(216deg) translateZ(187px);-moz-transform: rotateY(216deg) translateZ(187px);}
+		.cube5{-webkit-transform: rotateY(288deg) translateZ(187px);-moz-transform: rotateY(288deg) translateZ(187px);}
+		 
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" ></script>
+	<script type="text/javascript">		
+		$(function(){
+			$('.nav ul li a').click(function(){
+				
+				var aa = $(this).parent();
+				var idx = $('.nav ul li').index(aa);
+				var bb = $('.nav').find('.on');
+				var idx2 = $('.nav ul li').index(bb);
+				//alert(idx2);
+
+				$(this).parent().addClass('on').siblings().removeClass('on');
+				if(idx > idx2){
+					$("#cube").removeClass().addClass('spin'+idx);
+				}else if(idx < idx2){
+					$("#cube").removeClass().addClass('spin'+idx+'_b');
+				}
+				return false;								
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="container">
+			<p><img src="../images/bgMobile2.gif" alt="모바일 상단" /></p>
+			<p><img src="../images/b/m/header.gif" alt="헤더" /></p>
+			<div id="contents" class="contents">
+				<div class="cubeWrap">
+				<div id="cube">
+					<div class="cube1"><img src="../images/b/m/sub01.jpg" alt="컨텐츠1" /></div>
+					<div class="cube2"><img src="../images/b/m/sub02.jpg" alt="컨텐츠1" /></div>
+					<div class="cube3"><img src="../images/b/m/sub03.jpg" alt="컨텐츠1" /></div>
+					<div class="cube4"><img src="../images/b/m/sub01.jpg" alt="컨텐츠1" /></div>
+					<div class="cube5"><img src="../images/b/m/sub02.jpg" alt="컨텐츠1" /></div>
+				</div>
+				</div>
+			</div>
+			<div class="nav">
+				<ul>
+					<li class="on"><a href="#"><img src="../images/b/m/nav01.png" alt="메뉴1" /></a></li>
+					<li><a href="#"><img src="../images/b/m/nav02.png" alt="메뉴2" /></a></li>
+					<li><a href="#"><img src="../images/b/m/nav03.png" alt="메뉴3" /></a></li>
+					<li><a href="#"><img src="../images/b/m/nav04.png" alt="메뉴4" /></a></li>
+					<li><a href="#"><img src="../images/b/m/nav05.png" alt="메뉴5" /></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

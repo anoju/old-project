@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" /> 
+<title>중앙치매센터 임시 홈페이지</title>
+<style type="text/css">
+	*{margin:0;padding:0;}	
+	form{margin:0;padding:0;}
+	body {margin:0;padding:0;}
+	p{font-size:12px;color:#666}
+	a{text-decoration:none;color:#666}
+	.popup .close{overflow:hidden;background:#eee; vertical-align:middle; padding:5px 5px 0 5px; height:25px}
+	.popup .close span{float:left}
+	.popup .close span.btn{float:right;}
+</style>
+<script language="JavaScript">
+<!-- JavaScript
+function notice_setCookie( name, value, expiredays )
+{
+var todayDate = new 
+Date();
+todayDate.setDate( todayDate.getDate() + expiredays );
+document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + 
+todayDate.toGMTString() + ";"
+}
+function notice_closeWin() 
+{ 
+if ( document.form1.Notice.checked )
+notice_setCookie( "Notice", "done" , 1); 
+// 1=하룻동안 열지 않음
+self.close(); 
+}
+// - JavaScript - 
+-->
+</script>
+</head>
+
+<body style="overflow-x:hideen;">
+<div class="popup">	
+	<p><img src="http://www.nid.or.kr/popup/img/popup_0314.jpg" alt="" usemap="#Map" border="0" />
+    <map name="Map">
+      <area shape="rect" coords="40,344,210,375" href="http://www.nid.or.kr/application/NID-130214-annualreport-final.pdf" target="_blank">
+      <area shape="rect" coords="280,345,449,373" href="http://www.nid.or.kr/application/Don't_forget-leaflet.pdf" target="_blank">
+    </map>
+  </p>
+<form name="form1">
+		<p class="close">
+			<span><input type="checkbox" name="Notice"> 오늘은 이창을 다시 열지 않음 </span>
+			<span class="btn"><a href="#" onclick="notice_closeWin()">닫기</a></span>
+		</p>
+	</form>
+</div>
+</body>
+</html>

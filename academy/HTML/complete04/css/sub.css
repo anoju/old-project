@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/*navi*/
+.navi{height:19px;padding-bottom:15px;}
+.navi h3{float:left}
+.navi .path{float:right}
+.navi .path li{float:left;padding:0 7px 0 5px;background:url(../images/common/bu_path.gif) no-repeat 100% 46%}
+.navi .path li.nobg{background:none;padding-right:0;}
+.navi .path a{float:left;font-size:11px;color:#777}
+.navi .path a.path_now{font-weight:bold;color:#0c7fba}
+
+/*lnb*/
+.lnb{padding:13px 10px 0;margin-left:1px;border:1px solid #e0e0e0}
+.lnb h3{padding:0 0 13px 5px;border-bottom:1px solid #9b9b9b}
+.lnb ul li{padding:6px 0;border-bottom:1px solid #ddd;background:url(../images/common/bu_lnb_off.gif) no-repeat 94% 50%}
+.lnb ul li.nobg{border:0}
+.lnb ul a{display:block;width:151px;height:21px;padding:10px 0 0 7px}
+.lnb ul a.active{background:url(../images/common/bg_lnb_over.gif) no-repeat 95% 50%}
+
+/*ad*/
+.ad{padding-top:30px}
+.ad li{padding-bottom:5px}

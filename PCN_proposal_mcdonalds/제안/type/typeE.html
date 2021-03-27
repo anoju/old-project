@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Type E</title>
+	<style type="text/css">		
+		* { margin:0; padding:0; }		
+		img {border:0;}		
+		ol,ul,li{list-style:none}
+		.wrap{width:100%;/*background:url(../images/d/bgBody.gif) repeat-x;*/}
+		.contents{width:1500px;margin:0 auto}
+		.contents p{display:none;}
+		.contents p.on{display:block;}
+		.contents p a{display:block;}
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" ></script>
+	<script type="text/javascript">
+		
+		$(function(){
+			$('.contents p a').click(function(){
+				var aa = $(this).parent().index();
+				var bb = $('.contents>p').length;
+				//alert(bb);
+				if(aa==(bb-1)){
+					$('.contents p').eq(0).addClass('on').siblings().removeClass('on');
+				}else{
+					$(this).parent().next().addClass('on').siblings().removeClass('on');
+				}
+				
+				/*$('.contents').stop().animate({opacity:0}, 0, function(){
+					$(this).stop().animate({opacity:1}, 200);	
+				});*/
+				return false;
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div id="contents" class="contents">
+			<p class="on"><a href="#"><img src="../images/e/01 main 02 v2.jpg" alt="서브1" /></a></p>
+			<p><a href="#"><img src="../images/e/02 main 02.jpg" alt="서브2" /></a></p>
+			<p><a href="#"><img src="../images/e/03 sub.jpg" alt="서브3" /></a></p>
+			<p><a href="#"><img src="../images/e/04 sns.jpg" alt="서브4" /></a></p>
+		</div>
+	</div>
+</body>
+</html>

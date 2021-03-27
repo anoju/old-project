@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>  </title>
+
+		<style type="text/css">
+			body{
+				font-family:"나눔고딕","맑은 고딕";
+				font-size:62.5%;
+				margin:0;
+				padding:20px;}
+
+			/*가로배치*/
+			ul.nav_float{
+				list-style:none;
+				font-size:1.1em;
+				border-left:dashed 1px #b6b6b6;
+				padding:0;
+				margin:0;
+				float:left;}
+			ul.nav_float li{
+				float:left;}
+			ul.nav_float a{
+				color:#000066;
+				text-decoration:none;
+				display:block;
+				width:10em;
+				border:dashed 1px #b6b6b6;
+				border-left:none;
+				padding:7px 5px 7px 30px;}
+			.home{
+				border:none;}
+
+			/*배경삽입*/
+			.home{
+				background:url(../07/image/home.png) no-repeat #e7e7e7 3px 50%;}
+			.news{
+				background:url(../07/image/bg_here.png) no-repeat #ffffff 3px 50%;}
+			.news2{
+				background:url(../07/image/bg_here.png) no-repeat #ffffff 95% 50%;}
+			.etc{
+				background:url(../07/image/link.png) no-repeat #e7e7e7 3px 50%;}
+
+			/*마우스 오버효과*/
+			.home:hover,.etc:hover{
+				background:url(../07/image/go.png) no-repeat #b0f30e 3px 50%;
+				font-weight:bold;}
+			.news:hover,.news2:hover{
+				color:#b0f30e;font-weight:bold;}
+
+			/*세로배치*/
+			ul.nav_block{
+				clear:both;
+				list-style:none;
+				font-size:1.2em;
+				padding:0;
+				margin:0;
+				width:175px;
+				border-bottom:dashed 1px #b6b6b6;}
+
+			ul.nav_block a{
+				color:#000066;
+				text-decoration:none;
+				display:block;
+				width:140px;
+				border:dashed 1px #b6b6b6;
+				border-bottom:none;
+				padding:7px 5px 7px 30px;}
+
+			/*IE6버그수정*/
+			* html nav_float a{
+				height:1px;}
+
+			* html nav_block a{
+				height:1px;}
+
+			/*마우스 오버시 이미지 깨짐을 방지하여 이미지를 미리 로드시키는 역할*/
+			.preload{
+				background-image:url(../07/image/go.png);
+				display:none;}
+
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<ul class="nav_float">
+				<li><a class="home" href="#" title="#">집으로</a></li>
+				<li><a class="news" href="#" title="#">객관적 보도기사</a></li>
+				<li><a class="etc" href="#" title="#">전문가</a></li>
+				<li><a class="etc" href="#" title="#">문제</a></li>
+				<li><a class="etc" href="#" title="#">국제표준</a></li>
+				<li><a class="etc" href="#" title="#">시스템</a></li>
+			</ul>
+		</div>
+		<br/><br/><br/><br/>
+		<div>
+			<ul class="nav_block">
+				<li><a class="home" href="#" title="#">집으로</a></li>
+				<li><a class="news2" href="#" title="#">객관적 보도기사</a></li>
+				<li><a class="etc" href="#" title="#">전문가</a></li>
+				<li><a class="etc" href="#" title="#">문제</a></li>
+				<li><a class="etc" href="#" title="#">국제표준</a></li>
+				<li><a class="etc" href="#" title="#">시스템</a></li>
+			</ul>
+		</div>
+		<div class="preload">
+			&nbsp;
+		</div>
+	</body>
+
+</html>

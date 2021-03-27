@@ -1,0 +1,216 @@
+@charset "utf-8";
+@import url(reset.css);
+html,body{width:100%;}
+img {vertical-align: top;}
+
+/*공통*/
+legend,.hidden, .skip{position:absolute;overflow:hidden;visibility:hidden;width:1px;height:1px;font-size:0;line-height:0;text-indent:-9999px;}
+caption{overflow:hidden;visibility:hidden;width:0px;height:0px;font-size:0;line-height:0;text-indent:-9999px;}
+.ellipsis{display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+
+.in_block{display:inline-block;}
+/*.inline{display:inline;}*/
+/*ul.inline>li{display:inline;}*/
+.rel{position:relative;}
+
+/* sort 정렬 */
+.ac{text-align:center;}
+.al{text-align:left;}
+.ar{text-align:right;}
+.fl{float:left;}
+.fr{float:right;}
+.vt{vertical-align:top;}
+.vm{vertical-align:middle;}
+.vb{vertical-align:bottom;}
+
+.clear{clear:both;}
+.clearfloat{clear:both; display:block; float:none; font-size:0 !important; height:0; line-height:0 !important; margin:0 !important; padding:0 !important; width:100%; overflow:hidden;}
+
+/*font*/
+.font11{font-size:11px;}
+.font12{font-size:12px;}
+.font14{font-size:14px;}
+.font16{font-size:16px;}
+.b{font-weight:bold;}
+.underline{text-decoration:underline;}
+.blue{color:#086fc2}
+.red{color:#f15922}
+.orange{color:#fba51a}
+/*.th{font-weight:bold;font-size: 11px;}*/
+a.link{text-decoration:underline;color:#086fc2}
+
+/* NO_padding/margin/line/bar/bg */
+.nopad{padding:0;}
+.nomar{margin:0;}
+.noline{border:none;}
+.nobg{background:none;}
+.noBg{background:none !important;}
+
+/* padding_top */
+.pat5{padding-top:5px;}
+.pat10{padding-top:10px;}
+.pat15{padding-top:15px;}
+.pat20{padding-top:20px;}
+.pat25{padding-top:25px;}
+.pat30{padding-top:30px;}
+
+/* padding_right */
+.par5{padding-right:5px;}
+.par10{padding-right:10px;}
+.par15{padding-right:15px;}
+.par20{padding-right:20px;}
+.par25{padding-right:25px;}
+.par30{padding-right:30px;}
+
+/* padding_bottom */
+.pab5{padding-bottom:5px;}
+.pab10{padding-bottom:10px;}
+.pab15{padding-bottom:15px;}
+.pab20{padding-bottom:20px;}
+.pab25{padding-bottom:25px;}
+.pab30{padding-bottom:30px;}
+
+/* padding_left */
+.pal5{padding-left:5px;}
+.pal10{padding-left:10px;}
+.pal15{padding-left:15px;}
+.pal20{padding-left:20px;}
+.pal25{padding-left:25px;}
+.pal30{padding-left:30px;}
+
+/* margin_top */
+.mat5{margin-top:5px;}
+.mat10{margin-top:10px;}
+.mat15{margin-top:15px;}
+.mat20{margin-top:20px;}
+.mat25{margin-top:25px;}
+.mat30{margin-top:30px;}
+.mat40{margin-top:40px;}
+.mat50{margin-top:50px;}
+
+/* margin_right */
+.mar5{margin-right:5px;}
+.mar10{margin-right:10px;}
+.mar15{margin-right:15px;}
+.mar20{margin-right:20px;}
+.mar25{margin-right:25px;}
+.mar30{margin-right:30px;}
+
+/* margin_bottom */
+.mab5{margin-bottom:5px;}
+.mab10{margin-bottom:10px;}
+.mab15{margin-bottom:15px;}
+.mab20{margin-bottom:20px;}
+.mab25{margin-bottom:25px;}
+.mab30{margin-bottom:30px;}
+
+/* margin_left */
+.mal5{margin-left:5px;}
+.mal10{margin-left:10px;}
+.mal15{margin-left:15px;}
+.mal20{margin-left:20px;}
+.mal25{margin-left:25px;}
+.mal30{margin-left:30px;}
+
+/* width */
+.w_96{width:96%;}
+.w_98{width:98%;}
+.w_100{width:100%;}
+
+.w30{width:30px;}
+.w35{width:35px;}
+.w40{width:40px;}
+.w45{width:45px;}
+.w50{width:50px;}
+.w55{width:55px;}
+.w60{width:60px;}
+.w65{width:65px;}
+.w70{width:70px;}
+.w75{width:75px;}
+.w80{width:80px;}
+.w85{width:85px;}
+.w90{width:90px;}
+.w95{width:95px;}
+.w100{width:100px;}
+.w105{width:105px;}
+.w110{width:110px;}
+.w115{width:115px;}
+.w120{width:120px;}
+.w125{width:125px;}
+.w130{width:130px;}
+.w135{width:135px;}
+.w140{width:140px;}
+.w145{width:145px;}
+.w150{width:150px;}
+.w155{width:155px;}
+.w160{width:160px;}
+.w165{width:165px;}
+.w170{width:170px;}
+.w175{width:175px;}
+.w180{width:180px;}
+.w185{width:185px;}
+.w190{width:190px;}
+.w195{width:195px;}
+.w200{width:200px;}
+.w205{width:205px;}
+.w210{width:210px;}
+.w215{width:215px;}
+.w220{width:220px;}
+.w225{width:225px;}
+.w230{width:230px;}
+.w235{width:235px;}
+.w240{width:240px;}
+.w245{width:245px;}
+.w250{width:250px;}
+.w255{width:255px;}
+.w260{width:260px;}
+.w265{width:265px;}
+.w270{width:270px;}
+.w275{width:275px;}
+.w280{width:280px;}
+.w285{width:285px;}
+.w290{width:290px;}
+.w295{width:295px;}
+.w300{width:300px;}
+.w400{width:400px;}
+.w500{width:500px;}
+.w600{width:600px;}
+.w630{width:630px;}
+
+/*checkbox, radio*/
+.check input{ _margin: -4px;vertical-align: middle;}
+.check label {position: relative;top: 1px;_top: 2px;padding: 0 0 0 5px;}
+.radio input{ _margin: -4px;vertical-align: middle;}
+.radio label {position: relative;top: 1px;_top: 2px;padding: 0 0 0 5px;}
+
+/*etc*/
+.input01{border:1px solid #d3d3d3; height:18px; line-height:18px; padding:1px 2px 1px; }
+.input02{border:2px solid #d3d3d3;height:18px; line-height:18px; padding:1px 2px 1px; }
+.input02:focus{border-color:#faa619}
+.textarea01{border:1px solid #d3d3d3;padding:10px;line-height: 1.3em;}
+.select02{border:1px solid #d3d3d3;height:22px; line-height:22px;}
+.file01{height:20px; line-height:20px; padding:0; vertical-align:middle; border:1px solid #d3d3d3; background-color:#f0f0f0;width:250px;margin-right:5px;}
+.input_file{background-color:#f0f0f0; border:1px solid #d3d3d3; height:18px; line-height:18px; padding:1px 2px 1px; color:#000000;}
+.input_file_a{background-color:#f0f0f0; border:1px solid #d3d3d3; height:18px; line-height:18px; padding:1px 15px 1px; vertical-align:middle; color:#000000; display:inline-block; color:#010101  !important; margin-left:2px;}
+.of{height: 22px;line-height: 22px;vertical-align: top;display:inline-block;margin:0 5px;}
+
+
+/*clearfix*/
+.clearfix:after  {content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix   {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix   {display: block;}
+/* End hide from IE-mac */ 
+
+
+/*=== script ===*/
+/* SelectBox */
+span.customStyleSelectBox{font-size:12px;background-color:#ffffff;color:#5F5F5F; border:1px solid #d3d3d3;background:url(../../images/common/selectBox_spr.gif) no-repeat center right;/*padding:5px 35px 5px 7px;*/height:20px;line-height:22px;padding-left:5px;/*vertical-align: top;*/}
+span.customStyleSelectBox.changed{background-color: #ffffff;}
+.customStyleSelectBoxInner{font-size:12px;letter-spacing:-1px;white-space:nowrap;	text-align: left;}
+.customStyleSelectBorderStrong{border-color:#000000;}
+.select_wrap{display:inline;position:relative;}
+.select_wrap .select01{left:0;}
+.select_top .customStyleSelectBox{vertical-align: top;}
+.search_box .select01{top:11px;}

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5</title>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb'>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicBoldWeb'>
+
+		<style>
+			body{ 
+				font-family: 'NanumGothicWeb'; 
+				text-align:center;}
+			
+			.box{
+				width:500px;
+				margin:20px auto;
+				padding:15px;
+				border:2px solid #333399;
+				background:#ccffff;
+				
+				-moz-border-radius:20px;
+				-webkit-border-radius:20px;
+				border-radius:20px;}
+
+			.title{
+				font-size:36px;
+				font-weight:bold;}
+
+			/*그림자 효과*/
+			.one{
+				/*box-shadow:색상값 가로거리 세로거리*/
+				-moz-box-shadow:rgb(150,150,150) 10px 5px;
+				-webkit-box-shadow:rgb(150,150,150) 10px 5px;
+				box-shadow:rgb(150,150,150) 10px 5px;}
+
+			/*그림자 효과 + 번짐 효과*/
+			.two{
+				/*box-shadow:색상값 가로거리 세로거리 번짐거리*/
+				-moz-box-shadow:rgb(150,150,150) 10px 5px 20px;
+				-webkit-box-shadow:rgb(150,150,150) 10px 5px 20px;
+				box-shadow:rgb(150,150,150) 10px 5px 20px;}
+
+			/*내부 그림자 효과 + 번짐 효과*/
+			.three{
+				/*box-shadow:색상값 가로거리 세로거리 번짐거리 inset*/
+				-moz-box-shadow:rgb(150,150,150) 10px 5px 20px inset;
+				-webkit-box-shadow:rgb(150,150,150) 10px 5px 20px inset;
+				box-shadow:rgb(150,150,150) 10px 5px 20px inset;}
+
+			/*텍스트 그림자 효과*/
+			.shadow{
+				-moz-text-shadow:rgb(150,150,150,) 3px 3px 5px;
+				-webkit-text-shadow:rgb(150,150,150,) 3px 3px 5px;
+				text-shadow:rgb(150,150,150,) 3px 3px 5px;}
+
+			.shadow2{
+				-moz-text-shadow:rgba(150,150,150,.5) 3px 3px 5px;
+				-webkit-text-shadow:rgba(150,150,150,.5) 3px 3px 5px;
+				text-shadow:rgba(150,150,150,.5) 3px 3px 5px;}
+
+			/*새폰트추가*/
+			.font{
+				font-family:MynewFont,verdana, sans-serif;}
+			@font-face{
+				font-family:'MynewFont'
+				src:url('font.ttf');}
+
+			/*가로 그라디언트*/
+			.four{
+				/*-moz-linear-gradient(위치(각도), 시작컬러, 끝컬러)*/
+				background:-moz-linear-gradient(top, #fff, #069);
+				background:-webkit-linear-gradient(top, #fff, #069);
+				background:linear-gradient(top, #fff, #069);}
+
+			/*세로로 그라디언트*/
+			.five{
+				background:-moz-linear-gradient(30deg, #fff, #069);
+				background:-webkit-linear-gradient(30deg, #fff, #069);
+				background:linear-gradient(30deg, #fff, #069);}
+
+			/*그라디언트 종료지점 설정*/
+			.six{
+				/*-moz-linear-gradient(위치(각도), 시작컬러 종료지점, 끝컬러 종료지점)*/
+				background:-moz-linear-gradient(30deg, #fff 50%, #069 90%);
+				background:-webkit-linear-gradient(30deg, #fff 50%, #069 90%);
+				background:linear-gradient(30deg, #fff 50%, #069 90%);}
+			
+			/*원형 그라디언트*/
+			.seven{
+				background:-moz-radial-gradient(center,circle,#fff 0%, #069 200%);
+				background:-webkit-radial-gradient(center,circle,#fff 0%, #069 200%);
+				background:radial-gradient(center,circle,#fff 0%, #069 200%);}
+
+			/*텍스트에 hsla 색상 설정*/
+			.hsla{
+				color:hsla(120,100%, 50%, 0.5);}
+
+		</style>
+
+
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<header class="box one"><span class="title">BOX SHADOW</span></header>
+		<header class="box two"><span class="title">BOX SHADOW</span></header>
+		<header class="box three"><span class="title">BOX SHADOW</span></header>
+		<header class="box"><span class="title shadow">TEXT SHADOW</span></header>
+		<header class="box"><span class="title font shadow">TEXT CHANGE</span></header>
+		<header class="box two four"><span class="title font shadow">LINEAR GRADIENT</span></header>
+		<header class="box two five"><span class="title font shadow">LINEAR GRADIENT</span></header>
+		<header class="box two six"><span class="title font shadow">LINEAR GRADIENT</span></header>
+		<header class="box two seven"><span class="title font shadow">CIRCLE GRADIENT</span></header>
+		<header class="box two seven"><span class="title font shadow2">CIRCLE GRADIENT</span></header>
+		<header class="box two seven"><span class="title font shadow2 hsla">CIRCLE GRADIENT</span></header>
+
+	</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Type C</title>
+	<style type="text/css">		
+		* { margin:0; padding:0; }		
+		img {border:0;}		
+		ol,ul,li{list-style:none}
+		.wrap{width:100%}
+		.header{position: relative;width:100%;background: url(../images/c/bgHeader.gif) repeat-x;z-index: 5;}
+		.header p{width:1000px; margin:0 auto}
+		
+		.container{position:relative;margin-top:-30px;}
+		.contents{width:100%;}
+		.contents div{display:none;}
+		.contents div.on{display:block;}
+		.contents div >p{position:relative;width:1000px; margin:0 auto}
+		/*.contents p a{display:block;}*/
+		.contents .bg1{background: url(../images/c/bgLocation.gif) repeat-x;}
+		.contents .bg2{background: url(../images/c/bgLocatio2.gif) repeat-x;}
+		.contents .bg2 a{display:block;width:226px;height:226px;padding:35px;position:absolute;left: 50%;margin-left: -301px;top: 623px;}
+		.contents .bg2 a:hover{background: url(../images/c/bgSubCon1.png) no-repeat;}
+		.footer{width:100%;}
+		.footer p{width:1000px; margin:0 auto}		
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" ></script>
+	<script type="text/javascript">
+		
+		$(function(){
+			$('.contents div').click(function(){
+				var aa = $(this).index();
+				var bb = $('.contents>div').length;
+				if(aa==(bb-1)){
+					$('.contents div').eq(0).addClass('on').siblings().removeClass('on');
+				}else{
+					$(this).next().addClass('on').siblings().removeClass('on');
+				}
+				
+				/*$('.contents').stop().animate({opacity:0}, 0, function(){
+					$(this).stop().animate({opacity:1}, 300);	
+				});*/
+				return false;
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div id="header" class="header">
+			<p><a href="typeC.html"><img src="../images/c/hearder.png" alt="헤더" /></a></p>
+		</div>
+		<div id="container" class="container">
+			<div id="contents" class="contents">
+				<div class="bg1 on"><p><img src="../images/c/sub_01.jpg" alt="서브1" /></p></div>
+				<div class="bg2"><p><img src="../images/c/sub_02.jpg" alt="서브2" /><a href="#"><img src="../images/c/subCon1.jpg" alt="" /></a></p></div>		
+			</div>
+		</div>
+		<div id="footer" class="footer">
+			<p><img src="../images/c/footer.gif" alt="푸터" /></p>
+		</div>
+	</div>
+</body>
+</html>

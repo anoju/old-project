@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+			
+		</style>
+
+		<script>
+			function draw(){
+				var canvas = document.getElementById("m")
+				var ctx = canvas.getContext("2d")
+				
+				var img1=document.getElementById("source")
+				var img2=document.getElementById("frame")
+				
+				ctx.drawImage(img1,200,100,300,200,30,30,300,200)
+				ctx.drawImage(img2,30,30)
+			}
+		</script>
+	</head>
+
+	<body onload="draw()">
+		<canvas id="m" width="500" height="600">이브라우져는 켄바스를 지원하지 않습니다.</canvas>
+		<div style="visibility: hidden">
+			<img id="source" src="informationTechnology/MySamples/Samples/Ch4/result/flower2.jpg" width="400" height="266" border="0" alt="">
+			<img id="frame" src="informationTechnology/MySamples/Samples/Ch4/result/frame.png" width="330" height="264" alt="" />
+		</div>
+	</body>
+</html>

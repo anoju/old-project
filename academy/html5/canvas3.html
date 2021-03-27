@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+			canvas{
+				border:#999 solid 2px;
+			}
+			
+		</style>
+
+		<script>
+			window.onload=function(){
+		/////////////////////////////////////////////////////////////////////////
+				var elem1 = document.getElementById("canvas1")
+				var myCanvas1 = elem1.getContext('2d')
+				
+				//도형을 채우기 위해서는 스타일을 미리지정
+			    myCanvas1.fillStyle = "rgb(200, 0, 0)"
+			    myCanvas1.fillRect(10,10, 200, 200)
+			    
+			    myCanvas1.fillStyle = "rgb(155, 15, 26)"
+			    myCanvas1.fillRect(210,10, 200, 200)
+			    
+			    myCanvas1.fillStyle = "rgb(100, 30, 50)"
+			    myCanvas1.fillRect(210,210, 200, 200)
+			    
+			    myCanvas1.fillStyle = "rgb(10, 150, 200)"
+			    myCanvas1.fillRect(10,210, 200, 200)
+			    
+			    //globalAlpha를 활용한 반투명 도형
+			    myCanvas1.globalAlpha = 0.4
+			    myCanvas1.beginPath()
+			    myCanvas1.arc(210, 210, 100, 0, Math.PI*2, true)
+			    myCanvas1.fillStyle = "white"
+			    myCanvas1.fill()
+			    
+			    
+			    myCanvas1.beginPath()
+			    myCanvas1.arc(210, 210, 60, 0, Math.PI*2, true)
+			    myCanvas1.fillStyle = "blue"
+			    myCanvas1.fill()
+			    
+		/////////////////////////////////////////////////////////////////////////
+			    var elem2 = document.getElementById("canvas2")
+				var myCanvas2 = elem2.getContext('2d')
+				
+				myCanvas2.fillStyle = "rgba(255, 36, 90,1.0)"
+				myCanvas2.fillRect(10,10, 150, 30)
+				myCanvas2.fillStyle = "rgba(255, 36, 90,.8)"
+				myCanvas2.fillRect(10,40, 150, 30)
+				myCanvas2.fillStyle = "rgba(255, 36, 90,.6)"
+				myCanvas2.fillRect(10,70, 150, 30)
+				myCanvas2.fillStyle = "rgba(255, 36, 90,.4)"
+				myCanvas2.fillRect(10,100, 150, 30)
+				myCanvas2.fillStyle = "rgba(255, 36, 90,.2)"
+				myCanvas2.fillRect(10,130, 150, 30)
+				
+		/////////////////////////////////////////////////////////////////////////
+				//그레디언트
+				//createLinearGradient(시작가로좌표,세로좌표,끝점가로,끝점세로)
+				//createRadialGradient(제1원의가로좌표, 제1원의세로좌표, 반경, 제2원의가로좌표, 제2원의세로좌표, 반경)
+				//색추가 addColorStop(위치(최소0 ~ 최대1), 색상)
+				var elem3 = document.getElementById("canvas3")
+				var myCanvas3 = elem3.getContext('2d')
+				
+				//색상첨가는 그레디언트 객체의 인스턴스에
+				var myLinear = myCanvas3.createLinearGradient(0,0,0,200)
+				myLinear.addColorStop(0,"#7200c6")
+				myLinear.addColorStop(1,"#fff")
+				
+				//조합된 그래디언트 색상 조합은 켄바스 객체에 뿌림
+				myCanvas3.fillStyle = myLinear
+				myCanvas3.fillRect(290,10,200,200)
+				
+				var myRadial = myCanvas3.createRadialGradient(45,45,10,62,60,80)
+				myRadial.addColorStop(0,"#fff")
+				myRadial.addColorStop(1,"#7200c6")
+				
+				myCanvas3.fillStyle = myRadial
+				myCanvas3.arc(80,80,80,0,Math.PI*2,true)
+				myCanvas3.fill()
+				
+				
+		/////////////////////////////////////////////////////////////////////////
+				var elem4 = document.getElementById("canvas4")
+				var myCanvas4 = elem4.getContext('2d')
+				
+				//라인끝점
+				var lineCap = ["butt","round","square"]
+				//중간연결점
+				var lineJoin = ["round","bevel","miter"]
+				
+				//라인 끝점 확인선
+				myCanvas4.strokeStyle="#ff3c3c"
+				myCanvas4.beginPath()
+				myCanvas4.moveTo(10,10)
+				myCanvas4.lineTo(150,10)
+				myCanvas4.moveTo(10,150)
+				myCanvas4.lineTo(150,150)
+				myCanvas4.stroke()
+				
+				//끝점 종류 알아보기
+				myCanvas4.strokeStyle="#10b9ff"
+				for(var i=0 ; i<lineCap.length ; i++){
+					//선의 두께
+					myCanvas4.lineWidth = 15
+					myCanvas4.lineCap = lineCap[i]
+					myCanvas4.beginPath()
+					myCanvas4.moveTo(25+50 * i,10)
+					myCanvas4.lineTo(25+50 * i,150)
+					myCanvas4.stroke()
+				}
+				
+				//중간 연결점 알아보기
+				for(var j=0 ; j<lineJoin.length ; j++){
+					//선의 두께
+					myCanvas4.lineWidth = 20
+					myCanvas4.lineJoin = lineJoin[j]
+					myCanvas4.beginPath()
+					myCanvas4.moveTo(180,70 * j + 50)
+					myCanvas4.lineTo(220,70 * j + 20)
+					myCanvas4.lineTo(260,70 * j + 50)
+					myCanvas4.stroke()
+				}
+				
+				
+		/////////////////////////////////////////////////////////////////////////	
+				var elem5 = document.getElementById("canvas5")
+				var myCanvas5 = elem5.getContext('2d')
+				
+				//패턴처리 외부 이미지파일을 이용하기 때문에 이미지객체에 대하나 로드가 필요. onload
+				
+				//이미지 객체 복사본 처리
+				var img = new Image()
+				//객체 원본위치 속성
+				img.src = "informationTechnology/images/alpha.gif"
+				
+				img.onload = function(){
+				
+					var myPattern = myCanvas5.createPattern(img,"repeat")
+					
+					myCanvas5.fillStyle = myPattern
+					
+					myCanvas5.fillRect(10,10,300,400)
+					
+				}
+				
+				
+		/////////////////////////////////////////////////////////////////////////
+				var elem6 = document.getElementById("canvas6")
+				var myCanvas6 = elem6.getContext('2d')
+				
+				
+				//드로인 객체저장
+				//저장된 객체를 다시 부르기
+				//save() --> storkeStyle, fillStyle, globalAlpha, lineWidth, lineCap, lineJoin, miterLimit, 그림자관련, 합성모드, 크기, 회전, 위치조정, 잘림영역
+				myCanvas6.fillStyle="purple"
+				myCanvas6.fillRect(10,10,50,100)
+				myCanvas6.save()
+				
+				myCanvas6.fillStyle="skyblue"
+				myCanvas6.fillRect(60,10,50,100)
+				myCanvas6.save()
+				
+				myCanvas6.fillStyle="green"
+				myCanvas6.fillRect(110,10,50,100)
+				
+				//가장 최근에 저장(스카이블루) 정보를 부름
+				myCanvas6.restore()
+				myCanvas6.fillRect(160,10,50,100)
+				
+				//다시 부를경우 그전에 저장(퍼플) 정보를 부름
+				myCanvas6.restore()
+				myCanvas6.fillRect(210,10,50,100)
+				
+		/////////////////////////////////////////////////////////////////////////
+				var elem7 = document.getElementById("canvas7")
+				var myCanvas7 = elem7.getContext('2d')
+				
+				var grad=myCanvas7.createLinearGradient(0,0,300,0)
+				grad.addColorStop(0,"#fc0")
+				grad.addColorStop(1,"#900")
+				
+				myCanvas7.save()
+				myCanvas7.fillStyle=grad
+				myCanvas7.fillRect(10,50,140,30)
+				myCanvas7.fillRect(10,100,200,30)
+				myCanvas7.fillRect(10,150,300,30)
+				
+				myCanvas7.restore()
+				myCanvas7.font="13pt 돋움"
+				myCanvas7.fillText("5.4%",160,70)
+				myCanvas7.fillText("6.9%",220,120)
+				myCanvas7.fillText("7.9%",320,170)
+			
+				
+		/////////////////////////////////////////////////////////////////////////
+				var elem8 = document.getElementById("canvas8")
+				var myCanvas8 = elem8.getContext('2d')
+				
+				var img2 = new Image()
+				img2.onload = function(){
+					//이미지만 표시
+					myCanvas8.drawImage(img2,10,10)
+					
+					//표시영역제한
+					//myCanvas8.drawImage(img2,자를영역가로시작점,자를영역세로시작점,자를영역너비,자를영역높이, 자른영역가로위치,자른영역세로위치 ,자른영역너비,자른영역높이)
+					myCanvas8.drawImage(img2,119,0,80,80,360,10,60,60)					
+				}
+				img2.src="informationTechnology/images/itunes_460x228_20120814091450.jpg"
+			}
+		</script>
+	</head>
+
+	<body>
+		<canvas id="canvas1" width="500" height="500">이브라우져는 켄바스를 지원하지 않습니다.</canvas>
+		<canvas id="canvas2" width="500" height="500">이브라우져는 켄바스를 지원하지 않습니다.</canvas>
+		<canvas id="canvas3" width="500" height="500">이브라우져는 켄바스를 지원하지 않습니다.</canvas>
+		<canvas id="canvas4" width="500" height="500">이브라우져는 켄바스를 지원하지 않습니다.</canvas>
+		<canvas id="canvas5" width="500" height="500">이브라우져는 켄바스를 지원하지 않습니다.</canvas>
+		<canvas id="canvas6" width="500" height="500">이브라우져는 켄바스를 지원하지 않습니다.</canvas>
+		<canvas id="canvas7" width="500" height="500">이브라우져는 켄바스를 지원하지 않습니다.</canvas>
+		<canvas id="canvas8" width="500" height="500">이브라우져는 켄바스를 지원하지 않습니다.</canvas>
+	</body>
+</html>

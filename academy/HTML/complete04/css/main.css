@@ -1,0 +1,133 @@
+@charset "utf-8";
+@import url(common.css);/*공통*/
+@import url(main_layout.css);/*메인레이아웃*/
+@import url(graph.css);/*그래프*/
+@import url(basefont.css);/*폰트*/
+
+/*메인공통*/
+.more{position:absolute;right:0;top:20px}
+
+/*주요뉴스*/
+.mnews{float:left;width:631px;padding:21px 0 0 16px}
+.mnews dl{position:relative;width:415px;padding:0 0 0 216px}
+.mnews dd.m_img{position:absolute;left:0;top:10px}
+.mnews ul{padding:15px 0 0 216px}
+.mnews ul li{padding-left:6px;background:url(../images/common/ico_element.gif) no-repeat 0 -19px}
+
+/*중계안내*/
+.broad{float:right;position:relative;width:308px;padding:21px 0 0 0}
+.broad h3{padding:0 0 17px 20px}
+.rolling{overflow:hidden;position:relative;width:304px;height:214px}
+.rolling_list{position:absolute;left:0;top:0;width:912px;height:214px}
+.rolling_list li{position:absolute;left:0;top:0}
+.rolling_list .rolling_list_1{left:0}
+.rolling_list .rolling_list_2{left:304px}
+.rolling_list .rolling_list_3{left:608px} 
+.broad p{position:absolute;right:19px;top:21px}
+.broad p a{display:inline-block;width:10px;height:12px;background:url(../images/common/ico_element.gif) no-repeat 0 -51px}
+.broad p a.active{background-position:0 -39px}
+
+/*하이라이트,레슨 그룹 영역*/
+.section1{float:left;width:177px;padding-bottom:25px}
+/*하이라이트*/
+.high{padding-top:20px}
+.high h3{padding-bottom:10px}
+.high ul{padding:11px 12px 0 12px;border:1px solid #e1e1e1}
+.high ul li{padding-bottom:15px;}
+.high strong{display:block;padding-top:3px}
+.high span{display:block}
+
+/*레슨*/
+.lesson{position:relative;padding-top:20px}
+.lesson h3{padding-bottom:10px}
+
+/*일정, 기록실 그룹 영역*/
+.section2{float:right;width:437px}
+/*일정*/
+.sche{position:relative;padding-top:20px}
+.sche h3{padding-bottom:10px}
+.sche table{background:url(../images/main/bg_sche.gif) repeat-x}
+.sche thead tr{height:33px}
+.sche thead th.rgt{border-right:1px solid #d0d0d0}
+.sche thead th.lft{border-left:1px solid #d0d0d0}
+.sche tbody td{padding:9px 0 6px;border-bottom:1px solid #ededed;background:none}
+.sche tbody td.frst{padding-left:5px}
+.sche tbody td.last{padding-right:5px}
+
+/*PGA기록실*/
+.data{padding-top:20px}
+.data h3{padding-bottom:10px}
+.data .data_area{position:relative;width:437px;height:291px;background:url(../images/main/bg_data.jpg) no-repeat}
+.data h4{padding:15px 0 0 10px}
+.data h4#data_2_h{display:none}
+.data h4#data_3_h{display:none}
+.data ul{padding:14px 10px 0}
+.data ul#data_2{display:none}
+.data ul#data_3{display:none}
+.data li{height:18px; padding:9px 0 6px; border-bottom:1px solid #23304c;color:#cbd9f9;}
+.data li.last{border:0}
+.data span{vertical-align:top}
+.data span.dtnm{float:left;width:122px;padding-left:8px;}
+.data span.dtgr{float:left;height:16px;font-size:5px;text-indent:-9999px; line-height:0.5;background:#106be6}
+.data span.dtval{float:right;padding-right:10px;color:#8199d1}
+.data p{position:absolute;top:12px;right:10px}
+.data p a{display:inline-block;width:18px;height:18px;margin-left:5px}
+
+/*포토갤러리*/
+.gallery{clear:both;position:relative;width:639px;height:193px;background:url(../images/main/bg_gallery.gif) no-repeat}
+.gallery h3{padding:15px 0 10px 7px}
+.gallery ul{height:160px;padding:0 5px}
+.gallery ul#gallery_2{display:none}
+.gallery ul#gallery_3{display:none}
+.gallery li{float:left;position:relative;width:209px;height:150px;text-align:center}
+.gallery li img{border:1px solid #000}
+.gallery span{position:absolute;left:3px;bottom:5px;width:203px;height:23px;padding-top:8px;background:#000}
+.gallery #gallery_prev{position:absolute;right:36px;top:12px}
+.gallery #gallery_next{position:absolute;right:10px;top:12px}
+
+.anews_area,.score_area{position:relative;border:1px solid #cdcdcd;border-bottom:2px solid #5d5d5d;border-top:0;}
+/*전체뉴스*/
+.anews{position:relative;padding-top:20px;}
+.anews h3{padding-bottom:10px}
+.anews_area{background:#fff url(../images/main/bg_anews.jpg) no-repeat}
+.anews ul{padding:35px 10px 0px;}
+.anews ul li{padding:4px 0 4px 6px;background:url(../images/common/bu_lst.gif) no-repeat 0 50%}
+.anews h4{position:absolute;top:5px}
+.anews h4.allnews_h{left:11px}
+.anews h4.pganews_h{left:79px}
+.anews h4.sbsnews_h{left:149px}
+.anews ul.pganews{display:none}
+.anews ul.sbsnews{display:none}
+.anews .more{position:absolute; left:237px; top:-22px;}
+
+/*골프스코어*/
+.score{padding-top:20px}
+.score h3{padding-bottom:10px}
+.score_area{background:#fff url(../images/main/bg_score.jpg) no-repeat}
+.score h4{position:absolute;top:5px}
+.pga h4{left:11px}
+.lpga h4{left:60px}
+.kpga h4{left:116px}
+.klpga h4{left:173px}
+.score h5{padding:43px 0 9px;text-align:center}
+.lpga h5,.kpga h5,.klpga h5{display:none}
+.lpga p,.kpga p,.klpga p{display:none}
+.lpga ol,.kpga ol,.klpga ol{display:none}
+.score p{height:24px;padding:12px 0px 0 12px;background:url(../images/main/bg_score_sub.gif) repeat-x}
+.score p img{padding-right:19px}
+.score p img.hrp{padding-right:100px}
+.score ol li{height:21px;padding:5px 0 0 55px;border-bottom:1px solid #ddd;background:url(../images/main/bu_score.gif) no-repeat 12px 5px}
+.score ol li.sc_bu_num1{background-position:12px 5px}
+.score ol li.sc_bu_num2{background-position:12px -30px}
+.score ol li.sc_bu_num3{background-position:12px -65px}
+.score ol li.sc_bu_t1{background-position:12px -100px}
+.score ol li.sc_bu_t2{background-position:12px -135px}
+.score ol li.sc_bu_t3{background-position:12px -170px}
+.score ol li.sc_bu_t4{background-position:12px -205px}
+.score ol li span.scnm{display:inline-block;width:115px}
+.score ol li span.scth{display:inline-block;width:60px;text-align:center}
+.score ol li span.scval{padding-left:9px}
+
+/*배너*/
+.banner{padding-top:25px;padding-bottom:10px}
+.banner li.last{padding-top:10px}

@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Type C</title>
+	<style type="text/css">		
+		* { margin:0; padding:0; }		
+		img {border:0;}		
+		ol,ul,li{list-style:none}
+		.wrap{width:100%}
+		.header{width:100%;background: url(../images/c/bgHeader.jpg) repeat-x;}
+		.header p{width:1024px;}
+		
+		.container{width:100%;}
+		.contents{width:1024px;position:relative;}
+		.gnb{position:absolute;left:0;top:0;width:25px;height:606px;}
+		.mainCon{position:absolute;left:85px;top:225px;width:178px;height:344px;}
+
+		.footer{width:100%;background: url(../images/c/bgFooter.jpg) repeat-x;}
+		.footer p{width:1024px;}	
+		
+		.mainSlide{width:100%;height:606px;overflow:hidden;position:relative}
+		.slide{width:100%;overflow:hidden;}
+		.slide li{position:absolute;left:-1024px;}
+		.slide li:first-child{left:0px;}
+		.slide li a{display:block;width:1024px;height:606px;background-color: #fff;}
+		.btnSlide{position:absolute;left:50%;top:10px;margin-left:-20px;overflow:hidden;}
+		.btnSlide li{float:left}
+		.btnSlide li + li{margin-left:10px;}
+		.btnSlide a{display:block;width:10px;height:10px;text-indent:-999em;background: url(../images/c/paging.png) no-repeat -9px 2px;}
+		.btnSlide .on a{background-position:2px 2px;}
+
+		/*.bg1 a{background: url(../images/c/visual4.jpg) no-repeat 0 0px;}
+		.bg2 a{background: url(../images/c/visual3.jpg) no-repeat 0 0px;}
+		.bg3 a{background: url(../images/c/visual1.jpg) no-repeat 0 0px;}
+		.bg4 a{background: url(../images/c/visual2.jpg) no-repeat 0 0px;}*/
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" ></script>
+	<script type="text/javascript">		
+		$(function(){
+			var i = 0;
+			var $length = $('.slide>li').length;
+			$('.slide>li>a').click(function() {
+				if(i == ($length-1)){
+					i = 0;		
+				}else{
+					i++;		
+				}
+				slideMotion();
+				//console.log(i);
+				btnSlide();
+				
+				return false;
+			});
+
+			$('.footer a').click(function() {	
+				if(i == 0){
+					i = ($length-1);					
+				}else{
+					i--;					
+				}
+				console.log(i);
+				btnSlide();
+				slideMotion2();
+				return false;
+			});
+
+			$('.btnSlide a').click(function() {	
+				var $this = $(this).parent()
+				i = $('.btnSlide li').index($this)
+				
+				//alert(i);
+				$this.addClass('on').siblings().removeClass('on');				
+
+				$('.slide li').eq(i).not(':animated').stop().css({'left':'1024px'}).animate({'left':'0px'}),500;
+				$('.slide li').eq(i).siblings().not(':animated').stop().animate({'left':'-1024px'},500);
+				return false;
+			});
+
+			
+			function btnSlide(){
+				$('.btnSlide>li').eq(i).addClass('on').siblings().removeClass('on');
+			}
+			
+			function slideMotion(){
+				$('.slide li').eq(i).not(':animated').stop().animate({'left':'0px'}),500;
+				if(i==0){
+					$('.slide li').eq($length-1).animate({'left':'1024px'},500,function(){
+						$(this).css({'left':'-1024px'});
+					});
+				}else{
+					$('.slide li').eq(i).prev().animate({'left':'1024px'},500,function(){
+						$(this).css({'left':'-1024px'});
+					});
+				}
+			}
+			
+			function slideMotion2(){
+				$('.slide li').eq(i).not(':animated').stop().css({'left':'1024px'}).animate({'left':'0px'}),500;
+				if(i == $length-1){
+					$('.slide li').eq(0).not(':animated').stop().animate({'left':'-1024px'});
+				}else{
+					$('.slide li').eq(i).siblings().not(':animated').stop().animate({'left':'-1024px'},500);
+				}
+			}
+
+			
+		});
+
+
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div id="header" class="header">
+			<p><a href="typeC_1.html"><img src="../images/c/header.jpg" alt="헤더" /></a></p>
+		</div>
+		<div id="container" class="container">
+			<div id="contents" class="contents">
+				<div class="mainSlide">
+					<ul class="slide">
+						<li class="bg1"><a href="#"><img src="../images/c/visual1.jpg" alt="비주얼1" /></a></li>
+						<li class="bg2"><a href="#"><img src="../images/c/visual2.jpg" alt="비주얼2" /></a></li>
+						<li class="bg3"><a href="#"><img src="../images/c/visual3.jpg" alt="비주얼3" /></a></li>
+						<li class="bg4"><a href="#"><img src="../images/c/visual4.jpg" alt="비주얼4" /></a></li>
+					</ul>
+					<ul class="btnSlide">
+						<li class="on"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+					</ul>					
+				</div>
+				<p class="gnb"><a href="typeC_1.html"><img src="../images/c/gnb.jpg" alt="메뉴" /></a></p>
+				<p class="mainCon"><img src="../images/c/mainCon.png" alt="메인컨텐츠" /></p>
+			</div>
+		</div>
+		<div id="footer" class="footer">
+			<p><a href="#"><img src="../images/c/footer.jpg" alt="푸터" /></a></p>
+		</div>
+	</div>
+</body>
+</html>

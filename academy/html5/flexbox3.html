@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5</title>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb'>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicBoldWeb'>
+
+		<style>
+			*{margin:0; padding:0;}
+			body{ 
+				font-family: 'NanumGothicWeb';
+				width:100%;
+				height:100%;
+				
+				display:box;
+				display:-moz-box;
+				display:-webkit-box;
+				}
+				
+				/*box-flex는 영향을 받는 자식들에게 배포,숫자단위의 너비나 높이의 배분 분포율을 나타냄(배율)*/
+				.div1 p{
+					border:1px solid red;
+					height:100px;
+					
+					box-flex:1;
+					-moz-box-flex:1;
+					-webkit-box-flex:1;}
+
+				.test1{
+					box-flex:2;
+					-moz-box-flex:2;
+					-webkit-box-flex:2;}
+
+				.div2{
+					width:800px;
+					height:600px;
+					border:1px solid blue;
+					
+					display:box;
+					display:-moz-box;
+					display:-webkit-box;
+					
+					box-orient:vertical;
+					-moz-box-orient:vertical;
+					-webkit-box-orient:vertical;
+					
+					/*orient 기준으로 수직정렬*/
+					box-align:center;
+					-moz-box-align:center;
+					-webkit-box-align:center;}
+
+				.div2 p{
+					height:50px;
+					background:#ffcccc;
+					border:1px solid #cc33cc;
+					}
+		</style>
+
+
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<div class="div1">
+			<p class="test1">test1</p>
+			<p class="test2">test2</p>
+			<p class="test3">test3</p>
+			<p class="test4">test4</p>
+			<p class="test5">test5</p>
+		</div>
+
+		<div class="div2">
+			<p>test1</p>
+			<p>test2</p>
+			<p>test3</p>
+			<p>test4</p>
+			<p>test5</p>
+		</div>
+	</body>
+</html>

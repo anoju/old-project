@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* CSS Document */
+
+#contents_wrap{
+	height:3086px;}
+/* sub_left_sec */
+
+/*테이블 설정*/
+#sub_left_sec table{
+	border-top:3px solid #333333;
+	padding-bottom:10px;
+	font-family: "나눔고딕";}
+
+	#sub_left_sec table thead{
+		background:#eaeaea;
+		}
+	#sub_left_sec table thead th{
+		color:#333333;}
+	#sub_left_sec table tbody th, #sub_left_sec table tbody td{
+		color:#666666;}
+	#sub_left_sec table strong{
+		font-weight:bold;
+		color:#e72e35;}
+		
+	#sub_left_sec table th, #sub_left_sec table td{
+		font-weight:bold;
+		line-height:30px;
+		text-align:center;
+		border-bottom:1px dotted #c6c6c6;
+		padding:7px 10px 8px10px;}
+		
+		#sub_left_sec table .table_end th, #sub_left_sec table .table_end td{
+			border-bottom:3px solid #333333;}
+		
+		#sub_left_sec table ul{
+			line-height:22px;
+			text-align:left;
+			list-style:circle;
+			padding:10px 25px;}
+			
+			#sub_left_sec .table1 ul img{
+				vertical-align:middle;
+				padding-left:5px;}
+				
+	/*그외 제목 밑 p 설정*/
+	#sub_left_sec h3{
+		font-weight:bold;
+		color:#e72e35;
+		font-size:18px;
+		margin-top:50px;
+		margin-bottom:50px;}
+	
+	#sub_left_sec h4{
+		font-weight:bold;
+		font-size:18px;
+		margin:10px 0;}
+	
+	#sub_left_sec h5{
+		font-weight:bold;
+		padding-top:30px;}
+	
+	#sub_left_sec p{
+		color:#666666;}
+	
+
+	
+				
+/* sub_right_sec */	
+	/*우측 메뉴 이미지 삽입*/
+	.rightmenu .rm_01 a{
+		background:url(../image/ticket/lnb01_bt01.gif) no-repeat 0 0;}
+	.rightmenu .rm_02 a{
+		background:url(../image/ticket/lnb01_bt02.gif) no-repeat 0 0;}
+	.rightmenu .rm_03 a{
+		background:url(../image/ticket/lnb01_bt03.gif) no-repeat 0 0;}
+	.rightmenu .rm_04 a{
+		background:url(../image/ticket/lnb01_bt04.gif) no-repeat 0 0;}
+	.rightmenu .rm_05 a{
+		background:url(../image/ticket/lnb01_bt05.gif) no-repeat 0 0;}
+	.rightmenu .rm_06 a{
+		background:url(../image/ticket/lnb01_bt06.gif) no-repeat 0 0;}
+	.rightmenu .rm_07 a{
+		background:url(../image/ticket/lnb01_bt07.gif) no-repeat 0 0;}
+	.rightmenu .rm_08 a{
+		background:url(../image/ticket/lnb01_bt08_on.gif) no-repeat 0 0;}
+	.rightmenu .rm_09 a{
+		background:url(../image/ticket/lnb01_bt09.gif) no-repeat 0 0;}
+		
+	/*우측 메뉴 마우스 오버*/
+	.rightmenu .rm_01 a:hover{
+		background:url(../image/ticket/lnb01_bt01_on.gif) no-repeat 0 0;}
+	.rightmenu .rm_02 a:hover{
+		background:url(../image/ticket/lnb01_bt02_on.gif) no-repeat 0 0;}
+	.rightmenu .rm_03 a:hover{
+		background:url(../image/ticket/lnb01_bt03_on.gif) no-repeat 0 0;}
+	.rightmenu .rm_04 a:hover{
+		background:url(../image/ticket/lnb01_bt04_on.gif) no-repeat 0 0;}
+	.rightmenu .rm_05 a:hover{
+		background:url(../image/ticket/lnb01_bt05_on.gif) no-repeat 0 0;}
+	.rightmenu .rm_06 a:hover{
+		background:url(../image/ticket/lnb01_bt06_on.gif) no-repeat 0 0;}
+	.rightmenu .rm_07 a:hover{
+		background:url(../image/ticket/lnb01_bt07_on.gif) no-repeat 0 0;}
+	.rightmenu .rm_08 a:hover{
+		background:url(../image/ticket/lnb01_bt08_on.gif) no-repeat 0 0;}
+	.rightmenu .rm_09 a:hover{
+		background:url(../image/ticket/lnb01_bt09_on.gif) no-repeat 0 0;}

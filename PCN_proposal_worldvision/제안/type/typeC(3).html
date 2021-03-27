@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Type C</title>
+	<style type="text/css">		
+		* { margin:0; padding:0; }		
+		img {border:0;}		
+		ol,ul,li{list-style:none}
+		.wrap{width:100%}
+		.header{width:100%;background: url(../images/c/bgHeader.jpg) repeat-x;}
+		.header p{width:1024px;}
+		
+		.container{width:100%;height:606px;}
+		.contents{width:1024px;position:relative;}
+		.gnb{position:absolute;left:0;top:0;width:25px;height:606px;}
+		.mainCon{position:absolute;left:85px;top:225px;width:178px;height:344px;}
+
+		.footer{width:100%;background: url(../images/c/bgFooter.jpg) repeat-x;}
+		.footer p{width:1024px;}
+	
+		
+		.mainSlide{width:100%;overflow:hidden;}
+		.slide{width:500%;overflow:hidden;position:relative;}
+		.slide li{float:left}
+		.btnSlide{position:absolute;left:50%;top:10px;margin-left:-20px;overflow:hidden;}
+		.btnSlide li{float:left}
+		.btnSlide li + li{margin-left:5px;}
+		.btnSlide a{display:block;width:6px;height:6px;text-indent:-999em;background: url(../images/c/paging.png) no-repeat -11px 0;}
+		.btnSlide .on a{background-position:0px 0;}
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" ></script>
+	<script type="text/javascript">		
+		$(function(){
+			var i = 0;
+			var $length = $('.slide>li').length;
+
+			$('.btnSlide a').click(function() {		
+				var $this = $(this).parent();
+				var li_idx = $('.btnSlide>li').index($this);
+				$this.addClass('on').siblings().removeClass('on');		
+
+				$('.slide').stop().animate({'left':-(li_idx)*1024});
+				return false;
+			});
+
+			$('.slide>li>a').click(function() {
+				if(i == ($length-1)){
+					i = 0;
+					slideMotion();
+				}else{
+					i++;
+					slideMotion();
+				}			
+				return false;
+			});
+
+			$('.footer a').click(function() {
+				if(i == 0){
+					i = ($length-1);
+					slideMotion();
+				}else{
+					i--;
+					slideMotion();
+				}			
+				return false;
+			});
+
+			function slideMotion(){
+				$('.slide').stop().animate({'left':-(i)*1024});
+				$('.btnSlide>li').eq(i).addClass('on').siblings().removeClass('on');
+			}
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div id="header" class="header">
+			<p><a href="typeC_1.html"><img src="../images/c/header.jpg" alt="헤더" /></a></p>
+		</div>
+		<div id="container" class="container">
+			<div id="contents" class="contents">
+				<div class="mainSlide">
+					<ul class="slide">
+						<li><a href="#"><img src="../images/c/visual4.jpg" alt="비주얼1" /></a></li>
+						<li><a href="#"><img src="../images/c/visual3.jpg" alt="비주얼2" /></a></li>
+						<li><a href="#"><img src="../images/c/visual1.jpg" alt="비주얼3" /></a></li>
+						<li><a href="#"><img src="../images/c/visual2.jpg" alt="비주얼4" /></a></li>
+					</ul>
+					<ul class="btnSlide">
+						<li class="on"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+					</ul>					
+				</div>
+				<p class="gnb"><a href="typeC_1.html"><img src="../images/c/gnb.jpg" alt="메뉴" /></a></p>
+				<p class="mainCon"><img src="../images/c/mainCon.png" alt="메인컨텐츠" /></p>
+			</div>
+		</div>
+		<div id="footer" class="footer">
+			<p><a href="#"><img src="../images/c/footer.jpg" alt="푸터" /></a></p>
+		</div>
+	</div>
+</body>
+</html>

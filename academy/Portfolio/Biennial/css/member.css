@@ -1,0 +1,63 @@
+@charset "utf-8";
+	
+	.join_information{
+		font-size:0.9em;
+		margin-bottom:10px;}
+
+		.join_information img{
+			padding:3px;}
+
+		.join_information span{
+			color:red;
+			font-weight:bold;}
+
+	
+	/* 테이블 */
+	.join_data{
+		border-top:1px solid #969696;}
+
+		.join_data th,.join_data td{
+			border-bottom:1px solid #969696;
+			color:#3f3e3e;}
+
+		.join_data th{
+			padding:6px 10px;
+			background:#ffffcc;
+			font-weight:bold;}
+
+			.join_data th .gap{
+				padding-left:12px;}
+
+			.join_data th img{
+				padding-top:4px;}
+
+		.join_data td{
+			padding:6px 15px;}
+
+			.join_data .inform{
+				/*position:relative;*/}
+
+				.inform p{
+					float:right;
+					margin-top:5px;
+					margin-right:150px;
+					font-size:0.9em;}
+
+				.mailling p{
+					font-size:0.9em;
+					margin-bottom:5px;}
+
+		input.text_box{
+			border:1px solid #969696;
+			height:17px;
+			margin-bottom:1px;
+			padding:0 2px}
+
+
+	/*버튼*/
+	.btn_area{
+		margin-top:20px;
+		text-align:center;}
+
+		.btn_area a,.btn_area input{
+			margin-left:5px;}

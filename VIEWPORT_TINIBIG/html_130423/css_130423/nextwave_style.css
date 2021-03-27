@@ -1,0 +1,66 @@
+﻿@charset "utf-8";
+
+/****** NEXTWAVE ******/
+#container.nextwave_wrap {position:relative; width:81%; min-width:959px; min-height:500px; margin:0 auto; margin-top:-185px; background:#fff; padding:15px 0 20px 19px; border:1px solid #e1e3e3; overflow:hidden;}
+
+
+/* nextwave_tabmenu */
+.nav_wv {height:51px; padding:19px 0 0 0; background:none; overflow:hidden; zoom:1;}
+.nav_wv ul { margin:0;}
+.nav_wv li {float:left; height:25px;}
+.nav_wv li.on a {background:#f00;}
+.nav_wv li.on a:hover {background:#f00; color:#fff;}
+.nav_wv a {display:block; float:left; height:25px; margin-right:10px; padding:7px 15px 0 15px; background:#e8e8e8; color:#fff; text-align:center;letter-spacing:-1px}
+.nav_wv a:hover {color:#000;}
+
+
+/* nextwave_cont */
+#nextwave_cont {min-width:960px; margin:0 auto; overflow:hidden; padding-bottom:150px;}
+.nw_box {float:left; width:300px; height:auto; margin:0 18px 18px 0; background:#f3f3f3; border:1px solid #bababa; position: relative;}
+.nw_bo_img {}
+.nw_bo_cont {height:34px; padding:0 10px; position: relative; background-color: #f3f3f3; z-index:2}
+.nw_bo_cont ul {float:right; margin:0; padding:8px 0 0 0;}
+.nw_bo_cont li {float:left; font-size:12px; padding-left:10px;}
+.nw_bo_cont li.nw_bo_cont_num {font-weight:bold;}
+.nw_bo_cont li.nw_bo_cont_heart {padding-left:27px; background:url(../img/nextwave/ico_heart.png) 10px 2px no-repeat; color:#fe170d; font-weight:bold;}
+
+.nw_load_more {height:35px; margin:20px 18px 0 0 ; background:#f2f2f2; text-align:center;}
+
+.nw_box .nw_sns { position: absolute; top: 0px; width: 100%; height: 100%; display:none;}
+.nw_sns_box { background-color: #e6e6e6; border-bottom: 1px solid #cccccc; position: absolute; bottom: 34px; width: 100%; padding: 11px 0 0px 0; z-index: 999; text-align: left; height: 28px; }
+.nw_sns_box ul { margin: 0 9px 0 0; float: right;}
+.nw_sns_box ul li { float: left; margin: 0 0 0 8px;}
+.nw_sns_back { position: absolute; top: 0; width: 100%; height: 100%; background-color: #1a1c1f; opacity : 0.7; filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=70)"; z-index: 1;}
+
+
+
+/* btn_top nextwave ver. */
+.btn_top.width_100 {position:fixed; bottom:250px; right:20px; display:none;}
+
+
+/** nextwave popup **/
+.nw_pop_wrap {position:absolute; left:50%; top:670px; z-index:10001; display:none;}
+.nw_pop_box_op {cursor:pointer;}
+.nw_pop_box_wrap {position:relative; width:721px;}
+
+/* nw_pop_img */
+.nw_pop_img {position:relative; float:left; width:460px; background:#fff;}
+.nw_pop_img .btn_nw_pop_prev {position:absolute; top:50%; left:0; width:33px; height:50px; background:url(../img/nextwave/btn_nw_pop_img_prev.png) no-repeat; text-indent:-9999px; z-index: 999999; margin-top:-25px;}
+.nw_pop_img .btn_nw_pop_prev:hover {background-position:-33px 0;}
+.nw_pop_img .btn_nw_pop_next {position:absolute; top:50%; right:0; width:33px; height:50px; background:url(../img/nextwave/btn_nw_pop_img_next.png) no-repeat; text-indent:-9999px; z-index: 999999; margin-top:-25px;}
+.nw_pop_img .btn_nw_pop_next:hover {background-position:-33px 0;}
+
+/* nw_pop_cont */
+.nw_pop_cont {float:right; width:260px; background:#fff;}
+.btn_nw_pop_close { width:260px; height:30px; text-indent:-9999px;}
+.nw_box_cl {float:right; display:block; width:40px; height:30px; background:url(../img/nextwave/btn_nw_pop_close.gif) no-repeat;}
+.nw_box_cl:hover { background-position:0 -30px;}
+.nw_pop_cont_area {padding:0 25px 35px 25px;}
+.nw_pop_cont_area dl {margin:0; padding:0;}
+.nw_pop_cont_area dt.nw_pop_cont_tit {margin:0; padding:0; color:000; font-size:12px; font-weight:bold; line-height:20px;}
+.nw_pop_cont_area dd {margin:0; padding:0;}
+.nw_pop_cont_area dd.nw_pop_cont_num {color:#bababa; font-size:12px; font-weight:normal; line-height:20px;}
+.nw_pop_cont_area dd.nw_pop_cont_name {color:#000; font-size:11px; font-weight:normal; line-height:20px;}
+.nw_pop_cont_area dd.nw_pop_cont_name span {padding-right:10px; font-size:12px; font-weight:bold;}
+.nw_pop_cont_area p.nw_pop_cont_com {padding-top:17px; font-size:12px; text-align:justify;}
+

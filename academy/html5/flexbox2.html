@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5</title>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb'>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicBoldWeb'>
+
+		<style>
+			body{ font-family: 'NanumGothicWeb'; }
+
+			#container{
+				width:100%;
+				
+				display:box;
+				display:-moz-box;
+				display:-webkit-box;
+				
+				box-orient:vertical;
+				-moz-box-orient:vertical;
+				-webkit-box-orient:vertical;
+				}
+			
+			#box1{width:200px;
+				height:100px; 
+				background:#ffffcc; 
+				
+				box-ordinal-group:2;
+				-moz-box-ordinal-group:2;
+				-webkit-box-ordinal-group:2;}
+
+			#box2{width:150px; 
+				height:100px; 
+				background:#ffccff;
+				
+				/*box-ordinal-group 숫자가 같을 경우 먼저 적용된게 위로 올라감*/
+				box-ordinal-group:2;
+				-moz-box-ordinal-group:2;
+				-webkit-box-ordinal-group:2;}
+
+			#box3{width:100px; 
+				height:100px; 
+				background:#ccffff;
+				
+				box-ordinal-group:1;
+				-moz-box-ordinal-group:1;
+				-webkit-box-ordinal-group:1;}
+		</style>
+
+
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="box1">box1</div>
+			<div id="box2">box2</div>
+			<div id="box3">box3</div>
+		</div>
+
+	</body>
+</html>

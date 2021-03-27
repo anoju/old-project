@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>  </title>
+
+		<style type="text/css">
+			body{
+				font: 62.5%/1 "나눔고딕","맑은 고딕";}
+
+			form{
+				font-size:1.4em;
+				width:30em;}
+			
+			fieldset{
+				margin:1em 0;
+				padding:1em;
+				border:1px solid #1975d7;}
+
+			legend{
+				font-weight:bold;}
+
+			label{
+				display:block;}
+
+			label .required{
+				font-size:0.75em;
+				color:#f06;}
+
+			input{
+				width:200px;}
+
+			input:focus, textarea:focus{
+				background:#f96;}
+
+			textarea{
+				width:300px;
+				height:300px;}
+		</style>
+	</head>
+
+	<body>
+		<form id="comments_form" action="#" method="post">
+			<fieldset>
+				<legend>개인 연락처 정보</legend>
+				<p>
+					<label for="author">이름: <em class="required">(필수입력항목)</em></label>
+					<input type="text" id="author" />
+				</p>
+
+				<p>
+					<label for="email">이메일주소: <em class="required">(필수입력항목)</em></label>
+					<input type="text" id="email" />
+				</p>
+
+				<p>
+					<label for="url">홈페이지 주소:</label>
+					<input type="text" id="url" />
+				</p>
+			</fieldset>
+
+			<fieldset>
+				<legend>댓글</legend>
+				<p>
+					<label for="text">본문: </label>
+					<textarea cols="20" rows="10"></textarea>
+				</p>
+			</fieldset>
+		</form>
+	</body>
+
+</html>

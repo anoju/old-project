@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>  </title>
+
+		<style type="text/css">			
+			body, div{
+				margin:0;
+				padding:0;}
+
+			html, body{
+				height:100%;}
+
+			body{
+				font-family:"나눔고딕","맑은 고딕";}
+
+			#main_wrapper{
+				width:800px;
+				margin:0 auto;
+				height:100%;
+				background: #009933;}
+
+			#banner{
+				width:800px;
+				height:200px;
+				background: #009933;}
+
+			#left_wrapper{
+				width:800px;
+				height:100%;
+				background: url(../08/image/left.jpg) repeat-y left top;}
+
+			#right_wrapper{
+				width:800px;
+				height:100%;
+				background: url(../08/image/right.jpg) repeat-y right top;}
+
+			#left{
+				float:left;
+				width:200px;
+				}
+
+			#center{
+				width:400px;
+				background: #ffccff;
+				margin-left:200px;
+				height:100%;}
+
+			#right{
+				float:right;
+				width:200px;
+				}
+
+			/*IE6 버그 패치(부유대상 비부유대상 사이에 3px*/
+			/*비부유단에 충돌영역(오른쪽이나 왼쪽) 마진을 0으로 리셋*/
+			* html #center{
+				margin-left:0px;
+				margin-right:0px;}
+			
+			* html #right{
+				margin-right:-3px;
+				}
+			* html #left{
+				margin-left:-3px;}
+
+		</style>
+	</head>
+
+	<body>
+		<div id="main_wrapper">
+			<div id="banner">
+				배너  <!--자동으로 세로로 길어지는 가짜단을 위한 컨테이너-->
+			</div>
+			<div id="left_wrapper">
+				<div id="right_wrapper">
+					<div id="left">
+						왼쪽 내용<br />
+						
+					</div>					
+					<div id="right">
+						오른쪽 내용<br />
+						
+					</div>
+					<div id="center">
+						가운데 내용<br />						
+					</div>
+				</div>
+			</div>			
+		</div>
+	</body>
+
+</html>

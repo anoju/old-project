@@ -1,0 +1,56 @@
+@charset "utf-8";
+@import url(common.css);/*공통*/
+@import url(sub_layout.css);/*서브레이아웃*/
+@import url(sub.css);/*서브공통*/
+
+/*회원가입(공통)*/ 
+#content .dsc_member{padding-top:20px}
+#content h4{padding:25px 0 10px}
+#content .btn_area{margin-top:75px;text-align:center}
+#btn_id,#btn_ads,#btn_cncl,#btn_cncl{margin-left:5px}
+
+/*회원가입(약관동의)*/
+#content form .agree_view{overflow:auto;width:728px;height:178px;padding:10px 15px;border:1px solid #e0e0e0}
+#content form .agree_view h5{padding:20px 0 0;}
+#content form .agree_view h6{padding:15px 0 5px;}
+#content form .agree_view ol{padding-left:25px;list-style-type:decimal}
+#content form .agree_view ol.list_alpha{list-style:lower-alpha}
+#content form .agree_chk{padding-top:16px;text-align:center}
+
+/*실명인증*/
+#content form ul{padding:10px 0}
+#content form ul li{display:inline;padding-right:20px}
+#content form ul li label{margin-left:2px}
+#content form .nmbox{padding:20px;border:3px solid #d7e0e4;background:#f4f6f8}
+#content form .nmbox .txt{padding-top:20px;border-top:1px solid #e5e5e5}
+#content form .nmbox .pn_area{padding:7px 0 20px;}
+#content form .nmbox input{height:20px;padding-left:4px;border:1px solid #cbcbcb;color:#555}
+#content form .nmbox .nm_area input{width:146px;margin-left:100px}
+#content form .nmbox .pn_area input{width:76px;}
+#content form .nmbox .pn_area input#pn_input{margin-left:18px}
+
+/*기본정보,부가정보*/
+#content table{border-top:1px solid #5d5d5d;border-bottom:1px solid #5d5d5d}
+#content th{padding:3px 0 0 25px;border-bottom:1px solid #e0e0e0;background:#f6f7f9 url(../images/member/ico_member_noti2.gif) no-repeat 10px 50%}
+#content td{padding:8px 0 7px 25px;border-bottom:1px solid #e0e0e0}
+#content td.noline,#content th.noline{border:0}
+#content table select{margin-top:2px}
+#content table.addform th{background-image:none}
+#content table .input_txt{width:146px;height:21px;padding-left:4px;vertical-align:top;border:1px solid #cbcbcb}
+#content table .input_txt2{width:76px;height:21px;padding-left:4px;vertical-align:top;border:1px solid #cbcbcb}
+#content table .input_txt3{width:376px;height:21px;padding-left:4px;vertical-align:middle;border:1px solid #cbcbcb}
+#content table span.hr_br{display:block;margin-top:3px}
+#content table .alert_img{padding:0 2px 0 10px;position:relative;top:2px}
+.pavt_chk label,.news_chk label{margin-right:30px;margin-left:4px;position:relative;top:-2px;left:0}
+.pavt_chk .pavt_etc_lb{margin-right:10px;top:0px}
+
+/*회원가입폰트*/
+#content form .agree_view{font-size:11px;color:#555}
+#content form .agree_view h5{font-size:13px;color:#333}
+#content form .agree_view h6{font-size:12px;font-weight:normal}
+#content form .nmbox .txt{color:#777}
+#content form .nmbox .txt strong{color:#555}
+#content form .nmbox .txt em{font-weight:bold;color:#f00}
+#content form .nmbox input{line-height:1.6em}
+#content form table{text-align:left;color:#5d5e5e}
+#content form table input{color:#5d5e5e;line-height:1.6em}

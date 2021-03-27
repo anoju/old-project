@@ -1,0 +1,131 @@
+@charset "utf-8";
+body, h1, h2, h3, h4, div, p, ul, li, img, a{
+	margin:0;
+	padding:0;}
+
+body{
+	font-family:"나눔고딕","맑은 고딕";
+	font-size: 62.5%;
+	}
+
+#main_wrapper{
+	border:1px black solid;
+	margin:30px;}
+
+#header{
+	position:relative;}
+
+#logo{
+	background:url(../09/images/anniv_banner.png) no-repeat right top;
+	position:relative;}
+
+	img.img_one{
+		position:absolute;
+		left:-15px;
+		top:-15px;}
+
+	img.img_two{
+		position:relative;
+		left:70px;}
+
+#header #link ul{
+	position:absolute;
+	right:60px;
+	bottom:5px;}
+	
+	#header #link ul li{
+		float:left;
+		display:block;
+		list-style:none;}
+
+	#header #link ul a{
+		text-decoration:none;
+		color:#666666;
+		padding:0 10px;
+		text-transform:uppercase;}
+
+	#header #link ul a#link_Subscribe{
+		border-right:1px #666666 solid;}
+
+#nav ul{
+	float:left;
+	list-style:none;
+	background:url(../09/images/bg_nav.png) repeat-x;
+	width:100%;}
+
+	#nav ul a{	
+		font-size:1.1em;
+		float:left;
+		background:url(../09/images/bg_nav.png) repeat-x;
+		display:block;
+		padding:.5em 1em;
+		border-right:1px black solid;
+		text-decoration:none;
+		color:white;}
+
+	#nav ul a:hover{
+		background:url(../09/images/bg_nav_h.png) repeat-y left top}
+
+#wrapper{
+	width:100%;}
+
+#left_news{	
+	width:170px;
+	clear:both;
+	float:left;
+	background:#d9ecff;
+	height:100%;
+	margin-top:20px;}
+
+	#left_news h3{
+		font-size:1.4em;
+		background:url(../09/images/bg_side_head.png) repeat-x left bottom;
+		height:25px;
+		line-height:32px;
+		border-top:3px #86b500 solid;
+		padding-left:10px;
+		color:white;}
+
+	#left_news h4{
+		font-size:1.2em;
+		background:#d9ecff;
+		padding:5px 5px 3px 5px;
+		}
+
+	#left_news h4 a{
+		color:#663900;}
+
+	#left_news h4 a:hover{
+		color:red;}
+
+	#left_news p{
+		font-size:1em;
+		background:#d9ecff;
+		color:#666666;
+		line-height:130%;
+		padding:0px 5px 8px 5px;}
+
+
+#content{
+	height:100%;
+	margin-left:170px;
+	margin-top:20px;
+	margin-right:140px;
+	padding:20px;
+	border-left:1px #666 solid;
+	border-right:1px #666 solid;
+	}
+
+#right_banner{
+	width:140px;
+	float:right;	
+	height:100%;}
+	
+	#right_banner img{
+		margin:0px 10px 15px 10px;}
+
+#Copyright{
+	clear:both;
+	border-top:1px black solid;
+	background:#86b500;
+	padding:5px;}

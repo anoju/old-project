@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>구조적 가상 클래스</title>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb'>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicBoldWeb'>
+
+		<style>
+			body{ font-family: 'NanumGothicWeb'; }
+			div div{padding-left:10px;}
+			article{padding-bottom:30px;}
+			ul li{
+				font-size:18px;
+				list-style:none;
+				width:60px;}
+
+
+			#one div:first-child{color:#f00;}
+			#one div:last-child{color:#ff9900;}
+
+			#two div:only-child{color:#ff3399;}
+
+			#two div:empty{
+				width:50px;
+				height:15px;
+				background:#cc99ff;}
+
+			#three ul li:nth-of-type(odd){
+				background:#ccffff;}
+			#three ul li:nth-of-type(even){
+				background:#ccffcc;}
+
+		</style>
+
+
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<article id="one">
+			
+			<div>div1:first-child</div>
+			<div>div2</div>
+			<div>
+				<div>indiv1:first-child</div>
+				<div>indiv2</div>
+				<div>indiv3:last-child</div>
+			</div>
+			<div>div4:last-child</div>
+		</article>
+
+		<article id="two">
+			<div>div1</div>
+			<div>div2</div>
+			<div>
+				<div>indiv1:only-child</div>
+			</div>
+			<div></div>
+		</article>
+
+		<article id="three">
+			<ul>
+				<li>홀수</li>
+				<li>짝수</li>
+				<li>홀수</li>
+				<li>짝수</li>
+				<li>홀수</li>
+				<li>짝수</li>
+				<li>홀수</li>
+				<li>짝수</li>
+				<li>홀수</li>
+				<li>짝수</li>
+			</ul>
+		</article>
+
+	</body>
+</html>

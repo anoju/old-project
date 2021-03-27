@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>쇼핑 목록</title>
+<style type="text/css">
+p {
+  color: yellow;
+  font-family: "arial", sans-serif;
+  font-size: 1.2em;
+}
+body {
+  color: white;
+  background-color: black;
+}
+#purchases {
+  border: 1px solid white;
+  background-color: #333;
+  color: #ccc;
+  padding: 1em;
+}
+#purchases li {
+  font-weight: bold;
+}
+	</style>
+	
+<script type="text/JavaScript">
+function showParagraph () {
+	var paras = document.getElementsByTagName("p");
+	for (var i=0; i< paras.length; i++) {
+	  var title_text = paras[i].getAttribute("title");
+	  if (title_text != null) {
+		alert(title_text);
+	  }
+	}
+}
+</script>
+</head>
+
+  <body>
+    <h1>쇼핑 목록</h1>
+    <p title="중요한 사항임">아래 물건 꼭 사오세요!</p>
+  	<p>안 사오면 굶어야 합니다.</p>
+    <ul id="purchases">
+      <li>땅콩</li>
+      <li>치즈</li>
+      <li>우유</li>
+    </ul>
+
+    <h2>작업 내용</h2>
+    <ul>
+    <li><span onClick="javascript:showParagraph();">각 단락 텍스트 보기</span></li>
+    </ul>
+
+
+  </body>
+</html>

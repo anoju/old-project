@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>포토갤러리</title>
+
+		<!-- 외부 CSS 링크-->
+		<link rel="stylesheet" type="text/css" href="../css/import.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/gallery.css"/>
+        
+		<!-- 외부 javascript 링크-->
+		<script type="text/javascript" src="../js/onload.js"></script>
+		<!-- GNB메뉴 -->
+		<script type="text/javascript" src="../js/slide_GNBmenu.js"></script>
+		<!-- 푸터 배너 스크롤 -->
+		<script type="text/javascript" src="../js/slide_banner.js"></script>
+		<!--  퀵메뉴 -->
+		<script type="text/javascript" src="../js/quickmenu.js"></script>
+        
+        <!-- 익스 플로러 6번전 png파일 오류 -->
+        <!--[if IE 6]>
+		<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<div class="header_wrap">
+			<div id="header">
+				<!-- 로고 -->
+				<h1><a href="../index.html"><img src="../image/common/logo.gif" width="167" height="84" alt="광주비엔날래" /></a></h1>
+                
+				<div id="util">
+					<div id="select_lang">
+						<div id="bt_sec">
+							<img id="left" src="../image/common/select_lang_txt.gif" width="94" height="7" alt="select language" />
+							<img id="right"src="../image/common/select_lang_bt.gif" width="29" height="29" alt="" />
+						</div>
+						<ul id="language">
+							<li><a href="#"><img src="../image/common/lang_eng.gif" width="42" height="7" alt="english" /></a></li>
+						</ul>
+					</div>
+					<!-- select_lang 끝 -->
+
+					<div class="top_menu">
+						<ul>
+							<li class="li_first"><a href="#"><img src="../image/common/util_bt01.gif" width="30" height="7" alt="log in" /></a></li>
+							<li><a href="#"><img src="../image/common/util_bt02.gif" width="40" height="7" alt="sign up" /></a></li>
+							<li><a href="#"><img src="../image/common/util_bt05.gif" width="43" height="7" alt="sitemap" /></a></li>
+						</ul>
+						<a href="#"><img class="facebook" src="../image/common/facebook_bt.gif" width="85" height="21" alt="facebook" /></a>
+						<a href="#"><img class="twitter" src="../image/common/twitter_bt.gif" width="85" height="21" alt="twitter" /></a>
+					</div>
+				</div>
+				<!-- util 끝 -->
+
+				<div id="quickmenu01">
+					<table border="0" cellspacing="0" cellpadding="0" summary="티켓정보,관람안내,모바일웹,오시는길,프레스룸,지역미술관,관람객편의시설,광주투어가이즈,Noon비엔날레정론지">
+						<caption>퀵메뉴</caption>
+						<colgroup>
+							<col width="88px" />
+							<col width="97px" />
+							<col width="80px" />
+						</colgroup>
+						<tr>
+							<td><a href="#"><img src="../image/common/quick_bt01.gif" width="48" height="11" alt="티켓정보" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt05.gif" width="80" height="11" alt="오시는길" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt06.gif" width="80" height="11" alt="관람객 편의시설" /></a></td>
+						</tr>
+						<tr>
+							<td><a href="#"><img src="../image/common/quick_bt04.gif" width="80" height="11" alt="관람안내" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt08.gif" width="80" height="11" alt="프레스룸" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt03.gif" width="80" height="11" alt="광주투어가이드" /></a></td>
+						</tr>
+						<tr>
+							<td><a href="#"><img src="../image/common/quick_bt07.gif" width="80" height="11" alt="모바일웹" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt09.gif" width="80" height="11" alt="지역미술관" /></a></td>
+							<td><a href="#"><img src="../image/common/quick_bt02.gif" width="101" height="11" alt="noon비엔날레정론지" /></a></td>
+						</tr>
+					</table>				
+				</div>
+				<!-- qiuckmenu 끝 -->
+
+				<div id="menu">
+					<div id="bts">
+						<ul>
+							<li><a href="#"><img src="../image/common/menu01.gif" width="55" height="15" alt="알림마당" /></a></li>
+							<li><a href="#"><img src="../image/common/menu02.gif" width="55" height="15" alt="자료마당" /></a></li>
+							<li><a href="#"><img src="../image/common/menu03.gif" width="55" height="15" alt="고객마당" /></a></li>
+						</ul>
+					</div>
+					<!-- bts 끝 -->
+					<div id="search">
+						<form action="#" method="post">
+							<fieldset>
+								<legend>통합검색</legend>
+								<input id="search_area" type="text" title="검색어 입력" /><input id="search_btn" type="image" src="../image/common/search_bt.gif" alt="검색" />
+							</fieldset>
+						</form>
+					</div>
+					<!-- search 끝 -->
+				</div>
+				<!-- menu 끝 -->
+				<div id="gnb">
+					<div class="depth1">
+						<ul>
+							<li id="gnb1"><a href="#">광주비엔날레</a></li>
+							<li id="gnb2"><a href="#">광주디자인비엔날레</a></li>
+							<li id="gnb3"><a href="#">재단소개</a></li>
+						</ul>
+					</div>
+					<!-- 주메뉴 끝 -->
+
+				</div>
+				<!-- gnb 끝 -->
+			</div>
+			<!-- header 끝 -->
+		</div>
+		<!-- header_wrap 끝 -->
+        
+        
+        
+        
+        
+		
+        
+		<div id="contents_wrap">
+        		<div id="contents">
+
+				<div class="depth2">
+					<div id="sub_menu01">
+						<span class="sub_title">9th GB, 2012</span>
+						<ul class="sub_list01">
+							<li><a href="#">소개</a></li>
+							<li><a href="#">행사개요 및 프로그램</a></li>
+							<li><a href="#">전시기획자</a></li>
+							<li><a href="#">전시구성</a></li>
+							<li><a href="#">전시작가</a></li>
+							<li><a href="#">전시작품</a></li>
+							<li><a href="#">관람안내</a></li>
+							<li><a href="#">티켓정보</a></li>
+							<li><a href="#">지난 광주비엔날레</a></li>
+						</ul>
+					</div>
+					<!-- 서브메뉴1 -->	
+					<div id="sub_menu02">
+						<span class="sub_title">4th GDB, 2011</span>
+						<ul class="sub_list01">
+							<li><a href="#">소개</a></li>
+							<li><a href="#">행사개요 및 프로그램</a></li>
+							<li><a href="#">전시기획자</a></li>
+							<li><a href="#">전시구성</a></li>
+							<li><a href="#">전시작가</a></li>
+							<li><a href="#">전시작품</a></li>
+							<li><a href="#">관람안내</a></li>
+							<li><a href="#">티켓정보</a></li>
+							<li><a href="#">지난 광주비엔날레</a></li>
+						</ul>
+					</div>
+					<!-- 서브메뉴2 -->	
+					<div id="sub_menu03">
+						<ul class="sub_list02">
+							<li><a href="#">인사말</a></li>
+							<li><a href="#">연혁</a></li>
+							<li><a href="#">CI소개</a></li>
+							<li><a href="#">조직도</a></li>
+							<li><a href="#">후원/협찬</a></li>
+							<li><a href="#">찾아오시는 길</a></li>
+						</ul>
+					</div>
+					<!-- 서브메뉴3 -->	
+				</div>
+				<!-- 서브메뉴 끝  -->
+
+				<div id="quickmenu02">
+					<p class="quick_title">QUICK<br />MENU</p>
+					<ul>
+						<li><a href="#">로그인</a></li>
+						<li><a href="join.html">회원가입</a></li>
+						<li><a href="borad.html">공지사항</a></li>
+						<li><a href="gallery.html">갤러리</a></li>
+						<li><a href="schedule.html">단체 예약</a></li>
+						<li class="li_end"><a href="ticket.html">티켓정보</a></li>
+					</ul>
+					<p class="top"><a href="#">&Delta;TOP</a></p>
+				</div>
+				<!-- quickmenu02 끝 -->
+
+				<div id="contents_sec">
+					<div id="sub_visual">
+						<img src="../image/gallery/gallery_sub_v.gif" width="1100" height="80" alt="포토갤러리" />
+					</div>
+					<!-- visual 끝 -->
+
+					<div id="sub_left_sec">
+						<ul class="gallery">
+							<li>
+								<div class="gallery_img">
+					<a href="#"><img src="../image/gallery/gwangjubiennale_org_20120830_122126.gif" alt="이미지" /></a>
+				    </div>
+								<p><a href="#">2012광주비엔날레의 첫 반입 작품 공개 현장<span class="reply_count">[9]</span><img src="../image/board/new_icon.gif" width="38" height="17" alt="새 글" /></a><span class="date">2012.08.17</span><span class="count">조회 112</span></p>
+							</li>
+				
+				<li>
+								<div class="gallery_img">
+					<a href="#"><img src="../image/gallery/photo/IMG_3677(3).jpg" alt="이미지" /></a>
+				    </div>
+								<p><a href="#">2012GB 광주신세계 홍보관 개관식<span class="reply_count">[9]</span><img src="../image/board/new_icon.gif" width="38" height="17" alt="새 글" /></a><span class="date">2012.08.17</span><span class="count">조회 112</span></p>	
+							</li>
+				
+				<li class="right">
+								<div class="gallery_img">
+					<a href="#"><img src="../image/gallery/photo/2012광주비엔날레_명예홍보대사_위촉식(2)[1].JPG" alt="이미지" /></a>
+				    </div>
+								<p><a href="#">2012광주비엔날레 명예홍보대사 위촉식<span class="reply_count">[9]</span></a><span class="date">2012.07.10</span><span class="count">조회 112</span></p>
+							</li>
+				
+				<li>
+								<div class="gallery_img">
+					<a href="#"><img src="../image/gallery/photo/2012_tate(1).jpg" alt="이미지" /></a>
+				    </div>
+								<p><a href="#">2012광주비엔날레 라운드테이블 런던 테이트 ..<span class="reply_count">[9]</span></a><span class="date">2012.07.10</span><span class="count">조회 112</span></p>
+							</li>
+				
+				<li>
+								<div class="gallery_img">
+					<a href="#"><img src="../image/gallery/photo/gwangjubiennale_org_20120830_132206.gif" alt="이미지" /></a>
+				    </div>
+								<p><a href="#">2012 광주폴리 시민보고회<span class="reply_count">[9]</span></a><span class="date">2012.07.10</span><span class="count">조회 112</span></p>	
+							</li>
+				
+				<li class="right">
+								<div class="gallery_img">
+					<a href="#"><img src="../image/gallery/photo/두바이.jpg" alt="이미지" /></a>
+				    </div>
+								<p><a href="#">‘2012광주비엔날레’ 두바이 사로잡다 아랍지역..<span class="reply_count">[9]</span></a><span class="date">2012.07.10</span><span class="count">조회 112</span></p>
+							</li>
+				
+				<li>
+								<div class="gallery_img">
+					<a href="#"><img src="../image/gallery/photo/광주비엔날레_지원센터_전경사진04.jpg" alt="이미지" /></a>
+				    </div>
+								<p><a href="#">광주비엔날레 사무동 '제문헌'(提文軒)<span class="reply_count">[9]</span></a><span class="date">2011.12.20</span><span class="count">조회 112</span></p>
+							</li>
+				
+				<li>
+								<div class="gallery_img">
+					<a href="#"><img src="../image/gallery/photo/OJC_29331.jpg" alt="이미지" /></a>
+				    </div>
+								<p><a href="#">2011광주디자인비엔날레 폐막식<span class="reply_count">[9]</span></a><span class="date">2011.10.27</span><span class="count">조회 112</span></p>
+							</li>
+				
+				<li class="right">
+								<div class="gallery_img">
+					<a href="#"><img src="../image/gallery/photo/OJC_2551.jpg" alt="이미지" /></a>
+				    </div>
+								<p><a href="#">전시 마지막 주말 관람 인파<span class="reply_count">[9]</span></a><span class="date">2011.10.23</span><span class="count">조회 112</span></p>
+							</li>
+				
+				<li>
+								<div class="gallery_img">
+					<a href="#"><img src="../image/gallery/photo/OJC_0233.jpg" alt="이미지" /></a>
+				    </div>
+								<p><a href="#">주말공연<span class="reply_count">[9]</span></a><span class="date">2011.10.18</span><span class="count">조회 112</span></p>								
+							</li>
+				
+				<li>
+								<div class="gallery_img">
+					<a href="#"><img src="../image/gallery/photo/OJC_6264.jpg" alt="이미지" /></a>
+				    </div>
+								<p><a href="#">프리플리마켓<span class="reply_count">[9]</span></a><span class="date">2011.09.13</span><span class="count">조회 112</span></p>
+							</li>
+				
+				<li class="right">
+								<div class="gallery_img">
+					<a href="#"><img src="../image/gallery/photo/OJC_6914.jpg" alt="이미지" /></a>
+				    </div>
+								<p><a href="#">클래식공연<span class="reply_count">[9]</span></a><span class="date">2011.09.13</span><span class="count">조회 112</span></p>
+							</li>                        
+						</ul>
+
+						<div class="paging">
+							<span class="num">
+								<strong>1</strong>
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<a href="#">4</a>
+								<a href="#">5</a>
+								<a href="#">6</a>
+								<a href="#">7</a>
+								<a href="#">8</a>
+								<a href="#">9</a>
+								<a href="#">10</a>
+							</span>
+							<div class="btn_page">
+								<a href="#"><img src="../image/board/paging_pre.gif" width="50" height="30" alt="이전" /></a><a href="#"><img src="../image/board/paging_next.gif" width="49" height="30" alt="다음" /></a>
+							</div>
+						</div>
+
+						<div class="bbs_search">
+							<form action="#" method="post">
+								<fieldset>
+									<legend> 게시판 검색어 입력 폼</legend>
+									<select name="seach_option" title="검색옵션">
+										<option selected="selected" value='제목+내용'>제목+내용</option>
+										<option value='제목'>제목</option>
+										<option value='내용'>내용</option>									
+										<option value='작성자'>작성자</option>
+									</select><input class="text_box" type="text" style="width:225px;" title="검색어 입력" /><input class="go_btn" type="image" src="../image/common/search_bt.gif" alt="검색" />
+								</fieldset>
+							</form>
+						</div>
+						
+						<div class="btn_area">
+							<a href="#"><img src="../image/board/write_bt.gif" width="198" height="35" alt="글쓰기" /></a>
+						</div>
+					</div>
+					<!-- sub_left_sec 끝 -->
+
+					<div id="sub_right_sec">
+						<h3><img src="../image/gallery/lnb_tit05.gif" width="103" height="28" alt="자료마당" /></h3>
+						<ul class="rightmenu">
+							<li class="rm_01"><a href="#">홍보자료</a></li>
+							<li class="rm_02"><a href="#">포토갤러리</a></li>
+							<li class="rm_03"><a href="#">동영상갤러리</a></li>
+							<li class="rm_04"><a href="#">전시음성해설</a></li>
+						</ul>
+					</div>
+					<!-- sub_right_sec 끝 -->
+				</div>
+				<!-- contents_sec 끝 -->
+			</div>
+			<!-- contents 끝 -->
+		</div>
+		<!-- contents_wrap 끝 -->
+
+
+
+
+		<div class="banner_wrap">
+			<div class="banner">
+				<div id="banner01">
+					<ul>
+						<li><a href="#"><img src="../image/banner/submain_sponsor01.gif" width="130" height="50" alt="광주신세계" /></a></li>
+						<li><a href="#"><img src="../image/banner/submain_sponsor02.gif" width="130" height="50" alt="신한카드" /></a></li>
+					</ul>
+				</div>
+				 <div id="banner02">
+					<ul id="slide_banner">
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor03.gif" width="130" height="50" alt="국민카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor04.gif" width="130" height="50" alt="비씨카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor05.gif" width="130" height="50" alt="광주은행" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor06.gif" width="130" height="50" alt="현대카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor07.gif" width="130" height="50" alt="해피포인트" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor08.gif" width="130" height="50" alt="금호화순리조트" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor03.gif" width="130" height="50" alt="국민카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor04.gif" width="130" height="50" alt="비씨카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor05.gif" width="130" height="50" alt="광주은행" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor06.gif" width="130" height="50" alt="현대카드" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor07.gif" width="130" height="50" alt="해피포인트" /></a></li>
+						<li><a href="http://www.naver.com"><img src="../image/banner/submain_sponsor08.gif" width="130" height="50" alt="금호화순리조트" /></a></li>
+					</ul>
+				</div>			
+			</div>			
+		</div>
+		<!-- banner_wrap 끝 -->
+
+		<div class="footer">
+			<div class="footer_menu">
+				<ul>
+					<li><a href="#"><img src="../image/common/footer_bt01.gif" width="104" height="14" alt="개인정보 보호정책" /></a></li>
+					<li><a href="#"><img src="../image/common/footer_bt02.gif" width="50" height="14" alt="이용약관" /></a></li>
+					<li><a href="#"><img src="../image/common/footer_bt03.gif" width="121" height="14" alt="이메일 무단수집 거부" /></a></li>
+				</ul>
+			</div>
+			 <p class="address"><img src="../image/common/footer_txt.gif" width="638" height="26" alt="재단법인 광주 비엔날레, 광주광역시 북구 비엔날레로111, 전화 062-608-4114, 이메일 beinnale@gb.or.kr, copyright" /></p>
+		</div>
+		<!-- footer 끝 -->
+	</body>
+
+</html>

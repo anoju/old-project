@@ -1,0 +1,28 @@
+@charset "utf-8";
+@import url(common.css);/*공통*/
+@import url(sub_layout.css);/*서브레이아웃*/
+@import url(sub.css);/*서브공통*/
+
+/*최근대회*/
+.tour_now{border:1px solid #ccc;border-top:3px solid #555;background:url(../images/view/bg_toursch_1.gif) repeat-x}
+.tour_now p{padding-top:12px;text-align:center}
+.tour_now p span{position:relative;top:-3px;left:4px}
+.tour_now dl{position:relative;height:90px;padding:30px 0 0 225px;background:url(../images/view/dv_toursch_2.gif) no-repeat 200px 55%}
+.tour_now dt{padding-bottom:15px}
+.tour_now dd.img{position:absolute;left:50px;top:38px}
+.tour_now dd.txt{position:relative;float:left;width:200px}
+.tour_now dd.txt span{position:absolute;left:110px;top:-1px}
+.tour_now dd.hr_pd span{left:60px}
+.tour_now dd.hr_pd{margin-right:30px}
+
+/*타이틀*/
+.tour_top{height:20px;padding:35px 0 5px}
+.tour_top h4{float:left}
+.tour_top select{float:right}
+
+/*일정표*/
+.tour_list{background:url(../images/view/bg_toursch_2.gif) repeat-x}
+.tour_list tr{height:31px}
+.tour_list th{background:url(../images/view/dv_toursch.gif) no-repeat 100% 50%}
+.tour_list th.nobg{background:none}
+.tour_list td{padding-left:10px;border-bottom:1px solid #ededed;background:none}

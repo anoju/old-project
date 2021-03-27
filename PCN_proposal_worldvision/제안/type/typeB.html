@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Type B</title>
+	<style type="text/css">		
+		* { margin:0; padding:0; }		
+		img {border:0;}		
+		ol,ul,li{list-style:none}
+		.wrap{width:100%}
+		.header{position:fixed;left:0;top:0;width:100%;background: url(../images/b/bgHeader.jpg) repeat-x;z-index:5}
+		.header p{width:828px; margin:0 auto}
+		.myInfo{display:none;background: url(../images/b/bgHeader.gif) repeat-x left bottom;}
+		
+		.container{position:relative;padding-top:92px;padding-bottom:74px;background:#fafafa;}
+		.contents{width:828px; margin:0 auto;position:relative;}
+		.contents .hover{display:block;width:320px; height:413px;position:absolute;top:0;left:-44px;background: url(../images/b/mainCon.jpg) no-repeat 44px 0;}
+		.contents .hover:hover{background: url(../images/b/mainCon_a.jpg) no-repeat 0px 0;}
+		.footer{position:fixed;left:0;bottom:0;width:100%;background:#454545}
+		.footer p{width:828px; margin:0 auto}	
+
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" ></script>
+	<script type="text/javascript">
+		
+		$(function(){
+			$('.myAccount a').click(function(){
+				if($('.myInfo').css('display') == 'block'){
+					$('.myInfo').slideUp();
+				}else{				
+					$('.myInfo').slideDown();
+				}
+				return false;
+			});
+
+			$('.myInfo a').click(function(){
+				$(this).parent().parent().slideUp();
+				return false;
+			});			
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div id="header" class="header">
+			<p><a href="typeB_1.html"><img src="../images/b/header1.jpg" alt="헤더1" /></a></p>
+			<p class="myAccount"><a href="#"><img src="../images/b/header2.jpg" alt="헤더2" /></a></p>
+			<div class="myInfo"><p><a href="#"><img src="../images/b/header3.jpg" alt="헤더3" /></a></p></div>
+		</div>
+		<div id="container" class="main container">
+			<div id="contents" class="contents">
+				<p><img src="../images/b/mainCon.jpg" alt="메인컨텐츠" /></p>
+				<a class="hover" href="typeB_1.html"></a>
+			</div>
+		</div>
+		<div id="footer" class="footer">
+			<p><img src="../images/b/footer.gif" alt="푸터" /></p>
+		</div>
+	</div>
+</body>
+</html>

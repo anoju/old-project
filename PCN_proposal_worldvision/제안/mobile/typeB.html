@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Type B</title>
+	<style type="text/css">		
+		* { margin:0; padding:0; }		
+		img {border:0;}		
+		ol,ul,li{list-style:none}
+		body{background:url(../images/bgMobile2.gif) repeat-x;}
+		.wrap{width:358px;height:714px;margin:0 auto;padding-top:186px;padding-left: 42px;position:relative;background:url(../images/bgMobile.jpg) no-repeat;}
+		.mobileWrap{width:320px;height:548px;background:url(../images/bgMobile3.jpg) no-repeat;position:relative;overflow:hidden;}
+		.container{width:835px;margin-left:-256px;overflow:hidden;}
+		.container>div{float:left;}
+		/*.left{position:relative;display:inline-block;left:-257px;}*/
+		/*.right{position:relative;display:inline-block;right:-257px;}*/
+		.contents{position:relative;overflow: auto;width:338px;height: 548px;}
+		.header{width:320px;height:50px;background:url(../images/b/m/bgHeader.jpg) no-repeat;}
+		.btnLeft{position:absolute;top:9px;left:10px}
+		.btnRight{position:absolute;top:9px;right:11px}
+		
+		.write{display:none}
+		.footer{}
+
+		.alertBg{display:none;position:absolute;top:0;width:100%;height:100%;background:#000;opacity:0.6;filter:alpha(opacity=60);-ms-filter:alpha(opacity=60)}
+		.alert{display:none;position:absolute;top:20%;left: 14px;}
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" ></script>
+	<script type="text/javascript">		
+		$(function(){
+			$('.btnLeft').click(function(){
+				var aa = parseInt($('.container').css('margin-left'));
+				
+				if(aa == 0){
+					$('.container').stop().animate({'margin-left':-256},'fast');
+				}else{
+					$('.container').stop().animate({'margin-left':0},'fast');
+				}
+				return false;
+			});
+
+			$('.btnRight').click(function(){
+				
+				if($('.write').css('display') == 'block'){
+					$('.write').slideUp();
+				}else{
+					$('.write').slideDown();
+				}
+				
+				return false;
+			});
+
+			$('.left a').click(function(){			
+				$('.container').stop().animate({'margin-left':-256},'fast');				
+				return false;
+			});
+
+			$('.write').click(function(){			
+				$(this).slideUp();
+				return false;
+			});
+
+			$('.footer a').click(function(){			
+				$('.alertBg').show();
+				$('.alert').show();
+				return false;
+			});
+
+			$('.pop a').click(function(){			
+				$('.alertBg').show();
+				$('.alert').show();
+				return false;
+			});
+
+			$('.alert a').click(function(){			
+				$('.alertBg').hide();
+				$('.alert').hide();
+				return false;
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="mobileWrap">
+			<div class="container">
+				<div class="left"><a href="#"><img src="../images/b/m/left.jpg" alt="왼쪽메뉴" /></a></div>				
+				<div id="contents" class="contents">
+					<div class="header">
+						<a href="#" class="btnLeft"><img src="../images/b/m/btnLeft.jpg" alt="왼쪽버튼" /></a>
+						<a href="#" class="btnRight"><img src="../images/b/m/btnRight.jpg" alt="오른쪽버튼" /></a>
+					</div>
+					<p class="write"><img src="../images/b/m/write.jpg" alt="글쓰기" /></p>
+					<p class="pop"><a href="#"><img src="../images/b/m/mainCon.jpg" alt="메인1" /></a></p>
+					<div class="footer">
+						<a href="#"><img src="../images/b/m/footer.jpg" alt="푸터" /></a>
+					</div>
+				</div>				
+			</div>			
+			<div class="alertBg"></div>
+			<div class="alert"><a href="#"><img src="../images/b/m/alert.png" alt="알림" /></a></div>
+		</div>
+	</div>
+</body>
+</html>

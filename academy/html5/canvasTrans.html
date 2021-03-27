@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+			canvas{
+				border:#999 solid 2px;
+			}
+			
+		</style>
+
+		<script>
+			window.onload = function(){
+				var canvas = document.getElementById("canvas")
+				var myContext = canvas.getContext("2d")
+				
+		//////////////////////////////////////////////////////////////////////////////////
+		
+			//위치 관련
+			//////1열/////
+				for(var i=0 ; i<4 ; i++){
+					//원점저장
+					myContext.save()
+					myContext.fillStyle = "rgb(200,0,0)"
+					myContext.globalAlpha = 0.9 - 0.2 * i
+					
+					//사각형채우기 전에 도화지를 옮기는 과정
+					myContext.translate(60 * i,0)
+					myContext.fillRect(0, 0, 50, 50)
+					//원점정보로 되돌아감(위치기준 재선정)
+					myContext.restore()					
+				}
+				
+				
+			//////2열/////
+				for(var j=0 ; j<4 ; j++){
+					//원점저장
+					myContext.save()
+					myContext.fillStyle = "rgb(80,0,0)"
+					myContext.globalAlpha = 0.9 - 0.2 * j
+					
+					//사각형채우기 전에 도화지를 옮기는 과정
+					myContext.translate(60 * j,60)
+					myContext.fillRect(0, 0, 50, 50)
+					//원점정보로 되돌아감(위치기준 재선정)
+					myContext.restore()					
+				}
+				
+			//////3열/////
+				for(var k=0 ; k<4 ; k++){
+					//원점저장
+					myContext.save()
+					myContext.fillStyle = "rgb(20,15,100)"
+					myContext.globalAlpha = 0.9 - 0.2 * k
+					
+					//사각형채우기 전에 도화지를 옮기는 과정
+					myContext.translate(60 * k,120)
+					myContext.fillRect(0, 0, 50, 50)
+					//원점정보로 되돌아감(위치기준 재선정)
+					myContext.restore()					
+				}
+				
+		//////////////////////////////////////////////////////////////////////////////////
+			
+			//회전 관련		
+				var canvas2 = document.getElementById("canvas2")
+				var myContext2 = canvas2.getContext("2d")
+				
+				myContext2.translate(200,200)
+				myContext2.save()
+				myContext2.fillStyle = "purple"
+				for(var h=0 ; h<10 ; h++ ){
+					myContext2.globalAlpha = 1 - (0.1 * h)
+					myContext2.rotate(Math.PI*2/10)
+					myContext2.fillRect(10, 10, 150, 50)
+				}
+				
+		//////////////////////////////////////////////////////////////////////////////////
+				
+			//크기 관련		
+				var canvas3 = document.getElementById("canvas3")
+				var myContext3 = canvas3.getContext("2d")
+				
+				myContext3.fillStyle="orange"
+				myContext3.save()
+				myContext3.fillRect(0,0,50,50)
+				
+				myContext3.translate(0,60)
+				myContext3.scale(1.0 , 0.5)
+				myContext3.fillRect(0,0,50,50)
+				myContext3.restore()
+				
+				myContext3.translate(0,100)
+				myContext3.scale(2.0 , 2.0)
+				myContext3.fillRect(0,0,50,50)
+				
+		//////////////////////////////////////////////////////////////////////////////////
+				
+			
+				
+			}
+		</script>
+	</head>
+
+	<body>
+		<canvas id="canvas" width="500" height="500">이브라우져는 켄바스를 지원하지 않습니다.</canvas>
+		<canvas id="canvas2" width="500" height="500">이브라우져는 켄바스를 지원하지 않습니다.</canvas>
+		<canvas id="canvas3" width="500" height="500">이브라우져는 켄바스를 지원하지 않습니다.</canvas>
+		
+	</body>
+</html>

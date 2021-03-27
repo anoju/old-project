@@ -1,0 +1,83 @@
+@charset "euc-kr";
+
+/* reset */
+*{margin:0;padding:0}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,th,td,p { margin:0; padding:0; font-size:100%; }
+body { font-size:75%; font-family:"µ¸¿ò", Dotum, "±¼¸²", Gulim, arial; line-height:150%; color:#666; }
+table { border-collapse:collapse; border-spacing:0; }
+fieldset, img { border:0; }
+a {}
+a:link, a:visited, a:hover, a,active, a:focus { text-decoration:none; color:inherit; cursor:pointer; }
+label {}
+legend, caption { position:absoulte; top:0; left:0; width:1px; height:1px; visibility:hidden; font-size:0; line-height:0; }
+address,cite,code,dfn,em { font-style:normal; }
+ol,ul { list-style:none; }
+hr { display: none; }
+textarea, input, select { font-family:dotum,µ¸¿ò; font-size:12px !important;}
+input[type=text], input[type=file], input[type=password], textarea { padding:2px 3px 2px 3px; border:1px solid #cbd1d6; background:#fff;}
+input.radio, input.check {border:0 !important; padding:0;}
+img, input, button, select { vertical-align:middle; }
+
+
+body { width:100%;}
+
+#wrap {width:100%;}
+
+#header{/*position:fixed;*/width:100%;background:url(../img/bg_header.gif) repeat-x;z-index: 1;}
+#header>div{position:relative;height:121px;width:1110px;margin:0 auto}
+
+#footer{width:100%;background:url(../img/bg_footer.gif) repeat-x;}
+#footer>div{height:75px;width:1110px;margin:0 auto}
+
+#contents{/*padding-top:121px;*/}
+#contents>ul{position:fixed;left:30px;top:50%;margin-top:-39px;z-index: 1;}
+#contents>ul>li{}
+#contents>ul>li+li{margin-top:6px;}
+#contents>ul>li>a{display:block;width:87px;height:15px;text-indent:-999em;}
+#contents>ul>li>a:hover{background-position:0 0;}
+.mainNavi1{background:url(../img/mainNavi1.png) no-repeat -109px 0}
+.mainNavi2{background:url(../img/mainNavi2.png) no-repeat -109px 0}
+.mainNavi3{background:url(../img/mainNavi3.png) no-repeat -109px 0}
+.mainNavi4{background:url(../img/mainNavi4.png) no-repeat -109px 0}
+
+#contents>div{position:relative;overflow:hidden;}
+
+#contents1{height:794px;background:#f4f3f4}
+#contents1>div{display:inline-block;position:absolute;/*left:50%;top:50%*/}
+	.con1box1{margin-left:-506px;margin-top:-298px;left:50%;top:0%}
+	.con1box2{margin-left:-295px;margin-top:-362px;left:50%;top:0%}
+	.con1box3{margin-left:-506px;margin-top:-41px;left:0%;top:50%}
+	.con1box4{margin-left:-75px;margin-top:-362px;left:50%;top:0%}
+	.con1box5{margin-left:-75px;margin-top:-175px;left:50%;top:-25%}
+	.con1box6{margin-left:-75px;margin-top:124px;left:50%;top:60%;opacity:0;filter: alpha(opacity=0)}
+	.con1box7{margin-left:304px;margin-top:-232px;left:100%;top:50%}
+	.con1box8{margin-left:304px;margin-top:-2px;left:100%;top:50%}
+	.con1box9{margin-left:304px;margin-top:183px;left:100%;top:50%}
+
+#contents2{height:740px;background:#fff}
+#contents2>div{display:inline-block;position:absolute;}
+	.con2box1{margin-left:-249px;margin-top:-275px;left:50%;top:60%;opacity:0;filter: alpha(opacity=0)}
+	.con2box2{margin-left:-460px;margin-top:-185px;left:0%;top:50%}
+	.con2box3{margin-left:-110px;margin-top:-93px;left:50%;top:130%}
+	.con2box4{margin-left:175px;margin-top:-93px;left:100%;top:50%}
+
+#contents3{height:740px;background:url(../img/bg_con3.jpg) no-repeat 50% 0;background-size:100%}
+#contents3>div{display:inline-block;position:absolute;}
+	.con3box1{margin-left:-249px;margin-top:-275px;left:50%;top:60%;opacity:0;filter: alpha(opacity=0)}
+	.con3box2{margin-left:-406px;margin-top:-269px;left:30%;top:50%;z-index:1;opacity:0;filter: alpha(opacity=0)}
+	.con3box3{margin-left:15px;margin-top:-121px;left:70%;top:50%;opacity:0;filter: alpha(opacity=0)}
+	.con3bg{margin-left:-100px;margin-top:-67px;left:50%;top:60%;}
+	.time{margin-left:376px;margin-top:-247px;left:50%;top:60%;}
+
+#contents4{height:740px;background:url(../img/bg_con4.jpg) no-repeat 50% 0}
+/*
+div[class^=box]{background:#666;border:1px solid #000;position:absolute;}
+div.box1{width:200px;height:100px;margin-left: -205px;margin-top: -105px;left:0%;top:0%;}
+div.box2{width:100px;height:200px;margin-top: -205px;left:100%;top:0%;}
+div.box3{width:100px;height:200px;margin-left: -105px;left:0%;top:100%;}
+div.box4{width:200px;height:100px;left:100%;top:100%;}
+*/
+
+.gnb{overflow:hidden;position:absolute;top: 0;left: 497px;}
+.gnb>li{float:left;}
+.gnb>li>a{display:block;width:80px;height:40px;text-indent:-999em;background:url(../img/space.gif) repeat}

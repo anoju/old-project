@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>구조적 클래스와 가상클래스 유사클래스 가상요소</title>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb'>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicBoldWeb'>
+
+		<style>
+			body{ 
+			background:url(informationTechnology/images/alpha.gif) repeat-x center bottom;
+			font-family: 'NanumGothicWeb'; }
+
+			/*enabled*/
+			input[type="text"]:enabled{
+				background:#ffff00}
+			input[type="text"]:disabled{
+				background:#dddddd}
+
+			/*target*/
+			:target:before{content:url(informationTechnology/images/alpha.gif)}
+
+			/*브라우저 내에 select 표현*/
+
+			/*w3c 표준 셀렉터*/
+			::selection{color:red}
+			/*다른브라우저 인식접두사*/
+				/*파이어폭스*/
+				::-moz-selection{color:red}
+				/*익스플로러*/
+				::-ms-selection{color:red}
+				/*오페라*/
+				::-o-selection{color:red}
+				/*크롬+사파리*/
+				::-webkit-selection{color:red}
+				/*크롬 전용*/
+				::-shrome-selection{color:red}
+				/*컨쿼러?*/
+				::-khtml-selection{color:red}
+
+			/*현재 문서내의 마크업중 최상위 요소*/
+			:root{height:100%}
+
+			/*구조적 가상 클래스(클정 부모요소안에 포함된 자식요소를 선택)*/
+			/* 특정부모요소 특정자식요소:nth-child(숫자)*/
+			ul li:nth-child(2){color:red;}
+			ul li:nth-child(4){color:blue;}
+
+			ul li:nth-last-child(1){color:orange;}
+
+
+			div:nth-of-type(3){color:red;}
+
+		</style>
+
+
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<article>
+			<form action="#" method="post">
+				성:<input type="text" placeholder="홍" />
+				<br />
+				이름:<input type="text" placeholder="길동" />
+				<br />
+				도시:<input type="text" disabled value="서울" />
+				<br />
+			</form>
+		</article>
+
+		<article>
+			<h1></h1>
+			<p><a href="#targetName1">1.이예제는 가상으로 타겟을 css속성을 참가하는 예제입니다.</a></p>
+			<p><a href="#targetName2">2.이예제는 가상으로 타겟을 css속성을 참가하는 예제입니다.</a></p>
+
+			<p>:target을 이용해서 처리합니다.</p>
+
+			<p>
+				<a href="" name="targetName1"></a><b>타겟을 이용해서 새로 생성되는 그림1</b>
+			</p>
+			<p>
+				<a href="" name="targetName2"></a><b>타겟을 이용해서 새로 생성되는 그림2</b>
+			</p>
+
+			<p>익스플로러 지원불가</p>
+		</article>
+
+		<article>
+			<h1>리스트</h1>
+			<ul>
+				<li>목록1</li>
+				<li>목록2</li>
+				<li>목록3</li>
+				<li>목록4</li>
+				<li>목록5</li>
+			</ul>
+		</article>
+
+		<article>
+			<div>div1</div>
+			<div>div2</div>
+			<h1>제목</h1>
+			<p>p</p>
+			<div>div3</div>
+		</article>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+@charset "utf-8";
+@import url(common.css);/*공통*/
+@import url(sub_layout.css);/*서브레이아웃*/
+@import url(sub.css);/*서브공통*/
+
+/*뉴스상단*/
+.nw_top{height:22px;padding:12px;border:1px solid #ccc;border-top:3px solid #555}
+.nw_top span{float:left;margin-top:3px}
+.nw_top .nw_srch{float:right;width:255px}
+.nw_srch a{display:inline-block;width:37px;height:22px;background:url(../images/view/btn_sort.gif) no-repeat}
+.nw_srch a.btn_nw1:hover{background-position:0 -22px}
+.nw_srch a.btn_nw2{background-position:-37px 0}
+.nw_srch a.btn_nw2:hover{background-position:-37px -22px}
+.nw_srch #nw_input_txt{margin-left:5px;vertical-align:top;width:126px;height:20px;border:1px solid #bbb}
+
+/*뉴스리스트*/
+.nw_list dl{position:relative;width:560px;padding:20px 0 30px 200px;border-bottom:1px solid #ddd}
+.nw_list dt{margin-bottom:10px}
+.nw_list dd.nw_img{position:absolute;right:580px;top:20px}
+.nw_list dd.nw_date{margin-top:5px}
+
+/*paginate*/
+.paginate{width:400px;height:23px;margin:20px auto 0}
+.paginate a{float:left;width:23px;height:19px;padding-top:2px;margin-right:5px;border:1px solid #ccc;font-weight:bold;color:#999;text-align:center}
+.paginate a.pgskip{height:21px;padding:0}
