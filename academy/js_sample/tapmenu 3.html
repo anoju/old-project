@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+#apDiv1,#apDiv2, #apDiv3{
+	position: absolute;
+	left: 30px;
+	top: 75px;
+	width: 250px;
+	height: 250px;
+	
+}
+#apDiv1{background-color: #666;}
+#apDiv2{background-color: #0F0;}
+#apDiv3{background-color: #03F;}
+
+</style>
+<script type="text/javascript">
+//<![CDATA[
+
+	window.onload= function(){
+		for(var i=1 ; i<4 ; i++){
+			var tab = document.getElementById("tap0" + i)
+			tab.onmousedown = function(){
+				//마우스 누를때 자기자신의 아이디를 그림자 그림으로 바꿈
+				this.src = "sample5/idTab/images/topmenu0" + this.id.charAt(4) + "_ov.gif"
+				document.getElementById("apDiv" + this.id.charAt(4)).style.display ="block"
+				
+				//나머지는 전부다 원상태로...
+				//내가 클릭한 부분만 빼고 나머지를 원상태로
+				for(var k=1 ; k<4 ; k++){
+					if(document.getElementById("tap0" + k) != this){
+						document.getElementById("tap0" + k).src ="sample5/idTab/images/topmenu0" + k + ".gif"
+						document.getElementById("apDiv" + k).style.display = "none"
+						}
+					
+					}
+				}
+			
+			}
+		
+		
+		}
+
+//]]>
+</script>
+
+</head>
+
+<body>
+<div><img id="tap01" src="sample5/idTab/images/topmenu01_ov.gif" width="124" height="43" alt="메뉴1" />
+<img id="tap02" src="sample5/idTab/images/topmenu02.gif" width="108" height="43" alt="메뉴2" />
+<img id="tap03" src="sample5/idTab/images/topmenu03.gif" width="90" height="43" alt="메뉴3" />
+</div>
+<div id="apDiv1"></div>
+<div id="apDiv2"></div>
+<div id="apDiv3"></div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi" />
+<title>수직 네비</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+jQuery(function($){
+	// Vertical Navigation
+	var vNav = $('div.vNav');
+	var vNav_i = vNav.find('>ul>li');
+	var vNav_ii = vNav.find('>ul>li>ul>li');
+	vNav_i.find('>ul').hide();
+	vNav.find('>ul>li>ul>li[class=active]').parents('li').attr('class','active');
+	vNav.find('>ul>li[class=active]').find('>ul').show();
+	function vNavToggle(event){
+		var t = $(this);
+		if (t.next('ul').is(':hidden')) {
+			vNav_i.find('>ul').slideUp(100);
+			t.next('ul').slideDown(100);
+		} else if (t.next('ul').is(':visible')){
+			t.next('ul').show();
+		} else if (!t.next('ul').langth) {
+			vNav_i.find('>ul').slideUp(100);
+		}
+		vNav_i.removeClass('active');
+		t.parent('li').addClass('active');
+		return false;
+	}
+	vNav_i.find('>a[href=#]').click(vNavToggle).focus(vNavToggle);
+	function vNavActive(){
+		vNav_ii.removeClass('active');
+		$(this).parent(vNav_ii).addClass('active');
+		return false;
+	}; 
+	vNav_ii.find('>a[href=#]').click(vNavActive).focus(vNavActive);
+	vNav.find('>ul>li>ul').prev('a').append('<span class="i"></span>');
+});
+</script>
+
+<style>
+.vNav{ position:relative; font-size:12px; font-family:Tahoma, Geneva, sans-serif; line-height:normal;}
+.vNav ul{ margin:0; padding:0; list-style:none;}
+.vNav li{ position:relative; margin:0 0 -1px 0; vertical-align:top; *zoom:1;}
+.vNav li a{ display:block; position:relative; padding:8px 10px; text-decoration:none; color:#666; font-weight:bold; background:#fafafa; border:1px solid #eee; *zoom:1;}
+.vNav li a .i{ position:absolute; top:50%; left:100%; margin:-4px 0 0 -16px; width:8px; height:8px; color:#ccc; background:url(iconSub.gif) no-repeat left top;}
+.vNav li ul{ padding:5px 0; background:#fff;}
+.vNav li li{ margin:0;}
+.vNav li li a{ font-weight:normal; background:#fff; padding:5px 10px; border:0;}
+.vNav li li a span{ color:#666;}
+.vNav li.active{ border:1px solid #ccc; z-index:2;}
+.vNav li li.active{ border:0;}
+.vNav li.active a{ color:#000; border:0;}
+.vNav li.active .i{ background-position:0 -44px;}
+.vNav li.active li a{ border:0;}
+.vNav li.active ul{ display:block; border-top:1px solid #eee;}
+.vNav li.active li.active a span{ color:#13b200; font-weight:bold; letter-spacing:-1px;}
+</style>
+
+</head>
+
+<body>
+
+<div class="vNav">
+	<ul>
+		<li><a href="#"><span>동해물과</span><span class="i"></span></a>
+			<ul>
+				<li><a href="#"><span>동해물과</span></a></li>
+				<li><a href="#"><span>동해</span></a></li>
+			</ul>
+		</li>
+		<li><a href="#"><span>백두산이</span><span class="i"></span></a>
+			<ul>
+				<li><a href="#"><span>백두산이 마르고 닳도록</span></a></li>
+				<li><a href="#"><span>백두산</span></a></li>
+			</ul>
+		</li>
+		<li><a href="#"><span>마르고</span></a></li>
+		<li><a href="#"><span>닳도록</span><span class="i"></span></a>
+			<ul>
+				<li><a href="#"><span>닳도록</span></a></li>
+				<li><a href="#"><span>닳도</span></a></li>
+				<li><a href="#"><span>닳</span></a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+</body>
+</html>

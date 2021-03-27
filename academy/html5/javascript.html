@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5</title>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb'>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicBoldWeb'>
+
+		<style>
+			body{ font-family: 'NanumGothicWeb'; }
+		</style>
+
+
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<script>
+			function popWindow(){
+				alert("새로운 함수로 대상지정")
+			}
+			
+			function myPoP(){
+				alert("경고창")}
+
+			function myOK(){
+				alert("OK")}
+
+
+			//대상에 onclick 이벤트 달아주기
+			function addClick(){
+				//아이디 main 첫번째 p에 클릭 부여
+				document.querySelector("#main p:first-child").onclick = popWindow
+
+				//아이디 main2 모든 p를 갖고와 첫번째 p에 클릭 부여
+				var pArray = document.querySelectorAll("#main2 p")
+				pArray[0].onclick = myPoP
+
+				document.querySelector(".main3 li:nth-child(3)").onclick = myOK
+				//var okArray = document.querySelectorAll(".main3 li")
+				//okArray[2].onclick = myOK
+			}
+			window.onload = addClick
+
+		</script>
+
+	</head>
+
+	<body>
+		<div id="main">
+			<p>이부분을 클릭하세요</p>
+			<p>이것은 일반 문단입니다.</p>
+		</div>
+
+		<div id="main2">
+			<p>이부분을 클릭하세요</p>
+			<p>이것은 일반 문단입니다.</p>
+		</div>
+
+		<p style="margin-top:30px;">목록중에서 3번째 목록을 클릭해서 경고창 ("OK")를 띄움</p>
+
+		<ul class="main3">
+			<li>목록1</li>
+			<li>목록2</li>
+			<li>목록3</li>
+			<li>목록4</li>
+			<li>목록5</li>
+		</ul>
+
+	</body>
+</html>

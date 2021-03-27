@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>웹 폼 연습</title>
+<link href="myform.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<form>
+<fieldset>
+  <legend>개인 정보 입력</legend>
+  <ol>
+	<li>
+      <label for="name">이름</label>
+      <input id=name type="text" placeholder="8자 미만 공백없이">
+    </li>
+    <li>
+      <label for=email>메일주소</label>
+      <input id="email" type="email" placeholder="example@domain.com">
+    </li>
+    <li>
+      <label for="photo">사진</label>
+      <input id="file" type="file" multiple>
+      <script type="text/javscript">
+	  function showFile(){
+		var myFile=document.getElementById('file').files;
+		var filesArray =[];
+		for (var i=0;i<myFile.length;i++) {
+		  var file=myFile[i];
+		  filesArray.push('파일: "+file.name");	
+		}
+		alert(filesArray.join("\"));
+	  }
+	  </script>
+    </li>
+  </ol>
+</fieldset>
+<fieldset>
+  <button type="button" onclick="showFile()">파일 이름은?</button>
+</fieldset>
+
+</form>
+</body>
+</html>

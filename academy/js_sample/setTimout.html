@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	function myFunc(){
+		alert("3초후 출력이 완료")
+		}
+	//setTimeout("함수이름", 주기 1/1000초 단위)  ------> 단 한번 실행
+	setTimeout("myFunc()",3000)
+	//setTimeout(myFunc,3000) ----> 이렇게 써도 무방하나 위에것이 확장성이 용의
+	
+</script>
+</head>
+
+<body>
+	<div id="move">움직인다</div>
+
+</body>
+</html>

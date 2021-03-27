@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header, hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video, input {margin:0; padding:0; border:0; font-size:100%;}
+
+html {font-size: 1em; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; }
+body{line-height:1;}
+a, a:visited {margin:0; padding:0; font-size:100%; background:transparent; text-decoration:none; color:black;}
+a:hover {text-decoration:none;}
+
+h1, h2, h3, h4, h5, h6 {font-weight:normal;} 
+
+fieldset, img, abbr, acronym { border:0 none;} 
+
+ol, ul { list-style:none; }
+
+table {border-collapse: separate; border-spacing:0; border:0 none;}
+caption, th, td { font-weight: normal; border:0;}
+caption {visibility:hidden; font-size:0; width:1; height:1; line-height:0}
+
+address, caption, strong, em, cite {font-weight:normal; font-style:normal;}
+ins { text-decoration:none; }
+del { text-decoration:line-through;}
+
+blockquote:before, blockquote:after, q:before, q:after { content:""; }
+blockquote,q { quotes:"" ""; }
+
+hr { display:none; }
+legend {display:none !important;}
+/* ie7 */
+.clearfix:after {display:block; clear:both; content:"."; visibility:hidden; height:0;}
+.clearfix {display: inline-block;}
+
+label, input, select{vertical-align:middle;}
+textarea {overflow: auto; vertical-align:top;}
+
+img {vertical-align:top; border: 0; -ms-interpolation-mode: bicubic;}
+
+.hid {font-size:0; line-height:0; width:1px; height:1px; overflow:hidden; position:absolute; border: 0; clip: rect(0 0 0 0); margin: -1px; padding: 0;}
+[hidden] {display: none;}
+
+mark {background-color:#ff9;color:#000; font-style:italic; font-weight:bold;}
+header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption { display: block }
+audio,c anvas, video {display: inline-block; *display: inline;  *zoom: 1;}
+nav ul {list-style:none;}
+button::-moz-focus-inner, input::-moz-focus-inner {border: 0;padding: 0;}
+button[disabled], input[disabled] {cursor: default;}
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {-webkit-appearance: none;}
+input[type="checkbox"], input[type="radio"] {box-sizing: border-box; padding: 0; *height:13px; *width: 13px;}
+svg:not(:root) {overflow: hidden;}

@@ -1,0 +1,58 @@
+﻿
+figure 요소는 플로우 컨텐츠를 나타내며 선택적으로 캡션을 사용할 수 있습니다. 
+figure는 본문과 어떤관계를 맺고 있어야한다 문서에서 완전히 제거해도 상관없는 것이라면 figure를 사용하지 말아야한다 
+요소는 독립적이며 보통 문서의 주된 흐름에서 단일 유닛으로 참조됩니다. 
+따라서 figure 요소는 일러스트레이션, 다이어그램, 사진, 코드, 기타 비슷한 것에 주석을 다는 용도로 사용될 수 있고, 
+figure 요소를 제거하거나 다른 위치 - 페이지의 옆, 전용 페이지, 혹은 부록 - 으로 문서의 주된 흐름에는 영향을 미치지 않습니다.
+figure 요소는 figcaption 요소를 포함할 수 있습니다. 
+figcaption 요소는 figure 요소 내용에 대한 캡션을 나타냅니다. 
+figcaption 요소가 없다면 figure 요소는 캡션이 없는겁니다.
+
+
+html5에서는 div 대신에 figure 요소를 사용할 수 있으며, 한단계 더 나아가 legend 요소를 사용할 수 있습니다.
+legend 요소는 html4의 caption 폼 요소 대용입니다. html5는 이런 용도의 전혀 새로운 요소를 만들어 낸 것이 아니라 html의 기존 요소를 비슷한 시맨틱과 함께 재사용합니다.
+위의 마크업을 html5로 작성하면 다음과 같습니다.
+
+<figure>
+  <img src="images/src.png" alt="이미지"/>
+  <legend>이것은 이미지 캡션입니다.</legend>
+</figure>
+
+figure 요소로 코드 리스트를 마크업했습니다.
+
+In listing 4 we see the primary core interface API declaration.
+ Listing 4. The primary core interface API declaration. interface PrimaryCore {
+ boolean verifyDataLine();
+ void sendData(in sequence<byte> data);
+ void initSelfDestruct();
+}
+The API is designed to use UTF-8.
+
+figure 가 아닌 이미지, figure를 사용한 이미지 및 비디오를 함께 쓴 예제입니다.
+
+Malinko의 만화
+
+이 사건은 한 만화에 관한, 일종의 "지적 소유권" 위배에 관한 사건입니다(증거물 A를 보십시오). 예고편이 다음 단어로 끝난 다음부터 소송이 
+시작됬습니다.
+
+
+
+이 예고편은 이미 방송됐습니다. 큼직한 노트북을 든 변호사가 가망 없는 변론을 시작했습니다. 예고편 전체는 증거물 B에 들어 있습니다.
+증거물 A. rough copy 만화. 증거물 B. Rough Copy 예고편. 
+이 사건은 법원에서 판결이 끝났습니다.
+
+figure 요소로 시를 마크업했습니다.
+
+죽는 날까지 하늘을 우러러 
+한점 부끄럼이 없기를 
+잎새에 이는 바람에도 
+나는 괴로와했다 
+별을 노래하는 마음으로 
+모든 죽어가는 것들을 사랑해야지 
+그리고 나한테 주어진 길을 
+걸어가야겠다. 
+
+오늘 밤에도 별이 바람에 스치운다. 
+서시 윤동주 <하늘과 바람과 별과 시, 정음사, 1948> 
+하나의 성castle에 대해 논하는 훨씬 방대한 원본의 일부분으로 짐작되는 figure 요소입니다.
+성의 변천사. 각각 1423년, 1858년, 1999년. 

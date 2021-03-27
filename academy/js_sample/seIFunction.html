@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	//자기 자신의 함수를 함수자신의 내부에서 호출한다(반복실행을 위해)
+	function fun_seft(num){
+		if(num ==0 ){
+			return 1
+			}else{
+				//자신의 함수를 다시리턴
+				return (num*fun_seft(num-1))
+				}
+		}
+	
+	var my_num = 4
+	//지정된 숫자부터 ~ 1까지의 숫자를 반복해서 곱한후 화면에 결과 출력
+	document.write("<h2>");
+	document.write(my_num + "부터 순차적으로 1까지 곱한수는?" + fun_seft(my_num));
+	
+	document.write("</h2>");
+</script>
+</head>
+
+<body>
+	<div id="move">움직인다</div>
+
+</body>
+</html>

@@ -1,0 +1,383 @@
+@charset "utf-8";
+@import url('/css/default.css');
+@import url('/css/layout.css');
+@import url('/css/contentCommon.css');
+
+div.buttonBox01 div.subText { float:left; }
+div.buttonBox01 div.subText p { display:block; margin:0; }
+div.buttonBox01 div.subText span.button { clear:left; margin-left:13px; }
+
+/* index */
+div.recommendBox { float:left; position:relative; width:594px; height:292px; margin:0 8px 20px 0; border:1px solid #dbdbdb; overflow:hidden; }
+div.recommendBox h2 { height:15px; margin:31px 0 20px 40px; color:#41a0ff; font-size:1.3em; line-height:1; letter-spacing:-1px; }
+div.recommendBox h2 a { color:#41a0ff; }
+div.recommendBox span { position:absolute; top:36px; left:137px; }
+div.recommendBox span a { float:left; margin-right:2px; }
+div.recommendBox a.viewMore { position:absolute; top:31px; right:24px; padding-left:9px; color:#9093a2; font-family:NGBold, "돋움", Dotum; font-size:.9em; background:url('/images/common/bg/bgMore02.gif') no-repeat 0 50%; line-height:1; vertical-align:top; }
+div.recommendBox button { display:none; }
+div.recommendBox div img { width:594px; height:226px; }
+
+div.recommendBestBox { float:left; width:292px; height:292px; margin:0 8px 20px 0; border:1px solid #dbdbdb; }
+div.recommendBestBox h2 { height:15px; margin:31px 0 20px 25px; color:#41a0ff; font-size:1.3em; line-height:1; letter-spacing:-1px; }
+div.recommendBestBox h2 a { color:#41a0ff; }
+div.recommendBestBox h3 { margin:0 25px 10px; color:#333; font-size:1.2em; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+div.recommendBestBox h3 a { color:#333; }
+div.recommendBestBox img { display:block; width:242px; height:127px; margin:0 auto 15px; }
+div.recommendBestBox p { margin:0 25px; }
+div.recommendBestBox p a { color:#888; }
+
+div.bannerBox { float:left; position:relative; width:292px; height:292px; margin-bottom:20px; border:1px solid #dbdbdb; overflow:hidden; }
+div.bannerBox > a { position:absolute; top:10px; left:10px; }
+div.bannerBox li img { width:292px; height:292px; vertical-align:top; }
+div.bannerBox span { position:absolute; top:20px; right:20px; }
+div.bannerBox span a { floaT:left; margin-left:2px; }
+
+div.talkBox { float:left; position:relative; width:906px; height:1084px; margin:0 8px 0 -8px; }
+div.talkBox a.more { top:1px !important; right:10px !important; }
+div.talkBox h2 { float:left; height:18px; margin:0 30px 9px 8px; color:#333; font-size:1.3em; line-height:18px; letter-spacing:-1px; }
+div.talkBox h2 a { color:#333; }
+div.talkBox ul.category { height:15px; margin:1px 0 11px; overflow:hidden; }
+div.talkBox ul.category li { float:left; margin-right:8px; padding-left:9px; background:url('/images/common/bg/bgBarV01.gif') no-repeat 0 50%; }
+div.talkBox ul.category li:first-child { padding-left:0; background:none; }
+div.talkBox ul.category a { float:left; color:#888; font-family:NGBold, "돋움", Dotum; font-size:.9em; line-height:15px; }
+div.talkBox ul.category a.on { color:#41a0ff; }
+div.talkBox ul.category span { float:left; height:15px; margin-right:4px; background:url('/images/culture/bgCultureCategory.gif') no-repeat 0 0; }
+div.talkBox ul.category a.cate01 span { width:11px; background-position:0 0; }
+div.talkBox ul.category a.cate02 span { width:13px; background-position:-12px 0; }
+div.talkBox ul.category a.cate03 span { width:12px; background-position:-26px 0; }
+div.talkBox ul.category a.cate04 span { width:14px; background-position:-39px 0; }
+div.talkBox ul.category a.cate05 span { width:14px; background-position:-54px 0; }
+div.talkBox ul.category a.cate06 span { width:14px; background-position:-69px 0; }
+div.talkBox ul.category a.cate07 span { width:12px; background-position:-84px 0; }
+div.talkBox ul.category a.cate08 span { width:12px; background-position:-97px 0; }
+div.talkBox ul.category a.cate09 span { width:12px; background-position:-110px 0; }
+div.talkBox ul.category a.cate10 span { width:14px; background-position:-123px 0; }
+div.talkBox ul.category a.cate01.on span { background-position:0 -16px; }
+div.talkBox ul.category a.cate02.on span { background-position:-12px -16px; }
+div.talkBox ul.category a.cate03.on span { background-position:-26px -16px; }
+div.talkBox ul.category a.cate04.on span { background-position:-39px -16px; }
+div.talkBox ul.category a.cate05.on span { background-position:-54px -16px; }
+div.talkBox ul.category a.cate06.on span { background-position:-69px -16px; }
+div.talkBox ul.category a.cate07.on span { background-position:-84px -16px; }
+div.talkBox ul.category a.cate08.on span { background-position:-97px -16px; }
+div.talkBox ul.category a.cate09.on span { background-position:-110px -16px; }
+div.talkBox ul.category a.cate10.on span { background-position:-123px -16px; }
+
+div.talkBox ul.contentList > li { float:left; width:292px; height:345px; margin:0 0 8px 8px; border:1px solid #dbdbdb; overflow:hidden; }
+div.talkBox ul.contentList a img { display:block; width:292px; height:211px; margin-bottom:14px; }
+div.talkBox ul.contentList h3 { margin:0 0 8px 20px; font-size:1.2em; line-height:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+div.talkBox ul.contentList h3:first-child { margin-top:20px; }
+div.talkBox ul.contentList h3 a { color:#333; }
+div.talkBox ul.contentList > li > span { display:block; margin:0 0 12px 20px; color:#999; line-height:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+div.talkBox ul.contentList p.short { margin:0 15px 10px; padding:0 5px 11px; border-bottom:1px solid #e9e9e9; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+div.talkBox ul.contentList p.long { height:218px; margin:0 15px 10px; padding:0 5px 15px; border-bottom:1px solid #e9e9e9; line-height:1.6; word-wrap:break-word; word-break:break-word; overflow:hidden; }
+div.talkBox ul.contentList p a { color:#888; }
+div.talkBox ul.contentList ul { float:right; margin-right:15px; padding-top:3px; }
+div.talkBox ul.contentList ul li { float:left; height:16px; margin-right:8px; padding-left:9px; background:url('/images/common/bg/bgBarV01.gif') no-repeat 0 60%; overflow:hidden; }
+div.talkBox ul.contentList ul li:first-child { padding-left:0; background:none; }
+div.talkBox ul.contentList ul li * { vertical-align:middle; }
+div.talkBox ul.contentList ul li img { margin-right:4px; vertical-align:top; }
+
+div.cultureSNSBox { float:left; position:relative; width:294px; height:1083px; }
+div.cultureSNSBox a.more { top:1px !important; }
+div.cultureSNSBox h2 { height:18px; margin:0 30px 9px 0; color:#333; font-size:1.3em; line-height:18px; letter-spacing:-1px; }
+div.cultureSNSBox h2 a { color:#333; }
+div.cultureSNSBox h3 { position:absolute; top:0; right:0; width:25px; height:18px; overflow:hidden; }
+div.cultureSNSBox h3 span { position:absolute; top:0; left:0; width:100%; height:100%; background:url('/images/culture/bgSNS.gif') no-repeat 0 0; }
+div.cultureSNSBox h3.cultureTab01 { right:25px; }
+div.cultureSNSBox h3.cultureTab01 a.on span { background-position:0 -19px; }
+div.cultureSNSBox h3.cultureTab02 span { background-position:-25px 0; }
+div.cultureSNSBox h3.cultureTab02 a.on span { background-position:-25px -19px; }
+div.cultureSNSBox ul { padding:0 20px 6px; border:1px solid #dbdbdb; border-bottom:0; }
+div.cultureSNSBox ul li { height:87px; margin:-1px 0 1px; padding-top:20px; border-top:1px solid #f2f2f2; overflow:hidden; }
+div.cultureSNSBox ul li img { float:left; width:48px; height:48px; margin-right:9px; border:1px solid #e9e9e9; }
+div.cultureSNSBox ul li p { margin-bottom:7px; height:55px; overflow:hidden; }
+div.cultureSNSBox ul li p a { color:#888; }
+div.cultureSNSBox ul li span { margin-left:60px; padding-left:12px; color:#b8b8b8; background:url('/images/culture/bgSNS.gif') no-repeat -51px 3px; }
+div.cultureSNSBox ul li span a { color:#b8b8b8; }
+div.cultureSNSBox ul#cultureSNS02 span { background-position:-51px -25px; }
+div.cultureSNSBox a.moreSNS { display:block; margin-bottom:8px; padding:0 20px; border:1px solid #dbdbdb; border-top:0; }
+div.cultureSNSBox a.moreSNS span { display:block; height:45px; border-top:1px solid #e9e9e9; color:#666; line-height:45px; text-align:center; }
+div.cultureSNSBox a.clutureBanner { display:block; border:1px solid #dbdbdb; }
+div.cultureSNSBox a.clutureBanner img { width:292px; height:134px; vertical-align:top; }
+div.cultureSNSBox div.pointBox { width:267px; height:210px; padding-left:25px; border:1px solid #dbdbdb; border-top:0; background:url('/images/culture/bgPoint.gif') no-repeat 100% 100%; overflow:hidden; }
+div.cultureSNSBox div.pointBox h2 { height:auto; margin:35px 0 15px; color:#000; font-size:1.8em; line-height:1.1; }
+div.cultureSNSBox div.pointBox p { margin-bottom:10px; }
+
+/* 테마문화추천 */
+div.themeHead { height:204px; background:#474e60 url('/images/culture/bgThemeHead.gif') no-repeat 0 0; overflow:hidden; }
+div.themeHead div { float:left; display:inline; width:470px; height:204px; margin-right:20px; }
+div.themeHead h4 { margin:31px 0 28px 35px; color:#666; font-size:1.2em; }
+div.themeHead h4 b { display:block; color:#333; font-weight:normal; font-size:1.8em; }
+div.themeHead h4 span { margin-left:4px; color:#41a0ff; }
+div.themeHead div p { margin-left:35px; line-height:1.5; }
+div.themeHead h5 { margin:20px 20px 0 0; padding-bottom:15px; border-bottom:1px solid #575d6e; color:#fff; font-size:1.2em; letter-spacing:-1px; line-height:1; overflow:hidden; }
+div.themeHead > p { margin:0 20px 15px 0; padding-top:15px; border-top:1px solid #404656; color:#b5b8bf; font-size:.9em; line-height:1.4; overflow:hidden; }
+div.themeHead > p b { font-weight:normal; font-family:NGBold, "돋움", Dotum; }
+div.themeHead a { float:right; margin-right:20px; padding-right:9px; color:#fff; font-size:.9em; background:url('/images/common/bg/bgMore03.gif') no-repeat 100% 50%; }
+
+ul.themeList01 { margin-bottom:40px; }
+ul.themeList01 li { padding:30px 0; border-bottom:1px solid #e8e8e8; overflow:hidden; }
+ul.themeList01 img { float:left; width:242px; height:127px; margin-right:30px; }
+ul.themeList01 h5 { margin:6px 0 10px; color:#333; font-size:1.2em; }
+ul.themeList01 span { display:block; margin-bottom:15px; font-size:.9em; }
+ul.themeList01 p { overflow:hidden; }
+ul.themeList01 a { color:#333; }
+ul.themeList01 h5 a:hover,
+ul.themeList01 h5 a:active,
+ul.themeList01 h5 a:focus { text-decoration:underline; }
+
+p.themeHead { width:723px; margin-bottom:30px; border:1px solid #e3e3e3; overflow:hidden; }
+p.themeHead img { vertical-align:top; }
+
+ul.themeContent { width:741px; margin:0 0 25px -16px; border-bottom:1px solid #e8e8e8; overflow:hidden; }
+ul.themeContent li { float:left; width:230px; height:345px; margin:-1px 0 1px 17px; border-top:1px solid #e8e8e8; text-align:center; }
+ul.themeContent a { color:#333; font-size:1.2em; font-family:NGBold, "돋움", Dotum; line-height:16px; }
+ul.themeContent a > img { display:block; width:230px; height:223px; margin-bottom:15px; }
+ul.themeContent a span { margin-left:4px; padding-left:5px; background:url('/images/common/bg/bgBarV01.gif') no-repeat 0 50%; }
+ul.themeContent a span img { vertical-align:top; }
+ul.themeContent p { margin-top:15px; line-height:1.5; }
+
+div.themeContent { margin-bottom:25px; padding-bottom:25px; border-bottom:1px solid #e8e8e8; }
+
+ul.themeList02 { margin-bottom:15px; padding-bottom:10px; border-bottom:1px solid #e8e8e8; }
+ul.themeList02 li { margin-bottom:15px; }
+ul.themeList02 a { padding-left:10px; color:#333; font-size:1.2em; font-family:NGBold, "돋움", Dotum; background:url('/images/common/bg/bgDot01.gif') no-repeat 0 50%; line-height:16px; }
+ul.themeList02 span { margin-left:4px; padding-left:5px; background:url('/images/common/bg/bgBarV01.gif') no-repeat 0 50%; }
+ul.themeList02 span img { vertical-align:top; }
+ul.themeList02 p { clear:both; margin-top:5px; padding-left:10px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+/* 문화공감토크 */
+div.talkHead { height:226px; margin:10px 0 25px; border-bottom:1px solid #c1c1c1; overflow:hidden; }
+div.talkHead div { float:left; width:457px; height:224px; border:1px solid #e8e8e8; background:url('/images/culture/bgTalkHead.gif') repeat-x 0 0; }
+div.talkHead div a img { float:left; width:151px; height:151px; margin:30px 20px 0 20px; padding:5px; border:1px solid #e9e9e9; border-radius:3px; background-color:#fff; }
+div.talkHead div h5 { margin:45px 0 8px; font-size:1.3em; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+div.talkHead div a { color:#333; }
+div.talkHead div p { margin-right:20px; overflow:hidden; }
+div.talkHead ul { float:left; width:225px; height:208px; padding:16px 20px 0; border:1px solid #e8e8e8; border-left:0; background-color:#fafafa; overflow:hidden; }
+div.talkHead ul li { height:52px; padding:11px 10px 0; border-top:1px solid #e8e8e8; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+div.talkHead ul li:first-child { border-top:0; }
+div.talkHead ul a { display:inline-block; margin-bottom:3px; color:#333; font-size:1.2em; }
+div.talkHead dl { margin-bottom:15px; overflow:hidden; }
+div.talkHead dt { float:left; height:16px; margin-right:4px; font-family:NGBold, "돋움", Dotum; line-height:16px; }
+div.talkHead dd { float:left; margin-right:8px; }
+div.talkHead a:hover, 
+div.talkHead a:active, 
+div.talkHead a:focus { text-decoration:underline; }
+
+ul.talkCategory { float:left; width:600px; margin-bottom:15px; padding:1px 0 0 1px; overflow:hidden; }
+ul.talkCategory li { float:left; position:relative; width:119px; height:28px; margin:-1px 0 0 -1px; border:1px solid #e8e8e8; z-index:900; }
+ul.talkCategory li.on { border-color:#333; background:url('/images/culture/bgCategoryOn.gif') no-repeat 90% 50%; z-index:999; }
+ul.talkCategory li a { display:block; height:28px; padding-left:16px; color:#777; font-family:NGBold, "돋움", Dotum; line-height:28px; }
+ul.talkCategory li span { float:left; height:15px; margin:7px 5px 0 0; background:url('/images/culture/bgCultureCategory.gif') no-repeat 0 0; }
+ul.talkCategory li.cate01 span { width:11px; background-position:0 0; }
+ul.talkCategory li.cate02 span { width:13px; background-position:-12px 0; }
+ul.talkCategory li.cate03 span { width:12px; background-position:-26px 0; }
+ul.talkCategory li.cate04 span { width:14px; background-position:-39px 0; }
+ul.talkCategory li.cate05 span { width:14px; background-position:-54px 0; }
+ul.talkCategory li.cate06 span { width:14px; background-position:-69px 0; }
+ul.talkCategory li.cate07 span { width:12px; background-position:-84px 0; }
+ul.talkCategory li.cate08 span { width:12px; background-position:-97px 0; }
+ul.talkCategory li.cate09 span { width:12px; background-position:-110px 0; }
+ul.talkCategory li.cate10 span { width:14px; background-position:-123px 0; }
+ul.talkCategory + a { float:left; width:123px; height:59px; }
+ul.talkCategory + a img { vertical-align:top; }
+ul.talkCategory + a + div { margin-bottom:40px; }
+
+div.boardType { float:right; }
+div.boardType ul { float:left; }
+div.boardType li { float:left; margin-left:8px; padding-left:9px; background:url('/images/common/bg/bgBarV01.gif') no-repeat 0 50%; }
+div.boardType li:first-child { background:none; }
+div.boardType li a { float:left; height:22px; padding-right:15px; color:#888; font-family:NGBold, "돋움", Dotum; background:url('/images/common/bg/bgSelectOff.gif') no-repeat 100% 50%; line-height:22px; }
+div.boardType li a:hover,
+div.boardType li a:active,
+div.boardType li a:focus,
+div.boardType li a.on { color:#333; background:url('/images/common/bg/bgSelectOn.gif') no-repeat 100% 50%; }
+div.boardType li a span { float:left; height:13px; margin:4px 4px 0 0; background:url('/images/culture/bgCategoryType.gif') no-repeat 0 0; }
+div.boardType li a.type01 span { width:13px; }
+div.boardType li a.type02 span { width:15px; background-position:-14px 0; }
+div.boardType li a.type01:hover span,
+div.boardType li a.type01:active span,
+div.boardType li a.type01:focus span,
+div.boardType li a.type01.on span { background-position:0 -14px; }
+div.boardType li a.type02:hover span,
+div.boardType li a.type02:active span,
+div.boardType li a.type02:focus span,
+div.boardType li a.type02.on span { width:15px; background-position:-14px -14px; }
+div.boardType form { float:left; margin-left:10px; }
+
+ul.talkList01 { width:744px; margin:0 0 40px -19px; border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8; }
+ul.talkList01 > li { float:left; position:relative; width:167px; height:229px; margin:-1px 0 1px; padding:30px 0 0 19px; border-top:1px solid #e8e8e8; text-align:center; }
+ul.talkList01 a { display:inline-block; height:182px; color:#333; }
+ul.talkList01 a:active,
+ul.talkList01 a:hover,
+ul.talkList01 a:focus { text-decoration:underline; }
+ul.talkList01 a img { display:block; width:167px; height:121px; margin-bottom:16px; }
+ul.talkList01 ul { float:right; position:relative; left:-50%; overflow:visible; }
+ul.talkList01 ul li { float:left; position:relative; left:50%; height:16px; margin-left:5px; padding-left:6px; background:url('/images/common/bg/bgBarV01.gif') no-repeat 0 50%; line-height:16px; }
+ul.talkList01 ul li:first-child { margin-left:0; padding-left:0; background:none; }
+ul.talkList01 ul li img { margin-right:5px; vertical-align:top; }
+
+ul.talkList02 { clear:both; margin-bottom:40px; border-top:1px solid #e8e8e8; }
+ul.talkList02 > li { padding:30px 0; border-bottom:1px solid #e8e8e8; overflow:hidden; }
+ul.talkList02 a img { float:left; width:98px; height:71px; margin-right:20px; }
+ul.talkList02 h5 { margin-bottom:10px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+ul.talkList02 h5 a { color:#333; }
+ul.talkList02 h5 a:hover,
+ul.talkList02 h5 a:active,
+ul.talkList02 h5 a:focus { text-decoration:underline; }
+ul.talkList02 h5 img { margin-left:5px; }
+ul.talkList02 p { margin-bottom:10px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+ul.talkList02 ul { overflow:hidden; }
+ul.talkList02 ul li { float:left; margin-right:10px; padding-left:11px; background:url('/images/common/bg/bgBarV01.gif') no-repeat 0 50%; line-height:16px; }
+ul.talkList02 ul li:first-child { padding-left:0; background:none; }
+ul.talkList02 ul li:first-child + li { background:none; }
+ul.talkList02 ul li img { margin-right:5px; vertical-align:top; }
+
+div.articleInfo01 { margin-top:-1px; padding:11px 19px; border:1px solid #eaeaea; background-color:#fafafa; overflow:hidden; }
+div.articleInfo01 dl { float:left; padding-top:3px; }
+div.articleInfo01 dt { float:left; height:16px; margin-right:6px; font-family:NGBold, "돋움", Dotum; line-height:16px; }
+div.articleInfo01 dt.vLine { margin-left:-4px; padding-left:10px; background:url('/images/common/bg/bgBarV03.gif') no-repeat 0 50%; }
+div.articleInfo01 dt img { vertical-align:top; }
+div.articleInfo01 dd { float:left; height:16px; margin-right:14px; line-height:16px; }
+
+div.article01 { margin-bottom:15px; padding:30px 20px; border-bottom:1px solid #eaeaea; word-wrap:break-word; word-break:break-word; overflow:hidden; }
+div.article01 + div.buttonBox01 { margin-bottom:30px; }
+
+div.selectMedia { position:relative; margin-top:10px; background:url('/images/culture/bgSelectMedia.gif') no-repeat 0 0; overflow:hidden; }
+div.selectMedia h5 a { position:absolute; top:0; z-index:900; }
+div.selectMedia h5.mediaM a { left:0; }
+div.selectMedia h5.mediaF a { left:94px; }
+div.selectMedia h5.mediaT a { left:189px; }
+div.selectMedia h5 a.on { z-index:999; }
+div.selectMedia form { margin-top:45px; border-top:0; }
+
+/* 문화홍보 */
+p.publicNotice { margin-bottom:30px; padding:12px 20px; border:1px solid #f0f0f0; background-color:#fafafa; }
+
+ul.publicize { margin-bottom:40px; border-top:1px solid #eaeaea; overflow:hidden; }
+ul.publicize li { position:relative; padding:25px 30px; border-bottom:1px solid #eaeaea; overflow:hidden; }
+ul.publicize h5 { margin:2px 0 5px; color:#333; font-size:1.2em; }
+ul.publicize p { overflow:hidden; }
+ul.publicize a { float:right; margin-top:-35px; }
+ul.publicize span { float:left; width:60px; height:52px; margin-right:50px; background:url('/images/culture/bgPublicize.gif') no-repeat 0 0; }
+ul.publicize span.item02 { background-position:-61px 0; }
+ul.publicize span.item03 { background-position:-122px 0; }
+ul.publicize span.item11 { background-position:0 -53px; }
+ul.publicize span.item12 { background-position:-61px -53px; }
+ul.publicize span.item13 { background-position:-122px -53px; }
+ul.publicize span.item14 { background-position:-183px -53px; }
+ul.publicize span.item21 { background-position:0 -106px; }
+ul.publicize span.item22 { background-position:-61px -106px; }
+
+table div.performInfo { padding:20px 0 10px; font-size:.9em; overlfow:hidden; }
+table div.performInfo p { margin-bottom:15px; color:#666; font-family:NGBold, "돋움", Dotum; font-size:1em; }
+table div.performInfo p span { margin-left:4px; font-family:NGNormal; font-size:1em; }
+table div.performInfo img { float:left; width:117px; height:149px; margin-right:21px; }
+table div.performInfo dl { padding-top:1px; overflow:hidden; }
+table div.performInfo dt { float:left; margin-right:4px; font-family:NGBold, "돋움", Dotum; }
+table div.performInfo dd { margin-bottom:3px; overflow:hidden; }
+
+/* 문화SNS */
+ul.snsTree { position:relative; width:725px; height:710px; margin-bottom:40px; background:url('/images/culture/bgSNSTree.png') no-repeat 0 0; overflow:hidden; }
+ul.snsTree > li > a { position:absolute; bottom:0; color:#888; font-size:2em; font-family:NGBold, "돋움", Dotum; line-height:1.1; }
+ul.snsTree > li.cate01 > a { left:0; }
+ul.snsTree > li.cate02 > a { left:117px; }
+ul.snsTree > li.cate03 > a { left:230px; }
+ul.snsTree > li.cate04 > a { left:333px; }
+ul.snsTree > li.cate05 > a { left:436px; }
+ul.snsTree > li.cate06 > a { left:540px; }
+ul.snsTree > li.cate07 > a { left:621px; }
+ul.snsTree > li.cate01 a.on { color:#d11a1e; }
+ul.snsTree > li.cate02 a.on { color:#197e44; }
+ul.snsTree > li.cate03 a.on { color:#000; }
+ul.snsTree > li.cate04 a.on { color:#ffa201; }
+ul.snsTree > li.cate05 a.on { color:#41a0ff; }
+ul.snsTree > li.cate06 a.on { color:#ea5175; }
+ul.snsTree > li.cate07 a.on { color:#50b8b8; }
+ul.snsTree > li li a.this { font-family:NGBold, "돋움", Dotum; }
+ul.snsTree > li > ul > li { position:absolute; float:left; overflow:hidden; }
+ul.snsTree > li > ul > li span { display:block; width:100%; text-align:center; z-index:900; }
+ul.snsTree > li > ul > li span a { position:relative; margin-bottom:3px; color:#cdcdcd; font-size:1.2em; line-height:1.1; z-index:900; }
+ul.snsTree li li div { visibility:hidden; clear:both; position:relative; float:right; left:-50%; overflow:visible; z-index:800; }
+ul.snsTree li li div.on { visibility:visible; z-index:999; }
+ul.snsTree li li div ul { position:relative; float:left; left:50%; height:25px; padding:14px 14px 0 11px; background:url('/images/culture/bgSNSBox.gif') no-repeat 0 -80px; overflow:hidden; }
+ul.snsTree li li div ul.size01 { background-position:0 0; }
+ul.snsTree li li div ul.size02 { background-position:0 -40px; }
+ul.snsTree li li div ul li { float:left; position:relative; margin-left:3px; }
+ul.snsTree li li div ul li a { display:block; width:20px; height:19px; overflow:hidden; }
+ul.snsTree li li div ul li a span { position:absolute; top:0; left:0; width:100%; height:100%; background:url('/images/culture/bgSNSLink.gif') no-repeat 0 0; }
+ul.snsTree li li div ul li a.facebook span { background-position:0 -20px; } 
+ul.snsTree li li div ul li a.blog span { background-position:0 -40px; } 
+ul.snsTree li.node01 { top:420px; left:55px; }
+ul.snsTree li.node02 { top:459px; left:3px; }
+ul.snsTree li.node03 { top:517px; left:25px; }
+ul.snsTree li.node04 { top:543px; left:100px; }
+ul.snsTree li.node05 { top:575px; left:50px; }
+ul.snsTree li.node06 { top:603px; left:90px; }
+ul.snsTree li.node07 { top:462px; left:218px; }
+ul.snsTree li.node08 { top:428px; left:194px; }
+ul.snsTree li.node09 { top:377px; left:125px; }
+ul.snsTree li.node11 { top:243px; left:101px; }
+ul.snsTree li.node12 { top:328px; left:140px; }
+ul.snsTree li.node13 { top:265px; left:264px; }
+ul.snsTree li.node14 { top:209px; left:167px; }
+ul.snsTree li.node21 { top:52px; left:10px; }
+ul.snsTree li.node22 { top:126px; left:135px; }
+ul.snsTree li.node23 { top:53px; left:304px; }
+ul.snsTree li.node24 { top:13px; left:240px; }
+ul.snsTree li.node25 { top:15px; left:136px; }
+ul.snsTree li.node26 { top:156px; left:69px; }
+ul.snsTree li.node27 { top:100px; left:23px; }
+ul.snsTree li.node31 { top:169px; left:303px; }
+ul.snsTree li.node32 { top:194px; left:475px; }
+ul.snsTree li.node33 { top:117px; left:525px; }
+ul.snsTree li.node34 { top:30px; left:543px; }
+ul.snsTree li.node35 { top:63px; left:393px; }
+ul.snsTree li.node36 { top:120px; left:354px; }
+ul.snsTree li.node37 { top:60px; left:543px; }
+ul.snsTree li.node38 { top:88px; left:543px; }
+ul.snsTree li.node41 { top:279px; left:367px; }
+ul.snsTree li.node42 { top:322px; left:472px; }
+ul.snsTree li.node43 { top:244px; left:459px; }
+ul.snsTree li.node51 { top:388px; left:370px; }
+ul.snsTree li.node52 { top:422px; left:440px; }
+ul.snsTree li.node61 { top:554px; left:355px; }
+ul.snsTree li.node62 { top:604px; left:547px; }
+ul.snsTree li.node63 { top:576px; left:500px; }
+ul.snsTree li.node64 { top:548px; left:570px; }
+ul.snsTree li.node65 { top:520px; left:623px; }
+ul.snsTree li.node66 { top:498px; left:565px; }
+ul.snsTree li.node67 { top:474px; left:515px; }
+ul.snsTree li.node68 { top:447px; left:625px; }
+ul.snsTree li.node69 { top:422px; left:555px; }
+ul.snsTree li.node70 { top:388px; left:595px; }
+ul.snsTree li.node71 { top:369px; left:511px; }
+ul.snsTree li.node72 { top:484px; left:434px; }
+ul.snsTree li.node73 { top:484px; left:355px; }
+ul.snsTree li.node74 { top:626px; left:532px; }
+ul.snsTree li.node02 span,
+ul.snsTree li.node21 span,
+ul.snsTree li.node22 span { text-align:right; }
+
+div.realtimeSNS { position:relative; margin-top:10px; background:url('/images/common/bg/bgTab01.gif') no-repeat 0 0; }
+div.realtimeSNS a:hover,
+div.realtimeSNS a:active,
+div.realtimeSNS a:focus { text-decoration:underline; }
+div.realtimeSNS > ul { padding-top:45px; }
+div.realtimeSNS > ul > li { padding:20px 15px; border-bottom:1px solid #e3e3e3; vertical-align:top; overflow:hidden; }
+div.realtimeSNS > ul > li > a > img { float:left; width:40px; height:40px; margin-right:20px; }
+div.realtimeSNS div { margin-bottom:5px; overflow:hidden; }
+div.realtimeSNS div strong { float:left; color:#333; font-weight:normal; font-family:NGBold, "돋움", Dotum; overflow:hidden; }
+div.realtimeSNS div span { float:right; color:#a1a1a1; }
+div.realtimeSNS div a { floaT:left; margin-left:10px; color:#a1a1a1; }
+div.realtimeSNS p { margin-bottom:10px; color:#666; overflow:hidden; }
+div.realtimeSNS p a { color:#41a0ff; }
+div.realtimeSNS ul ul { margin-left:60px; overflow:hidden; }
+div.realtimeSNS ul ul li { float:left; margin-right:10px; }
+div.realtimeSNS button { display:block; width:100%; border:1px solid #dbdbdb; border-top:0; color:#777; font:normal 1em/1.45 "나눔고딕", NanumGothic, NGNormal, "돋움", Dotum; text-align:center; vertical-align:top; }
+div.realtimeSNS button span { display:inline-block; height:28px; padding-right:12px; background:url('/images/common/bg/bgMore04.gif') no-repeat 100% 50%; line-height:28px; }
+div.realtimeSNS h5 a { position:absolute; top:0; z-index:100; }
+div.realtimeSNS h5 a.on { position:absolute; z-index:199; }
+div.realtimeSNS h5.realTab01 a { left:0; }
+div.realtimeSNS h5.realTab02 a { left:87px; }

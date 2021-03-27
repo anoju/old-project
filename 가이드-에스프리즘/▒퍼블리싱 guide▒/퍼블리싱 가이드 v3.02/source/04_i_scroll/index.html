@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+<meta charset="utf-8">
+<title>iScroll</title>
+<script src="jquery-1.8.3.min.js"></script>
+<script src="iscroll.js"></script>
+<style>
+	.iscroll{width:500px;height:150px;overflow-x:hidden;overlfow-y:auto;background:#eee;border:1px solid #d0d0d0;color:#333;position:relative;line-height:25px}
+	.iscroll .wrap{margin:0;padding:20px}
+	.iscroll img{width:150px}
+</style>
+</head>
+<body>
+	<div id="iscroll" class="iscroll">
+		<div class="wrap">iScroll<br>iScroll<br>iScroll<br>iScroll<br>iScroll<br>iScroll<br>iScroll<br>iScroll<br>iScroll<br>iScroll<br>iScroll</div>
+	</div>
+
+	<script type="text/javascript">
+		var myScroll = new iScroll('iscroll'); // div의 id값과 동일하게
+	</script>
+
+	<p>
+		<a href="http://romeoh.blog.me/140171004949" target="_blank">사용예시</a>
+	</p>
+</body>
+</html>

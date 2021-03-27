@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="application/javascript">  
+function draw_m() {  
+  var m_canvas = document.getElementById('m');  
+
+  if(m_canvas.getContext) { 
+    var ctx = m_canvas.getContext('2d'); 
+	
+	for(i=0;i<4;i++){
+		ctx.save();
+		ctx.fillStyle="rgb(200,0,0)";
+		ctx.globalAlpha=0.9-0.2*i;
+		ctx.translate(60*i,0);
+		ctx.fillRect(0,0,50,50);
+		ctx.restore();
+	}
+	for(i=0;i<4;i++){
+		ctx.save();
+		ctx.fillStyle="rgb(0,0,200)";
+		ctx.globalAlpha=0.9-0.2*i;
+		ctx.translate(60*i,60);
+		ctx.fillRect(0,0,50,50);
+		ctx.restore();
+	}	
+
+	for(i=0;i<4;i++){
+		ctx.save();
+		ctx.fillStyle="rgb(0,200,0)";
+		ctx.globalAlpha=0.9-0.2*i;
+		ctx.translate(60*i,120);
+		ctx.fillRect(0,0,50,50);
+		ctx.restore();
+	}
+	
+  }  
+  else {
+    alert("사파리 브라우저나 파이어폭스 1.5 이상의 브라우저에서만 사이트 내용을 제대로 볼 수 있습니다.")
+  }
+
+}  
+</script>  
+</head>  
+
+<body onload="draw_m()">  
+<canvas id="m" width="500" height="300"></canvas>  
+</body>  
+</html>  

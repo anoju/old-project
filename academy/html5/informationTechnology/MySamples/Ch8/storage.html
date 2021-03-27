@@ -1,0 +1,109 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Web Storage</title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" > 
+<style> 
+body{
+	background-color:#2B2B2B;
+	color: white;
+	font-family: Lucida Grande;
+}
+ h2, h3 {
+	color: #F5F5F5;
+}
+#displaysession, #displaylocal {
+	padding:5px;
+	border:1px solid #FFC;
+	margin:10px;	
+	width:350px;
+	height:auto;
+}
+a, a:hover, a:visited{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+#session_storage_info{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom:10px;
+	border-bottom: 2px dotted white;
+}
+ 
+ 
+</style> 
+<script type="text/javascript"> 
+window.onload  = function(){
+loadvalues();
+};
+ 
+function loadvalues(){
+getthestuffSession(); //세션 스토리지 데이터 가져오기
+getthestuffLocal(); //로컬 스토리지 데이터 가져오기
+}
+ 
+function savethestuffSession(){
+var lala = document.getElementById("first"); //해당 id 요소 가져오기
+var thevalue = lala.value; //값 가져오기
+sessionStorage.setItem(1, thevalue); //키 1에 해당하는 값 저장하기
+getthestuffSession(); //값 가져와서 화면에 보여주는 함수
+}
+function getthestuffSession(){
+var data;
+var thediv = document.getElementById("displaysession"); //해당 id 요소 가져오기
+data = sessionStorage.getItem(1); //키가 1인 값 가져오기
+if (data){ //값이 있으면
+	thediv.innerHTML = "저장된 값:" + data; // innerHTML 수정해서 문장 안에 그 값을 보여주기 
+}
+ 
+}
+
+function savethestuffLocal(){
+var lala = document.getElementById("second");
+var thevalue = lala.value;
+localStorage.setItem(1, thevalue);
+getthestuffLocal();
+}
+function getthestuffLocal(){
+var data;
+var thediv = document.getElementById("displaylocal");
+data = localStorage.getItem(1);
+if (data){
+	thediv.innerHTML = "저장된 값:"+data;
+}
+ 
+}
+ 
+addEventListener('storage', function(e){
+	var lala = document.getElementById('sample');
+	if (e.oldValue){
+	alert('changed from \''+e.oldValue+'\' to \''+e.newValue+'\'');
+	}
+}, false);
+ 
+</script> 
+</head> 
+<body> 
+ 
+<h2>세션 스토리지(Session Storage)</h2> 
+  
+<input type="text" name="" value="" id="first" /> 
+ 
+<button onclick="javascript:savethestuffSession();">저장!</button>
+ 
+<div id="displaysession">비어있음</div>  
+ 
+<h2>로컬 스토리지(Local Storage)</h2> 
+ 
+<input type="text" name="" value="" id="second" /> 
+ 
+<button onClick="jascript:savethestuffLocal();">저장!</button> 
+ 
+<div id="displaylocal">비어있음</div> 
+ 
+</div> 
+ 
+</body> 
+ 
+</html>

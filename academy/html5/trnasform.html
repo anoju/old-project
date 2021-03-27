@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5</title>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb'>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicBoldWeb'>
+
+		<style>
+			body{font-family: 'NanumGothicWeb';}
+			.mainbox{
+				width:500px;
+				height:136px;
+				}
+
+			/*사이즈 및 반전 효과*/
+			.one{
+				border:1px solid red;
+				-moz-transform:scale(-1, -1);
+				-webkit-transform:scale(-1, -1);
+				transform:scale(-1, -1);}
+
+			/*위치이동*/
+			.two{
+				border:1px solid green;
+				-moz-transform:translate(100px);
+				-webkit-transform:translate(100px);
+				transform:translate(100px);}
+				
+			/*회전*/
+			.three{
+				border:1px solid blue;
+				-moz-transform:rotate(30deg);
+				-webkit-transform:rotate(30deg);
+				transform:rotate(30deg);}
+
+			/*속기타입*/
+			.four{
+				border:1px solid gray;
+				-moz-transform:rotate(30deg) translate(100px) scale(-1, -1);
+				-webkit-transform:rotate(30deg) translate(100px) scale(-1, -1);
+				transform:rotate(30deg) translate(100px) scale(-1, -1);}
+			
+			/*마우스 오버 효과*/
+			/*애니메이션 효과는 원본에 처리*/
+			.five{
+				border:1px solid black;
+				-moz-transition:-moz-transform 0.2s ease-in-out 0s;
+				-webkit-transition:-webkit-transform 0.2s ease-in-out 0s;}
+
+			.five:hover{
+				-moz-transform:rotate(5deg);
+				-webkit-transform:rotate(5deg);}
+			
+		</style>
+
+
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<div class="mainbox"><img src="informationTechnology/images/tf12fetrailers460x228_20120814092052.jpg" width="320" height="136" border="0" alt=""></div>
+
+		<div class="mainbox one"><img src="informationTechnology/images/tf12fetrailers460x228_20120814092052.jpg" width="320" height="136" border="0" alt=""></div>
+
+		<div class="mainbox two"><img src="informationTechnology/images/tf12fetrailers460x228_20120814092052.jpg" width="320" height="136" border="0" alt=""></div>
+
+		<div class="mainbox three"><img src="informationTechnology/images/tf12fetrailers460x228_20120814092052.jpg" width="320" height="136" border="0" alt=""></div>
+
+		<div class="mainbox four"><img src="informationTechnology/images/tf12fetrailers460x228_20120814092052.jpg" width="320" height="136" border="0" alt=""></div>
+
+		<div class="mainbox five"><img src="informationTechnology/images/tf12fetrailers460x228_20120814092052.jpg" width="320" height="136" border="0" alt=""></div>
+
+	</body>
+</html>

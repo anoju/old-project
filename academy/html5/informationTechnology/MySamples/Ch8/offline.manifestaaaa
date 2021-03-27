@@ -1,0 +1,13 @@
+CACHE MANIFEST
+
+# VERSION 10
+
+NETWORK:  ¡¡
+http://robertnyman.com/html5/offline/offline.html
+
+CACHE:¡¡
+offline.html
+base.css
+
+FALLBACK:¡¡
+online.css offline.css

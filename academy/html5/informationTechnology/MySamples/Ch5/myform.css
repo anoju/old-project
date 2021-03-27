@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+form {
+	width : 400px;
+	font : 10pt/30pt 굴림;
+	padding: 20px;
+	}
+
+li {
+	list-style: square url(none);
+}
+
+#cen{
+text-align:center;	
+}

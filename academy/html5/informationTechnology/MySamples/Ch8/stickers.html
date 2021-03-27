@@ -1,0 +1,14 @@
+<!DOCTYPE html> 
+<html manifest="StickyNotes.manifest"> 
+<head> 
+<title>Web SQL Database</title> 
+<link type="text/css" rel="stylesheet" href="stickies.css"> 
+<script type="text/javascript" src="stickies.js"></script> 
+</head> 
+<body> 
+<button id="newNoteButton" onClick="newNote()">New Note</button> 
+<script> 
+document.getElementById("newNoteButton").disabled = !db;
+</script> 
+</body> 
+</html> 

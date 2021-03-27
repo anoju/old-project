@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+	<script type="text/javascript">
+	window.onload = function(){
+        var myElement = document.getElementById("text1")
+		var myText = myElement.firstChild.nodeValue//"가나다라마바사"
+        //length ---> 문자 길이를 정수로
+        alert("length:  " + myText.length)
+        
+        //indexOf ("검색하고 싶은 문자열") ------>정수로 알려줌
+        alert("indexOf('라'):  " + myText.indexOf("라"))
+        
+        //lastIndexOf ("뒤에서 검색하고 싶은 문자열") ------>정수로 알려줌
+        //indexOf, lastIndexOf 두메서드의 공통점.. 해당 문자열이 없으면 -1 정수를 변환
+        var myElement2 = document.getElementById("text2")
+		var myText2 = myElement2.firstChild.nodeValue
+        alert("2문단 lastIndexOf('라'): " + myText2.lastIndexOf("라"))
+		
+		//charAt(정수)---->해당 주소의 문자열
+		alert("charAt(5):  " + myText.charAt(5))
+		
+		//substring(시작번호,-1번째까지 문자출력)
+		alert("substring(2,5): " + myText.substring(2,5))
+		
+		//substr : 해당 번호부터 모두출력
+		alert("substr(4):  " + myText.substr(4))
+		//substr : (시작번호,원하는개수)
+		alert("substr(3,2):  " + myText.substr(3,2))
+		
+		var myElement3 = document.getElementById("text3")
+		var myText3 = myElement3.firstChild.nodeValue
+		
+		alert("문단3 split(',')[1]:  " + myText3.split(",")[1])
+		alert("문단3 join(',')[1]:  " + myText3.split(",").join(""))
+	}
+    </script>
+</head>
+
+<body>
+    <p id="text1">가나다라마바사</p>
+    <p id="text2">가나다라마바라사</p>
+    <p id="text3">a,bcdef,ghi</p>
+</body>
+</html>

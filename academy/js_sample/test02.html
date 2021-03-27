@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>  </title>
+
+		<style type="text/css">
+			body{
+				font-family:"나눔고딕","맑은 고딕";
+				background-color:#176691;
+				color:white;}
+
+			#sidebar{width:98px; height:598px; float:left; border:dotted 1px #FFF; background:#099;}
+			#main{width:400px; height:600px;float:left; background:#9C3}
+			#footer{width:500px;height:100px;clear:both; background:#C00}
+
+
+		</style>
+	</head>
+
+	<body>
+		<h1>문서내의 모든 div의 id속성값을 알아낸다</h1>
+
+		<div id="sidebar">sidebar</div>
+		<div id="main">main</div>
+		<div id="footer">footer</div>
+		
+		<script type="text/javscript">
+			var myElement = document.getElementsByTagName("div")
+			var myAttribute = myElement.getAttribute("id")
+			for (i=0;i< myAttribute.length;i++ )
+			{alert(myAttribute("id")
+			}
+		</script>
+		
+	</body>
+
+</html>

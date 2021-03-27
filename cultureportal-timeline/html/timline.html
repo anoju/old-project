@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title>답변하기</title>
+	<link rel="stylesheet" type="text/css" href="../css/contentPeople.css" />	<!-- people css -->
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css" />
+	<style type="text/css">
+		div.localNavigator{min-height:100px;}
+	</style>
+	<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="../js/people.js"></script>				<!-- people js -->
+	<script type="text/javascript" src="../js/jquery.selectBox.js"></script>	<!-- selectBox js -->
+</head>
+<body>
+	<div class="layoutBody">
+		<div class="wrap">
+			<!-- header -->
+			<div id="head"></div>
+			<!-- //header -->
+
+			<!-- LNB -->
+			<div class="localNavigator"></div>
+			<!-- //LNB -->
+				
+			<!-- peple contents -->
+			<div id="contentWrap">
+				<div class="over"></div>
+				<div class="head">
+					<h3>답변하기<span>답변이 필요한 Q&amp;A입니다. 문화정보를 나눠주세요.</span></h3>
+					<span class="location"><span>홈</span><span>문화인</span><strong>답변하기</strong></span>				
+				</div>
+
+				<!-- searchBox -->
+				<div class="searchBox">
+					<form action="">					
+						<div class="question">
+							<h4><img src="../images/people/h4question.png" alt="질문하기" /></h4>
+							<div>
+								<select title="분류선택" class="txtSel">
+									<option>분류</option>
+									<option>미술/디자인</option>
+									<option>건축</option>
+									<option>문학</option>
+									<option>음악</option>
+									<option>사진</option>
+									<option>공연/전시</option>
+									<option>문화예술자료</option>
+									<option>전통문양</option>
+									<option>전통건축/공예</option>
+									<option>전통음악/무용</option>
+									<option>전통예절/의례</option>
+									<option>전통놀이</option>
+									<option>문화재</option>
+									<option>민속신앙</option>
+									<option>우리말</option>
+									<option>영화</option>
+									<option>애니메이션/만화</option>
+									<option>게임/캐릭터</option>
+									<option>방송/광고</option>
+									<option>패션</option>
+									<option>소프트웨어</option>
+									<option>문화UCC</option>
+									<option>뉴스</option>
+									<option>리포트/칼럼</option>
+									<option>교육/행사</option>
+									<option>스포츠</option>
+									<option>레포츠</option>
+									<option>체육정보</option>
+									<option>관광</option>
+									<option>도서</option>
+									<option>문화정책</option>
+									<option>기타</option>
+								</select>
+								<select title="지역선택" class="txtSel">
+									<option>지역값</option>
+									<option>서울특별시</option>
+									<option>부산광역시</option>
+									<option>대구광역시</option>
+									<option>인천광역시</option>
+									<option>광주광역시</option>
+									<option>대전광역시</option>
+									<option>울산광역시</option>
+									<option>강원도</option>
+									<option>경기도</option>
+									<option>경상남도</option>
+									<option>경상북도</option>
+									<option>전라남도</option>
+									<option>전라북도</option>
+									<option>제주특별자치도</option>
+									<option>충청남도</option>
+									<option>충청북도</option>
+									<option>세종특별자치시</option>
+									<option>기타</option>
+								</select>
+								<span class="questionIpt">
+									<input type="text" title="질문 입력하기"/>
+									<input type="image" alt="검색" src="../images/people/btnQuestion.png" />
+								</span>
+							</div>
+						</div>
+						<div class="answer">
+							<h4><img src="../images/people/h4answer.png" alt="답변하기" /></h4>
+							<div class="answerIpt">
+								<input type="text" title="답변 입력하기"/>
+								<input type="image" alt="검색" src="../images/people/btnAnswer.png" />
+							</div>
+							<p class="more"><a href="#"><img src="../images/people/btnMore.png" alt="더보기" /></a></p>
+						</div>
+					</form>
+				</div>
+				<!-- //searchBox -->
+
+				<!-- plCon -->
+				<div class="plCon">
+					
+					<form action="" class="search01">
+						<table summary="지역별 보기에서 지역을 선택하실 수 있습니다.">
+							<caption>지역별 보기</caption>
+							<colgroup>
+								<col style="width:13%"/>
+								<col style="width:87%"/>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">카테고리</th>
+									<td>
+										<label><input type="radio" /> 분야별보기</label>
+										<label><input type="radio" /> 지역별보기</label>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">지역</th>
+									<td>
+										<ul class="regionSelect">
+											<li><label><input type="checkbox" /> 전체</label></li>
+											<li><label><input type="checkbox" /> 서울</label></li>
+											<li><label><input type="checkbox" /> 부산</label></li>
+											<li><label><input type="checkbox" /> 대구</label></li>
+											<li><label><input type="checkbox" /> 인천</label></li>
+											<li><label><input type="checkbox" /> 광주</label></li>
+											<li><label><input type="checkbox" /> 대전</label></li>
+											<li><label><input type="checkbox" /> 울산</label></li>
+											<li><label><input type="checkbox" /> 세종</label></li>
+											<li><label><input type="checkbox" /> 경기</label></li>
+											<li><label><input type="checkbox" /> 강원</label></li>
+											<li><label><input type="checkbox" /> 충북</label></li>
+											<li><label><input type="checkbox" /> 충남</label></li>
+											<li><label><input type="checkbox" /> 전북</label></li>
+											<li><label><input type="checkbox" /> 전남</label></li>
+											<li><label><input type="checkbox" /> 경북</label></li>
+											<li><label><input type="checkbox" /> 경남</label></li>
+											<li><label><input type="checkbox" /> 제주</label></li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="search">검색어</label></th>
+									<td>
+										<input type="text" title="검색어 입력" id="search" class="inputTxt"/>
+										<input type="image" alt="검색" src="../images/people/btnSearch.gif" class="search"/>
+										<span>* 이곳에 검색어를 입력하세요.</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<span class="lt"></span><span class="rt"></span><span class="rb"></span><span class="lb"></span>
+					</form>
+
+					<div class="plSort mb">
+						<div class="sort">
+							<p>전체 <span>1,955</span>건</p>
+							<ul>
+								<li class="on"><a href="#">최신순</a></li>
+								<li><a href="#">조회순</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="timeview">
+						<div class="timeline">
+							<div class="line"></div>
+							<img src="../images/people/timelineEnd.gif" alt="" />
+						</div>
+						
+						<div id="time" class="timeviewList2">
+							<ul>
+								<li>
+									<div>
+										<p class="tit"><a href="#">문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?</a></p>
+										<p>
+											<span class="questionId">ironman</span>
+											<span class="date">2013.06.25</span>
+										</p>
+									</div>
+									<span class="state"></span>
+									<span class="bgArrow"></span>
+									<p class="bgBottom"></p>
+								</li>
+								<li>
+									<div>
+										<p class="tit"><a href="#">문양의 정의는 무엇인가요?</a></p>
+										<p>
+											<span class="questionId">ironman</span>
+											<span class="date">2013.06.25</span>
+										</p>
+									</div>
+									<span class="state"></span>
+									<span class="bgArrow"></span>
+									<p class="bgBottom"></p>
+								</li>
+								<li>
+									<div>
+										<p class="tit"><a href="#">문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?</a></p>
+										<p>
+											<span class="questionId">ironman</span>
+											<span class="date">2013.06.25</span>
+										</p>
+									</div>
+									<span class="state"></span>
+									<span class="bgArrow"></span>
+									<p class="bgBottom"></p>
+								</li>
+								<li>
+									<div>
+										<p class="tit"><a href="#">문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?</a></p>
+										<p>
+											<span class="questionId">ironman</span>
+											<span class="date">2013.06.25</span>
+										</p>
+									</div>
+									<span class="state"></span>
+									<span class="bgArrow"></span>
+									<p class="bgBottom"></p>
+								</li>
+								<li>
+									<div>
+										<p class="tit"><a href="#">문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?</a></p>
+										<p>
+											<span class="questionId">ironman</span>
+											<span class="date">2013.06.25</span>
+										</p>
+									</div>
+									<span class="state"></span>
+									<span class="bgArrow"></span>
+									<p class="bgBottom"></p>
+								</li>
+								<li>
+									<div>
+										<p class="tit"><a href="#">문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?</a></p>
+										<p>
+											<span class="questionId">ironman</span>
+											<span class="date">2013.06.25</span>
+										</p>
+									</div>
+									<span class="state"></span>
+									<span class="bgArrow"></span>
+									<p class="bgBottom"></p>
+								</li>
+								<li>
+									<div>
+										<p class="tit"><a href="#">문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?</a></p>
+										<p>
+											<span class="questionId">ironman</span>
+											<span class="date">2013.06.25</span>
+										</p>
+									</div>
+									<span class="state"></span>
+									<span class="bgArrow"></span>
+									<p class="bgBottom"></p>
+								</li>
+								<li>
+									<div>
+										<p class="tit"><a href="#">문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?</a></p>
+										<p>
+											<span class="questionId">ironman</span>
+											<span class="date">2013.06.25</span>
+										</p>
+									</div>
+									<span class="state"></span>
+									<span class="bgArrow"></span>
+									<p class="bgBottom"></p>
+								</li>
+								<li>
+									<div>
+										<p class="tit"><a href="#">문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?</a></p>
+										<p>
+											<span class="questionId">ironman</span>
+											<span class="date">2013.06.25</span>
+										</p>
+									</div>
+									<span class="state"></span>
+									<span class="bgArrow"></span>
+									<p class="bgBottom"></p>
+								</li>
+								<li>
+									<div>
+										<p class="tit"><a href="#">문양의 정의는 무엇인가요?</a></p>
+										<p>
+											<span class="questionId">ironman</span>
+											<span class="date">2013.06.25</span>
+										</p>
+									</div>
+									<span class="state"></span>
+									<span class="bgArrow"></span>
+									<p class="bgBottom"></p>
+								</li>
+								<li>
+									<div>
+										<p class="tit"><a href="#">문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?</a></p>
+										<p>
+											<span class="questionId">ironman</span>
+											<span class="date">2013.06.25</span>
+										</p>
+									</div>
+									<span class="state"></span>
+									<span class="bgArrow"></span>
+									<p class="bgBottom"></p>
+								</li>
+								<li>
+									<div>
+										<p class="tit"><a href="#">문양의 정의는 무엇인가요?</a></p>
+										<p>
+											<span class="questionId">ironman</span>
+											<span class="date">2013.06.25</span>
+										</p>
+									</div>
+									<span class="state"></span>
+									<span class="bgArrow"></span>
+									<p class="bgBottom"></p>
+								</li>
+								<li>
+									<div>
+										<p class="tit"><a href="#">문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?문양의 정의는 무엇인가요?</a></p>
+										<p>
+											<span class="questionId">ironman</span>
+											<span class="date">2013.06.25</span>
+										</p>
+									</div>
+									<span class="state"></span>
+									<span class="bgArrow"></span>
+									<p class="bgBottom"></p>
+								</li>
+								<li>
+									<div>
+										<p class="tit"><a href="#">문양의 정의는 무엇인가요?</a></p>
+										<p>
+											<span class="questionId">ironman</span>
+											<span class="date">2013.06.25</span>
+										</p>
+									</div>
+									<span class="state"></span>
+									<span class="bgArrow"></span>
+									<p class="bgBottom"></p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="pageNav">
+						<a href="#" class="first"><span></span>처음</a>
+						<a href="#" class="prev"><span></span>이전</a>    
+						<span>
+							<a href="#" class="on">1</a>
+							<a href="#">2</a>								
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#">6</a>
+							<a href="#">7</a>
+							<a href="#">8</a>
+							<a href="#">9</a>
+							<a href="#">10</a>
+						</span>
+						<a href="#" class="next"><span></span>다음</a>
+						<a href="#" class="last"><span></span>끝</a>    
+					</div>					
+				</div>
+				<!-- //plCon -->
+
+				<!-- plAside -->
+				<div class="plAside"></div>
+				<!-- plAside -->
+			</div>
+			<!-- //peple contents -->
+		</div>
+	</div>
+	<div id="foot" class="wrap"></div>	
+
+	<script type="text/javascript">
+		var lSum = 0;
+		var rSum = 0;
+
+		$(function(){
+			$(window).load(function(){
+				positionSet()
+			})		
+		})
+
+		function positionSet(){		
+			$('#time').css({'position':'relative'})
+			$.each($('#time ul li'),function(){
+				if(lSum <= rSum){
+					$(this).addClass('left');
+					$(this).css({'position':'absolute','left':'0','top':(lSum+20)});
+					lSum += ($(this).outerHeight())+20;
+					$('#time').css({'height':(lSum+50)})
+
+				}else if(lSum > rSum){
+					$(this).addClass('right');
+					//if(rSum == 0){
+					//	$(this).css({'position':'absolute','right':'0','top':(rSum+20)});
+					//}else{
+						$(this).css({'position':'absolute','right':'0','top':(rSum+40)});
+					//}
+					rSum += ($(this).outerHeight())+20;	
+					$('#time').css({'height':(rSum+50)})
+				}
+			});
+			
+		}
+	</script>
+
+</body>
+</html>

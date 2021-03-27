@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script language="javascript"> 
+function slide(Id, interval, to) { 
+    var obj = document.getElementById(Id); 
+    var H, step = 5; 
+
+    if (obj == null) return; 
+    if (to == undefined) { // user clicking 
+        if (obj._slideStart == true) return; 
+        if (obj._expand == true) { 
+            to = 0; 
+            obj.style.overflow = "hidden"; 
+        } else { 
+            slide.addId(Id); 
+            for(var i=0; i < slide.objects.length; i++) { 
+                if (slide.objects[i].id != Id && slide.objects[i]._expand == true) { 
+                    slide(slide.objects[i].id); 
+                } 
+            } 
+
+            obj.style.height = ""; 
+            obj.style.overflow = ""; 
+            obj.style.display = "block"; 
+            to = obj.offsetHeight; // 이거이거 
+            obj.style.overflow = "hidden"; 
+            obj.style.height = "1px"; 
+        } 
+        obj._slideStart = true; 
+    } 
+  
+    step            = ((to > 0) ? 1:-1) * step; 
+    interval        = ((interval==undefined)?1:interval); 
+
+    obj.style.height = (H=((H=(isNaN(H=parseInt(obj.style.height))?0:H))+step<0)?0:H+step)+"px";  
+  
+    if (H <= 0) { 
+        obj.style.display = "none"; 
+        obj.style.overflow = "hidden"; 
+        obj._expand = false; 
+        obj._slideStart = false; 
+    } else if (to > 0 && H >= to) { 
+        obj.style.display = "block"; 
+        obj.style.overflow = "visible"; 
+        obj.style.height = H + "px"; 
+        obj._expand = true; 
+        obj._slideStart = false; 
+    } else { 
+        setTimeout("slide('"+Id+"' , "+interval+", "+to+");", interval); 
+    } 
+} 
+slide.objects = new Array(); 
+slide.addId = function(Id) 
+{ 
+    for (var i=0; i < slide.objects.length; i++) { 
+        if (slide.objects[i].id == Id) return true; 
+    } 
+    slide.objects[slide.objects.length] = document.getElementById(Id); 
+} 
+
+</script> 
+
+<style> 
+.menu { 
+    cursor:hand; 
+    width:87px; 
+} 
+.submenu { 
+    width:87px; 
+ cursor:hand; 
+    /*padding-left:4px;*/ 
+    display:none; 
+ font-family: "돋움", "Verdana"; 
+ font-size: 8pt; 
+ font-weight:bold; 
+ line-height: 15px; 
+ color:988a43 
+} 
+</style> 
+
+  
+
+<div class="menu" onmouseover="slide('sub1');" align="left" >1번 메뉴</div> 
+<div id="sub1" class="submenu" onmouseout="slide('sub1');" align="left"> 
+    <div onClick="location.href='http://www.naver.com'">ㆍ111</div> 
+ <div onClick="location.href='http://www.naver.com'">ㆍ222</div> 
+ <div onClick="location.href='http://www.naver.com'">ㆍ333</div> 
+ <div onClick="location.href='http://www.naver.com'">ㆍ4442</div> 
+ <div onClick="location.href='http://www.naver.com'">ㆍ555</div> 
+</div> 
+
+<div class="menu" onmouseover="slide('sub2');" align="left">2번 메뉴</div> 
+<div id="sub2" class="submenu" onmouseout="slide('sub2');" align="left"> 
+    <div onClick="location.href='http://www.naver.com'">ㆍ222</div> 
+    <div onClick="location.href='http://www.naver.com'">ㆍ333</div> 
+ <div onClick="location.href='http://www.naver.com'">ㆍ444</div> 
+</div> 
+
+<div class="menu" onmouseover="slide('sub3');" align="left">3번 메뉴</div> 
+<div id="sub3" class="submenu" onmouseout="slide('sub3');" align="left">  
+ <div onClick="location.href='http://www.naver.com'">ㆍ555</div> 
+ <div onClick="location.href='http://www.naver.com'">ㆍ666</div> 
+ <div onClick="location.href='http://www.naver.com'">ㆍ777</div> 
+</div> 
+
+<div class="menu" onmouseover="slide('sub4');" align="left" >4번 메뉴</div> 
+<div id="sub4" class="submenu" onmouseout="slide('sub4');" align="left"> 
+    <div onClick="location.href='http://www.naver.com'">ㆍ888</div> 
+ <div onClick="location.href='http://www.naver.com'">ㆍ999</div> 
+ <div onClick="location.href='http://www.naver.com'">ㆍ000</div> 
+ <div onClick="location.href='http://www.naver.com'">ㆍ1234</div>        
+</div> 
+
+  
+
+
+</div> 
+
+</body>
+</html>

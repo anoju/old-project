@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>  </title>
+
+		<!-- 외부 CSS 링크-->
+		<link rel="stylesheet" type="text/css" href="#" />
+
+		<style type="text/css">
+			body{
+				font-family:"나눔고딕";
+				color: white;
+				background-color:#176691;
+				}
+			.classBefore{
+				background:blue;
+				border:#F00 solid 2px;
+				margin-bottom:10px;
+				width:200px;
+				height:100px;
+				}
+			.classAfter{
+				background:orange;
+				border:yellow dotted 1px;
+				margin-bottom:10px;
+				width:200px;
+				height:100px;
+				}
+
+		</style>
+
+		<script type="text/javascript" src="#">	//스크립트 링크	</script>
+
+		
+	</head>
+
+	<body>
+		<h1>문서내의 모든 div요소중 class속성을 다른 class속성으로 변경한다</h1>
+		<div class="classBefore">
+		원래는 파란색배경 붉은색 솔리드 2px 라인<br />
+		변경후는 오랜지색배경 노란색 도트 1px 라인
+		</div>
+		<div class="classBefore">
+		원래는 파란색배경 붉은색 솔리드 2px 라인<br />
+		변경후는 오랜지색배경 노란색 도트 1px 라인
+		</div>
+		<div class="classBefore">
+		원래는 파란색배경 붉은색 솔리드 2px 라인<br />
+		변경후는 오랜지색배경 노란색 도트 1px 라인
+		</div>
+
+		<script type="text/javascript">
+			var myChange = document.getElementsByTagName("div")
+			for (var find = 0; myChange.length ;find++ ){
+				var titletext = myChange[find].getAttribute("class")
+				if (titletext){
+					myChange[find].setAttribute("class","classAfter")
+					alert(myChange[find].getAttribute("class"))
+				}
+			}
+		</script>
+
+
+		
+	</body>
+
+</html>

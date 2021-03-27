@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<title>Untitled Document</title>
+<style type="text/css">
+#apDiv1 { position:absolute; left:26px; top:91px; width:252px; height:278px; z-index:1; background-color: #CC6633; }
+#apDiv2 { position:absolute; left:26px; top:91px; width:252px; height:278px; z-index:2; background-color: #6633CC; }
+#apDiv3 { position:absolute; left:26px; top:91px; width:252px; height:278px; z-index:3; background-color: #CCFFCC; }
+</style>
+<script type="text/javascript">
+
+	window.onload = function(){		
+		for(var i=1; i<4; i++){
+			var tab = document.getElementById("tab0"+i)
+			
+			tab.onmousedown = function(){
+				this.src='images/topmenu0'+ this.id.charAt(4)+'_ov.gif'
+				document.getElementById("apDiv"+this.id.charAt(4)).style.display = "block";
+				for(var k=1; k<4; k++){
+					if(document.getElementById("tab0"+k)!=this){
+						document.getElementById("tab0"+k).src='images/topmenu0'+ document.getElementById("tab0"+k).id.charAt(4)+'.gif'
+						document.getElementById("apDiv"+k).style.display = "none";
+					}
+				}	
+			}	
+		}
+	}
+
+</script>
+</head>
+
+<body>
+<div> <img src="images/topmenu01.gif" width="124" height="43" id="tab01" /> <img src="images/topmenu02.gif" width="108" height="43" id="tab02" /> <img src="images/topmenu03.gif" width="90" height="43" id="tab03" />
+  <div id="apDiv1"></div>
+  <div id="apDiv2"></div>
+  <div id="apDiv3"></div>
+</div>
+</body>
+</html>

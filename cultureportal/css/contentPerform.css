@@ -1,0 +1,296 @@
+@charset "utf-8";
+@import url('/css/default.css');
+@import url('/css/layout.css');
+@import url('/css/contentCommon.css');
+
+p.event01 { position:relative; margin-bottom:30px; }
+
+form.sort01 { float:right; margin-bottom:10px; }
+
+ul.galleryList01 { clear:both; width:747px; margin:0 0 15px -22px; border-top:2px solid #6b6b6b; border-bottom:1px solid #eaeaea; overlfow:hidden; }
+ul.galleryList01 li { float:left; width:162px; height:320px; margin:0 0 -1px; padding:31px 1px 0 23px; border-top:1px solid #eaeaea; border-bottom:1px solid #eaeaea; text-align:center; }
+ul.galleryList01 a { display:inline-block; margin-bottom:13px; color:#2f2f2f; font-family:NGBold, "돋움", Dotum; }
+ul.galleryList01 a span { color:#888; font-family:NGNormal; font-size:.9em; }
+ul.galleryList01 a img { width:162px; height:203px; vertical-align:top; }
+ul.galleryList01 li > span { clear:both; display:inline-block; width:100%; }
+
+div.performInfo { position:relative; min-height:312px; margin:15px 0 20px; }
+div.performInfo > img { position:absolute; top:50%; left:0; width:225px; height:282px; margin-top:-141px; }
+div.performInfo dl { margin-left:256px; padding-top:15px; overflow:hidden; }
+div.performInfo dt { float:left; width:65px; padding-left:10px; color:#666; font-family:NGBold, "돋움", Dotum; background:url('/images/event/bgDot02.gif') no-repeat 0 50%; }
+div.performInfo dd { float:left; width:370px; margin-bottom:15px; padding-left:15px; background:url('/images/common/bg/bgDotLineV01.gif') no-repeat 0 5px; }
+div.performInfo dd a { color:#666; }
+
+ul.performTab { margin-bottom:25px; overflow:hidden; }
+ul.performTab li { float:left; }
+ul.performTab a { display:block; position:relative; width:181px; height:39px; height:overflow:hidden; }
+ul.performTab a.tab04 { width:182px; }
+ul.performTab a span { position:absolute; top:0; left:0; width:100%; height:100%; background:url('/images/perform/bgTabPerform.gif') no-repeat 0 0; }
+ul.performTab a.tab02 span { background-position:-181px 0; }
+ul.performTab a.tab03 span { background-position:-362px 0; }
+ul.performTab a.tab04 span { background-position:-543px 0; }
+ul.performTab a.tab01.on span { background-position:0 -40px; }
+ul.performTab a.tab02.on span { background-position:-181px -40px; }
+ul.performTab a.tab03.on span { background-position:-362px -40px; }
+ul.performTab a.tab04.on span { background-position:-543px -40px; }
+
+div.performCont { clear:both; margin-bottom:15px; padding-bottom:25px; border-bottom:1px solid #eaeaea; }
+
+div.epilogue { margin-bottom:40px; overflow:hidden; }
+div.epilogue img { float:left; width:171px; height:200px; margin:0 30px 0 5px; }
+div.epilogue h4 { margin:8px 0 15px; color:#333; font-size:1.7em; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+div.epilogue h4 a { color:#333; }
+div.epilogue h4 span { display:block; color:#41a0ff; font-size:.8em; }
+div.epilogue p { margin-bottom:20px; }
+div.epilogue p a { color:#888; }
+div.epilogue ul li { margin-bottom:10px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; line-height:1; }
+div.epilogue ul a { color:#888; }
+div.epilogue ul a:hover,
+div.epilogue ul a:active,
+div.epilogue ul a:focus { text-decoration:underline; }
+
+form.boardSearch01 { float:right; margin-bottom:10px; }
+form.boardSearch01 > * { float:left; }
+form.boardSearch01 span { width:180px; height:20px; margin-left:4px; border-width:1px; border-style:solid; border-color:#cbcbcb #e4e4e4 #e4e4e4 #cbcbcb; }
+form.boardSearch01 span input { float:left; height:20px; width:145px; border:0; padding:0 7px; font:normal 1em/1.45 "나눔고딕", NanumGothic, NGNormal, "돋움", Dotum; line-height:20px; }
+form.boardSearch01 span button { float:right; margin:3px 5px 0 0; }
+
+div.selectBox01 { margin-bottom:15px; padding-bottom:10px; border-bottom:1px solid #eaeaea; overflow:hidden; }
+
+div.discountHead { margin-bottom:30px; background-color:#474e60; overflow:hidden; }
+div.discountHead div { float:left; width:470px; height:204px; margin-right:20px; background:url('/images/perform/bgDiscountHead.gif') no-repeat 0 0; }
+div.discountHead div h4 { margin:35px 0 25px 45px; color:#464646; font-size:2em; }
+div.discountHead div h4 span { color:#41a0ff; }
+div.discountHead div p { margin-left:45px; }
+div.discountHead div p b { color:#333; font-weight:normal; font-family:NGBold, "돋움", Dotum; }
+div.discountHead > p { margin:25px 20px 20px 0; color:#b5b8bf; font-family:NGBold, "돋움", Dotum; }
+div.discountHead > a { display:inline-block; margin-right:6px; padding-right:8px; color:#fff; font-size:.9em; background:url('/images/common/bg/bgMore03.gif') no-repeat 100% 50%; line-height:1.1; vertical-align:top; }
+
+ul.performList01 { clear:both; margin:-15px 0 15px; }
+ul.performList01 li { position:relative; padding:28px 0 30px; border-bottom:1px solid #eaeaea; overflow:hidden; }
+ul.performList01 li:first-child { padding-top:8px; }
+ul.performList01 li span:first-child { float:left; position:relative; margin-right:30px; }
+ul.performList01 li span:first-child img { width:117px; height:149px; margin-top:2px; vertical-align:top; }
+ul.performList01 li span:first-child span { position:absolute; top:0; right:4px; width:51px; height:41px; color:#fff; font-size:.8em; background:url('/images/perform/bgRate.png') no-repeat 0 0; line-height:2.6em; text-align:center; }
+ul.performList01 h4 { margin-bottom:14px; color:#333; font-size:1.2em; }
+ul.performList01 dl { width:505px; margin-bottom:10px; overflow:hidden; }
+ul.performList01 dt { float:left; width:55px; margin-bottom:4px; color:#666; font-family:NGBold, "돋움", Dotum; }
+ul.performList01 dt.justify { letter-spacing:4px; }
+ul.performList01 dd { float:left; width:450px; margin-bottom:4px; }
+ul.performList01 span.status { position:absolute; bottom:85px; right:0; }
+
+div.discountInfo { position:relative; min-height:410px; margin:0 0 15px; padding:15px 0; border-bottom:1px solid #eaeaea; }
+div.discountInfo > img { position:absolute; top:50%; left:0; width:302px; height:380px; margin-top:-190px; }
+div.discountInfo dl { margin-left:333px; padding-top:15px; overflow:hidden; }
+div.discountInfo dt { float:left; width:95px; padding-left:10px; color:#666; font-family:NGBold, "돋움", Dotum; background:url('/images/event/bgDot02.gif') no-repeat 0 50%; }
+div.discountInfo dd { float:left; width:270px; margin-bottom:15px; padding-left:15px; background:url('/images/common/bg/bgDotLineV01.gif') no-repeat 0 5px; }
+div.discountInfo dd a { color:#666; }
+div.discountInfo dd > span { display:block; }
+div.discountInfo dd > span strong { color:#fe9619; font-family:NGBold, "돋움", Dotum; }
+div.discountInfo dd > span span { text-decoration:line-through; }
+
+ul.performList02 { clear:both; margin:-15px 0 15px; }
+ul.performList02 li { position:relative; padding:28px 0 30px; border-bottom:1px solid #eaeaea; overflow:hidden; }
+ul.performList02 li:first-child { padding-top:8px; }
+ul.performList02 li span:first-child { float:left; position:relative; margin-right:30px; }
+ul.performList02 li span:first-child img { width:117px; height:149px; margin-top:2px; vertical-align:top; }
+ul.performList02 h4 { margin-bottom:14px; color:#333; font-size:1.2em; }
+ul.performList02 dl { width:505px; margin-bottom:10px; overflow:hidden; }
+ul.performList02 dt { float:left; width:95px; margin-bottom:4px; color:#666; font-family:NGBold, "돋움", Dotum; }
+ul.performList02 dd { float:left; width:410px; margin-bottom:4px; }
+ul.performList02 span.status { position:absolute; bottom:85px; right:0; }
+
+div.relayHead { position:relative; margin-bottom:30px; overflow:hidden; }
+div.relayHead h4 { float:right; }
+div.relayHead ul.function { float:none; margin:15px 0; overflow:hidden; }
+div.relayHead ul.function li { float:left; }
+div.relayHead ul.function li.snsTwitter { margin-left:0; }
+div.relayHead ul.function li.snsFacebook,
+div.relayHead ul.function li.snsMe2day,
+div.relayHead ul.function li.snsGoogle { margin-left:4px; }
+div.relayHead ul.function li.snsTwitter a,
+div.relayHead ul.function li.snsFacebook a,
+div.relayHead ul.function li.snsMe2day a,
+div.relayHead ul.function li.snsGoogle a { display:block; position:relative; width:15px; height:15px; overflow:hidden; }
+div.relayHead ul.function li a span { position:absolute; top:0; left:0; width:100%; height:100%; background:url('/images/common/bg/bgFunction.gif') no-repeat 0 0; }
+div.relayHead ul.function li.snsFacebook a span { background-position:-16px 0; }
+div.relayHead ul.function li.snsMe2day a span { background-position:0 -16px; }
+div.relayHead ul.function li.snsGoogle a span { background-position:-16px -16px; }
+div.relayHead p { margin-bottom:50px; font-family:NGBold, "돋움", Dotum; }
+div.relayHead b { display:block; margin-bottom:13px; color:#333; font-size:2.6em; }
+div.relayHead div.discount { padding:28px 30px 25px; border:1px solid #e7e7e7; background-color:#f9f9f9; }
+div.relayHead div.discount h5 { margin-bottom:18px; color:#333; font-size:1.2em; }
+div.relayHead div.discount ol { overflow:hidden; }
+div.relayHead div.discount li { position:relative; height:47px; padding-left:34px; font-family:NGBold, "돋움", Dotum; line-height:24px; }
+div.relayHead div.discount li > span { position:absolute; top:0; left:0; width:23px; height:24px; overflow:hidden; }
+div.relayHead div.discount li span span { position:absolute; top:0; left:0; width:100%; height:100%; background:url('/images/perform/bgRelay.gif') no-repeat 0 0; }
+div.relayHead div.discount li.step01 { float:left; width:252px; margin-right:20px; padding-right:20px; border-right:1px solid #e8e8e8; }
+div.relayHead div.discount li.step01 span span { background-position:-129px -43px; }
+div.relayHead div.discount li.step02 { clear:left; float:left; width:252px; margin-right:20px; padding-right:20px; border-right:1px solid #e8e8e8; line-height:1.4; }
+div.relayHead div.discount li.step02 span span { background-position:-153px -43px; }
+div.relayHead div.discount li.step02 a { padding-right:7px; color:#888; font-size:.9em; font-weight:bold; font-family:"돋움", Dotum; background:url('/images/perform/bgMore01.gif') no-repeat 100% 50%; text-decoration:underline; letter-spacing:-1px; }
+div.relayHead div.discount li.step03 { margin-left:326px; }
+div.relayHead div.discount li.step03 span span { background-position:-177px -43px; }
+div.relayHead div.discount li.step04 { margin-left:326px; line-height:1.4; }
+div.relayHead div.discount li.step04 span span { background-position:-201px -43px; }
+div.relayHead div.notice { margin-top:-1px; padding:18px 30px; border:1px solid #e7e7e7; overflow:hidden; }
+div.relayHead div.notice h5 { float:left; width:76px; color:#424242; font-size:1.1em; }
+div.relayHead div.notice ul { padding-left:13px; border-left:1px solid #e9e9e9; font-size:.9em; }
+div.relayHead div.notice li { margin-bottom:4px; padding-left:9px; background:url('/images/perform/bgDot01.gif') no-repeat 0 50%; }
+
+div.relayTitle { padding-top:13px; background:url('/images/perform/bgRelay.gif') no-repeat 0 0; }
+div.relayTitle.title02 { background-position:0 -14px; }
+div.relayTitle.title03 { margin:20px 1px 0 2px; background-position:0 -28px; }
+div.relayTitle > div { padding:23px 21px 28px; border-left:1px solid #e7e7e7; border-right:1px solid #e7e7e7; background-color:#fff; overflow:hidden; }
+div.relayTitle div div { float:left; position:relative; }
+div.relayTitle h4 { margin:2px 0 2px 57px; color:#333; font-size:1.2em; }
+div.relayTitle h4 > span { position:absolute; top:0; left:0; width:42px; height:42px; }
+div.relayTitle h4 span span { position:absolute; top:0; left:0; width:100%; height:100%; background:url('/images/perform/bgRelay.gif') no-repeat 0 -43px; }
+div.relayTitle.title02 h4 span span { background-position:-43px -43px; }
+div.relayTitle.title03 h4 span span { background-position:-86px -43px; }
+div.relayTitle p { margin-left:57px; font-family:NGBold, "돋움", Dotum; }
+div.relayTitle form { float:right; margin-top:19px; }
+
+div.propose { height:115px; padding:30px 0; border:1px solid #e7e7e7; background-color:#f9f9f9; overflow:hidden; }
+div.propose div { float:left; width:411px; height:115px; margin-left:30px; border-right:1px solid #d2d2d2; font-size:.9em; }
+div.propose h5 { margin:10px 0 15px; }
+div.propose dl { float:left; height:101px; padding:14px 0 0 29px; border-left:1px solid #fff; color:#666; line-height:1.6; }
+div.propose dt { float:left; width:65px; font-family:NGBold, "돋움", Dotum; }
+div.propose dd { padding-left:10px; background:url('/images/common/bg/bgBarV03.gif') no-repeat 0 4px; overflow:hidden; }
+div.propose span.button { float:right; margin:-30px 177px 0 0; }
+
+ul.propose { margin:-1px 0 20px; padding:28px 0; border:1px solid #efefef; overflow:hidden; }
+ul.propose li { float:left; width:135px; height:200px; margin-left:47px; text-align:center; }
+ul.propose li:first-child { margin-left:21px; }
+ul.propose img { display:block; width:133px; height:101px; border:1px solid #9d9d9d; }
+ul.propose h6 { margin:5px 0 10px; color:#444; }
+ul.propose p { margin-bottom:10px; color:#777; font-size:.9em; letter-spacing:-1px; }
+
+div.functionRelay { float:right; }
+div.functionRelay > * { float:left; }
+div.functionRelay form { margin-right:4px; }
+
+h5.discount { clear:both; margin-top:-1px; border:1px solid #e6e6e6; }
+h5.discount a { display:block; height:35px; color:#333; font-size:1.2em; font-family:NGBold, "돋움", Dotum; background:#fdfdfd url('/images/perform/bgClose01.gif') no-repeat 694px 50%; line-height:35px; text-align:center; }
+h5.discount a.off { background:#fdfdfd url('/images/perform/bgOpen01.gif') no-repeat 694px 50%; }
+
+ul.discount { margin-top:-1px; padding:36px 25px 26px; border:1px solid #e6e6e6; overflow:hidden; }
+ul.discount.off { display:none; }
+ul.discount li { float:left; width:162px; height:303px; margin:0 31px; text-align:center; }
+ul.discount li.noResult { width:613px !important; }
+ul.discount a { display:inline-block; margin-bottom:5px; color:#2f2f2f; font-family:NGBold, "돋움", Dotum; }
+ul.discount a:first-child { margin-bottom:10px; }
+ul.discount img { width:162px; height:203px; }
+ul.discount span { display:block; }
+
+div.eventHead { height:204px; margin-bottom:30px; padding-left:35px; background:url('/images/perform/bgEventHead.gif') no-repeat 0 0; overflow:hidden; }
+div.eventHead h4 { margin:30px 0 5px; color:#333; font-size:2em; }
+div.eventHead h4 span { color:#41a0ff; }
+div.eventHead p { margin-bottom:10px; color:#777; font-family:NGBold, "돋움", Dotum; }
+div.eventHead h4 + p { margin-bottom:15px; color:#888; font-size:1.1em; font-family:NGNormal, "돋움", Dotum; }
+div.eventHead a { display:inline-block; margin-right:6px; padding-right:8px; color:#888; font-size:.9em; background:url('/images/perform/bgMore01.gif') no-repeat 100% 50%; line-height:1.1; vertical-align:top; }
+
+div.orgListHead { margin-bottom:30px; background-color:#474e60; overflow:hidden; }
+div.orgListHead div { float:left; width:470px; height:175px; margin-right:20px; background:url('/images/perform/bgOrgListHead.gif') no-repeat 0 0; }
+div.orgListHead div h4 { margin:35px 0 25px 45px; color:#464646; font-size:2em; }
+div.orgListHead div h4 span { color:#41a0ff; }
+div.orgListHead div p { margin-left:45px; }
+div.orgListHead div p b { color:#333; font-weight:normal; font-family:NGBold, "돋움", Dotum; }
+div.orgListHead > p { margin:18px 20px 10px 0; color:#b5b8bf; font-family:NGBold, "돋움", Dotum; }
+div.orgListHead > a { display:inline-block; margin-right:6px; padding-right:8px; color:#fff; font-size:.9em; background:url('/images/common/bg/bgMore03.gif') no-repeat 100% 50%; line-height:1.1; vertical-align:top; }
+
+ul.orgList { width:721px; margin:0 0 30px 2px; padding:1px 0 0 1px; background:#fdfdfd url('/images/perform/bgOrgList.gif') repeat 1px 1px; overlfow:hidden; }
+ul.orgList li { float:left; width:104px; height:90px; margin:-1px 0 0 -1px; }
+ul.orgList img { vertical-align:top; }
+
+h5.schedule { color:#444; font-size:1.5em; }
+
+dl.schedule { float:left; margin:5px 0 15px; }
+dl.schedule dt { float:left; margin-right:5px; }
+dl.schedule dd { float:left; margin-right:10px; }
+
+div.schedule { float:right; position:relative; width:100px; text-align:center; }
+div.schedule button { position:absolute; top:1px; width:14px; height:13px; margin-top:4px; border:1px solid #d4d4d4; }
+div.schedule button.prev { left:0; }
+div.schedule button.next { right:0; }
+div.schedule span { color:#4e4e4e; font-family:NGBold, "돋움", Dotum; font-size:1.2em; }
+
+table.calendar01 { width:100%; border:1px solid #e6e6e6; font-size:.9em; }
+table.calendar01 th { height:34px; border-bottom:1px solid #d3d3d3; border-left:1px solid #e6e6e6; font-weight:normal; font-family:NGBold, "돋움", Dotum; }
+table.calendar01 th:first-child { color:#f00; }
+table.calendar01 td { height:92px; padding:14px; border-bottom:1px solid #e6e6e6; border-left:1px solid #e6e6e6; letter-spacing:-1px; vertical-align:top; }
+table.calendar01 td > span { clear:both; display:block; font-weight:normal; font-family:NGBold, "돋움", Dotum; }
+table.calendar01 td:first-child > span { color:#f00; }
+table.calendar01 td ul { padding-top:3px; }
+table.calendar01 td li { margin-top:5px; }
+table.calendar01 td li a { color:#4e4e4e; }
+table.calendar01 td li span { display:block; color:#999; }
+
+ul.organization { margin:-30px 0 15px; }
+ul.organization li { padding-top:30px; border-bottom:1px solid #eaeaea; overflow:hidden; }
+ul.organization li > img { float:left; width:150px; height:150px; margin:0 15px 20px 0; }
+ul.organization dl { margin-bottom:15px; overflow:hidden; }
+ul.organization dt { float:left; width:65px; margin-bottom:3px; font-family:NGBold, "돋움", Dotum; }
+ul.organization dd { margin-bottom:3px; overflow:hidden; }
+ul.organization dd a { color:#888; }
+ul.organization dd span { display:inline-block; }
+ul.organization a.moreInfo { float:right; margin-bottom:20px; padding-right:10px; color:#888; font-family:NGBold, "돋움", Dotum; background:url('/images/perform/bgOpen02.gif') no-repeat 100% 50%; }
+ul.organization a.moreInfo.close { background:url('/images/perform/bgClose02.gif') no-repeat 100% 50%; }
+ul.organization li > div { clear:both; padding:20px; background-color:#f9f9f9; overflow:hidden; }
+ul.organization li > div.close { display:none; }
+
+ul.placeList { position:relative; height:95px; margin-bottom:30px; border-right:1px solid #eaeaea; overflow:hidden; }
+ul.placeList.hasSub { height:130px; }
+ul.placeList > li { float:left; height:95px; border-left:1px solid #eaeaea; overflow:hidden; }
+ul.placeList ul { display:none; position:absolute; top:95px; left:0; width:723px; height:34px; border-left:1px solid #e3e3e3; border-bottom:1px solid #eaeaea; }
+ul.placeList > li > a.on + ul { display:block; }
+ul.placeList ul li { float:left; margin:10px 0 0 13px; padding-left:8px; background:url('/images/common/bg/bgDot01.gif') no-repeat 0 50%; }
+ul.placeList ul li a { display:inline-block; color:#888; font-size:.9em; }
+ul.placeList ul li a.on,
+ul.placeList ul li a:hover,
+ul.placeList ul li a:active,
+ul.placeList ul li a:focus { font-family:NGBold, "돋움", Dotum; }
+
+img.placePhoto { float:left; width:316px; height:335px; margin:30px 0; border-bottom:1px solid #eaeaea; }
+
+dl.placeInfo { margin-top:30px; padding-left:30px; overflow:hidden; }
+dl.placeInfo dt { float:left; width:65px; padding-left:10px; color:#666; font-family:NGBold, "돋움", Dotum; background:url('/images/event/bgDot02.gif') no-repeat 0 50%; }
+dl.placeInfo dd { margin-bottom:15px; padding-left:15px; color:#666; background:url('/images/common/bg/bgDotLineV01.gif') no-repeat 0 5px; overflow:hidden; }
+dl.placeInfo dd a { color:#666; }
+
+div.aboutPlace { clear:both; margin-bottom:30px; padding-top:30px;  border-top:1px solid #eaeaea; overflow:hidden; }
+div.placeMap { margin-bottom:15px; padding-bottom:30px; border-bottom:1px solid #eaeaea; }
+
+p.signPlace { margin-bottom:15px; font-size:.9em; }
+
+div.makeNote { margin-bottom:30px; overflow:hidden; }
+div.makeNote span { float:left; width:174px; margin-right:26px; text-align:center; }
+div.makeNote span img { margin-bottom:10px; }
+div.makeNote dl { margin-bottom:10px; overflow:hidden; }
+div.makeNote dt { float:left; margin-right:4px; font-family:NGBold, "돋움", Dotum; }
+div.makeNote dd { float:left; margin-right:10px; }
+div.makeNote p { margin-left:199px; line-height:1.65; }
+
+ol.makeNote { list-style-position:outside; list-style-type:decimal; margin-bottom:25px; padding-left:25px; line-height:1.65; }
+
+ul.headTab01.guide { margin-bottom:30px; }
+ul.headTab01.guide ul.sub01 { left:-212px }
+ul.headTab01.guide ul.sub02 { left:-113px; }
+ul.headTab01.guide ul.sub04 { left:-575px; }
+ul.headTab01.guide ul.sub05 { left:-473px; }
+ul.headTab01.guide ul.sub06 { left:-360px; }
+
+ul.guideTab { height:32px; margin-bottom:30px; border-left:1px solid #eaeaea; background:url('/images/common/bg/bgDot02.gif') repeat-x 0 100%; }
+ul.guideTab li { float:left; }
+ul.guideTab a { display:block; height:30px; padding:0 10px; border:1px solid #eaeaea; border-left:0; color:#b1b1b1; line-height:30px; font-size:.9em; }
+ul.guideTab a.on { height:29px; border-top:2px solid #41a0ff; border-bottom-color:#fff; color:#676767; line-height:29px; }
+
+dl.guide01 { margin:0 0 30px 169px; line-height:1.6; overflow:hidden; }
+dl.guide01 dt { float:left; margin-right:4px; }
+dl.guide01 dd { overflow:hidden; }
+
+h6.title01 + dl { margin-bottom:15px; padding-left:7px; }
+dl.guide01 + h6 { margin-left:169px; }
+
+p.summary { margin-bottom:30px; padding:18px 20px; border:1px solid #f0f0f0; background-color:#fafafa; color:#888; }
+div.guideVideo { margin-bottom:30px; text-align:center; overflow:hidden; }

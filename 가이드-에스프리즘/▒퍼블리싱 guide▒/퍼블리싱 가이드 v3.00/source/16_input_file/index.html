@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi" />
+<title>파일찾기</title>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.filestyle.js"></script>
+<script type="text/javascript" language="javascript">
+$(document).ready(function() {
+    $("input[type=file]").filestyle({
+        image: "file_btn.gif",
+        imageheight : 22,
+        imagewidth : 67,
+        width : 500
+    });
+});
+</script>
+
+<style type="text/css">
+.file{border:1px solid #f00;margin:0 5px 0 0;height:20px;line-height:20px;padding:0 5px}
+</style>
+
+</head>
+
+<body>
+
+<div>
+	<input name="" type="file" />
+</div>
+
+</body>
+</html>

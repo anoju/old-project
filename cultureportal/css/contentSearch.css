@@ -1,0 +1,248 @@
+@charset "utf-8";
+@import url('/css/default.css');
+@import url('/css/layout.css');
+@import url('/css/contentCommon.css');
+
+/* div.topSearch { height:36px; border-bottom:1px solid #DFDFDF; background:#f3f3f3 url('/images/search/bgTop.gif') repeat-x 0 100%; } */
+div.topSearch { height:36px; border-bottom:1px solid #DFDFDF; background-color: #f3f3f3; }
+div.topSearch ul { float:left; margin-top:13px; }
+div.topSearch ul li { float:left; height:10px; margin-right:9px; padding-left:9px; background:url('/images/search/bgBarV01.gif') no-repeat 0 50%; }
+div.topSearch ul li:first-child { padding-left:0; background:none; }
+div.topSearch ul a { float:left; }
+div.topSearch span { float:right; margin:13px -7px 0 0; overflow:hidden; }
+div.topSearch span a { float:left; margin:0 7px 0 -1px; padding-left:8px; background:url('/images/search/bgBarV01.gif') no-repeat 0 50%; }
+
+#headSearch { height:141px; margin-bottom:30px; border-bottom:1px solid #767676; background:#fcfcfc url('/images/search/bgHead.gif') repeat-x 0 100%; }
+#headSearch h1 { float:left; width:167px; height:55px; margin:41px 34px 0 201px; }
+#headSearch div.search { position:relative; float:left; width:451px; margin-top:27px; overflow:visible; }
+#headSearch div.search h2 { float:left; height:15px; margin-right:12px; padding-left:17px; color:#888; font-size:1.1em; background:url('/images/layout/bgSearch.gif') no-repeat 0 0; line-height:15px; vertical-align:middle; }
+#headSearch div.search h2 a { margin:0; color:#41a0ff; font-size:1em; }
+#headSearch div.search ul { float:left; height:15px; background:url('/images/search/bgBarV02.gif') no-repeat 0 2px; line-height:15px; vertical-align:middle; }
+#headSearch div.search li { float:left; padding-left:10px; background:url('/images/search/bgBarV03.gif') no-repeat 0 50%; }
+#headSearch div.search a { display:block; color:#474747; margin-right:10px; font-size:1.1em; font-family:NGBold, "돋움", Dotum; letter-spacing:-1px; }
+#headSearch div.search a.on { color:#57aaff; }
+#headSearch div.search ul li:first-child { background-image:none; }
+#headSearch div.search > div { float:right; position:relative; left:-50%; margin-bottom:13px; }
+#headSearch div.search > div > div { float:left; position:relative; left:50%; }
+
+#headSearch form { clear:both; width:580px; height:39px; background:url('/images/search/bgSearchForm.gif') no-repeat 0 0; overflow:hidden; }
+#headSearch form span { float:left; width:388px; height:30px; margin:5px 0 0 6px; background:url('/images/search/bgKeyword.gif') no-repeat 0 0; }
+#headSearch form span input { width:368px; height:28px; padding:0 10px; border:0; background-color:transparent; line-height:28px; }
+#headSearch form fieldset > button { float:left; width:55px; height:30px; margin-top:5px; }
+#headSearch form label { float:left; margin:11px 0 0 20px; color:#666; font-size:.9em; letter-spacing:-1px; }
+#headSearch form label * { vertical-align:middle; }
+
+/* 분류별 인덱스 */
+ul.indexCategory { width:1218px; margin-left:-18px; overflow:hidden; }
+ul.indexCategory > li { position:relative; float:left; width:589px; height:193px; margin:0 0 18px 18px; border:1px solid #ebebeb; }
+ul.indexCategory > li > span { float:left; width:101px; height:101px; margin:0 20px 0 25px; border:1px solid #e8e8e8; }
+ul.indexCategory > li > a { position:absolute; top:25px; right:25px; padding-left:9px; color:#666; font-size:.9em; font-family:NGBold, "돋움", Dotum; background:url('/images/search/bgMore01.gif') no-repeat 0 50%; }
+ul.indexCategory h2 { margin:21px 0 25px 26px; color:#333; font-size:1.2em; line-height:1; }
+ul.indexCategory ul { margin-right:25px; }
+ul.indexCategory ul li { margin-bottom:5px; padding-left:13px; background:url('/images/search/bgDot01.gif') no-repeat 0 50%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+ul.indexCategory ul li a { float:left; color:#888; vertical-align:top; }
+ul.indexCategory ul li span { float:left; margin-left:9px; color:#666; font-size:.9em; vertical-align:top; }
+
+ul.indexCategory.service > li > span { background:url('/images/search/bgIndexService.gif') no-repeat 0 0; }
+ul.indexCategory.life > li > span { background:url('/images/search/bgIndexLife.gif') no-repeat 0 0; }
+ul.indexCategory.culture > li > span { background:url('/images/search/bgIndexCulture.gif') no-repeat 0 0; }
+
+ul.indexCategory > li > span.box01 { background-position:0 0; }
+ul.indexCategory > li > span.box02 { background-position:-102px 0; }
+ul.indexCategory > li > span.box03 { background-position:-204px 0; }
+ul.indexCategory > li > span.box04 { background-position:-306px 0; }
+ul.indexCategory > li > span.box06 { background-position:-408px 0; }
+ul.indexCategory > li > span.box05 { background-position:-510px 0; }
+ul.indexCategory > li > span.box07 { background-position:-612px 0; }
+ul.indexCategory > li > span.box08 { background-position:0 -102px; }
+ul.indexCategory > li > span.box09 { background-position:-102px -102px; }
+ul.indexCategory > li > span.box10 { background-position:-204px -102px; }
+ul.indexCategory > li > span.box11 { background-position:-306px -102px; }
+ul.indexCategory > li > span.box12 { background-position:-408px -102px; }
+ul.indexCategory > li > span.box13 { background-position:-510px -102px; }
+ul.indexCategory > li > span.box14 { background-position:-612px -102px; }
+
+div.typeIndexLeft { float:left; width:497px; }
+div.typeIndexLeft > div,
+div.typeImage,
+div.typeVideo { position:relative; margin-bottom:17px; border:1px solid #ebebeb; overflow:hidden; }
+div.typeIndexLeft > div > a,
+div.typeImage > a,
+div.typeVideo > a { position:absolute; top:23px; right:25px; padding-left:9px; color:#666; font-size:.9em; font-family:NGBold, "돋움", Dotum; background:url('/images/search/bgMore01.gif') no-repeat 0 50%; line-height:1; vertical-align:top; }
+div.typeIndexLeft > div h2,
+div.typeImage h2,
+div.typeVideo h2 { margin:21px 0 0 25px; color:#333; font-size:1.3em; line-height:1; } 
+
+div.typeIndexLeft div.typeText { height:239px; }
+div.typeIndexLeft div.typeSound { height:217px; }
+div.typeImage { width:683px; height:475px; }
+div.typeVideo { clear:both; height:275px; }
+
+div.typeIndexLeft ul { margin:25px 25px 0; }
+div.typeIndexLeft ul li { margin-bottom:5px; padding-left:13px; background:url('/images/search/bgDot01.gif') no-repeat 0 50%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+div.typeIndexLeft ul a { float:left; color:#888; vertical-align:top; }
+div.typeIndexLeft ul span { float:left; margin-left:9px; color:#666; font-size:.9em; vertical-align:top; }
+
+div.typeImage { float:right; border:1px solid #ebebeb; overflow:hidden; }
+div.typeImage ul { margin:25px 0 0 7px; overflow:hidden; }
+div.typeImage ul li { float:left; width:145px; height:202px; margin-left:18px; text-align:center; overflow:hidden; }
+div.typeImage ul img { float:right; width:145px; height:145px; margin-bottom:10px; vertical-align:top; }
+div.typeImage ul a { color:#333; font-family:NGBold, "돋움", Dotum; }
+div.typeImage ul span { display:block; }
+
+div.typeVideo ul { margin:25px 0 0 18px; overflow:hidden; }
+div.typeVideo ul li { float:left; width:145px; height:202px; margin-left:18px; text-align:center; overflow:hidden; }
+div.typeVideo ul img { float:right; width:145px; height:145px; margin-bottom:10px; vertical-align:top; }
+div.typeVideo ul a { color:#888; font-family:NGBold, "돋움", Dotum; }
+
+ul.indexCategory > li > span { float:left; width:101px; height:101px; margin:0 20px 0 25px; border:1px solid #e8e8e8; }
+ul.indexCategory > li > a { position:absolute; top:25px; right:25px; padding-left:9px; color:#666; font-size:.9em; font-family:NGBold, "돋움", Dotum; background:url('/images/search/bgMore01.gif') no-repeat 0 50%; }
+ul.indexCategory h2 { margin:21px 0 25px 26px; color:#333; font-size:1.2em; line-height:1; }
+ul.indexCategory ul { margin-right:25px; }
+ul.indexCategory ul li { margin-bottom:5px; padding-left:13px; background:url('/images/search/bgDot01.gif') no-repeat 0 50%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+ul.indexCategory ul li a { float:left; color:#888; vertical-align:top; }
+ul.indexCategory ul li span { float:left; margin-left:9px; color:#666; font-size:.9em; vertical-align:top; }
+
+div.orgIndex { padding:30px 45px 10px; border:1px solid #ebebeb; overflow:hidden; }
+div.orgIndex h2 { margin-bottom:15px; color:#333; font-size:1.3em; line-height:1; }
+div.orgIndex h3 { clear:both; margin-bottom:15px; padding-left:15px; color:#333; font-size:1.2em; background:url('/images/search/bgSquare01.gif') no-repeat 0 50%; line-height:1; }
+div.orgIndex p { float:left; margin-bottom:30px; font-family:NGBold, "돋움", Dotum; line-height:1; }
+div.orgIndex ul.orgList { clear:both; width:1125px; margin-left:-15px; overflow:hidden; }
+div.orgIndex ul.orgList li { float:left; width:210px; height:164px; margin-left:15px; text-align:center; }
+div.orgIndex ul.orgList img { float:right; width:208px; height:103px; margin-bottom:15px; border:1px solid #dbdbdb; }
+div.orgIndex ul.orgList a { color:#333; font-size:1.2em; }
+div.orgIndex ul.orgList a:hover,
+div.orgIndex ul.orgList a:active,
+div.orgIndex ul.orgList a:focus { text-decoration:underline; }
+
+/* 공통 */
+#content h3.result01 { float:left; margin-bottom:15px; padding-left:15px; color:#333; font-size:1.2em; background:url('/images/search/bgSquare01.gif') no-repeat 0 50%; line-height:1; }
+#content h3.result01 span { display:inline-block; margin-left:10px; padding-left:10px; font-family:NGNormal; background:url('/images/search/bgBarV02.gif') no-repeat 0 50%; }
+#content h3.result01 b { color:#41a0ff; font-weight:normal; font-family:NGBold, "돋움", Dotum; }
+
+#content h4.result01 { clear:both; margin-bottom:15px; color:#333; font-size:1.2em; font-weight:normal; font-family:NGNormal; line-height:1; overflow:hidden; }
+#content h4.result01 span { display:inline-block; margin-left:10px; padding-left:10px; background:url('/images/search/bgBarV02.gif') no-repeat 0 50%; }
+#content h4.result01 b { color:#41a0ff; font-weight:normal; font-family:NGBold, "돋움", Dotum; }
+
+#content h5.result01 { clear:both; margin-bottom:10px; padding-left:10px; color:#333; font-size:1.1em; font-weight:normal; font-family:NGNormal; background:url('/images/search/bgDot01.gif') no-repeat 0 50%; line-height:1; }
+#content h5.result01 span { display:inline-block; margin-left:10px; padding-left:10px; background:url('/images/search/bgBarV02.gif') no-repeat 0 50%; }
+#content h5.result01 b { color:#41a0ff; font-weight:normal; font-family:NGBold, "돋움", Dotum; }
+
+#content h3.result01 + h4.result01 { padding-top:5px; }
+#content a.more01 + h5.result01 { margin-top:30px; }
+#content a.more01 + h3.result01 { clear:both; }
+
+#content a.more01 { clear:both; float:right; margin:5px 0 25px; padding-right:12px; color:#666; font-family:NGBold, "돋움", Dotum; font-size:.9em; background:url('/images/search/bgMore02.gif') no-repeat 100% 50%; line-height:1.1; }
+
+div.borderBox01 { clear:both; margin-bottom:30px; border-bottom:1px solid #eaeaea; overflow:hidden; }
+div.borderBox02 { margin-bottom:30px; border-bottom:1px dashed #afafaf; overflow:hidden; }
+
+/* 페이지 목록 */
+div.resultPageNav { clear:both; font-family:Verdana; font-weight:bold; text-align:center; }
+div.resultPageNav > a { display:inline-block; position:relative; height:9px; margin:0 3px; overflow:hidden; vertical-align:middle; }
+div.resultPageNav > a.first,
+div.resultPageNav > a.last { width:11px; }
+div.resultPageNav > a.prev,
+div.resultPageNav > a.next { width:6px; }
+div.resultPageNav > a span { position:absolute; top:0; left:0; width:100%; height:100%; background:#fff url('/images/search/bgPageNav.gif') no-repeat 0 0; }
+div.resultPageNav > a.last span { background-position:-7px -10px; }
+div.resultPageNav > a.prev span { background-position:-12px 0; }
+div.resultPageNav > a.next span { background-position:0 -10px; }
+div.resultPageNav > span { display:inline-block; margin:0 4px; }
+div.resultPageNav > span a { display:inline-block; height:21px; padding:0 6px; color:#404040; line-height:21px; }
+div.resultPageNav > span a.on { height:19px; padding:0 5px; border:1px solid #dedede; color:#41a0ff; line-height:19px; }
+
+/* 분류 */
+ul.resultCategory { float:left; margin-bottom:10px; }
+ul.resultCategory li { float:left; margin-left:9px; padding-left:10px; background:url('/images/search/bgBarV02.gif') no-repeat 0 50%; }
+ul.resultCategory li:first-child { margin-left:0; padding-left:0; background:none; }
+ul.resultCategory a { color:#888; }
+ul.resultCategory a.on { color:#333; font-family:NGBold, "돋움", Dotum; }
+ul.resultCategory span { margin-left:3px; }
+ul.resultCategory b { color:#41a0ff; font-weight:normal; font-family:NGBold, "돋움", Dotum; }
+
+/* 정렬 */
+ul.resultFunction { float:right; }
+ul.resultFunction li { float:left; margin-left:8px; padding-left:9px; background:url('/images/search/bgBarV02.gif') no-repeat 0 50%; }
+ul.resultFunction li:first-child { background:none; }
+ul.resultFunction li a { float:left; padding-right:15px; color:#888; font-family:NGBold, "돋움", Dotum; background:url('/images/search/bgSelectOff.gif') no-repeat 100% 50%; }
+ul.resultFunction li a:hover,
+ul.resultFunction li a:active,
+ul.resultFunction li a:focus,
+ul.resultFunction li a.on { color:#333; background:url('/images/search/bgSelectOn.gif') no-repeat 100% 50%; }
+
+/* 검색 목록 > 연관검색어 */
+div.relatedWord { margin-bottom:30px; padding-bottom:10px; border-bottom:1px solid #d6d6d6; overflow:hidden; }
+div.relatedWord h3 { float:left; margin-right:20px; color:#333; font-size:1.2em; line-height:1.1; }
+div.relatedWord ul { overflow:hidden; }
+div.relatedWord li { float:left; margin-right:15px; padding-bottom:10px; white-space:nowrap; }
+div.relatedWord li a { color:#888; }
+div.relatedWord li a:hover,
+div.relatedWord li a:active,
+div.relatedWord li a:focus { text-decoration:underline; }
+
+/* 검색 목록 > 일반 */
+ul.result01 { padding:15px 0 5px; }
+ul.result01 li { padding:10px 0 15px; overflow:hidden; }
+ul.result01 li:first-child { padding-top:0; }
+ul.result01 li > img { float:left; width:110px; height:85px; margin-right:20px; }
+ul.result01 h4 { margin:1px 0 13px; font-size:1.3em; line-height:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+ul.result01 h4 em { color:#41a0ff; font-weight:normal; font-style:normal; }
+ul.result01 h4 a { color:#333; }
+ul.result01 h4 a:hover,
+ul.result01 h4 a:active,
+ul.result01 h4 a:focus { text-decoration:underline; }
+ul.result01 p { margin-bottom:7px; }
+ul.result01 p b { color:#41a0ff; font-weight:normal; }
+ul.result01 p em { color:#41a0ff; font-weight:normal; font-style:normal; }
+ul.result01 li > span { display:block; margin-bottom:3px; overflow:hidden; }
+ul.result01 li > span span { flaot:left; margin-left:10px; padding-left:11px; background:url('/images/search/bgBarV03.gif') no-repeat 0 3px; }
+ul.result01 li > span span:first-child { margin-left:0; padding-left:0; background:none; }
+ul.result01 h4 + span { margin-bottom:7px; }
+ul.result01 h4 + span + span { margin-top:-4px; }
+
+/* 검색 목록 > 공연정보 */
+ul.result02 { clear:both; width:749px; margin-left:-24px; overflow:hidden; }
+ul.result02 li { float:left; width:162px; height:300px; margin-left:25px; overflow:hidden; }
+ul.result02 img { width:162px; height:203px; margin-bottom:8px; vertical-align:top; }
+ul.result02 a { display:inline-block; margin-bottom:6px; color:#2f2f2f; font-family:NGBold, "돋움", Dotum; font-size:1.2em; }
+ul.result02 a span { margin-right:4px; color:#888; font-family:NGNormal; }
+ul.result02 li > span { display:block; margin-bottom:3px; font-size:.9em; text-overflow:ellipsis; white-space:nowrap; }
+ul.result02 li em { color:#41a0ff; font-style:normal; }
+div.borderBox01 ul.result02 { padding-top:10px; }
+div.borderBox01 ul.result02 li { margin-bottom:20px; }
+
+/* 검색 목록 > 문양 */
+ul.result03 { margin-left:35px; overflow:hidden; }
+ul.result03 li { float:left; width:102px; height:150px; margin:0 15px; padding-top:15px; text-align:center; }
+ul.result03 li img { width:80px; height:80px; margin-bottom:15px; padding:10px; border:1px solid #e8e8e8; }
+ul.result03 li a { color:#888; vertical-align:top; }
+div.borderBox01 > ul.result03 { margin-bottom:20px; }
+#content h5.result01 + ul.result03 { margin-bottom:0; }
+
+/* 검색 목록 > 이미지 */
+ul.result04 { width:745px; margin-left:-20px; padding-top:20px; }
+ul.result04 li { float:left; width:166px; height:235px; margin-left:20px; text-align:left; }
+ul.result04 li em { color:#41a0ff; font-weight:normal; font-style:normal; }
+ul.result04 a { color:#333; font-family:NGBold, "돋움", Dotum; }
+ul.result04 img { float:right; width:166px; height:166px; margin-bottom:10px; }
+ul.result04 span { display:block; }
+
+/* 검색 목록 > 기관 */
+div.result05 { clear:both; margin-bottom:20px; overflow:hidden; }
+div.result05 img { float:left; width:208px; height:103px; margin-right:20px; }
+div.result05 ul { overflow:hidden; }
+div.result05 li { margin-bottom:5px; padding-left:13px; background:url('/images/search/bgDot01.gif') no-repeat 0 50%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+div.result05 a { color:#888; }
+
+/* 검색 상세 > 기관 */
+div.orgResultHead { margin-bottom:30px; padding:30px 30px 20px; border:1px solid #ebebeb; overflow:hidden; }
+div.orgResultHead h3 { margin-bottom:15px; padding-bottom:15px; border-bottom:1px solid #d6d6d6; color:#333; font-size:2em; line-height:1; }
+div.orgResultHead p { margin-bottom:15px; }
+div.orgResultHead span.button { float:right; }
+
+ul.result06 { clear:both; width:749px; margin-left:-24px; padding:10px 0 15px; overflow:hidden; }
+ul.result06 li { float:left; width:162px; height:250px; margin-left:25px; overflow:hidden; }
+ul.result06 img { width:162px; height:203px; margin-bottom:8px; vertical-align:top; }
+ul.result06 a { display:inline-block; margin-bottom:6px; color:#2f2f2f; font-family:NGBold, "돋움", Dotum; }
+ul.result06 li > span { display:block; margin-bottom:3px; font-size:.9em; text-overflow:ellipsis; white-space:nowrap; }

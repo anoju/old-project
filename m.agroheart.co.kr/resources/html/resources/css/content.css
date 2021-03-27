@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+
+/*메인*/
+.mainContent{text-align:center;overflow:hidden}
+.mainContent h2{margin-top:25px;}
+.mainContent h2 img{width:165px;}
+.mainVisual{margin-top:15px;}
+.mainVisual img{width:100%}
+.mainTxt{margin-bottom:17px;color:#934308;font-size:1.2em;font-weight:bold}
+.mainTxt p + p{margin-top:2px;}

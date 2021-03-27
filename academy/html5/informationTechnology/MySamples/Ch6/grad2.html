@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>radial gradation</title>
+<style>
+.grad1{
+	position:relative;
+	width:300px;
+	height:150px;
+	background: #06f; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#06f', endColorstr='#fff'); /* for IE */
+	background: -webkit-gradient(radial, center center, 10, center center, 90, from(red), to(#1E90FF), color-stop(70%, yellow)); /* 웹킷 브라우저 */
+	background: -moz-radial-gradient(circle, red, yellow, #1E90FF); /* 파이어폭스 */
+}
+.grad2{
+	position:relative;
+	width:300px;
+	height:150px;
+	border:1px solid #ccc;
+	background: #06f; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#06f', endColorstr='#fff'); /* for IE */
+	background: -webkit-gradient(radial, center center, 10, center center, 90, from(red), to(#1E90FF), color-stop(70%, yellow)); /* 웹킷 브라우저 */
+	background:-moz-radial-gradient(ellipse closest-side, red, yellow 10%, #1E90FF 50%, white);  /* 파이어폭스 */
+}
+</style>
+</head>
+
+<body>
+<h3>원형 그라데이션</h3>
+<p></p>
+<div class="grad1"></div>
+<p>(파이어폭스의 경우) 타원, closest-side </p>
+<div class="grad2"></div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>  </title>
+
+		<!-- 외부 CSS 링크-->
+		<link rel="stylesheet" type="text/css" href="#" />
+
+		<style type="text/css">
+			body{
+				font-family:"나눔고딕","맑은 고딕";
+				font-size: 75%;
+				background:black;
+				color:white;}
+
+			p{
+				color:yellow;
+				font-size:1.2em;}
+			#myList{
+				border:1px solid white;
+				background:#333;
+				color:#ccc;
+				padding:1em 2em;
+				line-height:2em;}
+
+				#myList li{
+					font-weight:bold;}
+
+		</style>
+
+		<script type="text/javascript" src="#">	//스크립트 링크	</script>
+
+	</head>
+
+	<body>
+		<h1>속성값을 바꾸기</h1>
+
+		<p id="myP" title="title속성출력">setAttribute를 이용한다</p>
+		<p>getAttribute와 다른점은 인수를 두개 갖는다</p>
+
+		<ul id="myList">
+			<li>첫번째목록</li>
+			<li>두번째목록</li>
+			<li>세번째목록</li>
+		</ul>
+
+		<p>아이디 myP를 찾아서 title속성을 변경한다면</p>
+
+		<script type="text/javascript">
+			//아이디를 얻어서 짧게 줄임
+			var myChange = document.getElementById("myP")
+
+			//줄인변수 해당 아이디 요소가 들어있는지 확인
+			alert(myChange.getAttribute("title"))
+
+			//값을 변경
+			myChange.setAttribute("title","title 속성을 동적으로 변경")
+
+			//변경된 값을 확인(갱신된 값을 다시 넣어야만 확인가능)
+			myChange = document.getElementById("myP")
+			alert(myChange.getAttribute("title"))
+
+
+			myChange.setAttribute("title","값이 재변경")
+			alert(myChange.getAttribute("title"))
+		
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Pseudo-class :target</title>
+<style>
+ul {
+	width:700px;
+	height:60px;
+	padding: 10px 0 0 30px;
+}
+li {
+	list-style-type:none;
+	margin-right:30px;
+	float:left;
+}
+a {
+	background: #fff;
+	color: #aa0000;
+	padding:5px;	
+	font-size: 20px;
+	font-weight: bold;	
+	-webkit-transition: all 1s linear;
+	text-decoration:none;
+}
+a:hover { 
+	background: #220077;
+	color: #fff; 
+}
+p:target{
+	border : 2px solid #900;
+	background:#FFC;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	padding:5px 8px;
+}
+</style>
+</head>
+
+<body>
+<ul>
+    <li><a href="#classic">고전주의</a></li>
+    <li><a href="#romantic">낭만주의</a></li>
+    <li><a href="#realitic">사실주의</a></li>
+    <li><a href="#symbolic">상징주의</a></li>
+</ul>
+
+<p id="classic">고전주의는 17세기 중엽 프랑스를 중심으로 활발히 전개되어 유럽 전역으로 퍼져갔다. 고대 그리스와 로마의 고전을 모방, 발전시키려는 문학운동으로 형식과 이성을 존중하였다. 프랑스의 라신,몰리에르, 영국의 알렉산더 포프, 독일의 실러, 괴테 등이 대표적인 작가이다.</p>
+<p id="romantic">낭만주의는 17세기 말엽에 프랑스의 장 자크 루소가 인간의 자유와 자연에의 복귀를 부르짖은 것에 힘을 얻어 18세기 말부터 19세기 초까지 뮤럽 전역에서 일어나 고전주의의 정통성에 도전하였다. 프랑스의 빅토르 위고, 독일의 노발리스, 영국의 윌리엄 워즈워스, 콜리지, 바이런, 셸리, 키츠, 월터 스콧과 미국의 에머슨, 휘트먼, 마크 트웨인 등이 대표적인 작가들이다.</p>
+<p id="realitic">19세기 후반부터는 사실주의와 자연주의가 주류를 형성하였다. 사실주의는 과학의 발달이 보편화되고 과학적으로 사물을 따지려는 경향이 짙어가는데서 영향을 받아 세밀한 관찰을 통하여 인간 생활을 파헤쳤다. 대표적인 작가로 프랑스의 발자크, 스탕달, 영국의 데포, 러시아의 투르게네프, 도스토옙스키, 톨스토이 등이 있다.</p>
+<p id="symbolic">상징주의는 시문학에서 일어난 것으로, 시를 짓는 과정에서 산문적인 요소를 배제하고 순수한 정서를 살리려는 문학활동이다 .언어의 지적 요소를 억제하고 율동과 가락을 통하여 음악을 얻을 수 잇는 정서를 표출하는 것이 주 목적이었다. 그러나 감성에만 치우친 나머지 지성과 도덕을 바탕으로 한 영적인 면을 소홀히 하였다. 언어의 의미에는 관심이 없고 언어의 음악성에서 문학의 순수한 가치를 추구하려고 하였다. 보들레르와 발레리가 대표적인 작가이다. </p>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+더블 트랙 밴드
+
+  * 첫화면 <index.html>
+  * 밴드 소개 <about.html>
+  * 사진 모음 <photos.html>
+  * 연주 일정 <live.html>
+  * 연락처 <contact.html>
+
+
+  밴드 멤버를 소개합니다!
+
+  * 만박 <#suman>
+  * 젤리 <#jely>
+  * 현석 <#hyeonseok>
+
+
+    만박 (Suman)
+
+더블 트랙의 키보드 주자. 원곡 작곡자.
+
+맥북프로 노트북 본전 뽑기 위해 아침에 일어나자마자 세수도 안한채 더블트
+랙의 주제가를 만들었다. 더블트랙을 달리는 기차를 잡아라. 으하하!
+
+
+    젤리 (Jely)
+
+더블 트랙의 기타 주자. JamMate UG-1이라는 모델을 사용합니다. 만박님의 피
+아노 연주를 틀어 놓고 기타 연주를 iMac으로 촬영했습니다. 이게 바로 제가
+꿈꿨던 온라인 합주가 아닐까요?
+
+
+    현석 (Hyeonseok)
+
+더블 트랙의 베이스 주자. 9개월동안 썩고 있던 FireWire Solo 먼지를 털면서
+더블 트랙에 합류했습니다. Soundflower를 이용해서 Garageband에서
+QuickTime으로 음악 작업을 함께 했습니다.
+
+close
+
+  * 밴드 멤버를 소개합니다! <#toc0>
+  * 만박 (Suman) <#toc1>
+  * 젤리 (Jely) <#toc2>
+  * 현석 (Hyeonseok) <#toc3>

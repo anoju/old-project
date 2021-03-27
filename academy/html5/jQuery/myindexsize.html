@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+			
+		</style>
+  <script src="../informationTechnology/js/jquery-1.8.2.min.js"></script>
+  <script>
+
+   $(function(){
+   		 //지정요소의 갯수를 알아내는 함수
+   		 //alert($("ul:nth-child(2)>li").size())
+   		 //alert($("ul#text>li").size())
+   		 
+   		 //지정대상의 인덱스 번호(...번째)를 알아내는 함수(0번부터 출발)
+   		 $("ul:nth-child(2)>li").mouseover(function(){
+   		 	//아이디text내에 있는 li의 번호를 0번부터 세어서 알아냄
+   		 	//index(동일한 내용의 요소의 번호)
+   		 	//아래 예제에서는 자기자신의 li요소의 번호를 알아내야함으로 this를 기입한다.
+   		 	alert($("#text>li").index($(this)))
+   		 
+   		 })
+   		 alert('Index: ' + $('#threeUL>li').index($('#three')))
+   	   })
+
+  </script>
+	</head>
+
+	<body>
+			<ul>
+				<li>목록1</li>
+				<li>목록2</li>
+				<li>목록3</li>
+				<li>목록4</li>
+				<li>목록5</li>
+			</ul>
+			
+			<ul id="text">
+				<li>목록1</li>
+				<li>목록2</li>
+				<li>목록3</li>
+			</ul>
+			
+			<ul id="threeUL">
+				<li id="one">one</li>
+				<li id="two">two</li>
+				<li id="three">three</li>
+			</ul>
+	</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+			button{
+				border:none 0;
+				background:transparent;
+				cursor:pointer;
+			}
+			.test p img, .two img,.imgwrap img{
+				width:320px;
+				height:480px;
+			}
+			.imgwrap{
+				position:relative;
+				width:320px;
+				height:480px;
+				/*overflow:hidden;*/
+			}
+			.imgwrap ul{
+				position:absolute;
+				left:0;
+				top:0;
+				height:480px;
+			}
+			
+			.imgwrap li{
+				float:left;
+				width:320px;
+				height:480px;
+			}
+			
+		</style>
+		<script src="../informationTechnology/js/jquery-1.8.2.min.js"></script>
+		<script>
+			$(function(){				
+				$(".test a").click(function(){		   			
+		   			$(".test p img").attr("src","image/img01.PNG").attr("alt","img01").attr("title","img01")
+		   					   			
+		   			return false
+		   		})
+				
+				//////////////////////////////////////////////
+				
+				var plus =0
+				$(".one button").click(function(){		   			
+		   			plus++
+		   			if(plus>=9){
+		   				plus=0
+		   			}
+		   			$(".two img").attr("src","image/img0"+plus+".PNG").attr("alt","img0"+plus).attr("title","img0"+plus)
+		   			$(".two p").text($(".two img").attr("title"))
+		   			
+		   			return false
+		   		})
+		   		
+		   		
+		   		///////////////////////////////////////////////////
+		   		/*
+		   		var a = $(".imgwrap li").length
+		   		//var a = ($(".imgwrap li").css("width"))*($(".imgwrap li").length)
+		   		alert(a)
+		   		$(".three leftBtn").click(function(){
+		   			
+		   			
+		   			return false
+		   		})*/
+		   		
+	   		})
+		</script>
+	</head>
+	<body>
+		<div class="test">
+			<button><img src="../informationTechnology/images/aqua_3_button_03.png" /></button>
+			<a href="../informationTechnology/images/aqua_3_button_03.png"><img src="../informationTechnology/images/aqua_3_button_03.png" /></a>
+			<p><img src="image/img00.PNG" alt="img00" title="img00" /></p>
+		</div>
+		
+		
+		
+		<div class="one">
+			<button><img src="../informationTechnology/images/aqua_3_button_03.png" /></button>
+			<div class="two">
+				<img src="image/img00.PNG" alt="img00" title="img00" />
+				<p>img00</p>
+			</div>
+		</div>
+		
+		
+		
+		
+		<div class="three">
+			<button class="leftBtn"><img src="../informationTechnology/images/aqua_3_button_03.png" /></button>
+			<button class="rightBtn"><img src="../informationTechnology/images/aqua_3_button_05.png" /></button>
+			<div class="four">
+				<div class="imgwrap">
+					<ul>
+						<li><img src="image/img00.PNG" alt="img00" title="img00" /></li>
+						<li><img src="image/img01.PNG" alt="img00" title="img00" /></li>
+						<li><img src="image/img02.PNG" alt="img00" title="img00" /></li>
+						<li><img src="image/img03.PNG" alt="img00" title="img00" /></li>
+						<li><img src="image/img04.PNG" alt="img00" title="img00" /></li>
+						<li><img src="image/img05.PNG" alt="img00" title="img00" /></li>
+						<li><img src="image/img06.PNG" alt="img00" title="img00" /></li>
+						<li><img src="image/img07.PNG" alt="img00" title="img00" /></li>
+						<li><img src="image/img08.PNG" alt="img00" title="img00" /></li>
+					</ul>
+				</div>
+				
+				<p>img00</p>
+			</div>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>터치슬라이더1</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="jquery.touchslider.js"></script>
+<script>
+$(function(){
+	$('.touchslider').touchSlider({mouseTouch: true});
+});
+
+$(document).ready(function(){
+	promotion_st();
+});
+var promotion_tid = "";
+function promotion_st()
+{
+	promotion_tid = setInterval("promotion_rol()", 5000);
+}
+function promotion_rol(){
+	var btn = $(".touchslider-next");
+	btn.click();
+}
+</script>
+
+<style>
+.touchslider{width:500px;height:300px;margin:0 auto;position:relative}
+.touchslider .img1{background:#FF0000}
+.touchslider .img2{background:#33FF00}
+.touchslider .img3{background:#0066FF}
+.touchslider .touchslider-viewport{width:500px;height:300px;overflow:hidden;position:relative}
+.touchslider .touchslider-item{width:500px;height:300px}
+.touchslider .touchslider-nav{text-align:center}
+.touchslider .touchslider-nav li{display:inline}
+.touchslider .touchslider-nav a{color:#000}
+.touchslider .touchslider-nav a.touchslider-nav-item-current{color:#60C;font-weight:bold}
+</style>
+
+</head>
+
+<body>
+	
+<div class="touchslider">
+        <div class="touchslider-viewport">
+            <ul>
+                <li class="touchslider-item img1"></li>
+                <li class="touchslider-item img2"></li>
+                <li class="touchslider-item img3"></li>
+            </ul>
+        </div>
+        <ul class="touchslider-nav">
+            <li><a class="touchslider-nav-item touchslider-nav-item-current">1</a></li>
+            <li><a class="touchslider-nav-item">2</a></li>
+            <li><a class="touchslider-nav-item">3</a></li>
+        </ul>
+        <a class="touchslider-prev">prev</a> / <a class="touchslider-next">next</a>
+    </div>
+</div>
+
+</body>
+</html>

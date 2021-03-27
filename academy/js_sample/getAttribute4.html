@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>  </title>
+
+		<!-- 외부 CSS 링크-->
+		<link rel="stylesheet" type="text/css" href="#" />
+
+		<style type="text/css">
+			body{
+				font-family:"나눔고딕","맑은 고딕";
+				font-size: 75%;
+				background:black;
+				color:white;}
+
+			p{
+				color:yellow;
+				font-size:1.2em;}
+			#myList{
+				border:1px solid white;
+				background:#333;
+				color:#ccc;
+				padding:1em 2em;
+				line-height:2em;}
+
+				#myList li{
+					font-weight:bold;}
+
+		</style>
+
+		<script type="text/javascript" src="#">	//스크립트 링크	</script>
+
+	</head>
+
+	<body>
+		<h1>p요소에 title 이미 명시되어있는지를</h1>
+
+		<p title="원래값이있음">조건문으로 판독에서</p>
+		<p>값을 변경</p>
+
+		<ul id="myList">
+			<li>title이 부여되어있는 요소만 검색하여 변경하기</li>
+			<li>title이 부여되어있는 요소만 검색하여 변경하기</li>
+			<li>title이 부여되어있는 요소만 검색하여 변경하기</li>
+		</ul>
+
+		<p>title이 적용되지 않은 요소</p>
+
+		<script type="text/javascript">
+			//포문을 이용해서 p요소를 배열담고 title속성이 있는지 검사
+			var myPs = document.getElementsByTagName("p")
+			for (var find = 0; find < myPs.length ; find++){
+				//배열에 잇는 값을 일일이 검출[숫자 변수]
+				var myTitle = myPs[find].getAttribute("title")
+				//조건 [p(title),p,p]
+				if(myTitle){
+					myPs[find].setAttribute("title","title 보유 태그만 변경")
+					alert(myPs[find].getAttribute("title"))
+				}
+			}
+
+		
+		</script>
+	</body>
+
+</html>

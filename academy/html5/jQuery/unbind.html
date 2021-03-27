@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+		
+			
+		</style>
+		<script src="../informationTechnology/js/jquery-1.8.2.min.js"></script>
+		<script>
+			$(function(){			
+				$("a").click(function() {
+					$("img").attr("src",$(this).attr("href"))
+					return false
+				})
+				
+				//이벤트 삭제
+  				//일반 자바스크립트 delete 객체.onclick
+  				$("button").click(function(){
+   					$("a").unbind("click")	
+				})	
+			})
+			
+   
+		</script>
+	</head>
+	<body>
+		<button>이벤트삭제</button>
+		<ul>
+			<li><a href="image/img00.PNG">아이스크림</a></li>
+			<li><a href="image/img02.PNG">열기구</a></li>
+			<li><a href="image/img03.PNG">불가사리</a></li>
+			<li><a href="image/img04.PNG">시계</a></li>
+		</ul>
+		<p><img src="image/img00.PNG" alt="아이스크림" title="아이스크림" width="320px" height="480px" /></p>
+	</body>
+</html>

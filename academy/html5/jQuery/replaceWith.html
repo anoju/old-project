@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}			
+		</style>
+		<script src="../informationTechnology/js/jquery-1.8.2.min.js"></script>
+		<script>
+			$(function(){
+				//태그 교체(텍스트까지 모두 바뀜)
+				$('p.replaceWith').replaceWith('<h1>h1으로 바뀜</h1>')
+				
+				$('.remove strong').remove()
+			})
+		</script>
+	</head>
+	<body>
+		<p class="replaceWith">원래는 p태그</p>
+		<p class="remove"><strong>이요소는 제거될 내용</strong>이텍스트는 남겨짐</p>
+		
+	</body>
+</html>

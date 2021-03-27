@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Radio Group Example</title>
+    <link rel="stylesheet" type="text/css" href="../styles/core.css"/>
+    <style type="text/css">
+      #result tt {
+        color: maroon;
+        font-size: 1.1em;
+      }
+      form>div {
+        margin-top: 0.9em;
+      }
+    </style>
+    <script type="text/javascript" src="../scripts/jquery-1.4.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        $('#testButton').click(function(){
+          var checkedValue = $('[name="someRadioGroup"]:radio:checked').val();
+          $('#result').html('당산의 대답은 <tt>' + checkedValue + '</tt>입니다.');
+        });
+      });
+    </script>
+  </head>
+  <body>
+
+    <form>
+      <div>
+        <label for="radioYes">당신의 대답은?</label>
+        <input type="radio" name="someRadioGroup" id="radioYes" value="예" checked="checked"/> 예
+        <input type="radio" name="someRadioGroup" id="radioNo" value="아니요"/> 아니요
+        <input type="radio" name="someRadioGroup" id="radioMaybe" value="글쎄"/> 글쎄
+        <input type="radio" name="someRadioGroup" id="radioConfused" value="모름"/> 모름
+      </div>
+      <div><button type="button" id="testButton" class="green90x24">선택은?</button></div>
+      <div id="result"></div>
+    </form>
+
+  </body>
+</html>

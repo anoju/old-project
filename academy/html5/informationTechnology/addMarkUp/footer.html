@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>enabled</title>
+        <link href='http://api.mobilis.co.kr/webfonts/css/?fontface=LexiSaebomRWeb'
+        rel='stylesheet' type='text/css' />
+        <style>
+			body {
+				font-family: "LexiSaebomRWeb"
+			}
+			footer {
+				border: #0000CC solid 1px
+			}
+
+        </style>
+    </head>
+    <body>
+        <p>footer 요소는 가장 가까운 조상 요소인 섹션 컨텐츠 또는 섹션 루트의 푸터를 나타냅니다. 푸터는 일반적으로 작성자가 누구인지, 연관된 문서에 대한 링크, 저작권 정보, 기타 흡사한 정보들을 담습니다.</p>
+
+        <p>footer 요소가 전체 섹션을 포함한다면 그러한 섹션은 부록, 색인, 긴 길이의 판권 정보, 장황한 라이센스 협약, 기타 흡사한 내용을 나타냅니다.</p>
+
+        <p>연락 정보는 address 요소에 담는 것이 적합하며, address 요소는 footer 요소 내에 나타날 수 있습니다. </p>
+
+        <p>푸터는 일반적으로 섹션의 마지막에 나타나지만, 꼭 그래야 하는 것은 아닙니다. </p>
+
+        <p>가장 가까운 섹션 컨텐츠, 혹은 섹션 루트가 body 요소라면, footer 요소는 페이지 전체에 적용됩니다. </p>
+
+        <p>footer 요소는 섹션 컨텐츠가 아닙니다. 새로운 섹션을 암시하지도 않습니다. </p>
+
+        <p>푸터를 두 개 포함한 페이지가 있습니다. 하나는 상단에 있고 다른 하나는 하단에 있으며, 같은 내용을 담고 있습니다. </p>
+
+        <footer>
+            <a href="file:///D|/example">차례로 돌아가기...</a>
+        </footer>
+        <hgroup>
+            <h1>훈민정음</h1>
+            <h2>훈민정음 언해본 서문</h2>
+        </hgroup>
+        <p>나랏말싸미 듕귁에 달아 문자와로 서르 사맛디 아니할쌔 이런 젼차로
+            어린 백셩이 니르고져 홇배이셔도 마참내 제 뜨들 시러펴디 못핧노미 하니라
+            내 이랄 위하야 어엿비 너겨 새로 스믈여듧자랄 맹가노니 사람마다 해여 수비니겨
+            날로 쑤메 뼌한킈 하고져 핧 따라미니라</p>
+        <footer>
+            <a href="file:///D|/example">차례로 돌아가기...</a>
+        </footer>
+
+        <p>이 예제는 사이트 전체 푸터와 섹션 푸터를 보여줍니다. </p>
+
+        <H1>과학자의 횡설수설</H1>
+        <ARTICLE>
+            <H1>에피소드 15</H1>
+            <VIDEO SRC="/fm/015.ogv" CONTROLS PRELOAD>
+                <P><A HREF="/fm/015.ogv">동영상 내려받기</A>.</P>
+            </VIDEO>
+            <FOOTER>
+                <!-- article의 푸터입니다 -->
+                <P>발행일 <TIME PUBDATE DATETIME="2009-10-21T18:26-07:00"></TIME></P>
+            </FOOTER>
+        </ARTICLE>
+        <ARTICLE>
+            <H1>내가 좋아하는 기차들</H1>
+            <P>나는 기차를 정말 좋아합니다. 그중에서도 최고는 Köf죠.</P>
+            <P>Köf는 석탄이 실린 차량에 비해 땅딸막해 보이는데도
+                석탄이 실린 차량을 끌고 가는 걸 보면 아주 재미있습니다.</P>
+            <FOOTER>
+                <!-- article의 푸터입니다 -->
+                <P>발행일 <TIME PUBDATE DATETIME="2009-09-15T14:54-07:00"></TIME></P>
+            </FOOTER>
+        </ARTICLE>
+        <FOOTER>
+            <!-- 사이트전체 푸터입니다 -->
+            <NAV>
+                <P><A HREF="/credits.html">도와준 분</A> — <A HREF="/tos.html">서비스 항목</A> — <A HREF="/index.html">블로그 차례</A></P>
+            </NAV>
+            <P>Copyright © 2009 Gordon Freeman</P>
+        </FOOTER>
+
+        <p>일부 사이트는 푸터에 매우 많은 내용이 들어가게끔 디자인되었습니다. 이런 푸터를 간혹 "뚱뚱한 푸터" 라고 부릅니다. 이미지나 다른 글을 기리키는 링크, 피드백을 보낼 페이지 링크, 특별 이벤트 등이 모두 푸터에 들어가므로 "첫 페이지"가 푸터에 전부 들어갔다고 해도 과언이 아닙니다. </p>
+
+        <p>아래 마크업은 "내용이 많은 푸터"로 디자인된 사이트의 아래 부분입니다.</p>
+
+        <footer>
+            <nav>
+                <section>
+                    <h1>Articles</h1>
+                    <p><img src="../images/alpha.gif" alt=""> 체육관에 나와서
+                        공중제비 수업을 들어 보세요! Jim 선생님이 전체 과정을 두 단계로 나눠서
+                        가르쳐 드립니다. <a href="../articles/somersaults/1">Part
+                        1</a>· <a href="../articles/somersaults/1">Part 2</a></p>
+                    <p><img src="../images/alpha.gif"> 절벽 끝에서 일하는 것 같은 위태위태한
+                        상황에 지치셨죠<!-- sic -->? 객원 작가 Lara가 막대기 사이를 헤쳐 나가는
+                        법을 알려 드립니다. <a href="../articles/kindplus/1">더 읽어보세요...</a></p>
+                    <p><img src="../images/aqua_3_button_03.png"> 감자칩은 다 떨어지고 감자만 남았습니다.
+                        감자로 뭘 할 수 있을까요? <a href="../articles/crisps/1"> 더 읽어보세요...</a></p>
+                </section>
+                <ul>
+                    <li><a href="/about">소개</a><li><a href="/feedback">피드백을 보내주세요!</a><li><a href="/sitemap">사이트맵</a>
+                </ul>
+            </nav>
+            <p><small>Copyright © 2015 The Snacker — <a href="/tos">서비스 항목</a></small></p>
+        </footer>
+    </body>
+</html>

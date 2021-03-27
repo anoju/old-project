@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet' type='text/css'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+		</style>
+		<script src="js/jquery-1.8.0.min.js"></script>
+
+		<script type="text/javascript">
+            var worker;
+            function callWorker() {
+                if (!!window.Worker) {//브라우저가 웹 워커를 지원하는지 검사한다
+
+                    if (worker)
+                        worker.terminate();
+                    //워커가 이미 존재하면 종료시킨다
+                    worker = new Worker("worker.js");
+                    //새로운 워커(객체)를 생성한다
+
+                    worker.onmessage = function(event) {//워커로부터 전달되는 메시지를 받는다
+                        alert(event.data);
+                    };
+
+                    worker.postMessage("워커야! 깨어나라!");
+                    //워커에게 메시지를 전달한다
+                } else {
+                    alert("현재 브라우저는 웹 워커를 지원하지 않습니다")
+                }
+            }
+
+            function stopWorker() {
+                if (worker) {
+                    worker.terminate();
+                    alert("워커 작업이 중지되었습니다");
+                }
+            }
+		</script>
+	</head>
+	<body>
+		<button onclick="callWorker()">
+			웹워커 호출
+		</button>
+		<button onclick="stopWorker()">
+			웹워커 중지
+		</button>
+		<br>
+		<input type="text">
+	</body>
+</html>

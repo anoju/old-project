@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<script type="application/javascript">
+			function draw_m() {
+				var canvas = document.getElementById("m");
+				if (canvas.getContext) {
+
+					var ctx = canvas.getContext('2d');
+
+					ctx.beginPath();
+					ctx.arc(70, 70, 20, 0, (Math.PI / 180) * 60, true);
+					ctx.stroke();
+					ctx.beginPath();
+					ctx.arc(130, 110, 50, 0, Math.PI * 2, true);
+					ctx.fillStyle = "rgb(0,200,200)";
+					ctx.fill();
+					ctx.stroke();
+					ctx.beginPath();
+					ctx.arc(190, 70, 20, (Math.PI / 180) * 110, (Math.PI / 180) * 170, true);
+					ctx.stroke();
+					ctx.beginPath();
+					ctx.arc(300, 150, 30, 0, (Math.PI / 180) * 200, false);
+					ctx.fillStyle = "rgb(0,200,0)";
+					ctx.fill();
+				} else {
+					alert("사파리 브라우저나 파이어폭스 1.5 이상의 브라우저에서만 사이트 내용을 제대로 볼 수 있습니다.")
+				}
+			}
+
+		</script>
+	</head>
+
+	<body onload="draw_m()">
+		<canvas id="m" width="400" height="500"></canvas>
+	</body>
+</html>

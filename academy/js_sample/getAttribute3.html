@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>  </title>
+
+		<!-- 외부 CSS 링크-->
+		<link rel="stylesheet" type="text/css" href="#" />
+
+		<style type="text/css">
+			body{
+				font-family:"나눔고딕","맑은 고딕";
+				font-size: 75%;
+				background:black;
+				color:white;}
+
+			p{
+				color:yellow;
+				font-size:1.2em;}
+			#myList{
+				border:1px solid white;
+				background:#333;
+				color:#ccc;
+				padding:1em 2em;
+				line-height:2em;}
+
+				#myList li{
+					font-weight:bold;}
+
+		</style>
+
+		<script type="text/javascript" src="#">	//스크립트 링크	</script>
+
+	</head>
+
+	<body>
+		<h1>만약 바꿀 속성값이 없어서 강제 주입</h1>
+
+		<p id="myP">일단 빈값으로 출력</p>
+		<p>강제속성주입</p>
+
+		<ul id="myList">
+			<li>강제속성주입</li>
+			<li>강제속성주입</li>
+			<li>강제속성주입</li>
+		</ul>
+
+		<script type="text/javascript">
+			var myChange = document.getElementById("myP")
+			//속성값이 없음을 확인
+			alert(myChange.getAttribute("title"))
+
+			//속성값 강제 주입
+			myChange.setAttribute("title","강제로 title이 할당")
+			
+			myChange = document.getElementById("myP")
+			alert(myChange.getAttribute("title"))
+
+
+		
+		</script>
+	</body>
+
+</html>

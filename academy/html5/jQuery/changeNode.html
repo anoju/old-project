@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+			div{
+				margin-bottom:50px;
+			}
+		</style>
+		<script src="../informationTechnology/js/jquery-1.8.2.min.js"></script>
+		<script>
+			$(function(){
+				//텍스트 노드 변경
+				$("#first").text("변경후")
+				
+				//beforeText의 텍스트 노드를 읽은후 afterText 텍스트 노드를 변경
+				//$("#afterText").text($("#beforeText").text())
+				var beforeText = $("#beforeText").text()
+				$("#afterText").text(beforeText)
+				
+				//내용을 바꾸거나 추가하고 싶을때
+				$("#tagInTag").html("<strong>추가될내용</strong>")
+				
+				//html()함수를 이용해서 태그를 통채로 읽어서 다른 요소안에 집어 넣음
+				$("#changeText").html($("#sourceText").html())
+				
+				// 타켓 앞쪽에 마크업과 같이 삽입 할 수 있음
+				$("#prepend").prepend('<strong style="color:red;">제이쿼리 prepend 이용</strong>')
+				// 타켓 뒤쪽에 마크업과 같이 삽입 할 수 있음
+				$("#append").append('<i style="color:red;">제이쿼리 append 이용</i>')
+				
+				//타겟태그 앞에 삽입
+				$("#target").before('<h1>이형제는 .before로 처리된다</h1>')
+				//타겟태그 뒤에 삽입
+				$("#target").after('<h3>이형제는 .after로 처리된다</h3>')
+				
+				//이동 요소의 순서를 변경(이미 마크업 존재)
+				$(".front").prependTo('.prependTo')
+				$(".end").appendTo('.appendTo')
+				
+				//형제요소 앞뒤로 이동
+				$("h1.before").insertBefore('#insertBefore')
+				$("h2.After").insertAfter('#insertAfter')
+			})
+		</script>
+	</head>
+	<body>
+		<div>
+			<p id="first">변경전</p>
+		</div>
+		
+		<div>
+			<p id="beforeText">가져온 문자열</p>
+			<p id="afterText">변경전텍스트</p>
+		</div>
+		
+		<div>
+			<p id="tagInTag">바뀌기 전내용</p>
+		</div>
+		
+		<div>
+			<p id="sourceText"><i>원본소스글자</i></p>
+			<p id="changeText">바뀔글자</p>
+		</div>
+		
+		<div>
+			<p id="prepend">원본글자</p>
+			<p id="append">원본글자</p>
+		</div>
+		
+		<div>
+			<p id="target">나를 기준으로 태그 삽입</p>
+		</div>
+		
+		<div>
+			<p class="prependTo appendTo" style="color:blue;"> 이문단에 아래있던 i요소의 내용을 이동시킴 </p>
+			<strong class="front"> 원래 아래위치하였으나 문단안 앞으로 이동되었다. </strong>
+			<strong class="end"> 원래 아래위치하였으나 문단안 뒤로 이동되었다. </strong>
+		</div>
+		
+		<div>
+			<p id="insertBefore">나를 기준으로 형제의 순서 변경</p>
+			<h1 class="before">이제목은 p형제 뒤에 있었으나 앞으로 이동됨</h1>
+			<hr>	
+			<h2 class="After">이제목은 p형제 앞에 있었으나 뒤로 이동됨</h1>
+			<p id="insertAfter">나를 기준으로 형제의 순서 변경</p>
+		</div>
+	</body>
+</html>

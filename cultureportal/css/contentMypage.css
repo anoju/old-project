@@ -1,0 +1,82 @@
+@charset "utf-8";
+@import url('/css/default.css');
+@import url('/css/layout.css');
+@import url('/css/contentCommon.css');
+
+form.boardSearch01 { float:right; margin-bottom:10px; }
+form.boardSearch01 > * { float:left; }
+form.boardSearch01 span { width:180px; height:20px; margin-left:4px; border-width:1px; border-style:solid; border-color:#cbcbcb #e4e4e4 #e4e4e4 #cbcbcb; }
+form.boardSearch01 span input { float:left; height:20px; width:145px; border:0; padding:0 7px; font:normal 1em/1.45 "나눔고딕", NanumGothic, NGNormal, "돋움", Dotum; line-height:20px; }
+form.boardSearch01 span button { float:right; margin:3px 5px 0 0; }
+
+/* index */
+p.welcome { margin-bottom:25px; padding:10px; background:url('/images/mypage/bgParrernBox.gif') repeat 0 0; }
+p.welcome > span { display:block; padding:20px; background-color:#fff; text-align:center; }
+p.welcome span span { display:inline-block; height:26px; padding-left:35px; color:#666; font-family:NGBold, "돋움", Dotum; font-size:1.3em; background:url('/images/mypage/bgSmile.gif') no-repeat 0 50%; line-height:26px; }
+
+div.myInfo { float:left; width:346px; margin:0 33px 30px 0; overflow:hidden; }
+div.myInfo > div { display:table; position:relative; width:100%; height:103px; margin-top:-10px; border-top:2px solid #6b6b6b; border-bottom:1px solid #e3e3e3; }
+div.myInfo img { float:left; width:71px; height:71px; margin:13px 20px 0 0; border:1px solid #d0d0d0; }
+div.myInfo h5 { *position:relative; *top:-50%; margin-bottom:5px; color:#333; }
+div.myInfo p { *position:relative; *top:-50%; color:#666; }
+div.myInfo div div { display:table-cell; *position:absolute; *top:50%; width:250px; vertical-align:middle; text-align:left; }
+div.myInfo span.button { float:right; margin-top:15px; }
+
+div.myPoint { float:left; width:346px; margin-bottom:30px; overflow:hidden;}
+div.myPoint table { width:100%; margin-top:-10px; border-top:2px solid #6b6b6b; }
+div.myPoint th { height:51px; padding:0 0 0 10px; border-bottom:1px solid #e3e3e3; color:#333; text-align:left; }
+div.myPoint td { height:51px; padding:0; border-bottom:1px solid #e3e3e3; color:#666; }
+div.myPoint span.button { float:right; margin-top:15px; }
+
+div.boardBox { clear:both; position:relative; overflow:hidden; }
+div.boardBox table { margin-top:-10px; }
+div.boardBox a.moreList { position:absolute; top:3px; right:0; padding-left:10px; color:#9093a2; font-family:NGBold, "돋움", Dotum; font-size:.9em; background:url('/images/common/bg/bgMore02.gif') no-repeat 0 50%; line-height:1; vertical-align:top; }
+
+/* 개인정보수정 */
+td.userIcon { border-left:1px solid #eaeaea; background-color:#fbfbfb; }
+td.userIcon img { float:left; width:71px; height:71px; margin:0 20px 0 30px; border:1px solid #d0d0d0; }
+td.userIcon p { margin:20px 30px 0 0; color:#666; }
+td.userIcon input { width:180px; margin:5px 0 0 30px; vertical-align:middle; }
+td.userIcon span.button { vertical-align:bottom; }
+
+/* 포인트 */
+p.point { clear:both; position:relative; top:-25px; margin-bottom:25px; padding:10px; background:url('/images/mypage/bgParrernBox.gif') repeat 0 0; }
+p.point > span { display:block; padding:20px; background-color:#fff; text-align:center; }
+p.point span span { display:inline-block; height:26px; padding-left:48px; color:#666; font-family:NGBold, "돋움", Dotum; font-size:1.3em; background:url('/images/mypage/bgPoint.gif') no-repeat 0 50%; line-height:26px; }
+p.point b { border-bottom:1px solid #41a0ff; color:#41a0ff; font-family:NGBold, "돋움", Dotum; font-weight:normal; }
+
+form.search01.point { margin:-5px 0 20px; }
+
+ul.point { margin-top:40px; padding:23px 25px; border:1px solid #ebebeb; line-height:1.6; }
+
+/* 스크랩 */
+div.tableFunction { margin:-41px 0 40px; padding:6px 13px; border-top:1px solid #cecece; border-bottom:1px solid #cecece; background-color:#ececec; }
+
+/* 전통문양사용신청 */
+p.pattern { margin-bottom:30px; padding:18px 20px; border:1px solid #f0f0f0; background-color:#fafafa; line-height:1.6; text-align:justify; }
+p.pattern b { font-family:NGBold, "돋움", Dotum; font-weight:normal; }
+
+dl.pattern { margin-top:40px; padding:23px 25px; border:1px solid #ebebeb; line-height:1.6; }
+dl.pattern dt { float:left; margin-right:4px; font-family:NGBold, "돋움", Dotum; font-weight:normal; }
+dl.pattern dd { overflow:hidden; }
+
+div.tableHead { height:38px; margin-top:10px; padding:0 12px; border-top:1px solid #4e5158; border-bottom:1px solid #eaeaea; background:url('/images/tradition/bgGuideTableHead.gif') repeat-x 0 0; text-align:right; }
+div.tableHead h5 { float:left; color:#333; line-height:38px; }
+table + div.tableHead { margin-top:30px; }
+div.infoHead02 + div.tableHead { margin-top:-1px; }
+
+p.signUse { margin-bottom:15px; padding:20px; border-bottom:1px solid #eaeaea; }
+p.signUse span { display:block; color:#999; font-size:.9em; text-align:right; }
+
+/* 회원탈퇴 */
+p.signOut { margin-bottom:5px; color:#666; font-family:NGBold, "돋움", Dotum; font-size:1.1em; }
+
+ul.signOut { margin-bottom:30px; padding:22px 25px; border:1px solid #f0f0f0; background-color:#fafafa; line-height:1.6; }
+ul.signOut li { padding-left:8px; background:url('/images/common/bg/bgDot01.gif') no-repeat 0 8px; }
+
+table.signOut { width:100%; margin-bottom:15px; border-top:1px solid #4e5158; }
+table.signOut th { padding:18px; border-bottom:1px solid #eaeaea; text-align:left; vertical-align:top; }
+table.signOut td { padding:13px 0; border-bottom:1px solid #eaeaea; }
+
+div.signOut { margin-bottom:15px; padding:0 0 15px 180px; border-bottom:1px solid #eaeaea; }
+div.signOut * { vertical-align:middle; }

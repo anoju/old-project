@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+			div{
+				width:300px;
+				margin:10px auto;
+				padding:10px;
+				background:#999;
+			}
+			dl{
+				width:300px;
+				margin:50px auto;
+				background:#fff;
+			}
+			dl dt{
+				background: #7cadb6;
+				cursor:pointer
+			}
+			dl dd{
+				border:1px solid #7cadb6;
+				height:300px;
+				margin:0;
+			}
+		
+			
+		</style>
+		<script src="../informationTechnology/js/jquery-1.8.2.min.js"></script>
+		<script>
+			$(function(){
+				$('.one dt').click(function(){
+					if($('.one dd').css("display")=="block"){
+						$('.one dd:not(:animated)').slideUp("slow")
+					}else{
+						$('.one dd').slideDown("slow")
+					}
+				})
+				
+				$('.two dt').click(function(){
+					$('.two dd').slideToggle("slow")
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div class="one">
+			<dl>
+				<dt>슬라이딩 효과로 표시상태 변경한다</dt>
+				<dd>
+					slideDown()/slideUp()는 show()/hide()와는 다른 슬라이딩 애니메이션 효과로 표시/비표시를 변경하는 명령입니다.
+				</dd>
+			</dl>
+			<p>난 그냥 별 내용 아님</p>
+		</div>
+		
+		<div class="two">
+			<dl>
+				<dt>슬라이딩 효과로 표시상태 변경한다</dt>
+				<dd>
+					slideDown()/slideUp()는 show()/hide()와는 다른 슬라이딩 애니메이션 효과로 표시/비표시를 변경하는 명령입니다.
+				</dd>
+			</dl>
+			<p>난 그냥 별 내용 아님</p>
+		</div>
+	</body>
+</html>

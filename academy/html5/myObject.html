@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+		</style>
+		
+		<script>
+			//변수 = 값
+			//배열= [값1,값2,값3...]
+			
+			//객체 = {변수1:값1,변수2:값2,변수3:값3}
+			
+			//객체의 예
+			//자동차 핸들, 바퀴, 액셀레이터<-------객체안에 포함된 변수(속성)
+			//자동차의 동작 차가 앞으로 간다(핸들, 바퀴, 액셀레이터)<----비헤이어
+			//메서드(객체안에 숨겨놓은 기능(함수))
+			
+			//강아지의 구성요소 이름, 몸무게, 혈통, 동작["걷기","공물어오기"]
+			//var Brownie = new Object()
+			var Brownie ={
+				name:"브라우니",
+				weight:40,
+				breed:"정여사네", 
+				loves:["'물어' 쌩까기","가만히 앉아있기"]
+			}
+			var jindo ={
+				name:"누렁이",
+				weight:10,
+				breed:"정여사네", 
+				loves:["물기","짓기"]
+			}
+			
+			//강아지가 가지는 성격중에 몸무게에 따른 짓는 소리 규정을 위해서 객체에 접근
+		/*
+			if(Brownie.weight>25){
+				alert("크게짓음")
+			}else{
+				alert("작게짓음")
+			}
+			
+			//강아지의 혈통에 따른 조건을 이용해서 잡종이면 부시럭된다.
+			var breed = Brownie.breed
+			if(breed == "정여사네"){
+				alert("음~ 차도개")
+			}else{
+				alert("누구니?")
+			}
+			
+			//몸무게 변경
+			Brownie.weight=27
+			
+			//혈통변경
+			Brownie.breed="챠우챠우"
+			
+			//강아지 ㄱㄱ체가 좋아하는 행동을 추가
+			//배열이름.push("값")
+			Brownie.Array.loves.push("델리스파이스 노래부르기")
+		
+			
+			var i
+			for(i in Brownie){
+				alert("브라우니 " + i + " 속성을 가지고 있다.")
+			}
+		
+			
+			//객체를 함수에 전달
+			//몸무게에 따른 짓는 소리의 종류
+			function bark(myDog){
+				if(myDog.weight > 25){
+					alert("몸무게가 큰개라서 크게 짓음")
+				}else{
+					alert("몸무게가 작아서 작게 짓음")
+				}
+			}
+			
+			//짓는다 함수 호출 인수로써 객체 이름만 대입
+			bark(Brownie)
+			bark(jindo)
+		*/
+			
+			//객체에 추가속성을 집어넣으려면 , 연산자를 이용한다
+			//예를 들어 강아지의 나이를 추가
+			Brownie.dogAge =20
+			jindo.dogAge =5
+			
+			alert(Brownie.dogAge)
+			alert(jindo.dogAge)
+			alert(jindo.name)
+			delete jindo.name
+			alert(jindo.name)
+			
+			
+		</script>
+		
+	</head>
+
+	<body>
+
+	</body>
+</html>

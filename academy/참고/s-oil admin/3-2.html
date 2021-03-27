@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>상품관리</title>
+<link rel="stylesheet" type="text/css" href="css/admin.css"  media="all" />
+
+</head>
+
+<body>
+	<p id="skip"><a title="Skip to navigation" href="#contents">본문바로가기</a></p>
+	<div id="wrap">
+		<div id="header">
+			<h1 class="logo"><a href="#">S-OIL TOTAL LUBRICANTS CO.,LTD</a></h1>
+					
+			<div class="gnb">
+				<a href="#" class="logout">Logout</a>		
+				<a href="#">S-OILTOTAL바로가기</a>
+			</div>
+			<ul id="nav">	
+				<li class="menu-1"><a href="#" class="selected">상품관리</a>
+					<ul>
+						<li><a href="#">전체상품관리</a></li>
+						<li><a href="#">S-OIL제품관리</a></li>
+						<li><a href="#">TOTAL 제품관리</a></li>
+					</ul>
+				</li>
+				<li class="menu-2"><a href="#">상품 정보관리</a>
+					<ul>
+						<li><a href="#">윤할유상식</a></li>
+						<li><a href="#">자동차용 엔진 오일정보</a></li>
+						<li><a href="#">자동차용기어오일정보</a></li>
+						<li><a href="#">재품저장 및 취급요령</a></li>
+					</ul>
+				</li>
+				<li class="menu-3"><a href="#">고객관리</a>
+					<ul>
+						<li><a href="#">매장관리/등록</a></li>
+						<li><a href="#">1:1문의관리</a></li>
+					</ul>
+				</li>
+				<li class="menu-4"><a href="#">마일리지샾</a>
+					<ul>
+						<li><a href="#">경품관리</a></li>
+						<li><a href="#">경품신청 리스트</a></li>
+						<li><a href="#">경품 발송 관리</a></li>
+					</ul>
+				</li>
+				<li class="menu-5"><a href="#">커뮤니티 관리</a>
+					<ul class="right">
+						<li><a href="#">카센터자랑</a></li>
+						<li><a href="#">베스트대리점</a></li>
+						<li><a href="#">게시판관리</a></li>
+					</ul>
+				</li>
+				<li class="menu-6"><a href="#">운영관리</a>
+					<ul class="right">
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">faq관리</a></li>
+						<li><a href="#">뉴스정보관리</a></li>
+						<li><a href="#">갤러리관리</a></li>
+					</ul>
+				</li>
+				<li class="menu-7"><a href="#">채용정보</a>
+					<ul class="right">
+						<li><a href="#">입사지원관리</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div><!-- #header -->
+		<div id="contents">
+			<div class="section">
+				<div class="path">
+					<a href="">Home</a> &gt;
+					<span>고객관리</span> &gt;
+					<a href="">1:1문의관리 Q&amp;A</a> &gt;					
+					<strong>1:1문의답변</strong>
+				</div>
+				<div class="title clearfix">
+					<h2 class="menu3-2">전체상품관리</h2>	
+				</div>
+			</div>
+			<table>
+				<caption class="blind">게시판  등록</caption>
+				<tbody>
+				<tr>
+					<th scope="row">문의번호</th>
+					<td colspan="5" class="list_left">14</td>
+				</tr>
+				<tr>
+					<th scope="row">제목</th>
+					<td colspan="5" class="list_left">질문있습니다.</td>
+				</tr>
+				<tr>
+					<th scope="row">등록일</th>
+					<td>2012.03.20</td>
+					<th scope="row">이메일</th>
+					<td>
+						<span>abcdefghijk@hotmail.com</span>
+						<input type="checkbox" />
+						<label for="">메일발송</label>
+					</td>
+					<th scope="row">FAQ등록</th>
+					<td>
+						<input type="checkbox" />
+						<label for="">FAQ 등록하기</label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">문의내용</th>
+					<td colspan="5" class="list_left"><textarea id=""   name="" rows="5" cols="50" placeholder="작성하세요 "></textarea></td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="">내용</label></th>
+					<td colspan="5" class="list_left"><textarea id=""   name="" rows="5" cols="50" placeholder="작성하세요 "></textarea></td>
+				</tr>
+				</tbody>
+			</table>
+			<span class="btn normal"><a href="#">목록가기</a></span> 
+			<span class="btn normal"><a href="#" class="two">등록</a></span>
+
+			</div>
+		</div><!-- #contents -->
+	</div> <!-- wrap -->
+	<div class="footer">
+		<address>COPYRIGHT 2012 S-OIL TOTAL LUBRICANTS CO.,LTD ALL RIGHT RESERVED.</address>
+	</div>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+	<script type="text/javascript" src="js/jquery.placeholder.min.js"></script> 
+	<script type="text/javascript">
+			var timeout         = 500;
+			var closetimer		= 0;
+			var ddmenuitem      = 0;
+
+			function nav_open()
+			{	nav_canceltimer();
+				nav_close();
+				ddmenuitem = $(this).find('ul').eq(0).css('visibility', 'visible');}
+
+			function nav_close()
+			{	if(ddmenuitem) ddmenuitem.css('visibility', 'hidden');}
+
+			function nav_timer()
+			{	closetimer = window.setTimeout(nav_close, timeout);}
+
+			function nav_canceltimer()
+			{	if(closetimer)
+				{	window.clearTimeout(closetimer);
+					closetimer = null;}}
+
+			$(document).ready(function()
+			{	$('#nav > li').bind('mouseover', nav_open);
+				$('#nav > li').bind('mouseout',  nav_timer);});
+
+			document.onclick = nav_close;
+
+	$('input[placeholder], textarea[placeholder]').placeholder();
+	</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  	<TITLE> 레이어팝업 </TITLE>
+	<style type="text/css">
+		body{
+			background:#ccffff;
+		}
+	</style>
+	<!--팝업소스-->
+	<script language="Javascript">
+	function setcookie( name, value, expirehours ) {
+	var todayDate = new Date();
+	todayDate.setHours( todayDate.getHours() + expirehours );
+	document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+	}
+	function closeWin() {
+	if ( document.notice_form.chkbox.checked ){
+	setcookie( "maindiv", "done" , 24 );
+	}
+	document.all['divpop'].style.display = "none";
+	}
+	</script>
+	<!--팝업소스-->
+ 
+</HEAD>
+<BODY>
+
+    <!--실제팝업레이어-->
+    <div id="divpop" style="width:480px; height:352px; border:1px solid #999; position:absolute; left:100px; top:150px; z-index:1000; visibility:hidden;">
+        <form name="notice_form">
+            <div>
+                <!--삽입이미지-->
+                <img src="../Portfolio/Biennial/image/@rollingBanner2.png" width="480" height="322" border="0" alt="">
+            </div>
+            <div style="width:100%; height:30px; background:#eee;">
+                <input type="checkbox" name="chkbox" value="" style="border:0;">오늘 하루 이 창을 열지 않음&nbsp;&nbsp;<a href="javascript:closeWin();">[닫기]</a>
+            </div>
+        </form>
+        <script language="Javascript">
+        cookiedata = document.cookie; 
+        if ( cookiedata.indexOf("maindiv=done") < 0 ){   
+            document.all['divpop'].style.visibility = "visible";
+            }
+            else {
+                document.all['divpop'].style.visibility = "hidden";
+        }
+        </script>
+    </div>
+    <!--실제팝업레이어 끝-->
+</BODY>
+</HTML>

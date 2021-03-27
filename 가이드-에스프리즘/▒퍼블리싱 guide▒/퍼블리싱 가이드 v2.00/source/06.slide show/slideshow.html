@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>jQuery Tools standalone demo</title>
+ 
+<link rel="stylesheet" type="text/css" href="common/css/content.css" />
+<script type="text/javascript" src="common/js/jquery.tools.min.js"></script>
+<!-- fix IE "black box" problems with PNG images when opacity is being animated -->
+<!--[if IE]>
+<style type="text/css">
+.images img {
+	background:#efefef url(/img/global/gradient/h300.png) repeat-x 0 -22px;
+}
+</style>
+<![endif]-->
+</head>
+
+<body>
+
+<!-- "previous slide" button -->
+<a class="backward">prev</a>
+ 
+<!-- container for the slides -->
+<div class="images"> 
+	<!-- first slide -->
+	<div>
+		<h3><a href="http://www.naver.com">First pane</a></h3>
+	</div>
+ 
+	<!-- second slide -->
+	<div>
+		<h3>Second pane</h3> 
+	</div>
+ 
+	<!-- third slide -->
+	<div>
+		<h3>Third pane</h3>
+	</div> 
+</div>
+ 
+<!-- "next slide" button -->
+<a class="forward">next</a>
+ 
+<!-- the tabs -->
+<div class="slidetabs">
+	<a href="#"></a>
+	<a href="#"></a>
+	<a href="#"></a>
+</div>
+ 
+<div style="clear:both;margin:30px 0;text-align:center;padding-right:40px">
+<input type="button" value="play" onclick='$(".slidetabs").data("slideshow").play();' />
+<input type="button" value="Stop" onclick='$(".slidetabs").data("slideshow").stop();' />
+</div>
+ 
+<script type="text/javascript"> 
+// What is $(document).ready ? See: http://flowplayer.org/tools/documentation/basics.html#document_ready
+$(function() {
+ 
+$(".slidetabs").tabs(".images > div", {
+ 
+	// enable "cross-fading" effect
+	effect: 'fade',
+	fadeOutSpeed: "slow",
+ 
+	// start from the beginning after the last tab
+	rotate: true
+ 
+// use the slideshow plugin. It accepts its own configuration
+}).slideshow();
+});
+</script>
+
+
+</body>
+</html>

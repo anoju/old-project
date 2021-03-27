@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+		</style>
+		<script src="../informationTechnology/js/jquery-1.8.2.min.js"></script>
+		<script>
+			$(function(){
+				// ~셀렉터 지정대상 뒤에 나오는 모든 요소를 한꺼번에 지정
+				//$("#second~ li").css("color","blue")
+				
+				//지정대상 나머지
+			   	//$("li:not(:first-child)").css("color", "red")
+			   
+			   	//빈텍스트노드를 가진 요소지정 참고로 "-"가 들어가는 css속성명은 제이쿼리 내에서는 "-"구문과 낙표기법을 둘다 지원한다.
+			   	//$("li:empty").css("fontSize", "25px")
+			   
+			   	//클론앞에 지정된 셀렉터중에 몇번째에 해당하는지를 명시
+			   	//$("li:nth-child(3)").css("fontSize", "100px")
+			   
+			   	//클론앞에 지정된 셀렉터중에 맨마지막에 해당하는 형제요소 명시
+			   	//$("li:last-child").css("textDecoration", "underline")
+			   
+			   	//지정셀렉터의 특정자식(태그)가 하나일 경우
+			   	//$("li strong:only-child").css("color", "orange")
+			   
+			   	//지정셀렉터가 없는 특정자식(태그)으로 선택했을 경우 동시에 적용
+			   	//$("strong:only-child").css("color", "orange")
+				
+				//속성명으로 지정
+			    //$("[id]").css("color", "blue")
+			    //$("[class]").css("color", "red")
+			    
+			    //속성지정과 값도 같이 지정
+			    //$("[title='두번째 목록']").css("color", "red")
+			    
+			    //지정속성명(title)과 지정 문자열이 없는 경우에 모든 동일(title)속성에
+			    //주의 할점은 []앞에 타입(tag)를 명시 
+			    //$("li[title!='첫번째 목록']").css("color", "skyblue")
+			    //[속성이름^="값"]------->특정문자 시작
+			    //[속성이름$="값"]------->특정문자로 끝나는
+			    //[속성이름*="값"]------->특정문자 포함(위치는 관계 없음)
+			    
+			    //동시 두가지 조건 만족하는 셀렉터 지정
+			    //$("[title ^= '첫'][title *= '목록']").css("color","red")
+			    
+			   
+			   /////////////////////////////////////////////////////////////
+			   
+			    //제이쿼리가 독자적으로 만든(기존에없던)셀렉터를 필터라고함
+			    //$("li:first").css("color","red")
+			    //$("li:last").css("color","red")
+			    
+			    //홀수는 odd 짝수는 even
+			    //$("li:odd").css("color","red")
+			    //$("li:even").css("color","blue")
+			    
+			    //n번째 해당되는 필터0번 부터시작
+			    //$("li:eq(2)").css("color","red")
+			    //$("li:eq(3)").css("color","blue")
+			    
+			    //lt(less than)특정태그보다 앞에 있는 대상
+			    //$("li:lt(2)").css("color","red")
+			    //gt(greater than)특정태그보다 뒤에있는 대상
+			    //$("li:gt(1)").css("color","blue")
+			    
+			    
+			    //header요소에 해당되는 부분처리 h1~6 html5<header>하고는 무관
+			    //$(":header").css("backgroundColor","yellow")
+			    
+			    //텍스트노드에 포함되어져있는 단어로 지정 contains 필터
+			    //$("li:contains('contains')").css("color","red")
+			    //특정태그가 포함되어져있는 태그 선택 has
+			    //$("li:has('strong')").css("color","blue")
+			    
+			    //해당요소의 임의의 텍스트가 포함되었거나 태그가 포함된 경우:empty의 반대 개념		    
+			    //$("li:parent").css("color","red")
+			})
+		</script>
+	</head>
+	<body>
+		<h1>1제목</h1>
+		<h2>2제목</h2>
+		<h3>3제목</h3>
+		<h4>4제목</h4>
+		<h5>5제목</h5>
+		<h6>6제목</h6>
+		
+		<ul>
+			<li id="first" title="첫번째 목록"><strong>목록</strong>의 내용</li>
+			<li class="second" title="두번째 목록"><strong>목록</strong>의 <strong>내용</strong></li>
+			<li id="third" title="세번째 목록">목록의 내용</li>
+			<li class="fourth" title="네번째 목록">contains의 내용</li>
+		</ul>
+		
+		<ul>
+			<li>내용</li>
+			<li></li>
+			<li>내용</li>
+			<li></li>
+			<li><span></span></li>
+		</ul>
+		
+		
+	</body>
+</html>

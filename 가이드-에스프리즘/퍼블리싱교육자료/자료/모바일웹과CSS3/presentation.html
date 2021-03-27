@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+<meta charset="utf-8">
+<title>모바일웹과 CSS3</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="img/iscroll.js"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+	html, body{height:100%;margin:0;background:#1a1c22}
+	@font-face{font-family:NG;src:url(img/NanumGothic.eot);src:local(※),url(img/NanumGothic.woff) format('woff')}
+	body, input, textarea, select, button{font-family:NanumGothic,나눔고딕,NG,Tahoma,Geneva,sans-serif;color:#e6e8ec}
+	header, footer, section, article, nav{display:block}
+	header{height:100%}
+	section{position:relative;width:100%;height:100%}
+	img{border:0}
+
+	header h1{font-size:100px;text-align:center;position:relative;top:30%;margin:0;padding:0}
+	header p{font-size:20px;text-align:right;position:absolute;right:10%;bottom:20%}
+	nav{position:absolute;bottom:50px;right:50px}
+	nav > a{color:#999;text-decoration:none;font-size:16px}
+	nav > a:hover{color:#dd2067;trasition:all 1.5s ease;-webkit-transition:All 1s ease;-moz-transition:All 1s ease;-o-transition:All 1s ease}
+	nav > span{color:#666;font-weight:bold;font-size:16px;margin:0 4px}
+
+	h2{text-align:center;font-size:80px;padding:100px 0 0 0;margin:0;line-height:150px}
+	h2 strong{color:#dd2067;font-size:120px;display:block}
+	h3{text-align:center;font-size:60px;padding:80px 0 0 0;margin:0;line-height:100px}
+	h3 strong{color:#dd2067;font-size:100px;display:block}
+
+	section.tc h3{text-align:left;padding:100px 0 0 100px}
+	section.tc ol{padding:70px 0 0 180px;font-size:30px}
+	section.tc li{line-height:45px}
+	section.tc li a{color:#999;text-decoration:none;color:#e6e8ec}
+	section.tc li a:hover{text-decoration:underline}
+
+	section .img{text-align:center;margin:50px 0 0 0}
+	section .img img{border:2px solid #0f1013}
+	section .css{border:2px solid #d0d0d0;background:#fafafa;width:800px;height:500px;margin:50px auto 0 auto;text-align:center;position:relative;z-index:10}
+	section > p{text-align:center;margin:0;padding:40px 50px 0 50px;font-size:26px}
+	section > p span{color:#dd2067}
+	section > p a{color:#fff;display:block;height:35px;line-height:35px;margin:0 auto}
+	section > p a:hover{color:#dd2067;trasition:all 1.5s ease;-webkit-transition:All 1s ease;-moz-transition:All 1s ease;-o-transition:All 1s ease;background:#fff}
+
+	section .scroll{text-align:center;margin:40px auto;background:#f7fcf6;width:500px;height:150px;overflow-x:hidden;overlfow-y:auto;border:2px solid #0f1013;color:#666;position:relative;line-height:25px}
+	section .scroll p{margin:0;padding:20px}
+	section .scroll img{width:150px}
+
+	section .slider .touchslider-viewport{width:100%;height:500px;overflow:hidden;position:relative;margin:50px 0 0 0}
+	section .slider .touchslider-viewport ul,.slider .touchslider-viewport li{width:100%;height:500px;list-style:none;padding:0;text-align:center}
+	section .slider .touchslider-viewport img{width:333px;height:500px}
+	section .slider .touchslider-nav ul{padding:9px 0 0 0;text-align:center}
+	section .slider .touchslider-nav li{display:inline;margin:0 2px}
+	section .slider .touchslider-nav a{display:inline-block;width:8px;height:8px;text-indent:-9999px;overflow:hidden;background-repeat:no-repeat;background-image:url(img/tab_slider.png);background-size:8px 20px}
+	section .slider .touchslider-nav a.touchslider-nav-item-current{background-position:0 -10px}
+
+	section .btn{padding:0 10px 10px 10px;background:#fff;width:600px;border:1px solid #0f1013;margin:10px auto}
+	section .btn p{padding:0;margin:10px 0 0 0;height:58px;line-height:58px;border:2px solid #974e04;border-radius:4px;text-align:center;color:#fff;text-shadow:1px 1px 0px #7a4714;font-weight:bold;font-size:26px;
+	background-image: linear-gradient(top, #ee8213 0%, #ca731a 100%);
+	background-image: -o-linear-gradient(top, #ee8213 0%, #ca731a 100%);
+	background-image: -moz-linear-gradient(top, #ee8213 0%, #ca731a 100%);
+	background-image: -webkit-linear-gradient(top, #ee8213 0%, #ca731a 100%);
+	background-image: -ms-linear-gradient(top, #ee8213 0%, #ca731a 100%);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #ee8213),color-stop(1, #ca731a));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee8213', endColorstr='#ca731a')}
+
+	section .trans img{-o-transition:1s;-webkit-transition:1s;margin:40px 0 0 0}
+	section .trans img:hover{-o-transform:scale(1.2, 1.2); -webkit-transform:scale(1.2, 1.2)}
+
+	section .ani{margin:60px 0 0 0;-o-transition:1s; -webkit-transition:1s;animation:ANIMATION infinite 1s linear; -webkit-animation:ANIMATION infinite 1s linear; -moz-animation:ANIMATION infinite 1s linear; -o-animation:ANIMATION infinite 1s linear}
+	section .ani:hover{animation:none; -webkit-animation:none; -moz-animation:none}
+	@keyframes ANIMATION {
+	from{transform:rotate(0deg);}
+	to{transform:rotate(360deg);}
+	}
+	@-webkit-keyframes ANIMATION {
+	from{-webkit-transform:rotate(0deg);}
+	to{-webkit-transform:rotate(360deg);}
+	}
+	@-moz-keyframes ANIMATION {
+	from{-moz-transform:rotate(0deg);}
+	to{-moz-transform:rotate(360deg);}
+	}
+	@-o-keyframes ANIMATION {
+	from{-o-transform:rotate(0deg);}
+	to{-o-transform:rotate(360deg);}
+	}
+
+	.thanks{margin:10px 0 0 0;text-align:center}
+	.thanks dt{font-size:50px;margin:0 0 8px 0;font-weight:bold}
+	.thanks dd{margin:0}
+	.thanks strong{display:block;font-size:18px;margin:20px 0 8px 0;color:#bcffe7}
+	.thanks span{display:inline-block;margin:0 10px 0 0}
+	.thanks a{color:#e6e8ec}
+</style>
+</head>
+<body>
+	<header id="header">
+		<h1>모바일 웹 제작기</h1>
+		<p>2012.11.29 김신영</p>
+		<nav>
+			<a href="#s44">맨뒤로</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#tc">다음 &gt;</a>
+		</nav>
+	</header>
+
+	<section id="tc" class="tc">
+		<h3>Table of Contents</h3>
+		<ol>
+			<li><a href="#s1">왜 모바일웹이 필요했을까</a></li>
+			<li><a href="#s6">시작 해볼까요</a></li>
+			<li><a href="#s14">모바일 이라서</a></li>
+			<li><a href="#s20">스크립트 적용하기</a></li>
+			<li><a href="#s23">속도 향상시키기</a></li>
+			<li><a href="#s28">CSS3 적극적 활용</a></li>
+			<li><a href="#s36">CSS3 다양한 속성들</a></li>
+		</ol>
+		<nav>
+			<a href="#header">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s1">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s1">
+		<h2><strong>왜</strong>모바일웹이 필요했을까</h2>
+		<div class="img"><img src="img/img1.jpg" alt=""></div>
+		<nav>
+			<a href="#tc">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s2">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s2">
+		<h3>웹의 발전</h3>
+		<div class="img"><img src="img/img1_1.jpg" alt=""></div>
+		<p>다양한 웹 디바이스들</p>
+		<nav>
+			<a href="#s1">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s3">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s3">
+		<h3>사용자 증가</h3>
+		<div class="img"><img src="img/img1_2.jpg" alt=""></div>
+		<p>스마트폰 사용자 3000만 시대</p>
+		<nav>
+			<a href="#s2">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s4">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s4">
+		<h3>좁은 화면</h3>
+		<div class="img"><img src="img/img1_3.jpg" alt=""></div>
+		<nav>
+			<a href="#s3">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s5">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s5">
+		<h3>느린 속도</h3>
+		<div class="img"><img src="img/img1_4.jpg" alt=""></div>
+		<nav>
+			<a href="#s4">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s6">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s6">
+		<h2><strong>시작</strong>해볼까요</h2>
+		<div class="img"><img src="img/img2.jpg" alt=""></div>
+		<nav>
+			<a href="#s5">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s7">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s7">
+		<h3>유연한 디자인</h3>
+		<div class="img"><img src="img/img2_1.jpg" alt=""></div>
+		<p>다양한 디바이스 사이즈</p>
+		<nav>
+			<a href="#s6">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s8">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s8">
+		<h3>유연한 디자인</h3>
+		<div class="img"><img src="img/img2_2.jpg" alt=""></div>
+		<p>가변 화면</p>
+		<nav>
+			<a href="#s7">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s9">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s9">
+		<h3>필요한 내용만</h3>
+		<div class="img"><img src="img/img2_3.jpg" alt=""></div>
+		<p>데스크탑 컨텐츠의 약 20%</p>
+		<nav>
+			<a href="#s8">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s10">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s10">
+		<h3>레티나 디스플레이(Retina Display)</h3>
+		<div class="img"><img src="img/img2_4.jpg" alt=""></div>
+		<p>iPhone4에 맞춘 960 x 640 디자인</p>
+		<nav>
+			<a href="#s9">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s11">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s11">
+		<h3>HTML5 활용!</h3>
+		<div class="img"><img src="img/img2_5.jpg" alt=""></div>
+		<p>HTML5에 추가된 Input type</p>
+		<nav>
+			<a href="#s10">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s12">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s12">
+		<h3>HTML5 활용?</h3>
+		<div class="img"><img src="img/img2_6.jpg" alt=""></div>
+		<p>지원되지 않는 기기도 있어요 ㅜㅜ</p>
+		<nav>
+			<a href="#s11">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s13">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s13">
+		<h3>Viewport 설정</h3>
+		<div class="img"><img src="img/img2_7.jpg" alt=""></div>
+		<p>&lt;meta name="<span>viewport</span>" content="<span>width=device-width</span>,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"&gt;</p>
+		<nav>
+			<a href="#s12">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s14">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s14">
+		<h2><strong>모바일</strong>이라서</h2>
+		<div class="img"><img src="img/img3.jpg" alt=""></div>
+		<nav>
+			<a href="#s13">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s15">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s15">
+		<h3>Link 연결</h3>
+		<div class="img"><img src="img/img3_1.jpg" alt=""></div>
+		<p>전화하기, 문자보내기, 메일보내기</p>
+		<nav>
+			<a href="#s14">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s16">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s16">
+		<h3>마우스오버</h3>
+		<div class="img"><img src="img/img3_2.jpg" alt=""></div>
+		<p><a href="http://cafe.naver.com/bjphone/161391" target="_blank" style="width:200px">a:hover</a><br>필요한가요?</p>
+		<nav>
+			<a href="#s15">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s17">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s17">
+		<h3>Font 설정</h3>
+		<div class="img"><img src="img/img3_3.jpg" alt=""></div>
+		<p>기기별 표현되는 폰트가 달라요</p>
+		<nav>
+			<a href="#s16">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s18">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s18">
+		<h3>POPUP</h3>
+		<div class="img"><img src="img/img3_4.jpg" alt=""></div>
+		<p>시스템팝업과 레이어팝업</p>
+		<nav>
+			<a href="#s17">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s19">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s19">
+		<h3>iScroll</h3>
+		<div class="scroll"><p>height:150px<br>overflow-y:auto<br>쭈<br>르<br>르<br>르<br>르<br>르<br>르<br>르<br>륵<br><br><img src="img/img3_5_1.jpg" alt="" width="150" height="113"></p></div>
+		<div id="iscroll" class="scroll"><p>position:relative<br>height:150px<br>overflow-y:auto<br>쭈<br>르<br>르<br>르<br>르<br>르<br>르<br>르<br>륵<br><br><img src="img/img3_5_2.jpg" alt="" width="150" height="107"></p></div>
+		<script type="text/javascript">
+			var myScroll = new iScroll('iscroll');
+		</script>
+		<p>
+			<a href="http://cubiq.org/iscroll-4" target="_blank" style="width:300px">http://cubiq.org/iscroll-4</a>
+		</p>
+		<p>
+			<a href="http://romeoh.blog.me/140171004949" target="_blank" style="width:200px">사용예시</a>
+		</p>
+		<nav>
+			<a href="#s18">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s20">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s20">
+		<h2><strong>스크립트</strong>적용하기</h2>
+		<div class="img"><img src="img/img4.jpg" alt=""></div>
+		<nav>
+			<a href="#s19">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s21">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s21">
+		<h3>주소창 숨기기</h3>
+		<div class="img"><img src="img/img4_1.jpg" alt=""></div>
+		<p>$(function(){ setTimeout(loaded, 100); }); function loaded(){ window.scrollTo(0, 1); }</p>
+		<nav>
+			<a href="#s20">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s22">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s22">
+		<h3>touch slider</h3>
+		<div class="slider">
+			<div class="touchslider-viewport">
+				<ul>
+					<li class="touchslider-item"><img src="img/img4_2_1.jpg" alt=""></li>
+					<li class="touchslider-item"><img src="img/img4_2_2.jpg" alt=""></li>
+					<li class="touchslider-item"><img src="img/img4_2_3.jpg" alt=""></li>
+				</ul>
+			</div>
+			<div class="touchslider-nav">
+				<ul>
+					<li><a class="touchslider-nav-item touchslider-nav-item-current">1</a></li>
+					<li><a class="touchslider-nav-item">2</a></li>
+					<li><a class="touchslider-nav-item">3</a></li>
+				</ul>
+			</div>
+		</div>
+		<script src="img/jquery.touchslider.js"></script>
+		<script>
+		$(".slider").touchSlider({mouseTouch: true});
+		</script>
+		<p>작은 모바일 화면에서 보다 많은 내용 표현</p>
+		<nav>
+			<a href="#s21">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s23">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s23">
+		<h2><strong>속도</strong>향상시키기</h2>
+		<div class="img"><img src="img/img5.jpg" alt=""></div>
+		<p></p>
+		<nav>
+			<a href="#s22">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s24">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s24">
+		<h3>속도 향상 필요</h3>
+		<div class="img"><img src="img/img5_1.jpg" alt=""></div>
+		<p>모바일기기는 데이터 전송속도가 낮아 화면 로딩이 느림</p>
+		<nav>
+			<a href="#s23">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s25">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s25">
+		<h3>이미지 최소화</h3>
+		<div class="img"><img src="img/img5_2.jpg" alt=""></div>
+		<p>데이터를 전송하는 타임라인</p>
+		<nav>
+			<a href="#s24">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s26">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s26">
+		<h3>IS 기법 사용</h3>
+		<div class="img"><img src="img/img5_3.jpg" alt=""></div>
+		<p>Image Sprite 기법 - 이미지를 하나로 모아 background-position의 좌표값으로 이미지를 표현하는 기법</p>
+		<nav>
+			<a href="#s25">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s27">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s27">
+		<h3>CSS3 활용</h3>
+		<div class="img"><img src="img/img5_4.jpg" alt=""></div>
+		<div class="btn">
+			<p>버튼</p>
+			<p>버튼 누르기</p>
+			<p>버튼 안누르기</p>
+			<p>...</p>
+		</div>
+		<p>이미지버튼과 CSS3를 사용한 텍스트버튼</p>
+		<nav>
+			<a href="#s26">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s28">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s28">
+		<h2><strong>CSS3</strong> 적극적 활용</h2>
+		<div class="img"><img src="img/img6.jpg" alt=""></div>
+		<nav>
+			<a href="#s27">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s29">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s29">
+		<h3>CSS</h3>
+		<div class="img"><img src="img/img6_1.jpg" alt=""></div>
+		<p>Cascading Style Sheet - HTML문서에 스타일을 주기 위해 사용</p>
+		<p><span>CSS3</span> - 기존 CSS2.1에서 부족한 부분을 보완&#47;개선한 최신버전의 CSS</p>
+		<nav>
+			<a href="#s28">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s30">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s30">
+		<h3>CSS3는</h3>
+		<div class="img"><img src="img/img6_2.jpg" alt=""></div>
+		<p>이미지 사용을 줄여줍니다</p>
+		<nav>
+			<a href="#s29">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s31">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s31">
+		<h3>CSS3는</h3>
+		<div class="img"><img src="img/img6_3.jpg" alt=""></div>
+		<p>마크업을 간결하게 합니다</p>
+		<nav>
+			<a href="#s30">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s32">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s32">
+		<h3>CSS3로 페이지 제작하기</h3>
+		<div class="img"><img src="img/img6_4.jpg" alt=""></div>
+		<p>너무 복잡하면 힘들어요!</p>
+		<nav>
+			<a href="#s31">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s33">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s33">
+		<h3>Layer Style 사용</h3>
+		<div class="img"><img src="img/img6_5.jpg" alt=""></div>
+		<p>Layer Style은 변환 가능합니다</p>
+		<nav>
+			<a href="#s32">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s34">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s34">
+		<h3>모든 속성이 되지는 않아요</h3>
+		<div class="img"><img src="img/img6_6.jpg" alt=""></div>
+		<p>디자이너 여러분♥</p>
+		<nav>
+			<a href="#s33">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s35">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s35">
+		<h3>CSS3 Demo</h3>
+		<div class="img"><img src="img/img6_7.jpg" alt=""></div>
+		<p><a href="http://css3maker.com" target="_blacnk" style="width:400px">http://css3maker.com</a></p>
+		<p><a href="http://cssprefixer.appspot.com/" target="_blacnk" style="width:400px">벤더 프리픽스 자동완성</a></p>
+		<nav>
+			<a href="#s34">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s36">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s36">
+		<h2><strong>CSS3</strong>다양한 속성들</h2>
+		<div class="img"><img src="img/img7.jpg" alt=""></div>
+		<nav>
+			<a href="#s35">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s37">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s37">
+		<h3>text-shadow</h3>
+		<div class="css">
+			<p style="font-weight:bold;color:#555;text-shadow:4px 4px #333;font-size:85px">text</p>
+			<p style="font-weight:bold;color:#fff;text-shadow:0 0 12px #222;font-size:85px">shadow</p>
+		</div>
+		<p>text-shadow: x y blur color</p>
+		<nav>
+			<a href="#s36">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s38">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s38">
+		<h3>opacity</h3>
+		<div class="css">
+			<p style="position:absolute;top:50px;right:300px;bottom:150px;left:50px;background:purple;opacity:1"></p>
+			<p style="position:absolute;top:150px;right:50px;bottom:50px;left:300px;background:black;opacity:.5"></p>
+		</div>
+		<p>opacity: 0.0 ~ 1</p>
+		<nav>
+			<a href="#s37">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s39">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s39">
+		<h3>box-shadow</h3>
+		<div class="css">
+			<img src="img/img7_1.jpg" alt="" style="position:absolute;left:50%;top:50%;margin:-150px 0 0 -350px;border:2px solid #666;box-shadow:5px 5px 5px gray">
+			<img src="img/img7_1.jpg" alt="" style="position:absolute;left:50%;top:50%;margin:-150px 0 0 -105px;border:2px solid #666;box-shadow:0 0 10px black">
+			<span style="position:absolute;right:50%;top:50%;margin:-150px -350px 0 0;border:2px solid #666;box-shadow:inset 0 0 10px black"><img src="img/img7_1.jpg" alt="" style="vertical-align:top;position:relative;z-index:-1"></span>
+		</div>
+		<p>box-shadow:(inset) x y color</p>
+		<nav>
+			<a href="#s38">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s40">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s40">
+		<h3>border-radius</h3>
+		<div class="img"><img src="img/img7_2.jpg" alt=""></div>
+		<p>border-radius:*px</p>
+		<p><a href="http://css3pie.com/about/" style="width:200px">About PIE</a></p>
+		<nav>
+			<a href="#s39">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s41">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s41">
+		<h3>gradient</h3>
+		<div class="css">
+			<span style="display:block;width:250px;height:300px;position:absolute;left:50%;top:50%;margin:-150px 0 0 -300px;border:1px solid #333;background:-webkit-linear-gradient(top, #4800be, #fff);background:-moz-linear-gradient(top, #4800be, #fff);background:-o-linear-gradient(top, #4800be, #fff);filter:progid:DXImageTransform.Microsoft.gradient(startColorStr=#4800be, endColorStr=#ffffff)"></span>
+			<span style="display:block;width:250px;height:300px;position:absolute;right:50%;top:50%;margin:-150px -300px 0 0;border:2px solid #333;background:-webkit-radial-gradient(50%, #4800be, #fff);background:-moz-radial-gradient(50%, #4800be, #fff);background:-o-radial-gradient(50%, #4800be, #fff);filter:progid:DXImageTransform.Microsoft.gradient(startColorStr=#4800be, endColorStr=#ffffff)"></span>
+		</div>
+		<p style="text-align:left">background:-webkit-linear(radial)-gradient(top, #4800be, #fff);<br>background:-moz-linear(radial)-gradient(top, #4800be, #fff);<br>background:-o-linear(radial)-gradient(top, #4800be, #fff);<br>filter:progid:DXImageTransform.Microsoft.gradient(startColorStr=#4800be, endColorStr=#ffffff)</p>
+		<nav>
+			<a href="#s40">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s42">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s42">
+		<h3>transform</h3>
+		<div class="css" style="background:#fff">
+			<p class="trans"><img src="img/img7_3.jpg" alt=""></p>
+		</div>
+		<p>-o-transform:scale(x, y); -webkit-transform:scale(x, y)</p>
+		<nav>
+			<a href="#s41">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s43">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s43">
+		<h3>animation</h3>
+		<div class="css" style="background:#fff">
+			<p class="ani"><img src="img/img7_4.gif" alt=""></p>
+		</div>
+		<nav>
+			<a href="#s42">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#s44">다음 &gt;</a>
+		</nav>
+	</section>
+
+	<section id="s44">
+		<h2>감사합니다</h2>
+		<dl class="thanks">
+			<dt>Thanks to</dt>
+			<dd>이종민 과장님</dd>
+			<dd><strong>이미지</strong>네이버 검색, 카카오톡, myPhone</dd>
+			<dd>
+				<strong>참고</strong>
+				<a href="http://naradesign.net/css3/presentation.html">나라디자인 CSS3소개(발표용)</a><br>
+				<a href="http://www.webdevmobile.com/xe/lectureboard/39012">CSS3 천기누설 발표자료</a>
+			</dd>
+			<dd>
+				<strong>협찬</strong>
+				<span><img src="img/imgt_1.jpg" alt=""><br>개발팀 최준구 팀장님</span>
+				<span><img src="img/imgt_2.jpg" alt=""><br>크리에이티브팀 김재훈</span>
+				<span><img src="img/imgt_3.jpg" alt=""><br>개발팀 황해숙</span>
+			</dd>
+		</dl>
+		<p>이 페이지는 HTML5와 CSS로 제작되었습니다.</p>
+		<nav>
+			<a href="#s43">&lt; 이전</a>
+			<span>|</span>
+			<a href="#tc">목차</a>
+			<span>|</span>
+			<a href="#header">처음으로</a>
+		</nav>
+	</section>
+</body>
+</html>

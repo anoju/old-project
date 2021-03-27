@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>아코디언 메뉴</title>
+<style>
+.accordionMenu{
+	font : 12px/20px 돋움;
+	color:#424242;
+	background:#fff;
+	padding:10px;
+	width:500px;  /* 메뉴 전체 너비 */
+	margin:0;
+}	
+.accordionMenu h1{
+	margin:0;
+	font-size:20px;
+	text-shadow:2px 2px 2px #aeaeae;	
+}
+.accordionMenu h2{
+	margin:5px 0;
+	paddion:0;	
+}
+.accordionMenu :target h2 a, 
+.accordionMenu h2 a:focus,
+.accordionMenu h2 a:hover,
+.accordionMenu h2 :active {
+	background:#2288dd;
+	background:-moz-linear-gradient(top,#6bb2ff,#2288dd);
+	background:-webkit-gradient(linear,left top, left bottom, from(#6bb2ff), to(#2288dd));
+		 filter: progid:DXImageTransform.Microsoft.gradient
+  (startColorstr=#ff6bb2ff, endColorstr=#ff2288dd);
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient
+  (startColorstr=#ff6bb2ff, endColorstr=#ff2288dd)";
+  color:#fff;	
+}
+.accordionMenu h2 a{
+	font-size:15px;
+	display:block;  /* 제목 영역 차지 */
+	font-weight:normal;
+	color:#424242;
+	text-shadow:2px 2px 2px #aeaeae;
+	text-decoration:none;
+	margion:0;
+	padding:10px;
+	background:#8f8f8f;
+	background:-moz-linear-gradient(top,#cecece,#8f8f8f);
+	background:-webkit-gradient(linear,left top, left bottom, from(#cecece), to(#8f8f8f));
+	filter: progid:DXImageTransform.Microsoft.gradient
+  (startColorstr=#ffcecece, endColorstr=#ff8f8f8f);
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient
+  (startColorstr=#ffcecece, endColorstr=#f8f8f8f)";
+	
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;	
+		
+}
+</style>
+</head>
+
+<body>
+<div class="accordionMenu">
+	<h1>아코디언 메뉴</h1>
+	<div id="html5" class="menuSection">
+		<h2><a href="#html5">HTML5</a></h2>
+        <p>HTML5는 HTML4을 더욱 발전시킨 마크업 언어입니다. 하지만 HTML4에서 단순히 이미지나 텍스트를 표시하던 수준에서 벗어나 화면 상에서 그림을 그리는 등 더 많은 기능을 추가한 마크업 언어입니다. 또한 HTML5는 단순히 마크업 언어로서의 기능 뿐만 아니라 자바스크립트를 사용해 프로그램을 만들 수 있는 API까지 포함하고 있습니다. </p>
+	</div>
+	<div id="css3" class="menuSection">
+		<h2><a href="#css3">CSS3</a></h2>
+        <p>CSS는 웹 디자인이나 웹 개발에 있어서 핵심적인 요소입니다. 특히 현재 개발 중인 CSS3는 기존의 CSS에서는 할 수 없던 여러 가지 효과를 쉽게 만들 수 있고 CSS3만으로도 간단한 애니메이션을 만들 수도 있고 멋진 내비게이션을 만들 수 있기 때문에 더욱 주목을 받고 있습니다. 
+</p>
+	</div>
+	<div id="api" class="menuSection">
+		<h2><a href="#api">API</a></h2>
+        <p>HTML5에는 웹 애플리케이션 제작을 위한 API들이 다양하게 제시되고 있습니다. API를 이해하기 위해서는 자바스크립트 문법 뿐만 아니라 DOM(Document Object Model)에 대한 기본 지식이 필요합니다.</p>
+	</div>
+</div>
+</body>
+</html>

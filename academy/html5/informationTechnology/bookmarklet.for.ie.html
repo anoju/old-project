@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML5 Outliner bookmarklet (v0.4.36)</title>
+	</head>
+	<body>
+	<h1>Drag this link to your favorites bar: <a href="javascript:(function(){var h=function(){this.sections=[]};h.prototype={heading:false,append:function(a){a.container=this;this.sections.push(a)},asHTML:function(){return s(this.heading)+q(this.sections)}};var q=function(a){for(var b=&quot;&quot;,f=0;f&lt;a.length;f++)b+=&quot;&lt;li&gt;&quot;+a[f].asHTML()+&quot;&lt;/li&gt;&quot;;return b==&quot;&quot;?b:&quot;&lt;ol&gt;&quot;+b+&quot;&lt;/ol&gt;&quot;},r=function(a){a=a.heading;return i(a)?j(a):1},s=function(a){if(i(a)){if(k(a)==&quot;HGROUP&quot;)a=a.getElementsByTagName(&quot;h&quot;+-j(a))[0];return a.textContent||a.innerText||a.innerHTML}return&quot;&quot;+a},d,c,g,t=
+function(a,b,f){var e=a;a:for(;e;){b(e);if(e.firstChild){e=e.firstChild;continue a}for(;e;){f(e);if(e.nextSibling){e=e.nextSibling;continue a}e=e==a?null:e.parentNode}}},u=function(a){if(!i(o(g)))if(l(a)||m(a)){d!=null&amp;&amp;g.push(d);d=a;c=new h;d.outline={sections:[c],asHTML:function(){return q(this.sections)}}}else if(d!=null)if(i(a)){if(c.heading)if(j(a)&gt;=r(n(d.outline))){var b=new h;d.outline.sections.push(b);c=b;c.heading=a}else{b=false;var f=c;do{if(j(a)&lt;r(f)){b=new h;f.append(b);c=b;c.heading=
+a;b=true}f=f.container}while(!b)}else c.heading=a;g.push(a)}},v=function(a){var b=o(g);if(i(b))b==a&amp;&amp;g.pop();else{if((l(a)||m(a))&amp;&amp;!c.heading)c.heading=&quot;&lt;i&gt;Untitled &quot;+k(a)+&quot;&lt;/i&gt;&quot;;if(l(a)&amp;&amp;g.length&gt;0){d=g.pop();c=n(d.outline);for(b=0;b&lt;a.outline.sections.length;b++)c.append(a.outline.sections[b])}else if(m(a)&amp;&amp;g.length&gt;0){d=g.pop();for(c=n(d.outline);c.sections.length&gt;0;)c=n(c)}else if(l(a)||m(a))c=d.outline.sections[0]}},k=function(a){return a.tagName.toUpperCase()},p=function(a){return function(b){return w(b)&amp;&amp;
+(new RegExp(a,&quot;i&quot;)).test(k(b))}},m=p(&quot;^BLOCKQUOTE|BODY|DETAILS|FIELDSET|FIGURE|TD$&quot;),l=p(&quot;^ARTICLE|ASIDE|NAV|SECTION$&quot;),i=p(&quot;^H[1-6]|HGROUP$&quot;),w=function(a){return a&amp;&amp;a.tagName},j=function(a){var b=k(a);if(b==&quot;HGROUP&quot;)for(b=1;b&lt;=6;b++){if(a.getElementsByTagName(&quot;H&quot;+b).length&gt;0)return-b}else return-parseInt(b.substr(1))},n=function(a){return o(a.sections)},o=function(a){return a[a.length-1]};HTML5Outline=function(a){d=null;c=new h;g=[];t(a,u,v);return d!=null?d.outline:null}})();
+;document.write(HTML5Outline(document.body).asHTML());" title="H5O v0.4.36">H5O v0.4.36</a></h1>
+
+	<p><strong>Note:</strong> If the page is using HTML5, the latest version of <a href="http://code.google.com/p/html5shiv/">html5.js</a> should be running on it (some earlier versions were not did not include <code>hgroup</code>), otherwise the results are quite unpredictable and you may see some JS errors.</p>
+	
+	<p>In the foreseeable future, it is unlikely that IE support of H5O will be improved - for reasons please visit <a href="http://code.google.com/p/h5o/wiki/ProblemsWithInternetExplorer">ProblemsWithInternetExplorer</a> wiki page.</p>
+	
+		<pre>/**
+ * This code contains an implementation of HTML5 outlining algorithm, as described by WHATWG at [1]
+ *
+ * The copyright notice at [2] says:
+ *		(c) Copyright 2004-2009 Apple Computer, Inc., Mozilla Foundation, and Opera Software ASA.
+ *		You are granted a license to use, reproduce and create derivative works of this document.
+ *
+ * [1] http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#outlines
+ * [2] http://www.whatwg.org/specs/web-apps/current-work/multipage/index.html
+ */
+</pre>
+	</body>
+</html>

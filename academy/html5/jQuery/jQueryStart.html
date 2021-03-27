@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+		</style>
+		<script src="../informationTechnology/js/jquery-1.8.2.min.js"></script>
+		<script>
+			//제이쿼리에서는 window.onload대신에 ready 함수 사용
+			/*$(document).ready(function(){
+				
+			})*/
+			
+			//ready 함수를 짧게 줄여씀
+			$(function(){
+				//셀렉터.jQuery구문 조립
+				//셀렉터 css1~3 자체필터
+				$("li").css("color","red")
+				//id타입 선언가능
+				$("#first").css("color","green")
+				$("#second").css("color","orange")
+				$("#third").css("color","blue")				
+				
+				//li에 포함 되어져있는 모든 자식태그에 대해서 반영
+				$("li *").css("color","black")
+				
+				//그룹셀렉터
+				$("#one,#two").css("color","skyblue")
+				
+				//하위셀렉터
+				$("#one span").css("color","purple")
+				$("#two > span").css("color","pink")
+				
+				//형제셀렉터
+				$("#second+li").css("font-size","25px")
+				
+				//first-child지정
+				$("li:first-child").css("color","gray")
+			})
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>목록의내용</li>
+			<li>목록의내용</li>
+			
+			<li id="first"><em>목록</em>의내용</li>
+			<li id="second"><i>목록</i>의내용</li>
+			<li id="third"><strong>목록</strong>의내용</li>
+			<li id="fourth"><span>목록</span>의내용</li>
+			
+			<li id="one"><span>목록</span>의내용</li>
+			<li id="two"><span>목록</span>의내용</li>
+		</ul>
+		
+		
+	</body>
+</html>

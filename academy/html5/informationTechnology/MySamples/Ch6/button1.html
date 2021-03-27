@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>radial gradation</title>
+<style>
+.bttn{
+	display: inline-block;
+	padding: 5px 10px 6px;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	line-height: 1;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px #999;
+	-webkit-box-shadow: 0 1px 3px #999;
+	text-shadow: 0 -1px 1px #222;
+	border-bottom: 1px solid #222;
+	position: relative;
+	cursor: pointer;
+}
+
+.bttn, .bttn:visited {
+	display: inline-block; 
+	padding: 5px 10px 6px; 
+	color: #fff; 
+	text-decoration: none;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	position: relative;
+	cursor: pointer;
+}
+ 
+.medium.bttn:hover{	background-color: #111; color: #fff; }
+.medium.bttn:active{ top: 2px; }
+.blue.bttn, .blue.bttn:visited{ background-color: #2daebf;}
+.blue.bttn:hover{ background-color: #007d9a; }
+.red.bttn, .red.bttn:visited{ background-color: #e33100; }
+.red.bttn:hover{ background-color: #872300; }
+.yellow.bttn, .yellow.bttn:visited{ background-color: #ffb515; }
+.yellow.bttn:hover{ background-color: #fc9200; }
+div.wrapper { width: 940px; margin: 0 auto; padding: 0 30px 36px; position: relative; }
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+<a class="medium blue bttn"> Blue Button &raquo;</a> <br><br> 
+<a class="medium red bttn"> Red Button &raquo;</a> <br><br> 
+<a class="medium yellow bttn"> Yellow Button &raquo;</a> 
+</div>
+</body>
+</html>

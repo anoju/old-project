@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5</title>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb'>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicBoldWeb'>
+
+		<style>
+			*{margin:0; padding:0;}
+			body{ font-family: 'NanumGothicWeb'; }
+
+			div{
+				display:block;
+				margin-bottom:30px;}
+			.box1{
+				width:300px;
+				height:50px;
+				background:#ccffff;
+				text-align:center;
+				border:1px solid #cc99ff;
+
+				outline:1px dashed #cc33ff;
+				outline-offset:10px;}
+
+			.box2{
+				width:300px;
+				height:50px;
+				background:#ccffff;
+				text-align:center;
+				
+				/*보더사이즈 명시*/
+				border:29px;
+
+				-moz-border-image:url(informationTechnology/images/diamonds.png) 29 stretch;
+				-webkit-border-image:url(informationTechnology/images/diamonds.png) 29 stretch;
+				border-image:url(informationTechnology/images/diamonds.png) 29 stretch;
+				}
+		</style>
+
+
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<div class="box1">outline</div>
+		<div class="box2">outline</div>
+
+	</body>
+</html>

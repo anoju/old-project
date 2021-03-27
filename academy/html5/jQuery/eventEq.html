@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+		
+			
+		</style>
+		<script src="../informationTechnology/js/jquery-1.8.2.min.js"></script>
+		<script>
+			$(function(){			
+				/*$("a:eq(0)").click(function(){
+					$("img").attr("src","image/img00.PNG").attr("alt","아이스크림").attr("title","아이스크림")
+					return false
+				})
+				$("a:eq(1)").click(function(){
+					$("img").attr("src","image/img02.PNG").attr("alt","열기구").attr("title","열기구")
+					return false
+				})
+				$("a:eq(2)").click(function(){
+					$("img").attr("src","image/img03.PNG").attr("alt","불가사리").attr("title","불가사리")
+					return false
+				})
+				$("a:eq(3)").click(function(){
+					$("img").attr("src","image/img04.PNG").attr("alt","시계").attr("title","시계")
+					return false
+				})*/
+				
+				//위내용을 줄이면
+				$("a").click(function(){
+					$("img").attr("src", $(this).attr("href")).attr("title", $(this).text()).attr("alt", $(this).text())
+					//$("img").attr("src", $(this).attr("href")).attr("title", $(this).attr("alt"))					
+					return false
+					
+				})
+			})
+			
+   
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li><a href="image/img00.PNG">아이스크림</a></li>
+			<li><a href="image/img02.PNG">열기구</a></li>
+			<li><a href="image/img03.PNG">불가사리</a></li>
+			<li><a href="image/img04.PNG">시계</a></li>
+		</ul>
+		<p><img src="image/img00.PNG" alt="아이스크림" title="아이스크림" width="320px" height="480px" /></p>
+	</body>
+</html>

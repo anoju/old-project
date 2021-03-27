@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="application/javascript">  
+
+
+function draw() {  
+  var canvas = document.getElementById('m');  
+  var ctx = canvas.getContext('2d');
+  var img1=document.getElementById('source');
+  var img2=document.getElementById('frame');
+  ctx.drawImage(img1,200,100,300,200,30,30,300,200);
+  ctx.drawImage(img2,30,30);
+
+}
+ 
+
+</script>  
+</head>  
+
+<body onload="draw()">  
+<canvas id="m" width="500" height="600"></canvas>
+<div style="visibility:hidden;">
+<img id="source" src="flower2.jpg" width="500" height="375">
+<img id="frame" src="frame.png" width="330" height="264">
+</div>
+
+</body>  
+</html>  

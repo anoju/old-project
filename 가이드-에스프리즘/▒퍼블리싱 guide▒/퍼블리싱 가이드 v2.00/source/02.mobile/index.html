@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko"><head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<meta name="Subject" content="s-prism, 에스프리즘" />
+<meta name="Title" content="s-prism, 에스프리즘" />
+<meta name="Keywords" content="크리에이티브 디자인 업체, 홈페이지 및 모션그래픽 제작 안내, 포트폴리오 소개, 웹에이전시, 웹사이트, 모바일, 웹컨설팅, 리뉴얼, 고객만족디자인, 상상디자인, 고품격디자인, 차별화된디자인" />
+
+<title>s-prism</title>
+
+<link href="/common/css/import.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="/common/js/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="/common/js/s_smartphone.js"></script>
+<script type="text/javascript" src="/common/js/s_iscroll.js"></script>
+<script type="text/javascript" src="/common/js/basic.js"></script>
+
+<script type="text/javascript">
+<!--
+	window.onDomReady = wap.DomReady(onDLReady);
+	var dlReporting=false;
+	var dlScroll;
+	var dlSize = '4';
+	function onDLReady()
+	{
+		wap.hideElement('noScript_dl');
+		wap.showElement('dlBody');
+		dlScroll = new iScroll('dlScroller', {
+			snap:true,
+			overflow:'hidden',
+			momentum:false,
+			hScrollbar:false,
+			disableTouchEvents:false,
+			onScrollEnd: function () {	
+				if(this.pageX >dlSize){
+					dlScroll.scrollToPage(1, 0,'10ms');	
+					wap.updatePageInd('#dlIndicator',1);
+				}
+				else if (this.pageX <=0){
+					dlScroll.scrollToPage(dlSize, 0,'10ms');
+					wap.updatePageInd('#dlIndicator',dlSize);
+				}
+				else{
+					wap.updatePageInd('#dlIndicator',this.pageX);
+				}
+				if(dlReporting){
+					try{wap.sendReport(wap.getObj('rpt_dl_swp_'+this.pageX).getAttribute("url"));}catch(e){}
+				}
+				dlReporting=true;
+			}
+		});
+		dlScroll.scrollToPage(1, 0,'10ms');
+	}
+//-->
+</script>
+
+<style type="text/css">
+.dl{width:320px;height:240px;margin:0 auto;background-color:#fff}
+
+.dlScroller{width:1920px;height:100%;float:left;padding:0}
+
+.dl .wrapper {width:320px;height:240px;position:relative;z-index:1;overflow:hidden}
+.dlBody{width:320px;margin:0 auto;position:relative}
+.dlScroller li{width:320px;height:240px;position:relative;-webkit-box-sizing:border-box;display:block;float:left;text-align:center;padding:0;overflow:hidden}
+
+.dlScroller ul{list-style:none;display:block;float:left;width:100%;height:100%;padding:0;margin:0}
+.dlScroller img{width:320px;height:240px}
+</style>
+
+</head>
+
+<body>
+
+<div style="display:block">
+	<div id="dl" class="dl">
+		<div id="dlBody" class="dlBody">
+			<div class="wrapper">
+				<div id="dlScroller" class="dlScroller">
+					<ul id="dlList" class="dlList">
+						<li><img src="/common/img/fp_accessorize/img_01.jpg" /></li>
+						<li><img src="/common/img/fp_accessorize/img_01.jpg" /></li>
+						<li><img src="/common/img/fp_accessorize/img_02.jpg" /></li>
+						<li><img src="/common/img/fp_accessorize/img_03.jpg" /></li>
+						<li><img src="/common/img/fp_accessorize/img_04.jpg" /></li>
+						<li><img src="/common/img/fp_accessorize/img_04.jpg" /></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

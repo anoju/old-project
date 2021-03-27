@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>  </title>
+
+		<!-- 외부 CSS 링크-->
+		<link rel="stylesheet" type="text/css" href="#" />
+
+		<style type="text/css">
+			body{
+				font-family:"나눔고딕","맑은 고딕";
+				font-size: 75%;
+				background:black;
+				color:white;}
+
+			p{
+				color:yellow;
+				font-size:1.2em;}
+			#myList{
+				border:1px solid white;
+				background:#333;
+				color:#ccc;
+				padding:1em 2em;
+				line-height:2em;}
+
+				#myList li{
+					font-weight:bold;}
+
+		</style>
+
+		<script type="text/javascript" src="#">	//스크립트 링크	</script>
+
+	</head>
+
+	<body>
+		<h1>getElementsByTagName에서 인수에 "*"를 이용해서 모든 태그정보를 추출할 수 있다.</h1>
+
+		<p>문서내의 모든 요소를 배열에 넣는다면</p>
+		<p>myList라는 아이디를 가진 ul의 모든 요소를 배녈에 넣는다면</p>
+
+		<ul id="myList">
+			<li>첫번째목록</li>
+			<li>두번째목록</li>
+			<li>세번째목록</li>
+		</ul>
+
+		<p>반복문을 통해서 동일한 명령을 반복해본다.</p>
+
+		<script type="text/javascript">
+			//현문서에 있는 모든 태그 수의 합산
+			alert(document.getElementsByTagName("*").length)
+
+			//특정아이디를 가지고 있는 하위요소들의 개수를 알아내는 방법
+			//1번 : 아이디 가져온후 구문줄이기
+			var myElement = document.getElementById("myList")
+			var myItem = myElement.getElementsByTagName("*")
+			alert(myItem.length)
+			//for문을 이용해서 배역에 집어넣은 값 알아내기
+			/*
+			alert(typeof myItem[0])
+			alert(typeof myItem[1])
+			alert(typeof myItem[2])
+			*/
+			for(var i = 0 ; 1 < myItem.length; i++){
+				alert(typeof myItem[i])
+			}
+
+		</script>
+	</body>
+
+</html>

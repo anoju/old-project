@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet' type='text/css'>
+		<style>
+            body {
+                font-family: "NanumGothicWeb"
+            }
+            figure {
+                border: #AA0000 solid 1px
+            }
+		</style>
+	</head>
+
+	<body>
+		<p>figure 요소는 플로우 컨텐츠를 나타내며 선택적으로 캡션을 사용할 수 있습니다.
+			<br />
+			figure는 본문과 어떤관계를 맺고 있어야한다 문서에서 완전히 제거해도 상관없는 것이라면 figure를 사용하지 말아야한다
+			<br />
+			요소는 독립적이며 보통 문서의 주된 흐름에서 단일 유닛으로 참조됩니다.
+			<br />
+			따라서 figure 요소는 일러스트레이션, 다이어그램, 사진, 코드, 기타 비슷한 것에 주석을 다는 용도로 사용될 수 있고,
+			<br />
+			figure 요소를 제거하거나 다른 위치 - 페이지의 옆, 전용 페이지, 혹은 부록 - 으로 <strong>문서의 주된 흐름에는 영향을 미치지 않습니다.</strong>
+			<br />
+			figure 요소는 figcaption 요소를 포함할 수 있습니다.
+			<br />
+			figcaption 요소는 figure 요소 내용에 대한 캡션을 나타냅니다.
+			<br />
+			figcaption 요소가 없다면 figure 요소는 캡션이 없는겁니다.</p>
+
+		<p>figure 요소로 코드 리스트를 마크업했습니다.</p>
+
+		<p>In <a href="#l4">listing 4</a> we see the primary core interface
+			API declaration.</p>
+		<figure id="l4">
+			<figcaption>
+				Listing 4. The primary core interface API declaration.
+			</figcaption>
+			<pre><code>interface PrimaryCore {
+ boolean verifyDataLine();
+ void sendData(in sequence&lt;byte> data);
+ void initSelfDestruct();
+}</code></pre>
+		</figure>
+		<p>The API is designed to use UTF-8.</p>
+		<p>figure 가 아닌 이미지, figure를 사용한 이미지 및 비디오를 함께 쓴 예제입니다.</p>
+
+		<h2>Malinko의 만화</h2>
+		<p>이 사건은 한 만화에 관한, 일종의 "지적 소유권"
+			위배에 관한 사건입니다(증거물 A를 보십시오).
+			예고편이 다음 단어로 끝난 다음부터 소송이 시작됬습니다.</p>
+		<blockquote>
+			<img src="../images/Avengers-Invaders--002.jpg" alt="ROUGH COPY! Promblem-Packed Action!">
+		</blockquote><p>이 예고편은 이미 방송됐습니다. 큼직한 노트북을 든 변호사가
+			가망 없는 변론을 시작했습니다. 예고편 전체는 증거물 B에 들어 있습니다.</p>
+		<figure>
+			<img src="../images/Q002.jpg" alt="지저분한 종이 위에 구불구불한 선이 두 줄 그어져 있습니다.">
+			<figcaption>
+				증거물 A. <cite>rough copy</cite> 만화.
+			</figcaption>
+		</figure>
+		<figure>
+			<video id ="video"  height="136" width="320" controls>
+
+			</video>
+			<figcaption>
+				증거물 B. <cite>Rough Copy</cite> 예고편.
+			</figcaption>
+		</figure><p>이 사건은 법원에서 판결이 끝났습니다.</p>
+		<p>figure 요소로 시를 마크업했습니다.</p>
+
+		<figure>
+			<p>죽는 날까지 하늘을 우러러
+				<br />
+				한점 부끄럼이 없기를
+				<br />
+				잎새에 이는 바람에도
+				<br />
+				나는 괴로와했다
+				<br />
+				별을 노래하는 마음으로
+				<br />
+				모든 죽어가는 것들을 사랑해야지
+				<br />
+				그리고 나한테 주어진 길을
+				<br />
+				걸어가야겠다.
+				<br />
+				<br />
+				오늘 밤에도 별이 바람에 스치운다. </p>
+			<figcaption>
+				<cite>서시</cite> 윤동주 &lt;하늘과 바람과 별과 시, 정음사, 1948&gt;
+			</figcaption>
+		</figure>
+
+		<p>하나의 성castle에 대해 논하는 훨씬 방대한 원본의 일부분으로 짐작되는 figure 요소입니다.</p>
+
+		<figure>
+			<img src="../images/hg9.jpg"
+			alt="그 성에는 탑이 하나 있는데 그 탑은 높은 벽으로 둘러싸여 있습니다.">
+			<img src="../images/IE001255420_STD.JPG" title="캔버스에 유화. Maria Towle, 1858."
+			alt="그 성에는 이제 탑이 두 개 있고 벽도 두 개 있습니다.">
+			<img src="../images/IMG_2915(1).jpg" title="필름 사진. Peter Jankle, 1999."
+			alt="그 성은 이제 폐허로 변했으며 맨 처음 있던 탑도 한 조각밖에 남지 않았습니다.">
+			<figcaption>
+				성의 변천사. 각각 1423년, 1858년, 1999년.
+			</figcaption>
+		</figure>
+
+	</body>
+</html>

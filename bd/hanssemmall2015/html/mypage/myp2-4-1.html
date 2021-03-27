@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="shortcut icon" href="http://image.hanssem.com/img/common/favicon.ico" />
+	<title>한샘몰 - 결제수단변경</title><!-- 각 페이지별 타이틀 -->
+	<link rel="stylesheet" type="text/css" href="../../common/css/common.css"/><!-- common css -->
+	<link rel="stylesheet" type="text/css" href="../../common/css/popup.css" /><!-- 각 카테고리별 css -->
+	<!-- 공통 스크립트 -->
+	<script type="text/javascript" src="../../common/js/libs/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../common/js/libs/ixBand_0.7.min.js"></script>
+	<script type="text/javascript" src="../../common/js/libs/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="../../common/js/ui/ui.plugins.js"></script>
+	<style type="text/css">
+		body {padding:50px;}
+	</style>
+</head>
+<body>
+	<!-- title=결제수단변경 -->
+	<div id="layer_popup" class="layer_popup pay_chgpop">
+		<div class="layer_pop_head">
+			<h1 class="ui-layer-title layer_title">결제수단 변경</h1>
+			<a href="#" class="ui-layer-close layer_close_btn"><img src="../../common/images/common/btn_pop_close.png" alt="닫기"></a>
+		</div>		
+		<div class="layer_pop_cont">
+			<table class="ptbl" summary="">
+				<caption></caption>
+				<colgroup>
+					<col width="119px" />
+					<col width="354px" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>결제수단</th>
+						<td class="txt_left">신용카드</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<div class="tal_box">
+								<ul class="ps">
+									<li>신용카드, 실시간 계좌이체는 안전거래 서비스 LGU+를 통해 결제 됩니다.</li>
+									<li>Paynow(간편결제)는 어플리케이션 설치후 자주 사용하는 결제수단을 최초1회 등록하면, 카드, 지갑 없이도 바로 결제 할 수 있는 결제 서비스입니다. (PC에서 주문시 간편결제&gt;핸드폰수단이 제공되지 않습니다.)</li>
+								</ul>
+								<p class="button_area"><button type="button" class="botton_st_03">안심클릭서비스</button><button type="button" class="botton_st_03">안전결제(ISP)서비스안내</button><button type="button" class="botton_st_03">공인인증서 발급 방법 안내</button></p>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="button_area"><button type="button" class="botton_st_04 red pbtn1">결제</button><button type="button" class="botton_st_04 pbtn1">취소</button></div>
+		</div>
+	</div>
+	<!-- //title=결제수단변경 -->		
+
+	<!-- title=안심클릭서비스 -->
+	<div id="layer_popup" class="layer_popup paypop" style="left:20%;"> <!-- 개발시 inline style 제거 -->
+		<div class="layer_pop_head">
+			<h1 class="ui-layer-title layer_title">안심클릭서비스</h1>
+			<a href="#" class="ui-layer-close layer_close_btn"><img src="../../common/images/common/btn_pop_close.png" alt="닫기"></a>
+		</div>		
+		<div class="layer_pop_cont">
+			<h2>안심클릭 서비스란?</h2>
+			<div class="txt1 mb20">
+				전자상거래 신용카드 결제 시, 카드 소지 고객이 사전에 등록해 둔안심클릭 비밀번호를 입력하여 타인의 불법 카드 도용 사고를 방지하는 편리하고 안전한 신개념 전자상거래 인증 서비스입니다.
+				<p class="mt10 ft_size14">대상카드  :  LG / 삼성 / 외환 / 현대 / 신한 / 하나 / 한미 / 롯데카드</p>
+			</div>
+			<h2>안심클릭 결제방법</h2>
+			<div class="txt1 bg_pay mb20">
+				카드번호와 사전 등록된 안심클릭 비밀번호(혹은 공인인증서)의 입력만으로 결제가 완료됩니다. LG/삼성/외환/현대/신한/하나/한미/롯데카드 중 소유하고 계신 카드사의 홈페이지에서 간단히 신청하실 수 있습니다.
+				<ul class="dp_none">
+					<li>01 - 결제페이지 결제수단 선택 : KB/BC카드</li>
+					<li>02 - 안전 결제(ISP)인증 팝업 : 비밀번호 입력</li>
+					<li>03 - 결제완료</li>
+				</ul>
+			</div>
+			<h2>공인인증서 사용여부</h2>
+			<div class="ft_size14">
+				금액에 상관없이 안심클릭과 공인인증서 중에서 선택 결제가 가능합니다.
+			</div>
+		</div>
+	</div>
+	<!-- //title=안심클릭서비스 -->
+
+	<!-- title=안전결제(ISP)서비스안내 -->
+	<div id="layer_popup" class="layer_popup paypop" style="left:80%;"> <!-- 개발시 inline style 제거 -->
+		<div class="layer_pop_head">
+			<h1 class="ui-layer-title layer_title">안전결제(ISP)서비스안내</h1>
+			<a href="#" class="ui-layer-close layer_close_btn"><img src="../../common/images/common/btn_pop_close.png" alt="닫기"></a>
+		</div>		
+		<div class="layer_pop_cont">
+			<h2>안전결제(ISP) 란?</h2>
+			<div class="txt1 mb25">
+				스토어 이용 시 고객이 카드번호/비밀번호 등을 입력함으로써 발생될 수 있는 개인정보 유출 및 카드도용의 문제점을 차단하기 위해 안전결제(ISP) 비밀번호만으로 안전한 전자상거래를 보장하는 서비스입니다.
+				<p class="mt10 ft_size14">대상카드  :  KB(국민) / BC / 우리(구 평화) / 조흥(구 강원)</p>
+			</div>
+			<h2>안전결제(ISP) 결제방법</h2>
+			<div class="txt1 bg_pay mb20">
+				고객님이 사전에 등록한 ISP 비밀번호만을 입력만으로 결제가 완료됩니다.KB(국민)/BC/우리(구 평화)/조흥(구 강원)카드 중 소유하고 계신 카드사의 홈페이지에서 간단히 신청하실 수 있습니다.
+				<ul class="dp_none">
+					<li>01 - 결제페이지 결제수단 선택 : KB/BC카드</li>
+					<li>02 - 안전 결제(ISP)인증 팝업 : 비밀번호 입력</li>
+					<li>03 - 결제완료</li>
+				</ul>
+			</div>
+			<h2>공인인증서 사용여부</h2>
+			<div class="txt1">
+				30만원 이상 거래시는 안전결제(ISP)+공인인증 확인의 2중 보호장치로 더욱 안전합니다.
+			</div>
+		</div>
+	</div>
+	<!-- //title=안전결제(ISP)서비스안내 -->
+
+	<!-- title=공인인증서 발급 방법 안내 -->
+	<div id="layer_popup" class="layer_popup paypop" style="top:70%;"> <!-- 개발시 inline style 제거 -->
+		<div class="layer_pop_head">
+			<h1 class="ui-layer-title layer_title">공인인증서 발급 방법 안내</h1>
+			<a href="#" class="ui-layer-close layer_close_btn"><img src="../../common/images/common/btn_pop_close.png" alt="닫기"></a>
+		</div>		
+		<div class="layer_pop_cont">
+			<h2>공인인증서란?</h2>
+			<div class="txt1 mb20">
+				일종의 '사이버인감증명서'로 고객이 사전 설정해둔 별도 비밀번호를 입력하여 전자상거래 사고를 방지하는 수단입니다.　KB/BC 카드의 경우는 30만원 이상 결제 시 반드시 공인인증서를 의무사용하나 나머지 카드의 경우는 안심클릭과 공인인증 중 선택하여 사용 가능합니다.
+			</div>
+			<h2>안심클릭 결제방법</h2>
+			<div class="txt1 bg_pay1 mb20">
+				공인인증서는 본인 확인 절차 상, 최초 1회는 은행 등 공인인증기관을 직접 방문하여 발급 받아야 합니다. 
+				<ul class="dp_none">
+					<li>01 - 결제페이지 결제수단 선택 : KB/BC카드</li>
+					<li>02 - 안전 결제(ISP)인증 팝업 : 비밀번호 입력</li>
+					<li>03 - 결제완료</li>
+				</ul>
+			</div>
+			<h2>공인인증서 사용여부</h2>
+			<div class="txt1">
+				금액에 상관없이 안심클릭과 공인인증서 중에서 선택 결제가 가능합니다.
+			</div>
+		</div>
+	</div>
+	<!-- //title=공인인증서 발급 방법 안내 -->
+</body>
+</html>

@@ -1,0 +1,300 @@
+@charset "utf-8";
+
+body { min-width:1220px; }
+
+/* skip navigation */
+.skipNav { display:block; height:1px; width:1px; margin:0 -1px -1px 0; padding:0; overflow:hidden; font-size:0; line-height:0; }
+.skipNav:hover,
+.skipNav:active,
+.skipNav:focus { width:100%; height:auto; margin:0; padding:10px 0; border-bottom:1px solid #1e2e90; font-weight:bold; font-size:1.2em; font-family:tahoma; color:#fff; line-height:1.2; text-indent:10px; text-decoration:none !important; z-index:100; }
+
+/* layout */
+div.wrap { width:1200px; margin:0 auto; overflow:hidden; }
+div.layoutBody { padding-bottom:170px; background-color:#fff; overflow:hidden; }
+
+div.top { height:35px; border-bottom:1px solid #dfdfdf; background-color:#f3f3f3; }
+div.top div > a:first-child { float:left; margin:11px 0 0 1px; }
+div.top span { float:right; margin:13px -7px 0 0; overflow:hidden; }
+div.top span a { float:left; margin:0 7px 0 -1px; padding-left:8px; background:url('../images/layout/bgBarV06.gif') no-repeat 0 2px; }
+
+#head { margin-bottom:30px; overflow:hidden; }
+#head h1 { float:left; width:167px; height:55px; margin:48px 35px 34px 201px; }
+#head div.search { position:relative; float:left; width:451px; margin:33px 75px 0 0; }
+#head div.search h2 { float:left; height:15px; margin-right:12px; padding-left:17px; color:#41a0ff; font-size:1.1em; background:url('../images/layout/bgSearch.gif') no-repeat 0 0; line-height:15px; vertical-align:middle; }
+#head div.search h2 a { margin:0; color:#41a0ff; font-size:1em; }
+#head div.search ul { float:left; height:15px; background:url('../images/layout/bgBarV01.gif') no-repeat 0 50%; line-height:15px; vertical-align:middle; }
+#head div.search li { float:left; padding-left:10px; background:url('../images/layout/bgBarV02.gif') no-repeat 0 50%; }
+#head div.search a { display:block; color:#474747; margin-right:10px; font-size:1.1em; font-family:NGBold, "돋움", Dotum; }
+#head div.search ul li:first-child { background-image:none; }
+#head div.search > div { float:right; position:relative; left:-50%; margin-bottom:13px; }
+#head div.search > div > div { float:left; position:relative; left:50%; }
+
+#head form { clear:both; height:39px; background:url('../images/layout/bgSearchForm.gif') no-repeat 0 0; overflow:hidden; }
+#head form span { float:left; width:388px; height:30px; margin:5px 0 0 6px; background:url('../images/layout/bgSearchInput.gif') no-repeat 0 0; }
+#head form span input { width:368px; height:28px; padding:0 10px; border:0; background-color:transparent; line-height:28px; }
+#head form fieldset > button { float:left; width:55px; height:30px; margin-top:5px; }
+
+#head div.banner { position:relative; width:170px; height:100px; margin-top:13px; overflow:hidden; }
+#head div.banner li { position:relative; width:170px; height:100px; }
+#head div.banner span { position:absolute; bottom:0; right:0; }
+#head div.banner li span { right:none; bottom:1px; left:0; width:140px; color:#747474; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-align:center; line-height:1; }
+#head div.banner > span { height:auto; border:1px solid #dadada; overflow:hidden; }
+#head div.banner button { float:left; height:11px; width:13px; margin-left:-1px; border-left:1px solid #dadada; background-color:#fff; font-size:0; line-height:0; }
+#head div.banner li.only span { width:100%; }
+
+#head div.navigator { clear:both; border-bottom:2px solid #4994df; background:#41a0ff url('../images/layout/bgHeadBar.gif') repeat-x 0 0; overflow:hidden; }
+#head div.navigator #gnb,
+#head div.navigator #gnb * { float:left; }
+#head div.navigator div.notice { float:right; width:440px; height:47px; background:url('../images/layout/bgDot01.gif') no-repeat 100% 0; }
+#head div.navigator div.notice h2 { float:left; margin:16px 14px 0 0; padding-right:15px; background:url('../images/layout/bgBarV03.gif') no-repeat 100% 50%; }
+#head div.navigator div.notice div { float:right; width:315px; height:20px; margin:14px 15px 0 0; overflow:hidden; }
+#head div.navigator div.notice li { height:20px; line-height:20px; overflow:hidden; }
+#head div.navigator div.notice a { display:block; color:#fff; font-size:1.1em; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; vertical-align:top; }
+
+#foot { padding-bottom:60px; border-top:1px solid #4f4f4f; }
+#foot h1 { float:left; margin:24px 39px 0 0; }
+#foot ul.link { margin:27px 0 14px; }
+#foot ul.link li { float:left; padding:0 15px; background:url('../images/layout/bgBarV04.gif') no-repeat 0 50%; }
+#foot ul.link li:first-child { padding-left:0; background-image:none; }
+#foot ul.link a { color:#dadada; }
+#foot ul.link img { vertical-align:middle; }
+#foot address { float:left; margin-right:11px; }
+#foot ul.fact { float:left; margin:0; padding:0; }
+#foot ul.fact li { float:left; padding:0 3px 0 5px; background:url('../images/layout/bgBarV05.gif') no-repeat 0 50%; font-size:.5em; line-height:1; }
+#foot ul.fact li:first-child { padding-left:0; background-image:none; }
+#foot p { float:left; margin:5px 0 0 128px; }
+
+/* sitemap */
+#sitemap { display:none; position:absolute; top:36px; left:50%; width:1200px; margin-left:-600px; padding-bottom:13px; background:transparent url('../images/common/bg/bgSitemapBottom.png') repeat-x 0 100%; overflow:hidden; z-index:9999; }
+#sitemap * { vertical-align:top; }
+#sitemap div { float:left; width:199px; height:530px; border-right:1px solid #ececec; background-color:#fff; }
+#sitemap h2 { display:none; }
+#sitemap h2 + div { width:198px; border-left:1px solid #ececec; }
+#sitemap h3 { margin:-1px 0 20px; padding:31px 0 0 30px; border-top:1px solid #ececec; font-size:1.5em; font-family:NGBold, "돋움", Dotum; line-height:1; }
+#sitemap h3 a { color:#333; }
+#sitemap ul { margin:0 0 15px 30px; line-height:1; }
+#sitemap li { margin-bottom:10px; }
+#sitemap li a { color:#888; font-family:NGBold, "돋움", Dotum; }
+#sitemap li ul { margin:15px 0 0 0; }
+#sitemap li li { padding-left:10px; background:url('../images/common/bg/bgDot05.gif') no-repeat 0 50%; }
+#sitemap button { position:absolute; top:3px; right:4px; }
+
+/* organization banner */
+#orgBanner { padding:25px 0; border-top:1px solid #efefef; background-color:#fbfbfb; }
+#orgBanner h2 { display:none; }
+#orgBanner > div { width:1200px; margin:0 auto; overflow:hidden; }
+#orgBanner > div div { float:left; width:1080px; height:46px; overflow:hidden; }
+#orgBanner ul { overflow:hidden; }
+#orgBanner li { floaT:left; width:135px; text-align:center; }
+#orgBanner li img { width:113px; height:46px; vertical-align:top; }
+#orgBanner button { width:11px; height:21px; margin-top:12px; }
+#orgBanner button.prev { float:left; margin-right:49px; }
+#orgBanner button.next { float:right; }
+
+/* content container */
+#content { float:left; width:725px; overflow:hidden; }
+#content.index { clear:both; float:none; width:100%; height:1060px; }
+
+#content div.head { height:28px; border-bottom:2px solid #6b6b6b; margin-bottom:20px; overflow:hidden; }
+#content div.head h3 { float:left; color:#2f2f2f; font-size:1.3em; }
+#content div.head h3 span { margin-left:10px; color:#a1a1a1; font-size:.8em; overflow:hidden; }
+#content div.head span.location { float:right; margin-top:6px; color:#aaa; font-size:.9em; }
+#content div.head span.location span { float:left; margin-right:5px; padding-right:10px; background:url('../images/common/bg/bgBracket01.gif') no-repeat 100% 50%; }
+#content div.head span.location strong { font-weight:normal; font-family:NGBold, "돋움", Dotum; }
+
+/* local */
+div.localNavigator { float:left; width:150px; margin-right:35px; }
+div.localNavigator h2 { height:18px; margin-bottom:10px; }
+div.localNavigator h2 img { vertical-align:top; }
+
+#lnb { margin-bottom:49px; border-top:2px solid #6b6b6b; border-bottom:2px solid #e1e1e1; }
+#lnb > li { padding:10px 2px; border-top:1px solid #e1e1e1; }
+#lnb > li:first-child { border-top:0; }
+#lnb > li > a { color:#434343; font-family:NGBold, "돋움", Dotum; }
+#lnb > li > a.on { color:#41a0ff; }
+
+#lnb ul { margin:15px 0 0 12px; }
+#lnb ul li { margin-bottom:8px; font-size:.9em; }
+#lnb ul li a { padding-left:8px; color:#666; background:url('../images/common/bg/bgLocalSubOff.gif') no-repeat 0 4px; }
+#lnb ul li a:hover,
+#lnb ul li a:active,
+#lnb ul li a:focus,
+#lnb ul li a.on { color:#2f2f2f; background:url('../images/common/bg/bgLocalSubOn.gif') no-repeat 0 4px; }
+#lnb ul.off { display:none; }
+
+div.sns { position:relative; overflow:hidden; }
+div.sns h3 { height:18px; margin-bottom:9px; color:#646464; font-size:1.2em; line-height:18px; }
+div.sns h4 { position:absolute; top:0; }
+div.sns h4.tab01 { right:25px; }
+div.sns h4.tab02 { right:0; }
+div.sns h4 a { display:block; position:relative; width:25px; height:18px; overflow:hidden; }
+div.sns h4 a span { position:absolute; top:0; left:0; width:100%; height:100%; background:url('../images/common/bg/bgSNS.gif') no-repeat 0 0; }
+div.sns h4.tab02 a span { background-position:-25px 0; }
+div.sns h4.tab01 a.on span { background-position:0 -19px; }
+div.sns h4.tab02 a.on span { background-position:-25px -19px; }
+div.sns ul { border-top:2px solid #58595b; }
+div.sns li { padding:13px 0; border-bottom:1px solid #eaeaea; }
+div.sns ul a { color:#757575; }
+div.sns ul a span { display:block; margin-top:5px; color:#a1a1a1; font-size:.9em; }
+div.localNavigator > span { display:block; padding:14px 0; border-bottom:1px solid #eaeaea; letter-spacing:-1px; }
+div.localNavigator > span a { display:inline-block; height:18px; margin-left:3px; padding:0 3px 0 22px; color:#a3a3a3; font-size:.9em; background:url('../images/common/bg/bgSNS.gif') no-repeat -51px 0; line-height:18px; overflow:hidden; }
+div.localNavigator > span a.me2day { background-position:-51px -19px; }
+
+ul.banner { margin-top:20px; }
+ul.banner li { margin-bottom:5px; }
+ul.banner li img { vertical-align:top; }
+
+/* aside */
+#aside { float:right; width:231px; padding:0 11px 24px; border:1px solid #e6e6e6; background-color:#f8f8f8; }
+#aside h4 { clear:both; height:12px; margin-left:9px; overflow:hidden; }
+#aside a.more { position:absolute; top:25px; right:9px; padding-right:7px; color:#8c8c8c; font-size:.9em; background:url('../images/common/bg/bgMore01.gif') no-repeat 100% 50%; line-height:1.1; }
+#aside > * { position:relative; margin-top:24px; padding-top:24px; border-top:1px solid #d9d9d9; overflow:hidden; }
+#aside > *:first-child { padding-top:0; border-top:0; }
+
+#aside div.popularity h4 { margin-bottom:17px; }
+#aside div.popularity ul { margin:0 10px; }
+#aside div.popularity li { margin-top:10px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+#aside div.popularity li:first-child { margin-top:0; }
+#aside div.popularity a { color:#666; }
+#aside div.popularity span { display:inline-block; width:13px; height:13px; margin-right:10px; border:1px solid #c8c9cb; color:#5f6075; font-size:.8em; background-color:#fff; line-height:13px; text-align:center; }
+
+#aside div.promote h4 { margin-bottom:20px; }
+#aside div.promote div { width:211px; height:211px; margin:0 auto 14px; overflow:hidden; }
+#aside div.promote div img { width:211px; height:211px; }
+#aside div.promote span { position:absolute; top:25px; right:9px; }
+#aside div.promote span a { float:left; margin-left:2px; }
+#aside div.promote button { display:none; }
+#aside div.promote > a { float:right; margin-right:9px; padding-right:7px; color:#8c8c8c; font-size:.9em; background:url('../images/common/bg/bgMore01.gif') no-repeat 100% 50%; }
+
+#aside div.newsList h4 { margin-bottom:20px; }
+#aside div.newsList ul { margin:0 10px; }
+#aside div.newsList li { margin-top:8px; padding-left:6px; background:url('../images/common/bg/bgDot01.gif') no-repeat 0 50%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+#aside div.newsList li:first-child { margin-top:0; }
+#aside div.newsList li a { color:#666; line-height:1; }
+
+#aside div.linkList { margin-bottom:-12px; padding-top:12px; }
+#aside div.linkList ul { float:right; position:relative; left:-50%; overflow:visible; }
+#aside div.linkList li { float:left; position:relative; left:50%; padding-left:13px; background:url('../images/common/bg/bgBarV01.gif') no-repeat 0 50%; }
+#aside div.linkList li:first-child { margin-right:12px; padding-left:0; background:none; }
+#aside div.linkList a { display:block; height:12px; padding-left:20px; background:url('../images/common/bg/bgLink.gif') no-repeat 0 -13px; overflow:hidden; }
+#aside div.linkList li:first-child a { background-position:0 0; }
+
+#aside div.newsLetter h4 { margin-bottom:19px; }
+#aside div.newsLetter > img { display:block; width:211px; height:101px; margin:0 auto 15px; }
+#aside div.newsLetter a.link { display:inline-block; margin:0 10px; color:#666; text-align:center; }
+
+#aside div.eventList h4 { margin-bottom:20px; }
+#aside div.eventList ul { position:relative; padding:0 10px; }
+#aside div.eventList li { display:table; position:relative; height:65px; margin-top:7px; overflow:hidden; }
+#aside div.eventList li:first-child { margin-top:0; }
+#aside div.eventList ul img { width:91px; height:65px; }
+#aside div.eventList a.img { float:left; margin-right:13px; }
+#aside div.eventList a.text { display:table-cell; *position:absolute; *top:50%; width:110px; color:#666; vertical-align:middle; }
+#aside div.eventList a.text span { *position:relative; *top:-50%; }
+#aside div.eventList a.text strong { display:block; *position:relative; *top:-50%; font-family:NGBold, "돋움", Dotum; font-weight:normal; }
+
+#aside div.eventEduList { margin-bottom:-16px; }
+#aside div.eventEduList h4 { margin-bottom:20px; }
+#aside div.eventEduList ul.event { position:relative; margin-bottom:8px; padding:0 10px 19px; border-bottom:1px solid #949494; }
+#aside div.eventEduList ul.event li { display:table; position:relative; height:72px; margin-top:7px; overflow:hidden; }
+#aside div.eventEduList ul.event li:first-child { margin-top:0; }
+#aside div.eventEduList ul.event img { width:91px; height:72px; }
+#aside div.eventEduList ul.event a.img { float:left; margin-right:13px; }
+#aside div.eventEduList ul.event a.text { display:table-cell; *position:absolute; *top:50%; width:110px; color:#666; vertical-align:middle; }
+#aside div.eventEduList ul.event a.text span { *position:relative; *top:-50%; }
+#aside div.eventEduList ul.event a.text strong { display:block; font-family:NGBold, "돋움", Dotum; font-weight:normal; }
+#aside div.eventEduList ul.link { width:228px; margin:0 auto; overflow:hidden; }
+#aside div.eventEduList ul.link li { float:left; height:55px; width:56px; margin:0 1px 0 -1px; padding-top:6px; border-left:1px solid #e8e8e8; text-align:center; }
+#aside div.eventEduList ul.link img { vertical-align:top; }
+
+#aside div.movieList ul { padding:0 11px; }
+#aside div.movieList li { position:relative; margin-top:20px; overflow:hidden; }
+#aside div.movieList a.image { float:left; position:relative; width:91px; height:56px; margin-right:15px; overflow:hidden; }
+#aside div.movieList a.image img { width:91px; height:56px; }
+#aside div.movieList a.image img.play { position:absolute; bottom:5px; left:5px; width:18px; height:18px; }
+#aside div.movieList a.text { display:block; height:50px; margin:3px 0 0 106px; color:#888; overflow:hidden; }
+#aside div.movieList a.text span { display:block; color:#333; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+#aside div.linkChannel { padding-top:5px; }
+#aside div.linkChannel img { margin-top:5px; vertical-align:top; }
+
+#aside div.performList h4 { margin-bottom:20px; }
+#aside div.performList ul { position:relative; padding:0 10px; }
+#aside div.performList li { height:65px; margin-top:7px; overflow:hidden; }
+#aside div.performList li:first-child { margin-top:0; }
+#aside div.performList ul img { width:52px; height:65px; }
+#aside div.performList a.img { float:left; margin-right:15px; }
+#aside div.performList a.text { display:block; margin-top:12px; color:#666; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+#aside div.performList a.text span { display:block; letter-spacing:-1px; }
+
+#aside div.recommend h4 { margin-bottom:12px; }
+#aside div.recommend ul { padding:0 10px; }
+#aside div.recommend li { margin-top:8px; padding-left:7px; background:url('../images/common/bg/bgDot01.gif') no-repeat 0 50%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+#aside div.recommend a { color:#666; }
+
+#aside div.patternDesign h4 { margin-bottom:19px; }
+#aside div.patternDesign div { width:212px; height:242px; margin:0 auto; overflow:hidden; }
+#aside div.patternDesign > span { position:absolute; top:25px; right:9px; }
+#aside div.patternDesign > span a { float:left; margin-left:2px; }
+#aside div.patternDesign li { width:212px; height:242px; overflow:hidden; text-align:center; }
+#aside div.patternDesign li a { color:#888; }
+#aside div.patternDesign li a span { color:#333; font-family:NGBold, "돋움", Dotum; }
+#aside div.patternDesign li a img { display:block; width:212px; height:212px; margin-bottom:14px; }
+#aside div.patternDesign button { display:none; }
+
+#aside div.traditionPattern h4 { margin-bottom:19px; }
+#aside div.traditionPattern > img { float:left; width:80px; height:80px; margin:0 15px 0 11px; border:1px solid #ececec; }
+#aside div.traditionPattern h5 { margin-bottom:11px; line-height:1; }
+#aside div.traditionPattern h5 a { color:#333; }
+#aside div.traditionPattern p { padding-right:10px; overfow:hidden; }
+
+#aside a.applPattern { display:inline-block; margin:15px 0 0 11px; padding:0; border:0; }
+#aside a.applPattern img { vertical-align:top; }
+
+#aside div.patternList h4 { margin-bottom:12px; }
+#aside div.patternList ul { padding:0 10px; }
+#aside div.patternList li { margin-top:7px; color:#333; font-family:NGBold, "돋움", Dotum; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+#aside div.patternList li span { display:inline-block; margin-top:20px; }
+#aside div.patternList li span span { display:block; margin-top:0; color:#888; font-family:NGNormal; }
+#aside div.patternList li img { float:left; width:80px; height:80px; margin-right:15px; border:1px solid #eaeaea; }
+#aside div.patternList li a { color:#333; }
+
+#aside div.cultureBanner div { width:211px; height:100px; margin:0 auto 14px; padding-top:20px; overflow:hidden; }
+#aside div.cultureBanner div img { width:211px; height:100px; }
+#aside div.cultureBanner span { position:absolute; top:25px; right:9px; }
+#aside div.cultureBanner span a { float:left; margin-left:2px; }
+#aside div.cultureBanner button { display:none; }
+#aside div.cultureBanner > a { float:right; margin-right:9px; padding-right:7px; color:#8c8c8c; font-size:.9em; background:url('../images/common/bg/bgMore01.gif') no-repeat 100% 50%; }
+
+#aside div.themeBest h4 { margin-bottom:15px; }
+#aside div.themeBest h5 { margin:0 10px; color:#666; font-size:1.2em; }
+#aside div.themeBest h5 a { color:#666; }
+#aside div.themeBest span { margin:0 10px; color:#999; }
+#aside div.themeBest span a { color:#999; }
+#aside div.themeBest p { clear:both; margin:10px 10px 0; color:#666; }
+#aside div.themeBest p a { color:#666; }
+
+#aside div.talkBest h4 { margin-bottom:24px; }
+#aside div.talkBest > img { float:left; width:91px; height:65px; margin:0 15px 15px 10px; }
+#aside div.talkBest h5 { padding:7px 10px 0 0; color:#666; font-family:NGNormal, "돋움", Dotum; overflow:hidden; }
+#aside div.talkBest h5 span { display:block; font-family:NGBold, "돋움", Dotum; }
+#aside div.talkBest h5 a { color:#666; }
+#aside div.talkBest p { clear:both; margin:0 10px; }
+
+@media print {
+	body { margin:0; padding:0; background-color:#fff; }
+	a.skipNav,
+	div.top,
+	#head,
+	div.localNavigator,
+	#aside,
+	#sitemap,
+	#orgBanner,
+	#foot { display:none; }
+
+	div.layoutBody,
+	div.wrap { width:auto; }
+
+	#content { width:auto; float:none !important; margin:0; padding:0; overflow:hidden; }
+
+}

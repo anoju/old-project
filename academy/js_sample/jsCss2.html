@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+	p{
+		color:gray;
+		font-family:"나눔고딕",나눔고딕, "맑은 고딕";
+		cursor:pointer;
+		width:5em;}
+</style>
+<script type="text/javascript">
+window.onload = function (){
+	var myP = document.getElementsByTagName("p")
+	for(var i=0;i<myP.length;i++){
+		myP[i].onclick = function(){
+			alert(this.nodeName + this.childNodes[0].nodeValue)
+			}
+		}
+		
+	var para01 = document.getElementById("example")
+	var para02 = document.getElementById("color")
+	var para03 = document.getElementById("size")
+	alert("글꼴정보" + para01.style.fontFamily)
+	alert("글꼴색상" + para02.style.color)
+	alert("글꼴크기" + para03.style.fontSize)
+	
+	}
+</script>
+</head>
+
+<body>
+	<p>단락1</p>
+    <p>단락2</p>
+    <p>단락3</p>
+    
+    <p id="example" style="color:gray;font-family:'나눔고딕','맑은 고딕'">
+    	css속성중에 &quot;-&quot;가 붙은 스타일을 얻으려면
+    </p>
+    <p id="color" style="color:#099;font-family:'나눔고딕','맑은 고딕'">
+    	단락 예제2
+    </p>
+    <p id="size" style="font-size:2em">
+    	단락 예제3
+    </p>
+
+</body>
+</html>

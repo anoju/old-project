@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+/* tab */
+.tabNav { clear:both; height:28px; margin-bottom:20px;border-bottom:1px solid #baad9e;  }
+.tabNav li { float:left; text-align:center; }
+.tabNav li + li{margin-left:1px}
+.tabNav li a { display:block; padding:5px 6px; color:#fff; font-weight:bold;border-right:1px solid #cfcfcf; background:#74593b; border: 2px solid #74593b;border-bottom:none;border-radius:5px 5px 0px 0px;}
+.tabNav li.on a{ color:#5a422b;  background:#fff;border: 2px solid #baad9e;border-bottom:none;}
+.tabCon { display:none; }
+p + .tabNav{margin-top:15px;}
+
+/* page navi */
+.pageNavi { clear:both; margin-top:20px;  margin-bottom:25px; text-align:center; }
+.pageNavi a ,.pageNavi span{ display:inline-block; width:22px; height:22px; line-height:22px; margin:0 3px;text-align:center;font-weight:bold;color:#999}
+.pageNavi a img,.pageNavi span img { display:inline-block; width:22px;}
+.pageNavi span a { color:#333; }
+.pageNavi span a:hover, .pageNavi span a:focus, .pageNavi span a:active, .pageNavi span a.on { color:#fff; background:#a4a5a7; }
+.pageNavi span.current {color:#333;text-decoration:underline}
+
+/* list search */
+#boxSrch { clear:both; width: 265px;margin:0 auto 20px;overflow:hidden;}
+#boxSrch * { float:left; }
+#boxSrch select { height:30px; line-height:24px;padding-left:5px; border:1px solid #dcd3ca; background:#fff; }
+#boxSrch input.inpSrch { width:109px; height:30px; margin-left:3px; line-height:30px; padding:0 1px;border:1px solid #dcd3ca;}
+#boxSrch .btnSrch{width:56px;margin-left:5px;}
+
+
+
+/* list */
+.dataList {  }
+.dataList thead th { /*padding-top: 2px;*/text-align:center;background:#FBD462; color:#666; font-family:NGBold; }
+.dataList thead th.first{background:none;}
+.dataList thead th.first div{height: 27px;line-height: 27px;margin-right:-2px;background:#FBD462;border-radius:13px 0 0 13px;}
+.dataList thead th.last{background:none;}
+.dataList thead th.last div{height: 27px;line-height: 27px;margin-left:-2px;background:#FBD462;border-radius:0 13px 13px 0;}
+.dataList tbody td { padding:5px 0; text-align:center; background:#fff; border-bottom:1px dotted #fde7a8}
+.dataList tbody td.alignL { padding-left:10px; text-align:left; }
+.dataList tbody td a { color:#333; }
+.dataList tbody td a:hover, .dataList tbody td a:focus, .dataList tbody td.listSubcon a:active, .dataList tbody td.listSubcon a:hover, .dataList tbody td.listSubcon a:focus, .dataList tbody td a:active { font-weight:600; }
+
+/* view */
+.dataView { clear:both; position:relative; width:100%; overflow:hidden;}
+.dataView .tit {padding:5px 0 5px 3%; text-align:left; background:#FBD462; color:#743612; font-family:NGBold;border-radius:13px;}
+.dataView .tit.center { text-align:center; }
+.dataView .point { position:static; padding:10px 5px 10px 0; border-bottom: 1px solid #efefef; text-align:right; }
+.dataView .point span { font-family:'NGBold'; margin:0 3px 0 15px; }
+.dataView .viewCms { clear:both; overflow:hidden; padding:20px 16px; border-bottom: 1px solid #efefef}
+.dataView .viewCms img { width:100%; }
+.dataView .viewCms p { margin:0 0 10px 0; }
+
+/*table*/
+.tbl01{border-top:1px solid #baad9e;}
+.tbl01 td,.tbl01 th{padding:5px 2%;color:#666;border-left:1px solid #e0dbd4;border-top:1px solid #e0dbd4}
+.tbl01 thead th{background:#f5f2ee;border-top:0 none}
+.tbl01 .first{border-left:0 none}
+
+/* button */
+.btnArea { clear:both; position:relative; width:100%; margin:15px 0; text-align:center; }
+.btnArea * { vertical-align:middle; }
+.btnArea a { display:inline-block; padding:0 10px; line-height:26px; background:#e2561f; color:#fff; text-align:center; border:0; border-radius:7px;}
+.btnArea a + a{margin-left:3px}
+
+
+
+
+
+
+
+
+
+/* write */
+.dataWrite { clear:both; width:100%; border-top:1px solid #444; }
+.dataWrite th, .dataWrite td { padding:10px 0 10px 10px; border-bottom:1px solid #e1e1e1; text-align:left;  }
+.dataWrite tr.title th, .dataWrite tr.title td { border-bottom:0; background:url('http://museum.bok.or.kr/static/images/common/bg/bgTh.gif') 0 bottom repeat-x #f9f9f9; }
+.dataWrite tr.title .inpTxt { width:90%; }
+.dataWrite td * { vertical-align:middle; }
+.dataWrite td .txtForm { display:inline-block; padding-left:10px; color:#e25e97; }
+.dataWrite td .boxEditor { padding:10px; }
+.dataWrite td .capcha { float:left; margin:0 15px 0 0; }
+.dataWrite td .capcha img {  }
+.dataWrite td .capcha .txtForm { display:block; padding:5px 0 0 0; }
+
+/* popup */
+#popWrap { width:100%; overflow:hidden; }
+#popWrap .tit { padding:20px 0; text-align:center; color:#fff; font-size:1.6em; background:#444; text-align:center; }
+#popWrap .boxPop { overflow:hidden; margin:0 auto; padding:0 10px; }
+#popWrap .txt { margin: 15px 0; font-size:1.1em; }
+#popWrap input.inpTxt { width:130px; padding:5px 1px; }
+#popWrap button { display:inline-block; padding:10px 20px; text-align:center; background:#444; color:#fff; border-radius:3px; }
+
+
+
+/* ******************* ie6 ************************ */
+
+.ie6 .tabNav li a img, .ie7 .tabNav li a img { margin-top:1px;}
+.ie6 .dataView dl { height:20px; }
+

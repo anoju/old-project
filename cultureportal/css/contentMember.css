@@ -1,0 +1,206 @@
+@charset "utf-8";
+@import url('/css/default.css');
+@import url('/css/layout.css');
+@import url('/css/contentCommon.css');
+
+*.patternBox { margin:0 auto; padding:10px; background:url('/images/member/bgParrernBox.gif') repeat 0 0; }
+
+input.inputMember { display:inline-block; height:24px; padding:0 5px; border:1px solid #d5d3ca; background-color:#fafafa; line-height:24px; }
+input.inputMember.uid { width:140px; }
+input.inputMember.upass,
+input.inputMember.uname,
+input.inputMember.ubirth { width:215px; }
+input.inputMember.ussn { width:96px; }
+
+input.inputMember.fuid,
+input.inputMember.funame,
+input.inputMember.fans { width:260px; }
+input.inputMember.fussn { width:119px; }
+
+/* 로그인 */
+div.integration { width:550px; margin-top:60px; }
+div.integration > div { padding:40px 30px 20px; background:#fff url('/images/member/bgIntegration.gif') no-repeat 100% 0; overflow:hidden; }
+div.integration h4 { margin-bottom:45px; padding:0 10px; color:#333; font-size:2.1em; line-height:1; }
+div.integration p.greetings { height:26px; margin-bottom:15px; padding:0 10px 0 44px; color:#666; font-family:NGBold, "돋움", Dotum; font-size:1.2em; background:url('/images/member/bgSmile.gif') no-repeat 10px 0; line-height:26px; }
+div.integration p.info { margin-bottom:5px; padding:0 10px; font-family:NGBold, "돋움", Dotum; }
+div.integration div.compare { float:left; width:148px; height:185px; margin:45px 0 25px 83px; }
+div.integration p.info + div.compare { margin-left:56px; }
+div.integration div.compare h5 { height:70px; margin-bottom:10px; padding-top:41px; color:#fff; font-size:1.1em; background:url('/images/member/bgTriangle01.gif') no-repeat 0 0; text-align:center; }
+div.integration div.compare h5 span { display:block; margin-top:10px; font-size:.8em; }
+div.integration div.compare p { padding:0 10px; font-family:NGBold, "돋움", Dotum; font-size:.9em; }
+div.integration div.compare + p { clear:both; margin-bottom:30px; padding-right:10px; font-family:NGBold, "돋움", Dotum; font-size:.9em; text-align:right; }
+div.integration p.note { margin-bottom:15px; padding:25px 20px; border-top:1px solid #eee; border-bottom:1px solid #eee; font-family:NGBold, "돋움", Dotum; background-color:#f4f5f5; }
+div.integration p.note + a { margin:0; }
+
+div.loginBox { width:485px; margin:60px auto 70px; position:relative;}
+div.loginBox div { position:relative; padding:30px 40px; background-color:#fff; overflow:hidden; }
+div.loginBox form { position:relative; margin-bottom:10px; overflow:hidden; }
+div.loginBox form fieldset { margin:0; padding:0; }
+div.loginBox form * { vertical-align:middle; } 
+div.loginBox form span { float:left; width:300px; }
+div.loginBox form label { float:left; width:70px; height:26px; margin-bottom:10px; color:#666; font-family:NGBold, "돋움", Dotum; font-size:1.1em; line-height:26px; }
+div.loginBox form span > input { float:left; margin-bottom:10px; }
+div.loginBox form button { float:right; }
+div.loginBox form button img { vertical-align:top; }
+div.loginBox form input + label { width:auto; margin-left:10px; font-size:.9em; }
+div.loginBox ul { margin-bottom:10px; padding:0 0 20px 70px; border-bottom:1px solid #efefef; overflow:hidden; }
+div.loginBox ul li { float:left; }
+div.loginBox ul li:first-child { margin-right:11px; padding-right:13px; background:url('/images/common/bg/bgDot01.gif') no-repeat 100% 50%; }
+div.loginBox ul a { color:#666; font-family:NGBold, "돋움", Dotum; font-size:.9em; }
+div.loginBox p { float:left; font-family:NGBold, "돋움", Dotum; font-size:.9em; line-height:22px; }
+div.loginBox span.button { float:right; }
+
+p.serviceList { margin-bottom:10px; color:#333; font-family:NGBold, "돋움", Dotum; font-size:1.1em; }
+p.serviceList span { color:#666; }
+
+ul.serviceList { height:193px; margin-bottom:30px; padding:0 9px; border:1px solid #c9c9c9; background:url('/images/member/bgContentList.gif') repeat-x 0 0; overflow:hidden; }
+ul.serviceList li { float:left; width:235px; height:96px; margin:-1px 0 1px; border-top:1px solid #e5e5e5; font-size:.9em; background:url('/images/member/bgBarV01.gif') no-repeat 0 50%;  overflow:hidden; }
+ul.serviceList li:first-child,
+ul.serviceList li:first-child + li + li + li { background:none; }
+ul.serviceList a { display:block; padding:20px 24px 0; height:76px; color:#888; }
+ul.serviceList span { float:left; width:58px; height:43px; margin:4px 20px 0 0; background:url('/images/member/bgContent.gif') no-repeat 0 0; }
+ul.serviceList span.service02 { background-position:-59px 0; }
+ul.serviceList span.service03 { background-position:-118px 0; }
+ul.serviceList span.service04 { background-position:0 -44px; }
+ul.serviceList span.service05 { background-position:-59px -44px; }
+ul.serviceList span.service06 { background-position:-118px -44px; }
+ul.serviceList strong { display:block; margin-bottom:5px; color:#333; font-family:NGBold, "돋움", Dotum; font-size:1.2em; fotn-weight:normal; }
+
+/* 회원가입 */
+p.joinIndex { margin-bottom:50px; color:#666; font-family:NGBold, "돋움", Dotum; font-size:1.1em; }
+p.joinIndex strong { display:block; margin-bottom:3px; color:#000; font-size:1.7em; letter-spacing:-1px; }
+p.joinIndex span { color:#2582e9; }
+
+ul.joinIndex { margin:0 0 70px 1px; overflow:hidden; }
+ul.joinIndex li { float:left; width:180px; margin:0 1px 0 -1px; padding:6px 0; border-left:1px solid #e2e2e2; text-align:center; }
+ul.joinIndex span { clear:both; display:inline-block; width:54px; height:41px; margin-bottom:20px; background:url('/images/member/bgJoinIndex.gif') no-repeat 0 0; }
+ul.joinIndex span.service02 { background-position:-55px 0; }
+ul.joinIndex span.service03 { background-position:-110px 0; }
+ul.joinIndex span.service04 { background-position:-165px 0; }
+ul.joinIndex p { font-size:.9em; }
+ul.joinIndex strong { display:block; margin-top:5px; color:#333; font-size:1.1em; }
+
+ul.joinType { margin-left:-7px; }
+ul.joinType li { float:left; width:173px; margin-left:40px; color:#666; font-size:.9em; text-align:center; }
+ul.joinType div { height:177px; padding-top:36px;  background-color:#fff; }
+ul.joinType span { clear:both; display:block; width:65px; height:39px; margin:0 auto 25px; background:url('/images/member/bgJoinType.gif') no-repeat 0 0; }
+ul.joinType span.type02 { background-position:-66px 0; }
+ul.joinType span.type03 { background-position:-132px 0; }
+ul.joinType strong { display:block; margin-bottom:20px; color:#333; font-family:NGBold, "돋움", Dotum; font-size:1.2em; font-weight:normal; }
+
+ol.joinStep { margin:60px 0 50px; padding-left:55px; overflow:hidden; }
+ol.joinStep.child { padding-left:12px; }
+ol.joinStep li { float:left; width:117px; padding-left:49px; background:url('/images/member/bgNext01.gif') no-repeat 22px 50%; }
+ol.joinStep.child li { padding-left:30px; background-position:11px 50%; }
+ol.joinStep li:first-child { padding-left:0; background:none; }
+ol.joinStep li > span { float:right; position:relative; width:117px; height:117px; }
+ol.joinStep span span { position:absolute; top:0; left:0; width:100%; height:100%; background:url('/images/member/bgJoinStep.gif') no-repeat 0 0; }
+ol.joinStep li > span.step01 span {}
+ol.joinStep li > span.step01.on span { background-position:0 -118px; }
+ol.joinStep li > span.step02 span { background-position:-118px 0; }
+ol.joinStep li > span.step02.on span { background-position:-118px -118px; }
+ol.joinStep li > span.step03 span { background-position:-236px 0; }
+ol.joinStep li > span.step03.on span { background-position:-236px -118px; }
+ol.joinStep li > span.step04 span { background-position:-354px 0; }
+ol.joinStep li > span.step04.on span { background-position:-354px -118px; }
+ol.joinStep li > span.step05 span { background-position:-472px 0; }
+ol.joinStep li > span.step05.on span { background-position:-472px -118px; }
+ol.joinStep li > span.step06 span { background-position:-590px 0; }
+ol.joinStep li > span.step06.on span { background-position:-354px -118px; }
+ol.joinStep li > span.step07 span { background-position:-590px -118px; }
+ol.joinStep li > span.step07.on span { background-position:-472px -118px; }
+
+textarea.join { width:683px; padding:20px; margin-bottom:10px; border:1px solid #e6e6e6; color:#888; font-family:NGNormal, "돋움", Dotum; }
+
+label.agree01 { clear:both; display:block; margin-bottom:30px; color:#333; }
+label.agree01 * { vertical-align:middle; }
+
+ul.join01 { margin-bottom:35px; }
+ul.join01 li { margin-bottom:3px; padding-left:8px; background:url('/images/common/bg/bgDot04.gif') no-repeat 0 7px; }
+
+div.validation { position:relative; padding-top:39px; }
+div.validation h5 { position:absolute; top:0; }
+div.validation h5 a { display:block; position:relative; height:39px; }
+div.validation h5 a span { position:absolute; top:0; left:0; width:100%; height:100%; background:url('/images/member/bgTabValidation.gif') no-repeat 0 0; }
+div.validation h5.tab01,
+div.validation h5.tab03 { left:0; width:362px; }
+div.validation h5.tab01 a.on span { background-position:0 -40px; }
+div.validation h5.tab02 { left:362px; width:363px; }
+div.validation h5.tab02 a span { background-position:-362px 0; }
+div.validation h5.tab02 a.on span { background-position:-362px -40px; }
+div.validation h5.tab03 a span { background-position:0 -80px; }
+div.validation h5.tab03 a.on span { background-position:-363px -80px; }
+
+
+div.validateSSN { border:1px solid #ebebeb; border-top:0; overflow:hidden; }
+div.validateSSN form { position:relative; width:435px; margin:0 auto 30px; overflow:hidden; }
+div.validateSSN form fieldset { margin:0; padding:0; }
+div.validateSSN form span { float:left; width:330px; }
+div.validateSSN form span span { float:none; margin-left:3px; vertical-align:middle; }
+div.validateSSN form label { float:left; width:95px; height:26px; margin-bottom:10px; color:#666; font-family:NGBold, "돋움", Dotum; font-size:1.1em; line-height:26px; }
+div.validateSSN form label.agree { font-size:.9em; width:200px; padding-left:95px; }
+div.validateSSN form label.agree * { vertical-align:middle; }
+div.validateSSN form span > input { margin-bottom:10px; }
+div.validateSSN form button { float:right; }
+div.validateSSN form button img { vertical-align:top; }
+div.validateSSN p { margin:15px 25px 40px; line-height:1.6; }
+div.validateSSN p.note01 { margin:0 20px 15px; padding:0 5px 15px; border-bottom:1px solid #efefef; font-size:.9em; }
+div.validateSSN p.note01 span { color:#333; }
+div.validateSSN p.note02 { float:left; width:480px; margin:0 0 15px 25px; font-size:.9em; }
+div.validateSSN span.button { float:right; margin-right:25px; }
+
+div.validateIPin { padding:55px 115px; border:1px solid #ebebeb; border-top:0; text-align:center; }
+div.validateIPin p { margin-bottom:15px; }
+div.validateIPin label { margin-right:10px; color:#666; font-family:NGBold, "돋움", Dotum; font-size:.9em; }
+div.validateIPin * { vertical-align:middle; }
+
+h4.welcome { margin-bottom:10px; color:#000; font-size:2.5em; text-align:center; }
+p.welcome { margin-bottom:20px; color:#666; font-family:NGBold, "돋움", Dotum; text-align:center; }
+p.pointInfo { margin-bottom:40px; padding:25px; background-color:#fafafa; text-align:center; }
+p.pointInfo span { color:#338df2; font-family:NGBold, "돋움", Dotum; }
+p.pointInfo a { color:#888; font-family:NGBold, "돋움", Dotum; }
+
+/* 아이디 찾기 */
+div.infoBox { width:485px; margin:60px auto 70px; position:relative;}
+div.infoBox div { padding:30px 40px; background-color:#fff; overflow:hidden; }
+div.infoBox form { margin-bottom:20px; overflow:hidden; text-align:center; }
+div.infoBox form span { float:left; width:300px; height:62px; }
+div.infoBox form label { float:left; width:70px; height:26px; margin-bottom:10px; color:#666; font-family:NGBold, "돋움", Dotum; font-size:1.1em; line-height:26px; text-align:left; }
+div.infoBox form span > input { float:left; margin-bottom:10px; }
+div.infoBox form button { float:right; vertical-align:top; }
+div.infoBox form button img { *margin-top:-2px; }
+div.infoBox p.note01 { margin-bottom:20px; color:#666; font-family:NGBold, "돋움", Dotum; font-size:.9em; }
+div.infoBox p.note01 span { color:#338df2; }
+div.infoBox p.note02 { padding-top:10px; border-top:1px solid #efefef; font-family:NGBold, "돋움", Dotum; font-size:.9em; overflow:hidden; }
+
+/* 비밀번호 찾기 */
+div.findPW { position:relative; padding-top:45px; background:url('/images/common/bg/bgTab01.gif') no-repeat 0 0; }
+div.findPW h4 a { position:absolute; top:0; z-index:900; }
+div.findPW h4 a.on { z-index:999; }
+div.findPW h4.tab01 a { left:0; }
+div.findPW h4.tab02 a { left:142px; }
+div.findPW h4.tab03 a { left:250px; }
+
+div.box01 { width:585px; margin-top:50px; }
+div.box02 { width:585px; margin-top:50px; }
+div.box03 { width:585px; margin-top:50px; }
+
+div.findPW > div > div { padding:40px; background-color:#fff; }
+
+div.findPW p.note01 { margin-bottom:20px; color:#666; font-family:NGBold, "돋움", Dotum; font-size:.9em; }
+div.findPW p.note01 span { color:#338df2; }
+
+div.findPW form { margin:0 auto; overflow:hidden; text-align:center; }
+div.findPW form button { vertical-align:middle; }
+div.findPW form span { display:block; width:400px; margin:0 auto; } 
+div.findPW form label { display:inline-block; width:110px; height:26px; margin-bottom:10px; color:#666; font-family:NGBold, "돋움", Dotum; font-size:1.1em; line-height:26px; text-align:left; }
+
+div.findPW div.box02 div { padding-bottom:30px; }
+div.findPW div.box02 form label { width:55px; }
+div.findPW div.box03 label { margin-right:15px; }
+div.findPW form label.lineOver { height:auto; margin-top:-2px; line-height:1.1; vertical-align:top; }
+div.findPW form input { vertical-align:middle; }
+div.findPW form input + button { margin-left:4px; }
+div.findPW form select { width:272px; height:26px; margin-left:-4px; border:1px solid #d5d3ca; background-color:#fafafa; line-height:26px; }
+
+div.findPW div.buttonBox { margin-top:10px; padding-top:15px; border-top:1px solid #efefef; text-align:center; }

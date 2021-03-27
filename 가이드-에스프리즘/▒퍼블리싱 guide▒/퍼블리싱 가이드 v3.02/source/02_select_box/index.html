@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>디자인 셀렉트2</title>
+<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+<script src="select.js" type="text/javascript"></script>
+
+<style>
+.select{ position:relative; line-height:normal; display:inline-block; *display:inline; vertical-align:middle; background:#fff; *zoom:1;}
+.select *{ margin:0; padding:0; cursor:pointer; font-size:12px; font-family:Tahoma, Sans-serif;}
+.select .myValue{ position:relative; z-index:2; left:0; top:0; border:1px solid #bababa; color:#666; line-height:19px; _line-height:normal; text-align:left; overflow:visible; background:transparent;}
+.select .myValue.selected{ font-weight:bold;}
+.select.open .myValue,
+.select .myValue.outLine{ border:1px solid #999;}
+.select button.myValue{ height:21px; width:100%; text-indent:5px; *text-indent:0; *padding-left:5px;}
+.select div.myValue{ height:19px; text-indent:8px;}
+.select .ctrl{ position:absolute; top:0; right:0; width:18px; height:19px; border:1px solid #bababa; border-left:1px solid #eaeaea; background:#fff;}
+.select .arrow{ position:absolute; width:0; height:0; top:9px; right:6px; line-height:0; font-size:0; border-top:3px solid #999; border-left:3px solid #fff; border-right:3px solid #fff;}
+.select ul{ top:20px; left:0; width:100%; list-style:none; border:0; border-top:1px solid #bababa; border-bottom:1px solid #bababa; background:#fff; overflow:hidden;}
+.select ul.aList{ display:none;}
+.select.open ul.aList{ display:block;}
+.select ul.iList{ left:-2000%;}
+.select.open ul.iList{ left:0;}
+.select li{ position:relative; overflow:hidden; white-space:nowrap; height:18px; border-left:1px solid #bababa; border-right:1px solid #bababa;}
+.select li input.option{ position:absolute; width:100%; height:20px; line-height:20px;}
+.select li label{ position:absolute; left:0; top:0; width:100%; text-indent:8px; *text-indent:6px; height:18px; line-height:18px; color:#767676; background:#fff;}
+.select li a{ display:block; text-indent:8px; *text-indent:6px; height:18px; line-height:18px; color:#767676; background:#fff; text-decoration:none;}
+.select li.hover *{ background:#999; color:#fff;}
+</style>
+
+</head>
+
+<body>
+<h1>Anchor : Drop Down Link</h1>
+<div style="width:200px;" class="select">
+	<span class="ctrl"><span class="arrow"></span></span>
+	<button class="myValue" type="button">Select Link</button>
+	<ul class="aList" style="position: absolute;">
+		<li><a href="#1">Link_1</a></li>
+		<li><a href="#2">Link_2</a></li>
+		<li><a href="#3">Link_3</a></li>
+	</ul>
+</div>
+<div style="width:200px;" class="select">
+	<span class="ctrl"><span class="arrow"></span></span>
+	<button class="myValue" type="button">Select Link</button>
+	<ul class="aList" style="position: absolute;">
+		<li><a href="#1">Link_1</a></li>
+		<li><a href="#2">Link_2</a></li>
+		<li><a href="#3">Link_3</a></li>
+	</ul>
+</div>
+<hr>
+<h1>Single Select Form : Radio Input(Emulate Select/Option)</h1>
+<form action="">
+	<div style="width:200px;" class="select">
+		<span class="ctrl"><span class="arrow"></span></span>
+		<div class="myValue">Select Option1</div>
+		<ul class="iList" style="position: absolute;">
+			<li><input type="radio" checked="checked" class="option" id="c0" name="c"><label for="c0">Select Option1</label></li>
+			<li><input type="radio" value="" class="option" id="c1" name="c"><label for="c1">Option_1</label></li>
+			<li><input type="radio" value="" class="option" id="c2" name="c"><label for="c2">Option_2</label></li>
+			<li><input type="radio" value="" class="option" id="c3" name="c"><label for="c3">Option_3</label></li>
+		</ul>
+	</div>
+	<div style="width:200px;" class="select">
+		<span class="ctrl"><span class="arrow"></span></span>
+		<div class="myValue">Select Option2</div>
+		<ul class="iList" style="position: absolute;">
+			<li><input type="radio" checked="checked" class="option" id="d0" name="d"><label for="d0">Select Option2</label></li>
+			<li><input type="radio" value="" class="option" id="d1" name="d"><label for="d1">Option_1</label></li>
+			<li><input type="radio" value="" class="option" id="d2" name="d"><label for="d2">Option_2</label></li>
+			<li><input type="radio" value="" class="option" id="d3" name="d"><label for="d3">Option_3</label></li>
+		</ul>
+	</div>
+	<button type="submit">GO</button>
+	<button type="reset">RESET</button>
+</form>
+<hr>
+<button onclick="$('link').attr('href', ''); $('*').attr('style','')" type="button">CSS(X)</button>
+<button onclick="location.reload()" type="button">CSS(O)</button>
+
+
+</body>
+</html>

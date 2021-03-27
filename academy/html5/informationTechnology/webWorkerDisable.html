@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet' type='text/css'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+		</style>
+		<script src="js/jquery-1.8.0.min.js"></script>
+
+		<script type="text/javascript">
+            function sleep(milliSeconds) {
+                var startTime = new Date().getTime();
+                while (new Date().getTime() < startTime + milliSeconds);
+            }
+
+            function callNotWorker() {
+                sleep(10000);
+                //10초 동안 대기 시킨다
+            }
+		</script>
+	</head>
+	<body>
+		<button onclick="callNotWorker()">
+			워커없이 호출
+		</button>
+		<br>
+		<input type="text">
+	</body>
+</html>

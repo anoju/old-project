@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>border-radius</title>
+<style>
+.grad1{
+	position:relative;
+	width:150px;
+	height:150px;
+	background: #06f; /* CSS3를 지원하지 않는 브라우저용 */
+	background: -webkit-gradient(linear, left top, left bottom, from(#06f), to(#fff)); /* 웹킷 브라우저 */
+	background: -moz-linear-gradient(top,#06f,  #fff); /* 파이어폭스 */
+}
+.grad2{
+	position:relative;
+	width:150px;
+	height:150px;
+	background: #06f; /* CSS3를 지원하지 않는 브라우저용 */
+	background: -webkit-gradient(linear, left bottom, right top, from(#06f), to(#fff)); /* 웹킷 브라우저 */
+	background: -moz-linear-gradient(bottom 45deg, #06f,  #fff); /* 파이어폭스 */
+}
+</style>
+</head>
+
+<body>
+<h3>선형 그라데이션</h3>
+<p>색상만 지정했을 때</p>
+<div class="grad1"></div>
+<p>방향을 지정했을 때</p>
+<div class="grad2"></div>
+</body>
+</html>

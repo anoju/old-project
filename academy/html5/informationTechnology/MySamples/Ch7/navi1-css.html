@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>가로 내비게이션</title>
+<style>
+.navi {  /* 메뉴 전체 영역에 대한 스타일 */
+	list-style-type: none; /* 불릿 기호 없앰 */
+	height: 40px; /* 내비게이션 높이 */
+	padding: 0; 
+	margin: 0; 
+}
+.navi li { /* 메뉴 각 항목에 대한 스타일 */
+	float: left; /* 왼쪽부터 표시 */
+	position: relative; /* 순서대로 표시 */
+	padding: 0; /* 안여백 없음 */
+	line-height: 40px; /* 줄간격 */
+	background:#600;  /* 내비게이션 전체 배경색 */
+}
+
+.navi li a { /* 메뉴 항목에서도 링크에 대한 스타일 */
+	display: block; /* 영역을 만듦 */
+	font-family:"굴림"; /* 글꼴 */
+	font-weight:600; /* 진하게 */
+	font-size:14px;	/* 글자크기 */
+	padding: 5px 25px; /* 안여백 */	
+	color: #fff; /* 메인 메뉴 글자색 */
+	text-decoration: none; /* 밑줄 없앰 */
+}
+.navi li a:hover { /* 메인 메뉴에 마우스 오버했을 때의 스타일 */
+	color:#F90; /* 마우스 오버했을 때 글자색 */
+}
+.navi li ul {  /* 서브 메뉴 영역에 대한 스타일 */
+	opacity: 0; /* 투명하게 표시 - 결국 평소엔 안보임 */
+	position: absolute; /* 고정 위치에 표시 */
+	left: 0; /* left 좌표는 메인 메뉴에서 움직이지 않음 */
+	width: 180px; /* 서브 메뉴 너비 */
+	background: #D8AFAF; /* 서브 메뉴 배경색 */
+	list-style-type: none; /* 서브 메뉴 항목의 불릿 없앰 */
+	padding: 0; /* 안여백 없음 */
+	margin: 0;  /* 여백 없음 */
+}
+.navi li:hover ul { /* 메인 메뉴 위로 마우스 오버했을 때 서브 메뉴 스타일 */
+	opacity: 1; /* 서브 메뉴 불투명해짐 -> 화면에 보임 */
+}
+.navi li ul li { /* 서브 메뉴 각 항목의 스타일 */
+	float: none; /* 플로팅하지 않음 */
+	position: static; /* 항목 크기에 맞게 배치됨 */
+	height: 0; /*높이값 없음 */
+	line-height: 0; /* 줄간격 없음 */
+	background: none; /* 배경 없음*/
+}
+.navi li:hover  ul li { /* 메인 메뉴 위로 마우스 오버 했을 때의 서브 메뉴 항목읫 스타일 */
+	height: 30px; /*높이 */
+	line-height: 20px; /* 줄간격 */
+	padding:5px 0;/* 안여백 */
+}
+.navi li ul li a { /* 서브 메뉴 항목의 링크 스타일 */
+	background: #D8AFAF; /* 배경색 */
+	font-family:"굴림"; /* 글꼴 */
+	font-weight:600; /* 진하게 */
+	font-size:14px;	/* 글자크기 */
+	color:#900; /* 글자색 */
+}
+.navi li ul li a:hover { /* 서브 메뉴 위로 마우스 오버했을 때의 스타일 */
+	background: #900; /* 배경색 */
+}
+
+</style>
+</head>
+
+<body>
+<ul class="navi">
+	<li><a href="#"> Home </a></li>
+	<li><a href="#"> 웹 개발</a>
+    	<ul>
+       	  <li><a href="#"> 웹 디자인 </a></li>
+            <li><a href="#"> HTML5 + CSS3</a></li>
+            <li><a href="#"> JQuery</a></li>  
+            <li><a href="#"> 웹 + 모바일</a></li>        	
+        </ul>
+    </li>
+	<li><a href="#"> 게시판 </a>
+    	<ul>
+         	<li><a href="#"> Q & A </a></li>
+            <li><a href="#"> 방명록</a></li>      	
+        </ul> 
+    </li>  
+	<li><a href="#"> 프로필</a></li>            
+</ul>
+</body>
+</html>

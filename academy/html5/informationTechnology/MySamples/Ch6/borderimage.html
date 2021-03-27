@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>border image</title>
+<style>
+.mybox {
+	border-width:0 12px 0 12px; 
+	width:300px;
+	padding:20px;
+	-moz-border-image:url("whiteButton.png") 0 12 0 12 stretch  stretch;
+	-webkit-border-image:url("whiteButton.png")  0 12 0 12 stretch  stretch;
+	border-image:url("whiteButton.png")  0 12 0 12 stretch  stretch;
+}
+</style>
+</head>
+
+<body>
+<div class="mybox"> 이미지를 사용해 테두리 꾸미기  </div>
+</body>
+</html>

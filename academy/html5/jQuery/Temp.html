@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			
+			body {
+				font-family: "NanumGothicWeb"
+			}
+					
+			a, a:visited{
+				text-decoration: none;
+				color:#000000;
+			}
+			
+		/* 배너 박스 */
+			.banner_slider{
+				position: absolute;
+				width: 1000px;
+				height: 380px;
+				top:50px;
+				left:50px;
+				background:#ececec;			
+			}
+			
+		/*배너 이미지 영역*/
+			.banner_slider .banner_container{
+				position: relative;
+				width: 980px;
+				height: 327px;
+				margin: 10px;
+				overflow: hidden;
+				border: 0px solid #ff0000;
+			}
+			
+			.banner_slider .banner_container #banner_content{
+				position: absolute;
+				/* 980*4 */
+				width:3920px;
+			}
+			
+			.banner_slider .banner_container #banner_content img{
+				float:left;
+			}
+			
+			
+		/*마우수 오버 버튼*/
+			.banner_slider .banner_nav_container{
+				position:relative;
+				width:100%;
+				height: 30px;
+				border:0px solid
+			}
+			
+			
+		</style>
+		<script src="../informationTechnology/js/jquery-1.8.2.min.js"></script>
+		<script>
+			
+		</script>
+	</head>
+	<body>
+		<div class="banner_slider">
+			<div class="banner_container">
+				<div id="banner_content">
+					<img src="addJquery/moving03/images/img1.jpg" />
+					<img src="addJquery/moving03/images/img2.jpg" />
+					<img src="addJquery/moving03/images/img3.jpg" />
+					<img src="addJquery/moving03/images/img4.jpg" />
+				</div>
+			</div>
+			
+			<div class="banner_nav_container">
+				<ul id="banner_nav">
+					<li><a href="#" rel='1'>1</a></li>
+					<li><a href="#" rel='2'>2</a></li>
+					<li><a href="#" rel='3'>3</a></li>
+					<li><a href="#" rel='4'>4</a></li>
+				</ul>
+				<div>
+					<button id="btn_prev_banner">prev</button>
+					<button id="btn_next_banner">next</button>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi" />
+<title>레이어 토글</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+$(function(){
+	$('#first, #second').hide();
+	$('a[href=#first], a[href=#second]').click(function(){
+		$($(this).attr('href')).toggle();
+		return false;
+	});
+});
+</script>
+
+</head>
+
+<body>
+
+<p><a href="#first">First Anchor</a></p>
+<p id="first">First Layer</p>
+<p><a href="#second">Second Anchor</a></p>
+<p id="second">Second Layer</p>
+
+</body>
+</html>

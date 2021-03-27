@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>  </title>
+
+		<!-- 외부 CSS 링크-->
+		<link rel="stylesheet" type="text/css" href="#" />
+
+		<style type="text/css">
+			body{
+				font-family:"나눔고딕","맑은 고딕";
+				font-size: 75%;}
+		</style>
+
+		<script type="text/javascript" src="#">	//스크립트 링크	</script>
+
+		
+
+	</head>
+
+	<body>
+		<h1>getElemuntsByTagName을 이용해서 특정태그에 접근 할 수 있다</h1>
+
+		<p>이속성을 이용해서 아래 리스트에 태그에 접근하려면...</p>
+		<p>이속성을 이용해서 아래 리스트에 태그에 접근후에 총개수(.length)도 알아내본다.</p>
+
+		<ul id="myList">
+			<li>태그로 접근되는 리스트1</li>
+			<li>태그로 접근되는 리스트2</li>
+			<li>태그로 접근되는 리스트3</li>
+		</ul>
+
+
+		<script type="text/javascript">
+		//태그의 이름으로 요소를 추적하기  getElementsByTagName
+		//추출된 값이 배열게 저장된다.
+		//호출할때 배열주소 지정
+			alert(document.getElementsByTagName("li"))
+			alert(document.getElementsByTagName("li").length)
+		</script>
+	</body>
+
+</html>

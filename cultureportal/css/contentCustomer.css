@@ -1,0 +1,186 @@
+@charset "utf-8";
+@import url('/css/default.css');
+@import url('/css/layout.css');
+@import url('/css/contentCommon.css');
+
+a.outLink { color:#41a0ff; font-size:.9em; }
+a.outLink:hover,
+a.outLink:active,
+a.outLink:focus { text-decoration:underline; }
+
+/* FAQ */
+div.customerFAQ { position:relative; padding-top:75px; overflow:hidden; }
+div.customerFAQ h4 a { position:absolute; top:0; z-index:900; }
+div.customerFAQ h4 a.on { z-index:999; }
+div.customerFAQ h4.tabFAQ01 a {  }
+div.customerFAQ h4.tabFAQ02 a { left:103px; }
+div.customerFAQ h4.tabFAQ03 a { left:207px; }
+div.customerFAQ h4.tabFAQ04 a { left:311px; }
+div.customerFAQ h4.tabFAQ05 a { left:415px; }
+div.customerFAQ h4.tabFAQ06 a { left:519px; }
+div.customerFAQ h4.tabFAQ07 a { left:622px; }
+div.customerFAQ > div { border-top:2px solid #6b6b6b; }
+div.customerFAQ h5 { padding:15px; border-bottom:1px solid #e3e3e3; overflow:hidden; }
+div.customerFAQ h5 img { float:left; margin-right:15px; }
+div.customerFAQ h5 a { float:left; color:#333; font-family:NGBold, "돋움", Dotum; overflow:hidden; }
+div.customerFAQ > div > div { border-bottom:1px solid #e3e3e3; background-color:#fafafa; overflow:hidden; }
+div.customerFAQ > div > div > img { float:left; margin:25px 24px 25px 21px; }
+div.customerFAQ > div > div > div { margin:30px 30px 30px 0; overflow:hidden; }
+
+/* 문의/건의 */
+ul.category01 { margin:0 0 35px 2px; padding:1px 0 0 1px; overflow:hidden; }
+ul.category01 li { float:left; position:relative; width:145px; height:38px; margin:-1px 0 0 -1px; z-index:900; }
+ul.category01 li a { display:block; width:143px; height:36px; border:1px solid #e8e8e8; color:#999; font-family:NGBold, "돋음", Dotum; text-align:center; line-height:36px; letter-spacing:-1px; }
+ul.category01 li.on { z-index:999; }
+ul.category01 li.on a { width:139px; height:32px; border:3px solid #41a0ff; color:#444; line-height:32px; }
+
+form.boardSearch01 { float:right; margin-bottom:10px; }
+form.boardSearch01 > * { float:left; }
+form.boardSearch01 span { width:180px; height:20px; margin-left:4px; border-width:1px; border-style:solid; border-color:#cbcbcb #e4e4e4 #e4e4e4 #cbcbcb; }
+form.boardSearch01 span input { float:left; height:20px; width:145px; border:0; padding:0 7px; font:normal 1em/1.45 "나눔고딕", NanumGothic, NGNormal, "돋움", Dotum; line-height:20px; }
+form.boardSearch01 span button { float:right; margin:3px 5px 0 0; }
+form.boardSearch01 span.button { width:auto; height:auto; margin-left:4px; border:0; vertical-align:middle; }
+form.boardSearch01 span.button button { float:none; margin:0; }
+form.boardSearch01 label { color:#666; font-weight:bold; vertical-align:middle; }
+form.boardSearch01 label select { margin-left:3px; vertical-align:middle; }
+
+div.private { margin-bottom:10px; padding:20px; border:1px solid #e6e6e6; }
+div.private p { margin-bottom:15px; }
+div.private dl { overflow:hidden; }
+div.private dt { float:left; margin-right:3px; }
+div.private dd { overflow:hidden; }
+div.private + div { color:#333; }
+
+div.tableHead { height:38px; margin-top:10px; padding:0 12px; border-top:1px solid #4e5158; border-bottom:1px solid #eaeaea; background:url('/images/tradition/bgGuideTableHead.gif') repeat-x 0 0; text-align:right; }
+div.tableHead h4 { float:left; color:#333; line-height:38px; }
+div.tableHead span.button { margin-top:8px; }
+table + div.tableHead { margin-top:30px; }
+
+/* 뉴스레터 */
+#letterHead { margin:40px 0 0; padding:10px 20px; border:1px solid #e6e6e6; background-color:#fdfdfd; line-height:1; overflow:hidden; }
+#letterHead h4 { float:left; color:#333; font-family:NGNormal, "돋움", Dotum; }
+#letterHead h4 span { float:left; margin-right:19px; padding-right:19px; border-right:1px solid #eaeaea; color:#000; font-family:NGBold, "돋움", Dotum; }
+#letterHead > span { float:right; color:#333; }
+#letterHead + ul { margin:20px 5px 20px 0; }
+
+iframe.newsLetter { clear:both; width:725px; margin-bottom:40px; padding:0 0 30px; border-bottom:1px solid #eaeaea; overflow:hidden; }
+
+/* API 서비스 */
+p.center { text-align:center; vertical-align:top; }
+
+ul.headTab01.openAPI { margin-bottom:30px; }
+
+ul.apiGuide { width:721px; margin:40px 0 25px 1px; border-right:1px solid #eaeaea; overflow:hidden; }
+ul.apiGuide li { float:left; width:102px; height:48px; border-left:1px solid #eaeaea; text-align:center; }
+ul.apiGuide a { display:block; height:39px; padding-top:7px; border-top:1px solid #eaeaea; border-bottom:1px solid #eaeaea; color:#b1b1b1; }
+ul.apiGuide a.on { height:38px; padding-top:6px; border-top:2px solid #41a0ff; border-bottom-color:#fff; color:#676767; }
+
+p.apiText01 { margin-bottom:15px; padding-left:8px; background:url('/images/common/bg//bgDash01.gif') no-repeat 0 9px; line-height:1.65; letter-spacing:-.0325em; overflow:hidden; }
+p.apiText01 strong { font-family:NGBold, "돋움", Dotum; font-weight:normal; }
+
+form.openAPI { clear:both; margin:10px 0 15px; }
+form.openAPI label { margin-right:10px; color:#333; font-family:NGBold, "돋움", Dotum; font-weight:normal; }
+
+/* 사이트 소개 */
+ul.headTab01.about { margin-bottom:28px; }
+
+p.about01 span,
+table.service span span,
+ul.color span { background-image:url('/images/customer/bgAboutA.gif'); }
+p.about01 span,
+table.service span span { position:absolute; top:0; left:0; width:100%; height:100%; }
+
+p.about01 { position:relative; width:630px; height:427px; margin:0 auto 40px; overflow:hidden; }
+
+table.service { width:100%; margin-bottom:40px; border-top:2px solid #6b6b6b; }
+table.service th { border-bottom:1px solid #efefef; width:145px; padding:30px 0 30px 50px; color:#555; text-align:left; line-height:1.4; }
+table.service td { border-bottom:1px solid #efefef; padding-left:30px; line-height:1.6; }
+table.service th > span { float:left; position:relative; width:33px; height:21px; margin:0 17px 0 -50px; }
+table.service span.service01 span { background-position:0 -428px; }
+table.service span.service02 span { background-position:-34px -428px; }
+table.service span.service03 span { background-position:-68px -428px; }
+table.service span.service04 span { background-position:-102px -428px; }
+table.service span.service05 span { background-position:-136px -428px; }
+table.service span.service06 span { background-position:-170px -428px; }
+table.service span.service07 span { background-position:-204px -428px; }
+
+div.logo { margin-bottom:18px; padding:20px 35px; border:1px solid #e6e6e6; overflow:hidden; }
+div.logo img { float:left; margin-right:40px; padding:30px 0; }
+div.logo img:first-child { padding-right:40px; border-right:1px solid #f2f2f2; overflow:hidden; }
+div.logo dl { margin-bottom:-10px; padding-top:22px; font-size:.9em; font-family:NGBold, "돋움", Dotum; }
+div.logo dl dt { float:left; width:53px; height:18px; color:#747474; line-height:18px; }
+div.logo dl dd { height:18px; margin-bottom:15px; font-size:.9em; overflow:hidden; }
+div.logo span { display:inline-block; width:70px; height:18px; margin-right:10px; vertical-align:middle; }
+div.logo span.color01 { background-color:#bb4327; }
+div.logo span.color02 { background-color:#b0adaf; }
+div.logo span.color03 { background-color:#5f6b9f; }
+div.logo + a { margin-bottom:20px; }
+div.logo + a + h5 { clear:both; }
+
+ul.color { font-family:NGBold, "돋움", Dotum; overflow:hidden; }
+ul.color li { float:left; width:25%; text-align:center; }
+ul.color span { display:block; width:86px; height:50px; margin:0 auto 20px; padding-top:35px; color:#fff; }
+ul.color span.color01 { background-position:0 -450px; }
+ul.color span.color02 { background-position:-87px -450px; }
+ul.color span.color03 { background-position:-174px -450px; }
+ul.color span.color04 { background-position:-261px -450px; }
+
+div.about { margin-bottom:30px; padding:20px 20px 15px; border:1px solid #e6e6e6; }
+div.about h5 { margin-bottom:10px; font-size:1.1em; }
+div.about h5 b { color:#333; }
+div.about h5,
+div.about p b { display:block; margin-bottom:5px; font-family:NGBold, "돋움", Dotum; font-weight:normal;  }
+div.about p { margin-bottom:5px; }
+div.about + p,
+p + div.about { margin-top:-15px; }
+
+ul.system { margin-bottom:25px; }
+ul.system li { padding-left:8px; background:url('/images/common/bg/bgDot04.gif') no-repeat 0 9px; line-height:1.8; }
+ul.system span { display:block; }
+
+/* 개인정보 처리 방침 */
+p.policyNote { margin-bottom:30px; padding:17px 20px; border:1px solid #f0f0f0; background-color:#fafafa; line-height:1.6; }
+
+div.policy ul,
+div.policy ol { margin-bottom:20px; }
+div.policy li { overflow:hidden; }
+div.policy li ul,
+div.policy li ol { margin:0 0 5px 15px; }
+div.policy li span.longText { display:block; color:#888; overflow:hidden; }
+
+div.policy { margin-top:-15px; }
+div.policy table { width:100%; margin-bottom:20px; border-top:2px solid #6b6b6b; }
+div.policy th,
+div.policy td { border-bottom:1px solid #eaeaea; border-left:1px solid #eaeaea; }
+div.policy th { padding:10px; color:#333; background-color:#f8f8f8; }
+div.policy td { padding:10px 20px; }
+div.policy td ul { margin-bottom:0; }
+div.policy th:first-child,
+div.policy td:first-child { border-left:0; }
+div.policy thead th { border-left:1px solid #eaeaea !important; }
+div.policy thead tr:first-child th:first-child { border-left:0 !important; }
+div.policy tbody td { padding:10px 15px; }
+div.policy table + p { margin-top:-10px; }
+
+div.policy h4 { margin-bottom:18px; padding:15px 0 0 15px; color:#333; font-size:1.2em; background:url('/images/common/bg/bgSquare01.gif') no-repeat 0 17px; line-height:1; overflow:hidden; }
+div.policy h5 { margin-bottom:8px; color:#333; font-family:NGBold, "돋움", Dotum; line-height:1.45; }
+div.policy p { margin-bottom:20px; overflow:hidden; }
+div.policy p + table,
+div.policy p + ul { margin-top:-10px; }
+div.policy p:first-child { padding-top:15px; }
+
+div.policy em { float:left; margin:0 4px 1px 0; font-style:normal; }
+div.policy span { display:block; color:#41a0ff; overflow:hidden; }
+div.policy strong { color:#333; font-family:NGBold, "돋움", Dotum; }
+
+div.policy div.report { position:relative; width:666px; height:151px; margin:0 auto 20px; overflow:hidden; }
+div.policy div.report span { position:absolute; top:0; left:0; width:100%; height:100%; background:url('/images/customer/imgReport.gif') no-repeat 0 0; }
+
+/* 관련사이트 */
+ul.siteLink { margin-bottom:30px; }
+ul.siteLink ul.sub02 { left:-95px; }
+
+/* 홍보배너 */
+ul.bannerList { margin:-20px 0 15px -64px; border-bottom:1px solid #eaeaea; overflow:hidden; }
+ul.bannerList li { float:left; width:199px; padding:30px 0 30px 64px; margin:-1px 0; border-bottom:1px solid #eaeaea; color:#333; font-size:1.2em; font-family:NGBold, "돋움", Dotum; }
+ul.bannerList img { width:199px; height:108px; vertical-align:top; }

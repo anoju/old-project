@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Untitled Document</title>
+<style>
+html,body { height: 100%; }
+html { 
+	background: #000 url(lemon.png) 50% 50% no-repeat; 
+	color: #ffffff; 
+}
+body { 
+	background: url(cherry.png) 50% 100% no-repeat; 
+	-moz-transition: opacity 1s ease;  /* FF3.7+ */
+    -o-transition: opacity 1s ease;  /* Opera 10.5 */
+	-webkit-transition: opacity 1s ease;  /* Saf3.2+, Chrome */
+	transition: opacity 1s ease;
+}
+
+/* Portrait */
+@media screen and (orientation:portrait) {
+	body { opacity: 1; }
+}
+/* Landscape */
+@media screen and (orientation:landscape) {
+	body { opacity: 0; }
+}
+
+/* For smaller devices */
+@media screen and (max-device-width: 480px) {
+	html, body { 
+		-moz-background-size: 80% auto;
+		-webkit-background-size: 80% auto;
+		background-size: 80% auto;
+	}
+}
+/* Portrait */
+@media screen and (max-width: 320px) {
+	body { opacity: 1; }
+}
+/* Landscape */
+@media screen and (min-width: 321px) and (max-width: 480px) {
+	html, body { 
+		-moz-background-size: 50% auto;
+		-webkit-background-size: 50% auto;
+		background-size: 50% auto; 
+	}
+	body { opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+</body>
+</html>

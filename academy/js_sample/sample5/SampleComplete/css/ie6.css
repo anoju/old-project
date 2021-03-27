@@ -1,0 +1,13 @@
+/* IE6 Àü¿ë  */
+
+#contents {
+	height:auto !important;
+	height:400px;
+}
+.login .id, .login .pw {
+	margin-top:-1px;
+	margin-bottom:-1px;
+}
+.siteFavorite .ranking li {
+	height:1px;
+}

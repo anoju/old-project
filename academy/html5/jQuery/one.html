@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+			
+		</style>
+		<script src="../informationTechnology/js/jquery-1.8.2.min.js"></script>
+		<script>
+			// 이벤트 한번만 적용
+			$(function(){
+				$("a").one("click",function(){
+					$("img").attr("src",$(this).attr("href"))
+					return false
+				})		
+				
+			})			
+   
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li><a href="image/img00.JPG">아이스크림</a></li>
+			<li><a href="image/img02.JPG">피노키오</a></li>
+			<li><a href="image/img03.JPG">열기구</a></li>
+			<li><a href="image/img04.JPG">불가사리</a></li>
+		</ul>
+		<p><img src="image/img00.JPG" alt="아이스크림" title="아이스크림" width="320px" height="480px" /></p>
+	</body>
+</html>

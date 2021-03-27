@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>  </title>
+
+
+		<style type="text/css">
+			body{
+				font-family:"나눔고딕","맑은 고딕";
+				font-size: 75%;}
+		</style>
+
+
+		
+
+	</head>
+
+	<body>
+		<h1>내 배경 이미지</h1>
+		<ul>
+			<li><a href="images/picture1.jpg" title="사진1" onclick="showPicture(this);return false">사진1</a></li>
+			<li><a href="images/picture2.jpg" title="사진2" onclick="showPicture(this);return false">사진2</a></li>
+			<li><a href="images/picture3.jpg" title="사진3" onclick="showPicture(this);return false">사진3</a></li>
+			<li><a href="images/picture4.jpg" title="사진4" onclick="showPicture(this);return false">사진4</a></li>
+		</ul>
+		<p id="holder"><img src="images/placeholder.gif" width="300" height="246" alt="대체이미지" /></p>
+
+		<script type="text/javascript">
+			function showPicture(selfClick){
+				var getHref = selfClick.getAttribute("href")
+				var myPlaceholder = document.getElementById("holder")
+				myPlaceholder.setAttribute("src",getHref)
+			}
+		</script>
+	</body>
+
+</html>

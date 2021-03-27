@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<title>Web Workers </title> 
+</head> 
+ 
+<body> 
+<p> 
+	<label for="worker-start-value"> 
+		<strong>Start value</strong>
+	</label><br> 
+	<input type="text" id="worker-start-value" value="0"> 
+</p> 
+<p>	
+	<input id="start-worker" type="button" value="Start Worker"> 
+	<input id="stop-worker" type="button" value="Stop Worker"> 
+</p> 
+<h3>Web Worker results:</h3> 
+<p id="worker-results"> (not started yet)</p> 
+<script> 
+(function () {
+	var worker;
+	function createWorker () {
+		worker = new Worker("worker.js");
+	}
+	
+	document.getElementById("start-worker").onclick = function () {
+		createWorker();
+		worker.postMessage(document.getElementById("worker-start-value").value);
+						
+		worker.onmessage = function (event) {
+			document.getElementById("worker-results").innerHTML = event.data;
+		};
+		worker.onerror = function (event) {
+			document.getElementById("worker-results").innerHTML = "An error occurred";
+		};
+	};
+						
+	document.getElementById("stop-worker").onclick = function () {
+		if (worker) {
+			worker.terminate();
+		}
+	};
+})();
+</script> 
+</body> 
+</html>

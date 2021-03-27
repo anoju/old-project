@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+/* reset */
+@import "reset.css";
+
+.index{background:#f9f8fe}
+.index #wrap{background:#f9f8fe;text-align:center}
+.a_type #wrap{position:relative;z-index:10;width:100%;text-align:center}
+.a_type2 #wrap{position:relative;z-index:10;width:100%;background:url(../img/a_bg_body2.gif) repeat-x 0 0;text-align:center}
+.b_type #wrap{position:relative;z-index:10;width:100%;background:url(../img/b_bg_body.gif) repeat-x 0 0;text-align:center}
+.b_type2 #wrap{position:relative;z-index:10;width:100%;background:url(../img/b_bg_body2.gif) repeat-x 0 0;text-align:center}
+.c_type #wrap{position:relative;z-index:10;width:100%;background:url(../img/c_bg_body.gif) repeat-x 0 0;text-align:center}
+.c_type{overflow-x:hidden}
+#bar{position:fixed;z-index:11;left:0;bottom:-4px;width:100%;height:57px;background:url(../img/a_bg_bar.gif) repeat-x 0 0;background-color:#4c4c4c;text-align:center}
+
+.a_bgl{position:absolute;left:0;top:0;width:50%;height:615px;background:url(../img/a_bgl.gif) repeat-x 0 0}
+.a_bgr{position:absolute;right:0;top:0;width:50%;height:615px;background:url(../img/a_bgr.gif) repeat-x 0 0}
+.a_con{position:relative;z-index:10}
+.b_sub{width:996px;margin:0 auto;position:relative;z-index:10}
+.b_sub_bgl{position:absolute;left:-498px;top:0;width:50%;height:493px;background:url(../img/b_sub_bgl.gif) no-repeat 100% 0}
+.b_sub_bgr{position:absolute;right:0;top:0;width:50%;height:493px;background:url(../img/b_sub_bgr.gif) no-repeat 478px 0}
+.b_sub_bgl2{position:absolute;left:-498px;top:0;width:50%;height:493px;background:url(../img/b_sub_bgl2.gif) no-repeat 100% 0}
+.b_sub_bgr2{position:absolute;right:0;top:0;width:50%;height:493px;background:url(../img/b_sub_bgr2.gif) no-repeat 478px 0}
+.c_sub{height:837px;position:relative}
+.c_sub div{position:absolute;left:50%;top:0;margin-left:-698px}
+.c_sub2,.c_sub3{display:none}
+
+/*IE6 - fixed layer*/
+html.html-ie6{_overflow:hidden}
+html.html-ie6,html.html-ie6 body{_height:100%}
+#wrap{_height:100%;_overflow:auto}
+#wrapper-iefixed{_height:100%}
+#bar{_position:absolute;_margin:0 16px 0 0}
+
+#footer{width:996px;margin:0 auto}

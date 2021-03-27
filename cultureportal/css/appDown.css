@@ -1,0 +1,10 @@
+@charset "EUC-KR";
+
+@import "default.css";
+#wrap { background:url('/images/event/app/bgAppDown.gif') 0 0 repeat-x; }
+.appWrap { position:relative; margin-top:13px; }
+.btnApp { position:absolute; left:247px; top:333px; }
+.btnApp a { margin:0 5px 0 0; }
+
+.iphoneDown, .androidDown { position:absolute; left:247px; top:391px; display:none; }
+.closeApp { position:absolute; right:15px; top:35px; }

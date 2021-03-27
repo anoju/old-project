@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi" />
+<title>콘텐츠 로테이션</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+$(function(){
+	if($('div').hasClass('rotation')){
+		$('.rotation .next').click(function(){
+			$('.rotation li:first-child').clone().appendTo('.rotation ul');
+			$('.rotation li:first-child').remove();
+		});
+		$('.rotation .prev').click(function(){
+			$('.rotation li:last-child').clone().prependTo('.rotation ul');
+			$('.rotation li:last-child').remove();
+		});
+	};
+});
+</script>
+
+<style>
+.rotation ul{height:60px;overflow:hidden}
+</style>
+
+</head>
+
+<body>
+
+<div class="rotation">
+    <ul>
+        <li>Quinny</li>
+        <li>Maxicosi</li>
+        <li>gb</li>
+        <li>safety first</li>
+        <li>munchkin</li>
+        <li>sorbebe</li>
+        <li>Sbaby</li>
+    </ul>
+    <span class="prev">prev</span>
+    <span class="next">next</span>
+</div>
+
+</body>
+</html>

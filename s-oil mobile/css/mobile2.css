@@ -1,0 +1,23 @@
+html,body {margin:0;background:#ffffff;}
+
+h1,h2,h3,h4,h5, div, article, section, aside, dl, dt, dd, ul, ol, li,  p, span {margin:0;padding:0;font-family:dotum;}
+
+li {list-style:none;}
+img {vertical-align:center;}
+table {border-spacing:0px;border:0px;border-collapse:collapse;}
+address,hr,
+.dn{display:none;}
+form {display:inline;}
+fieldset {padding:0;margin:0;border:none;}
+legend, caption, hr {display:none;}
+input {padding:0;margin:0;}
+* {-webkit-text-size-adjust:none;}
+
+
+/* main */
+#mainVisual {margin:0px auto;position:relative;overflow:hidden;width:480px;height:322px;}
+#mainVisual ul li {float:left;}
+#mainVisual ul li img {width:100%;vertical-align:top;}
+#mainVisual .Rbanner_page {position:absolute;bottom:10px;width:100%;text-align:center;}
+#mainVisual .Rbanner_page a {display:inline-block;width:20px;height:20px;overflow:hidden;text-align:left;text-indent:-999px;background:url("../images/main/rolling_step.png") no-repeat left -25px;margin-left:5px;margin-right:5px;}
+#mainVisual .Rbanner_page a.on {background:url("../images/main/rolling_step.png") no-repeat left 0px;}

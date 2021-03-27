@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+				text-align:center;
+			}			
+			header,section,footer,aside,nav,article,figure,figcaption,hgroup{
+				dispaly:block;
+			}
+			#player{
+				width:720px;
+				margin:20px auto;
+				padding:5px;
+				background: #999999;
+				border: 1px solid #666666;
+				
+				-moz-border-radius: 5px;
+				-webkit-border-radius: 5px;
+				border-radius: 5px;
+			}
+			nav{
+				margin:5px 0;
+			}
+			#buttons{
+				float:left;
+				width:85px;
+				height:20px;
+			}
+			#bar{
+				position:relative;
+				float: left;
+				width: 600px;
+				height:16px;
+				padding:2px;
+				border:1px solid #cccccc;
+				background:#eeeeee;
+			}
+			
+			#progress{
+				position: absolute;
+				width:0px;
+				height:16px;
+				background: rgba(0,0,150,.2);	
+			}
+		</style>
+		<script>
+					
+			function initiate(){
+				//초기화 함수	
+				maxim=600
+				mmedia=document.getElementById("media")
+				play =document.getElementById("play")
+				bar =document.getElementById("bar")
+				propress =document.getElementById("progress")
+				
+				
+				
+				play.addEventListener('click',push,false)
+				bar.addEventListener('click',move,false)
+			}
+			
+			//비디오를 재생하고 일시 중지하는 함수
+			function push(){
+				if(!mmedia.paused && !mmedia.ended){
+					//일시정지 내장함수 비디오나 오디오 전용
+					mmedia.pause()
+					play.innerHTML='play'
+					window.clearInterval(loop)					
+				}else{
+					mmedia.play()
+					play.innerHTML='pause'
+					//setTimeout과 비슷한 용도 주기발생
+					loop=setInterval(status,1000)
+				}
+			}
+			
+			
+			//프로그래스바 업데이트 함수
+			function status(){
+				if(!mmedia.ended){
+					//currentTime 현재 재생시간
+					//duration 영상의 전체 재생길이
+					var size=parseInt(mmedia.currentTime*maxim/mmedia.duration)
+					progress.style.width=size+'px'
+				}else{
+					progress.style.width='0px'
+					play.innerHTML='Play'
+					window.clearInterval(loop)
+				}	
+			}
+
+			
+			//사용자가 선택한 위치에서 재생시작
+			function move(e){
+				if(!mmedia.paused && !mmedia.ended){
+					var mouseX = e.pageX-bar.offsetLeft
+					var newtime = mouseX*mmedia.duration/maxim
+					mmedia.currentTime = newtime
+					progress.style.width=mouseX+'px'
+				}
+			}			
+			
+			window.addEventListener('load',initiate,false)
+		
+		</script>
+	</head>
+	<body>
+		<section id="player">
+			<video id="media" width="720" height="400">
+				<source src="http://minkbooks.com/content/trailer.mp4">
+				<source src="http://minkbooks.com/content/trailer.ogg">
+			</video>
+			<nav>
+				<div id="buttons">
+					<button id="play">play</button>
+				</div>
+				<div id="bar">
+					<div id="progress" style="height:16px;"></div>
+				</div>
+				<div style="clear: both"></div>
+			</nav>
+		</section>		
+	</body>
+</html>

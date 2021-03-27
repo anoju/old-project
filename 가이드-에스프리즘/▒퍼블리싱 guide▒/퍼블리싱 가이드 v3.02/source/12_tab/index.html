@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi" />
+<title>TAB</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+jQuery(function($){
+	// List Tab Navigation
+	var tab_list = $('div.tab');
+	var tab_list_i = tab_list.find('>ul>li');
+	tab_list.removeClass('jx');
+	tab_list_i.find('>ul').hide();
+	tab_list.find('>ul>li[class=active]').find('>ul').show();
+	tab_list.css('height', tab_list.find('>ul>li.active>ul').height()+40);
+	function listTabMenuToggle(event){
+		var t = $(this);
+		tab_list_i.find('>ul').hide();
+		t.next('ul').show();
+		tab_list_i.removeClass('active');
+		t.parent('li').addClass('active');
+		tab_list.css('height', t.next('ul').height()+40);
+		return false;
+	}
+	tab_list_i.find('>a[href=#]').click(listTabMenuToggle).focus(listTabMenuToggle);
+});
+</script>
+
+<style>
+.tab{height:160px}
+.tab ul{position:relative;margin:0;padding:0;list-style:none;border-bottom:1px solid #ccc;font-family:Tahoma, Sans-serif;font-size:12px;*zoom:1}
+.tab ul:after{content:"";display:block;clear:both}
+.tab li{float:left;margin-bottom:-1px}
+.tab li a{position:relative;float:left;text-decoration:none;border:1px solid #eee;border-bottom-color:#ccc;background:#fafafa;color:#666}
+.tab li a span{display:inline-block;padding:6px 25px 6px 25px;letter-spacing:-1px;cursor:pointer}
+.tab li ul{width:100%;position:absolute;top:40px;left:0;list-style:none;border:0;margin:0;padding:0;*zoom:1}
+.tab li ul:after{content:"";display:block;clear:both}
+.tab li li{float:none;position:relative;margin:0 0 8px 0;color:#999}
+.tab li li a{float:none;padding:0;margin:0;border:0 !important;color:#666 !important;font-weight:normal;background:transparent;letter-spacing:normal}
+.tab li li a:hover,
+.tab li li a:active,
+.tab li li a:focus{color:#000 !important;text-decoration:underline}
+.tab li li time,
+.tab li li .time{position:absolute;top:0;right:0;color:#767676}
+.tab li li.more{position:absolute;top:-30px;right:0;border:0 !important;background:transparent}
+.tab li.active a{border:1px solid #ccc;border-bottom:1px solid #fff;margin-top:-1px;background:transparent;color:#333}
+.tab li.active a span{padding-top:7px;font-weight:bold}
+.tab.jx{height:auto}
+.tab.jx ul{border:0}
+.tab.jx li{float:none;position:relative}
+.tab.jx li a{float:none;display:block;font-weight:bold;color:#333;border:1px solid #eee !important;border-bottom-color:#ccc !important;background:#fafafa !important}
+.tab.jx li ul{position:static;display:block;left:0;top:0;padding:5px 0}
+.tab.jx li li a{display:inline;border:0 !important;background:none !important;font-weight:normal}
+.tab.jx li li.more{top:7px;right:15px}
+</style>
+
+</head>
+
+<body>
+
+<div class="tab">
+	<ul>
+		<li class="active"><a href="#"><span>공지사항</span></a>
+			<ul>
+				<li>› <a href="#">이것은 첫 번째 탭의 공지사항 목록 입니다.</a> <span class="time">2010.12.24</span></li>
+				<li>› <a href="#">이것은 첫 번째 탭의 공지사항 목록 입니다.</a> <span class="time">2010.12.24</span></li>
+				<li>› <a href="#">이것은 첫 번째 탭의 공지사항 목록 입니다.</a> <span class="time">2010.12.24</span></li>
+				<li class="more"><a href="#">공지사항 더보기</a></li>
+			</ul>
+		</li>
+		<li><a href="#"><span>보도자료</span></a>
+			<ul>
+				<li>› <a href="#">이것은 두 번째 탭의 보도자료 목록 입니다.</a> <span class="time">2010.12.24</span></li>
+				<li>› <a href="#">이것은 두 번째 탭의 보도자료 목록 입니다.</a> <span class="time">2010.12.24</span></li>
+				<li>› <a href="#">이것은 두 번째 탭의 보도자료 목록 입니다.</a> <span class="time">2010.12.24</span></li>
+				<li>› <a href="#">이것은 두 번째 탭의 보도자료 목록 입니다.</a> <span class="time">2010.12.24</span></li>
+				<li class="more"><a href="#">보도자료 더보기</a></li>
+			</ul>
+		</li>
+		<li><a href="#"><span>해명자료</span></a>
+			<ul>
+				<li>› <a href="#">이것은 세 번째 탭의 해명자료 목록 입니다.</a> <span class="time">2010.12.24</span></li>
+				<li>› <a href="#">이것은 세 번째 탭의 해명자료 목록 입니다.</a> <span class="time">2010.12.24</span></li>
+				<li>› <a href="#">이것은 세 번째 탭의 해명자료 목록 입니다.</a> <span class="time">2010.12.24</span></li>
+				<li>› <a href="#">이것은 세 번째 탭의 해명자료 목록 입니다.</a> <span class="time">2010.12.24</span></li>
+				<li>› <a href="#">이것은 세 번째 탭의 해명자료 목록 입니다.</a> <span class="time">2010.12.24</span></li>
+				<li class="more"><a href="#">해명자료 더보기</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+</body>
+</html>

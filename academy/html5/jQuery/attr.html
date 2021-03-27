@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}			
+		</style>
+		<script src="../informationTechnology/js/jquery-1.8.2.min.js"></script>
+		<script>
+			$(function(){
+				//attr(속성명,바꿀값)
+				$("a.changeLink").attr("href","http://www.nate.com")
+				
+				//속성값을 읽어와서 텍스트노드를 가져온 속성값 문자열로 변경해서 표시
+				$(".one a").text($(".one a").attr("href"))	
+				
+				//속성 지우는 방법
+				$(".two a").removeAttr('target')
+			})
+		</script>
+	</head>
+	<body>
+		<a class="changeLink" href="http://www.naver.com">네이버링크이나 네이트로 변경됨</a>
+		
+		<div class="one">
+			<a href="http://www.naver.com">네이버링크</a>
+		</div>
+		
+		<div class="two">
+			<a href="http://www.naver.com" target="_blank">네이버링크</a>
+		</div>
+	</body>
+</html>

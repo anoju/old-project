@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>jScrollPane</title>
+<link type="text/css" href="common/css/jquery.jscrollpane.css" rel="stylesheet" />
+<script type="text/javascript" src="common/js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="common/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="common/js/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" id="sourcecode">
+	$(function()
+	{
+		$('.scroll-pane').jScrollPane(
+			{
+				hijackInternalLinks: true
+			}
+		);
+	});
+</script>
+</head>
+
+<body>
+	<!-- container -->
+	<div id="container">
+		<!-- 디자인 스크롤바 -->
+		<div class="scroll-pane" style="background:pink">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in ligula id sem tristique ultrices
+				eget id neque. Duis enim turpis, tempus at accumsan vitae, lobortis id sapien. Pellentesque nec orci
+				mi, in pharetra ligula. Nulla facilisi. Nulla facilisi. Mauris convallis venenatis massa, quis
+				consectetur felis ornare quis. Sed aliquet nunc ac ante molestie ultricies. Nam pulvinar ultricies
+				bibendum. Vivamus diam leo, faucibus et vehicula eu, molestie sit amet dui. Proin nec orci et elit
+				semper ultrices. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+				mus. Sed quis urna mi, ac dignissim mauris. Quisque mollis ornare mauris, sed laoreet diam malesuada
+				quis. Proin vel elementum ante. Donec hendrerit arcu ac odio tincidunt posuere. Vestibulum nec risus
+				eu lacus semper viverra.
+			</p>
+		</div>
+		<!-- //디자인 스크롤바 -->
+	</div>
+	<!-- //container -->
+</body>
+</html>

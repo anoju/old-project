@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>  </title>
+
+		<!-- 외부 CSS 링크-->
+		<link rel="stylesheet" type="text/css" href="#" />
+
+		<style type="text/css">
+			ul, li{
+				margin:0;
+				padding:0;
+				}
+			body{
+				font-family:"나눔고딕";
+				color: white;
+				background-color:#176691;
+				font-weight:bold;
+				}
+			li{
+				float:left;
+				list-style:none;
+				background:#0CF;
+				margin-bottom:1px;
+				margin-left:10px;
+				display: inline;
+				width:auto;
+				height:auto;
+				}
+			ul{
+				clear:left;
+				}
+			#nav1{
+				color:#FC6;
+				}
+			#nav3{
+				color:#F9C;
+				}
+
+		</style>
+
+		<script type="text/javascript" src="#">	//스크립트 링크	</script>
+
+		
+
+	</head>
+
+	<body>
+		<h1>문서내의 모든 ul요소중 id속성가지고 있는 ul의 id만을 출력한다</h1>
+		<ul id="nav1">
+			<li>첫번째링크1</li>
+			<li>첫번째링크2</li>
+			<li>첫번째링크3</li>
+			<li>첫번째링크4</li>
+		</ul>
+		 
+		<ul>
+			<li>두번째링크1</li>
+			<li>두번째링크2</li>
+			<li>두번째링크3</li>
+			<li>두번째링크4</li>
+		</ul>
+		 
+		<ul id="nav3">
+			<li>세번째링크1</li>
+			<li>세번째링크2</li>
+			<li>세번째링크3</li>
+			<li>세번째링크4</li>
+		</ul>
+
+
+		<script type="text/javascript">
+			var myAttribute = document.getElementsByTagName("ul");
+			for (i=0;1<myAttribute.length ;i++ ){
+				var idText = myAttribute[i].getAttribute("id");
+				/*
+				if (idText != null)	{
+					alert(idText)
+				}
+				*/
+				if (idText)	{
+					alert(idText)
+				}
+			}
+		</script>
+	</body>
+
+</html>

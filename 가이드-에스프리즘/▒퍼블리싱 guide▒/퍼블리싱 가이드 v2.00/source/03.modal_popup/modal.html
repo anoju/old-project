@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>모달팝업</title>
+<script type="text/javascript" src="common/js/jquery.tools.min.js"></script>
+
+<style type="text/css">
+.modal{display:none;width:350px;height:200px;padding:15px;background-color:#fff;border:10px solid #f00}
+</style>
+</head>
+
+<body>
+	<p style="width:500px;height:2000px;background:green">&nbsp;</p>
+	<p><a href="#" rel="#modal_open" class="modalInput">모달 열려라</a></p>
+
+	<div class="modal" id="modal_open">
+		<h2>모달이 열렸다</h2>
+		<p>
+			<button class="close">닫아라</button>
+		</p>
+	</div>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+var triggers = $(".modalInput").overlay({
+	mask: {
+		color: '#000000',
+		loadSpeed: 200,
+		opacity: 0.5
+	},
+
+	closeOnClick: false
+});
+
+});
+</script>
+</body>
+</html>

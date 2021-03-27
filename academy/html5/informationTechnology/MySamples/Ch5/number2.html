@@ -1,0 +1,27 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Web Form</title>
+<link href="myform.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<form>
+<fieldset>
+  <legend>주문 내용</legend>
+  <ol>
+    <li>
+      <label for="prod">상품명</label>
+      <input id="prod" type="text" size="25">
+    </li>
+    <li>
+      <label for="num">주문개수</label>
+      <input id="num" type="range" min="1" max="5" value="1">
+    </li>
+  </ol>
+</fieldset>
+  <input type="submit" value="등록">
+</form>
+</body>
+</html>

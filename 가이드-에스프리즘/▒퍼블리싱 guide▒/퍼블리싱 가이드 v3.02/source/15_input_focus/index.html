@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi" />
+<title>인풋 포커스</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+jQuery(function($){
+	var iText = $('.item>.iLabel').next('.iText');
+	$('.item>.iLabel').css('position','absolute');
+	iText
+		.focus(function(){
+			$(this).prev('.iLabel').css('visibility','hidden');
+		})
+		.blur(function(){
+			if($(this).val() == ''){
+				$(this).prev('.iLabel').css('visibility','visible');
+			} else {
+				$(this).prev('.iLabel').css('visibility','hidden');
+			}
+		})
+		.change(function(){
+			if($(this).val() == ''){
+				$(this).prev('.iLabel').css('visibility','visible');
+			} else {
+				$(this).prev('.iLabel').css('visibility','hidden');
+			}
+		})
+		.blur();
+});
+</script>
+
+<style>
+
+#login .item{ position:relative;}
+#login .iLabel{ display:block; position:static; top:9px; font:bold 11px Tahoma;}
+</style>
+
+</head>
+
+<body>
+
+<div class="item">
+    <label class="iLabel" for="oid" style="position: absolute">Open ID</label><input type="text" class="iText" id="oid" value="" name="">
+</div>
+
+</body>
+</html>

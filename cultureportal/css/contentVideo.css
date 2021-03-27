@@ -1,0 +1,51 @@
+@charset "utf-8";
+@import url('/css/default.css');
+@import url('/css/layout.css');
+@import url('/css/contentCommon.css');
+
+div.pdHead { margin-bottom:5px; padding:7px 0; border:1px solid #cecece; border-top:0; overflow:hidden; }
+div.pdHead p { float:left; margin-left:20px; padding-left:8px; background:url('/images/common/bg/bgDot01.gif') no-repeat 0 50%; line-height:22px; }
+div.pdHead span { float:right; margin-right:20px; }
+
+ul.galleryList01 { clear:both; width:742px; margin:15px 0 40px -17px; border-bottom:1px solid #eaeaea; }
+ul.galleryList01 li { float:left; width:230px; height:235px; margin-left:17px; text-align:center; }
+ul.galleryList01 a { display:inline-block; width:100%; margin-bottom:8px; color:#333; text-align:left; /* overflow:hidden; text-overflow:ellipsis; white-space:nowrap; */ }
+ul.galleryList01 a:first-child { position:relative; margin-bottom:15px; }
+ul.galleryList01 a:first-child img { width:230px; height:143px; }
+ul.galleryList01 a:first-child img.play { position:absolute; bottom:10px; left:10px; width:23px; height:23px; }
+ul.galleryList01 span { display:inline-block; margin-left:4px; padding-left:9px; font-size:.9em; background:url('/images/video/bgBarV02.gif') no-repeat 0 50%; }
+ul.galleryList01 span.name { margin-left:0; padding-left:0; background:none; }
+
+div.viewVideo01 { margin-bottom:40px; padding:15px 0 5px; border-bottom:1px solid #eaeaea; }
+div.viewVideo01 p { margin-bottom:15px; }
+div.viewVideo01 div { margin:15px 0 45px; text-align:center; }
+
+dl.contentInfo { /* margin-bottom:15px; border-bottom:1px dashed #afafaf; */ overflow:hidden; }
+dl.contentInfo dt { clear:left; float:left; width:80px; padding:10px 0; border-top:1px dashed #afafaf; line-height:1.2em; }
+dl.contentInfo dd { min-height:1.2em; padding:10px 0; border-top:1px dashed #afafaf; overflow:hidden; line-height:1.2em; }
+dl.contentInfo ul.tag { overflow:hidden; }
+dl.contentInfo ul.tag li { float:left; margin-right:15px; }
+dl.contentInfo a { color:#888; }
+
+p.contentCopyright { margin-bottom:0px !important; font-size:.9em; overflow:hidden; }
+p.contentCopyright img { float:right; margin-left:30px; }
+
+div.videoMore { position:relative; margin-bottom:10px; }
+div.videoMore ul { margin:10px 0 0 -17px; border-bottom:0; }
+
+div.vodView { width:340px; float:left; margin-top:30px; }
+div.vodView h4 { margin-bottom:10px; color:#333; font-size:1.7em; line-height:1; }
+div.vodView dl { clear:both; margin-bottom:15px; overflow:hidden; }
+div.vodView dt { float:left; margin-right:8px; font-family:NGBold, "돋움", Dotum; }
+div.vodView dd { float:left; margin-right:15px; }
+
+div.vodList { width:356px; float:right; margin-top:30px; }
+div.vodList p { margin-top:4px; }
+div.vodList form { float:right; margin-bottom:15px; }
+div.vodList form input { background:url('/images/video/bgPlaceholder01.gif') no-repeat 7px 5px; }
+div.vodList ul { clear:both; margin-bottom:24px; border-top:1px solid #eaeaea; }
+div.vodList li { padding:7px 0 7px 10px; border-bottom:1px solid #eaeaea; background:url('/images/common/bg/bgDot01.gif') no-repeat 1px 14px; overflow:hidden; }
+div.vodList li > a { float:left; color:#888; }
+div.vodList li > a.on { font-family:NGBold, "돋움", Dotum; }
+div.vodList li span { float:right; }
+div.vodList li span a { float:left; margin-left:6px; }

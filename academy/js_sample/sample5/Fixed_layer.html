@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<title>Fixed layer</title>
+
+</head>
+
+
+<style>
+* { margin:0; padding:0;} 
+html	{height:100%; overflow-y:scroll;} *html	{overflow:hidden;}
+body	{width:100%; height:100%; color:#617979; font:normal 12px 굴림; line-height:18px;}
+#wrap		{position:relative; width:100%; height:100%; margin:0; _overflow-y:scroll; _overflow:auto;} 
+#contentArea { width:980px; height:auto; margin:0 auto; padding:10px; background:#eeeeee; z-index:1}
+#floatArea { position:fixed; _position:absolute; z-index:2; left:0; bottom:0;_bottom:-1px; width:100%; background:blue; color:#FFFFFF; overflow:hidden;}
+
+</style>
+
+<body >
+<div id="wrap">
+	<div id="contentArea">
+		내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>
+		내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>
+		내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>
+		내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>
+		내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>
+		내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>
+		내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>내용입력영역<br>
+	</div>
+</div>
+<div id="floatArea"><div style="width:980px; padding:10px; margin:0 auto; background:red">고정영역1234567890</div></div>
+
+<script type="text/javascript">
+<!--
+var wrap_div = document.getElementById('wrap');
+var content_div = document.getElementById('contentArea');
+var fixed_layer = document.getElementById('floatArea');
+var chk_ie6 = navigator.appVersion.substring(25,22);
+
+window.onload=fixed_delayout;
+window.onresize=fixed_delayout;scroll_fix;
+if (chk_ie6=="6.0"){
+	document.getElementById('wrap').onscroll=scroll_fix;
+}else{
+	window.onscroll=scroll_fix;
+}
+
+
+
+function fixed_delayout(){
+	if (chk_ie6=="6.0"){
+		fixed_layer.style.width = wrap_div.clientWidth +'px';
+		if (document.documentElement.clientWidth < content_div.clientWidth){
+			fixed_layer.style.bottom=15+'px';
+		}else{
+			fixed_layer.style.bottom=-1+'px';
+		}
+	}else{
+		fixed_layer.style.width=wrap_div.clientWidth + 'px';
+	}
+}
+
+function scrollX(){
+	var de = document.documentElement;
+	return self.pageXOffset || 
+		(de && de.scrollLeft) ||
+		document.body.scrollLeft;
+}
+
+function scroll6X(){
+	return wrap_div.scrollLeft;
+}
+function scroll_fix(){
+	if (chk_ie6=="6.0"){
+		var scrollx_bar = scroll6X();
+	}else{
+		var scrollx_bar = scrollX();
+	}
+	fixed_layer.style.marginLeft= -scrollx_bar + 'px';
+	fixed_layer.style.width=wrap_div.clientWidth +scrollx_bar + 'px';
+}
+
+//-->
+</script>
+</body>
+</html>

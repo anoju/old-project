@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>enabled</title>
+		<link href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb' rel='stylesheet'>
+		<style>
+			body {
+				font-family: "NanumGothicWeb"
+			}
+			.getCss{
+				color:skyblue;
+				font-size:30px;
+			}
+			.getCss span{
+				color:blue;
+			}
+		</style>
+		<script src="../informationTechnology/js/jquery-1.8.2.min.js"></script>
+		<script>
+			$(function(){
+				//속성 하나만 넣을때
+				//$("p").css("color","red")
+				//속성 여러개 넣을때
+				$(".one p").css({
+					backgroundColor:"yellow",
+					color:"red",
+					fontWeight:"bold"
+				})
+				
+				//css값을 적용하려면
+				$(".getCss span").text( ($(".getCss").css("color")) + ($(".getCss").css("fontSize")) )
+			})
+		</script>
+	</head>
+	<body>
+		<div class="one">
+			<p>이문단은 제이쿼리로 속성 부여</p>
+		</div>
+		
+		<div class="two">
+			<p>.css 함수로 css 내용을 읽음 읽은후에 여기 텍스트 노드를 변경</p>
+			<p class="getCss">.css 함수로 css 내용을 읽음 <span>읽은후에 여기 텍스트 노드를 변경</span></p>
+		</div>
+		
+	</body>
+</html>

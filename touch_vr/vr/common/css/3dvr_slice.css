@@ -1,0 +1,81 @@
+@charset=utf-8;
+body {font-size: 100%; color: #666; background: #fff; font-family: "Courier New", Courier, monospace; line-height: 30px;}
+a {display: block;}
+
+#wrapper {margin: 0 auto; background: #fff;height:100%;}
+#vrWrapper {position: relative;}
+
+h1 {font-size: 2em; font-weight: bold; margin: 0 0 20px 0;}
+h3 {font-size: 1.4em; font-weight: bold;padding: 10px; background: #333; color: white;}
+h4 {font-size: 0.7em; margin: 20px 0; line-height: 18px;}
+h4 li:last-child {font-weight: bold;}
+
+#notice {margin: 20px 0; font-size: 0.9em;}
+#imgholder{width: 100%; position: relative; top: 0; left: 0; overflow: hidden;}
+#imgholder img {position: relative;/* top: -376px; */vertical-align: top;}
+#control{cursor: move; position: absolute; z-index: 9998; width: 100%; height: 600px; color: #fff; background: #000; opacity: 0; filter: alpha(opacity=0);}
+#loading {position: absolute;/*position: absolute; top: 0; left: 0; margin: 171px 0 0 336px; */width: 32px; height: 34px;}
+#vr_ui {text-align: center; position: relative; top: -70px; height: 35px; overflow: hidden; z-index: 9999;}
+#vr_ui img {position: relative;}
+/***/
+.title {width: 344px; padding: 60px 0 10px 0;}
+
+#uiContainer {position: absolute; top: 0; right: 0; background: #343434;  height: 100%;min-height:813px;}
+
+.uiGroup {width: 115px;}
+.uiBtn {width: 230px; height: 123px; background: #eee;}
+.uiBtn a {display: block; position: relative;  left: -115px;}
+.uiBtn a.active {left: 0;}
+.uiBtnGroup{ overflow: hidden; position: relative;}
+.uiBtnGroup li {float: left; margin: 1px;}
+.m_line {background: url('../../images/mn_line.gif') 0 0 repeat-x; width: 100%; height: 2px;}
+/*.imgContainer {width: 700px; height: 600px;}*/
+#openDoor {text-align: center; position: relative; top: -70px; height: 35px; overflow: hidden; display: none; z-index: 9999;}
+#openDoor img {position: relative;}
+
+#usp {display: none; position: relative; margin-top: 100px; left: 0; width: 100%;}
+.uspGnbContainer {width: 446px;}
+.uspGnb {height: 68px; overflow: hidden; *position: relative;}
+.uspGnb li {float: left; position: relative;}
+.activate_usp {top: -69px;}
+
+@media all and (max-width:768px) {
+.uspContentGroup {width: 525px; height: 432px; position: relative; overflow: hidden;}
+.usp_con {height: 1296px; position: relative;}
+.usp_0 img.fearture, .usp_1 img.fearture, .usp_2 img.fearture {width: 525px;}
+.imgContainer {width: 600px; height: 514px;}
+.imgContainer img {width: 600px; position: relative; left: -12px;}
+
+.step_0 {top: 140px; left: 223px; width: 84px; height: 174px;}
+.step_0 img {width: 84px; height: 174px;}
+.step_1 {top: 255px; left: 231px; width: 55px; height: 54px;}
+.step_1 img {width: 55px; height: 54px;}
+.step_2 {top: 145px; left: 140px; width: 250px; height: 170px;}
+.step_2 img {width: 250px; height: 170px;}
+.summary {position: relative; top: 452px; left: 120px; z-index: 9999;}
+}
+
+@media all and (min-width:768px) {
+.uspContentGroup {width: 639px; height: 526px; position: relative; overflow: hidden;}
+.usp_con {height: 1578px; position: relative;}
+.usp_0 img.fearture, .usp_1 img.fearture, .usp_2 img.fearture {width: 639px;}
+.imgContainer {width: 700px; height: 600px;}
+.imgContainer img {width: 700px; position: relative; left: -12px;}
+
+.step_0 {top: 166px; left: 271px; width: 104px; height: 215px;}
+.step_0 img {width: 104px; height: 215px;}
+.step_1 {top: 307px; left: 278px; width: 75px; height: 73px;}
+.step_1 img {width: 75px; height: 73px;}
+.step_2 {top: 175px; left: 175px; width: 290px; height: 197px;}
+.step_2 img {width: 290px; height: 197px;}
+.summary {position: relative; top: 540px; left: 122px; z-index: 9999;}
+}
+
+.usp_0, .usp_1, .usp_2 {position: relative;}
+
+.step_0, .step_1, .step_2 {position: absolute; overflow: hidden;}
+.step_0 ul {height: 5375px; position: relative;}
+.step_1 ul {height: 1825px; position: relative;}
+.step_2 ul {height: 4925px; position: relative;}
+
+.logo {position: fixed;bottom: 0;z-index: 20;}

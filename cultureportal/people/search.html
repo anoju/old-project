@@ -1,0 +1,527 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta property="og:title" content=""/>
+	<meta property="og:description" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:image" content="http://culture.go.krhttp://www.culture.go.kr/images/common/icon/facebookCulture.jpg" />
+	<title>문화인 검색하기</title>
+	<link rel="stylesheet" type="text/css" href="../css/contentPeople.css" />	<!-- people css -->
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css" />
+	<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui.custom.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript" src="../js/ui.culture.common.js"></script>
+	<script type="text/javascript" src="../js/ui.culture.content.js"></script>
+	<script type="text/javascript" src="../js/jFav-1.0.js"></script>
+	<script type="text/javascript" src="../js/jquery-carousel.js"></script>
+	<script type="text/javascript" src="../js/jquery-tab.js"></script>
+	<script type="text/javascript" src="../js/jquery.zclip.min.uci.js"></script>
+	<script type="text/javascript" src="../js/people.js"></script>				<!-- people js -->
+	<script type="text/javascript" src="../js/jquery.selectBox.js"></script>	<!-- selectBox js -->
+</head>
+<body>
+	<a href="#gnb" class="skipNav">GNB로 건너뛰기</a>
+	<a href="#lnb" class="skipNav">LNB로 건너뛰기</a>
+	<a href="#content" class="skipNav">콘텐츠로 건너뛰기</a>
+	<a href="#aside" class="skipNav">보조정보로 건너뛰기</a>
+	<a href="#foot" class="skipNav">푸터로 건너뛰기</a>
+	<div class="top">
+		<div class="wrap">
+			<a href="http://www.culture.go.kr" title="문화포털 즐겨찾기" class="addFavorite"><img src="../images/layout/btnAddFavorite.gif" alt="문화포털을 즐겨찾기에 추가" /></a>
+			<span>
+				<!-- 로그인 안 했을 때 -->
+				<a href="javascript:location.href='/member/login.do?spring-security-redirect='+escape('/info/newsList.do');"><img src="../images/layout/btnLogin.gif" alt="로그인" /></a>
+				<a href="/member/join.do" ><img src="../images/layout/btnJoin.gif" alt="회원가입" /></a>
+				<!-- <a href="#" onclick="alert('서비스 준비중입니다.');return false"><img src="../images/layout/btnJoin.gif" alt="회원가입" /></a> -->				
+				<!-- 로그인 했을 때				
+				<a href="#"><img src="../images/layout/btnLogout.gif" alt="로그아웃" /></a>
+				<a href="#"><img src="../images/layout/btnMypage.gif" alt="마이페이지" /></a>
+				 -->
+				<a href="/customer/noticeList.do"><img src="../images/layout/btnCS.gif" alt="고객센터" /></a>
+				<a href="#sitemap"><img src="../images/layout/btnSitemap.gif" alt="사이트맵" /></a>
+			</span>
+		</div>
+	</div>
+
+	<div class="layoutBody">
+		<div class="wrap">
+			
+			
+			
+			
+			<!-- header -->
+			<div id="head">
+				<h1><a href="/"><img src="../images/layout/h1LogoCF.gif" alt="문화포털" /></a></h1>
+
+				<div class="search">
+					<div><div>
+						<h2><a href="/">통합검색</a></h2>
+						<ul>
+							<li><a href="/search/service.do">서비스별</a></li>
+							<li><a href="/search/life.do">생활분류별</a></li>
+							<li><a href="/search/culture.do">문화분류별</a></li>
+							<li><a href="/search/type.do">유형별</a></li>
+							<li><a href="/search/org.do">기관별</a></li>
+						</ul>
+					</div></div>
+					<form id="searchForm" name="searchForm" action="/search/service.do" method="get" onsubmit="return onSearch(this);">
+						<fieldset>
+							<legend>문화포털 컨텐츠 검색</legend>
+							<span><input type="text" name="q" placeholder="" value="" /></span>
+							<button type="submit"><img src="../images/search/btnSearch01.gif" alt="검색" /></button>
+							
+						</fieldset>
+					</form>
+				</div>
+				<div class="banner">
+					<ul>
+					
+						<li>
+							<a href="http://www.youtube.com/user/cultureportal"  target="_blank">
+								<img src="../upload/banner/0626_youtube3.png" alt="문화 200%즐기기" />
+								<span>문화 200%즐기기</span>
+							</a>
+						</li>
+					</ul>
+					<span>	
+						<button type="button" title="이전배너 보기"><img src="../images/layout/btnPrev01.gif" alt="이전" /></button>
+						<button type="button" title="다음배너 보기"><img src="../images/layout/btnNext01.gif" alt="다음" /></button>
+					</span>
+				</div>
+				<div class="navigator">					
+					<ul id="gnb">
+						<li><a href="/info/newsList.do" class=on ><img src="../images/layout/gnb01Off.gif" alt="소식" /></a></li>
+						<li><a href="/event/festivalList.do"><img src="../images/layout/gnb02Off.gif" alt="행사/교육" /></a></li>
+						<li><a href="/perform/performList.do"><img src="../images/layout/gnb03Off.gif" alt="공연/전시" /></a></li>
+						<li><a href="/mov/culturePdList.do" ><img src="../images/layout/gnb04Off.gif" alt="문화동영상" /></a></li>
+						<li><a href="/tradition/shapeList.do"><img src="../images/layout/gnb06Off.gif" alt="전통디자인" /></a></li>
+						<li><a href="/culture/"><img src="../images/layout/gnb05Off.gif" alt="문화추천" /></a></li>
+						<li><a href="#"><img src="../images/layout/gnb07On.gif" alt="문화인" /></a></li>							<!-- GNB 추가 -->
+					</ul>
+					<div class="notice">
+						<h2><img src="../images/layout/h2Month.gif" alt="이달의 문화" /></h2>
+						<div>
+							<ul>
+								<li><a href="http://culture.go.kr/event/festivalView.do?uci=G7061375148458622&amp;" >제8회 부산국제매직페스티벌</a></li>
+								<li><a href="http://culture.go.kr/event/festivalView.do?uci=G7061375079445951&amp;" >대한민국역사박물관 정전60주년 기념 문화한마당</a></li>
+								<li><a href="http://culture.go.kr/event/educationView.do?uci=G7061374651279301&amp;" >[서울올림픽기념관] 여름방학 특별 체험프로그램 안내</a></li>
+								<li><a href="http://culture.go.kr/perform/performView.do?uci=G7061375085527006&amp;" >트랜스 미디어 퍼포먼스 &#039;가장 가까운 동물원&#039;</a></li>
+								<li><a href="http://culture.go.kr/perform/performView.do?uci=G7061375081178586&amp;" >호랑이를 부탁해!</a></li>
+								<li><a href="http://culture.go.kr/event/educationView.do?uci=G7061375173771459&amp;" >2013 토요문화학교 &#034;서울, 어디까지 가봤니?&#034;(2,3기) 참가자 모집</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //header -->
+
+
+
+
+
+			<!-- LNB -->
+			<div class="localNavigator">
+
+				<!-- LNB 추가 -->
+				<h2><img src="../images/people/h2people.gif" alt="문화인" /></h2>
+				<ul id="lnb">
+					<li><a href="#">문화인 홈</a></li>
+					<li><a href="#" >분야별 보기</a></li>
+					<li><a href="#" >지역별 보기</a></li>
+					<li><a href="#" >내활동보기</a></li>
+					<li><a href="#" >답변하기</a></li>
+					<li><a href="#" >문화인 가이드</a></li>
+				</ul>
+				<!-- //LNB 추가 -->
+
+				<div class="sns">
+					<h3>문화포털 <span>SNS</span></h3>
+					<h4 class="tab01"><a href="#tabSNS01"><span></span>트위터</a></h4>
+					<ul id="tabSNS01">
+						<li><a href="https://twitter.com/kcultureportal/status/362434748544581635" target="_blink">★D-1★ 문화릴레이티켓 8월 초대이벤트 ★D-1★ 누구보다 제일 먼저 문화릴레이티켓을 만날 수 있는 기회!	8월에는 '문화릴레이티켓'의 어떤 공연들이 여러분께 프로포즈를 하고 있을까요?... http://t.co/alJnAvVpMw2013년07월31일</a></li>
+						<li><a href="https://twitter.com/kcultureportal/status/362379873957855232" target="_blink">복잡한 예선 NO! 심사도 NO! 10초짜리면 다 틀어준다! 10초 국제애니메이션 페스티벌! 벌써 4회를 맞이하게 되었는데요 :D 올해는 총 152편의 작품이 상영된다고 합니다! 단 한 명의 탈락자도... http://t.co/vO3szt05lg2013년07월31일</a></li>
+					</ul>
+					<h4 class="tab02"><a href="#tabSNS02"><span></span>블로그</a></h4>
+					<ul id="tabSNS02">
+						<li><a href="http://blog.naver.com/kcis_/30173021326" target="_blink">[충남/태안] 태안절경 천삼백리, 태안의 숨은보석 '솔향기길'<span>2013-07-31 10:41:57</span></a></li>
+						<li><a href="http://blog.naver.com/kcis_/30172967136" target="_blink">[오사카 해외문화PD] 일본 3대 신궁, 이세신궁을 가다 <span>2013-07-30 14:22:04</span></a></li>
+					</ul>
+				</div>
+				<span><a href="https://www.facebook.com/cultureportal" target="_blink">문화포털 페이스북 바로가기</a></span>
+				<span><a href="http://me2day.net/kcis/" class="me2day" target="_blink">문화포털 미투데이 바로가기</a></span>
+				<ul class="banner">
+					<li><a href="https://play.google.com/store/apps/details?id=com.mfac.cultureTour&feature=search_result#?t=W251bGwsMSwyLDEsImNvbS5tZmFjLmN1bHR1cmVUb3VyIl0." target="_blink"><img src="../upload/app.jpg" alt="" /></a></li>
+				</ul>
+			</div>
+			<!-- //LNB -->
+
+
+
+				
+			<!-- peple contents -->
+			<div id="contentWrap">
+				<div class="head">
+					<h3>검색하기<span>문화인 서비스 내 검색결과를 제공합니다.</span></h3>
+					<span class="location"><span>홈</span><span>문화인</span><strong>검색하기</strong></span>				
+				</div>
+				<!-- plCon -->
+				<div class="plCon">
+					<p class="searchTxt"><strong>'문양'</strong>에 대한 검색결과 입니다.</p>
+					<div class="plSort">
+						<ul>
+							<li class="on"><a href="#">최신순</a></li>
+							<li><a href="#">조회순</a></li>
+						</ul>
+					</div>
+					<div class="timeview">
+						<div class="timeline">
+							<div class="line"></div>
+							<img src="../images/people/timelineEnd.gif" alt="" />
+						</div>
+						<div class="timeviewTop">
+							<ul class="tabTimeline">
+								<li class="tab01">
+									<a href="#">전체</a>
+									<div><span class="count">1955</span><span class="bg"></span></div>
+								</li>
+								<li class="tab02">
+									<a href="#">진행</a>
+									<div><span class="count">400</span><span class="bg"></span></div>
+								</li>
+								<li class="tab03">
+									<a href="#">해결</a>
+									<div><span class="count">1555</span><span class="bg"></span></div>
+								</li>
+							</ul>
+						</div>
+						<div class="timeviewList">
+							
+							<dl class="timeviewCon left">
+								<dt>
+									<span class="state"><img src="../images/people/icoIng.gif" alt="진행중" /></span>
+									<div>
+										<p class="tit">문양의 정의는 무엇인가요?</p>
+										<p>
+											<span class="questionId">ironman</span>
+											<span class="date">2013.06.25</span>
+											<span class="count">답변수 <strong>60</strong></span>
+										</p>
+									</div>
+									<span class="bgArrow"></span>
+								</dt>
+								<dd>
+									<div>
+										<p>문양은 한마디로 미적 감각을 불러일으키기 위해 점이나 선, 색채를 도형과 같이 형상화한 것이라 할 수 있습니다.</p>
+										<ul class="answerInfo">
+											<li>ironman</li>
+											<li>문화대리</li>
+										</ul>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="timeviewCon right">
+								<dt>
+									<span class="state"><img src="../images/people/icoSolution.gif" alt="해결" /></span>
+									<div>
+										<p class="tit">문양의 정의는 무엇인가요?</p>
+										<p>
+											<span class="questionId">ironman</span>
+											<span class="date">2013.06.25</span>
+											<span class="count">답변수 <strong>60</strong></span>
+										</p>
+									</div>
+									<span class="bgArrow"></span>
+								</dt>
+								<dd>
+									<div>
+										<p>문양은 한마디로 미적 감각을 불러일으키기 위해 점이나 선, 색채를 도형과 같이 형상화한 것이라 할 수 있습니다.</p>
+										<ul class="answerInfo">
+											<li>ironman</li>
+											<li>문화대리</li>
+										</ul>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="timeviewCon left">
+								<dt>
+									<span class="state"><img src="../images/people/icoIng.gif" alt="진행중" /></span>
+									<div>
+										<p class="tit">문양의 정의는 무엇인가요?</p>
+										<p>
+											<span class="questionId">ironman</span>
+											<span class="date">2013.06.25</span>
+											<span class="count">답변수 <strong>60</strong></span>
+										</p>
+									</div>
+									<span class="bgArrow"></span>
+								</dt>
+								<dd>
+									<div>
+										<p>문양은 한마디로 미적 감각을 불러일으키기 위해 점이나 선, 색채를 도형과 같이 형상화한 것이라 할 수 있습니다.</p>
+										<ul class="answerInfo">
+											<li>ironman</li>
+											<li>문화대리</li>
+										</ul>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="timeviewCon right">
+								<dt>
+									<span class="state"><img src="../images/people/icoSolution.gif" alt="해결" /></span>
+									<div>
+										<p class="tit">문양의 정의는 무엇인가요?</p>
+										<p>
+											<span class="questionId">ironman</span>
+											<span class="date">2013.06.25</span>
+											<span class="count">답변수 <strong>60</strong></span>
+										</p>
+									</div>
+									<span class="bgArrow"></span>
+								</dt>
+								<dd>
+									<div>
+										<p>문양은 한마디로 미적 감각을 불러일으키기 위해 점이나 선, 색채를 도형과 같이 형상화한 것이라 할 수 있습니다.</p>
+										<ul class="answerInfo">
+											<li>ironman</li>
+											<li>문화대리</li>
+										</ul>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="timeviewCon left">
+								<dt>
+									<span class="state"><img src="../images/people/icoIng.gif" alt="진행중" /></span>
+									<div>
+										<p class="tit">문양의 정의는 무엇인가요?</p>
+										<p>
+											<span class="questionId">ironman</span>
+											<span class="date">2013.06.25</span>
+											<span class="count">답변수 <strong>60</strong></span>
+										</p>
+									</div>
+									<span class="bgArrow"></span>
+								</dt>
+								<dd>
+									<div>
+										<p>문양은 한마디로 미적 감각을 불러일으키기 위해 점이나 선, 색채를 도형과 같이 형상화한 것이라 할 수 있습니다.</p>
+										<ul class="answerInfo">
+											<li>ironman</li>
+											<li>문화대리</li>
+										</ul>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="timeviewCon right">
+								<dt>
+									<span class="state"><img src="../images/people/icoSolution.gif" alt="해결" /></span>
+									<div>
+										<p class="tit">문양의 정의는 무엇인가요?</p>
+										<p>
+											<span class="questionId">ironman</span>
+											<span class="date">2013.06.25</span>
+											<span class="count">답변수 <strong>60</strong></span>
+										</p>
+									</div>
+									<span class="bgArrow"></span>
+								</dt>
+								<dd>
+									<div>
+										<p>문양은 한마디로 미적 감각을 불러일으키기 위해 점이나 선, 색채를 도형과 같이 형상화한 것이라 할 수 있습니다.</p>
+										<ul class="answerInfo">
+											<li>ironman</li>
+											<li>문화대리</li>
+										</ul>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="timeviewCon left">
+								<dt>
+									<span class="state"><img src="../images/people/icoIng.gif" alt="진행중" /></span>
+									<div>
+										<p class="tit">문양의 정의는 무엇인가요?</p>
+										<p>
+											<span class="questionId">ironman</span>
+											<span class="date">2013.06.25</span>
+											<span class="count">답변수 <strong>60</strong></span>
+										</p>
+									</div>
+									<span class="bgArrow"></span>
+								</dt>
+								<dd>
+									<div>
+										<p>문양은 한마디로 미적 감각을 불러일으키기 위해 점이나 선, 색채를 도형과 같이 형상화한 것이라 할 수 있습니다.</p>
+										<ul class="answerInfo">
+											<li>ironman</li>
+											<li>문화대리</li>
+										</ul>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="timeviewCon right">
+								<dt>
+									<span class="state"><img src="../images/people/icoSolution.gif" alt="해결" /></span>
+									<div>
+										<p class="tit">문양의 정의는 무엇인가요?</p>
+										<p>
+											<span class="questionId">ironman</span>
+											<span class="date">2013.06.25</span>
+											<span class="count">답변수 <strong>60</strong></span>
+										</p>
+									</div>
+									<span class="bgArrow"></span>
+								</dt>
+								<dd>
+									<div>
+										<p>문양은 한마디로 미적 감각을 불러일으키기 위해 점이나 선, 색채를 도형과 같이 형상화한 것이라 할 수 있습니다.</p>
+										<ul class="answerInfo">
+											<li>ironman</li>
+											<li>문화대리</li>
+										</ul>
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="pageNav">
+						<a href="#" class="first"><span></span>처음</a>
+						<a href="#" class="prev"><span></span>이전</a>    
+						<span>
+							<a href="#" class="on">1</a>
+							<a href="#">2</a>								
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#">6</a>
+							<a href="#">7</a>
+							<a href="#">8</a>
+							<a href="#">9</a>
+							<a href="#">10</a>
+						</span>
+						<a href="#" class="next"><span></span>다음</a>
+						<a href="#" class="last"><span></span>끝</a>    
+					</div>					
+				</div>
+				<!-- //plCon -->
+
+				<!-- plAside -->
+				<div class="plAside">
+					<div class="activity">
+						<h4><img src="../images/people/titActivity.gif" alt="내 활동 보기" /></h4>
+						<p class="btnGo"><a href="#" class="btn">내정보관리</a></p>
+						<p class="picture"><span><img src="../images/people/gradeD.gif" alt="대리" /></span></p>
+						<!-- 직급리스트-->
+						<!--
+						<p class="picture"><span><img src="../images/people/gradeJ.gif" alt="장관" /></span></p>
+						<p class="picture"><span><img src="../images/people/gradeC.gif" alt="차관" /></span></p>
+						<p class="picture"><span><img src="../images/people/gradeB.gif" alt="부장" /></span></p>
+						<p class="picture"><span><img src="../images/people/gradeK.gif" alt="과장" /></span></p>
+						<p class="picture"><span><img src="../images/people/gradeD.gif" alt="대리" /></span></p>
+						p class="picture"><span><img src="../images/people/gradeS.gif" alt="사원" /></span></p>
+						-->
+						<p class="greeting"><strong>김기현 (Ironman)</strong>님 <br />문화대리 등급입니다.</p>
+					</div>
+					<div class="activityNum">
+						<ul>
+							<li><strong>34</strong>나의질문</li>
+							<li><strong>67</strong>나의답변</li>
+							<li><strong>45</strong>나의내공</li>
+						</ul>
+					</div>
+					<div class="grade">
+						<h4><img src="../images/people/titGrade.gif" alt="내 문화인 등급" /></h4>
+						<div class="bar" id="gageBar">
+							<p class="first"><span class="num">15</span><span>문화대리</span></p>
+							<p class="now">
+								<strong class="num"><span>45</span></strong>
+								<span class="gage">
+									<span class="mark"><img src="../images/people/gradeBarNow.png" alt="내점수" /></span>
+								</span>								
+							</p>
+							<p class="last"><span class="num">100</span><span>문화과장</span></p>
+						</div>
+						<p class="info">과장으로 진급하면, <em>축하 1000p</em>가 지급!!</p>
+					</div>
+					<div class="knowledge">
+						<h4><img src="../images/people/titKnowledge.gif" alt="문화인 지식검색" /></h4>
+						<span class="bgInput"><input type="text" /></span><input type="image" src="../images/people/btnKnowledgeSrh.gif" alt="검색"/>
+					</div>
+					<div class="goAnswer">
+						<h4><img src="../images/people/titAnswer.gif" alt="답변하기" /></h4>
+						<p class="btnGo"><a href="#" class="btn">+ 더보기</a></p>
+						<ul class="answerList">
+							<li><a href="#">문양의 정의는 무엇인가요?</a></li>
+							<li><a href="#">문양의 정의는 무엇인가요?</a></li>
+							<li><a href="#">문양의 정의는 무엇인가요?</a></li>
+							<li><a href="#">문양의 정의는 무엇인가요?</a></li>
+							<li><a href="#">문양의 정의는 무엇인가요?</a></li>
+						</ul>
+					</div>
+					<div class="best">
+						<h4><img src="../images/people/titPeopleBest.gif" alt="문화인 BEST" /></h4>
+						<ol>
+							<li><strong>1</strong>ironman | 문하생</li>
+							<li><strong>2</strong>ironman | 문하생</li>
+							<li><strong>3</strong>ironman | 문하생</li>
+							<li><strong>4</strong>ironman | 문하생</li>
+							<li><strong>5</strong>ironman | 문하생</li>
+						</ol>
+					</div>
+				</div>
+				<!-- plAside -->
+			</div>
+			<!-- //peple contents -->
+
+
+
+
+		</div>
+	</div>
+	<div id="foot" class="wrap">
+		<h1><img src="../images/layout/h1LogoKCISA.gif" alt="KCISA Logo" /></h1>
+		<ul class="link">
+			<li><a href="/customer/aboutA.jsp?code_value=B">문화포털이란?</a></li>
+			<li><a href="/customer/privacyPolicy.jsp?code_value=B&code_value2=F">개인정보처리방침</a></li>
+			<li><a href="/customer/searchPolicy.jsp?code_value=B&code_value2=G">검색결과수집정책</a></li>
+			<li><a href="#orgBanner">관련기관배너 <img src="../images/layout/btnBannerOn.gif" alt="열기" /></a></li>
+			<li><a href="/search/org.do">문화정보연계기관</a></li>
+			<li><a href="/culture/publicize.do">문화홍보요청</a></li>
+			<li><a href="/tradition/guideB01.jsp">전통문양 사용신청</a></li>
+		</ul>
+		<address><img src="../images/layout/txtAddress.gif" alt="서울특별시 마포구 상암동 월드컵북로 400 문화콘텐츠센터 6층 (재)한국문화정보센터" /></address>
+		<ul class="fact">
+			<li><img src="../images/layout/txtFact01.gif" alt="사업자등록번호 101-82-10054" /></li>
+			<li><img src="../images/layout/txtFact02.gif" alt="대표자 최경호" /></li>
+			<li><img src="../images/layout/txtFact03.gif" alt="대표번호 02-3153-2843~4" /></li>
+			<li><img src="../images/layout/txtFact04.gif" alt="이메일 culture@kcisa.kr" /></li>
+		</ul>
+		<p><img src="../images/layout/txtCopyright.gif" alt="Copyright Korea Information Service (Ministry of Culture, Sport and Tourism, Korea Culture Information Service)" /></p>
+	</div>	
+<!-- *) 공통 분석스크립트  -->
+<!-- AceCounter Log Gathering Script V.71.2010011401 -->
+<script language='javascript'>
+var _skey = '' ;        // 내부검색어
+var _ag   = 0 ;         // 로그인사용자 나이
+var _id   = '';         // 로그인사용자 아이디
+var _mr   = '';         // 로그인사용자 결혼여부 ('single' , 'married' )
+var _gd   = '';         // 로그인사용자 성별 ('man' , 'woman')
+var _jn = '' ;          // 가입탈퇴 ( 'join','withdraw' )
+var _jid = '' ;         // 가입시입력한 ID
+
+if(typeof EL_GUL == 'undefined'){
+var EL_GUL = 'gtr.kcisa.kr';var EL_GPT='80'; var _AIMG = new Image(); var _bn=navigator.appName; var _PR = location.protocol=="https:"?"https://"+EL_GUL:"http://"+EL_GUL+":"+EL_GPT;if( _bn.indexOf("Netscape") > -1 || _bn=="Mozilla"){ setTimeout("_AIMG.src = _PR+'/?cookie';",1); } else{ _AIMG.src = _PR+'/?cookie'; };
+document.writeln("<scr"+"ipt language='javascript' src='/acecounter/acecounter_V70.js'></scr"+"ipt>");
+}
+</script>
+<noscript><img src='http://gtr.kcisa.kr:80/?uid=2&je=n&' border=0 width=0 height=0></noscript>
+<!-- AceCounter Log Gathering Script End -->
+</body>
+</html>

@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+/* tabs  */
+.tabs{height:30px;margin:0 !important;padding:0;border-bottom:1px solid #666;list-style:none}
+.tabs li{float:left;margin:0 !important;padding:0;text-indent:0;list-style-image:none !important}
+.tabs a{display:block;position:relative;top:1px;width:81px;height:30px;margin:0px;padding:0px;background: url(../img/tabs.png) no-repeat -553px 0;color:#000;font-size:11px;text-align:center;text-decoration:none;line-height:30px}
+.tabs a:active{outline:none}
+
+/* 마우스가 오버되었을 때, 이미지 체인지 */
+.tabs a:hover {background-position: -553px -31px;color:#fff}
+
+/* active tab uses a class name "current". it's highlight is also done by moving the background image. */
+.tabs .current,.tabs .current:hover,.tabs li.current a{background-position:-553px -62px;color:#000 !important;cursor:default !important}

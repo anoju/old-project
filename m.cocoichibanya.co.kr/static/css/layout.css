@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+/* skip Navi */
+#skipNavi { position:absolute; top:0; left:0; z-index:5000; width:100%; height:0; }
+#skipNavi a { display:block; overflow:hidden; width:1px; height:1px; margin-left:-1px; margin-bottom:-1px; text-align:center; font-size:0; color:#222;  }
+#skipNavi a:focus, #skipNavi a:hover { width:100%; height:15px; padding:10px 0; font-size:1em; background:#222; color:#fff; z-index:5000; }
+
+/*wrap*/
+body{color:#6d5741}
+#wrap{width:100%;overflow:hidden;}
+
+/* header */
+#header{}
+.logoWrap{position:relative;width:100%;height:44px;background:url(../images/bg/bgBody.jpg) repeat-x 0 0;overflow:hidden}
+	.logoWrap h1{float:left;margin-left:12px;margin-top:10px}
+	.logoWrap h1 img{width:227px}
+	.logoWrap .btnRightMenu{float:right;margin-right:10px;margin-top:10px}
+	.logoWrap .btnRightMenu img{width:20px}	
+/*gnb*/
+#gnb{position:relative;height:73px;margin-top:-9px;background:url(../images/bg/bgGnbWrap.png) repeat-x 0 0;}
+	.gnbBg{height:73px;width:100%;background:url(../images/bg/bgGnb.png) no-repeat 0 0;}
+	#gnb ul{/*width:265px;margin:0 auto*/position:absolute;top:19px;left:10%;width:92%}
+	#gnb ul li{float:left;}
+	#gnb ul li + li{margin-left:5%}
+	#gnb ul li a{display:block;padding:10px 0 5px;color:#fff;font-size:1.1em;font-weight:bold;}
+	#gnb ul li.on a{color:#f3c828;background:url(../images/bg/bgGnbOn.png) no-repeat 50% 0;}
+
+/*contentWrap*/
+#container {position:relative;padding:0 3.4% 20px}
+
+/*rightMenu*/
+#rightMenu{width:280px;position:absolute;left:100%;padding-top:30px}
+	#rightMenu ol{padding-right:5px}
+	#rightMenu ol li + li{margin-top:15px;}
+	#rightMenu ol li p a{display:block;position:relative;padding-left:45px;height:25px;line-height:25px;color:#fff;font-weight: bold;background:#5b452f;overflow:hidden;border-radius:13px;}
+	#rightMenu ol li p span{display:inline-block;position:absolute;top:0;left:0;width:21px;padding-left:9px;height:25px;background:#db3002;}
+	#rightMenu ol li div{padding-top:5px;}
+	#rightMenu ol li div a{display:inline-block;padding: 5px 4px;font-weight: bold;}
+
+
+/* content */
+#content {position:relative;}
+	.titCon{margin-top:-20px;margin-bottom:14px;}
+	.titCon h1{display:none}
+	.titCon h2{height:26px;line-height:26px;color: #cb3f00;font-size: 1.2em;font-weight: bold;text-align:center;background:#fff;border:2px solid #796149;border-radius:15px;}
+	.titCon h2 a{position:relative;z-index:1;display:block;background:url(../images/bg/bgTitCon.png) no-repeat 99% 2px;}
+	.titCon h2 a.on{background-position:99% -28px}
+	.titCon h3{margin-top:12px;}
+	.titCon h3 img{height:38px;}
+
+	.titConMenu{/*display:none;*/margin-top:-14px;padding-top:14px;background:#fff;overflow:hidden;border:2px solid #796149;border-top:0 none;border-radius:0 0 15px 15px;}
+	.titConMenu a{display:block;height:26px;line-height:26px;color: #796149;font-size: 1.2em;font-weight: bold;text-align:center;background:#f5d048;border-top:2px solid #796149;}
+
+/* footer */
+#footer {width:98%;padding:10px 0%;}
+#footer h1{text-align:center;margin-top:15px;}
+#footer h1 img{width:156px;}
+#footer .footAddress {margin-top:10px;font-size:10px;text-align:center;letter-spacing: -1px;} 
+#footer .footAddress span + span{/*display:inline-block;*/padding-left:10px;background:url(../images/bg/bgAddress.gif) no-repeat 5px 50%;}
+#footer .footCopyright{color:#9b8e84;font-size:11px;text-align:center;font-weight:bold;text-transform:uppercase;letter-spacing: -2px;} 
+#footer .topBtn{text-align:right;border-bottom:1px solid #f3dfb6;color:#655c4f;}
+#footer .topBtn a{display:inline-block;padding: 5px 15px;color:#c59d64;font-weight:bold;background:url(../images/bg/bgTopBtn.gif) no-repeat right 50%;}
+#footer .pcVer{text-align:center;margin-top:10px;}
+#footer .pcVer img{width:77px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width : 979px) {
+	/* header */
+
+	/* content */
+
+	/* footer */
+
+}
+
+@media screen and (max-width : 699px) {	
+
+}
+
+/* iPhone 5 가로보기  */
+@media only screen and (min-width : 568px){ 
+	/*#wrap{width:320px;margin:0 auto}*/
+}
+
+/* Galaxy Note, 갤럭시 S3 가로보기 - medium-dpi */
+@media only screen and (min-width : 640px){ 
+	/*#wrap{width:360px;margin:0 auto}*/
+}
+
+/* ****************** ie ***************** */
+
+

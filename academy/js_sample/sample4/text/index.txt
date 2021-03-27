@@ -1,0 +1,18 @@
+더블 트랙 밴드
+
+  * 첫화면 <index.html>
+  * 밴드 소개 <about.html>
+  * 사진 모음 <photos.html>
+  * 연주 일정 <live.html>
+  * 연락처 <contact.html>
+
+
+  환영합니다!
+
+더블 트랙 밴드의 공식 웹 사이트에 오신 것을 환영 합니다. 이 밴드는 만박
+과 젤리 그리고 현석이 만들어 가는 매시업 밴드 입니다. 이 홈페이지에서는
+저희 밴드에 대한 자세한 정보 <about.html>와 사진 모음 <photos.html> 그리
+고 언제 할지도 모르는 연주 일정 <live.html>과 연락처 <contact.html> 정보
+를 제공해 드리고 있습니다.
+
+a glimpse of what awaits you

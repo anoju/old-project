@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>  </title>
+
+		<!-- 외부 CSS 링크-->
+		<link rel="stylesheet" type="text/css" href="#" />
+
+		<style type="text/css">
+			body{
+				font-family:"나눔고딕","맑은 고딕";
+				font-size: 75%;
+				background:black;
+				color:white;}
+
+			p{
+				color:yellow;
+				font-size:1.2em;}
+			#myList{
+				border:1px solid white;
+				background:#333;
+				color:#ccc;
+				padding:1em 2em;
+				line-height:2em;}
+
+				#myList li{
+					font-weight:bold;}
+
+		</style>
+
+		<script type="text/javascript" src="#">	//스크립트 링크	</script>
+
+	</head>
+
+	<body>
+		<h1>원하는 요소에 접근해서 각각의ㅣ 속성값을 알아내려한다면</h1>
+
+		<p title="title속성출력">getAttribute를 이용한다</p>
+		<p>getAttribute함수 임으로 인수를 갖는다 인수는 태그의 속성명</p>
+
+		<ul id="myList">
+			<li>첫번째목록</li>
+			<li>두번째목록</li>
+			<li>세번째목록</li>
+		</ul>
+
+		<p>예를 들어 p요소의 타이틀 속성을 얻으려한다면...</p>
+
+		<script type="text/javascript">
+			var pAttribute = document.getElementsByTagName("p")
+
+			for(var i = 0; i < pAttribute.length; i++){
+				//반복문을 이용해서  p안의  타이틀 속성을 얻어내서 배열에 담음
+				//구문이 길기 빼누에 변수에 줄여서 넣음
+				var myTitle = pAttribute[i].getAttribute("title")
+
+				//조건으로 값이 반값이 아닌때만 출력
+				if(myTitle != null){
+					alert(myTitle)
+				}
+			}
+		</script>
+	</body>
+
+</html>

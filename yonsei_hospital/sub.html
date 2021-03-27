@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ko" class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="index,follow">
+<meta name="author" content="연세바른병원">
+<meta property='og:image' content='http://www.yonseibarun.com/ver2/common/img/common/yonseibarun_sns2.jpg'>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Progma" content="no-cache" />
+<meta http-equiv="imagetoolbar" content="no">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+
+<title>척추관절바른병원 - 연세바른병원에 오신것을 환영합니다.</title>
+<meta name="description" content="척추관절바른병원 - 연세바른병원에 오신것을 환영합니다.">
+<meta name="keywords" content="척추관절바른병원, 연세, 바른, 척추, 관절, 클리닉, 병원, 정형외과, 연세바른">
+
+<!-- Mobile viewport optimized: h5bp.com/viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+
+<!-- favicon.ico and apple-touch-icon.png -->
+<link rel="shortcut icon" href="./common/img/favicon_clas.ico">
+<link rel="apple-touch-icon" href="./common/img/apple-touch-icon-57x57-iphone.png">
+<link rel="apple-touch-icon" sizes="72x72" href="./common/img/apple-touch-icon-72x72-ipad.png">
+<link rel="apple-touch-icon" sizes="114x114" href="./common/img/apple-touch-icon-114x114-iphone4.png">
+
+<link rel="stylesheet" href="./common/css/common.css">
+<link rel="stylesheet" type="text/css" href="./common/css/sub.css" />
+
+<script type="text/javascript" src="./common/js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="./common/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="./common/js/ui_script.js"></script>
+</head>
+
+<body>
+	<div class="body_wrap">
+		<div id="gnb">
+			<div class="topbar">
+				<div class="topbar_inner">					
+					<div class="topbar_menu"><a href="./common/login.php"><img src="./common/img/common/funcmu_login.png" width="73" height="18" border="0" alt="로그인"></a><a href="./common/regist.php"><img src="./common/img/common/funcmu_regist.png" width="76" height="18" border="0" alt="회원가입"></a><img src="./common/img/common/funcmu_infocall.png" width="174" height="18" border="0" alt="상담 및 예약안내 1544-8235"></div>
+				</div>
+			</div>
+			<div class="gnbMenu">
+				<!-- 2016-10-06 gnb 전체메뉴 bg 추가 -->
+				<div class="gnbMenu_bg"></div>
+				<!-- //2016-10-06 gnb 전체메뉴 bg 추가 -->
+				
+				<!-- 2016-10-06 .gnb_in 추가 -->
+				<div class="gnb_in">
+					<div class="gnbLogo"><a href="./index.php"><img src="./common/img/common/yonseibarun_logo.png" width="218" height="58" border="0" alt="연세바른병원 로고"></a></div>
+					<div class="gnbsubMenu">
+						<ul>
+							<li><a href="./chukchoo/herli.php">척추센터</a>
+								<!-- 2016-10-06 하위메뉴 추가 -->
+								<div class="submu">
+									<ul class="sm01">
+										<li><a href="herli.php">허리(요추) 질환</a></li>
+										<li><a href="neck.php">목(경추) 질환</a></li>
+										<li><a href="back.php">등(흉추) 질환</a></li>
+										<li><a href="gongtong.php">척추 공통질환</a></li>
+										<li><a href="fourgen.php">4세대 <br />척추비수술치료</a></li>
+										<li><a href="technone.php">테크노 <br />비수술시스템</a></li>
+										<li><a href="mesechuk.php">미세척추수술</a></li>
+									</ul>
+								</div>
+								<!-- //2016-10-06 하위메뉴 추가 -->
+							</li>
+							<li><a href="./kwanjeol/palgumchi.php">관절센터</a>
+								<!-- 2016-10-06 하위메뉴 추가 -->
+								<div class="submu">
+									<ul class="sm02">
+										<li><a href="palgumchi.php">팔꿈치 통증</a></li>
+										<li><a href="shoulder.php">어깨 통증</a></li>
+										<li><a href="knee.php">무릎 통증</a></li>
+										<li><a href="gokwan.php">고관절 통증</a></li>
+										<li><a href="hand.php">손목,손가락통증</a></li>
+										<li><a href="foot.php">발목,뒷꿈치통증</a></li>
+										<li><a href="surgery.php">수술치료</a></li>
+										<li><a href="nonesur.php">비수술치료</a></li>
+									</ul>
+								</div>
+								<!-- //2016-10-06 하위메뉴 추가 -->
+							</li>
+							<li><a href="./jaehwal_clinic/onomedical.php">재활/클리닉</a>
+								<div class="submu">
+									<ul class="sm03">
+										<li><a href="onomedical.php">테크노재활시스템</a></li>
+										<li><a href="oneone.php">1:1메디컬<br />트레이닝</a></li>
+										<li><a href="dosoo.php">도수/물리치료</a></li>
+										<li><a href="indae.php">인대강화주사치료</a></li>
+										<li><a href="techclinic.php">테크노활력클리닉</a></li>
+										<li><a href="allkee.php">성장클리닉 올키</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="./jinryo/useinfo.php">진료안내</a>
+								<!-- 2016-10-06 하위메뉴 추가 -->
+								<div class="submu">
+									<ul class="sm04">
+										<li><a href="useinfo.php">이용안내</a></li>
+										<li><a href="time.php">진료시간</a></li>
+										<li><a href="doctorschedule.php">의료진 진료일정표</a></li>
+										<li><a href="inout.php">입퇴원 안내</a></li>
+										<li><a href="docuprint.php">증명서 발급안내</a></li>
+										<li><a href="right.php">환자의 <br />권리와 의무</a></li>
+										<li><a href="none.php">비급여 치료내역</a></li>
+									</ul>
+								</div>
+								<!-- //2016-10-06 하위메뉴 추가 -->
+							</li>
+							<li><a href="./gongafter/aftermanage.php">공헌/후기</a>
+								<div class="submu">
+									<ul class="sm05">
+										<li><a href="aftermanage.php">퇴원 후 관리</a></li>
+										<li><a href="society.php">사회공헌</a></li>
+										<li><a href="interview.php">환자체험기</a></li>
+										<li><a href="star.php">스타체험기</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="./consult_reserv/online.php">상담/예약</a>
+								<!-- 2016-10-06 하위메뉴 추가 -->
+								<div class="submu">
+									<ul class="sm06">
+										<li><a href="online.php">온라인 상담</a></li>
+										<li><a href="reservation.php">진료예약</a></li>
+										<li><a href="easyreserv.php">간편예약</a></li>
+										<li><a href="faq.php">자주하는 질문</a></li>
+									</ul>
+								</div>
+								<!-- //2016-10-06 하위메뉴 추가 -->
+							</li>
+							<li><a href="./aboutyb/mission.php">병원소개</a>
+								<!-- 2016-10-06 하위메뉴 추가 -->
+								<div class="submu">
+									<ul class="sm07">
+										<li><a href="ssguide.php">비전과 미션</a></li>
+										<li><a href="ci.php">CI</a></li>
+										<li><a href="infodoctor.php">의료진 소개</a></li>
+										<li><a href="ybpreview.php">병원 미리보기</a></li>
+										<li><a href="medicalmachine.php">첨단의료장비</a></li>
+										<li><a href="exercise">운동재활시설</a></li>
+										<li><a href="prize.php">수상 및 인증</a></li>
+										<li><a href="location.php">오시는 길</a></li>
+									</ul>
+								</div>
+								<!--// 2016-10-06 하위메뉴 추가 -->
+							</li>
+							<li><a href="./board/ssguide.php">알림공간</a>
+								<!-- 2016-10-06 하위메뉴 추가 -->
+								<div class="submu">
+									<ul class="sm08">
+										<li><a href="ssguide.php">수술 전/후 가이드</a></li>
+										<li><a href="notice.php">공지사항</a></li>
+										<li><a href="event.php">이벤트</a></li>
+										<li><a href="ybnews.php">병원소식</a></li>
+										<li><a href="ybpress.php">언론/홍보</a></li>
+										<li><a href="voiceofcustomer.php">고객의 소리</a></li>
+									</ul>
+								</div>
+								<!-- //2016-10-06 하위메뉴 추가 -->
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- //2016-10-06 .gnb_in 추가 -->
+			</div>	
+		</div>
+<!-- // GNB -->
+
+<!-- Container -->
+		<div id="container">
+
+	<!-- subMenuBar -->
+				
+			<div id="subArea">
+				
+				<div class="subBigimg">
+					<div class="subBigtxt">
+						<span>구성원이 자부심을 가진<br>가장 사랑받는 연세바른병원</span>
+						<div class="subBigtt">알림공간</div>
+					</div>
+				</div>
+			</div>	
+	<!-- // subMenuBar -->	
+	
+	<!-- Contents -->	
+			<div id="Contents">
+				<div class="ttLocation">
+					<div class="subTT"><strong>공지사항</strong><span class="ttLocaEng">NOTICE</span></div>
+					<div class="loca"><img src="./common/img/common/loca_home.png" width="39" height="22" border="0" alt=""><div class="locatt">알림공간</div><img src="./common/img/common/loca_arrow.png" width="16" height="22" border="0" alt=""><div class="locatt">공지사항</div></div>
+				</div>
+				<div class="RealConts">
+					<div class="search_area">
+						<div class="fl_r">
+						<form method="./board/notice.php" name='search'>
+							<select name="search">
+							<option value="title">제목</option>
+							<option value="content">내용</option>
+							<option value="name">작성자</option>
+							</select>
+							<input type="text" name="keyword" value="" style="width:100px;">
+							<a href="#" onclick="javascript:search_form()"><img src="./common/img/board/btn_search.png" width="36" height="30" border="0" alt="검색버튼"></a>
+						</form>
+						</div>
+						</div>
+					</div>
+					<div class="fl_cl"></div>
+					<table class="boardtb">
+						<colgroup>
+							<col width="90">
+							<col width="*">
+							<col width="120">
+							<col width="100">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>번호</th>
+								<th>제목</th>
+								<th>작성일</th>
+								<th>조회</th>
+							</tr>
+							<tr>
+								<td>118</td>
+								<td class="bodtt"><a href="notice_view.php?code=12354&">[건강강좌 안내] 만성 허리통증 홈케어-16.09.28(수)</a></td>
+								<td>2016.09.19</td>
+								<td>59</td>
+							</tr>
+							<tr>
+								<td>117</td>
+								<td class="bodtt"><a href="notice_view.php?code=12349&">추석 연휴 진료안내</a></td>
+								<td>2016.09.09</td>
+								<td>393</td>
+							</tr>
+							<tr>
+								<td>116</td>
+								<td class="bodtt"><a href="notice_view.php?code=12322&">연세바른병원은 의료법을 위반하는 주사기 재활용을 절대 하지 않습니다.</a></td>
+								<td>2016.08.23</td>
+								<td>883</td>
+							</tr>
+							<tr>
+								<td>115</td>
+								<td class="bodtt"><a href="notice_view.php?code=12238&"> 토요일 진료시간 변경 안내(7월 1일부터)</a></td>
+								<td>2016.06.20</td>
+								<td>3523</td>
+							</tr>
+							<tr>
+								<td>114</td>
+								<td class="bodtt"><a href="notice_view.php?code=12165&">5월 가정의달 행사</a></td>
+								<td>2016.04.28</td>
+								<td>6113</td>
+							</tr>
+							<tr>
+								<td>113</td>
+								<td class="bodtt"><a href="notice_view.php?code=12152&">올바른 척추관절 릴레이 건강강좌 세 번째 봄맞이 생기 되찾기! 관절건강과 면역력 건...</a></td>
+								<td>2016.04.15</td>
+								<td>6820</td>
+							</tr>
+							<tr>
+								<td>112</td>
+								<td class="bodtt"><a href="notice_view.php?code=12135&">총선일 진료시간 안내</a></td>
+								<td>2016.04.04</td>
+								<td>6958</td>
+							</tr>
+							<tr>
+								<td>111</td>
+								<td class="bodtt"><a href="notice_view.php?code=12090&">저소득층 노인 인공관절 수술 지원사업 후원병원 선정</a></td>
+								<td>2016.02.18</td>
+								<td>10234</td>
+							</tr>
+							<tr>
+								<td>110</td>
+								<td class="bodtt"><a href="notice_view.php?code=12077&">구정(설)연휴 진료시간 안내</a></td>
+								<td>2016.02.01</td>
+								<td>11093</td>
+							</tr>
+							<tr>
+								<td>109</td>
+								<td class="bodtt"><a href="notice_view.php?code=12036&">올바른 키성장 "수 목 열린진료실"</a></td>
+								<td>2015.12.29</td>
+								<td>13178</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="paging_area">
+						<div class="ac"><span class="paging_num"><a href="#" class="current">1</a> <a href="?&pagenum=1">2</a> <a href="?&pagenum=2">3</a> <a href="?&pagenum=3">4</a> <a href="?&pagenum=4">5</a> <a href="?&pagenum=5">6</a> <a href="?&pagenum=6">7</a> <a href="?&pagenum=7">8</a> <a href="?&pagenum=8">9</a> <a href="?&pagenum=9">10</a> </span><a href="?&pagenum=1"><img src="./common/img/board/btn_tablePageNext.png" width="33" height="33" border="0" alt=""></a><a href="?&pagenum=10"><img src="./common/img/board/btn_tablePageEnd.png" width="33" height="33" border="0" alt=""></a></div>					</div>
+				</div>
+			</div>
+			<div class="fl_cl"></div> 
+		</div>
+	<!-- // Contents -->
+<!-- // Container -->
+
+<!-- footer -->
+		<div id="footer">
+			<div id="botFooter">
+				<div class="botFooterBox">
+					<div class="botFooterMenu">
+						<div class="botFooterMenuInner">
+							<span class="botFooterMenulist"><a href="./common/personalrule.php" class="botFooterMulist">개인정보취급방침</a>&nbsp;&nbsp; | &nbsp;&nbsp;<a href="./common/userule.php" class="botFooterMulist">이용약관</a>&nbsp;&nbsp; | &nbsp;&nbsp;<a href="./common/protectemail.php" class="botFooterMulist">이메일무단수집거부</a></span>
+							<span class="botFooterMenuQa">
+								<div class="familyArea"></div>
+							</span>
+						</div>
+					</div>
+					<div class="botFooterCopy">
+						<span class="botFooterCopyDetail">
+						연세바른병원 | 사업자등록번호 : 108-91-80456 | 원장 : 조보영, 이상원 | 주소 : 서울특별시 동작구 사당로 300, 3,4층(사당동, 이수자이) 연세바른병원<br>
+						전화 : <a href="tel:1544-8235"> 1544-8235</a> | 팩스 : 02-3482-1014 | 상담시간 : 평일 오전9시 ~ 오후6시 | 토요일 오전9시 ~ 오후1시 | 일요일,공휴일 휴진 <br><br>
+						Copyright &copy; 2016 연세바른병원 All Rights Reserved.<br>
+						</span>
+					</div>
+				</div>
+			</div>		</div>
+<!-- // footer -->
+	</div>
+  
+ </body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5</title>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb'>
+		<link rel='stylesheet' href='http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicBoldWeb'>
+
+		<style>
+			body{ font-family: 'NanumGothicWeb'; }
+
+			a{
+				font-size:3em}
+
+			a[title]{
+				border:1px solid #999;}
+			
+			/*속성값이 정확히 일치할 경우 적용*/
+			a[title="naver"]{background-color:#09f}
+			/*속성값이 공백으로 구분하여 포함 문자가 일치시 경우적용*/
+			a[title~="daum"]{color:#f00}
+			/*속성값이 주어진값만 있거나 주어진값-으로 구분한경우 일치시 적용*/
+			a[title|="nate"]{background-color:#ff0}
+			/*속성값이 주어진 값으로 시작한 경우 적용*/
+			a[title^="dre"]{color:#60f}
+			/*속성값이 주어진 값으로 끝나는 경우 적용*/
+			a[title$="hoo"]{background-color:#666}
+			/*속성값과 일부분이 일치할 경우 적용*/
+			a[title*="ogl"]{color:#0f0}
+		</style>
+
+
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<article>
+			<h1>속성 선택자</h1>
+			<p><a href="#" title="tistory">티스토리</a></p>
+			<p><a href="#" title="naver">네이버</a></p>
+			<p><a href="#" title="potal daum site">다음</a></p>
+			<p><a href="#" title="daum mobile">다음모바일</a></p>
+			<p><a href="#" title="nate">네이트</a></p>
+			<p><a href="#" title="nate-mobile">네이트모바일</a></p>
+			<p><a href="#" title="dreamwiz">드림위즈</a></p>
+			<p><a href="#" title="yahoo">야후</a></p>
+			<p><a href="#" title="google">구글</a></p>
+		</article>
+
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>new_file</title>
+    <script type="text/javascript">
+      var myFunctionRect = function(myWidth, myHeight) {
+        return myWidth * myHeight
+      }
+      //showSeatStatus()함수를 myShowSeatStatus변수에 할당
+      var myFunctionRectVariable = myFunctionRect
+      //함수의 이름을 다른변수에 할당할때 그변수는 함수의 몸체에 접근하게 된다
+      //여기서 myFunctionRect와 myFunctionRectVariable는 --> function (){...}를 동일하게 참조한다
+      //변수값이 함수 몸체를 참조하는 경우 그함수는 실제로 하나의 변수일뿐이다
+      //함수 참조를 구분하는 방법은 함수이름다음에 괄호가 안붙는지의 여부로 판단한다
+      //
+      alert(myFunctionRectVariable(10, 10))
+    </script>
+
+  </head>
+
+  <body>
+
+  </body>
+</html>
